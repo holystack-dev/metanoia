@@ -1,0 +1,190 @@
+{
+    "subtitle": "Prayers for Your Spiritual Journey",
+    "categories": [
+        {
+            "id": "confession",
+            "title": "Prayers for Confession",
+            "icon": "church_outlined",
+            "prayers": [
+                {
+                    "id": "before_confession",
+                    "title": "Prayer Before Confession",
+                    "icon": "wb_twilight_outlined",
+                    "content": "Come, Holy Spirit, into my soul. Enlighten my mind that I may know the sins I ought to confess, and grant me your grace to be truly sorry for my sins.\n\nHelp me to make a good confession, to be truly sorry for my offenses against You, and to amend my life. Through Christ our Lord. Amen."
+                },
+                {
+                    "id": "act_of_contrition",
+                    "title": "Act of Contrition",
+                    "icon": "favorite_outline",
+                    "content": "O My God, I am sorry for my sins with all my heart. In choosing to do wrong and failing to do good, I have sinned against you, whom I should love above all things.\n\nI firmly intend, with the help of your grace, to do penance, to sin no more and to avoid whatever leads me to sin.\n\nOur Savior, Jesus Christ, suffered and died for us. In His Name, O Lord, have mercy. Amen."
+                },
+                {
+                    "id": "after_confession",
+                    "title": "Prayer After Confession",
+                    "icon": "light_mode_outlined",
+                    "content": "My dearest Jesus, I have told all my sins as well as I could. I have tried hard to make a good confession. I am sure that You have forgiven me.\n\nI thank You from my heart. I promise to try with Your grace not to sin again. My loving God, give me the strength to stay close to You and avoid sin. Amen."
+                },
+                {
+                    "id": "confiteor",
+                    "title": "The Confiteor",
+                    "icon": "person_outline",
+                    "content": "I confess to almighty God and to you, my brothers and sisters, that I have greatly sinned, in my thoughts and in my words, in what I have done and in what I have failed to do,\n\n[RUBRIC]Strike your breast three times as you say:[/RUBRIC]\n\nthrough my fault, through my fault, through my most grievous fault;\n\ntherefore I ask blessed Mary ever-Virgin, all the Angels and Saints, and you, my brothers and sisters, to pray for me to the Lord our God. Amen."
+                }
+            ]
+        },
+        {
+            "id": "essential",
+            "title": "Essential Prayers",
+            "icon": "auto_awesome_outlined",
+            "prayers": [
+                {
+                    "id": "lords_prayer",
+                    "title": "The Lord's Prayer",
+                    "icon": "cloud_outlined",
+                    "content": "Our Father, Who art in heaven,\nHallowed be Thy Name.\nThy Kingdom come.\nThy Will be done, on earth as it is in Heaven.\n\nGive us this day our daily bread.\nAnd forgive us our trespasses,\nas we forgive those who trespass against us.\nAnd lead us not into temptation,\nbut deliver us from evil.\n\nAmen."
+                },
+                {
+                    "id": "hail_mary",
+                    "title": "Hail Mary",
+                    "icon": "star_outline",
+                    "content": "Hail Mary, full of grace,\nthe Lord is with thee.\nBlessed art thou amongst women,\nand blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God,\npray for us sinners,\nnow and at the hour of our death.\n\nAmen."
+                },
+                {
+                    "id": "glory_be",
+                    "title": "Glory Be",
+                    "icon": "brightness_high_outlined",
+                    "content": "Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\n\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end.\n\nAmen."
+                },
+                {
+                    "id": "apostles_creed",
+                    "title": "Apostles' Creed",
+                    "icon": "menu_book_outlined",
+                    "isExpandable": true,
+                    "content": "I believe in God, the Father Almighty, Creator of Heaven and earth;\n\nand in Jesus Christ, His only Son, Our Lord, Who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died, and was buried.\n\nHe descended into Hell; the third day He rose again from the dead; He ascended into Heaven, and sitteth at the right hand of God, the Father almighty; from thence He shall come to judge the living and the dead.\n\nI believe in the Holy Spirit, the holy Catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body, and life everlasting.\n\nAmen."
+                }
+            ]
+        },
+        {
+            "id": "marian",
+            "title": "Marian Prayers",
+            "icon": "favorite_border",
+            "prayers": [
+                {
+                    "id": "hail_holy_queen",
+                    "title": "Hail Holy Queen",
+                    "icon": "star_outline",
+                    "content": "Hail, Holy Queen, Mother of Mercy,\nour life, our sweetness and our hope.\n\nTo thee do we cry, poor banished children of Eve.\nTo thee do we send up our sighs,\nmourning and weeping in this valley of tears.\n\nTurn then, most gracious advocate,\nthine eyes of mercy toward us;\nand after this our exile,\nshow unto us the blessed fruit of thy womb, Jesus.\n\nO clement, O loving, O sweet Virgin Mary.\n\n[VERSICLE]V. Pray for us, O holy Mother of God.[/VERSICLE]\n[RESPONSE]R. That we may be made worthy of the promises of Christ.[/RESPONSE]\n\nAmen."
+                },
+                {
+                    "id": "memorare",
+                    "title": "The Memorare",
+                    "icon": "volunteer_activism_outlined",
+                    "content": "Remember, O most gracious Virgin Mary, that never was it known that anyone who fled to thy protection, implored thy help, or sought thy intercession was left unaided.\n\nInspired by this confidence, I fly unto thee, O Virgin of virgins, my Mother; to thee do I come, before thee I stand, sinful and sorrowful.\n\nO Mother of the Word Incarnate, despise not my petitions, but in thy mercy hear and answer me.\n\nAmen."
+                },
+                {
+                    "id": "fatima_prayer",
+                    "title": "Fatima Prayer",
+                    "icon": "flare_outlined",
+                    "content": "O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to Heaven, especially those in most need of Thy mercy.\n\nAmen."
+                }
+            ]
+        },
+        {
+            "id": "devotions",
+            "title": "Devotional Prayers",
+            "icon": "auto_stories_outlined",
+            "prayers": [
+                {
+                    "id": "holy_rosary",
+                    "title": "The Holy Rosary",
+                    "subtitle": "A Complete Guide for Beginners",
+                    "icon": "radio_button_unchecked",
+                    "isExpandable": true,
+                    "sections": [
+                        {
+                            "title": "Opening Prayers",
+                            "subtitle": "On the Crucifix and First Beads",
+                            "content": "[INSTRUCTION]Make the Sign of the Cross:[/INSTRUCTION]\n\nIn the name of the Father, and of the Son, and of the Holy Spirit. Amen.\n\n[INSTRUCTION]Holding the Crucifix, pray the Apostles' Creed:[/INSTRUCTION]\n\n[PRAYER]I believe in God, the Father Almighty, Creator of Heaven and earth; and in Jesus Christ, His only Son, Our Lord, Who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died, and was buried. He descended into Hell; the third day He rose again from the dead; He ascended into Heaven, and sitteth at the right hand of God, the Father almighty; from thence He shall come to judge the living and the dead. I believe in the Holy Spirit, the holy Catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.[/PRAYER]\n\n[INSTRUCTION]On the first large bead, pray the Our Father:[/INSTRUCTION]\n\n[PRAYER]Our Father, Who art in heaven, hallowed be Thy Name. Thy Kingdom come. Thy Will be done, on earth as it is in Heaven. Give us this day our daily bread. And forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. Amen.[/PRAYER]\n\n[INSTRUCTION]On each of the three small beads, pray the Hail Mary (for Faith, Hope, and Charity):[/INSTRUCTION]\n\n[PRAYER]Hail Mary, full of grace, the Lord is with thee. Blessed art thou amongst women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.[/PRAYER]\n\n[INSTRUCTION]Pray the Glory Be:[/INSTRUCTION]\n\n[PRAYER]Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.[/PRAYER]"
+                        },
+                        {
+                            "title": "How to Pray Each Decade",
+                            "subtitle": "Repeat for each of the 5 Mysteries",
+                            "content": "[INSTRUCTION]1. Announce the Mystery and reflect on it[/INSTRUCTION]\n\n[INSTRUCTION]2. On the large bead, pray the Our Father:[/INSTRUCTION]\n\n[PRAYER]Our Father, Who art in heaven, hallowed be Thy Name. Thy Kingdom come. Thy Will be done, on earth as it is in Heaven. Give us this day our daily bread. And forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. Amen.[/PRAYER]\n\n[INSTRUCTION]3. On each of the 10 small beads, pray the Hail Mary:[/INSTRUCTION]\n\n[PRAYER]Hail Mary, full of grace, the Lord is with thee. Blessed art thou amongst women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.[/PRAYER]\n\n[INSTRUCTION]4. After the 10 Hail Marys, pray the Glory Be:[/INSTRUCTION]\n\n[PRAYER]Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.[/PRAYER]\n\n[INSTRUCTION]5. Optionally, pray the Fatima Prayer:[/INSTRUCTION]\n\n[PRAYER]O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to Heaven, especially those in most need of Thy mercy. Amen.[/PRAYER]"
+                        },
+                        {
+                            "title": "The Joyful Mysteries",
+                            "subtitle": "Mondays and Saturdays",
+                            "content": "1. The Annunciation — The Angel Gabriel announces to Mary that she will conceive the Son of God.\n\n2. The Visitation — Mary visits her cousin Elizabeth, who is pregnant with John the Baptist.\n\n3. The Nativity — Jesus is born in Bethlehem.\n\n4. The Presentation — Mary and Joseph present Jesus in the Temple.\n\n5. The Finding of Jesus in the Temple — After three days, Mary and Joseph find Jesus teaching in the Temple."
+                        },
+                        {
+                            "title": "The Luminous Mysteries",
+                            "subtitle": "Thursdays",
+                            "content": "1. The Baptism in the Jordan — Jesus is baptized by John and the Holy Spirit descends upon Him.\n\n2. The Wedding at Cana — Jesus performs His first miracle, turning water into wine.\n\n3. The Proclamation of the Kingdom — Jesus calls us to conversion and announces the Kingdom of God.\n\n4. The Transfiguration — Jesus is transfigured on Mount Tabor, revealing His divine glory.\n\n5. The Institution of the Eucharist — Jesus gives us His Body and Blood at the Last Supper."
+                        },
+                        {
+                            "title": "The Sorrowful Mysteries",
+                            "subtitle": "Tuesdays and Fridays",
+                            "content": "1. The Agony in the Garden — Jesus prays in Gethsemane and accepts the Father's will.\n\n2. The Scourging at the Pillar — Jesus is brutally scourged by Roman soldiers.\n\n3. The Crowning with Thorns — Jesus is mocked and crowned with thorns.\n\n4. The Carrying of the Cross — Jesus carries His Cross to Calvary.\n\n5. The Crucifixion — Jesus dies on the Cross for our salvation."
+                        },
+                        {
+                            "title": "The Glorious Mysteries",
+                            "subtitle": "Wednesdays and Sundays",
+                            "content": "1. The Resurrection — Jesus rises from the dead on the third day.\n\n2. The Ascension — Jesus ascends into Heaven forty days after the Resurrection.\n\n3. The Descent of the Holy Spirit — The Holy Spirit descends upon Mary and the Apostles at Pentecost.\n\n4. The Assumption of Mary — Mary is taken body and soul into Heaven.\n\n5. The Coronation of Mary — Mary is crowned Queen of Heaven and Earth."
+                        },
+                        {
+                            "title": "Closing Prayers",
+                            "subtitle": "After the Five Decades",
+                            "content": "[INSTRUCTION]Pray the Hail Holy Queen:[/INSTRUCTION]\n\n[PRAYER]Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope. To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious advocate, thine eyes of mercy toward us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.[/PRAYER]\n\n[VERSICLE]V. Pray for us, O holy Mother of God.[/VERSICLE]\n[RESPONSE]R. That we may be made worthy of the promises of Christ.[/RESPONSE]\n\n[INSTRUCTION]Closing Prayer:[/INSTRUCTION]\n\n[PRAYER]O God, whose only-begotten Son, by His life, death, and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that by meditating upon these mysteries of the Most Holy Rosary of the Blessed Virgin Mary, we may imitate what they contain and obtain what they promise, through the same Christ Our Lord. Amen.[/PRAYER]\n\n[INSTRUCTION]Make the Sign of the Cross[/INSTRUCTION]"
+                        }
+                    ]
+                },
+                {
+                    "id": "divine_mercy_chaplet",
+                    "title": "Divine Mercy Chaplet",
+                    "icon": "water_drop_outlined",
+                    "isExpandable": true,
+                    "sections": [
+                        {
+                            "title": "Opening Prayers",
+                            "content": "1. Make the Sign of the Cross\n2. Optional Opening Prayer:\n\n[PRAYER]You expired, Jesus, but the source of life gushed forth for souls, and the ocean of mercy opened up for the whole world. O Fount of Life, unfathomable Divine Mercy, envelop the whole world and empty Yourself out upon us.[/PRAYER]\n\n3. Repeat three times:\n\n[PRAYER]O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You![/PRAYER]"
+                        },
+                        {
+                            "title": "The Chaplet",
+                            "content": "1. Recite the Our Father\n2. Recite the Hail Mary\n3. Recite the Apostles' Creed\n\n[RUBRIC]On the large beads (Our Father beads), say:[/RUBRIC]\n\n[PRAYER]Eternal Father, I offer You the Body and Blood, Soul and Divinity of Your dearly beloved Son, Our Lord, Jesus Christ, in atonement for our sins and those of the whole world.[/PRAYER]\n\n[RUBRIC]On the small beads (Hail Mary beads), say:[/RUBRIC]\n\n[PRAYER]For the sake of His sorrowful Passion, have mercy on us and on the whole world.[/PRAYER]\n\nRepeat for five decades."
+                        },
+                        {
+                            "title": "Conclusion",
+                            "content": "Repeat three times:\n\n[PRAYER]Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.[/PRAYER]\n\nOptional Closing Prayer:\n\n[PRAYER]Eternal God, in whom mercy is endless and the treasury of compassion inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.[/PRAYER]"
+                        }
+                    ]
+                },
+                {
+                    "id": "guardian_angel",
+                    "title": "Prayer to Guardian Angel",
+                    "icon": "shield_outlined",
+                    "content": "Angel of God, my guardian dear,\nto whom God's love commits me here,\never this day be at my side,\nto light and guard, to rule and guide.\n\nAmen."
+                }
+            ]
+        },
+        {
+            "id": "communion",
+            "title": "Prayers for Holy Communion",
+            "icon": "wb_sunny_outlined",
+            "prayers": [
+                {
+                    "id": "before_communion",
+                    "title": "Prayer Before Communion",
+                    "icon": "wb_twilight_outlined",
+                    "content": "O Lord Jesus Christ, Son of the living God, who, by the will of the Father and the cooperation of the Holy Spirit, have by Your death given life to the world:\n\ndeliver me by this, Your most sacred Body and Blood, from all my iniquities and from every evil:\n\nand make me always cleave to Your commandments, and never suffer me to be separated from You.\n\nWho with the same God the Father and the Holy Spirit, live and reign, God, world without end.\n\nAmen."
+                },
+                {
+                    "id": "after_communion",
+                    "title": "Prayer After Communion",
+                    "subtitle": "Anima Christi",
+                    "icon": "light_mode_outlined",
+                    "content": "Soul of Christ, sanctify me.\nBody of Christ, save me.\nBlood of Christ, inebriate me.\nWater from the side of Christ, wash me.\n\nPassion of Christ, strengthen me.\nO good Jesus, hear me.\nWithin Thy wounds hide me.\nSuffer me not to be separated from Thee.\n\nFrom the malicious enemy defend me.\nIn the hour of my death call me.\nAnd bid me come to Thee,\nThat with Thy saints I may praise Thee\nForever and ever.\n\nAmen."
+                }
+            ]
+        }
+    ]
+}

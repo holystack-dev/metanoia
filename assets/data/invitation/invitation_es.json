@@ -1,0 +1,52 @@
+{
+    "subtitle": "Una invitación a la Gracia",
+    "sections": [
+        {
+            "id": "opening",
+            "title": "Eres bienvenido aquí",
+            "icon": "favorite_outline",
+            "content": "Si estás leyendo esto, algo se ha movido en tu corazón. Quizás han pasado años desde tu última confesión. Quizás tengas miedo. Quizás te sientas indigno.\n\nDebes saber esto: No estás aquí por accidente. El mismo Dios que dejó a las noventa y nueve para buscar a la oveja perdida te ha estado buscando. Él nunca ha dejado de amarte.\n\nCualquier cosa que te haya mantenido alejado—vergüenza, miedo, duda, el ajetreo de la vida—los brazos del Padre permanecen abiertos. Él no está enojado. Está esperando con alegría tu regreso."
+        },
+        {
+            "id": "returning",
+            "title": "Para los que regresan después de muchos años",
+            "icon": "home_outlined",
+            "content": "\"Pero ha pasado tanto tiempo...\"\n\nYa sean 5 años, 20 años o toda una vida—el Padre no cuenta los días que estuviste lejos. Él mira el camino, esperando que aparezcas en el horizonte. Y cuando te vea, correrá a tu encuentro.\n\n\"Cuando todavía estaba lejos, su padre lo vio y se compadeció de él; corrió a su encuentro, lo abrazó y lo besó.\" — Lucas 15:20\n\nEl padre en esta parábola no esperó explicaciones. No exigió cuentas de dónde había estado su hijo. Corrió. Lo abrazó. Celebró.\n\nAsí es como Dios se siente contigo ahora mismo.\n\n\"Vengan, pues, y discutamos —dice el Señor—. Aunque sus pecados sean como la escarlata, quedarán blancos como la nieve; aunque sean rojos como el carmesí, quedarán como la lana.\" — Isaías 1:18"
+        },
+        {
+            "id": "fear_sins",
+            "title": "\"Mis pecados son demasiado terribles...\"",
+            "icon": "healing_outlined",
+            "content": "No hay pecado que la misericordia de Dios no pueda cubrir. Ninguno.\n\nSanta Faustina, a quien Jesús reveló su Divina Misericordia, registró estas palabras de Nuestro Señor:\n\n\"Cuanto más grande es el pecador, más derecho tiene a Mi misericordia.\"\n\nPiénsalo. Tu misma debilidad, tu misma pecaminosidad, te da derecho a Su misericordia. No estás descalificado—estás invitado.\n\n\"Pues estoy convencido de que ni la muerte ni la vida, ni los ángeles ni los demonios, ni el presente ni el futuro, ni los poderes, ni lo alto ni lo profundo, ni ninguna otra cosa en toda la creación, podrá separarnos del amor de Dios que es en Cristo Jesús nuestro Señor.\" — Romanos 8:38-39\n\nNada. Ni tu pasado. Ni tu peor momento. Nada puede separarte de Su amor."
+        },
+        {
+            "id": "fear_priest",
+            "title": "\"El sacerdote me juzgará...\"",
+            "icon": "person_outline",
+            "content": "El sacerdote se sienta en el confesionario como representante de Cristo—y Cristo no vino por los justos, sino por los pecadores. \"No son los sanos los que necesitan médico, sino los enfermos\" (Marcos 2:17).\n\nTodo sacerdote ha escuchado confesiones que te sorprenderían. La tuya no será la peor que ha escuchado. Y cuando un hijo pródigo regresa, hay alegría en ese confesionario—no juicio.\n\nRecuerda: El sacerdote está obligado por el Sigilo de Confesión, la confidencialidad más absoluta del mundo. No puede revelar tus pecados a nadie, bajo ninguna circunstancia, incluso bajo amenaza de muerte. Tu confesión es segura.\n\nAdemás, el sacerdote mismo es un pecador que va a confesión. Él entiende. Está allí para ayudarte, no para condenarte."
+        },
+        {
+            "id": "fear_memory",
+            "title": "\"No puedo recordar todo...\"",
+            "icon": "psychology_outlined",
+            "content": "No tienes que recordar cada pecado perfectamente.\n\nDios conoce tu corazón. Él ve tu intención de confesarte honesta y completamente. Simplemente haz tu mejor esfuerzo:\n\n• Confiesa los pecados graves que recuerdes\n• Da un sentido general de la frecuencia\n• Di \"y cualquier pecado que haya olvidado\"\n\nEl sacerdote te ayudará a guiarte. Puede hacer preguntas suaves si es necesario. No estás solo en esto.\n\nSi realmente no puedes recordar algo y luego lo recuerdas, puedes confesarlo la próxima vez. La gracia de Dios cubre lo que se olvida honestamente.\n\nEl examen de conciencia en esta app incluye más de 300 preguntas para ayudarte a reflexionar a fondo. No te sientas abrumado—tómate tu tiempo. Puedes trabajar en ello durante varias sesiones; tu progreso se guarda. No hay prisa. Un examen reflexivo es en sí mismo un acto de amor hacia Dios."
+        },
+        {
+            "id": "practical",
+            "title": "Estás más preparado de lo que crees",
+            "icon": "check_circle_outline",
+            "content": "No necesitas tenerlo todo resuelto.\nNo necesitas sentirte digno.\nNo necesitas palabras perfectas.\n\nSolo necesitas venir.\n\nEl examen te guiará paso a paso. El sacerdote te ayudará a través del proceso. ¿Y Dios? Él ya está preparando la celebración.\n\n\"Les digo que de la misma manera habrá más alegría en el cielo por un pecador que se arrepiente que por noventa y nueve justos que no necesitan arrepentirse.\" — Lucas 15:7\n\nEl cielo está listo para regocijarse por ti. Hoy puede ser el día."
+        },
+        {
+            "id": "prayer",
+            "title": "Una oración por valor",
+            "icon": "local_fire_department_outlined",
+            "content": "Señor Jesucristo, Hijo del Dios Vivo,\n\nTú conoces mi corazón. Conoces mis miedos, mi vergüenza, mi vacilación. Conoces cuánto tiempo he estado lejos.\n\nDame valor. Dame la gracia de confiar en Tu misericordia más de lo que confío en mi indignidad.\n\nEspíritu Santo, guía mis pensamientos mientras examino mi conciencia. Ayúdame a ver mis pecados claramente, pero también a ver Tu amor más claramente aún.\n\nMaría, Madre de Misericordia, ruega por mí. Guíame suavemente de regreso a tu Hijo.\n\nQuiero volver a casa. Ayúdame a dar este paso.\n\nAmén."
+        }
+    ],
+    "callToAction": {
+        "primary": "Comenzar tu Examen",
+        "secondary": "Leer la Guía de Confesión",
+        "tertiary": "Ver Oraciones"
+    }
+}

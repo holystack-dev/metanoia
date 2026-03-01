@@ -1,0 +1,190 @@
+{
+    "subtitle": "Orações para Sua Jornada Espiritual",
+    "categories": [
+        {
+            "id": "confession",
+            "title": "Orações para Confissão",
+            "icon": "church_outlined",
+            "prayers": [
+                {
+                    "id": "before_confession",
+                    "title": "Oração Antes da Confissão",
+                    "icon": "wb_twilight_outlined",
+                    "content": "Vinde, Espírito Santo, em minha alma. Iluminai minha mente para que eu conheça os pecados que devo confessar, e concedei-me a vossa graça para me arrepender verdadeiramente dos meus pecados.\n\nAjuda-me a fazer uma boa confissão, a sentir verdadeira tristeza por minhas ofensas contra Vós, e a emendar minha vida. Por Cristo nosso Senhor. Amém."
+                },
+                {
+                    "id": "act_of_contrition",
+                    "title": "Ato de Contrição",
+                    "icon": "favorite_outline",
+                    "content": "Senhor meu Jesus Cristo, Deus e homem verdadeiro, Criador e Redentor meu: por serdes Vós quem sois, sumamente bom e digno de ser amado sobre todas as coisas, e porque Vos amo e estimo, pesa-me, Senhor, de todo o meu coração, de Vos ter ofendido; pesa-me também de ter perdido o Céu e merecido o Inferno; e proponho firmemente, ajudado com os auxílios de vossa divina graça, emendar-me e nunca mais Vos tornar a ofender. Espero alcançar o perdão de minhas culpas pela vossa infinita misericórdia. Amém."
+                },
+                {
+                    "id": "after_confession",
+                    "title": "Oração Após a Confissão",
+                    "icon": "light_mode_outlined",
+                    "content": "Meu queridíssimo Jesus, confessei todos os meus pecados o melhor que pude. Tentei muito fazer uma boa confissão. Tenho certeza de que Vós me perdoastes.\n\nAgradeço-Vos de todo o coração. Prometo tentar com Vossa graça não pecar novamente. Meu Deus amoroso, dai-me força para permanecer perto de Vós e evitar o pecado. Amém."
+                },
+                {
+                    "id": "confiteor",
+                    "title": "Eu Confesso (Confiteor)",
+                    "icon": "person_outline",
+                    "content": "Confesso a Deus Todo-Poderoso e a vós, irmãos, que pequei muitas vezes por pensamentos e palavras, atos e omissões,\n\n[RUBRIC]Bata no peito três vezes enquanto diz:[/RUBRIC]\n\npor minha culpa, minha culpa, minha tão grande culpa.\n\nE peço à Virgem Maria, aos Santos e Anjos, e a vós, irmãos, que rogueis por mim a Deus, nosso Senhor. Amém."
+                }
+            ]
+        },
+        {
+            "id": "essential",
+            "title": "Orações Essenciais",
+            "icon": "auto_awesome_outlined",
+            "prayers": [
+                {
+                    "id": "lords_prayer",
+                    "title": "Pai Nosso",
+                    "icon": "cloud_outlined",
+                    "content": "Pai Nosso que estais nos Céus,\nsantificado seja o vosso Nome,\nvenha a nós o vosso Reino,\nseja feita a vossa vontade assim na terra como no Céu.\n\nO pão nosso de cada dia nos dai hoje,\nperdoai-nos as nossas ofensas\nassim como nós perdoamos a quem nos tem ofendido,\ne não nos deixeis cair em tentação,\nmas livrai-nos do Mal.\n\nAmém."
+                },
+                {
+                    "id": "hail_mary",
+                    "title": "Ave Maria",
+                    "icon": "star_outline",
+                    "content": "Ave Maria, cheia de graça,\no Senhor é convosco,\nbendita sois vós entre as mulheres\ne bendito é o fruto do vosso ventre, Jesus.\n\nSanta Maria, Mãe de Deus,\nrogai por nós pecadores,\nagora e na hora da nossa morte.\n\nAmém."
+                },
+                {
+                    "id": "glory_be",
+                    "title": "Glória",
+                    "icon": "brightness_high_outlined",
+                    "content": "Glória ao Pai e ao Filho e ao Espírito Santo.\n\nComo era no princípio, agora e sempre, pelos séculos dos séculos.\nAmém."
+                },
+                {
+                    "id": "apostles_creed",
+                    "title": "Credo dos Apóstolos",
+                    "icon": "menu_book_outlined",
+                    "isExpandable": true,
+                    "content": "Creio em Deus Pai Todo-Poderoso, Criador do céu e da terra.\n\nE em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.\n\nDesceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus; está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos.\n\nCreio no Espírito Santo; na Santa Igreja Católica; na comunhão dos santos; na remissão dos pecados; na ressurreição da carne; na vida eterna.\n\nAmém."
+                }
+            ]
+        },
+        {
+            "id": "marian",
+            "title": "Orações Marianas",
+            "icon": "favorite_border",
+            "prayers": [
+                {
+                    "id": "hail_holy_queen",
+                    "title": "Salve Rainha",
+                    "icon": "star_outline",
+                    "content": "Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve!\n\nA vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas.\n\nEia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e depois deste desterro mostrai-nos Jesus, bendito fruto do vosso ventre,\n\nÓ clemente, ó piedosa, ó doce sempre Virgem Maria.\n\n[VERSICLE]V. Rogai por nós, Santa Mãe de Deus.[/VERSICLE]\n[RESPONSE]R. Para que sejamos dignos das promessas de Cristo.[/RESPONSE]\n\nAmém."
+                },
+                {
+                    "id": "memorare",
+                    "title": "Lembrai-vos (Memorare)",
+                    "icon": "volunteer_activism_outlined",
+                    "content": "Lembrai-Vos, ó piíssima Virgem Maria, que nunca se ouviu dizer que algum daqueles que têm recorrido à vossa proteção, implorado a vossa assistência, e reclamado o vosso socorro, fosse por Vós desamparado.\n\nAnimado eu, pois, com igual confiança, a Vós, Virgem entre todas singular, como a Mãe recorro, de Vós me valho e, gemendo sob o peso dos meus pecados, me prostro aos vossos pés.\n\nNão desprezeis as minhas súplicas, ó Mãe do Filho de Deus humanado, mas dignai-Vos de as ouvir propícia e de me alcançar o que Vos rogo.\n\nAmém."
+                },
+                {
+                    "id": "fatima_prayer",
+                    "title": "Oração de Fátima",
+                    "icon": "flare_outlined",
+                    "content": "Ó meu Jesus, perdoai-nos e livrai-nos do fogo do inferno; levai as almas todas para o Céu, principalmente as que mais precisarem da vossa misericórdia.\n\nAmém."
+                }
+            ]
+        },
+        {
+            "id": "devotions",
+            "title": "Orações Devocionais",
+            "icon": "auto_stories_outlined",
+            "prayers": [
+                {
+                    "id": "holy_rosary",
+                    "title": "O Santo Rosário",
+                    "subtitle": "Um Guia Completo para Iniciantes",
+                    "icon": "radio_button_unchecked",
+                    "isExpandable": true,
+                    "sections": [
+                        {
+                            "title": "Orações Iniciais",
+                            "subtitle": "No Crucifixo e Primeiras Contas",
+                            "content": "[INSTRUCTION]Faça o Sinal da Cruz:[/INSTRUCTION]\n\nEm nome do Pai, e do Filho, e do Espírito Santo. Amém.\n\n[INSTRUCTION]Segurando o Crucifixo, reze o Credo dos Apóstolos:[/INSTRUCTION]\n\n[PRAYER]Creio em Deus Pai Todo-Poderoso...[/PRAYER]\n\n[INSTRUCTION]Na primeira conta grande, reze o Pai Nosso:[/INSTRUCTION]\n\n[PRAYER]Pai nosso, que estais nos Céus...[/PRAYER]\n\n[INSTRUCTION]Em cada uma das três contas pequenas, reze a Ave Maria:[/INSTRUCTION]\n\n[PRAYER]Ave Maria, cheia de graça...[/PRAYER]\n\n[INSTRUCTION]Reze o Glória:[/INSTRUCTION]\n\n[PRAYER]Glória ao Pai...[/PRAYER]"
+                        },
+                        {
+                            "title": "Como Rezar Cada Mistério",
+                            "subtitle": "Repita para cada um dos 5 Mistérios",
+                            "content": "[INSTRUCTION]1. Anuncie o Mistério e reflita sobre ele[/INSTRUCTION]\n\n[INSTRUCTION]2. Na conta grande, reze o Pai Nosso:[/INSTRUCTION]\n\n[PRAYER]Pai nosso, que estais nos Céus...[/PRAYER]\n\n[INSTRUCTION]3. Em cada uma das 10 contas pequenas, reze a Ave Maria:[/INSTRUCTION]\n\n[PRAYER]Ave Maria, cheia de graça...[/PRAYER]\n\n[INSTRUCTION]4. Após as 10 Ave-Marias, reze o Glória:[/INSTRUCTION]\n\n[PRAYER]Glória ao Pai...[/PRAYER]\n\n[INSTRUCTION]5. Opcionalmente, reze a Oração de Fátima:[/INSTRUCTION]\n\n[PRAYER]Ó meu Jesus...[/PRAYER]"
+                        },
+                        {
+                            "title": "Mistérios Gozosos",
+                            "subtitle": "Segundas e Sábados",
+                            "content": "1. A Anunciação do Anjo a Maria.\n\n2. A Visitação de Nossa Senhora a Santa Isabel.\n\n3. O Nascimento de Jesus em Belém.\n\n4. A Apresentação do Menino Jesus no Templo.\n\n5. A Perda e o Encontro do Menino Jesus no Templo."
+                        },
+                        {
+                            "title": "Mistérios Luminosos",
+                            "subtitle": "Quintas",
+                            "content": "1. O Batismo de Jesus no Jordão.\n\n2. As Bodas de Caná.\n\n3. O Anúncio do Reino de Deus.\n\n4. A Transfiguração de Jesus.\n\n5. A Instituição da Eucaristia."
+                        },
+                        {
+                            "title": "Mistérios Dolorosos",
+                            "subtitle": "Terças e Sextas",
+                            "content": "1. A Agonia de Jesus no Horto.\n\n2. A Flagelação de Jesus.\n\n3. A Coroação de Espinhos.\n\n4. Jesus carrega a Cruz até o Calvário.\n\n5. A Crucificação e Morte de Jesus."
+                        },
+                        {
+                            "title": "Mistérios Gloriosos",
+                            "subtitle": "Quartas e Domingos",
+                            "content": "1. A Ressurreição de Jesus.\n\n2. A Ascensão de Jesus aos Céus.\n\n3. A Vinda do Espírito Santo.\n\n4. A Assunção de Maria ao Céu.\n\n5. A Coroação de Maria como Rainha do Céu e da Terra."
+                        },
+                        {
+                            "title": "Orações Finais",
+                            "subtitle": "Após os Cinco Mistérios",
+                            "content": "[INSTRUCTION]Reze a Salve Rainha:[/INSTRUCTION]\n\n[PRAYER]Salve, Rainha...[/PRAYER]\n\n[INSTRUCTION]Oração Final:[/INSTRUCTION]\n\n[PRAYER]Ó Deus, cujo Filho Unigênito, por Sua vida, morte e ressurreição, nos mereceu a recompensa da salvação eterna, concedei-nos, nós Vos suplicamos, que, meditando estes mistérios do Santíssimo Rosário da Virgem Maria, imitemos o que contêm e alcancemos o que prometem. Por Cristo, Nosso Senhor. Amém.[/PRAYER]\n\n[INSTRUCTION]Faça o Sinal da Cruz[/INSTRUCTION]"
+                        }
+                    ]
+                },
+                {
+                    "id": "divine_mercy_chaplet",
+                    "title": "Terço da Divina Misericórdia",
+                    "icon": "water_drop_outlined",
+                    "isExpandable": true,
+                    "sections": [
+                        {
+                            "title": "Orações Iniciais",
+                            "content": "1. Faça o Sinal da Cruz\n2. Oração Inicial Opcional:\n\n[PRAYER]Expirastes, Jesus, mas a fonte da vida brotou para as almas e o oceano de misericórdia abriu-se para o mundo inteiro. Ó Fonte de Vida, insondável Misericórdia Divina, envolvei o mundo inteiro e derramai-Vos sobre nós.[/PRAYER]\n\n3. Repita três vezes:\n\n[PRAYER]Ó Sangue e Água, que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós![/PRAYER]"
+                        },
+                        {
+                            "title": "O Terço",
+                            "content": "1. Reze o Pai Nosso\n2. Reze a Ave Maria\n3. Reze o Credo dos Apóstoles\n\n[RUBRIC]Nas contas grandes (Pai Nosso), diga:[/RUBRIC]\n\n[PRAYER]Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade de Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.[/PRAYER]\n\n[RUBRIC]Nas contas pequenas (Ave Maria), diga:[/RUBRIC]\n\n[PRAYER]Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.[/PRAYER]\n\nRepita por cinco dezenas."
+                        },
+                        {
+                            "title": "Conclusão",
+                            "content": "Repita três vezes:\n\n[PRAYER]Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.[/PRAYER]\n\nOração Final Opcional:\n\n[PRAYER]Ó Deus Eterno, em quem a misericórdia é insondável e o tesouro da compaixão é inesgotável, olhai propício para nós e multiplicai em nós a Vossa misericórdia, para que não desesperemos nos momentos difíceis, nem desanimemos, mas nos submetamos com grande confiança à Vossa Santa Vontade, que é Amor e a própria Misericórdia. Amém.[/PRAYER]"
+                        }
+                    ]
+                },
+                {
+                    "id": "guardian_angel",
+                    "title": "Santo Anjo do Senhor",
+                    "icon": "shield_outlined",
+                    "content": "Santo Anjo do Senhor,\nmeu zeloso guardador,\npois que a ti me confiou a piedade divina,\nhoje e sempre me governa, rege,\nguarda e ilumina.\n\nAmém."
+                }
+            ]
+        },
+        {
+            "id": "communion",
+            "title": "Orações para a Santa Comunhão",
+            "icon": "wb_sunny_outlined",
+            "prayers": [
+                {
+                    "id": "before_communion",
+                    "title": "Oração Antes da Comunhão",
+                    "icon": "wb_twilight_outlined",
+                    "content": "Senhor Jesus Cristo, Filho de Deus vivo, que por vontade do Pai, cooperando o Espírito Santo, destes com a vossa morte a vida ao mundo; livrai-me, pela recepção do vosso Corpo e do vosso Sangue, de todas as minhas culpas e de todo o mal. Fazei que eu cumpra sempre os vossos mandamentos e não permitais que jamais me separe de vós. Amém."
+                },
+                {
+                    "id": "after_communion",
+                    "title": "Oração Depois da Comunhão",
+                    "subtitle": "Alma de Cristo",
+                    "icon": "light_mode_outlined",
+                    "content": "Alma de Cristo, santificai-me.\nCorpo de Cristo, salvai-me.\nSangue de Cristo, inebriai-me.\nÁgua do lado de Cristo, lavai-me.\n\nPaixão de Cristo, confortai-me.\nÓ bom Jesus, ouvi-me.\nDentro das vossas chagas, escondei-me.\nNão permitais que me separe de Vós.\n\nDo espírito maligno, defendei-me.\nNa hora da minha morte, chamai-me.\nE mandai-me ir para Vós,\nPara que com os vossos Santos Vos louve\nPor todos os séculos dos séculos.\n\nAmém."
+                }
+            ]
+        }
+    ]
+}

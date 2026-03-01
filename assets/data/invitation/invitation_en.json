@@ -1,0 +1,52 @@
+{
+    "subtitle": "An Invitation to Grace",
+    "sections": [
+        {
+            "id": "opening",
+            "title": "You Are Welcome Here",
+            "icon": "favorite_outline",
+            "content": "If you're reading this, something has stirred in your heart. Perhaps it's been years since your last confession. Perhaps you're afraid. Perhaps you feel unworthy.\n\nKnow this: You are not here by accident. The same God who left the ninety-nine to find the one lost sheep has been seeking you. He has never stopped loving you.\n\nWhatever has kept you away—shame, fear, doubt, the busyness of life—the Father's arms remain open. He is not angry. He is waiting with joy for your return."
+        },
+        {
+            "id": "returning",
+            "title": "For Those Returning After Many Years",
+            "icon": "home_outlined",
+            "content": "\"But it's been so long...\"\n\nWhether it's been 5 years, 20 years, or a lifetime—the Father is not counting the days you were away. He is watching the road, waiting for you to appear on the horizon. And when He sees you, He will run to meet you.\n\n\"But while he was still a long way off, his father saw him and was filled with compassion for him; he ran to his son, threw his arms around him and kissed him.\" — Luke 15:20\n\nThe father in this parable did not wait for explanations. He did not demand an account of where his son had been. He ran. He embraced. He celebrated.\n\nThis is how God feels about you right now.\n\n\"Come now, let us settle the matter,\" says the LORD. \"Though your sins are like scarlet, they shall be as white as snow; though they are red as crimson, they shall be like wool.\" — Isaiah 1:18"
+        },
+        {
+            "id": "fear_sins",
+            "title": "\"My Sins Are Too Terrible...\"",
+            "icon": "healing_outlined",
+            "content": "There is no sin that God's mercy cannot cover. None.\n\nSt. Faustina, to whom Jesus revealed His Divine Mercy, recorded these words from Our Lord:\n\n\"The greater the sinner, the greater the right he has to My mercy.\"\n\nThink about that. Your very weakness, your very sinfulness, gives you a claim on His mercy. You are not disqualified—you are invited.\n\n\"For I am convinced that neither death nor life, neither angels nor demons, neither the present nor the future, nor any powers, neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord.\" — Romans 8:38-39\n\nNothing. Not your past. Not your worst moment. Nothing can separate you from His love."
+        },
+        {
+            "id": "fear_priest",
+            "title": "\"The Priest Will Judge Me...\"",
+            "icon": "person_outline",
+            "content": "The priest sits in the confessional as Christ's representative—and Christ came not for the righteous, but for sinners. \"It is not the healthy who need a doctor, but the sick\" (Mark 2:17).\n\nEvery priest has heard confessions that would shock you. Yours will not be the worst he has heard. And when a prodigal returns, there is joy in that confessional—not judgment.\n\nRemember: The priest is bound by the Seal of Confession, the most absolute confidentiality in the world. He cannot reveal your sins to anyone, under any circumstances, even under threat of death. Your confession is safe.\n\nMoreover, the priest himself is a sinner who goes to confession. He understands. He is there to help you, not to condemn you."
+        },
+        {
+            "id": "fear_memory",
+            "title": "\"I Can't Remember Everything...\"",
+            "icon": "psychology_outlined",
+            "content": "You don't have to remember every sin perfectly.\n\nGod knows your heart. He sees your intention to confess honestly and completely. Simply do your best:\n\n• Confess the serious sins you remember\n• Give a general sense of how often\n• Say \"and any sins I have forgotten\"\n\nThe priest will help guide you. He can ask gentle questions if needed. You are not alone in this.\n\nIf you truly cannot remember something and later recall it, you can confess it next time. God's grace covers what is honestly forgotten.\n\nThe examination of conscience in this app includes over 300 questions to help you reflect thoroughly. Don't feel overwhelmed—take your time. You can work through it over several sessions; your progress is saved. There's no rush. A thoughtful examination is itself an act of love toward God."
+        },
+        {
+            "id": "practical",
+            "title": "You Are More Ready Than You Think",
+            "icon": "check_circle_outline",
+            "content": "You don't need to have it all figured out.\nYou don't need to feel worthy.\nYou don't need perfect words.\n\nYou just need to come.\n\nThe examination will guide you step by step. The priest will help you through the process. And God? He's already preparing the celebration.\n\n\"I tell you that in the same way there will be more rejoicing in heaven over one sinner who repents than over ninety-nine righteous persons who do not need to repent.\" — Luke 15:7\n\nHeaven is ready to rejoice over you. Today can be the day."
+        },
+        {
+            "id": "prayer",
+            "title": "A Prayer for Courage",
+            "icon": "local_fire_department_outlined",
+            "content": "Lord Jesus Christ, Son of the Living God,\n\nYou know my heart. You know my fears, my shame, my hesitation. You know how long I have been away.\n\nGive me courage. Give me the grace to trust in Your mercy more than I trust in my unworthiness.\n\nHoly Spirit, guide my thoughts as I examine my conscience. Help me to see my sins clearly, but also to see Your love more clearly still.\n\nMary, Mother of Mercy, pray for me. Lead me gently back to your Son.\n\nI want to come home. Help me take this step.\n\nAmen."
+        }
+    ],
+    "callToAction": {
+        "primary": "Begin Your Examination",
+        "secondary": "Read the Confession Guide",
+        "tertiary": "View Prayers"
+    }
+}

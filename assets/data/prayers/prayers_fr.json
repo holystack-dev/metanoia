@@ -1,0 +1,190 @@
+{
+    "subtitle": "Prières pour Votre Cheminement Spirituel",
+    "categories": [
+        {
+            "id": "confession",
+            "title": "Prières pour la Confession",
+            "icon": "church_outlined",
+            "prayers": [
+                {
+                    "id": "before_confession",
+                    "title": "Prière Avant la Confession",
+                    "icon": "wb_twilight_outlined",
+                    "content": "Viens, Esprit Saint, dans mon âme. Éclaire mon esprit pour que je connaisse les péchés que je dois confesser, et accorde-moi ta grâce pour regretter sincèrement mes péchés.\n\nAide-moi à faire une bonne confession, à regretter vraiment mes offenses contre Toi, et à amender ma vie. Par le Christ notre Seigneur. Amen."
+                },
+                {
+                    "id": "act_of_contrition",
+                    "title": "Acte de Contrition",
+                    "icon": "favorite_outline",
+                    "content": "Mon Dieu, j'ai un très grand regret de vous avoir offensé, parce que vous êtes infiniment bon, infiniment aimable, et que le péché vous déplaît. Je prends la ferme résolution, avec le secours de votre sainte grâce, de ne plus vous offenser et de faire pénitence. Amen."
+                },
+                {
+                    "id": "after_confession",
+                    "title": "Prière Après la Confession",
+                    "icon": "light_mode_outlined",
+                    "content": "Mon très cher Jésus, j'ai dit tous mes péchés aussi bien que j'ai pu. J'ai essayé de faire une bonne confession. Je suis sûr que Tu m'as pardonné.\n\nJe Te remercie de tout mon cœur. Je promets d'essayer avec Ta grâce de ne plus jamais pécher. Mon Dieu aimant, donne-moi la force de rester proche de Toi et d'éviter le péché. Amen."
+                },
+                {
+                    "id": "confiteor",
+                    "title": "Confiteor (Je Confesse)",
+                    "icon": "person_outline",
+                    "content": "Je confesse à Dieu tout-puissant, je reconnais devant vous, frères et sœurs, que j'ai péché en pensée, en parole, par action et par omission,\n\n[RUBRIC]Frappez-vous la poitrine trois fois en disant :[/RUBRIC]\n\noui, j'ai vraiment péché.\n\nC'est pourquoi je supplie la bienheureuse Vierge Marie, les anges et tous les saints, et vous aussi, frères et sœurs, de prier pour moi le Seigneur notre Dieu. Amen."
+                }
+            ]
+        },
+        {
+            "id": "essential",
+            "title": "Prières Essentielles",
+            "icon": "auto_awesome_outlined",
+            "prayers": [
+                {
+                    "id": "lords_prayer",
+                    "title": "Notre Père",
+                    "icon": "cloud_outlined",
+                    "content": "Notre Père, qui es aux cieux,\nque ton nom soit sanctifié,\nque ton règne vienne,\nque ta volonté soit faite sur la terre comme au ciel.\n\nDonne-nous aujourd'hui notre pain de ce jour.\nPardonne-nous nos offenses,\ncomme nous pardonnons aussi à ceux qui nous ont offensés.\nEt ne nous laisse pas entrer en tentation\nmais délivre-nous du Mal.\n\nAmen."
+                },
+                {
+                    "id": "hail_mary",
+                    "title": "Je Vous Salue Marie",
+                    "icon": "star_outline",
+                    "content": "Je vous salue, Marie pleine de grâce ;\nle Seigneur est avec vous.\nVous êtes bénie entre toutes les femmes\net Jésus, le fruit de vos entrailles, est béni.\n\nSainte Marie, Mère de Dieu,\npriez pour nous pauvres pécheurs,\nmaintenant et à l'heure de notre mort.\n\nAmen."
+                },
+                {
+                    "id": "glory_be",
+                    "title": "Gloire au Père",
+                    "icon": "brightness_high_outlined",
+                    "content": "Gloire au Père, et au Fils, et au Saint-Esprit.\n\nComme il était au commencement, maintenant et toujours,\npour les siècles des siècles.\n\nAmen."
+                },
+                {
+                    "id": "apostles_creed",
+                    "title": "Symbole des Apôtres",
+                    "icon": "menu_book_outlined",
+                    "isExpandable": true,
+                    "content": "Je crois en Dieu, le Père tout-puissant, Créateur du ciel et de la terre.\n\nEt en Jésus Christ, son Fils unique, notre Seigneur ; qui a été conçu du Saint Esprit, est né de la Vierge Marie, a souffert sous Ponce Pilate, a été crucifié, est mort et a été enseveli,\n\nest descendu aux enfers ; le troisième jour est ressuscité des morts ; est monté aux cieux ; est assis à la droite de Dieu le Père tout-puissant, d'où il viendra juger les vivants et les morts.\n\nJe crois en l'Esprit Saint, à la sainte Église catholique, à la communion des saints, à la rémission des péchés, à la résurrection de la chair, à la vie éternelle.\n\nAmen."
+                }
+            ]
+        },
+        {
+            "id": "marian",
+            "title": "Prières Mariales",
+            "icon": "favorite_border",
+            "prayers": [
+                {
+                    "id": "hail_holy_queen",
+                    "title": "Salut, Ô Reine (Salve Regina)",
+                    "icon": "star_outline",
+                    "content": "Salut, Ô Reine, Mère de miséricorde ; notre vie, notre douceur et notre espérance, salut.\n\nEnfants d'Ève, malheureux exilés, nous élevons nos cris vers vous ; nous soupirons vers vous, gémissant et pleurant dans cette vallée de larmes.\n\nO notre avocate, tournez donc vers nous vos yeux miséricordieux ; et au sortir de cet exil, montrez-nous Jésus, le fruit béni de vos entrailles.\n\nO clémente, ô miséricordieuse, ô douce Vierge Marie.\n\n[VERSICLE]V. Priez pour nous, Sainte Mère de Dieu.[/VERSICLE]\n[RESPONSE]R. Afin que nous devenions dignes des promesses du Christ.[/RESPONSE]\n\nAmen."
+                },
+                {
+                    "id": "memorare",
+                    "title": "Souvenez-vous",
+                    "icon": "volunteer_activism_outlined",
+                    "content": "Souvenez-vous, ô très miséricordieuse Vierge Marie, qu'on n'a jamais entendu dire qu'aucun de ceux qui ont eu recours à votre protection, imploré votre assistance ou réclamé votre secours, ait été abandonné.\n\nAnimé d'une pareille confiance, ô Vierge des vierges, ô ma Mère, je cours vers vous, et gémissant sous le poids de mes péchés, je me prosterne à vos pieds.\n\nO Mère du Verbe incarné, ne méprisez pas mes prières, mais écoutez-les favorablement et daignez les exaucer.\n\nAmen."
+                },
+                {
+                    "id": "fatima_prayer",
+                    "title": "Prière de Fatima",
+                    "icon": "flare_outlined",
+                    "content": "Ô mon Jésus, pardonnez-nous nos péchés, préservez-nous du feu de l’enfer et conduisez au Ciel toutes les âmes, surtout celles qui ont le plus besoin de votre miséricorde.\n\nAmen."
+                }
+            ]
+        },
+        {
+            "id": "devotions",
+            "title": "Prières de Dévotion",
+            "icon": "auto_stories_outlined",
+            "prayers": [
+                {
+                    "id": "holy_rosary",
+                    "title": "Le Saint Rosaire",
+                    "subtitle": "Un Guide Complet pour les Débutants",
+                    "icon": "radio_button_unchecked",
+                    "isExpandable": true,
+                    "sections": [
+                        {
+                            "title": "Prières d'Ouverture",
+                            "subtitle": "Sur le Crucifix et les Premiers Grains",
+                            "content": "[INSTRUCTION]Faites le Signe de la Croix :[/INSTRUCTION]\n\nAu nom du Père, et du Fils, et du Saint-Esprit. Amen.\n\n[INSTRUCTION]En tenant le Crucifix, récitez le Symbole des Apôtres :[/INSTRUCTION]\n\n[PRAYER]Je crois en Dieu...[/PRAYER]\n\n[INSTRUCTION]Sur le premier gros grain, récitez le Notre Père :[/INSTRUCTION]\n\n[PRAYER]Notre Père...[/PRAYER]\n\n[INSTRUCTION]Sur chacun des trois petits grains, récitez le Je Vous Salue Marie :[/INSTRUCTION]\n\n[PRAYER]Je vous salue, Marie...[/PRAYER]\n\n[INSTRUCTION]Récitez le Gloire au Père :[/INSTRUCTION]\n\n[PRAYER]Gloire au Père...[/PRAYER]"
+                        },
+                        {
+                            "title": "Comment Prier Chaque Dizaine",
+                            "subtitle": "Répétez pour chacun des 5 Mystères",
+                            "content": "[INSTRUCTION]1. Annoncez le Mystère et réfléchissez-y[/INSTRUCTION]\n\n[INSTRUCTION]2. Sur le gros grain, récitez le Notre Père :[/INSTRUCTION]\n\n[PRAYER]Notre Père...[/PRAYER]\n\n[INSTRUCTION]3. Sur chacun des 10 petits grains, récitez le Je Vous Salue Marie :[/INSTRUCTION]\n\n[PRAYER]Je vous salue, Marie...[/PRAYER]\n\n[INSTRUCTION]4. Après les 10 Je Vous Salue Marie, récitez le Gloire au Père :[/INSTRUCTION]\n\n[PRAYER]Gloire au Père...[/PRAYER]\n\n[INSTRUCTION]5. Optionnellement, récitez la Prière de Fatima :[/INSTRUCTION]\n\n[PRAYER]Ô mon Jésus...[/PRAYER]"
+                        },
+                        {
+                            "title": "Les Mystères Joyeux",
+                            "subtitle": "Lundis et Samedis",
+                            "content": "1. L'Annonciation.\n\n2. La Visitation.\n\n3. La Nativité.\n\n4. La Présentation au Temple.\n\n5. Le Recouvrement de Jésus au Temple."
+                        },
+                        {
+                            "title": "Les Mystères Lumineux",
+                            "subtitle": "Jeudis",
+                            "content": "1. Le Baptême au Jourdain.\n\n2. Les Noces de Cana.\n\n3. L'Annonce du Royaume.\n\n4. La Transfiguration.\n\n5. L'Institution de l'Eucharistie."
+                        },
+                        {
+                            "title": "Les Mystères Douloureux",
+                            "subtitle": "Mardis et Vendredis",
+                            "content": "1. L'Agonie au Jardin.\n\n2. La Flagellation.\n\n3. Le Couronnement d'Épines.\n\n4. Le Portement de Croix.\n\n5. Le Crucifiement."
+                        },
+                        {
+                            "title": "Les Mystères Glorieux",
+                            "subtitle": "Mercredis et Dimanches",
+                            "content": "1. La Résurrection.\n\n2. L'Ascension.\n\n3. La Pentecôte.\n\n4. L'Assomption.\n\n5. Le Couronnement de Marie."
+                        },
+                        {
+                            "title": "Prières de Clôture",
+                            "subtitle": "Après les Cinq Dizaines",
+                            "content": "[INSTRUCTION]Récitez le Salut, Ô Reine :[/INSTRUCTION]\n\n[PRAYER]Salut, Ô Reine...[/PRAYER]\n\n[INSTRUCTION]Prière de Clôture :[/INSTRUCTION]\n\n[PRAYER]Ô Dieu, dont le Fils unique, par sa vie, sa mort et sa résurrection, nous a mérité les récompenses du salut éternel, faites, nous vous en supplions, qu'en méditant ces mystères du très saint Rosaire de la bienheureuse Vierge Marie, nous imitions ce qu'ils contiennent et obtenions ce qu'ils promettent. Par le même Christ notre Seigneur. Amen.[/PRAYER]\n\n[INSTRUCTION]Faites le Signe de la Croix[/INSTRUCTION]"
+                        }
+                    ]
+                },
+                {
+                    "id": "divine_mercy_chaplet",
+                    "title": "Chapelet de la Divine Miséricorde",
+                    "icon": "water_drop_outlined",
+                    "isExpandable": true,
+                    "sections": [
+                        {
+                            "title": "Prières d'Ouverture",
+                            "content": "1. Faites le Signe de la Croix\n2. Prière d'Ouverture Optionnelle :\n\n[PRAYER]Vous avez expiré, Jésus, mais la source de vie a jailli pour les âmes et l'océan de miséricorde s'est ouvert pour le monde entier. Ô Source de Vie, insondable Miséricorde Divine, enveloppez le monde entier et videz-Vous sur nous.[/PRAYER]\n\n3. Répétez trois fois :\n\n[PRAYER]Ô Sang et Eau, qui avez jailli du Cœur de Jésus comme source de miséricorde pour nous, j'ai confiance en Vous ![/PRAYER]"
+                        },
+                        {
+                            "title": "Le Chapelet",
+                            "content": "1. Récitez le Notre Père\n2. Récitez le Je Vous Salue Marie\n3. Récitez le Symbole des Apôtres\n\n[RUBRIC]Sur les gros grains (grains du Notre Père), dites :[/RUBRIC]\n\n[PRAYER]Père Éternel, je T'offre le Corps et le Sang, l'Âme et la Divinité de Ton Fils bien-aimé, Notre Seigneur Jésus-Christ, en réparation de nos péchés et de ceux du monde entier.[/PRAYER]\n\n[RUBRIC]Sur les petits grains (grains du Je Vous Salue Marie), dites :[/RUBRIC]\n\n[PRAYER]Par Sa douloureuse Passion, sois miséricordieux pour nous et pour le monde entier.[/PRAYER]\n\nRépétez pour cinq dizaines."
+                        },
+                        {
+                            "title": "Conclusion",
+                            "content": "Répétez trois fois :\n\n[PRAYER]Saint Dieu, Saint Fort, Saint Immortel, aie pitié de nous et du monde entier.[/PRAYER]\n\nPrière de Clôture Optionnelle :\n\n[PRAYER]Dieu éternel, dont la miséricorde est infinie et le trésor de compassion inépuisable, posez sur nous un regard de bonté et multipliez en nous votre miséricorde, pour que, dans les moments difficiles, nous ne désespérions pas ni ne perdions courage, mais que nous nous soumettions avec une grande confiance à votre sainte volonté, qui est l'Amour et la Miséricorde même. Amen.[/PRAYER]"
+                        }
+                    ]
+                },
+                {
+                    "id": "guardian_angel",
+                    "title": "Prière à l'Ange Gardien",
+                    "icon": "shield_outlined",
+                    "content": "Ange de Dieu, qui es mon gardien,\net à qui j'ai été confié par la Bonté divine,\néclaire-moi, défends-moi,\nconduis-moi et dirige-moi.\n\nAmen."
+                }
+            ]
+        },
+        {
+            "id": "communion",
+            "title": "Prières pour la Sainte Communion",
+            "icon": "wb_sunny_outlined",
+            "prayers": [
+                {
+                    "id": "before_communion",
+                    "title": "Prière Avant la Communion",
+                    "icon": "wb_twilight_outlined",
+                    "content": "Seigneur Jésus-Christ, Fils du Dieu vivant, qui, par la volonté du Père et avec la coopération du Saint-Esprit, avez donné la vie au monde par votre mort : délivrez-moi par ceci, votre très saint Corps et Sang, de toutes mes iniquités et de tout mal : et faites que je m'attache toujours à vos commandements, et ne permettez jamais que je sois séparé de Vous. Amen."
+                },
+                {
+                    "id": "after_communion",
+                    "title": "Prière Après la Communion",
+                    "subtitle": "Âme du Christ",
+                    "icon": "light_mode_outlined",
+                    "content": "Âme du Christ, sanctifie-moi.\nCorps du Christ, sauve-moi.\nSang du Christ, enivre-moi.\nEau du côté du Christ, lave-moi.\n\nPassion du Christ, fortifie-moi.\nO bon Jésus, exauce-moi.\nDans tes blessures, cache-moi.\nNe permets pas que je sois séparé de toi.\n\nDe l'ennemi maléfique, défends-moi.\nÀ l'heure de ma mort, appelle-moi.\nEt ordonne-moi de venir à toi,\nPour qu'avec tes saints je te loue\nPour les siècles des siècles.\n\nAmen."
+                }
+            ]
+        }
+    ]
+}

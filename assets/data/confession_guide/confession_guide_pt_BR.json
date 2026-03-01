@@ -1,0 +1,58 @@
+{
+    "title": "Como Fazer uma Boa Confissão",
+    "subtitle": "Um guia passo a passo para o Sacramento da Reconciliação",
+    "sections": [
+        {
+            "id": "before_confession",
+            "title": "Antes da Confissão",
+            "icon": "assignment_outlined",
+            "content": "Uma boa confissão requer preparação cuidadosa. A Igreja ensina cinco elementos essenciais:\n\n• Examine sua consciência minuciosamente, recordando todos os pecados desde sua última confissão\n• Sinta tristeza genuína (contrição) por ter ofendido a Deus\n• Faça um firme propósito de evitar o pecado no futuro\n• Confesse todos os pecados mortais em espécie e número ao padre\n• Cumpra a penitência atribuída pelo padre\n\nReserve um tempo antes da confissão para rezar e refletir calmamente. Peça ao Espírito Santo que o ajude a ver seus pecados claramente e lhe dê verdadeiro arrependimento.\n\nEste aplicativo inclui mais de 300 perguntas de exame para ajudar você a se preparar completamente. Não tenha pressa—um exame cuidadoso é a base de uma boa confissão. Leve quantas sessões precisar; seu progresso é salvo automaticamente.\n\n\"Cria em mim, ó Deus, um coração puro, e renova em mim um espírito reto.\" —Salmo 51:10\n\n(CIC 1454)"
+        },
+        {
+            "id": "entering_confessional",
+            "title": "Entrando no Confessionário",
+            "icon": "door_front_outlined",
+            "content": "Quando você entrar no confessionário, pode se ajoelhar atrás do biombo ou sentar-se frente a frente com o padre—o que preferir. Tire um momento para se recompor.\n\nAmbos, você e o padre, fazem o Sinal da Cruz juntos:\n\n\"Em nome do Pai, e do Filho, e do Espírito Santo. Amém.\"\n\nO padre pode oferecer palavras de boas-vindas e encorajamento, como:\n\"Que o Senhor esteja em seu coração e o ajude a confessar seus pecados com verdadeira tristeza.\"\n\nEle também pode ler uma breve passagem da Sagrada Escritura para ajudar você a focar na misericórdia de Deus."
+        },
+        {
+            "id": "confessing_sins",
+            "title": "Confessando Seus Pecados",
+            "icon": "record_voice_over_outlined",
+            "content": "Comece dizendo quanto tempo faz desde sua última confissão:\n\n\"Perdoe-me, Padre, porque pequei. Faz [dias/semanas/meses/anos] desde minha última confissão.\"\n\nEntão confesse seus pecados simples e honestamente. Para pecados mortais, você deve confessar:\n• O tipo de pecado (o que você fez)\n• O número de vezes (o melhor que puder lembrar)\n\nPor exemplo: \"Faltei à Missa no domingo três vezes\" ou \"Menti para meu cônjuge sobre dinheiro duas vezes.\"\n\nNão se preocupe com a redação perfeita—fale do coração. O padre está lá para ajudar você, não para julgar você. Se não tiver certeza se algo é pecado, você pode perguntar.\n\nQuando terminar, você pode dizer: \"Por estes e todos os meus pecados, eu sinto muito.\"\n\n(CIC 1456)"
+        },
+        {
+            "id": "counsel_penance",
+            "title": "Conselho e Penitência",
+            "icon": "psychology_outlined",
+            "content": "Depois de ouvir sua confissão, o padre pode oferecer conselho espiritual para ajudar você a crescer em virtude e evitar o pecado no futuro. Ouça atentamente suas palavras.\n\nO padre então atribuirá uma penitência—geralmente orações, um ato de caridade ou um sacrifício. Esta penitência:\n• Ajuda a reparar o dano causado pelo pecado\n• Fortalece você contra tentações futuras\n• Expressa seu desejo de mudar\n\nSe a penitência não for clara ou parecer muito difícil, você pode respeitosamente pedir esclarecimento ou uma alternativa.\n\n(CIC 1460)"
+        },
+        {
+            "id": "act_of_contrition",
+            "title": "Ato de Contrição",
+            "icon": "favorite_outline",
+            "content": "O padre pedirá que você reze um Ato de Contrição. Esta oração expressa sua tristeza pelo pecado e sua intenção de emendar sua vida. Você pode usar suas próprias palavras ou rezar:\n\n[PRAYER]\nSenhor meu Jesus Cristo, Deus e homem verdadeiro, Criador e Redentor meu: por serdes Vós quem sois, sumamente bom e digno de ser amado sobre todas as coisas, e porque Vos amo e estimo, pesa-me, Senhor, de todo o meu coração, de Vos ter ofendido; pesa-me também de ter perdido o Céu e merecido o Inferno; e proponho firmemente, ajudado com os auxílios de vossa divina graça, emendar-me e nunca mais Vos tornar a ofender. Espero alcançar o perdão de minhas culpas pela vossa infinita misericórdia. Amém.\n[/PRAYER]\n\nAlternativamente:\n\n[PRAYER]\nMeu Deus, eu me arrependo de todo o coração de todos os meus pecados e os detesto, porque ao pecar, não só mereço as penas que causam, mas principalmente Vos ofendo a Vós, sumo Bem e digno de amor acima de todas as coisas. Por isso proponho firmemente, com a ajuda da vossa graça, não voltar a pecar e fugir das ocasiões de pecado. Senhor, pelos méritos da Paixão de nosso Salvador Jesus Cristo, tende piedade de mim. Amém.\n[/PRAYER]"
+        },
+        {
+            "id": "absolution",
+            "title": "Recebendo a Absolvição",
+            "icon": "auto_awesome_outlined",
+            "content": "Este é o momento mais sagrado do sacramento. O padre estende as mãos sobre você e pronuncia as palavras de absolvição:\n\n[LITURGICAL]\n\"Deus, Pai de misericórdia, que, pela morte e ressurreição de seu Filho, reconciliou o mundo consigo e enviou o Espírito Santo para remissão dos pecados, te conceda, pelo ministério da Igreja, o perdão e a paz. E eu te absolvo dos teus pecados em nome do Pai, e do Filho, + e do Espírito Santo.\"\n[/LITURGICAL]\n\nVocê responde: \"Amém.\"\n\nFaça o Sinal da Cruz enquanto o padre pronuncia a absolvição. Neste momento, todos os seus pecados confessados são verdadeiramente perdoados. Você está reconciliado com Deus e a Igreja.\n\n\"Quanto o oriente dista do ocidente, tanto afasta ele de nós as nossas transgressões.\" —Salmo 103:12\n\n(CIC 1449)"
+        },
+        {
+            "id": "after_confession",
+            "title": "Após a Confissão",
+            "icon": "celebration_outlined",
+            "content": "O padre o despedirá com palavras de paz, como:\n\"Dai graças ao Senhor, porque Ele é bom.\"\nVocê responde: \"Porque a sua misericórdia é eterna.\"\n\nOu ele pode dizer: \"Vá em paz.\"\n\nDepois de sair do confessionário:\n\n• Cumpra sua penitência o mais rápido possível, se puder ser feita imediatamente\n• Passe alguns momentos em ação de graças—você recebeu um presente incrível!\n• Peça a Nosso Senhor a graça de permanecer fiel\n\nLembre-se: você foi lavado e limpo. Não se detenha nos pecados confessados com ansiedade. Confie na misericórdia de Deus e siga em frente com alegria.\n\n\"Digo-vos que assim haverá mais alegria no céu por um pecador que se arrepende, do que por noventa e nove justos que não necessitam de arrependimento.\" —Lucas 15:7\n\n(CIC 1468)"
+        },
+        {
+            "id": "tips",
+            "title": "Dicas Úteis",
+            "icon": "lightbulb_outlined",
+            "content": "• Se você esquecer um pecado durante a confissão, não se preocupe—ele é perdoado junto com os que você confessou. Simplesmente mencione na sua próxima confissão.\n\n• Se estiver nervoso, diga ao padre. Ele está lá para ajudar você.\n\n• Para uma longa ausência da confissão, avise o padre. Ele pode guiar você pelo processo passo a passo.\n\n• Você pode trazer uma lista escrita de pecados para ajudar a lembrar—ou usar o recurso de Exame deste aplicativo para preparar e revisar seus pecados durante a confissão.\n\n• O Sigilo da Confissão é absoluto. O padre não pode revelar nada ouvido na confissão, sob nenhuma circunstância.\n\n• Confesse-se regularmente, mesmo pecados veniais. Os santos recomendavam a confissão semanal ou mensal como um caminho para a santidade.\n\n\"Confessai as vossas culpas uns aos outros, e orai uns pelos outros, para que sareis.\" —Tiago 5:16\n\n(CIC 1467)"
+        }
+    ],
+    "callToAction": {
+        "primary": "Começar Exame",
+        "secondary": "Ver Orações"
+    }
+}

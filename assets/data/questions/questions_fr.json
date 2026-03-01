@@ -1,0 +1,1044 @@
+[
+    {
+        "commandmentCode": "fr-1",
+        "questions": [
+            {
+                "id": "fr-01-001",
+                "text": "Ai-je refusé de croire en Dieu (Athéisme) ?"
+            },
+            {
+                "id": "fr-01-002",
+                "text": "Ai-je douté de l'existence de Dieu ?"
+            },
+            {
+                "id": "fr-01-003",
+                "text": "Ai-je haï Dieu ou l'ai-je blâmé pour les problèmes de ma vie ?"
+            },
+            {
+                "id": "fr-01-004",
+                "text": "Ai-je nié l'un des dogmes de l'Église catholique ?"
+            },
+            {
+                "id": "fr-01-005",
+                "text": "Ai-je délibérément poussé d'autres personnes à douter de Dieu ou des articles de la foi ?"
+            },
+            {
+                "id": "fr-01-006",
+                "text": "Ai-je essayé de grandir dans ma foi et de la défendre ?"
+            },
+            {
+                "id": "fr-01-007",
+                "text": "Ai-je transmis la foi à mes enfants et à ma famille de manière dévouée ?"
+            },
+            {
+                "id": "fr-01-008",
+                "text": "Ai-je refusé de défendre Dieu et ma foi devant les autres lorsqu'ils soulevaient des objections ?"
+            },
+            {
+                "id": "fr-01-009",
+                "text": "Ai-je nié ma foi ou les doctrines devant d'autres ?"
+            },
+            {
+                "id": "fr-01-010",
+                "text": "Ai-je quitté l'Église catholique ou pratiqué une autre religion ?"
+            },
+            {
+                "id": "fr-01-011",
+                "text": "Ai-je rejoint une organisation préjudiciable ou opposée à ma foi (Communistes, Francs-maçons, groupes dissidents ou schismatiques, ou tout groupe exigeant que ses membres prêtent un serment supérieur et antérieur à leurs devoirs envers l'Église catholique) ?"
+            },
+            {
+                "id": "fr-01-012",
+                "text": "Ai-je cédé au désespoir concernant Dieu ou son pardon ?"
+            },
+            {
+                "id": "fr-01-013",
+                "text": "Ai-je présumé de la miséricorde de Dieu en commettant intentionnellement un péché avec l'espoir d'être pardonné, évitant ainsi une véritable conversion du cœur ?"
+            },
+            {
+                "id": "fr-01-014",
+                "text": "Ai-je présumé de ma propre capacité à sauver mon âme sans l'aide de Dieu ?"
+            },
+            {
+                "id": "fr-01-015",
+                "text": "Ai-je confessé mes péchés sans avoir l'intention d'amender ma vie ?"
+            },
+            {
+                "id": "fr-01-016",
+                "text": "Ai-je pratiqué l'idolâtrie ? Ai-je placé des choses du monde telles que l'argent, le pouvoir, le succès, les amitiés, le gouvernement, ma nation, ma race ou mes biens avant ma relation avec Dieu ? Ai-je pratiqué les aspects spirituels du Yoga ?"
+            },
+            {
+                "id": "fr-01-017",
+                "text": "Ai-je pratiqué l'occultisme (Wicca, Satanisme, invocation de démons, Planches Ouija, magie noire, vente de son âme, Séances, canalisation d'esprits, chamanisme, consultation de médiums, Reiki, divination, utilisation de charmes, horoscopes, astrologie, lecture des lignes de la main, voyance, interprétation du sort ou cartomancie) ?"
+            },
+            {
+                "id": "fr-01-018",
+                "text": "Ai-je pratiqué la superstition ? Ai-je attribué un pouvoir surnaturel à une source autre que Dieu ?"
+            },
+            {
+                "id": "fr-01-019",
+                "text": "Ai-je laissé les réseaux sociaux, les jeux vidéo ou Internet devenir une idole, consommant du temps qui appartient à Dieu et à ma famille ?"
+            },
+            {
+                "id": "fr-01-020",
+                "text": "Ai-je cherché ma valeur personnelle dans l'approbation en ligne plutôt que dans mon identité d'enfant de Dieu ?"
+            },
+            {
+                "id": "fr-01-021",
+                "text": "Ai-je passé trop de temps devant des écrans au détriment de mes devoirs quotidiens ou de ma vie de prière ?"
+            },
+            {
+                "id": "fr-01-022",
+                "text": "Ai-je pratiqué le polythéisme ?"
+            },
+            {
+                "id": "fr-01-023",
+                "text": "Ai-je été indifférent à la foi ou à Dieu ?"
+            },
+            {
+                "id": "fr-01-024",
+                "text": "Ai-je été ingrat pour les nombreuses bénédictions que Dieu m'a données ?"
+            },
+            {
+                "id": "fr-01-025",
+                "text": "Ai-je été tiède dans la foi ?"
+            },
+            {
+                "id": "fr-01-026",
+                "text": "Ai-je été paresseux dans ma foi et ma croissance spirituelle ?"
+            },
+            {
+                "id": "fr-01-027",
+                "text": "Ai-je négligé la prière ?"
+            },
+            {
+                "id": "fr-01-028",
+                "text": "Ai-je abandonné des promesses ou des vœux faits à Dieu ?"
+            },
+            {
+                "id": "fr-01-029",
+                "text": "Ai-je restreint la foi d'une autre personne ou contribué à une restriction de la liberté religieuse d'autrui ? Me suis-je moqué de quelqu'un pour sa foi en Dieu ? Ai-je forcé d'autres personnes à violer les principes de leur foi ou de leur conscience ?"
+            },
+            {
+                "id": "fr-01-030",
+                "text": "Ai-je tenté Dieu en mettant Sa bonté et Sa toute-puissance à l'épreuve par parole ou par acte ?"
+            },
+            {
+                "id": "fr-01-031",
+                "text": "Ai-je commis le péché de sacrilège ? Ai-je reçu l'un des sacrements sans la disposition d'âme appropriée (c'est-à-dire recevoir la Sainte Communion, la confirmation, le mariage ou les ordres sacrés avec des péchés mortels sur mon âme) ? Ai-je traité les personnes religieuses telles que les prêtres, les religieuses, les évêques ou le pape, les lieux tels que les églises, les chapelles et les sites sacrés, et les objets bénis ou sacrés tels que les chapelets, les reliques et les Bibles avec le respect dû ? Ai-je menti sur mes péchés ou omis intentionnellement certains péchés graves lors du sacrement de confession ?"
+            },
+            {
+                "id": "fr-01-032",
+                "text": "Ai-je participé à la simonie en achetant ou en vendant des choses spirituelles ?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "fr-2",
+        "questions": [
+            {
+                "id": "fr-02-001",
+                "text": "Ai-je utilisé le nom de Dieu de manière irrespectueuse, négligente ou blasphématoire ?"
+            },
+            {
+                "id": "fr-02-002",
+                "text": "Ai-je parlé de manière irrespectueuse, haineuse, provocante ou négligente de la foi, ou des personnes, lieux et choses sacrés ?"
+            },
+            {
+                "id": "fr-02-003",
+                "text": "Ai-je encouragé un discours irrespectueux, haineux, provocant ou négligent sur la foi ou les personnes, lieux et choses sacrés ?"
+            },
+            {
+                "id": "fr-02-004",
+                "text": "Ai-je regardé des films ou écouté de la musique blasphématoire ou irrévérencieuse ?"
+            },
+            {
+                "id": "fr-02-005",
+                "text": "Ai-je utilisé un langage grossier ou regardé des films ou écouté de la musique contenant un langage grossier ?"
+            },
+            {
+                "id": "fr-02-006",
+                "text": "Ai-je parlé irrespectueusement d'autres personnes ?"
+            },
+            {
+                "id": "fr-02-007",
+                "text": "Ai-je menti sous serment (parjure) ?"
+            },
+            {
+                "id": "fr-02-008",
+                "text": "Ai-je juré ou fait des promesses au nom de Dieu sur des choses fausses ou de peu d'importance même si elles étaient vraies ?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "fr-3",
+        "questions": [
+            {
+                "id": "fr-03-001",
+                "text": "Ai-je manqué la Sainte Messe le dimanche ou les jours d'obligation sans cause grave ?"
+            },
+            {
+                "id": "fr-03-002",
+                "text": "Ai-je manqué d'emmener mes enfants à la Sainte Messe le dimanche et les jours d'obligation sans cause grave ?"
+            },
+            {
+                "id": "fr-03-003",
+                "text": "Ai-je assisté à la messe en arrivant en retard ou en partant tôt sans cause grave ?"
+            },
+            {
+                "id": "fr-03-004",
+                "text": "Ai-je travaillé le dimanche ou d'autres jours d'obligation sans cause grave ?"
+            },
+            {
+                "id": "fr-03-005",
+                "text": "Ai-je refusé d'aider d'autres personnes à assister à la Messe le dimanche et les jours d'obligation ?"
+            },
+            {
+                "id": "fr-03-006",
+                "text": "Ai-je fait des achats ou bénéficié de services inutiles le dimanche et les jours d'obligation ?"
+            },
+            {
+                "id": "fr-03-007",
+                "text": "Ai-je mangé de la viande intentionnellement ou refusé de jeûner les jours fixés par l'Église pour le jeûne et l'abstinence de viande ?"
+            },
+            {
+                "id": "fr-03-008",
+                "text": "Ai-je violé le jeûne d'une heure avant la Sainte Communion ?"
+            },
+            {
+                "id": "fr-03-009",
+                "text": "Ai-je exigé que les travailleurs sous ma direction travaillent un dimanche ou un jour d'obligation sans cause grave ?"
+            },
+            {
+                "id": "fr-03-010",
+                "text": "Ai-je été une source de distraction pour les autres pendant la Messe par ma tenue, mon comportement ou l'utilisation d'un téléphone portable ?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "fr-4",
+        "questions": [
+            {
+                "id": "fr-04-001",
+                "text": "Ai-je désobéi aux souhaits raisonnables de mes parents ?"
+            },
+            {
+                "id": "fr-04-002",
+                "text": "Ai-je parlé irrespectueusement à mes parents ou aux autorités légitimes, y compris les fonctionnaires et les employeurs ?"
+            },
+            {
+                "id": "fr-04-003",
+                "text": "Ai-je désobéi aux souhaits raisonnables de mes professeurs (si je suis à l'école) ?"
+            },
+            {
+                "id": "fr-04-004",
+                "text": "Ai-je négligé de prendre soin et de soutenir mes parents âgés ou d'autres membres de la famille ?"
+            },
+            {
+                "id": "fr-04-005",
+                "text": "Ai-je négligé les besoins, l'éducation, la discipline ou la formation spirituelle de mes enfants ?"
+            },
+            {
+                "id": "fr-04-006",
+                "text": "Ai-je manqué de guider mes enfants dans la compréhension de la nature et des enseignements de l'Église sur la sexualité humaine ?"
+            },
+            {
+                "id": "fr-04-007",
+                "text": "Ai-je prié quotidiennement avec mes enfants ?"
+            },
+            {
+                "id": "fr-04-008",
+                "text": "Ai-je négligé d'encourager mes enfants à recevoir les sacrements de la Sainte Communion et de la Confession régulièrement ?"
+            },
+            {
+                "id": "fr-04-009",
+                "text": "Ai-je voté pour, promu ou fait avancer l'agenda de politiciens qui tiennent des positions contraires au bien commun, à la liberté religieuse ou à la loi morale ?"
+            },
+            {
+                "id": "fr-04-010",
+                "text": "Ai-je manqué de vivre une vie vertueuse ?"
+            },
+            {
+                "id": "fr-04-011",
+                "text": "Ai-je manqué d'aimer et de me sacrifier pour ma famille ?"
+            },
+            {
+                "id": "fr-04-012",
+                "text": "Ai-je promu des politiques ou des lois qui sapent la famille, comme le contournement du consentement parental, ou promu des structures familiales non naturelles comme l'adoption homosexuelle ou monoparentale, et des mesures de contrôle de la population ? Ai-je promu des politiques ou des lois qui sapent le bien commun et la loi morale ?"
+            },
+            {
+                "id": "fr-04-013",
+                "text": "Ai-je encouragé d'autres personnes à manquer de respect à l'autorité légitime ?"
+            },
+            {
+                "id": "fr-04-014",
+                "text": "Ai-je manqué d'accepter les conseils ou les avertissements de mes parents ?"
+            },
+            {
+                "id": "fr-04-015",
+                "text": "Ai-je manqué de favoriser l'ouverture aux vocations chez mes enfants (mariage, ordres sacrés, vie consacrée, etc.) ?"
+            },
+            {
+                "id": "fr-04-016",
+                "text": "Ai-je manqué de promouvoir le traitement juste des pauvres, des indigents ou des migrants dans la société ?"
+            },
+            {
+                "id": "fr-04-017",
+                "text": "Ai-je commis des violences contre d'autres ?"
+            },
+            {
+                "id": "fr-04-018",
+                "text": "Ai-je sapé l'autorité de mon conjoint devant nos enfants ?"
+            },
+            {
+                "id": "fr-04-019",
+                "text": "Ai-je négligé de surveiller l'utilisation d'Internet et de la technologie par mes enfants pour protéger leur pureté ?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "fr-5",
+        "questions": [
+            {
+                "id": "fr-05-001",
+                "text": "Ai-je tué ou blessé un être humain directement ou par négligence et injustement, ou ai-je coopéré à le faire ?"
+            },
+            {
+                "id": "fr-05-002",
+                "text": "Ai-je manqué de promouvoir la dignité et le caractère sacré de la vie humaine ?"
+            },
+            {
+                "id": "fr-05-003",
+                "text": "Ai-je promu la guerre, la torture, la prise d'otages, l'enlèvement ou le meurtre d'humains sans défense ?"
+            },
+            {
+                "id": "fr-05-004",
+                "text": "Ai-je procuré un avortement ou des médicaments abortifs ou aidé quelqu'un d'autre à en obtenir un ?"
+            },
+            {
+                "id": "fr-05-005",
+                "text": "Ai-je promu l'avortement ou voté pour un politicien qui le fait ?"
+            },
+            {
+                "id": "fr-05-006",
+                "text": "Ai-je procuré, participé à ou promu la fécondation in vitro ?"
+            },
+            {
+                "id": "fr-05-007",
+                "text": "Ai-je promu le clonage humain ou la modification génétique ?"
+            },
+            {
+                "id": "fr-05-008",
+                "text": "Ai-je promu ou procuré la recherche ou la thérapie sur les cellules souches embryonnaires ?"
+            },
+            {
+                "id": "fr-05-009",
+                "text": "Ai-je promu l'eugénisme ou les lois de contrôle de la population ?"
+            },
+            {
+                "id": "fr-05-010",
+                "text": "Ai-je manqué de \"tendre l'autre joue\" ou d'aimer mes ennemis ?"
+            },
+            {
+                "id": "fr-05-011",
+                "text": "Ai-je essayé de me tuer ou de me blesser ou l'ai-je envisagé ?"
+            },
+            {
+                "id": "fr-05-012",
+                "text": "Ai-je promu l'euthanasie ou le mouvement pour le droit au suicide ?"
+            },
+            {
+                "id": "fr-05-013",
+                "text": "Ai-je refusé ou manqué de fournir des soins raisonnables en fin de vie, y compris des procédures médicales, de la nourriture et de l'eau, et des analgésiques ?"
+            },
+            {
+                "id": "fr-05-014",
+                "text": "Ai-je manqué de prendre soin des besoins spirituels d'une personne mourante (y compris appeler un prêtre pour l'onction des malades, ou prier pour la personne) ?"
+            },
+            {
+                "id": "fr-05-015",
+                "text": "Ai-je désiré tuer quelqu'un ?"
+            },
+            {
+                "id": "fr-05-016",
+                "text": "Ai-je utilisé plus de force que nécessaire pour me défendre ?"
+            },
+            {
+                "id": "fr-05-017",
+                "text": "Ai-je manqué de protéger les autres au mieux de mes capacités et de mon devoir ?"
+            },
+            {
+                "id": "fr-05-018",
+                "text": "Ai-je blessé physiquement, émotionnellement ou psychologiquement quelqu'un ou désiré le faire ?"
+            },
+            {
+                "id": "fr-05-019",
+                "text": "Ai-je donné le scandale ou montré un manque de souci pour l'âme de quelqu'un ?"
+            },
+            {
+                "id": "fr-05-020",
+                "text": "Ai-je haï quelqu'un ou lui ai-je souhaité du mal ?"
+            },
+            {
+                "id": "fr-05-021",
+                "text": "Ai-je manqué de montrer du respect pour les morts ou leurs corps ?"
+            },
+            {
+                "id": "fr-05-022",
+                "text": "Ai-je manqué de fournir une sépulture appropriée aux morts ?"
+            },
+            {
+                "id": "fr-05-023",
+                "text": "Ai-je préconisé des punitions injustes ou la peine capitale là où elle n'est pas juste ?"
+            },
+            {
+                "id": "fr-05-024",
+                "text": "Ai-je discriminé quelqu'un en lui refusant quelque chose auquel il a droit justement dans les limites de la loi morale et naturelle ?"
+            },
+            {
+                "id": "fr-05-025",
+                "text": "Me suis-je moqué, ai-je intimidé ou rabaissé quelqu'un ?"
+            },
+            {
+                "id": "fr-05-026",
+                "text": "Ai-je été imprudent avec la vie humaine par mes actions ou mon manque de soin ?"
+            },
+            {
+                "id": "fr-05-027",
+                "text": "Ai-je consommé de l'alcool ou des drogues ?"
+            },
+            {
+                "id": "fr-05-028",
+                "text": "Ai-je montré un manque de préoccupation pour ma santé ou celle des autres ?"
+            },
+            {
+                "id": "fr-05-029",
+                "text": "Ai-je promu l'usage d'alcool, de drogues ou de toute autre chose nuisible ?"
+            },
+            {
+                "id": "fr-05-030",
+                "text": "Ai-je commis le péché de gourmandise ou encouragé d'autres à le faire ?"
+            },
+            {
+                "id": "fr-05-031",
+                "text": "Ai-je manqué de promouvoir la paix ?"
+            },
+            {
+                "id": "fr-05-032",
+                "text": "Ai-je donné le scandale par mes actions ou mon inaction ?"
+            },
+            {
+                "id": "fr-05-033",
+                "text": "Ai-je encouragé ou aidé d'autres à pécher ?"
+            },
+            {
+                "id": "fr-05-034",
+                "text": "Ai-je laissé ma colère me contrôler ou persister sans contrôle ?"
+            },
+            {
+                "id": "fr-05-035",
+                "text": "Ai-je manqué de charité envers quelqu'un, me suis-je disputé avec lui ou lui ai-je gardé rancune ?"
+            },
+            {
+                "id": "fr-05-036",
+                "text": "Ai-je manqué de pardonner à quelqu'un lorsqu'il m'a demandé pardon ?"
+            },
+            {
+                "id": "fr-05-037",
+                "text": "Ai-je cherché ou envisagé la vengeance ?"
+            },
+            {
+                "id": "fr-05-038",
+                "text": "Me suis-je réjoui du malheur des autres ?"
+            },
+            {
+                "id": "fr-05-039",
+                "text": "Ai-je maltraité des animaux ou les ai-je tués inutilement ?"
+            },
+            {
+                "id": "fr-05-040",
+                "text": "Ai-je mis ma propre vie ou celle des autres en danger par une conduite imprudente ou l'utilisation d'un téléphone au volant ?"
+            },
+            {
+                "id": "fr-05-041",
+                "text": "Me suis-je moqué ou ai-je ridiculisé d'autres personnes pour leurs handicaps physiques ou mentaux ?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "fr-6",
+        "questions": [
+            {
+                "id": "fr-06-001",
+                "text": "Ai-je manqué de pratiquer et de promouvoir la chasteté ?"
+            },
+            {
+                "id": "fr-06-002",
+                "text": "Ai-je recherché le plaisir sexuel en dehors de l'acte conjugal ?"
+            },
+            {
+                "id": "fr-06-003",
+                "text": "Ai-je utilisé des contraceptifs artificiels ou encouragé leur utilisation ?"
+            },
+            {
+                "id": "fr-06-004",
+                "text": "Ai-je refusé des enfants et le don de la vie sans cause juste ?"
+            },
+            {
+                "id": "fr-06-005",
+                "text": "Ai-je vécu avec un partenaire amoureux avant le mariage (cohabitation) ?"
+            },
+            {
+                "id": "fr-06-006",
+                "text": "Ai-je cultivé une intimité romantique ou émotionnelle inappropriée avec quelqu'un d'autre que mon conjoint ?"
+            },
+            {
+                "id": "fr-06-007",
+                "text": "Ai-je participé à la fécondation in vitro ou à des traitements de fertilité immoraux (traitements qui ne favorisent pas la procréation par l'acte conjugal) ou encouragé quelqu'un d'autre à le faire ?"
+            },
+            {
+                "id": "fr-06-008",
+                "text": "Ai-je procuré une stérilisation de mes organes reproducteurs ou encouragé quelqu'un d'autre à le faire ?"
+            },
+            {
+                "id": "fr-06-009",
+                "text": "Ai-je forcé quelqu'un à avoir des rapports sexuels (y compris un conjoint) ?"
+            },
+            {
+                "id": "fr-06-010",
+                "text": "Ai-je refusé des rapports sexuels à mon conjoint sans cause juste ?"
+            },
+            {
+                "id": "fr-06-011",
+                "text": "Me suis-je masturbé (plaisir sexuel solitaire en dehors de l'acte conjugal) ?"
+            },
+            {
+                "id": "fr-06-012",
+                "text": "Ai-je délibérément provoqué l'orgasme masculin en dehors des rapports sexuels ?"
+            },
+            {
+                "id": "fr-06-013",
+                "text": "Ai-je fourni ou promu une éducation sexuelle qui ne suit pas les enseignements de l'Église catholique ?"
+            },
+            {
+                "id": "fr-06-014",
+                "text": "Ai-je utilisé ou promu la pornographie, que ce soit en photos, vidéos, audio ou écrits ?"
+            },
+            {
+                "id": "fr-06-015",
+                "text": "Ai-je fait don de sperme ou d'ovules ?"
+            },
+            {
+                "id": "fr-06-016",
+                "text": "Me suis-je livré à des films, de la télévision ou de la musique impurs (impliquant de la nudité ou du sexe), des conversations ou des plaisanteries ?"
+            },
+            {
+                "id": "fr-06-017",
+                "text": "Ai-je commis l'adultère (actes sexuels ou conversation avec une personne mariée ou avec une personne qui n'est pas mon conjoint) ?"
+            },
+            {
+                "id": "fr-06-018",
+                "text": "Ai-je divorcé de mon conjoint ou envisagé de le faire bien qu'étant dans un mariage valide sans cause grave ?"
+            },
+            {
+                "id": "fr-06-019",
+                "text": "Ai-je contracté mariage sans la bénédiction de l'Église ?"
+            },
+            {
+                "id": "fr-06-020",
+                "text": "Ai-je commis l'inceste ?"
+            },
+            {
+                "id": "fr-06-021",
+                "text": "Ai-je participé à la polygamie ou à la polyandrie ?"
+            },
+            {
+                "id": "fr-06-022",
+                "text": "Ai-je été impliqué dans un \"mariage ouvert\" ?"
+            },
+            {
+                "id": "fr-06-023",
+                "text": "Ai-je eu des rapports sexuels en dehors des liens du mariage (fornication, actes homosexuels) ?"
+            },
+            {
+                "id": "fr-06-024",
+                "text": "Ai-je commis un viol ?"
+            },
+            {
+                "id": "fr-06-025",
+                "text": "Me suis-je livré à des caresses, au \"sexting\" ou à d'autres préliminaires en dehors du mariage ?"
+            },
+            {
+                "id": "fr-06-026",
+                "text": "Ai-je fait du mal sexuellement à des enfants ?"
+            },
+            {
+                "id": "fr-06-027",
+                "text": "Me suis-je livré à des activités sexuelles contre nature (bestialité, sexe avec des objets, etc.) ?"
+            },
+            {
+                "id": "fr-06-028",
+                "text": "Me suis-je livré à ou ai-je promu la prostitution ?"
+            },
+            {
+                "id": "fr-06-029",
+                "text": "Ai-je séduit quelqu'un ou me suis-je laissé séduire ?"
+            },
+            {
+                "id": "fr-06-030",
+                "text": "Ai-je refusé d'accepter mon identité sexuelle donnée par Dieu (opérations de changement de sexe, travestissement, etc.) ?"
+            },
+            {
+                "id": "fr-06-031",
+                "text": "Ai-je promu, fait avancer ou coopéré à des péchés contre le sixième commandement ?"
+            },
+            {
+                "id": "fr-06-032",
+                "text": "Me suis-je engagé dans des relations inappropriées en ligne ou du cyber-sexe ?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "fr-7",
+        "questions": [
+            {
+                "id": "fr-07-001",
+                "text": "Ai-je volé quelque chose ?"
+            },
+            {
+                "id": "fr-07-002",
+                "text": "Ai-je joué excessivement ?"
+            },
+            {
+                "id": "fr-07-003",
+                "text": "Ai-je commis une fraude (faire une fausse déclaration à une compagnie d'assurance, falsifier des informations pour un gain financier) ?"
+            },
+            {
+                "id": "fr-07-004",
+                "text": "Ai-je refusé d'être généreux avec mes ressources envers ceux qui sont dans le besoin ?"
+            },
+            {
+                "id": "fr-07-005",
+                "text": "Ai-je gaspillé de l'argent pour des choses inutiles tout en négligeant les besoins des pauvres ?"
+            },
+            {
+                "id": "fr-07-006",
+                "text": "Ai-je manqué de pratiquer les œuvres de miséricorde corporelles ?"
+            },
+            {
+                "id": "fr-07-007",
+                "text": "Ai-je vandalisé ou dégradé la propriété de quelqu'un d'autre ?"
+            },
+            {
+                "id": "fr-07-008",
+                "text": "Ai-je triché ?"
+            },
+            {
+                "id": "fr-07-009",
+                "text": "Ai-je payé un salaire juste à mes travailleurs pour une journée de travail honnête ?"
+            },
+            {
+                "id": "fr-07-010",
+                "text": "Ai-je empêché quelqu'un d'avoir un emploi (en discriminant injustement ou en sabotant les chances d'emploi de quelqu'un) ?"
+            },
+            {
+                "id": "fr-07-011",
+                "text": "Ai-je promu des actions menant à l'esclavage d'autrui (ateliers clandestins, trafic d'êtres humains ou esclavage proprement dit) ?"
+            },
+            {
+                "id": "fr-07-012",
+                "text": "Ai-je rompu un contrat en ne remplissant pas ma part de l'obligation ?"
+            },
+            {
+                "id": "fr-07-013",
+                "text": "Ai-je participé à ou promu une grève injuste ou un lock-out ?"
+            },
+            {
+                "id": "fr-07-014",
+                "text": "Ai-je accumulé des dettes excessives et/ou manqué de les rembourser ?"
+            },
+            {
+                "id": "fr-07-015",
+                "text": "Me suis-je livré à l'usure (facturer des intérêts excessifs) ?"
+            },
+            {
+                "id": "fr-07-016",
+                "text": "Ai-je surfacturé quelqu'un ou profité de quelqu'un dans un commerce ?"
+            },
+            {
+                "id": "fr-07-017",
+                "text": "Ai-je déposé ou promu un procès injuste contre quelqu'un ?"
+            },
+            {
+                "id": "fr-07-018",
+                "text": "Ai-je manqué de faire restitution pour vol, fraude ou toute autre action contre le 7ème commandement ?"
+            },
+            {
+                "id": "fr-07-019",
+                "text": "Ai-je montré du mépris pour l'environnement ?"
+            },
+            {
+                "id": "fr-07-020",
+                "text": "Ai-je manqué de respecter la propriété privée ou violé les enseignements de l'Église sur la subsidiarité en plaidant pour un socialisme excessif ou trop de contrôle gouvernemental des ressources ?"
+            },
+            {
+                "id": "fr-07-021",
+                "text": "Ai-je manqué de travailler diligemment et de fournir une journée de travail honnête à mon employeur ?"
+            },
+            {
+                "id": "fr-07-022",
+                "text": "Ai-je méprisé le travail ou succombé à la paresse ?"
+            },
+            {
+                "id": "fr-07-023",
+                "text": "Ai-je manqué de faire la quantité de travail appropriée pour ma famille ?"
+            },
+            {
+                "id": "fr-07-024",
+                "text": "Ai-je donné un salaire raisonnable aux travailleurs ?"
+            },
+            {
+                "id": "fr-07-025",
+                "text": "Ai-je tenté de spéculer et de faire monter le prix des biens ou des services ?"
+            },
+            {
+                "id": "fr-07-026",
+                "text": "Ai-je violé les lois sur le droit d'auteur en piratant des logiciels, de la musique ou des films ?"
+            },
+            {
+                "id": "fr-07-027",
+                "text": "Ai-je gaspillé le temps de mon employeur par une utilisation excessive d'Internet ou des réseaux sociaux pendant les heures de travail ?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "fr-8",
+        "questions": [
+            {
+                "id": "fr-08-001",
+                "text": "Ai-je menti ou trompé délibérément quelqu'un ?"
+            },
+            {
+                "id": "fr-08-002",
+                "text": "Ai-je comméré ?"
+            },
+            {
+                "id": "fr-08-003",
+                "text": "Ai-je menti sous serment (parjure) ?"
+            },
+            {
+                "id": "fr-08-004",
+                "text": "Ai-je présumé du pire chez quelqu'un ou l'ai-je jugé injustement ?"
+            },
+            {
+                "id": "fr-08-005",
+                "text": "Ai-je nui à la réputation de quelqu'un par la médisance (raconter à d'autres les fautes de quelqu'un sans cause grave) ou la calomnie (raconter des mensonges sur une personne) ou la diffamation (écrire des mensonges sur quelqu'un) ?"
+            },
+            {
+                "id": "fr-08-006",
+                "text": "Ai-je cherché de manière obsessionnelle la validation en ligne ou cultivé une fausse image de moi-même ?"
+            },
+            {
+                "id": "fr-08-007",
+                "text": "Ai-je manqué de défendre la réputation de quelqu'un ?"
+            },
+            {
+                "id": "fr-08-008",
+                "text": "Ai-je manqué de garder un secret ou trahi la confiance de quelqu'un ?"
+            },
+            {
+                "id": "fr-08-009",
+                "text": "Suis-je resté silencieux ou ai-je été complice de la diffamation de l'Église catholique ?"
+            },
+            {
+                "id": "fr-08-010",
+                "text": "Ai-je manqué d'être sincère ou franc lorsque c'était approprié ?"
+            },
+            {
+                "id": "fr-08-011",
+                "text": "Ai-je mené une double vie ?"
+            },
+            {
+                "id": "fr-08-012",
+                "text": "Ai-je été un hypocrite ?"
+            },
+            {
+                "id": "fr-08-013",
+                "text": "Ai-je contraint d'autres personnes à mentir ?"
+            },
+            {
+                "id": "fr-08-014",
+                "text": "Ai-je empêché d'autres personnes de dire la vérité ?"
+            },
+            {
+                "id": "fr-08-015",
+                "text": "Me suis-je livrés à la flatterie ?"
+            },
+            {
+                "id": "fr-08-016",
+                "text": "Ai-je été vantard ou arrogant ?"
+            },
+            {
+                "id": "fr-08-017",
+                "text": "Ai-je mal caractérisé quelque chose, été trop dramatique, construit de faux arguments (homme de paille) ou me suis-je livré à des attaques ad hominem (attaques contre la personne plutôt que contre l'argument ou le point de vue) ?"
+            },
+            {
+                "id": "fr-08-018",
+                "text": "Ai-je manqué de réparer la réputation de quelqu'un sur qui j'ai menti ?"
+            },
+            {
+                "id": "fr-08-019",
+                "text": "Ai-je révélé la vérité à quelqu'un qui n'y a pas droit (comme un agresseur injuste) ?"
+            },
+            {
+                "id": "fr-08-020",
+                "text": "Ai-je violé le secret de la confession en racontant le contenu de la confession de quelqu'un d'autre à des tiers ?"
+            },
+            {
+                "id": "fr-08-021",
+                "text": "Ai-je divulgué des secrets professionnels sans cause grave ?"
+            },
+            {
+                "id": "fr-08-022",
+                "text": "Ai-je accepté ce que les autres disent comme vérité sans examen approprié (particulièrement en matière de foi et de morale ou lorsque la réputation d'autrui est en jeu) ?"
+            },
+            {
+                "id": "fr-08-023",
+                "text": "Ai-je promu de fausses informations publiques (propagande) ?"
+            },
+            {
+                "id": "fr-08-024",
+                "text": "Ai-je partagé des informations non vérifiées ou fausses (fake news) sur les réseaux sociaux ?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "fr-9",
+        "questions": [
+            {
+                "id": "fr-09-001",
+                "text": "Ai-je cédé à la concupiscence (désirs sexuels intenses) ?"
+            },
+            {
+                "id": "fr-09-002",
+                "text": "Ai-je cédé à la luxure (désir désordonné de jouissance immodérée du plaisir sexuel) ?"
+            },
+            {
+                "id": "fr-09-003",
+                "text": "Ai-je fait des commentaires ou des avances sexuellement suggestifs ou harcelants envers quelqu'un ?"
+            },
+            {
+                "id": "fr-09-004",
+                "text": "Ai-je manqué de m'habiller modestement ou détourné les yeux lorsque quelqu'un d'autre est habillé de manière immodeste ?"
+            },
+            {
+                "id": "fr-09-005",
+                "text": "Ai-je violé la vie privée de quelqu'un en l'espionnant ?"
+            },
+            {
+                "id": "fr-09-006",
+                "text": "Ai-je encouragé ou me suis-je livré volontairement à des pensées impures ?"
+            },
+            {
+                "id": "fr-09-007",
+                "text": "Ai-je promu la promiscuité ou des attitudes immorales envers le sexe, la modestie ou la pureté, ou la permissivité morale ?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "fr-10",
+        "questions": [
+            {
+                "id": "fr-10-001",
+                "text": "Ai-je envié les autres pour leurs possessions ?"
+            },
+            {
+                "id": "fr-10-002",
+                "text": "Ai-je été avare ?"
+            },
+            {
+                "id": "fr-10-003",
+                "text": "Ai-je convoité les possessions des autres ?"
+            },
+            {
+                "id": "fr-10-004",
+                "text": "Ai-je manqué de vivre simplement et ai-je plutôt cédé au matérialisme ?"
+            },
+            {
+                "id": "fr-10-005",
+                "text": "Ai-je manqué de me réjouir du succès d'autrui ?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "fr-11",
+        "questions": [
+            {
+                "id": "fr-11-001",
+                "text": "Ai-je manqué d'assister à la Sainte Messe le dimanche ou les jours d'obligation ?"
+            },
+            {
+                "id": "fr-11-002",
+                "text": "Ai-je manqué de réserver les dimanches et les jours d'obligation pour le repos ?"
+            },
+            {
+                "id": "fr-11-003",
+                "text": "Ai-je confessé mes péchés au moins une fois par an ?"
+            },
+            {
+                "id": "fr-11-004",
+                "text": "Mes confessions ont-elles été valides et honnêtes ?"
+            },
+            {
+                "id": "fr-11-005",
+                "text": "Ai-je préparé mon âme correctement pour recevoir la Sainte Communion ?"
+            },
+            {
+                "id": "fr-11-006",
+                "text": "Ai-je accompli la pénitence assignée de ma confession ?"
+            },
+            {
+                "id": "fr-11-007",
+                "text": "Ai-je fait réparation pour le mal causé par mes péchés ?"
+            },
+            {
+                "id": "fr-11-008",
+                "text": "Ai-je fait un examen de conscience minutieux avant la confession et tenté honnêtement de me rappeler tous mes péchés ?"
+            },
+            {
+                "id": "fr-11-009",
+                "text": "Ai-je eu la ferme résolution d'amender ma vie et de la douleur pour mes péchés avant d'aller à la confession ?"
+            },
+            {
+                "id": "fr-11-010",
+                "text": "Ai-je reçu la Sainte Communion au moins une fois pendant le temps pascal (entre la Vigile Pascale et le Dimanche de la Pentecôte) ?"
+            },
+            {
+                "id": "fr-11-011",
+                "text": "Ai-je reçu la communion en étant hors de l'état de grâce (ayant des péchés mortels sur mon âme) ?"
+            },
+            {
+                "id": "fr-11-012",
+                "text": "Ai-je respecté le jeûne eucharistique avant de recevoir la Sainte Communion ?"
+            },
+            {
+                "id": "fr-11-013",
+                "text": "Ai-je mangé de la viande les vendredis de Carême ?"
+            },
+            {
+                "id": "fr-11-014",
+                "text": "Ai-je manqué de suivre les règles concernant le jeûne le Mercredi des Cendres et le Vendredi Saint ?"
+            },
+            {
+                "id": "fr-11-015",
+                "text": "Ai-je suivi l'esprit des règles concernant le jeûne et l'abstinence ?"
+            },
+            {
+                "id": "fr-11-016",
+                "text": "Ai-je jeûné de viande tous les vendredis de l'année ou suivi les directives des évêques de ma localité ?"
+            },
+            {
+                "id": "fr-11-017",
+                "text": "Ai-je fait des œuvres de miséricorde spirituelles et corporelles et pratiqué le renoncement à soi-même ?"
+            },
+            {
+                "id": "fr-11-018",
+                "text": "Ai-je donné la dîme à l'église régulièrement ?"
+            },
+            {
+                "id": "fr-11-019",
+                "text": "Ai-je donné un montant approprié pour ma situation ?"
+            },
+            {
+                "id": "fr-11-020",
+                "text": "Ai-je offert mon temps pour l'Église de manière appropriée pour ma situation ?"
+            },
+            {
+                "id": "fr-11-021",
+                "text": "Ai-je prié pour la croissance de l'Église ?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "fr-12",
+        "questions": [
+            {
+                "id": "fr-12-001",
+                "text": "Ai-je commis le péché d'Orgueil ?"
+            },
+            {
+                "id": "fr-12-002",
+                "text": "Ai-je commis le péché d'Avarice ?"
+            },
+            {
+                "id": "fr-12-003",
+                "text": "Ai-je commis le péché de Luxure ?"
+            },
+            {
+                "id": "fr-12-004",
+                "text": "Ai-je commis le péché d'Envie ?"
+            },
+            {
+                "id": "fr-12-005",
+                "text": "Ai-je commis le péché de Gourmandise ?"
+            },
+            {
+                "id": "fr-12-006",
+                "text": "Ai-je commis le péché de Colère ?"
+            },
+            {
+                "id": "fr-12-007",
+                "text": "Ai-je commis le péché de Paresse ?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "fr-13",
+        "questions": [
+            {
+                "id": "fr-13-001",
+                "text": "Ai-je péché en comptant sur le pardon de Dieu sans vrai repentir (Présomption) ?"
+            },
+            {
+                "id": "fr-13-002",
+                "text": "Ai-je désespéré du salut ?"
+            },
+            {
+                "id": "fr-13-003",
+                "text": "Ai-je combattu ou attaqué des vérités que je savais enseignées par l'Église catholique ?"
+            },
+            {
+                "id": "fr-13-004",
+                "text": "Ai-je envié le bien spirituel d'autrui ?"
+            },
+            {
+                "id": "fr-13-005",
+                "text": "Me suis-je obstiné dans le péché ?"
+            },
+            {
+                "id": "fr-13-006",
+                "text": "Ai-je persisté dans le refus de me repentir ?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "fr-14",
+        "questions": [
+            {
+                "id": "fr-14-001",
+                "text": "Ai-je commis un meurtre volontaire ?"
+            },
+            {
+                "id": "fr-14-002",
+                "text": "Ai-je commis le péché de Sodome (actes sexuels contre nature) ?"
+            },
+            {
+                "id": "fr-14-003",
+                "text": "Ai-je opprimé les pauvres ?"
+            },
+            {
+                "id": "fr-14-004",
+                "text": "Ai-je fraudé les travailleurs de leur salaire ?"
+            }
+        ]
+    }
+]

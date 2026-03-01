@@ -1,0 +1,1044 @@
+[
+    {
+        "commandmentCode": "pt_BR-1",
+        "questions": [
+            {
+                "id": "pt_BR-01-001",
+                "text": "Recusei-me a acreditar em Deus (Ateísmo)?"
+            },
+            {
+                "id": "pt_BR-01-002",
+                "text": "Duvidei da existência de Deus?"
+            },
+            {
+                "id": "pt_BR-01-003",
+                "text": "Odiei a Deus ou o culpei pelos problemas na minha vida?"
+            },
+            {
+                "id": "pt_BR-01-004",
+                "text": "Neguei algum dos dogmas da Igreja Católica?"
+            },
+            {
+                "id": "pt_BR-01-005",
+                "text": "Causei deliberadamente que outros duvidassem de Deus ou dos artigos da fé?"
+            },
+            {
+                "id": "pt_BR-01-006",
+                "text": "Tentei crescer e defender minha fé?"
+            },
+            {
+                "id": "pt_BR-01-007",
+                "text": "Transmiti a fé aos meus filhos e família de maneira dedicada?"
+            },
+            {
+                "id": "pt_BR-01-008",
+                "text": "Recusei-me a defender a Deus e minha fé para os outros quando levantam objeções?"
+            },
+            {
+                "id": "pt_BR-01-009",
+                "text": "Neguei minha fé ou doutrinas diante de outros?"
+            },
+            {
+                "id": "pt_BR-01-010",
+                "text": "Abandonei a Igreja Católica ou pratiquei outra religião?"
+            },
+            {
+                "id": "pt_BR-01-011",
+                "text": "Uni-me a uma organização que é prejudicial ou oposta à minha fé (Comunistas, Maçons, grupos dissidentes ou cismáticos, ou qualquer grupo que exija que seus membros mantenham um juramento acima e antes de seus deveres para com a Igreja Católica)?"
+            },
+            {
+                "id": "pt_BR-01-012",
+                "text": "Caí em desespero sobre Deus ou seu perdão?"
+            },
+            {
+                "id": "pt_BR-01-013",
+                "text": "Presumi da misericórdia de Deus cometendo intencionalmente um pecado com a expectativa de ser perdoado, evitando assim a verdadeira conversão do coração?"
+            },
+            {
+                "id": "pt_BR-01-014",
+                "text": "Presumi minha própria capacidade de salvar minha alma sem a ajuda de Deus?"
+            },
+            {
+                "id": "pt_BR-01-015",
+                "text": "Confessei meus pecados sem intenção de emendar minha vida?"
+            },
+            {
+                "id": "pt_BR-01-016",
+                "text": "Pratiquei a idolatria? Coloquei coisas mundanas como dinheiro, poder, sucesso, amizades, governo, minha nação, raça ou posses antes do meu relacionamento com Deus? Pratiquei os aspectos espirituais do Ioga?"
+            },
+            {
+                "id": "pt_BR-01-017",
+                "text": "Pratiquei o ocultismo (Wicca, Satanismo, invocar demônios, Tabuleiros Ouija, magia negra, vender a alma, Espiritismo, canalizar espíritos, xamanismo, consultar médiuns, Reiki, adivinhação, usar amuletos, horóscopos, astrologia, leitura de mãos, vidência, interpretação de sortes ou leitura de cartas)?"
+            },
+            {
+                "id": "pt_BR-01-018",
+                "text": "Pratiquei superstição? Atribuí poder sobrenatural a uma fonte que não é Deus?"
+            },
+            {
+                "id": "pt_BR-01-019",
+                "text": "Permiti que as redes sociais, videojogos ou a internet se tornassem um ídolo, consumindo tempo que pertence a Deus e à minha família?"
+            },
+            {
+                "id": "pt_BR-01-020",
+                "text": "Busquei o meu valor na aprovação online em vez da minha identidade como filho de Deus?"
+            },
+            {
+                "id": "pt_BR-01-021",
+                "text": "Passei tempo excessivo em frente a ecrãs em detrimento dos meus deveres diários ou vida de oração?"
+            },
+            {
+                "id": "pt_BR-01-022",
+                "text": "Pratiquei politeísmo?"
+            },
+            {
+                "id": "pt_BR-01-023",
+                "text": "Fui indiferente à fé ou a Deus?"
+            },
+            {
+                "id": "pt_BR-01-024",
+                "text": "Fui ingrato pelas muitas bênçãos que Deus me deu?"
+            },
+            {
+                "id": "pt_BR-01-025",
+                "text": "Fui morno na fé?"
+            },
+            {
+                "id": "pt_BR-01-026",
+                "text": "Fui preguiçoso na minha fé e crescimento espiritual?"
+            },
+            {
+                "id": "pt_BR-01-027",
+                "text": "Negligenciei a oração?"
+            },
+            {
+                "id": "pt_BR-01-028",
+                "text": "Abandonei promessas ou votos feitos a Deus?"
+            },
+            {
+                "id": "pt_BR-01-029",
+                "text": "Restringi a fé de outra pessoa ou contribuí para uma restrição da liberdade religiosa de outro? Zombei de alguém por sua fé em Deus? Forcei outros a violar os princípios de sua fé ou consciência?"
+            },
+            {
+                "id": "pt_BR-01-030",
+                "text": "Tentei a Deus colocando Sua bondade e poder onipotente à prova por palavra ou ação?"
+            },
+            {
+                "id": "pt_BR-01-031",
+                "text": "Cometi o pecado de sacrilégio? Recebi um dos sacramentos sem a devida disposição da alma (isto é, receber a Sagrada Comunhão, crisma, matrimônio ou ordens sagradas com pecados mortais na minha alma)? Tratei pessoas religiosas como padres, freiras, bispos ou o papa, lugares como igrejas, capelas e locais sagrados, e coisas bentas ou santas como rosários, relíquias e Bíblias com o devido respeito? Menti sobre meus pecados ou omiti intencionalmente alguns pecados graves durante o sacramento da confissão?"
+            },
+            {
+                "id": "pt_BR-01-032",
+                "text": "Participei de simonia comprando ou vendendo coisas espirituais?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pt_BR-2",
+        "questions": [
+            {
+                "id": "pt_BR-02-001",
+                "text": "Usei o nome de Deus de maneira desrespeitosa, descuidada ou blasfema?"
+            },
+            {
+                "id": "pt_BR-02-002",
+                "text": "Falei de maneira desrespeitosa, odiosa, desafiadora ou descuidada sobre a fé, ou pessoas, lugares e coisas sagradas?"
+            },
+            {
+                "id": "pt_BR-02-003",
+                "text": "Promovi um discurso desrespeitoso, odioso, desafiador ou descuidado sobre a fé ou pessoas, lugares e coisas sagradas?"
+            },
+            {
+                "id": "pt_BR-02-004",
+                "text": "Assisti a filmes ou ouvi música que fosse blasfema ou irreverente?"
+            },
+            {
+                "id": "pt_BR-02-005",
+                "text": "Usei linguagem chula ou assisti a filmes ou música que continham linguagem chula?"
+            },
+            {
+                "id": "pt_BR-02-006",
+                "text": "Falei desrespeitosamente de outras pessoas?"
+            },
+            {
+                "id": "pt_BR-02-007",
+                "text": "Menti sob juramento (perjúrio)?"
+            },
+            {
+                "id": "pt_BR-02-008",
+                "text": "Jurei ou fiz promessas em nome de Deus sobre coisas que eram falsas ou de pouca importância, mesmo se fossem verdadeiras?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pt_BR-3",
+        "questions": [
+            {
+                "id": "pt_BR-03-001",
+                "text": "Faltei à Santa Missa nos domingos ou dias de preceito sem causa grave?"
+            },
+            {
+                "id": "pt_BR-03-002",
+                "text": "Deixei de levar meus filhos à Santa Missa nos domingos e dias de preceito sem causa grave?"
+            },
+            {
+                "id": "pt_BR-03-003",
+                "text": "Assisti à missa chegando tarde ou saindo cedo sem causa grave?"
+            },
+            {
+                "id": "pt_BR-03-004",
+                "text": "Realizei trabalhos aos domingos ou outros dias de preceito sem causa grave?"
+            },
+            {
+                "id": "pt_BR-03-005",
+                "text": "Recusei-me a ajudar outros a assistir à Missa nos domingos e dias de preceito?"
+            },
+            {
+                "id": "pt_BR-03-006",
+                "text": "Fiz compras ou me beneficiei de serviços desnecessários aos domingos e dias de preceito?"
+            },
+            {
+                "id": "pt_BR-03-007",
+                "text": "Comi carne intencionalmente ou me recusei a jejuar nos dias estabelecidos pela igreja para o jejum e a abstinência de carne?"
+            },
+            {
+                "id": "pt_BR-03-008",
+                "text": "Violei o jejum de 1 hora antes da Sagrada Comunhão?"
+            },
+            {
+                "id": "pt_BR-03-009",
+                "text": "Exigi de trabalhadores sob minha direção que realizassem trabalhos no domingo ou dia de preceito sem causa grave?"
+            },
+            {
+                "id": "pt_BR-03-010",
+                "text": "Fui uma fonte de distração para outros durante a Missa através da minha vestimenta, comportamento ou uso de um telefone celular?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pt_BR-4",
+        "questions": [
+            {
+                "id": "pt_BR-04-001",
+                "text": "Desobedeci aos desejos razoáveis dos meus pais?"
+            },
+            {
+                "id": "pt_BR-04-002",
+                "text": "Falei desrespeitosamente aos meus pais ou autoridades legítimas, incluindo funcionários públicos e empregadores?"
+            },
+            {
+                "id": "pt_BR-04-003",
+                "text": "Desobedeci aos desejos razoáveis dos meus professores (se estiver na escola)?"
+            },
+            {
+                "id": "pt_BR-04-004",
+                "text": "Negligenciei o cuidado e apoio aos meus pais idosos ou outros familiares?"
+            },
+            {
+                "id": "pt_BR-04-005",
+                "text": "Negligenciei as necessidades, educação, disciplina ou formação espiritual dos meus filhos?"
+            },
+            {
+                "id": "pt_BR-04-006",
+                "text": "Falhei em guiar meus filhos na compreensão da natureza e dos ensinamentos da Igreja sobre a sexualidade humana?"
+            },
+            {
+                "id": "pt_BR-04-007",
+                "text": "Rezei diariamente com meus filhos?"
+            },
+            {
+                "id": "pt_BR-04-008",
+                "text": "Negligenciei encorajar meus filhos a receber os sacramentos da Sagrada Comunhão e da Confissão de maneira regular?"
+            },
+            {
+                "id": "pt_BR-04-009",
+                "text": "Votei em, promovi ou avancei a agenda de políticos que mantêm posições contrárias ao bem comum, à liberdade religiosa ou à lei moral?"
+            },
+            {
+                "id": "pt_BR-04-010",
+                "text": "Falhei em viver uma vida virtuosa?"
+            },
+            {
+                "id": "pt_BR-04-011",
+                "text": "Falhei em amar e sacrificar-me pela minha família?"
+            },
+            {
+                "id": "pt_BR-04-012",
+                "text": "Promovi políticas ou leis que minam a família, como contornar o consentimento dos pais ou promovi estruturas familiares não naturais como a adoção homossexual ou monoparental, e medidas de controle populacional? Promovi políticas ou leis que minam o bem comum e a lei moral?"
+            },
+            {
+                "id": "pt_BR-04-013",
+                "text": "Encorajei outros a desrespeitar a autoridade legítima?"
+            },
+            {
+                "id": "pt_BR-04-014",
+                "text": "Falhei em aceitar os conselhos ou admoestações dos meus pais?"
+            },
+            {
+                "id": "pt_BR-04-015",
+                "text": "Falhei em fomentar a abertura às vocações em meus filhos (matrimônio, ordem sagrada, vida consagrada, etc.)?"
+            },
+            {
+                "id": "pt_BR-04-016",
+                "text": "Falhei em promover o tratamento justo aos pobres, indigentes ou migrantes na sociedade?"
+            },
+            {
+                "id": "pt_BR-04-017",
+                "text": "Cometi violência contra outros?"
+            },
+            {
+                "id": "pt_BR-04-018",
+                "text": "Minei a autoridade do meu cônjuge diante dos nossos filhos?"
+            },
+            {
+                "id": "pt_BR-04-019",
+                "text": "Negligenciei monitorar o uso da internet e da tecnologia dos meus filhos para proteger sua pureza?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pt_BR-5",
+        "questions": [
+            {
+                "id": "pt_BR-05-001",
+                "text": "Matei ou feri um ser humano direta ou negligentemente e injustamente ou cooperei em fazê-lo?"
+            },
+            {
+                "id": "pt_BR-05-002",
+                "text": "Falhei em promover a dignidade e o caráter sagrado da vida humana?"
+            },
+            {
+                "id": "pt_BR-05-003",
+                "text": "Promovi a guerra, a tortura, a tomada de reféns, o sequestro ou o assassinato de humanos indefesos?"
+            },
+            {
+                "id": "pt_BR-05-004",
+                "text": "Procurei um aborto ou medicamentos abortivos ou ajudei alguém a obter um?"
+            },
+            {
+                "id": "pt_BR-05-005",
+                "text": "Promovi o aborto ou votei em um político que o faz?"
+            },
+            {
+                "id": "pt_BR-05-006",
+                "text": "Procurei, participei ou promovi a fertilização in vitro?"
+            },
+            {
+                "id": "pt_BR-05-007",
+                "text": "Promovi a clonagem humana ou a modificação genética?"
+            },
+            {
+                "id": "pt_BR-05-008",
+                "text": "Promovi ou procurei a pesquisa ou terapia com células-tronco embrionárias?"
+            },
+            {
+                "id": "pt_BR-05-009",
+                "text": "Promovi a eugenia ou as leis de controle populacional?"
+            },
+            {
+                "id": "pt_BR-05-010",
+                "text": "Falhei em \"dar a outra face\" ou amar meus inimigos?"
+            },
+            {
+                "id": "pt_BR-05-011",
+                "text": "Tentei suicidar-me ou ferir-me ou considerei isso?"
+            },
+            {
+                "id": "pt_BR-05-012",
+                "text": "Promovi a eutanásia ou o movimento pelo direito ao suicídio?"
+            },
+            {
+                "id": "pt_BR-05-013",
+                "text": "Recusei ou falhei em fornecer cuidados razoáveis no final da vida, incluindo procedimentos médicos, alimentos e água, e analgésicos?"
+            },
+            {
+                "id": "pt_BR-05-014",
+                "text": "Falhei em cuidar das necessidades espirituais de uma pessoa moribunda (incluindo chamar um padre para a unção dos enfermos, ou rezar pela pessoa)?"
+            },
+            {
+                "id": "pt_BR-05-015",
+                "text": "Desejei matar alguém?"
+            },
+            {
+                "id": "pt_BR-05-016",
+                "text": "Usei mais força do que a necessária para me defender?"
+            },
+            {
+                "id": "pt_BR-05-017",
+                "text": "Falhei em proteger outros o melhor que pude e devia?"
+            },
+            {
+                "id": "pt_BR-05-018",
+                "text": "Feri física, emocional ou psicologicamente alguém ou desejei fazê-lo?"
+            },
+            {
+                "id": "pt_BR-05-019",
+                "text": "Dei escândalo ou mostrei falta de cuidado pela alma de alguém?"
+            },
+            {
+                "id": "pt_BR-05-020",
+                "text": "Odiei alguém ou desejei-lhe o mal?"
+            },
+            {
+                "id": "pt_BR-05-021",
+                "text": "Falhei em mostrar respeito pelos mortos ou seus corpos?"
+            },
+            {
+                "id": "pt_BR-05-022",
+                "text": "Falhei em fornecer um enterro adequado para os mortos?"
+            },
+            {
+                "id": "pt_BR-05-023",
+                "text": "Advoguei punições injustas ou a pena capital onde não é justa?"
+            },
+            {
+                "id": "pt_BR-05-024",
+                "text": "Discriminei alguém negando-lhe algo a que tem direito justamente dentro dos limites da lei moral e natural?"
+            },
+            {
+                "id": "pt_BR-05-025",
+                "text": "Zombei, intimidei ou menosprezei alguém?"
+            },
+            {
+                "id": "pt_BR-05-026",
+                "text": "Fui imprudente com a vida humana através de minhas ações ou falta de cuidado?"
+            },
+            {
+                "id": "pt_BR-05-027",
+                "text": "Usei álcool ou drogas?"
+            },
+            {
+                "id": "pt_BR-05-028",
+                "text": "Mostrei falta de preocupação pela minha saúde ou a dos outros?"
+            },
+            {
+                "id": "pt_BR-05-029",
+                "text": "Promovi o uso de álcool, drogas ou qualquer outra coisa prejudicial?"
+            },
+            {
+                "id": "pt_BR-05-030",
+                "text": "Cometi o pecado da gula ou encorajei outros a fazê-lo?"
+            },
+            {
+                "id": "pt_BR-05-031",
+                "text": "Falhei em promover a paz?"
+            },
+            {
+                "id": "pt_BR-05-032",
+                "text": "Dei escândalo através de minhas ações ou inação?"
+            },
+            {
+                "id": "pt_BR-05-033",
+                "text": "Encorajei ou ajudei outros a pecar?"
+            },
+            {
+                "id": "pt_BR-05-034",
+                "text": "Permiti que minha raiva me controlasse ou persistisse sem controle?"
+            },
+            {
+                "id": "pt_BR-05-035",
+                "text": "Fui pouco caridoso com alguém, briguei com ele ou guardei rancor?"
+            },
+            {
+                "id": "pt_BR-05-036",
+                "text": "Falhei em perdoar alguém quando me pediu perdão?"
+            },
+            {
+                "id": "pt_BR-05-037",
+                "text": "Busquei ou contemplei a vingança?"
+            },
+            {
+                "id": "pt_BR-05-038",
+                "text": "Regozijei-me com a desgraça dos outros?"
+            },
+            {
+                "id": "pt_BR-05-039",
+                "text": "Abusei de animais ou matei-os desnecessariamente?"
+            },
+            {
+                "id": "pt_BR-05-040",
+                "text": "Coloquei em perigo minha própria vida ou a de outros dirigindo imprudentemente ou usando um telefone enquanto dirigia?"
+            },
+            {
+                "id": "pt_BR-05-041",
+                "text": "Zombei ou ridicularizei outros por suas deficiências físicas ou mentais?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pt_BR-6",
+        "questions": [
+            {
+                "id": "pt_BR-06-001",
+                "text": "Falhei em praticar e promover a castidade?"
+            },
+            {
+                "id": "pt_BR-06-002",
+                "text": "Busquei prazer sexual fora do ato conjugal?"
+            },
+            {
+                "id": "pt_BR-06-003",
+                "text": "Usei anticoncepcionais artificiais ou encorajei seu uso?"
+            },
+            {
+                "id": "pt_BR-06-004",
+                "text": "Recusei os filhos e o dom da vida sem causa justa?"
+            },
+            {
+                "id": "pt_BR-06-005",
+                "text": "Vivi com um parceiro romântico antes do casamento (coabitação)?"
+            },
+            {
+                "id": "pt_BR-06-006",
+                "text": "Cultivei intimidade romântica ou emocional inapropriada com alguém que não o meu cônjuge?"
+            },
+            {
+                "id": "pt_BR-06-007",
+                "text": "Participei de fertilização in vitro ou tratamentos de fertilidade imorais (tratamentos que não promovem a procriação através do ato conjugal) ou encorajei alguém a fazê-lo?"
+            },
+            {
+                "id": "pt_BR-06-008",
+                "text": "Procurei uma esterilização dos meus órgãos reprodutivos ou encorajei alguém a fazê-lo?"
+            },
+            {
+                "id": "pt_BR-06-009",
+                "text": "Forcei o sexo com alguém (incluindo um cônjuge)?"
+            },
+            {
+                "id": "pt_BR-06-010",
+                "text": "Neguei o sexo ao meu cônjuge sem causa justa?"
+            },
+            {
+                "id": "pt_BR-06-011",
+                "text": "Masturbei-me (prazer sexual de si mesmo fora do ato conjugal)?"
+            },
+            {
+                "id": "pt_BR-06-012",
+                "text": "Causei deliberadamente o clímax masculino fora da relação sexual?"
+            },
+            {
+                "id": "pt_BR-06-013",
+                "text": "Forneci ou promovi educação sexual que não segue os ensinamentos da Igreja Católica?"
+            },
+            {
+                "id": "pt_BR-06-014",
+                "text": "Usei ou promovi pornografia seja em fotos, vídeos, áudio ou palavra escrita?"
+            },
+            {
+                "id": "pt_BR-06-015",
+                "text": "Doei esperma ou óvulos?"
+            },
+            {
+                "id": "pt_BR-06-016",
+                "text": "Entreguei-me a filmes, televisão ou música impuros (que envolvem nudez ou sexo), conversas ou piadas?"
+            },
+            {
+                "id": "pt_BR-06-017",
+                "text": "Cometi adultério (atos sexuais ou conversa com uma pessoa casada ou com uma pessoa que não é meu cônjuge)?"
+            },
+            {
+                "id": "pt_BR-06-018",
+                "text": "Divorciei-me do meu cônjuge ou contemplei fazê-lo apesar de estar em um casamento válido sem causa grave?"
+            },
+            {
+                "id": "pt_BR-06-019",
+                "text": "Contraí matrimônio sem a bênção da Igreja?"
+            },
+            {
+                "id": "pt_BR-06-020",
+                "text": "Cometi incesto?"
+            },
+            {
+                "id": "pt_BR-06-021",
+                "text": "Participei de poligamia ou poliandria?"
+            },
+            {
+                "id": "pt_BR-06-022",
+                "text": "Estive envolvido em um \"casamento aberto\"?"
+            },
+            {
+                "id": "pt_BR-06-023",
+                "text": "Tive sexo fora dos laços do matrimônio (fornicação, atos homossexuais)?"
+            },
+            {
+                "id": "pt_BR-06-024",
+                "text": "Cometi estupro?"
+            },
+            {
+                "id": "pt_BR-06-025",
+                "text": "Participei de carícias, \"sexting\" ou outras preliminares fora do casamento?"
+            },
+            {
+                "id": "pt_BR-06-026",
+                "text": "Prejudiquei crianças sexualmente?"
+            },
+            {
+                "id": "pt_BR-06-027",
+                "text": "Participei de atividades sexuais não naturais (bestialidade, sexo com objetos, etc.)?"
+            },
+            {
+                "id": "pt_BR-06-028",
+                "text": "Participei ou promovi a prostituição?"
+            },
+            {
+                "id": "pt_BR-06-029",
+                "text": "Seduzi alguém ou permiti ser seduzido?"
+            },
+            {
+                "id": "pt_BR-06-030",
+                "text": "Recusei-me a aceitar minha identidade sexual dada por Deus (operações de mudança de sexo, travestismo, etc.)?"
+            },
+            {
+                "id": "pt_BR-06-031",
+                "text": "Promovi, avancei ou cooperei em pecados contra o sexto mandamento?"
+            },
+            {
+                "id": "pt_BR-06-032",
+                "text": "Participei de relacionamentos inadequados online ou ciber-sexo?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pt_BR-7",
+        "questions": [
+            {
+                "id": "pt_BR-07-001",
+                "text": "Roubei algo?"
+            },
+            {
+                "id": "pt_BR-07-002",
+                "text": "Apostei excessivamente?"
+            },
+            {
+                "id": "pt_BR-07-003",
+                "text": "Cometi fraude (fazer uma reclamação falsa a uma companhia de seguros, falsificar informações para obter ganhos financeiros)?"
+            },
+            {
+                "id": "pt_BR-07-004",
+                "text": "Recusei-me a ser generoso com meus recursos para com os necessitados?"
+            },
+            {
+                "id": "pt_BR-07-005",
+                "text": "Desperdicei dinheiro em coisas desnecessárias enquanto negligenciava as necessidades dos pobres?"
+            },
+            {
+                "id": "pt_BR-07-006",
+                "text": "Falhei em praticar as obras de misericórdia corporais?"
+            },
+            {
+                "id": "pt_BR-07-007",
+                "text": "Vandalizei ou desfigurei a propriedade de outra pessoa?"
+            },
+            {
+                "id": "pt_BR-07-008",
+                "text": "Trapaceei?"
+            },
+            {
+                "id": "pt_BR-07-009",
+                "text": "Paguei um salário justo aos meus trabalhadores por um dia de trabalho honesto?"
+            },
+            {
+                "id": "pt_BR-07-010",
+                "text": "Impedi que alguém tivesse um emprego (discriminando injustamente ou sabotando as oportunidades de emprego de alguém)?"
+            },
+            {
+                "id": "pt_BR-07-011",
+                "text": "Promovi ações que levam à escravidão de outros (oficinas clandestinas, tráfico de pessoas ou escravidão propriamente dita)?"
+            },
+            {
+                "id": "pt_BR-07-012",
+                "text": "Quebrei um contrato ao não cumprir minha parte da obrigação?"
+            },
+            {
+                "id": "pt_BR-07-013",
+                "text": "Participei ou promovi uma greve injusta ou locaute?"
+            },
+            {
+                "id": "pt_BR-07-014",
+                "text": "Acumulei dívidas excessivas e/ou falhei em pagá-las?"
+            },
+            {
+                "id": "pt_BR-07-015",
+                "text": "Participei de usura (cobrar juros excessivos)?"
+            },
+            {
+                "id": "pt_BR-07-016",
+                "text": "Cobrei a mais de alguém ou tirei vantagem de alguém em um comércio?"
+            },
+            {
+                "id": "pt_BR-07-017",
+                "text": "Apresentei ou promovi um processo injusto contra alguém?"
+            },
+            {
+                "id": "pt_BR-07-018",
+                "text": "Falhei em fazer restituição por roubo, fraude ou qualquer outra ação contra o 7º mandamento?"
+            },
+            {
+                "id": "pt_BR-07-019",
+                "text": "Mostrei desprezo pelo meio ambiente?"
+            },
+            {
+                "id": "pt_BR-07-020",
+                "text": "Falhei em respeitar a propriedade privada ou violei os ensinamentos da Igreja sobre a subsidiariedade advogando por um socialismo excessivo ou muito controle governamental dos recursos?"
+            },
+            {
+                "id": "pt_BR-07-021",
+                "text": "Falhei em trabalhar diligentemente e entregar um dia de trabalho honesto ao meu empregador?"
+            },
+            {
+                "id": "pt_BR-07-022",
+                "text": "Desprezei o trabalho ou sucumbi à preguiça?"
+            },
+            {
+                "id": "pt_BR-07-023",
+                "text": "Falhei em fazer a quantidade adequada de trabalho para a minha família?"
+            },
+            {
+                "id": "pt_BR-07-024",
+                "text": "Dei um salário razoável aos trabalhadores?"
+            },
+            {
+                "id": "pt_BR-07-025",
+                "text": "Tentei especular e aumentar o preço de bens ou serviços?"
+            },
+            {
+                "id": "pt_BR-07-026",
+                "text": "Violei as leis de direitos autorais pirateando software, música ou filmes?"
+            },
+            {
+                "id": "pt_BR-07-027",
+                "text": "Desperdicei o tempo do meu empregador pelo uso excessivo da internet ou redes sociais durante as horas de trabalho?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pt_BR-8",
+        "questions": [
+            {
+                "id": "pt_BR-08-001",
+                "text": "Menti ou enganei deliberadamente alguém?"
+            },
+            {
+                "id": "pt_BR-08-002",
+                "text": "Fofoquei?"
+            },
+            {
+                "id": "pt_BR-08-003",
+                "text": "Menti sob juramento (perjúrio)?"
+            },
+            {
+                "id": "pt_BR-08-004",
+                "text": "Assumi o pior de alguém ou o julguei injustamente?"
+            },
+            {
+                "id": "pt_BR-08-005",
+                "text": "Prejudiquei a reputação de alguém através da detração (contar a outros as faltas de alguém sem causa grave) ou da calúnia (contar mentiras sobre uma pessoa) ou do libelo (escrever mentiras sobre alguém)?"
+            },
+            {
+                "id": "pt_BR-08-006",
+                "text": "Busquei obsessivamente validação online ou cultivei uma falsa imagem de mim mesmo?"
+            },
+            {
+                "id": "pt_BR-08-007",
+                "text": "Falhei em defender a reputação de alguém?"
+            },
+            {
+                "id": "pt_BR-08-008",
+                "text": "Falhei em guardar um segredo ou traí a confiança de alguém?"
+            },
+            {
+                "id": "pt_BR-08-009",
+                "text": "Permaneci em silêncio ou fui cúmplice em difamar a Igreja Católica?"
+            },
+            {
+                "id": "pt_BR-08-010",
+                "text": "Falhei em ser sincero ou franco quando era apropriado?"
+            },
+            {
+                "id": "pt_BR-08-011",
+                "text": "Levei uma vida dupla?"
+            },
+            {
+                "id": "pt_BR-08-012",
+                "text": "Fui um hipócrita?"
+            },
+            {
+                "id": "pt_BR-08-013",
+                "text": "Coagi outros a mentir?"
+            },
+            {
+                "id": "pt_BR-08-014",
+                "text": "Impedi que outros dissessem a verdade?"
+            },
+            {
+                "id": "pt_BR-08-015",
+                "text": "Participei da adulação?"
+            },
+            {
+                "id": "pt_BR-08-016",
+                "text": "Fui arrogante ou jactancioso?"
+            },
+            {
+                "id": "pt_BR-08-017",
+                "text": "Caracterizei mal algo, fui muito dramático, construí argumentos falsos (espantalho) ou participei de ataques ad-hominem (ataques contra a pessoa em vez do argumento ou ponto de vista)?"
+            },
+            {
+                "id": "pt_BR-08-018",
+                "text": "Falhei em reparar a reputação de alguém sobre quem menti?"
+            },
+            {
+                "id": "pt_BR-08-019",
+                "text": "Revelei a verdade a alguém que não tem direito a ela (como um agressor injusto)?"
+            },
+            {
+                "id": "pt_BR-08-020",
+                "text": "Violei o sigilo de confissão contando os conteúdos da confissão de outra pessoa a outros?"
+            },
+            {
+                "id": "pt_BR-08-021",
+                "text": "Revelei segredos profissionais sem causa grave?"
+            },
+            {
+                "id": "pt_BR-08-022",
+                "text": "Aceitei o que outros dizem como verdade sem o devido escrutínio (particularmente em assuntos de fé e moral ou onde a reputação de outro está em jogo)?"
+            },
+            {
+                "id": "pt_BR-08-023",
+                "text": "Promovi informações públicas falsas (propaganda)?"
+            },
+            {
+                "id": "pt_BR-08-024",
+                "text": "Compartilhei informações não verificadas ou falsas (fake news) nas redes sociais?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pt_BR-9",
+        "questions": [
+            {
+                "id": "pt_BR-09-001",
+                "text": "Cedi à concupiscência (desejos sexuais intensos)?"
+            },
+            {
+                "id": "pt_BR-09-002",
+                "text": "Cedi à luxúria (desejo desordenado de desfrute imoderado do prazer sexual)?"
+            },
+            {
+                "id": "pt_BR-09-003",
+                "text": "Fiz comentários ou insinuações sexualmente sugestivas ou assediadoras para alguém?"
+            },
+            {
+                "id": "pt_BR-09-004",
+                "text": "Falhei em vestir modestamente ou desviei o olhar quando alguém mais veste imodestamente?"
+            },
+            {
+                "id": "pt_BR-09-005",
+                "text": "Violei a privacidade de alguém espionando-o?"
+            },
+            {
+                "id": "pt_BR-09-006",
+                "text": "Encorajei ou entreguei-me voluntariamente a pensamentos impuros?"
+            },
+            {
+                "id": "pt_BR-09-007",
+                "text": "Promovi a promiscuidade ou atitudes imorais em relação ao sexo, à modéstia ou à pureza, ou a permissividade moral?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pt_BR-10",
+        "questions": [
+            {
+                "id": "pt_BR-10-001",
+                "text": "Invejei outros por suas posses?"
+            },
+            {
+                "id": "pt_BR-10-002",
+                "text": "Fui ganancioso?"
+            },
+            {
+                "id": "pt_BR-10-003",
+                "text": "Cobicei as posses de outros?"
+            },
+            {
+                "id": "pt_BR-10-004",
+                "text": "Falhei em viver simplesmente e em vez disso cedi ao materialismo?"
+            },
+            {
+                "id": "pt_BR-10-005",
+                "text": "Falhei em regozijar-me no sucesso de outro?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pt_BR-11",
+        "questions": [
+            {
+                "id": "pt_BR-11-001",
+                "text": "Falhei em assistir à Santa Missa nos domingos ou dias de preceito?"
+            },
+            {
+                "id": "pt_BR-11-002",
+                "text": "Falhei em reservar os domingos e dias de preceito para o descanso?"
+            },
+            {
+                "id": "pt_BR-11-003",
+                "text": "Confessei meus pecados pelo menos uma vez por ano?"
+            },
+            {
+                "id": "pt_BR-11-004",
+                "text": "Minhas confissões foram válidas e honestas?"
+            },
+            {
+                "id": "pt_BR-11-005",
+                "text": "Preparei minha alma adequadamente para receber a Sagrada Comunhão?"
+            },
+            {
+                "id": "pt_BR-11-006",
+                "text": "Cumpri a penitência atribuída da minha confissão?"
+            },
+            {
+                "id": "pt_BR-11-007",
+                "text": "Fiz reparação pelo dano causado pelos meus pecados?"
+            },
+            {
+                "id": "pt_BR-11-008",
+                "text": "Fiz um exame de consciência minucioso antes da confissão e tentei honestamente lembrar todos os meus pecados?"
+            },
+            {
+                "id": "pt_BR-11-009",
+                "text": "Tive um firme propósito de emendar minha vida e dor pelos meus pecados antes de ir à confissão?"
+            },
+            {
+                "id": "pt_BR-11-010",
+                "text": "Recebi a Sagrada Comunhão pelo menos uma vez durante o tempo da Páscoa (entre a Vigília Pascal e o Domingo de Pentecostes)?"
+            },
+            {
+                "id": "pt_BR-11-011",
+                "text": "Recebi a comunhão estando fora do estado de graça (tendo pecados mortais na minha alma)?"
+            },
+            {
+                "id": "pt_BR-11-012",
+                "text": "Segui o jejum eucarístico antes de receber a Sagrada Comunhão?"
+            },
+            {
+                "id": "pt_BR-11-013",
+                "text": "Comi carne nas sextas-feiras da Quaresma?"
+            },
+            {
+                "id": "pt_BR-11-014",
+                "text": "Falhei em seguir as regras sobre o jejum na Quarta-feira de Cinzas e na Sexta-feira Santa?"
+            },
+            {
+                "id": "pt_BR-11-015",
+                "text": "Segui o espírito das regras relativas ao jejum e à abstinência?"
+            },
+            {
+                "id": "pt_BR-11-016",
+                "text": "Jejuei de carne todas as sextas-feiras do ano ou segui as diretrizes dos bispos na minha localidade?"
+            },
+            {
+                "id": "pt_BR-11-017",
+                "text": "Fiz obras de misericórdia espirituais e corporais e pratiquei a abnegação?"
+            },
+            {
+                "id": "pt_BR-11-018",
+                "text": "Dei dízimos à igreja de maneira regular?"
+            },
+            {
+                "id": "pt_BR-11-019",
+                "text": "Dei uma quantia adequada para a minha situação?"
+            },
+            {
+                "id": "pt_BR-11-020",
+                "text": "Ofereci meu tempo para a Igreja adequadamente para a minha situação?"
+            },
+            {
+                "id": "pt_BR-11-021",
+                "text": "Rezei pelo crescimento da Igreja?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pt_BR-12",
+        "questions": [
+            {
+                "id": "pt_BR-12-001",
+                "text": "Cometi o pecado da Soberba?"
+            },
+            {
+                "id": "pt_BR-12-002",
+                "text": "Cometi o pecado da Avareza?"
+            },
+            {
+                "id": "pt_BR-12-003",
+                "text": "Cometi o pecado da Luxúria?"
+            },
+            {
+                "id": "pt_BR-12-004",
+                "text": "Cometi o pecado da Inveja?"
+            },
+            {
+                "id": "pt_BR-12-005",
+                "text": "Cometi o pecado da Gula?"
+            },
+            {
+                "id": "pt_BR-12-006",
+                "text": "Cometi o pecado da Ira?"
+            },
+            {
+                "id": "pt_BR-12-007",
+                "text": "Cometi o pecado da Preguiça?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pt_BR-13",
+        "questions": [
+            {
+                "id": "pt_BR-13-001",
+                "text": "Pequei esperando que Deus me perdoe sem verdadeiro arrependimento (Presunção)?"
+            },
+            {
+                "id": "pt_BR-13-002",
+                "text": "Desesperei da salvação?"
+            },
+            {
+                "id": "pt_BR-13-003",
+                "text": "Lutei contra ou ataquei verdades que sabia serem ensinadas pela Igreja Católica?"
+            },
+            {
+                "id": "pt_BR-13-004",
+                "text": "Invejei o bem espiritual alheio?"
+            },
+            {
+                "id": "pt_BR-13-005",
+                "text": "Permaneci teimosamente em estado de pecado?"
+            },
+            {
+                "id": "pt_BR-13-006",
+                "text": "Persisti na recusa de me arrepender?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pt_BR-14",
+        "questions": [
+            {
+                "id": "pt_BR-14-001",
+                "text": "Cometi homicídio voluntário?"
+            },
+            {
+                "id": "pt_BR-14-002",
+                "text": "Cometi o pecado de Sodoma (atos sexuais não naturais)?"
+            },
+            {
+                "id": "pt_BR-14-003",
+                "text": "Oprimi os pobres?"
+            },
+            {
+                "id": "pt_BR-14-004",
+                "text": "Defraudei os trabalhadores de seu salário?"
+            }
+        ]
+    }
+]

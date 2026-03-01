@@ -1,0 +1,72 @@
+[
+    {
+        "code": "en-1",
+        "content": "I am the Lord your God: you shall not have strange Gods before me",
+        "custom_title": "Commandment 1"
+    },
+    {
+        "code": "en-2",
+        "content": "You shall not take the name of the Lord your God in vain.",
+        "custom_title": "Commandment 2"
+    },
+    {
+        "code": "en-3",
+        "content": "Remember to keep holy the Lord's Day.",
+        "custom_title": "Commandment 3"
+    },
+    {
+        "code": "en-4",
+        "content": "Honor your father and your mother",
+        "custom_title": "Commandment 4"
+    },
+    {
+        "code": "en-5",
+        "content": "You shall not kill",
+        "custom_title": "Commandment 5"
+    },
+    {
+        "code": "en-6",
+        "content": "You shall not commit adultery",
+        "custom_title": "Commandment 6"
+    },
+    {
+        "code": "en-7",
+        "content": "You shall not steal",
+        "custom_title": "Commandment 7"
+    },
+    {
+        "code": "en-8",
+        "content": "You shall not bear false witness against your neighbor",
+        "custom_title": "Commandment 8"
+    },
+    {
+        "code": "en-9",
+        "content": "You shall not covet your neighbor's wife",
+        "custom_title": "Commandment 9"
+    },
+    {
+        "code": "en-10",
+        "content": "You shall not covet your neighbor's goods",
+        "custom_title": "Commandment 10"
+    },
+    {
+        "code": "en-11",
+        "content": "Precepts of the Church",
+        "custom_title": "Precepts of the Church"
+    },
+    {
+        "code": "en-12",
+        "content": "Capital Sins",
+        "custom_title": "Capital Sins"
+    },
+    {
+        "code": "en-13",
+        "content": "Sins against the Holy Spirit",
+        "custom_title": "Sins against the Holy Spirit"
+    },
+    {
+        "code": "en-14",
+        "content": "Sins crying to Heaven for Vengeance",
+        "custom_title": "Sins crying to Heaven for Vengeance"
+    }
+]

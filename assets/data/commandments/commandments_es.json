@@ -1,0 +1,72 @@
+[
+    {
+        "code": "es-1",
+        "content": "Amarás a Dios sobre todas las cosas.",
+        "custom_title": "Mandamiento 1"
+    },
+    {
+        "code": "es-2",
+        "content": "No tomarás el nombre de Dios en vano.",
+        "custom_title": "Mandamiento 2"
+    },
+    {
+        "code": "es-3",
+        "content": "Santificarás las fiestas.",
+        "custom_title": "Mandamiento 3"
+    },
+    {
+        "code": "es-4",
+        "content": "Honrarás a tu padre y a tu madre.",
+        "custom_title": "Mandamiento 4"
+    },
+    {
+        "code": "es-5",
+        "content": "No matarás.",
+        "custom_title": "Mandamiento 5"
+    },
+    {
+        "code": "es-6",
+        "content": "No cometerás actos impuros.",
+        "custom_title": "Mandamiento 6"
+    },
+    {
+        "code": "es-7",
+        "content": "No robarás.",
+        "custom_title": "Mandamiento 7"
+    },
+    {
+        "code": "es-8",
+        "content": "No dirás falso testimonio ni mentirás.",
+        "custom_title": "Mandamiento 8"
+    },
+    {
+        "code": "es-9",
+        "content": "No consentirás pensamientos ni deseos impuros.",
+        "custom_title": "Mandamiento 9"
+    },
+    {
+        "code": "es-10",
+        "content": "No codiciarás los bienes ajenos.",
+        "custom_title": "Mandamiento 10"
+    },
+    {
+        "code": "es-11",
+        "content": "Mandamientos de la Iglesia",
+        "custom_title": "Mandamientos de la Iglesia"
+    },
+    {
+        "code": "es-12",
+        "content": "Pecados Capitales",
+        "custom_title": "Pecados Capitales"
+    },
+    {
+        "code": "es-13",
+        "content": "Pecados contra el Espíritu Santo",
+        "custom_title": "Pecados contra el Espíritu Santo"
+    },
+    {
+        "code": "es-14",
+        "content": "Pecados que claman al Cielo",
+        "custom_title": "Pecados que claman al Cielo"
+    }
+]

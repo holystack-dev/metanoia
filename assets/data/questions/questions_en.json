@@ -1,0 +1,1044 @@
+[
+    {
+        "commandmentCode": "en-1",
+        "questions": [
+            {
+                "id": "en-01-001",
+                "text": "Have I refused to believe in God (Atheism)?"
+            },
+            {
+                "id": "en-01-002",
+                "text": "Have I doubted God's existence?"
+            },
+            {
+                "id": "en-01-003",
+                "text": "Have I hated God or blamed Him for troubles in my life?"
+            },
+            {
+                "id": "en-01-004",
+                "text": "Have I denied any of the Catholic Church’s dogmas?"
+            },
+            {
+                "id": "en-01-005",
+                "text": "Have I deliberately caused others to doubt God or the articles of the faith?"
+            },
+            {
+                "id": "en-01-006",
+                "text": "Have I attempted to grow and defend my faith?"
+            },
+            {
+                "id": "en-01-007",
+                "text": "Have I passed on the faith to my children and family in a dedicated way?"
+            },
+            {
+                "id": "en-01-008",
+                "text": "Have I refused to defend God and my faith to others when they raise objections?"
+            },
+            {
+                "id": "en-01-009",
+                "text": "Have I denied my faith or doctrines before others?"
+            },
+            {
+                "id": "en-01-010",
+                "text": "Have I left the Catholic Church or practiced another religion?"
+            },
+            {
+                "id": "en-01-011",
+                "text": "Have I joined an organization that is detrimental or opposed to my faith (Communists, Masons, dissident or schismatic groups, or any group which requires its members to hold an oath above and before their duties to the Catholic Church)?"
+            },
+            {
+                "id": "en-01-012",
+                "text": "Have I given in to despair about God or his forgiveness?"
+            },
+            {
+                "id": "en-01-013",
+                "text": "Have I presumed of God’s mercy by intentionally committing a sin with the expectation of being forgiven, thereby avoiding true conversion of heart?"
+            },
+            {
+                "id": "en-01-014",
+                "text": "Have I presumed my own ability to save my soul without help from God?"
+            },
+            {
+                "id": "en-01-015",
+                "text": "Have I confessed my sins without intending to amend my life?"
+            },
+            {
+                "id": "en-01-016",
+                "text": "Have I practiced idolatry? Have I placed worldly things such as money, power, success, friendships, government, my nation, race, or possessions before my relationship with God? Have I practiced the spiritual aspects of Yoga?"
+            },
+            {
+                "id": "en-01-017",
+                "text": "Have I practiced the occult (Wiccans, Satanism, invoking demons, Ouija Boards, black magic, selling your soul, Séances, channeling spirits, shamanism, consulting mediums, Reiki, divination, using charms, horoscopes, astrology, palm reading, clairvoyance, lot interpretation, or card reading)?"
+            },
+            {
+                "id": "en-01-018",
+                "text": "Have I practiced superstition? Have I attributed supernatural power to a source other than God?"
+            },
+            {
+                "id": "en-01-019",
+                "text": "Have I allowed social media, video games, or the internet to become an idol, consuming time that belongs to God and my family?"
+            },
+            {
+                "id": "en-01-020",
+                "text": "Have I sought my self-worth in online approval rather than in my identity as a child of God?"
+            },
+            {
+                "id": "en-01-021",
+                "text": "Have I spent excessive time on screens to the detriment of my daily duties or prayer life?"
+            },
+            {
+                "id": "en-01-022",
+                "text": "Have I practiced polytheism?"
+            },
+            {
+                "id": "en-01-023",
+                "text": "Have I been indifferent to the faith or God?"
+            },
+            {
+                "id": "en-01-024",
+                "text": "Have I been ungrateful for the many blessings God has given me?"
+            },
+            {
+                "id": "en-01-025",
+                "text": "Have I been lukewarm in the faith?"
+            },
+            {
+                "id": "en-01-026",
+                "text": "Have I been lazy in my faith and spiritual growth?"
+            },
+            {
+                "id": "en-01-027",
+                "text": "Have I neglected prayer?"
+            },
+            {
+                "id": "en-01-028",
+                "text": "Have I abandoned promises or vows made to God?"
+            },
+            {
+                "id": "en-01-029",
+                "text": "Have I restricted the faith of another person or contributed to a restriction of another’s religious freedom? Have I mocked someone for their faith in God? Have I forced others to violate the tenets of their faith or conscience?"
+            },
+            {
+                "id": "en-01-030",
+                "text": "Have I tempted God by putting His goodness and almighty power to the test by word or deed?"
+            },
+            {
+                "id": "en-01-031",
+                "text": "Have I committed the sin of sacrilege? Have I received one of the sacraments without the proper disposition of soul (i.e. receiving Holy Communion, confirmation, matrimony, or holy orders with mortal sins on my soul)? Have I treated religious persons such as priests, nuns, bishops or the pope, places such as churches, chapels, and holy sites, and blessed or holy things such as rosaries, relics, and Bibles with due respect? Have I lied about my sins or intentionally omitted some serious sins during the sacrament of confession?"
+            },
+            {
+                "id": "en-01-032",
+                "text": "Have I engaged in simony by buying or selling spiritual things?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "en-2",
+        "questions": [
+            {
+                "id": "en-02-001",
+                "text": "Have I used God’s name in a disrespectful, careless, or blasphemous way?"
+            },
+            {
+                "id": "en-02-002",
+                "text": "Have I spoken disrespectfully, hatefully, defiantly, or carelessly about the faith, or sacred persons, places and things?"
+            },
+            {
+                "id": "en-02-003",
+                "text": "Have I promoted disrespectful, hateful, defiant, or careless speech about the faith or sacred persons, places and things?"
+            },
+            {
+                "id": "en-02-004",
+                "text": "Have I watched movies or listened to music that was blasphemous or irreverent?"
+            },
+            {
+                "id": "en-02-005",
+                "text": "Have I used foul language or watched movies or listened to music that contained foul language?"
+            },
+            {
+                "id": "en-02-006",
+                "text": "Have I spoken disrespectfully of other people?"
+            },
+            {
+                "id": "en-02-007",
+                "text": "Have I lied under oath (perjury)?"
+            },
+            {
+                "id": "en-02-008",
+                "text": "Have I sworn or made promises in God’s name to things that were untrue or of little importance even if they were true?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "en-3",
+        "questions": [
+            {
+                "id": "en-03-001",
+                "text": "Have I missed Holy Mass on Sundays or Holy Days without serious cause?"
+            },
+            {
+                "id": "en-03-002",
+                "text": "Have I failed to bring my children to Holy Mass on Sundays and Holy Days without serious cause?"
+            },
+            {
+                "id": "en-03-003",
+                "text": "Have I attended mass by arriving late or leaving early without serious cause?"
+            },
+            {
+                "id": "en-03-004",
+                "text": "Have I performed work on Sundays or other Holy Days without serious cause?"
+            },
+            {
+                "id": "en-03-005",
+                "text": "Have I refused to help others attend Mass on Sundays and Holy Days?"
+            },
+            {
+                "id": "en-03-006",
+                "text": "Have I shopped or benefitted from unnecessary service on Sundays and Holy Days?"
+            },
+            {
+                "id": "en-03-007",
+                "text": "Have I intentionally eaten meat or refused to fast on the days set aside by the church for fasting and abstaining from meat?"
+            },
+            {
+                "id": "en-03-008",
+                "text": "Have I violated the 1 hour fast before Holy Communion?"
+            },
+            {
+                "id": "en-03-009",
+                "text": "Have I required workers under my direction to perform work on a Sunday or Holy Day without serious cause?"
+            },
+            {
+                "id": "en-03-010",
+                "text": "Have I been a source of distraction to others during Mass through my dress, behavior, or use of a mobile phone?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "en-4",
+        "questions": [
+            {
+                "id": "en-04-001",
+                "text": "Have I disobeyed my parents’ reasonable wishes?"
+            },
+            {
+                "id": "en-04-002",
+                "text": "Have I spoken disrespectfully to my parents or legitimate authorities including public officials and employers?"
+            },
+            {
+                "id": "en-04-003",
+                "text": "Have I disobeyed the reasonable wishes of my teachers (if in school)?"
+            },
+            {
+                "id": "en-04-004",
+                "text": "Have I failed to care for and support my elderly parents or other family?"
+            },
+            {
+                "id": "en-04-005",
+                "text": "Have I neglected the needs, education, discipline, or spiritual formation of my children?"
+            },
+            {
+                "id": "en-04-006",
+                "text": "Have I failed to guide my children in understanding the nature and Church teachings of human sexuality?"
+            },
+            {
+                "id": "en-04-007",
+                "text": "Have I prayed daily with my children?"
+            },
+            {
+                "id": "en-04-008",
+                "text": "Have I neglected to encourage my children to receive the sacraments of Holy Communion and Confession on a regular basis?"
+            },
+            {
+                "id": "en-04-009",
+                "text": "Have I voted for, promoted or advanced the agenda of politicians who hold positions contrary to the common good, religious freedom, or the moral law?"
+            },
+            {
+                "id": "en-04-010",
+                "text": "Have I failed to live a virtuous life?"
+            },
+            {
+                "id": "en-04-011",
+                "text": "Have I failed to love and sacrifice for my family?"
+            },
+            {
+                "id": "en-04-012",
+                "text": "Have I promoted policies or laws that undermine the family such as circumventing parental consent or promoted unnatural family structures such as homosexual or single-parent adoption, and population control measures? Have I promoted policies or laws that undermine the common good and the moral law?"
+            },
+            {
+                "id": "en-04-013",
+                "text": "Have I encouraged others to disrespect legitimate authority?"
+            },
+            {
+                "id": "en-04-014",
+                "text": "Have I failed to accept my parents’ advice or admonishments?"
+            },
+            {
+                "id": "en-04-015",
+                "text": "Have I failed to foster openness to vocations in my children (marriage, holy orders, consecrated single life, etc.)?"
+            },
+            {
+                "id": "en-04-016",
+                "text": "Have I failed to promote the just treatment of the poor, indigent, or migrants in society?"
+            },
+            {
+                "id": "en-04-017",
+                "text": "Have I committed violence against others?"
+            },
+            {
+                "id": "en-04-018",
+                "text": "Have I undermined the authority of my spouse in front of our children?"
+            },
+            {
+                "id": "en-04-019",
+                "text": "Have I neglected to monitor my children's use of the internet and technology to protect their purity?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "en-5",
+        "questions": [
+            {
+                "id": "en-05-001",
+                "text": "Have I killed or injured a human being directly or negligently and unjustly or cooperated in doing so?"
+            },
+            {
+                "id": "en-05-002",
+                "text": "Have I failed to promote the dignity and sacredness of human life?"
+            },
+            {
+                "id": "en-05-003",
+                "text": "Have I promoted war, torture, hostage-taking, kidnapping, or the killing of defenseless humans?"
+            },
+            {
+                "id": "en-05-004",
+                "text": "Have I procured an abortion or abortion-inducing drugs or helped someone else obtain one?"
+            },
+            {
+                "id": "en-05-005",
+                "text": "Have I promoted abortion or voted for a politician that does?"
+            },
+            {
+                "id": "en-05-006",
+                "text": "Have I procured, participated in or promoted In vitro fertilization?"
+            },
+            {
+                "id": "en-05-007",
+                "text": "Have I promoted human cloning or genetic modification?"
+            },
+            {
+                "id": "en-05-008",
+                "text": "Have I promoted or procured embryonic stem cell research or therapy?"
+            },
+            {
+                "id": "en-05-009",
+                "text": "Have I promoted eugenics or population control laws?"
+            },
+            {
+                "id": "en-05-010",
+                "text": "Have I failed to “turn the other cheek” or love my enemies?"
+            },
+            {
+                "id": "en-05-011",
+                "text": "Have I tried to kill or harm myself or considered it?"
+            },
+            {
+                "id": "en-05-012",
+                "text": "Have I promoted euthanasia or the right-to-suicide movement?"
+            },
+            {
+                "id": "en-05-013",
+                "text": "Have I refused or failed to provide reasonable end-of-life care including medical procedures, food and water, and pain medication?"
+            },
+            {
+                "id": "en-05-014",
+                "text": "Have I failed to care for the spiritual needs of a dying person (including calling a priest for anointing of the sick, or praying for the person)?"
+            },
+            {
+                "id": "en-05-015",
+                "text": "Have I desired to kill someone?"
+            },
+            {
+                "id": "en-05-016",
+                "text": "Have I used more than the necessary force to defend myself?"
+            },
+            {
+                "id": "en-05-017",
+                "text": "Have I failed to protect others to the best of my ability and duty?"
+            },
+            {
+                "id": "en-05-018",
+                "text": "Have I physically, emotionally, or psychologically injured someone or desired to do so?"
+            },
+            {
+                "id": "en-05-019",
+                "text": "Have I given scandal or otherwise shown lack of care for someone’s soul?"
+            },
+            {
+                "id": "en-05-020",
+                "text": "Have I hated someone or wished ill on them?"
+            },
+            {
+                "id": "en-05-021",
+                "text": "Have I failed to show respect for the dead or their bodies?"
+            },
+            {
+                "id": "en-05-022",
+                "text": "Have I failed to provide proper burial for the dead?"
+            },
+            {
+                "id": "en-05-023",
+                "text": "Have I advocated unjust punishments or capital punishment where it is not just?"
+            },
+            {
+                "id": "en-05-024",
+                "text": "Have I discriminated against someone by denying them something to which they are justly entitled within the bounds of the moral and natural law?"
+            },
+            {
+                "id": "en-05-025",
+                "text": "Have I mocked, intimidated or belittled someone?"
+            },
+            {
+                "id": "en-05-026",
+                "text": "Have I been reckless with human life through my actions or lack of care?"
+            },
+            {
+                "id": "en-05-027",
+                "text": "Have I used alcohol or drugs?"
+            },
+            {
+                "id": "en-05-028",
+                "text": "Have I shown a lack of concern for my health or that of others?"
+            },
+            {
+                "id": "en-05-029",
+                "text": "Have I promoted the use of alcohol, drugs or any other harmful thing?"
+            },
+            {
+                "id": "en-05-030",
+                "text": "Have I committed the sin of gluttony or encouraged others to do so?"
+            },
+            {
+                "id": "en-05-031",
+                "text": "Have I failed to promote peace?"
+            },
+            {
+                "id": "en-05-032",
+                "text": "Have I given scandal through my actions or inaction?"
+            },
+            {
+                "id": "en-05-033",
+                "text": "Have I encouraged or assisted others to sin?"
+            },
+            {
+                "id": "en-05-034",
+                "text": "Have I allowed my anger to control me or persist unchecked?"
+            },
+            {
+                "id": "en-05-035",
+                "text": "Have I been uncharitable to someone, fought with them, or held a grudge?"
+            },
+            {
+                "id": "en-05-036",
+                "text": "Have I failed to forgive someone when they have asked me for forgiveness?"
+            },
+            {
+                "id": "en-05-037",
+                "text": "Have I sought or contemplated revenge?"
+            },
+            {
+                "id": "en-05-038",
+                "text": "Have I rejoiced in the misfortune of others?"
+            },
+            {
+                "id": "en-05-039",
+                "text": "Have I abused animals or killed them unnecessarily?"
+            },
+            {
+                "id": "en-05-040",
+                "text": "Have I endangered my own life or the lives of others by reckless driving or using a phone while driving?"
+            },
+            {
+                "id": "en-05-041",
+                "text": "Have I mocked or ridiculed others for their physical or mental disabilities?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "en-6",
+        "questions": [
+            {
+                "id": "en-06-001",
+                "text": "Have I failed to practice and promote chastity?"
+            },
+            {
+                "id": "en-06-002",
+                "text": "Have I sought sexual pleasure outside the marital act?"
+            },
+            {
+                "id": "en-06-003",
+                "text": "Have I used artificial birth control or encouraged its use?"
+            },
+            {
+                "id": "en-06-004",
+                "text": "Have I refused children and the gift of life without just cause?"
+            },
+            {
+                "id": "en-06-005",
+                "text": "Have I lived with a romantic partner before marriage (cohabitation)?"
+            },
+            {
+                "id": "en-06-006",
+                "text": "Have I cultivated inappropriate romantic or emotional intimacy with someone other than my spouse?"
+            },
+            {
+                "id": "en-06-007",
+                "text": "Have I participated in in vitro fertilization or immoral fertility treatments (treatments that do not promote procreation through the marital act) or encouraged someone else to do so?"
+            },
+            {
+                "id": "en-06-008",
+                "text": "Have I procured a sterilization of my reproductive organs or encouraged someone else to do so?"
+            },
+            {
+                "id": "en-06-009",
+                "text": "Have I forced sex on someone (including a spouse)?"
+            },
+            {
+                "id": "en-06-010",
+                "text": "Have I denied sex to my spouse without just cause?"
+            },
+            {
+                "id": "en-06-011",
+                "text": "Have I masturbated (sexual pleasure of oneself outside of the marital act)?"
+            },
+            {
+                "id": "en-06-012",
+                "text": "Have I deliberately caused male climax outside of sexual intercourse?"
+            },
+            {
+                "id": "en-06-013",
+                "text": "Have I provided or promoted sexual education that does not follow the teachings of the Catholic Church?"
+            },
+            {
+                "id": "en-06-014",
+                "text": "Have I used or promoted pornography whether in photos, videos, audio or the written word?"
+            },
+            {
+                "id": "en-06-015",
+                "text": "Have I donated sperm or eggs?"
+            },
+            {
+                "id": "en-06-016",
+                "text": "Have I indulged in impure (involving nudity or sex) movies, television, or music, conversation, or jokes?"
+            },
+            {
+                "id": "en-06-017",
+                "text": "Have I committed adultery (sexual acts or conversation with a married person or with a person that is not my spouse)?"
+            },
+            {
+                "id": "en-06-018",
+                "text": "Have I divorced my spouse or contemplated doing so even though I am in a valid marriage without grave cause?"
+            },
+            {
+                "id": "en-06-019",
+                "text": "Have I entered into a marriage without the blessing of the Church?"
+            },
+            {
+                "id": "en-06-020",
+                "text": "Have I committed incest?"
+            },
+            {
+                "id": "en-06-021",
+                "text": "Have I engaged in polygamy or polyandry?"
+            },
+            {
+                "id": "en-06-022",
+                "text": "Have I been involved in an “open marriage”?"
+            },
+            {
+                "id": "en-06-023",
+                "text": "Have I had sex outside of the bonds of marriage (fornication, homosexual acts)?"
+            },
+            {
+                "id": "en-06-024",
+                "text": "Have I committed rape?"
+            },
+            {
+                "id": "en-06-025",
+                "text": "Have I engaged in petting, sexting, or other foreplay outside of marriage?"
+            },
+            {
+                "id": "en-06-026",
+                "text": "Have I harmed children sexually?"
+            },
+            {
+                "id": "en-06-027",
+                "text": "Have I engaged in unnatural sexual activities (bestiality, sex with objects, etc.)?"
+            },
+            {
+                "id": "en-06-028",
+                "text": "Have I engaged in or promoted prostitution?"
+            },
+            {
+                "id": "en-06-029",
+                "text": "Have I seduced someone or allowed myself to be seduced?"
+            },
+            {
+                "id": "en-06-030",
+                "text": "Have I refused to accept my God-given sexual identity (sex change operations, cross-dressing, etc.)?"
+            },
+            {
+                "id": "en-06-031",
+                "text": "Have I promoted, advanced, or cooperated in sins against the sixth commandment?"
+            },
+            {
+                "id": "en-06-032",
+                "text": "Have I engaged in inappropriate online relationships or cyber-sex?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "en-7",
+        "questions": [
+            {
+                "id": "en-07-001",
+                "text": "Have I stolen something?"
+            },
+            {
+                "id": "en-07-002",
+                "text": "Have I gambled excessively?"
+            },
+            {
+                "id": "en-07-003",
+                "text": "Have I committed fraud (making a false claim to an insurance company, falsifying information for financial gain)?"
+            },
+            {
+                "id": "en-07-004",
+                "text": "Have I refused to be generous with my resources to those in need?"
+            },
+            {
+                "id": "en-07-005",
+                "text": "Have I wasted money on unnecessary things while neglecting the needs of the poor?"
+            },
+            {
+                "id": "en-07-006",
+                "text": "Have I failed to practice the corporal works of mercy?"
+            },
+            {
+                "id": "en-07-007",
+                "text": "Have I vandalized or defaced someone else’s property?"
+            },
+            {
+                "id": "en-07-008",
+                "text": "Have I cheated?"
+            },
+            {
+                "id": "en-07-009",
+                "text": "Have I paid a fair wage to my workers for an honest day’s work?"
+            },
+            {
+                "id": "en-07-010",
+                "text": "Have I prevented someone from holding a job (unjustly discriminating, or sabotaging someone’s chances at employment)?"
+            },
+            {
+                "id": "en-07-011",
+                "text": "Have I promoted actions that lead to slavery of others (sweatshops, human trafficking, or slavery proper)?"
+            },
+            {
+                "id": "en-07-012",
+                "text": "Have I broken a contract by not fulfilling my end of the obligation?"
+            },
+            {
+                "id": "en-07-013",
+                "text": "Have I participated in or promoted an unjust strike or lockout?"
+            },
+            {
+                "id": "en-07-014",
+                "text": "Have I accumulated excessive debt and/or failed to repay it?"
+            },
+            {
+                "id": "en-07-015",
+                "text": "Have I engaged in usury (charging excessive interest)?"
+            },
+            {
+                "id": "en-07-016",
+                "text": "Have I overcharged someone or taken advantage of someone in a trade?"
+            },
+            {
+                "id": "en-07-017",
+                "text": "Have I filed or promoted an unjust lawsuit against someone?"
+            },
+            {
+                "id": "en-07-018",
+                "text": "Have I failed to make restitution for theft, fraud, or any other action against the 7th commandment?"
+            },
+            {
+                "id": "en-07-019",
+                "text": "Have I shown a disregard for the environment?"
+            },
+            {
+                "id": "en-07-020",
+                "text": "Have I failed to respect private property or violated the Church’s teachings on subsidiarity by advocating for excessive socialism, or too much government control of resources?"
+            },
+            {
+                "id": "en-07-021",
+                "text": "Have I failed to work diligently and deliver an honest day’s work to my employer?"
+            },
+            {
+                "id": "en-07-022",
+                "text": "Have I despised work or succumbed to sloth?"
+            },
+            {
+                "id": "en-07-023",
+                "text": "Have I failed to do the appropriate amount of work for my family?"
+            },
+            {
+                "id": "en-07-024",
+                "text": "Have I given reasonable wage to workers?"
+            },
+            {
+                "id": "en-07-025",
+                "text": "Have I attempted to speculate and drive up the price of goods or services?"
+            },
+            {
+                "id": "en-07-026",
+                "text": "Have I violated copyright laws by pirating software, music, or movies?"
+            },
+            {
+                "id": "en-07-027",
+                "text": "Have I wasted my employer's time by excessive use of the internet or social media during work hours?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "en-8",
+        "questions": [
+            {
+                "id": "en-08-001",
+                "text": "Have I lied or willfully deceived someone?"
+            },
+            {
+                "id": "en-08-002",
+                "text": "Have I gossiped?"
+            },
+            {
+                "id": "en-08-003",
+                "text": "Have I lied under oath (perjury)?"
+            },
+            {
+                "id": "en-08-004",
+                "text": "Have I assumed the worst about someone or judged them unfairly?"
+            },
+            {
+                "id": "en-08-005",
+                "text": "Have I harmed someone’s reputation through detraction (telling others about someone’s faults without grave cause) or calumny (telling lies about a person) or libel (writing lies about someone)?"
+            },
+            {
+                "id": "en-08-006",
+                "text": "Have I obsessively sought validation online or cultivated a false image of myself?"
+            },
+            {
+                "id": "en-08-007",
+                "text": "Have I failed to defend the reputation of someone?"
+            },
+            {
+                "id": "en-08-008",
+                "text": "Have I failed to keep a secret or betrayed someone’s trust?"
+            },
+            {
+                "id": "en-08-009",
+                "text": "Have I remained silent or been complicit in defaming the Catholic Church?"
+            },
+            {
+                "id": "en-08-010",
+                "text": "Have I failed to be sincere or candid when appropriate?"
+            },
+            {
+                "id": "en-08-011",
+                "text": "Have I lead a double life?"
+            },
+            {
+                "id": "en-08-012",
+                "text": "Have I been a hypocrite?"
+            },
+            {
+                "id": "en-08-013",
+                "text": "Have I coerced others to lie?"
+            },
+            {
+                "id": "en-08-014",
+                "text": "Have I prevented others from speaking the truth?"
+            },
+            {
+                "id": "en-08-015",
+                "text": "Have I engaged in flattery?"
+            },
+            {
+                "id": "en-08-016",
+                "text": "Have I been boastful or arrogant?"
+            },
+            {
+                "id": "en-08-017",
+                "text": "Have I mischaracterized something, been overly dramatic, constructed false (straw-man) arguments or engaged in ad-hominem attacks (attacks against the person rather than the argument or viewpoint)?"
+            },
+            {
+                "id": "en-08-018",
+                "text": "Have I failed to repair the reputation of someone I lied about?"
+            },
+            {
+                "id": "en-08-019",
+                "text": "Have I revealed the truth to someone who does not have the right to it (such as an unjust aggressor)?"
+            },
+            {
+                "id": "en-08-020",
+                "text": "Have I violated the seal of confession by telling the contents of someone else’s confession to others?"
+            },
+            {
+                "id": "en-08-021",
+                "text": "Have I disclosed professional secrets without grave cause?"
+            },
+            {
+                "id": "en-08-022",
+                "text": "Have I accepted what others say as truth without due scrutiny (particularly in matters of faith and morals or where another’s reputation is at stake)?"
+            },
+            {
+                "id": "en-08-023",
+                "text": "Have I promoted false public information (propaganda)?"
+            },
+            {
+                "id": "en-08-024",
+                "text": "Have I shared unverified or false information (fake news) on social media?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "en-9",
+        "questions": [
+            {
+                "id": "en-09-001",
+                "text": "Have I given in to concupiscence (intense sexual desires)?"
+            },
+            {
+                "id": "en-09-002",
+                "text": "Have I given in to lust (disordered desire of inordinate enjoyment of sexual pleasure)?"
+            },
+            {
+                "id": "en-09-003",
+                "text": "Have I made sexually suggestive or harassing comments or advances toward someone?"
+            },
+            {
+                "id": "en-09-004",
+                "text": "Have I failed to dress modestly or averted my eyes when someone else is dressed immodestly?"
+            },
+            {
+                "id": "en-09-005",
+                "text": "Have I violated someone’s privacy by spying on them?"
+            },
+            {
+                "id": "en-09-006",
+                "text": "Have I encouraged or voluntarily indulged in impure thoughts?"
+            },
+            {
+                "id": "en-09-007",
+                "text": "Have I promoted promiscuity or immoral attitudes toward sex, modesty, or purity, or moral permissiveness?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "en-10",
+        "questions": [
+            {
+                "id": "en-10-001",
+                "text": "Have I envied others because of their possessions?"
+            },
+            {
+                "id": "en-10-002",
+                "text": "Have I been greedy?"
+            },
+            {
+                "id": "en-10-003",
+                "text": "Have I been covetous of others’ possessions?"
+            },
+            {
+                "id": "en-10-004",
+                "text": "Have I failed to live simply and instead given in to materialism?"
+            },
+            {
+                "id": "en-10-005",
+                "text": "Have I failed to rejoice in another’s success?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "en-11",
+        "questions": [
+            {
+                "id": "en-11-001",
+                "text": "Have I failed to attend Holy Mass on Sundays or Holy Days?"
+            },
+            {
+                "id": "en-11-002",
+                "text": "Have I failed to set Sundays and Holy Days aside for rest?"
+            },
+            {
+                "id": "en-11-003",
+                "text": "Have I confessed my sins at least once each year?"
+            },
+            {
+                "id": "en-11-004",
+                "text": "Have my confessions been valid and honest?"
+            },
+            {
+                "id": "en-11-005",
+                "text": "Have I prepared my soul properly to receive Holy Communion?"
+            },
+            {
+                "id": "en-11-006",
+                "text": "Have I performed the assigned penance from my confession?"
+            },
+            {
+                "id": "en-11-007",
+                "text": "Have I made reparation for the harm caused by my sins?"
+            },
+            {
+                "id": "en-11-008",
+                "text": "Have I made a thorough examination of conscience before confession and honestly attempted to recall all of my sins?"
+            },
+            {
+                "id": "en-11-009",
+                "text": "Have I had a firm purpose of amending my life and sorrow for my sins before going to confession?"
+            },
+            {
+                "id": "en-11-010",
+                "text": "Have I received Holy Communion at least once during the Easter season (between the Easter Vigil and Pentecost Sunday)?"
+            },
+            {
+                "id": "en-11-011",
+                "text": "Have I received communion while being outside the state of grace (having mortal sins on my soul)?"
+            },
+            {
+                "id": "en-11-012",
+                "text": "Have I followed the Eucharistic Fast before receiving Holy Communion?"
+            },
+            {
+                "id": "en-11-013",
+                "text": "Have I eaten meat on Fridays in Lent?"
+            },
+            {
+                "id": "en-11-014",
+                "text": "Have I failed to follow the rules around fasting on Ash Wednesday and Good Friday?"
+            },
+            {
+                "id": "en-11-015",
+                "text": "Have I followed the spirit of the rules concerning fasting and abstinence?"
+            },
+            {
+                "id": "en-11-016",
+                "text": "Have I fasted from meat on all Fridays throughout the year or followed the guidelines of the bishops in my locality (i.e. performing some act of penance instead of abstaining from meat in many areas of the USA)?"
+            },
+            {
+                "id": "en-11-017",
+                "text": "Have I done spiritual and corporal works of mercy and practiced self-denial?"
+            },
+            {
+                "id": "en-11-018",
+                "text": "Have I given tithes to the church on a regular basis?"
+            },
+            {
+                "id": "en-11-019",
+                "text": "Have I given an amount appropriate for my situation?"
+            },
+            {
+                "id": "en-11-020",
+                "text": "Have I volunteered my time for the Church appropriately for my situation?"
+            },
+            {
+                "id": "en-11-021",
+                "text": "Have I prayed for the growth of the Church?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "en-12",
+        "questions": [
+            {
+                "id": "en-12-001",
+                "text": "Have I committed the sin of Pride?"
+            },
+            {
+                "id": "en-12-002",
+                "text": "Have I committed the sin of Greed (Avarice)?"
+            },
+            {
+                "id": "en-12-003",
+                "text": "Have I committed the sin of Lust?"
+            },
+            {
+                "id": "en-12-004",
+                "text": "Have I committed the sin of Envy?"
+            },
+            {
+                "id": "en-12-005",
+                "text": "Have I committed the sin of Gluttony?"
+            },
+            {
+                "id": "en-12-006",
+                "text": "Have I committed the sin of Wrath (Anger)?"
+            },
+            {
+                "id": "en-12-007",
+                "text": "Have I committed the sin of Sloth?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "en-13",
+        "questions": [
+            {
+                "id": "en-13-001",
+                "text": "Have I sinned expecting God to forgive me without true repentance (Presumption)?"
+            },
+            {
+                "id": "en-13-002",
+                "text": "Have I despaired of salvation?"
+            },
+            {
+                "id": "en-13-003",
+                "text": "Have I fought against or attacked truths I knew were taught by the Catholic Church?"
+            },
+            {
+                "id": "en-13-004",
+                "text": "Have I envied another's spiritual good?"
+            },
+            {
+                "id": "en-13-005",
+                "text": "Have I stubbornly remained in a state of sin?"
+            },
+            {
+                "id": "en-13-006",
+                "text": "Have I persisted in refusing to repent?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "en-14",
+        "questions": [
+            {
+                "id": "en-14-001",
+                "text": "Have I committed willful murder?"
+            },
+            {
+                "id": "en-14-002",
+                "text": "Have I committed the sin of Sodom (unnatural sexual acts)?"
+            },
+            {
+                "id": "en-14-003",
+                "text": "Have I oppressed the poor?"
+            },
+            {
+                "id": "en-14-004",
+                "text": "Have I defrauded laborers of their wages?"
+            }
+        ]
+    }
+]
