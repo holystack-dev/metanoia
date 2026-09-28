@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
 import 'package:confessionapp/src/core/database/app_database.dart';
+import 'package:confessionapp/src/core/theme/app_radius.dart';
 import 'package:confessionapp/src/features/examination/data/examination_repository.dart';
 import 'package:drift/drift.dart' as drift;
 
@@ -78,8 +79,8 @@ class _CustomSinDialogState extends ConsumerState<CustomSinDialog> {
               decoration: BoxDecoration(
                 color: theme.colorScheme.primaryContainer,
                 borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(28),
-                  topRight: Radius.circular(28),
+                  topLeft: Radius.circular(AppRadius.dialog),
+                  topRight: Radius.circular(AppRadius.dialog),
                 ),
               ),
               child: Row(
@@ -152,7 +153,7 @@ class _CustomSinDialogState extends ConsumerState<CustomSinDialog> {
                       examinationDataAsync.when(
                         data: (commandmentsWithQuestions) {
                           return DropdownButtonFormField<String?>(
-                            value: _selectedCommandmentCode,
+                            initialValue: _selectedCommandmentCode,
                             isExpanded: true,
                             decoration: InputDecoration(
                               labelText: l10n.selectCommandment,

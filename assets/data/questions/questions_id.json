@@ -1,0 +1,1044 @@
+[
+    {
+        "commandmentCode": "id-1",
+        "questions": [
+            {
+                "id": "id-01-001",
+                "text": "Apakah saya menolak untuk percaya kepada Allah (ateisme)?"
+            },
+            {
+                "id": "id-01-002",
+                "text": "Apakah saya meragukan keberadaan Allah?"
+            },
+            {
+                "id": "id-01-003",
+                "text": "Apakah saya membenci Allah atau menyalahkan-Nya atas kesulitan dalam hidup saya?"
+            },
+            {
+                "id": "id-01-004",
+                "text": "Apakah saya menyangkal salah satu dogma Gereja Katolik?"
+            },
+            {
+                "id": "id-01-005",
+                "text": "Apakah saya dengan sengaja membuat orang lain meragukan Allah atau pokok-pokok iman?"
+            },
+            {
+                "id": "id-01-006",
+                "text": "Apakah saya lalai menumbuhkan dan membela iman saya?"
+            },
+            {
+                "id": "id-01-007",
+                "text": "Apakah saya lalai mewariskan iman dengan sungguh-sungguh kepada anak-anak dan keluarga saya?"
+            },
+            {
+                "id": "id-01-008",
+                "text": "Apakah saya menolak membela Allah dan iman saya di hadapan orang lain ketika mereka mengajukan keberatan?"
+            },
+            {
+                "id": "id-01-009",
+                "text": "Apakah saya menyangkal iman atau ajaran iman saya di hadapan orang lain?"
+            },
+            {
+                "id": "id-01-010",
+                "text": "Apakah saya meninggalkan Gereja Katolik atau menjalankan agama lain?"
+            },
+            {
+                "id": "id-01-011",
+                "text": "Apakah saya bergabung dengan organisasi yang merugikan atau bertentangan dengan iman saya (kaum komunis, Freemason, kelompok pembangkang atau skismatik, atau kelompok apa pun yang menuntut anggotanya bersumpah setia melebihi dan mendahului kewajiban mereka kepada Gereja Katolik)?"
+            },
+            {
+                "id": "id-01-012",
+                "text": "Apakah saya jatuh dalam keputusasaan terhadap Allah atau pengampunan-Nya?"
+            },
+            {
+                "id": "id-01-013",
+                "text": "Apakah saya menyalahgunakan kerahiman Allah dengan sengaja berbuat dosa sambil berharap akan diampuni, sehingga menghindari pertobatan hati yang sejati?"
+            },
+            {
+                "id": "id-01-014",
+                "text": "Apakah saya mengandalkan kemampuan diri sendiri untuk menyelamatkan jiwa saya tanpa pertolongan Allah?"
+            },
+            {
+                "id": "id-01-015",
+                "text": "Apakah saya mengaku dosa tanpa niat memperbaiki hidup saya?"
+            },
+            {
+                "id": "id-01-016",
+                "text": "Apakah saya melakukan penyembahan berhala? Apakah saya menempatkan hal-hal duniawi seperti uang, kekuasaan, kesuksesan, persahabatan, pemerintah, bangsa, ras, atau harta benda di atas hubungan saya dengan Allah? Apakah saya mengikuti praktik-praktik spiritual non-Kristen yang bertentangan dengan iman?"
+            },
+            {
+                "id": "id-01-017",
+                "text": "Apakah saya mempraktikkan okultisme (Wicca, satanisme, memanggil roh jahat, papan Ouija, ilmu hitam, menjual jiwa, pemanggilan arwah (séance), menjadi perantara roh, perdukunan, berkonsultasi dengan cenayang, Reiki, ramal-meramal, memakai jimat, horoskop, astrologi, membaca garis tangan, penerawangan, membaca undian nasib, atau membaca kartu)?"
+            },
+            {
+                "id": "id-01-018",
+                "text": "Apakah saya percaya pada takhayul? Apakah saya menganggap ada kuasa adikodrati yang berasal dari sumber lain selain Allah?"
+            },
+            {
+                "id": "id-01-019",
+                "text": "Apakah saya membiarkan media sosial, permainan video, atau internet menjadi berhala yang menyita waktu yang seharusnya menjadi milik Allah dan keluarga saya?"
+            },
+            {
+                "id": "id-01-020",
+                "text": "Apakah saya mencari harga diri dengan mencari validasi dari orang lain di dunia maya, bukan dalam jati diri saya sebagai anak Allah?"
+            },
+            {
+                "id": "id-01-021",
+                "text": "Apakah saya menghabiskan terlalu banyak waktu di depan layar sehingga merugikan kewajiban harian atau kehidupan doa saya?"
+            },
+            {
+                "id": "id-01-022",
+                "text": "Apakah saya mempraktikkan politeisme (menyembah banyak dewa)?"
+            },
+            {
+                "id": "id-01-023",
+                "text": "Apakah saya bersikap acuh tak acuh terhadap iman atau terhadap Allah?"
+            },
+            {
+                "id": "id-01-024",
+                "text": "Apakah saya tidak bersyukur atas begitu banyak berkat yang telah Allah berikan kepada saya?"
+            },
+            {
+                "id": "id-01-025",
+                "text": "Apakah saya suam-suam kuku dalam iman?"
+            },
+            {
+                "id": "id-01-026",
+                "text": "Apakah saya malas menghayati iman dan mengusahakan pertumbuhan rohani saya?"
+            },
+            {
+                "id": "id-01-027",
+                "text": "Apakah saya melalaikan doa?"
+            },
+            {
+                "id": "id-01-028",
+                "text": "Apakah saya mengingkari janji atau kaul yang saya buat kepada Allah?"
+            },
+            {
+                "id": "id-01-029",
+                "text": "Apakah saya membatasi kebebasan beriman orang lain atau ikut andil dalam pembatasan kebebasan beragama orang lain? Apakah saya mengejek seseorang karena imannya kepada Allah? Apakah saya memaksa orang lain melanggar ajaran iman atau hati nurani mereka?"
+            },
+            {
+                "id": "id-01-030",
+                "text": "Apakah saya mencobai Allah dengan menguji kebaikan dan kemahakuasaan-Nya melalui perkataan atau perbuatan?"
+            },
+            {
+                "id": "id-01-031",
+                "text": "Apakah saya melakukan dosa sakrilegi (penodaan hal-hal kudus)? Apakah saya menerima salah satu sakramen tanpa kesiapan jiwa yang semestinya (misalnya menerima Komuni Kudus, penguatan, perkawinan, atau tahbisan suci dalam keadaan berdosa berat)? Apakah saya menghormati sebagaimana mestinya para pelayan Tuhan seperti imam, biarawati, uskup, atau paus; tempat-tempat kudus seperti gereja, kapel, dan situs suci; serta benda-benda terberkati atau kudus seperti rosario, relikui, dan Alkitab? Apakah saya berbohong tentang dosa saya atau dengan sengaja menyembunyikan dosa berat dalam Sakramen Tobat?"
+            },
+            {
+                "id": "id-01-032",
+                "text": "Apakah saya melakukan simoni dengan memperjualbelikan hal-hal rohani?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "id-2",
+        "questions": [
+            {
+                "id": "id-02-001",
+                "text": "Apakah saya menggunakan nama Allah secara tidak hormat, sembarangan, atau menghujat?"
+            },
+            {
+                "id": "id-02-002",
+                "text": "Apakah saya berbicara dengan tidak hormat, penuh kebencian, menantang, atau sembarangan tentang iman, atau tentang pribadi, tempat, dan benda yang kudus?"
+            },
+            {
+                "id": "id-02-003",
+                "text": "Apakah saya mendukung perkataan yang tidak hormat, penuh kebencian, menantang, atau sembarangan tentang iman atau tentang pribadi, tempat, dan benda yang kudus?"
+            },
+            {
+                "id": "id-02-004",
+                "text": "Apakah saya menonton film atau mendengarkan musik yang menghujat atau melecehkan hal-hal kudus?"
+            },
+            {
+                "id": "id-02-005",
+                "text": "Apakah saya menggunakan kata-kata kotor atau cabul?"
+            },
+            {
+                "id": "id-02-006",
+                "text": "Apakah saya berbicara dengan tidak hormat tentang orang lain?"
+            },
+            {
+                "id": "id-02-007",
+                "text": "Apakah saya berbohong di bawah sumpah (sumpah palsu)?"
+            },
+            {
+                "id": "id-02-008",
+                "text": "Apakah saya bersumpah atau berjanji demi nama Allah untuk hal-hal yang tidak benar, atau untuk hal-hal sepele sekalipun benar?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "id-3",
+        "questions": [
+            {
+                "id": "id-03-001",
+                "text": "Apakah saya tidak menghadiri Misa Kudus pada hari Minggu atau hari raya wajib tanpa alasan yang berat?"
+            },
+            {
+                "id": "id-03-002",
+                "text": "Apakah saya lalai mengajak anak-anak saya menghadiri Misa Kudus pada hari Minggu dan hari raya wajib tanpa alasan yang berat?"
+            },
+            {
+                "id": "id-03-003",
+                "text": "Apakah saya menghadiri Misa dengan datang terlambat atau pulang lebih awal tanpa alasan yang berat?"
+            },
+            {
+                "id": "id-03-004",
+                "text": "Apakah saya bekerja pada hari Minggu atau hari raya wajib lainnya tanpa alasan yang berat?"
+            },
+            {
+                "id": "id-03-005",
+                "text": "Apakah saya menolak membantu orang lain agar dapat menghadiri Misa pada hari Minggu dan hari raya wajib?"
+            },
+            {
+                "id": "id-03-006",
+                "text": "Apakah saya berbelanja atau memanfaatkan layanan yang tidak perlu pada hari Minggu dan hari raya wajib?"
+            },
+            {
+                "id": "id-03-007",
+                "text": "Apakah saya dengan sengaja makan daging atau menolak berpuasa pada hari-hari yang ditetapkan Gereja untuk berpuasa dan berpantang daging?"
+            },
+            {
+                "id": "id-03-008",
+                "text": "Apakah saya melanggar puasa satu jam sebelum menyambut Komuni Kudus?"
+            },
+            {
+                "id": "id-03-009",
+                "text": "Apakah saya menuntut para pekerja di bawah pimpinan saya untuk bekerja pada hari Minggu atau hari raya wajib tanpa alasan yang berat?"
+            },
+            {
+                "id": "id-03-010",
+                "text": "Apakah saya mengganggu konsentrasi orang lain selama Misa melalui cara berpakaian, tingkah laku, atau penggunaan telepon genggam?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "id-4",
+        "questions": [
+            {
+                "id": "id-04-001",
+                "text": "Apakah saya tidak menaati keinginan orang tua saya yang wajar?"
+            },
+            {
+                "id": "id-04-002",
+                "text": "Apakah saya berbicara dengan tidak hormat kepada orang tua atau kepada pemegang otoritas yang sah, termasuk pejabat publik dan pemberi kerja?"
+            },
+            {
+                "id": "id-04-003",
+                "text": "Apakah saya tidak menaati keinginan yang wajar dari guru-guru saya (jika masih bersekolah)?"
+            },
+            {
+                "id": "id-04-004",
+                "text": "Apakah saya lalai merawat dan menafkahi orang tua saya yang lanjut usia atau anggota keluarga lainnya?"
+            },
+            {
+                "id": "id-04-005",
+                "text": "Apakah saya melalaikan kebutuhan, pendidikan, pendisiplinan, atau pembinaan rohani anak-anak saya?"
+            },
+            {
+                "id": "id-04-006",
+                "text": "Apakah saya lalai membimbing anak-anak saya untuk memahami hakikat seksualitas manusia dan ajaran Gereja tentangnya?"
+            },
+            {
+                "id": "id-04-007",
+                "text": "Apakah saya lalai berdoa setiap hari bersama anak-anak saya?"
+            },
+            {
+                "id": "id-04-008",
+                "text": "Apakah saya lalai mendorong anak-anak saya untuk menerima Komuni Kudus dan Sakramen Tobat secara teratur?"
+            },
+            {
+                "id": "id-04-009",
+                "text": "Apakah saya lalai membina hati nurani saya dengan saksama sebelum memberikan suara, atau mendukung kebijakan yang bertentangan dengan kesejahteraan umum, kebebasan beragama, atau hukum moral?"
+            },
+            {
+                "id": "id-04-010",
+                "text": "Apakah saya lalai menjalani hidup yang berkeutamaan?"
+            },
+            {
+                "id": "id-04-011",
+                "text": "Apakah saya kurang mengasihi dan kurang rela berkorban bagi keluarga saya?"
+            },
+            {
+                "id": "id-04-012",
+                "text": "Apakah saya mendukung kebijakan atau undang-undang yang merongrong keluarga, misalnya yang mengesampingkan persetujuan orang tua, atau yang mendukung bentuk keluarga yang tidak wajar seperti adopsi oleh pasangan sesama jenis atau orang tua tunggal, serta program pengendalian penduduk? Apakah saya mendukung kebijakan atau undang-undang yang merongrong kesejahteraan umum dan hukum moral?"
+            },
+            {
+                "id": "id-04-013",
+                "text": "Apakah saya mendorong orang lain untuk tidak menghormati otoritas yang sah?"
+            },
+            {
+                "id": "id-04-014",
+                "text": "Apakah saya menolak menerima nasihat atau teguran orang tua saya?"
+            },
+            {
+                "id": "id-04-015",
+                "text": "Apakah saya lalai menumbuhkan keterbukaan anak-anak saya terhadap panggilan hidup (perkawinan, tahbisan suci, hidup selibat yang dibaktikan, dan sebagainya)?"
+            },
+            {
+                "id": "id-04-016",
+                "text": "Apakah saya lalai memperjuangkan perlakuan yang adil bagi kaum miskin, papa, atau migran dalam masyarakat?"
+            },
+            {
+                "id": "id-04-017",
+                "text": "Apakah saya melakukan kekerasan terhadap orang lain?"
+            },
+            {
+                "id": "id-04-018",
+                "text": "Apakah saya merendahkan wibawa suami atau istri saya di depan anak-anak kami?"
+            },
+            {
+                "id": "id-04-019",
+                "text": "Apakah saya lalai mengawasi penggunaan internet dan teknologi oleh anak-anak saya demi menjaga kemurnian mereka?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "id-5",
+        "questions": [
+            {
+                "id": "id-05-001",
+                "text": "Apakah saya membunuh atau melukai seseorang secara tidak adil, baik secara langsung maupun karena kelalaian, atau ikut serta dalam perbuatan itu?"
+            },
+            {
+                "id": "id-05-002",
+                "text": "Apakah saya lalai menjunjung martabat dan kesucian hidup manusia?"
+            },
+            {
+                "id": "id-05-003",
+                "text": "Apakah saya mendukung perang, penyiksaan, penyanderaan, penculikan, atau pembunuhan manusia yang tak berdaya?"
+            },
+            {
+                "id": "id-05-004",
+                "text": "Apakah saya melakukan aborsi, menggunakan obat penggugur kandungan, atau membantu orang lain melakukannya?"
+            },
+            {
+                "id": "id-05-005",
+                "text": "Apakah saya mendukung atau secara terbuka memperjuangkan aborsi?"
+            },
+            {
+                "id": "id-05-006",
+                "text": "Apakah saya menjalani, ikut serta dalam, atau mendukung program bayi tabung (fertilisasi in vitro)?"
+            },
+            {
+                "id": "id-05-007",
+                "text": "Apakah saya mendukung kloning manusia atau rekayasa genetika manusia?"
+            },
+            {
+                "id": "id-05-008",
+                "text": "Apakah saya mendukung atau memanfaatkan penelitian maupun terapi sel punca embrionik?"
+            },
+            {
+                "id": "id-05-009",
+                "text": "Apakah saya mendukung eugenika atau undang-undang pengendalian penduduk?"
+            },
+            {
+                "id": "id-05-010",
+                "text": "Apakah saya enggan “memberikan pipi yang lain” atau enggan mengasihi musuh-musuh saya?"
+            },
+            {
+                "id": "id-05-011",
+                "text": "Apakah saya mencoba membunuh atau melukai diri sendiri, atau pernah memikirkannya?"
+            },
+            {
+                "id": "id-05-012",
+                "text": "Apakah saya mendukung eutanasia atau gerakan yang memperjuangkan hak untuk bunuh diri?"
+            },
+            {
+                "id": "id-05-013",
+                "text": "Apakah saya menolak atau lalai memberikan perawatan yang wajar pada akhir hidup seseorang, termasuk tindakan medis, makanan dan minuman, serta obat penghilang rasa sakit?"
+            },
+            {
+                "id": "id-05-014",
+                "text": "Apakah saya lalai memperhatikan kebutuhan rohani orang yang menjelang ajal (termasuk memanggil imam untuk memberikan pengurapan orang sakit, atau mendoakan orang itu)?"
+            },
+            {
+                "id": "id-05-015",
+                "text": "Apakah saya pernah berkeinginan membunuh seseorang?"
+            },
+            {
+                "id": "id-05-016",
+                "text": "Apakah saya menggunakan kekerasan melebihi yang diperlukan untuk membela diri?"
+            },
+            {
+                "id": "id-05-017",
+                "text": "Apakah saya lalai melindungi orang lain sebatas kemampuan dan kewajiban saya?"
+            },
+            {
+                "id": "id-05-018",
+                "text": "Apakah saya melukai seseorang secara fisik, emosional, atau psikologis, atau berkeinginan melakukannya?"
+            },
+            {
+                "id": "id-05-019",
+                "text": "Apakah saya memberi sandungan (skandal) atau menunjukkan sikap tidak peduli terhadap keselamatan jiwa seseorang?"
+            },
+            {
+                "id": "id-05-020",
+                "text": "Apakah saya membenci seseorang atau mengharapkan hal buruk menimpanya?"
+            },
+            {
+                "id": "id-05-021",
+                "text": "Apakah saya tidak menghormati orang yang telah meninggal atau jenazah mereka?"
+            },
+            {
+                "id": "id-05-022",
+                "text": "Apakah saya lalai mengusahakan pemakaman yang layak bagi orang yang meninggal?"
+            },
+            {
+                "id": "id-05-023",
+                "text": "Apakah saya menganjurkan hukuman yang tidak adil atau mendukung penggunaan hukuman mati, yang menurut ajaran Gereja tidak dapat diterima?"
+            },
+            {
+                "id": "id-05-024",
+                "text": "Apakah saya mendiskriminasi seseorang dengan menolak memberikan apa yang menjadi haknya secara adil dalam batas-batas hukum moral dan hukum kodrat?"
+            },
+            {
+                "id": "id-05-025",
+                "text": "Apakah saya mengejek, mengintimidasi, atau merendahkan seseorang?"
+            },
+            {
+                "id": "id-05-026",
+                "text": "Apakah saya bertindak sembrono terhadap nyawa manusia melalui perbuatan atau ketidakpedulian saya?"
+            },
+            {
+                "id": "id-05-027",
+                "text": "Apakah saya menyalahgunakan alkohol atau menggunakan narkoba?"
+            },
+            {
+                "id": "id-05-028",
+                "text": "Apakah saya kurang memperhatikan kesehatan diri sendiri atau kesehatan orang lain?"
+            },
+            {
+                "id": "id-05-029",
+                "text": "Apakah saya mendorong penggunaan alkohol, narkoba, atau hal berbahaya lainnya?"
+            },
+            {
+                "id": "id-05-030",
+                "text": "Apakah saya berdosa karena kerakusan atau mendorong orang lain melakukannya?"
+            },
+            {
+                "id": "id-05-031",
+                "text": "Apakah saya lalai mengusahakan perdamaian?"
+            },
+            {
+                "id": "id-05-032",
+                "text": "Apakah saya menimbulkan sandungan melalui tindakan atau kelalaian saya?"
+            },
+            {
+                "id": "id-05-033",
+                "text": "Apakah saya mendorong atau membantu orang lain untuk berbuat dosa?"
+            },
+            {
+                "id": "id-05-034",
+                "text": "Apakah saya membiarkan amarah menguasai diri saya atau terus berkobar tanpa kendali?"
+            },
+            {
+                "id": "id-05-035",
+                "text": "Apakah saya bersikap tidak murah hati kepada seseorang, bertengkar dengannya, atau menyimpan dendam?"
+            },
+            {
+                "id": "id-05-036",
+                "text": "Apakah saya menolak mengampuni seseorang yang telah meminta maaf kepada saya?"
+            },
+            {
+                "id": "id-05-037",
+                "text": "Apakah saya mencari atau memikirkan pembalasan dendam?"
+            },
+            {
+                "id": "id-05-038",
+                "text": "Apakah saya bergembira atas kemalangan orang lain?"
+            },
+            {
+                "id": "id-05-039",
+                "text": "Apakah saya menganiaya binatang atau membunuhnya tanpa perlu?"
+            },
+            {
+                "id": "id-05-040",
+                "text": "Apakah saya membahayakan nyawa sendiri atau orang lain dengan mengemudi secara ugal-ugalan atau menggunakan telepon sambil mengemudi?"
+            },
+            {
+                "id": "id-05-041",
+                "text": "Apakah saya mengejek atau menertawakan orang lain karena keterbatasan fisik atau mental mereka?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "id-6",
+        "questions": [
+            {
+                "id": "id-06-001",
+                "text": "Apakah saya lalai menghayati dan memperjuangkan kemurnian?"
+            },
+            {
+                "id": "id-06-002",
+                "text": "Apakah saya mencari kenikmatan seksual di luar hubungan suami istri?"
+            },
+            {
+                "id": "id-06-003",
+                "text": "Apakah saya menggunakan alat kontrasepsi buatan atau menganjurkan penggunaannya?"
+            },
+            {
+                "id": "id-06-004",
+                "text": "Apakah saya menolak anak dan anugerah kehidupan tanpa alasan yang wajar?"
+            },
+            {
+                "id": "id-06-005",
+                "text": "Apakah saya hidup serumah dengan kekasih sebelum menikah (hidup bersama tanpa menikah)?"
+            },
+            {
+                "id": "id-06-006",
+                "text": "Apakah saya memupuk kedekatan romantis atau emosional yang tidak pantas dengan orang lain selain suami atau istri saya?"
+            },
+            {
+                "id": "id-06-007",
+                "text": "Apakah saya mengikuti program bayi tabung atau pengobatan kesuburan yang tidak bermoral (pengobatan yang tidak mengusahakan keturunan melalui hubungan suami istri), atau mendorong orang lain melakukannya?"
+            },
+            {
+                "id": "id-06-008",
+                "text": "Apakah saya menjalani sterilisasi organ reproduksi saya atau mendorong orang lain melakukannya?"
+            },
+            {
+                "id": "id-06-009",
+                "text": "Apakah saya memaksakan hubungan seksual kepada seseorang (termasuk kepada suami atau istri sendiri)?"
+            },
+            {
+                "id": "id-06-010",
+                "text": "Apakah saya menolak berhubungan suami istri dengan pasangan saya tanpa alasan yang wajar?"
+            },
+            {
+                "id": "id-06-011",
+                "text": "Apakah saya melakukan masturbasi (mencari kenikmatan seksual seorang diri di luar hubungan suami istri)?"
+            },
+            {
+                "id": "id-06-012",
+                "text": "Apakah saya dengan sengaja mencari atau menyebabkan klimaks seksual di luar persetubuhan suami istri?"
+            },
+            {
+                "id": "id-06-013",
+                "text": "Apakah saya memberikan atau mendukung pendidikan seksual yang tidak sesuai dengan ajaran Gereja Katolik?"
+            },
+            {
+                "id": "id-06-014",
+                "text": "Apakah saya menggunakan atau menyebarkan pornografi, baik berupa foto, video, audio, maupun tulisan?"
+            },
+            {
+                "id": "id-06-015",
+                "text": "Apakah saya mendonorkan sperma atau sel telur?"
+            },
+            {
+                "id": "id-06-016",
+                "text": "Apakah saya menikmati film, tayangan televisi, musik, percakapan, atau lelucon yang cabul (mengandung ketelanjangan atau seks)?"
+            },
+            {
+                "id": "id-06-017",
+                "text": "Apakah saya berzina (melakukan tindakan seksual dengan suami atau istri orang lain, atau dengan orang yang bukan pasangan saya padahal saya sudah menikah)?"
+            },
+            {
+                "id": "id-06-018",
+                "text": "Apakah saya, tanpa alasan yang berat, menceraikan suami atau istri saya atau memikirkan perceraian, padahal perkawinan saya sah?"
+            },
+            {
+                "id": "id-06-019",
+                "text": "Apakah saya menikah tanpa pemberkatan Gereja?"
+            },
+            {
+                "id": "id-06-020",
+                "text": "Apakah saya melakukan inses (hubungan seksual dengan kerabat sedarah)?"
+            },
+            {
+                "id": "id-06-021",
+                "text": "Apakah saya mempraktikkan poligami atau poliandri?"
+            },
+            {
+                "id": "id-06-022",
+                "text": "Apakah saya terlibat dalam “perkawinan terbuka”?"
+            },
+            {
+                "id": "id-06-023",
+                "text": "Apakah saya berhubungan seksual di luar ikatan perkawinan (percabulan, tindakan homoseksual)?"
+            },
+            {
+                "id": "id-06-024",
+                "text": "Apakah saya melakukan pemerkosaan?"
+            },
+            {
+                "id": "id-06-025",
+                "text": "Apakah saya bercumbu, mengirim pesan bermuatan seksual (sexting), atau melakukan bentuk pemanasan seksual lainnya di luar perkawinan?"
+            },
+            {
+                "id": "id-06-026",
+                "text": "Apakah saya melecehkan anak-anak secara seksual?"
+            },
+            {
+                "id": "id-06-027",
+                "text": "Apakah saya melakukan aktivitas seksual yang tidak wajar (dengan binatang, dengan benda, dan sebagainya)?"
+            },
+            {
+                "id": "id-06-028",
+                "text": "Apakah saya terlibat dalam atau mendukung prostitusi?"
+            },
+            {
+                "id": "id-06-029",
+                "text": "Apakah saya menggoda seseorang atau membiarkan diri saya tergoda?"
+            },
+            {
+                "id": "id-06-030",
+                "text": "Apakah saya menolak menerima identitas seksual yang dianugerahkan Allah kepada saya (operasi ganti kelamin, berpakaian seperti lawan jenis, dan sebagainya)?"
+            },
+            {
+                "id": "id-06-031",
+                "text": "Apakah saya mendukung, memajukan, atau bekerja sama dalam dosa-dosa melawan perintah keenam?"
+            },
+            {
+                "id": "id-06-032",
+                "text": "Apakah saya menjalin hubungan daring yang tidak pantas atau melakukan seks siber?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "id-7",
+        "questions": [
+            {
+                "id": "id-07-001",
+                "text": "Apakah saya mencuri sesuatu?"
+            },
+            {
+                "id": "id-07-002",
+                "text": "Apakah saya berjudi secara berlebihan?"
+            },
+            {
+                "id": "id-07-003",
+                "text": "Apakah saya melakukan penipuan (mengajukan klaim palsu kepada perusahaan asuransi, memalsukan data demi keuntungan finansial)?"
+            },
+            {
+                "id": "id-07-004",
+                "text": "Apakah saya enggan bermurah hati dengan harta saya kepada mereka yang membutuhkan?"
+            },
+            {
+                "id": "id-07-005",
+                "text": "Apakah saya memboroskan uang untuk hal-hal yang tidak perlu sementara mengabaikan kebutuhan kaum miskin?"
+            },
+            {
+                "id": "id-07-006",
+                "text": "Apakah saya lalai menjalankan karya belas kasih jasmani?"
+            },
+            {
+                "id": "id-07-007",
+                "text": "Apakah saya merusak atau mencoret-coret milik orang lain?"
+            },
+            {
+                "id": "id-07-008",
+                "text": "Apakah saya berbuat curang?"
+            },
+            {
+                "id": "id-07-009",
+                "text": "Apakah saya lalai membayar upah yang adil kepada para pekerja saya untuk kerja yang jujur?"
+            },
+            {
+                "id": "id-07-010",
+                "text": "Apakah saya menghalangi seseorang mendapatkan pekerjaan (mendiskriminasi secara tidak adil, atau menyabotase peluang kerja seseorang)?"
+            },
+            {
+                "id": "id-07-011",
+                "text": "Apakah saya mendukung praktik-praktik yang menjurus pada perbudakan orang lain (pabrik pemeras tenaga kerja, perdagangan manusia, atau perbudakan itu sendiri)?"
+            },
+            {
+                "id": "id-07-012",
+                "text": "Apakah saya mengingkari kontrak dengan tidak memenuhi kewajiban saya?"
+            },
+            {
+                "id": "id-07-013",
+                "text": "Apakah saya ikut serta dalam atau mendukung pemogokan atau penutupan tempat kerja yang tidak adil?"
+            },
+            {
+                "id": "id-07-014",
+                "text": "Apakah saya menumpuk utang secara berlebihan dan/atau tidak melunasinya?"
+            },
+            {
+                "id": "id-07-015",
+                "text": "Apakah saya mempraktikkan riba (membebankan bunga yang berlebihan)?"
+            },
+            {
+                "id": "id-07-016",
+                "text": "Apakah saya menetapkan harga terlalu tinggi atau memanfaatkan seseorang dalam jual beli?"
+            },
+            {
+                "id": "id-07-017",
+                "text": "Apakah saya mengajukan atau mendukung gugatan hukum yang tidak adil terhadap seseorang?"
+            },
+            {
+                "id": "id-07-018",
+                "text": "Apakah saya lalai memberikan ganti rugi atas pencurian, penipuan, atau pelanggaran lain terhadap perintah ketujuh?"
+            },
+            {
+                "id": "id-07-019",
+                "text": "Apakah saya bersikap acuh tak acuh terhadap lingkungan hidup?"
+            },
+            {
+                "id": "id-07-020",
+                "text": "Apakah saya tidak menghormati hak milik pribadi atau melanggar ajaran Gereja tentang subsidiaritas dengan mendukung sosialisme yang berlebihan atau penguasaan sumber daya secara berlebihan oleh negara?"
+            },
+            {
+                "id": "id-07-021",
+                "text": "Apakah saya lalai bekerja dengan tekun dan memberikan hasil kerja yang jujur kepada pemberi kerja saya?"
+            },
+            {
+                "id": "id-07-022",
+                "text": "Apakah saya membenci pekerjaan atau jatuh dalam kemalasan?"
+            },
+            {
+                "id": "id-07-023",
+                "text": "Apakah saya tidak bekerja sebagaimana mestinya demi keluarga saya?"
+            },
+            {
+                "id": "id-07-024",
+                "text": "Apakah saya menahan atau menunda upah yang menjadi hak para pekerja?"
+            },
+            {
+                "id": "id-07-025",
+                "text": "Apakah saya mencoba berspekulasi dan menaikkan harga barang atau jasa?"
+            },
+            {
+                "id": "id-07-026",
+                "text": "Apakah saya melanggar hak cipta dengan membajak perangkat lunak, musik, atau film?"
+            },
+            {
+                "id": "id-07-027",
+                "text": "Apakah saya menyia-nyiakan waktu milik pemberi kerja saya dengan penggunaan internet atau media sosial secara berlebihan selama jam kerja?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "id-8",
+        "questions": [
+            {
+                "id": "id-08-001",
+                "text": "Apakah saya berbohong atau dengan sengaja menipu seseorang?"
+            },
+            {
+                "id": "id-08-002",
+                "text": "Apakah saya bergunjing?"
+            },
+            {
+                "id": "id-08-003",
+                "text": "Apakah saya berbohong di bawah sumpah (sumpah palsu)?"
+            },
+            {
+                "id": "id-08-004",
+                "text": "Apakah saya berprasangka buruk terhadap seseorang atau menghakiminya secara tidak adil?"
+            },
+            {
+                "id": "id-08-005",
+                "text": "Apakah saya merusak nama baik seseorang melalui detraksi (menceritakan kesalahan seseorang kepada orang lain tanpa alasan yang berat), fitnah (mengatakan hal-hal bohong tentang seseorang), atau pencemaran nama baik secara tertulis (menuliskan kebohongan tentang seseorang)?"
+            },
+            {
+                "id": "id-08-006",
+                "text": "Apakah saya terobsesi mencari validasi dari orang lain di dunia maya atau membangun citra diri yang palsu?"
+            },
+            {
+                "id": "id-08-007",
+                "text": "Apakah saya lalai membela nama baik seseorang?"
+            },
+            {
+                "id": "id-08-008",
+                "text": "Apakah saya tidak menjaga rahasia atau mengkhianati kepercayaan seseorang?"
+            },
+            {
+                "id": "id-08-009",
+                "text": "Apakah saya berdiam diri atau ikut terlibat ketika nama baik Gereja Katolik dicemarkan?"
+            },
+            {
+                "id": "id-08-010",
+                "text": "Apakah saya tidak bersikap tulus atau terus terang ketika seharusnya demikian?"
+            },
+            {
+                "id": "id-08-011",
+                "text": "Apakah saya menjalani hidup bermuka dua?"
+            },
+            {
+                "id": "id-08-012",
+                "text": "Apakah saya bersikap munafik?"
+            },
+            {
+                "id": "id-08-013",
+                "text": "Apakah saya memaksa orang lain untuk berbohong?"
+            },
+            {
+                "id": "id-08-014",
+                "text": "Apakah saya menghalangi orang lain mengatakan kebenaran?"
+            },
+            {
+                "id": "id-08-015",
+                "text": "Apakah saya menjilat atau memuji-muji orang secara berlebihan demi kepentingan diri?"
+            },
+            {
+                "id": "id-08-016",
+                "text": "Apakah saya menyombongkan diri atau bersikap angkuh?"
+            },
+            {
+                "id": "id-08-017",
+                "text": "Apakah saya memutarbalikkan sesuatu, membesar-besarkan secara berlebihan, memutarbalikkan pendapat orang lain agar mudah diserang (argumen palsu), atau menyerang pribadi orang alih-alih argumen atau pandangannya (ad hominem)?"
+            },
+            {
+                "id": "id-08-018",
+                "text": "Apakah saya lalai memulihkan nama baik seseorang setelah saya menyebarkan kebohongan tentangnya?"
+            },
+            {
+                "id": "id-08-019",
+                "text": "Apakah saya membeberkan kebenaran kepada orang yang tidak berhak mengetahuinya (misalnya kepada penyerang yang tidak adil)?"
+            },
+            {
+                "id": "id-08-020",
+                "text": "Apakah saya melanggar rahasia pengakuan dosa dengan menceritakan isi pengakuan orang lain kepada pihak lain?"
+            },
+            {
+                "id": "id-08-021",
+                "text": "Apakah saya membocorkan rahasia profesi tanpa alasan yang berat?"
+            },
+            {
+                "id": "id-08-022",
+                "text": "Apakah saya menerima begitu saja perkataan orang lain sebagai kebenaran tanpa memeriksanya dengan saksama (terutama dalam hal iman dan moral, atau ketika nama baik orang lain dipertaruhkan)?"
+            },
+            {
+                "id": "id-08-023",
+                "text": "Apakah saya menyebarkan informasi publik yang menyesatkan (propaganda)?"
+            },
+            {
+                "id": "id-08-024",
+                "text": "Apakah saya membagikan informasi yang belum terverifikasi atau palsu (hoaks) di media sosial?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "id-9",
+        "questions": [
+            {
+                "id": "id-09-001",
+                "text": "Apakah saya menyerah pada konkupisensi (hasrat seksual yang menggebu-gebu)?"
+            },
+            {
+                "id": "id-09-002",
+                "text": "Apakah saya menyerah pada hawa nafsu (keinginan yang tidak teratur untuk menikmati kenikmatan seksual secara berlebihan)?"
+            },
+            {
+                "id": "id-09-003",
+                "text": "Apakah saya melontarkan komentar atau rayuan yang bernada seksual atau melecehkan kepada seseorang?"
+            },
+            {
+                "id": "id-09-004",
+                "text": "Apakah saya tidak berpakaian sopan, atau tidak memalingkan mata ketika orang lain berpakaian tidak sopan?"
+            },
+            {
+                "id": "id-09-005",
+                "text": "Apakah saya melanggar privasi seseorang dengan memata-matainya?"
+            },
+            {
+                "id": "id-09-006",
+                "text": "Apakah saya memelihara atau dengan sukarela menikmati pikiran-pikiran cabul?"
+            },
+            {
+                "id": "id-09-007",
+                "text": "Apakah saya mendukung pergaulan bebas, permisivisme moral, atau sikap yang tidak bermoral dalam hal seksualitas, kesopanan berbusana, dan kemurnian?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "id-10",
+        "questions": [
+            {
+                "id": "id-10-001",
+                "text": "Apakah saya iri hati kepada orang lain karena harta miliknya?"
+            },
+            {
+                "id": "id-10-002",
+                "text": "Apakah saya serakah?"
+            },
+            {
+                "id": "id-10-003",
+                "text": "Apakah saya menginginkan milik orang lain?"
+            },
+            {
+                "id": "id-10-004",
+                "text": "Apakah saya tidak hidup sederhana dan malah menyerah pada materialisme?"
+            },
+            {
+                "id": "id-10-005",
+                "text": "Apakah saya tidak ikut bersukacita atas keberhasilan orang lain?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "id-11",
+        "questions": [
+            {
+                "id": "id-11-001",
+                "text": "Apakah saya tidak menghadiri Misa Kudus pada hari Minggu atau hari raya wajib?"
+            },
+            {
+                "id": "id-11-002",
+                "text": "Apakah saya tidak mengkhususkan hari Minggu dan hari raya wajib sebagai hari istirahat?"
+            },
+            {
+                "id": "id-11-003",
+                "text": "Apakah saya lalai mengaku dosa sekurang-kurangnya sekali setahun?"
+            },
+            {
+                "id": "id-11-004",
+                "text": "Apakah saya melakukan pengakuan dosa yang tidak jujur atau dengan sengaja tidak lengkap?"
+            },
+            {
+                "id": "id-11-005",
+                "text": "Apakah saya lalai mempersiapkan jiwa saya dengan pantas untuk menyambut Komuni Kudus?"
+            },
+            {
+                "id": "id-11-006",
+                "text": "Apakah saya lalai melaksanakan penitensi yang diberikan dalam pengakuan dosa saya?"
+            },
+            {
+                "id": "id-11-007",
+                "text": "Apakah saya lalai melakukan silih atas kerugian yang disebabkan oleh dosa-dosa saya?"
+            },
+            {
+                "id": "id-11-008",
+                "text": "Apakah saya lalai melakukan pemeriksaan batin secara saksama sebelum mengaku dosa, atau tidak dengan jujur berusaha mengingat semua dosa saya?"
+            },
+            {
+                "id": "id-11-009",
+                "text": "Apakah saya mengaku dosa tanpa niat yang teguh untuk memperbaiki hidup atau tanpa penyesalan atas dosa-dosa saya?"
+            },
+            {
+                "id": "id-11-010",
+                "text": "Apakah saya lalai menyambut Komuni Kudus sekurang-kurangnya sekali dalam masa Paskah (antara Malam Paskah dan Hari Raya Pentakosta)?"
+            },
+            {
+                "id": "id-11-011",
+                "text": "Apakah saya menyambut komuni ketika tidak dalam keadaan rahmat (dengan dosa berat dalam jiwa saya)?"
+            },
+            {
+                "id": "id-11-012",
+                "text": "Apakah saya lalai menaati puasa Ekaristi sebelum menyambut Komuni Kudus?"
+            },
+            {
+                "id": "id-11-013",
+                "text": "Apakah saya makan daging pada hari Jumat dalam masa Prapaskah?"
+            },
+            {
+                "id": "id-11-014",
+                "text": "Apakah saya tidak menaati peraturan puasa pada hari Rabu Abu dan Jumat Agung?"
+            },
+            {
+                "id": "id-11-015",
+                "text": "Apakah saya lalai menghayati semangat peraturan puasa dan pantang?"
+            },
+            {
+                "id": "id-11-016",
+                "text": "Apakah saya lalai berpantang daging pada semua hari Jumat sepanjang tahun, atau tidak mengikuti pedoman para uskup di wilayah saya (misalnya melakukan suatu laku tobat lain sebagai ganti pantang daging, sebagaimana berlaku di banyak wilayah Amerika Serikat)?"
+            },
+            {
+                "id": "id-11-017",
+                "text": "Apakah saya lalai melakukan karya belas kasih rohani dan jasmani, atau tidak mengamalkan penyangkalan diri?"
+            },
+            {
+                "id": "id-11-018",
+                "text": "Apakah saya lalai memberikan sumbangan untuk Gereja secara teratur?"
+            },
+            {
+                "id": "id-11-019",
+                "text": "Apakah saya lalai memberi dalam jumlah yang sesuai dengan keadaan saya?"
+            },
+            {
+                "id": "id-11-020",
+                "text": "Apakah saya lalai menyumbangkan waktu untuk melayani Gereja sesuai dengan keadaan saya?"
+            },
+            {
+                "id": "id-11-021",
+                "text": "Apakah saya lalai berdoa bagi perkembangan Gereja?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "id-12",
+        "questions": [
+            {
+                "id": "id-12-001",
+                "text": "Apakah saya berdosa karena kesombongan?"
+            },
+            {
+                "id": "id-12-002",
+                "text": "Apakah saya berdosa karena keserakahan (ketamakan)?"
+            },
+            {
+                "id": "id-12-003",
+                "text": "Apakah saya berdosa karena hawa nafsu?"
+            },
+            {
+                "id": "id-12-004",
+                "text": "Apakah saya berdosa karena iri hati?"
+            },
+            {
+                "id": "id-12-005",
+                "text": "Apakah saya berdosa karena kerakusan?"
+            },
+            {
+                "id": "id-12-006",
+                "text": "Apakah saya berdosa karena kemurkaan (amarah)?"
+            },
+            {
+                "id": "id-12-007",
+                "text": "Apakah saya berdosa karena kemalasan?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "id-13",
+        "questions": [
+            {
+                "id": "id-13-001",
+                "text": "Apakah saya berbuat dosa sambil berharap Allah akan mengampuni saya tanpa pertobatan yang sejati (presumsi)?"
+            },
+            {
+                "id": "id-13-002",
+                "text": "Apakah saya putus asa akan keselamatan?"
+            },
+            {
+                "id": "id-13-003",
+                "text": "Apakah saya melawan atau menyerang kebenaran yang saya tahu diajarkan oleh Gereja Katolik?"
+            },
+            {
+                "id": "id-13-004",
+                "text": "Apakah saya iri hati atas kebaikan rohani orang lain?"
+            },
+            {
+                "id": "id-13-005",
+                "text": "Apakah saya dengan keras kepala bertahan dalam keadaan dosa?"
+            },
+            {
+                "id": "id-13-006",
+                "text": "Apakah saya terus-menerus menolak untuk bertobat?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "id-14",
+        "questions": [
+            {
+                "id": "id-14-001",
+                "text": "Apakah saya melakukan pembunuhan yang disengaja?"
+            },
+            {
+                "id": "id-14-002",
+                "text": "Apakah saya melakukan dosa Sodom (perbuatan seksual yang tidak wajar)?"
+            },
+            {
+                "id": "id-14-003",
+                "text": "Apakah saya menindas kaum miskin?"
+            },
+            {
+                "id": "id-14-004",
+                "text": "Apakah saya menipu para pekerja dengan menahan upah mereka?"
+            }
+        ]
+    }
+]

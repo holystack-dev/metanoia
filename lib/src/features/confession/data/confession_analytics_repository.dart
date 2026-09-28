@@ -1,6 +1,8 @@
 import 'package:confessionapp/src/core/database/app_database.dart';
 import 'package:confessionapp/src/core/database/database_provider.dart';
+import 'package:confessionapp/src/core/utils/date_utils.dart';
 import 'package:drift/drift.dart';
+import 'package:intl/intl.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -11,11 +13,14 @@ ConfessionAnalyticsRepository confessionAnalyticsRepository(Ref ref) {
   return ConfessionAnalyticsRepository(ref.watch(appDatabaseProvider));
 }
 
-/// Provider for confession analytics data
+/// Provider for confession analytics data.
+///
+/// A Drift stream: it recomputes whenever a confession or one of its items
+/// changes, so Insights and the home stats can never drift out of sync with
+/// the history screen.
 @riverpod
-Future<ConfessionAnalytics> confessionAnalytics(Ref ref) async {
-  final repo = ref.watch(confessionAnalyticsRepositoryProvider);
-  return repo.getAnalytics();
+Stream<ConfessionAnalytics> confessionAnalytics(Ref ref) {
+  return ref.watch(confessionAnalyticsRepositoryProvider).watchAnalytics();
 }
 
 class ConfessionAnalyticsRepository {
@@ -23,16 +28,48 @@ class ConfessionAnalyticsRepository {
 
   ConfessionAnalyticsRepository(this._db);
 
+  /// Built once so the same instance is used to select and to read the column.
+  late final Expression<int> _itemCount = _db.confessionItems.id.count();
+
+  /// Every finished confession with the number of items it holds.
+  ///
+  /// A single grouped join rather than a query per confession.
+  JoinedSelectStatement _analyticsQuery() {
+    return _db.select(_db.confessions).join([
+      leftOuterJoin(
+        _db.confessionItems,
+        _db.confessionItems.confessionId.equalsExp(_db.confessions.id),
+      ),
+    ])
+      ..addColumns([_itemCount])
+      ..where(_db.confessions.isFinished.equals(true))
+      ..groupBy([_db.confessions.id])
+      ..orderBy([OrderingTerm.asc(_db.confessions.date)]);
+  }
+
   /// Get comprehensive analytics data
   Future<ConfessionAnalytics> getAnalytics() async {
-    final confessions = await (_db.select(_db.confessions)
-          ..where((t) => t.isFinished.equals(true))
-          ..orderBy([(t) => OrderingTerm.asc(t.date)]))
-        .get();
+    return _buildAnalytics(await _analyticsQuery().get());
+  }
 
-    if (confessions.isEmpty) {
+  /// Watch comprehensive analytics data
+  Stream<ConfessionAnalytics> watchAnalytics() {
+    return _analyticsQuery().watch().map(_buildAnalytics);
+  }
+
+  ConfessionAnalytics _buildAnalytics(List<TypedResult> rows) {
+    if (rows.isEmpty) {
       return ConfessionAnalytics.empty();
     }
+
+    // Ordered by date ascending by the query above.
+    final confessions = [
+      for (final row in rows) row.readTable(_db.confessions),
+    ];
+    final totalItemsConfessed = rows.fold<int>(
+      0,
+      (sum, row) => sum + (row.read(_itemCount) ?? 0),
+    );
 
     // Calculate statistics
     final totalConfessions = confessions.length;
@@ -46,24 +83,15 @@ class ConfessionAnalyticsRepository {
       averageDaysBetween = totalDays / (confessions.length - 1);
     }
 
-    // Days since last confession
-    final daysSinceLastConfession =
-        DateTime.now().difference(lastConfession).inDays;
+    // Counted in calendar days: elapsed hours would report yesterday evening
+    // as "today".
+    final daysSinceLastConfession = calendarDaysSince(lastConfession);
 
     // Monthly frequency for the last 12 months
     final monthlyData = _calculateMonthlyFrequency(confessions);
 
     // Streak calculation (consecutive weeks/months with confession)
     final currentStreak = _calculateCurrentStreak(confessions);
-
-    // Get total items confessed
-    int totalItemsConfessed = 0;
-    for (final confession in confessions) {
-      final items = await (_db.select(_db.confessionItems)
-            ..where((t) => t.confessionId.equals(confession.id)))
-          .get();
-      totalItemsConfessed += items.length;
-    }
 
     return ConfessionAnalytics(
       totalConfessions: totalConfessions,
@@ -87,9 +115,10 @@ class ConfessionAnalyticsRepository {
       final month = DateTime(now.year, now.month - i, 1);
       final nextMonth = DateTime(now.year, now.month - i + 1, 1);
 
+      // Half-open [month, nextMonth), so each confession lands in exactly one
+      // bucket.
       final count = confessions.where((c) {
-        return c.date.isAfter(month.subtract(const Duration(days: 1))) &&
-            c.date.isBefore(nextMonth);
+        return !c.date.isBefore(month) && c.date.isBefore(nextMonth);
       }).length;
 
       result.add(MonthlyConfessionData(
@@ -176,11 +205,14 @@ class MonthlyConfessionData {
 
   MonthlyConfessionData({required this.month, required this.count});
 
-  String get monthLabel {
-    const months = [
-      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-      'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
-    ];
-    return months[month.month - 1];
+  /// Abbreviated month name in [locale].
+  String monthLabel(String locale) {
+    try {
+      return DateFormat.MMM(locale).format(month);
+    } catch (_) {
+      // The locale's date symbols are missing or it is not one intl knows.
+      // A chart axis label is not worth throwing over.
+      return DateFormat.MMM().format(month);
+    }
   }
 }

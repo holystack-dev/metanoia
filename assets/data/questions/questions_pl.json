@@ -1,0 +1,1044 @@
+[
+    {
+        "commandmentCode": "pl-1",
+        "questions": [
+            {
+                "id": "pl-01-001",
+                "text": "Czy odrzuciłem wiarę w Boga (ateizm)?"
+            },
+            {
+                "id": "pl-01-002",
+                "text": "Czy wątpiłem w istnienie Boga?"
+            },
+            {
+                "id": "pl-01-003",
+                "text": "Czy żywiłem nienawiść do Boga lub obwiniałem Go za trudności w moim życiu?"
+            },
+            {
+                "id": "pl-01-004",
+                "text": "Czy odrzucałem którykolwiek z dogmatów Kościoła katolickiego?"
+            },
+            {
+                "id": "pl-01-005",
+                "text": "Czy świadomie doprowadzałem innych do zwątpienia w Boga lub w prawdy wiary?"
+            },
+            {
+                "id": "pl-01-006",
+                "text": "Czy zaniedbałem pogłębianie swojej wiary i jej obronę?"
+            },
+            {
+                "id": "pl-01-007",
+                "text": "Czy zaniedbałem gorliwe przekazywanie wiary swoim dzieciom i rodzinie?"
+            },
+            {
+                "id": "pl-01-008",
+                "text": "Czy uchylałem się od obrony Boga i mojej wiary, gdy inni wysuwali wobec nich zarzuty?"
+            },
+            {
+                "id": "pl-01-009",
+                "text": "Czy wyparłem się przed innymi wiary lub jej prawd?"
+            },
+            {
+                "id": "pl-01-010",
+                "text": "Czy odszedłem z Kościoła katolickiego lub praktykowałem inną religię?"
+            },
+            {
+                "id": "pl-01-011",
+                "text": "Czy wstąpiłem do organizacji szkodliwej dla mojej wiary lub jej wrogiej (komuniści, masoneria, grupy dysydenckie lub schizmatyckie albo jakakolwiek wspólnota wymagająca od swoich członków przysięgi stawianej ponad obowiązki wobec Kościoła katolickiego)?"
+            },
+            {
+                "id": "pl-01-012",
+                "text": "Czy popadłem w rozpacz, zwątpiwszy w Boga lub w Jego przebaczenie?"
+            },
+            {
+                "id": "pl-01-013",
+                "text": "Czy zuchwale liczyłem na miłosierdzie Boże, świadomie popełniając grzech w przekonaniu, że i tak zostanie mi przebaczony, i unikając w ten sposób prawdziwego nawrócenia serca?"
+            },
+            {
+                "id": "pl-01-014",
+                "text": "Czy zuchwale ufałem, że sam, bez pomocy Boga, zdołam zbawić swoją duszę?"
+            },
+            {
+                "id": "pl-01-015",
+                "text": "Czy spowiadałem się z grzechów bez zamiaru poprawy życia?"
+            },
+            {
+                "id": "pl-01-016",
+                "text": "Czy dopuściłem się bałwochwalstwa? Czy stawiałem sprawy doczesne — pieniądze, władzę, sukces, przyjaźnie, państwo, naród, rasę lub majątek — ponad moją więź z Bogiem? Czy uczestniczyłem w niechrześcijańskich praktykach duchowych sprzecznych z wiarą?"
+            },
+            {
+                "id": "pl-01-017",
+                "text": "Czy zajmowałem się okultyzmem (wicca, satanizm, przyzywanie demonów, tabliczka ouija, czarna magia, zaprzedanie duszy, seanse spirytystyczne, wywoływanie duchów, szamanizm, radzenie się mediów, reiki, wróżbiarstwo, noszenie amuletów, horoskopy, astrologia, wróżenie z ręki, jasnowidztwo, rzucanie losów, stawianie kart)?"
+            },
+            {
+                "id": "pl-01-018",
+                "text": "Czy byłem zabobonny? Czy przypisywałem nadprzyrodzoną moc czemuś innemu niż Bóg?"
+            },
+            {
+                "id": "pl-01-019",
+                "text": "Czy pozwoliłem, aby media społecznościowe, gry komputerowe lub internet stały się moim bożkiem, pochłaniając czas należny Bogu i rodzinie?"
+            },
+            {
+                "id": "pl-01-020",
+                "text": "Czy szukałem poczucia własnej wartości w uznaniu w internecie zamiast w mojej tożsamości dziecka Bożego?"
+            },
+            {
+                "id": "pl-01-021",
+                "text": "Czy spędzałem przed ekranem zbyt wiele czasu ze szkodą dla codziennych obowiązków lub życia modlitwy?"
+            },
+            {
+                "id": "pl-01-022",
+                "text": "Czy oddawałem cześć wielu bogom (politeizm)?"
+            },
+            {
+                "id": "pl-01-023",
+                "text": "Czy byłem obojętny wobec wiary lub Boga?"
+            },
+            {
+                "id": "pl-01-024",
+                "text": "Czy byłem niewdzięczny za liczne łaski, którymi Bóg mnie obdarzył?"
+            },
+            {
+                "id": "pl-01-025",
+                "text": "Czy byłem letni w wierze?"
+            },
+            {
+                "id": "pl-01-026",
+                "text": "Czy byłem leniwy w sprawach wiary i rozwoju duchowego?"
+            },
+            {
+                "id": "pl-01-027",
+                "text": "Czy zaniedbywałem modlitwę?"
+            },
+            {
+                "id": "pl-01-028",
+                "text": "Czy porzuciłem obietnice lub śluby złożone Bogu?"
+            },
+            {
+                "id": "pl-01-029",
+                "text": "Czy ograniczałem czyjąś wolność religijną lub przyczyniałem się do jej ograniczania? Czy wyśmiewałem kogoś z powodu jego wiary w Boga? Czy zmuszałem innych do postępowania wbrew zasadom ich wiary lub sumienia?"
+            },
+            {
+                "id": "pl-01-030",
+                "text": "Czy kusiłem Boga, wystawiając słowem lub czynem na próbę Jego dobroć i wszechmoc?"
+            },
+            {
+                "id": "pl-01-031",
+                "text": "Czy popełniłem grzech świętokradztwa? Czy przyjąłem któryś z sakramentów bez należytego usposobienia duszy (np. przystąpiłem do Komunii Świętej lub bierzmowania, zawarłem małżeństwo albo przyjąłem święcenia, mając na duszy grzech ciężki)? Czy odnosiłem się z należnym szacunkiem do osób duchownych i konsekrowanych — kapłanów, sióstr zakonnych, biskupów, papieża — do miejsc świętych, takich jak kościoły, kaplice i sanktuaria, oraz do rzeczy poświęconych i świętych, takich jak różańce, relikwie i Pismo Święte? Czy skłamałem co do swoich grzechów albo umyślnie zataiłem jakiś grzech ciężki podczas spowiedzi świętej?"
+            },
+            {
+                "id": "pl-01-032",
+                "text": "Czy dopuściłem się symonii, kupując lub sprzedając rzeczy duchowe?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pl-2",
+        "questions": [
+            {
+                "id": "pl-02-001",
+                "text": "Czy wymawiałem imię Boże bez szacunku, lekkomyślnie lub bluźnierczo?"
+            },
+            {
+                "id": "pl-02-002",
+                "text": "Czy mówiłem o wierze albo o osobach, miejscach i rzeczach świętych bez szacunku, z nienawiścią, przekorą lub lekceważeniem?"
+            },
+            {
+                "id": "pl-02-003",
+                "text": "Czy szerzyłem lub pochwalałem mowę pozbawioną szacunku, nienawistną, przekorną lub lekceważącą wobec wiary albo osób, miejsc i rzeczy świętych?"
+            },
+            {
+                "id": "pl-02-004",
+                "text": "Czy oglądałem filmy lub słuchałem muzyki o treści bluźnierczej albo znieważającej świętość?"
+            },
+            {
+                "id": "pl-02-005",
+                "text": "Czy używałem wulgarnego lub nieprzyzwoitego języka?"
+            },
+            {
+                "id": "pl-02-006",
+                "text": "Czy mówiłem o innych ludziach bez szacunku?"
+            },
+            {
+                "id": "pl-02-007",
+                "text": "Czy kłamałem pod przysięgą (krzywoprzysięstwo)?"
+            },
+            {
+                "id": "pl-02-008",
+                "text": "Czy przysięgałem lub obiecywałem w imię Boże rzeczy nieprawdziwe albo błahe, nawet jeśli były prawdziwe?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pl-3",
+        "questions": [
+            {
+                "id": "pl-03-001",
+                "text": "Czy bez poważnej przyczyny opuściłem Mszę świętą w niedzielę lub święto nakazane?"
+            },
+            {
+                "id": "pl-03-002",
+                "text": "Czy bez poważnej przyczyny nie zadbałem o to, aby moje dzieci uczestniczyły we Mszy świętej w niedziele i święta nakazane?"
+            },
+            {
+                "id": "pl-03-003",
+                "text": "Czy bez poważnej przyczyny przychodziłem na Mszę świętą spóźniony lub wychodziłem przed jej zakończeniem?"
+            },
+            {
+                "id": "pl-03-004",
+                "text": "Czy bez poważnej przyczyny wykonywałem pracę w niedziele lub inne święta nakazane?"
+            },
+            {
+                "id": "pl-03-005",
+                "text": "Czy odmówiłem pomocy innym w dotarciu na Mszę świętą w niedziele i święta nakazane?"
+            },
+            {
+                "id": "pl-03-006",
+                "text": "Czy w niedziele i święta nakazane robiłem zakupy lub korzystałem ze zbędnych usług?"
+            },
+            {
+                "id": "pl-03-007",
+                "text": "Czy umyślnie jadłem mięso albo nie zachowywałem postu w dni wyznaczone przez Kościół jako dni postu i wstrzemięźliwości od pokarmów mięsnych?"
+            },
+            {
+                "id": "pl-03-008",
+                "text": "Czy złamałem godzinny post eucharystyczny przed Komunią Świętą?"
+            },
+            {
+                "id": "pl-03-009",
+                "text": "Czy bez poważnej przyczyny wymagałem od podległych mi pracowników pracy w niedzielę lub święto nakazane?"
+            },
+            {
+                "id": "pl-03-010",
+                "text": "Czy rozpraszałem innych podczas Mszy świętej swoim strojem, zachowaniem lub korzystaniem z telefonu?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pl-4",
+        "questions": [
+            {
+                "id": "pl-04-001",
+                "text": "Czy byłem nieposłuszny słusznym poleceniom moich rodziców?"
+            },
+            {
+                "id": "pl-04-002",
+                "text": "Czy odnosiłem się bez szacunku do rodziców lub prawowitej władzy, w tym do urzędników publicznych i pracodawców?"
+            },
+            {
+                "id": "pl-04-003",
+                "text": "Czy byłem nieposłuszny słusznym poleceniom moich nauczycieli (jeśli się uczę)?"
+            },
+            {
+                "id": "pl-04-004",
+                "text": "Czy zaniedbałem opiekę nad starszymi rodzicami lub innymi członkami rodziny i wsparcie dla nich?"
+            },
+            {
+                "id": "pl-04-005",
+                "text": "Czy zaniedbałem potrzeby, wykształcenie, wychowanie lub formację duchową moich dzieci?"
+            },
+            {
+                "id": "pl-04-006",
+                "text": "Czy zaniedbałem prowadzenie moich dzieci do zrozumienia natury ludzkiej płciowości i nauczania Kościoła na jej temat?"
+            },
+            {
+                "id": "pl-04-007",
+                "text": "Czy zaniedbywałem codzienną modlitwę z moimi dziećmi?"
+            },
+            {
+                "id": "pl-04-008",
+                "text": "Czy zaniedbałem zachęcanie moich dzieci do regularnego przystępowania do Komunii Świętej i spowiedzi?"
+            },
+            {
+                "id": "pl-04-009",
+                "text": "Czy zaniedbałem staranne formowanie sumienia przed głosowaniem albo popierałem politykę sprzeczną z dobrem wspólnym, wolnością religijną lub prawem moralnym?"
+            },
+            {
+                "id": "pl-04-010",
+                "text": "Czy zaniedbywałem życie cnotliwe?"
+            },
+            {
+                "id": "pl-04-011",
+                "text": "Czy brakowało mi miłości i ofiarności wobec mojej rodziny?"
+            },
+            {
+                "id": "pl-04-012",
+                "text": "Czy popierałem politykę lub prawa godzące w rodzinę, na przykład omijanie zgody rodziców, albo promowałem nienaturalne modele rodziny, takie jak adopcja przez pary homoseksualne lub osoby samotne, czy też środki kontroli populacji? Czy popierałem politykę lub prawa godzące w dobro wspólne i prawo moralne?"
+            },
+            {
+                "id": "pl-04-013",
+                "text": "Czy zachęcałem innych do lekceważenia prawowitej władzy?"
+            },
+            {
+                "id": "pl-04-014",
+                "text": "Czy odrzucałem rady lub upomnienia moich rodziców?"
+            },
+            {
+                "id": "pl-04-015",
+                "text": "Czy zaniedbałem rozbudzanie w moich dzieciach otwartości na powołanie (małżeństwo, kapłaństwo, życie konsekrowane w stanie wolnym itp.)?"
+            },
+            {
+                "id": "pl-04-016",
+                "text": "Czy zaniedbałem troskę o sprawiedliwe traktowanie ubogich, potrzebujących i migrantów w społeczeństwie?"
+            },
+            {
+                "id": "pl-04-017",
+                "text": "Czy dopuściłem się przemocy wobec innych?"
+            },
+            {
+                "id": "pl-04-018",
+                "text": "Czy podważałem autorytet współmałżonka w obecności naszych dzieci?"
+            },
+            {
+                "id": "pl-04-019",
+                "text": "Czy zaniedbałem czuwanie nad tym, jak moje dzieci korzystają z internetu i technologii, aby chronić ich czystość?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pl-5",
+        "questions": [
+            {
+                "id": "pl-05-001",
+                "text": "Czy niesprawiedliwie zabiłem lub zraniłem człowieka — umyślnie albo przez niedbalstwo — lub współdziałałem w takim czynie?"
+            },
+            {
+                "id": "pl-05-002",
+                "text": "Czy zaniedbałem obronę godności i świętości życia ludzkiego?"
+            },
+            {
+                "id": "pl-05-003",
+                "text": "Czy popierałem wojnę, tortury, branie zakładników, porwania lub zabijanie bezbronnych ludzi?"
+            },
+            {
+                "id": "pl-05-004",
+                "text": "Czy dokonałem aborcji, zdobyłem środki poronne albo pomogłem komuś innemu w ich uzyskaniu?"
+            },
+            {
+                "id": "pl-05-005",
+                "text": "Czy promowałem aborcję lub publicznie się za nią opowiadałem?"
+            },
+            {
+                "id": "pl-05-006",
+                "text": "Czy skorzystałem z zapłodnienia in vitro, uczestniczyłem w nim lub je popierałem?"
+            },
+            {
+                "id": "pl-05-007",
+                "text": "Czy popierałem klonowanie człowieka lub modyfikacje genetyczne?"
+            },
+            {
+                "id": "pl-05-008",
+                "text": "Czy popierałem badania lub terapie z użyciem embrionalnych komórek macierzystych albo z nich korzystałem?"
+            },
+            {
+                "id": "pl-05-009",
+                "text": "Czy popierałem eugenikę lub przepisy służące kontroli populacji?"
+            },
+            {
+                "id": "pl-05-010",
+                "text": "Czy nie chciałem „nadstawić drugiego policzka” ani okazać miłości moim nieprzyjaciołom?"
+            },
+            {
+                "id": "pl-05-011",
+                "text": "Czy próbowałem odebrać sobie życie lub wyrządzić sobie krzywdę albo to rozważałem?"
+            },
+            {
+                "id": "pl-05-012",
+                "text": "Czy popierałem eutanazję lub ruch na rzecz „prawa do samobójstwa”?"
+            },
+            {
+                "id": "pl-05-013",
+                "text": "Czy odmówiłem lub zaniedbałem zapewnienia należytej opieki u kresu życia, w tym zabiegów medycznych, pożywienia i wody oraz środków przeciwbólowych?"
+            },
+            {
+                "id": "pl-05-014",
+                "text": "Czy zaniedbałem troskę o duchowe potrzeby osoby umierającej (w tym wezwanie kapłana z sakramentem namaszczenia chorych lub modlitwę za tę osobę)?"
+            },
+            {
+                "id": "pl-05-015",
+                "text": "Czy pragnąłem kogoś zabić?"
+            },
+            {
+                "id": "pl-05-016",
+                "text": "Czy broniąc się, użyłem większej siły, niż było to konieczne?"
+            },
+            {
+                "id": "pl-05-017",
+                "text": "Czy zaniedbałem ochronę innych na miarę moich możliwości i obowiązków?"
+            },
+            {
+                "id": "pl-05-018",
+                "text": "Czy wyrządziłem komuś krzywdę fizyczną, emocjonalną lub psychiczną albo tego pragnąłem?"
+            },
+            {
+                "id": "pl-05-019",
+                "text": "Czy dałem zgorszenie lub w inny sposób okazałem brak troski o czyjąś duszę?"
+            },
+            {
+                "id": "pl-05-020",
+                "text": "Czy nienawidziłem kogoś lub życzyłem mu zła?"
+            },
+            {
+                "id": "pl-05-021",
+                "text": "Czy uchybiłem szacunkowi należnemu zmarłym i ich ciałom?"
+            },
+            {
+                "id": "pl-05-022",
+                "text": "Czy zaniedbałem zapewnienie zmarłym godnego pochówku?"
+            },
+            {
+                "id": "pl-05-023",
+                "text": "Czy opowiadałem się za niesprawiedliwymi karami lub popierałem stosowanie kary śmierci, którą Kościół uznaje za niedopuszczalną?"
+            },
+            {
+                "id": "pl-05-024",
+                "text": "Czy dyskryminowałem kogoś, odmawiając mu tego, co słusznie mu się należy w granicach prawa moralnego i naturalnego?"
+            },
+            {
+                "id": "pl-05-025",
+                "text": "Czy wyśmiewałem, zastraszałem lub poniżałem kogoś?"
+            },
+            {
+                "id": "pl-05-026",
+                "text": "Czy przez swoje działania lub brak rozwagi lekkomyślnie narażałem ludzkie życie?"
+            },
+            {
+                "id": "pl-05-027",
+                "text": "Czy nadużywałem alkoholu lub zażywałem narkotyki?"
+            },
+            {
+                "id": "pl-05-028",
+                "text": "Czy okazywałem brak troski o zdrowie własne lub innych?"
+            },
+            {
+                "id": "pl-05-029",
+                "text": "Czy zachęcałem innych do używania alkoholu, narkotyków lub innych szkodliwych rzeczy?"
+            },
+            {
+                "id": "pl-05-030",
+                "text": "Czy popełniłem grzech obżarstwa lub zachęcałem do niego innych?"
+            },
+            {
+                "id": "pl-05-031",
+                "text": "Czy zaniedbałem budowanie pokoju?"
+            },
+            {
+                "id": "pl-05-032",
+                "text": "Czy dałem zgorszenie swoim działaniem lub zaniechaniem?"
+            },
+            {
+                "id": "pl-05-033",
+                "text": "Czy zachęcałem innych do grzechu lub pomagałem im w nim?"
+            },
+            {
+                "id": "pl-05-034",
+                "text": "Czy pozwoliłem, aby gniew mną zawładnął lub trwał we mnie niepohamowany?"
+            },
+            {
+                "id": "pl-05-035",
+                "text": "Czy byłem wobec kogoś niemiłosierny, kłóciłem się z nim lub chowałem urazę?"
+            },
+            {
+                "id": "pl-05-036",
+                "text": "Czy odmówiłem komuś przebaczenia, gdy mnie o nie prosił?"
+            },
+            {
+                "id": "pl-05-037",
+                "text": "Czy szukałem zemsty lub ją rozważałem?"
+            },
+            {
+                "id": "pl-05-038",
+                "text": "Czy cieszyłem się z cudzego nieszczęścia?"
+            },
+            {
+                "id": "pl-05-039",
+                "text": "Czy znęcałem się nad zwierzętami lub zabijałem je bez potrzeby?"
+            },
+            {
+                "id": "pl-05-040",
+                "text": "Czy narażałem życie własne lub innych przez brawurową jazdę albo korzystanie z telefonu podczas prowadzenia pojazdu?"
+            },
+            {
+                "id": "pl-05-041",
+                "text": "Czy wyśmiewałem lub szydziłem z innych z powodu ich niepełnosprawności fizycznej lub umysłowej?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pl-6",
+        "questions": [
+            {
+                "id": "pl-06-001",
+                "text": "Czy zaniedbywałem praktykowanie cnoty czystości i zachęcanie do niej innych?"
+            },
+            {
+                "id": "pl-06-002",
+                "text": "Czy szukałem przyjemności seksualnej poza aktem małżeńskim?"
+            },
+            {
+                "id": "pl-06-003",
+                "text": "Czy stosowałem sztuczną antykoncepcję lub zachęcałem do jej stosowania?"
+            },
+            {
+                "id": "pl-06-004",
+                "text": "Czy bez słusznej przyczyny zamykałem się na potomstwo i dar życia?"
+            },
+            {
+                "id": "pl-06-005",
+                "text": "Czy przed zawarciem małżeństwa mieszkałem z osobą, z którą byłem w związku (konkubinat)?"
+            },
+            {
+                "id": "pl-06-006",
+                "text": "Czy rozwijałem niewłaściwą romantyczną lub emocjonalną zażyłość z osobą inną niż mój współmałżonek?"
+            },
+            {
+                "id": "pl-06-007",
+                "text": "Czy uczestniczyłem w zapłodnieniu in vitro lub niemoralnych metodach leczenia niepłodności (takich, które nie prowadzą do poczęcia przez akt małżeński), albo zachęcałem do tego kogoś innego?"
+            },
+            {
+                "id": "pl-06-008",
+                "text": "Czy poddałem się sterylizacji narządów rozrodczych lub zachęcałem do tego kogoś innego?"
+            },
+            {
+                "id": "pl-06-009",
+                "text": "Czy zmusiłem kogoś do współżycia (także współmałżonka)?"
+            },
+            {
+                "id": "pl-06-010",
+                "text": "Czy bez słusznej przyczyny odmawiałem współżycia współmałżonkowi?"
+            },
+            {
+                "id": "pl-06-011",
+                "text": "Czy dopuszczałem się masturbacji (samotnego szukania przyjemności seksualnej poza aktem małżeńskim)?"
+            },
+            {
+                "id": "pl-06-012",
+                "text": "Czy umyślnie dążyłem do osiągnięcia szczytowania seksualnego poza aktem małżeńskim albo je wywoływałem?"
+            },
+            {
+                "id": "pl-06-013",
+                "text": "Czy prowadziłem lub promowałem edukację seksualną niezgodną z nauczaniem Kościoła katolickiego?"
+            },
+            {
+                "id": "pl-06-014",
+                "text": "Czy korzystałem z pornografii — w postaci zdjęć, filmów, nagrań lub tekstów — albo ją rozpowszechniałem?"
+            },
+            {
+                "id": "pl-06-015",
+                "text": "Czy byłem dawcą nasienia lub komórek jajowych?"
+            },
+            {
+                "id": "pl-06-016",
+                "text": "Czy oddawałem się nieczystym (zawierającym nagość lub seks) filmom, programom telewizyjnym, muzyce, rozmowom lub żartom?"
+            },
+            {
+                "id": "pl-06-017",
+                "text": "Czy popełniłem cudzołóstwo (akty seksualne z cudzym współmałżonkiem albo — pozostając w małżeństwie — z osobą inną niż mój współmałżonek)?"
+            },
+            {
+                "id": "pl-06-018",
+                "text": "Czy rozwiodłem się ze współmałżonkiem lub rozważałem rozwód bez poważnej przyczyny, mimo że pozostaję w ważnym małżeństwie?"
+            },
+            {
+                "id": "pl-06-019",
+                "text": "Czy zawarłem małżeństwo bez błogosławieństwa Kościoła?"
+            },
+            {
+                "id": "pl-06-020",
+                "text": "Czy dopuściłem się kazirodztwa?"
+            },
+            {
+                "id": "pl-06-021",
+                "text": "Czy praktykowałem wielożeństwo lub wielomęstwo?"
+            },
+            {
+                "id": "pl-06-022",
+                "text": "Czy pozostawałem w tak zwanym „otwartym małżeństwie”?"
+            },
+            {
+                "id": "pl-06-023",
+                "text": "Czy współżyłem poza związkiem małżeńskim (nierząd, akty homoseksualne)?"
+            },
+            {
+                "id": "pl-06-024",
+                "text": "Czy dopuściłem się gwałtu?"
+            },
+            {
+                "id": "pl-06-025",
+                "text": "Czy angażowałem się w pieszczoty, seksting lub inne formy gry wstępnej poza małżeństwem?"
+            },
+            {
+                "id": "pl-06-026",
+                "text": "Czy skrzywdziłem seksualnie dziecko?"
+            },
+            {
+                "id": "pl-06-027",
+                "text": "Czy oddawałem się nienaturalnym praktykom seksualnym (zoofilia, użycie przedmiotów itp.)?"
+            },
+            {
+                "id": "pl-06-028",
+                "text": "Czy uprawiałem lub promowałem prostytucję?"
+            },
+            {
+                "id": "pl-06-029",
+                "text": "Czy uwiodłem kogoś lub pozwoliłem się uwieść?"
+            },
+            {
+                "id": "pl-06-030",
+                "text": "Czy odrzucałem swoją tożsamość płciową daną mi przez Boga (operacje zmiany płci, przebieranie się za osobę przeciwnej płci itp.)?"
+            },
+            {
+                "id": "pl-06-031",
+                "text": "Czy promowałem grzechy przeciwko szóstemu przykazaniu, przyczyniałem się do nich lub w nich współdziałałem?"
+            },
+            {
+                "id": "pl-06-032",
+                "text": "Czy wdawałem się w niewłaściwe relacje internetowe lub cyberseks?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pl-7",
+        "questions": [
+            {
+                "id": "pl-07-001",
+                "text": "Czy coś ukradłem?"
+            },
+            {
+                "id": "pl-07-002",
+                "text": "Czy oddawałem się nadmiernie hazardowi?"
+            },
+            {
+                "id": "pl-07-003",
+                "text": "Czy popełniłem oszustwo (np. zgłoszenie fałszywej szkody ubezpieczycielowi, fałszowanie informacji dla korzyści finansowej)?"
+            },
+            {
+                "id": "pl-07-004",
+                "text": "Czy odmawiałem hojnego dzielenia się tym, co posiadam, z potrzebującymi?"
+            },
+            {
+                "id": "pl-07-005",
+                "text": "Czy trwoniłem pieniądze na rzeczy zbędne, zaniedbując potrzeby ubogich?"
+            },
+            {
+                "id": "pl-07-006",
+                "text": "Czy zaniedbywałem uczynki miłosierdzia względem ciała?"
+            },
+            {
+                "id": "pl-07-007",
+                "text": "Czy zniszczyłem lub oszpeciłem cudzą własność?"
+            },
+            {
+                "id": "pl-07-008",
+                "text": "Czy oszukiwałem?"
+            },
+            {
+                "id": "pl-07-009",
+                "text": "Czy zaniedbałem wypłacanie moim pracownikom sprawiedliwej zapłaty za uczciwą pracę?"
+            },
+            {
+                "id": "pl-07-010",
+                "text": "Czy uniemożliwiałem komuś zdobycie lub utrzymanie pracy (przez niesprawiedliwą dyskryminację albo niweczenie czyichś szans na zatrudnienie)?"
+            },
+            {
+                "id": "pl-07-011",
+                "text": "Czy wspierałem działania prowadzące do zniewolenia innych (wyzysk pracowników, handel ludźmi lub niewolnictwo w ścisłym sensie)?"
+            },
+            {
+                "id": "pl-07-012",
+                "text": "Czy zerwałem umowę, nie wywiązując się ze swoich zobowiązań?"
+            },
+            {
+                "id": "pl-07-013",
+                "text": "Czy brałem udział w niesprawiedliwym strajku lub lokaucie albo je popierałem?"
+            },
+            {
+                "id": "pl-07-014",
+                "text": "Czy zaciągnąłem nadmierne długi lub zaniedbałem ich spłatę?"
+            },
+            {
+                "id": "pl-07-015",
+                "text": "Czy uprawiałem lichwę (pobieranie nadmiernych odsetek)?"
+            },
+            {
+                "id": "pl-07-016",
+                "text": "Czy zawyżałem komuś cenę lub wykorzystałem kogoś w transakcji?"
+            },
+            {
+                "id": "pl-07-017",
+                "text": "Czy wytoczyłem komuś niesprawiedliwy proces lub taki proces popierałem?"
+            },
+            {
+                "id": "pl-07-018",
+                "text": "Czy zaniedbałem naprawienia szkody wyrządzonej kradzieżą, oszustwem lub innym wykroczeniem przeciwko siódmemu przykazaniu?"
+            },
+            {
+                "id": "pl-07-019",
+                "text": "Czy okazywałem lekceważenie wobec środowiska naturalnego?"
+            },
+            {
+                "id": "pl-07-020",
+                "text": "Czy nie szanowałem własności prywatnej albo sprzeciwiałem się nauczaniu Kościoła o pomocniczości, opowiadając się za skrajnym socjalizmem lub nadmierną kontrolą państwa nad zasobami?"
+            },
+            {
+                "id": "pl-07-021",
+                "text": "Czy zaniedbywałem sumienną pracę i uczciwe wywiązywanie się z obowiązków wobec pracodawcy?"
+            },
+            {
+                "id": "pl-07-022",
+                "text": "Czy gardziłem pracą lub ulegałem lenistwu?"
+            },
+            {
+                "id": "pl-07-023",
+                "text": "Czy zaniedbywałem pracę, jakiej wymaga dobro mojej rodziny?"
+            },
+            {
+                "id": "pl-07-024",
+                "text": "Czy wstrzymywałem lub opóźniałem wypłatę wynagrodzenia należnego pracownikom?"
+            },
+            {
+                "id": "pl-07-025",
+                "text": "Czy próbowałem spekulować i sztucznie zawyżać ceny towarów lub usług?"
+            },
+            {
+                "id": "pl-07-026",
+                "text": "Czy łamałem prawa autorskie, korzystając z pirackiego oprogramowania, muzyki lub filmów?"
+            },
+            {
+                "id": "pl-07-027",
+                "text": "Czy marnowałem czas pracodawcy, nadmiernie korzystając z internetu lub mediów społecznościowych w godzinach pracy?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pl-8",
+        "questions": [
+            {
+                "id": "pl-08-001",
+                "text": "Czy kłamałem lub świadomie wprowadzałem kogoś w błąd?"
+            },
+            {
+                "id": "pl-08-002",
+                "text": "Czy plotkowałem?"
+            },
+            {
+                "id": "pl-08-003",
+                "text": "Czy kłamałem pod przysięgą (krzywoprzysięstwo)?"
+            },
+            {
+                "id": "pl-08-004",
+                "text": "Czy zakładałem o kimś najgorsze lub osądzałem go niesprawiedliwie?"
+            },
+            {
+                "id": "pl-08-005",
+                "text": "Czy szkodziłem czyjemuś dobremu imieniu przez obmowę (ujawnianie cudzych wad bez poważnej przyczyny), oszczerstwo (rozgłaszanie kłamstw o kimś) lub zniesławienie na piśmie?"
+            },
+            {
+                "id": "pl-08-006",
+                "text": "Czy obsesyjnie zabiegałem o uznanie w internecie lub kreowałem fałszywy obraz samego siebie?"
+            },
+            {
+                "id": "pl-08-007",
+                "text": "Czy zaniedbałem obronę czyjegoś dobrego imienia?"
+            },
+            {
+                "id": "pl-08-008",
+                "text": "Czy nie dochowałem tajemnicy lub zawiodłem czyjeś zaufanie?"
+            },
+            {
+                "id": "pl-08-009",
+                "text": "Czy milczałem wobec oczerniania Kościoła katolickiego lub brałem w nim udział?"
+            },
+            {
+                "id": "pl-08-010",
+                "text": "Czy brakowało mi szczerości i otwartości tam, gdzie były na miejscu?"
+            },
+            {
+                "id": "pl-08-011",
+                "text": "Czy prowadziłem podwójne życie?"
+            },
+            {
+                "id": "pl-08-012",
+                "text": "Czy postępowałem obłudnie?"
+            },
+            {
+                "id": "pl-08-013",
+                "text": "Czy zmuszałem innych do kłamstwa?"
+            },
+            {
+                "id": "pl-08-014",
+                "text": "Czy przeszkadzałem innym w mówieniu prawdy?"
+            },
+            {
+                "id": "pl-08-015",
+                "text": "Czy dopuszczałem się pochlebstwa?"
+            },
+            {
+                "id": "pl-08-016",
+                "text": "Czy byłem chełpliwy lub zarozumiały?"
+            },
+            {
+                "id": "pl-08-017",
+                "text": "Czy przeinaczałem fakty, przesadnie dramatyzowałem, budowałem fałszywe argumenty (tzw. chochoły) lub atakowałem osobę zamiast jej argumentów czy poglądów (ataki ad hominem)?"
+            },
+            {
+                "id": "pl-08-018",
+                "text": "Czy zaniedbałem naprawienia dobrego imienia osoby, o której kłamałem?"
+            },
+            {
+                "id": "pl-08-019",
+                "text": "Czy wyjawiłem prawdę komuś, kto nie miał prawa jej poznać (na przykład niesprawiedliwemu napastnikowi)?"
+            },
+            {
+                "id": "pl-08-020",
+                "text": "Czy naruszyłem tajemnicę spowiedzi, opowiadając innym o treści czyjejś spowiedzi?"
+            },
+            {
+                "id": "pl-08-021",
+                "text": "Czy bez poważnej przyczyny ujawniłem tajemnice zawodowe?"
+            },
+            {
+                "id": "pl-08-022",
+                "text": "Czy przyjmowałem cudze słowa za prawdę bez należytej rozwagi (zwłaszcza w sprawach wiary i moralności lub tam, gdzie w grę wchodzi czyjeś dobre imię)?"
+            },
+            {
+                "id": "pl-08-023",
+                "text": "Czy rozpowszechniałem nieprawdziwe informacje publiczne (propagandę)?"
+            },
+            {
+                "id": "pl-08-024",
+                "text": "Czy udostępniałem w mediach społecznościowych niesprawdzone lub fałszywe informacje (fake newsy)?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pl-9",
+        "questions": [
+            {
+                "id": "pl-09-001",
+                "text": "Czy ulegałem pożądliwości (silnym pragnieniom seksualnym)?"
+            },
+            {
+                "id": "pl-09-002",
+                "text": "Czy ulegałem lubieżności (nieuporządkowanemu pragnieniu i nadmiernemu szukaniu przyjemności seksualnej)?"
+            },
+            {
+                "id": "pl-09-003",
+                "text": "Czy kierowałem do kogoś dwuznaczne lub natarczywe uwagi czy zaloty o charakterze seksualnym?"
+            },
+            {
+                "id": "pl-09-004",
+                "text": "Czy ubierałem się nieskromnie albo nie odwracałem wzroku, gdy ktoś inny był ubrany nieskromnie?"
+            },
+            {
+                "id": "pl-09-005",
+                "text": "Czy naruszałem czyjąś prywatność, szpiegując tę osobę?"
+            },
+            {
+                "id": "pl-09-006",
+                "text": "Czy wywoływałem w sobie nieczyste myśli lub dobrowolnie się w nich lubowałem?"
+            },
+            {
+                "id": "pl-09-007",
+                "text": "Czy promowałem rozwiązłość, niemoralne postawy wobec seksualności, skromności czy czystości albo moralny permisywizm?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pl-10",
+        "questions": [
+            {
+                "id": "pl-10-001",
+                "text": "Czy zazdrościłem innym tego, co posiadają?"
+            },
+            {
+                "id": "pl-10-002",
+                "text": "Czy byłem chciwy?"
+            },
+            {
+                "id": "pl-10-003",
+                "text": "Czy pożądałem cudzej własności?"
+            },
+            {
+                "id": "pl-10-004",
+                "text": "Czy zamiast żyć skromnie, ulegałem materializmowi?"
+            },
+            {
+                "id": "pl-10-005",
+                "text": "Czy nie potrafiłem cieszyć się z cudzego sukcesu?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pl-11",
+        "questions": [
+            {
+                "id": "pl-11-001",
+                "text": "Czy opuszczałem Mszę świętą w niedziele lub święta nakazane?"
+            },
+            {
+                "id": "pl-11-002",
+                "text": "Czy zaniedbywałem świętowanie niedziel i świąt nakazanych jako dni odpoczynku?"
+            },
+            {
+                "id": "pl-11-003",
+                "text": "Czy zaniedbałem spowiedź ze swoich grzechów przynajmniej raz w roku?"
+            },
+            {
+                "id": "pl-11-004",
+                "text": "Czy moje spowiedzi były nieszczere lub umyślnie niepełne?"
+            },
+            {
+                "id": "pl-11-005",
+                "text": "Czy zaniedbywałem należyte przygotowanie duszy na przyjęcie Komunii Świętej?"
+            },
+            {
+                "id": "pl-11-006",
+                "text": "Czy zaniedbałem wypełnienie pokuty zadanej na spowiedzi?"
+            },
+            {
+                "id": "pl-11-007",
+                "text": "Czy zaniedbałem zadośćuczynienie za krzywdy wyrządzone moimi grzechami?"
+            },
+            {
+                "id": "pl-11-008",
+                "text": "Czy zaniedbałem dokładny rachunek sumienia przed spowiedzią albo nie starałem się szczerze przypomnieć sobie wszystkich grzechów?"
+            },
+            {
+                "id": "pl-11-009",
+                "text": "Czy przystępowałem do spowiedzi bez mocnego postanowienia poprawy lub bez żalu za grzechy?"
+            },
+            {
+                "id": "pl-11-010",
+                "text": "Czy zaniedbałem przyjęcie Komunii Świętej przynajmniej raz w okresie wielkanocnym (w Polsce okres Komunii wielkanocnej trwa od Środy Popielcowej do Niedzieli Trójcy Świętej)?"
+            },
+            {
+                "id": "pl-11-011",
+                "text": "Czy przyjmowałem Komunię Świętą, nie będąc w stanie łaski uświęcającej (mając na duszy grzech ciężki)?"
+            },
+            {
+                "id": "pl-11-012",
+                "text": "Czy nie zachowywałem postu eucharystycznego przed przyjęciem Komunii Świętej?"
+            },
+            {
+                "id": "pl-11-013",
+                "text": "Czy jadłem mięso w piątki Wielkiego Postu?"
+            },
+            {
+                "id": "pl-11-014",
+                "text": "Czy złamałem zasady postu obowiązujące w Środę Popielcową i Wielki Piątek?"
+            },
+            {
+                "id": "pl-11-015",
+                "text": "Czy nie zachowywałem ducha przepisów o poście i wstrzemięźliwości?"
+            },
+            {
+                "id": "pl-11-016",
+                "text": "Czy zaniedbywałem wstrzemięźliwość od pokarmów mięsnych we wszystkie piątki roku lub nie stosowałem się do wskazań biskupów w moim kraju?"
+            },
+            {
+                "id": "pl-11-017",
+                "text": "Czy zaniedbywałem uczynki miłosierdzia względem duszy i ciała lub praktykowanie wyrzeczenia?"
+            },
+            {
+                "id": "pl-11-018",
+                "text": "Czy zaniedbywałem regularne składanie ofiar na potrzeby Kościoła?"
+            },
+            {
+                "id": "pl-11-019",
+                "text": "Czy zaniedbywałem składanie ofiar w wysokości odpowiedniej do mojej sytuacji?"
+            },
+            {
+                "id": "pl-11-020",
+                "text": "Czy zaniedbywałem poświęcanie swojego czasu na rzecz Kościoła stosownie do mojej sytuacji?"
+            },
+            {
+                "id": "pl-11-021",
+                "text": "Czy zaniedbywałem modlitwę o wzrost Kościoła?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pl-12",
+        "questions": [
+            {
+                "id": "pl-12-001",
+                "text": "Czy popełniłem grzech pychy?"
+            },
+            {
+                "id": "pl-12-002",
+                "text": "Czy popełniłem grzech chciwości?"
+            },
+            {
+                "id": "pl-12-003",
+                "text": "Czy popełniłem grzech nieczystości?"
+            },
+            {
+                "id": "pl-12-004",
+                "text": "Czy popełniłem grzech zazdrości?"
+            },
+            {
+                "id": "pl-12-005",
+                "text": "Czy popełniłem grzech nieumiarkowania w jedzeniu i piciu?"
+            },
+            {
+                "id": "pl-12-006",
+                "text": "Czy popełniłem grzech gniewu?"
+            },
+            {
+                "id": "pl-12-007",
+                "text": "Czy popełniłem grzech lenistwa?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pl-13",
+        "questions": [
+            {
+                "id": "pl-13-001",
+                "text": "Czy grzeszyłem zuchwale w nadziei, że Bóg mi przebaczy bez prawdziwej skruchy (zuchwałość)?"
+            },
+            {
+                "id": "pl-13-002",
+                "text": "Czy rozpaczałem o swoim zbawieniu?"
+            },
+            {
+                "id": "pl-13-003",
+                "text": "Czy zwalczałem lub atakowałem prawdy, o których wiedziałem, że naucza ich Kościół katolicki?"
+            },
+            {
+                "id": "pl-13-004",
+                "text": "Czy zazdrościłem bliźniemu dobra duchowego (łaski Bożej)?"
+            },
+            {
+                "id": "pl-13-005",
+                "text": "Czy uparcie trwałem w stanie grzechu?"
+            },
+            {
+                "id": "pl-13-006",
+                "text": "Czy uporczywie odmawiałem pokuty i nawrócenia?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "pl-14",
+        "questions": [
+            {
+                "id": "pl-14-001",
+                "text": "Czy dopuściłem się umyślnego zabójstwa?"
+            },
+            {
+                "id": "pl-14-002",
+                "text": "Czy popełniłem grzech sodomski (nienaturalne akty seksualne)?"
+            },
+            {
+                "id": "pl-14-003",
+                "text": "Czy uciskałem ubogich?"
+            },
+            {
+                "id": "pl-14-004",
+                "text": "Czy pozbawiałem pracowników należnej im zapłaty?"
+            }
+        ]
+    }
+]

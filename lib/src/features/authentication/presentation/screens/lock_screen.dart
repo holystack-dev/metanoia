@@ -1,3 +1,4 @@
+import 'package:confessionapp/main.dart';
 import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
 import 'package:confessionapp/src/features/authentication/domain/models/auth_settings.dart';
 import 'package:confessionapp/src/features/authentication/presentation/providers/auth_provider.dart';
@@ -6,7 +7,6 @@ import 'package:confessionapp/src/features/authentication/presentation/widgets/p
 import 'package:confessionapp/src/features/authentication/presentation/widgets/pin_input_widget.dart';
 import 'package:confessionapp/src/features/authentication/presentation/widgets/reset_pin_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -64,8 +64,10 @@ class _LockScreenState extends ConsumerState<LockScreen> {
     // Mark as attempted for auto-trigger (so it doesn't auto-trigger again)
     _hasAttemptedBiometric = true;
 
-    final success =
-        await ref.read(authControllerProvider.notifier).authenticateWithBiometric();
+    final reason = AppLocalizations.of(context)!.biometricPromptReason;
+    final success = await ref
+        .read(authControllerProvider.notifier)
+        .authenticateWithBiometric(reason);
     if (!success && mounted) {
       // Biometric failed or cancelled, user can use PIN
     }
@@ -147,30 +149,29 @@ class _LockScreenState extends ConsumerState<LockScreen> {
     );
     if (!confirmed || !mounted) return;
 
-    final success =
-        await ref.read(authControllerProvider.notifier).resetPinAndDeleteAllData();
+    // Captured before the await: deleting the data flips the auth state to
+    // `uninitialized`, which unmounts this screen, so nothing after the await
+    // can rely on this context or on `mounted`.
+    final restartApp = AppRoot.restarterOf(context);
 
-    if (!mounted) return;
+    final success = await ref
+        .read(authControllerProvider.notifier)
+        .resetPinAndDeleteAllData();
 
     if (success) {
-      // Show success message and restart app
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(l10n.resetPinSuccess),
-          backgroundColor: Theme.of(context).colorScheme.primary,
-        ),
-      );
-      // Restart the app by exiting (app will reopen fresh)
-      await Future.delayed(const Duration(seconds: 2));
-      SystemNavigator.pop();
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(l10n.resetPinError),
-          backgroundColor: Theme.of(context).colorScheme.error,
-        ),
-      );
+      // Rebuild the provider scope so no keepAlive provider keeps serving the
+      // deleted confessions. SystemNavigator.pop() is a no-op on iOS.
+      restartApp();
+      return;
     }
+
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(l10n.resetPinError),
+        backgroundColor: Theme.of(context).colorScheme.error,
+      ),
+    );
   }
 
   @override
@@ -195,6 +196,7 @@ class _LockScreenState extends ConsumerState<LockScreen> {
   }
 
   Widget _buildContent(BuildContext context, ThemeData theme, dynamic state) {
+    final l10n = AppLocalizations.of(context)!;
     final isLockedOut = state?.isLockedOut ?? false;
     final lockoutEndTime = state?.lockoutEndTime;
     final biometricAvailable = state?.biometricAvailable ?? false;
@@ -218,7 +220,7 @@ class _LockScreenState extends ConsumerState<LockScreen> {
                     children: [
                       const SizedBox(height: 24),
                       // App icon and title
-                      _buildHeader(theme),
+                      _buildHeader(theme, l10n),
                       const SizedBox(height: 32),
                       // Lockout timer or PIN entry
                       if (isLockedOut && lockoutEndTime != null)
@@ -237,8 +239,8 @@ class _LockScreenState extends ConsumerState<LockScreen> {
                         if (_hasError)
                           Text(
                             failedAttempts >= 3
-                                ? 'Incorrect PIN (${5 - failedAttempts} attempts remaining)'
-                                : 'Incorrect PIN',
+                                ? '${l10n.incorrectPin} (${l10n.attemptsRemaining(5 - failedAttempts)})'
+                                : l10n.incorrectPin,
                             style: theme.textTheme.bodyMedium?.copyWith(
                               color: theme.colorScheme.error,
                             ),
@@ -259,7 +261,7 @@ class _LockScreenState extends ConsumerState<LockScreen> {
                         TextButton(
                           onPressed: _onForgotPinPressed,
                           child: Text(
-                            AppLocalizations.of(context)!.forgotPin,
+                            l10n.forgotPin,
                             style: theme.textTheme.bodyMedium?.copyWith(
                               color: theme.colorScheme.primary,
                             ),
@@ -278,7 +280,7 @@ class _LockScreenState extends ConsumerState<LockScreen> {
     );
   }
 
-  Widget _buildHeader(ThemeData theme) {
+  Widget _buildHeader(ThemeData theme, AppLocalizations l10n) {
     return Column(
       children: [
         Container(
@@ -296,7 +298,7 @@ class _LockScreenState extends ConsumerState<LockScreen> {
         ),
         const SizedBox(height: 24),
         Text(
-          'Metanoia',
+          l10n.metanoia,
           style: theme.textTheme.headlineMedium?.copyWith(
             fontWeight: FontWeight.bold,
             color: theme.colorScheme.onSurface,
@@ -304,7 +306,7 @@ class _LockScreenState extends ConsumerState<LockScreen> {
         ),
         const SizedBox(height: 8),
         Text(
-          'Enter your PIN to unlock',
+          l10n.enterPinToUnlock,
           style: theme.textTheme.bodyLarge?.copyWith(
             color: theme.colorScheme.onSurfaceVariant,
           ),

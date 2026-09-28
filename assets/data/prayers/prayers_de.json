@@ -1,0 +1,190 @@
+{
+    "subtitle": "Gebete für deinen geistlichen Weg",
+    "categories": [
+        {
+            "id": "confession",
+            "title": "Gebete zur Beichte",
+            "icon": "church_outlined",
+            "prayers": [
+                {
+                    "id": "before_confession",
+                    "title": "Gebet vor der Beichte",
+                    "icon": "wb_twilight_outlined",
+                    "content": "Komm, Heiliger Geist, in meine Seele. Erleuchte meinen Verstand, damit ich die Sünden erkenne, die ich bekennen soll, und schenke mir deine Gnade, dass ich meine Sünden aufrichtig bereue.\n\nHilf mir, eine gute Beichte abzulegen, meine Verfehlungen gegen dich von Herzen zu bereuen und mein Leben zu bessern. Durch Christus, unseren Herrn. Amen."
+                },
+                {
+                    "id": "act_of_contrition",
+                    "title": "Reuegebet (Akt der Reue)",
+                    "icon": "favorite_outline",
+                    "content": "Mein Gott, aus ganzem Herzen bereue ich alle meine Sünden, nicht nur wegen der gerechten Strafen, die ich verdient habe, sondern vor allem, weil ich dich beleidigt habe, das höchste Gut, das würdig ist, über alles geliebt zu werden.\n\nIch nehme mir fest vor, mit Hilfe deiner Gnade mich zu bessern und nicht mehr zu sündigen.\n\nMein Gott, erbarme dich meiner. Amen."
+                },
+                {
+                    "id": "after_confession",
+                    "title": "Gebet nach der Beichte",
+                    "icon": "light_mode_outlined",
+                    "content": "Liebster Jesus, ich habe alle meine Sünden bekannt, so gut ich konnte. Ich habe mich aufrichtig bemüht, eine gute Beichte abzulegen. Ich bin gewiss, dass du mir vergeben hast.\n\nIch danke dir von Herzen. Ich verspreche, mich mit deiner Gnade zu bemühen, nicht mehr zu sündigen. Mein liebender Gott, gib mir die Kraft, in deiner Nähe zu bleiben und die Sünde zu meiden. Amen."
+                },
+                {
+                    "id": "confiteor",
+                    "title": "Das Schuldbekenntnis (Confiteor)",
+                    "icon": "person_outline",
+                    "content": "Ich bekenne Gott, dem Allmächtigen, und allen Brüdern und Schwestern, dass ich Gutes unterlassen und Böses getan habe – ich habe gesündigt in Gedanken, Worten und Werken –\n\n[RUBRIC]Schlage dir dreimal an die Brust, während du sprichst:[/RUBRIC]\n\ndurch meine Schuld, durch meine Schuld, durch meine große Schuld.\n\nDarum bitte ich die selige Jungfrau Maria, alle Engel und Heiligen und euch, Brüder und Schwestern, für mich zu beten bei Gott, unserem Herrn. Amen."
+                }
+            ]
+        },
+        {
+            "id": "essential",
+            "title": "Grundgebete",
+            "icon": "auto_awesome_outlined",
+            "prayers": [
+                {
+                    "id": "lords_prayer",
+                    "title": "Das Vaterunser",
+                    "icon": "cloud_outlined",
+                    "content": "Vater unser im Himmel,\ngeheiligt werde dein Name.\nDein Reich komme.\nDein Wille geschehe, wie im Himmel so auf Erden.\n\nUnser tägliches Brot gib uns heute.\nUnd vergib uns unsere Schuld,\nwie auch wir vergeben unsern Schuldigern.\nUnd führe uns nicht in Versuchung,\nsondern erlöse uns von dem Bösen.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "hail_mary",
+                    "title": "Gegrüßet seist du, Maria",
+                    "icon": "star_outline",
+                    "content": "Gegrüßet seist du, Maria, voll der Gnade,\nder Herr ist mit dir.\nDu bist gebenedeit unter den Frauen,\nund gebenedeit ist die Frucht deines Leibes, Jesus.\n\nHeilige Maria, Mutter Gottes,\nbitte für uns Sünder\njetzt und in der Stunde unseres Todes.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "glory_be",
+                    "title": "Ehre sei dem Vater",
+                    "icon": "brightness_high_outlined",
+                    "content": "Ehre sei dem Vater\nund dem Sohn\nund dem Heiligen Geist,\n\nwie im Anfang,\nso auch jetzt und alle Zeit\nund in Ewigkeit.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "apostles_creed",
+                    "title": "Apostolisches Glaubensbekenntnis",
+                    "icon": "menu_book_outlined",
+                    "isExpandable": true,
+                    "content": "Ich glaube an Gott, den Vater, den Allmächtigen, den Schöpfer des Himmels und der Erde,\n\nund an Jesus Christus, seinen eingeborenen Sohn, unsern Herrn, empfangen durch den Heiligen Geist, geboren von der Jungfrau Maria, gelitten unter Pontius Pilatus, gekreuzigt, gestorben und begraben,\n\nhinabgestiegen in das Reich des Todes, am dritten Tage auferstanden von den Toten, aufgefahren in den Himmel; er sitzt zur Rechten Gottes, des allmächtigen Vaters; von dort wird er kommen, zu richten die Lebenden und die Toten.\n\nIch glaube an den Heiligen Geist, die heilige katholische Kirche, Gemeinschaft der Heiligen, Vergebung der Sünden, Auferstehung der Toten und das ewige Leben.\n\n[AMEN]Amen."
+                }
+            ]
+        },
+        {
+            "id": "marian",
+            "title": "Mariengebete",
+            "icon": "favorite_border",
+            "prayers": [
+                {
+                    "id": "hail_holy_queen",
+                    "title": "Sei gegrüßt, o Königin",
+                    "icon": "star_outline",
+                    "content": "Sei gegrüßt, o Königin, Mutter der Barmherzigkeit,\nunser Leben, unsre Wonne und unsre Hoffnung, sei gegrüßt!\n\nZu dir rufen wir verbannte Kinder Evas;\nzu dir seufzen wir\ntrauernd und weinend in diesem Tal der Tränen.\n\nWohlan denn, unsre Fürsprecherin,\nwende deine barmherzigen Augen uns zu\nund nach diesem Elend zeige uns Jesus,\ndie gebenedeite Frucht deines Leibes.\n\nO gütige, o milde, o süße Jungfrau Maria.\n\n[VERSICLE]V. Bitte für uns, o heilige Gottesmutter.[/VERSICLE]\n[RESPONSE]R. Auf dass wir würdig werden der Verheißungen Christi.[/RESPONSE]\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "memorare",
+                    "title": "Das Memorare",
+                    "icon": "volunteer_activism_outlined",
+                    "content": "Gedenke, o gütigste Jungfrau Maria, es ist noch nie gehört worden, dass jemand, der zu dir seine Zuflucht nahm, deine Hilfe anrief und um deine Fürsprache flehte, von dir verlassen worden ist.\n\nVon diesem Vertrauen beseelt, eile ich zu dir, o Jungfrau der Jungfrauen, meine Mutter; zu dir komme ich, vor dir stehe ich als sündiger Mensch voll Reue.\n\nO Mutter des ewigen Wortes, verschmähe nicht meine Worte, sondern höre mich gnädig an und erhöre mich.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "fatima_prayer",
+                    "title": "Fatima-Gebet",
+                    "icon": "flare_outlined",
+                    "content": "O mein Jesus, verzeih uns unsere Sünden, bewahre uns vor dem Feuer der Hölle, führe alle Seelen in den Himmel, besonders jene, die deiner Barmherzigkeit am meisten bedürfen.\n\n[AMEN]Amen."
+                }
+            ]
+        },
+        {
+            "id": "devotions",
+            "title": "Andachtsgebete",
+            "icon": "auto_stories_outlined",
+            "prayers": [
+                {
+                    "id": "holy_rosary",
+                    "title": "Der heilige Rosenkranz",
+                    "subtitle": "Eine vollständige Anleitung für Anfänger",
+                    "icon": "radio_button_unchecked",
+                    "isExpandable": true,
+                    "sections": [
+                        {
+                            "title": "Eröffnungsgebete",
+                            "subtitle": "Am Kreuz und an den ersten Perlen",
+                            "content": "[INSTRUCTION]Mache das Kreuzzeichen:[/INSTRUCTION]\n\nIm Namen des Vaters und des Sohnes und des Heiligen Geistes. Amen.\n\n[INSTRUCTION]Halte das Kreuz und bete das Apostolische Glaubensbekenntnis:[/INSTRUCTION]\n\n[PRAYER]Ich glaube an Gott, den Vater, den Allmächtigen, den Schöpfer des Himmels und der Erde, und an Jesus Christus, seinen eingeborenen Sohn, unsern Herrn, empfangen durch den Heiligen Geist, geboren von der Jungfrau Maria, gelitten unter Pontius Pilatus, gekreuzigt, gestorben und begraben, hinabgestiegen in das Reich des Todes, am dritten Tage auferstanden von den Toten, aufgefahren in den Himmel; er sitzt zur Rechten Gottes, des allmächtigen Vaters; von dort wird er kommen, zu richten die Lebenden und die Toten. Ich glaube an den Heiligen Geist, die heilige katholische Kirche, Gemeinschaft der Heiligen, Vergebung der Sünden, Auferstehung der Toten und das ewige Leben. Amen.[/PRAYER]\n\n[INSTRUCTION]An der ersten großen Perle bete das Vaterunser:[/INSTRUCTION]\n\n[PRAYER]Vater unser im Himmel, geheiligt werde dein Name. Dein Reich komme. Dein Wille geschehe, wie im Himmel so auf Erden. Unser tägliches Brot gib uns heute. Und vergib uns unsere Schuld, wie auch wir vergeben unsern Schuldigern. Und führe uns nicht in Versuchung, sondern erlöse uns von dem Bösen. Amen.[/PRAYER]\n\n[INSTRUCTION]An jeder der drei kleinen Perlen bete das Gegrüßet seist du, Maria (um Glaube, Hoffnung und Liebe):[/INSTRUCTION]\n\n[PRAYER]Gegrüßet seist du, Maria, voll der Gnade, der Herr ist mit dir. Du bist gebenedeit unter den Frauen, und gebenedeit ist die Frucht deines Leibes, Jesus. Heilige Maria, Mutter Gottes, bitte für uns Sünder jetzt und in der Stunde unseres Todes. Amen.[/PRAYER]\n\n[INSTRUCTION]Bete das Ehre sei dem Vater:[/INSTRUCTION]\n\n[PRAYER]Ehre sei dem Vater und dem Sohn und dem Heiligen Geist, wie im Anfang, so auch jetzt und alle Zeit und in Ewigkeit. Amen.[/PRAYER]"
+                        },
+                        {
+                            "title": "So betest du jedes Gesätz",
+                            "subtitle": "Für jedes der 5 Geheimnisse wiederholen",
+                            "content": "[INSTRUCTION]1. Nenne das Geheimnis und betrachte es[/INSTRUCTION]\n\n[INSTRUCTION]2. An der großen Perle bete das Vaterunser:[/INSTRUCTION]\n\n[PRAYER]Vater unser im Himmel, geheiligt werde dein Name. Dein Reich komme. Dein Wille geschehe, wie im Himmel so auf Erden. Unser tägliches Brot gib uns heute. Und vergib uns unsere Schuld, wie auch wir vergeben unsern Schuldigern. Und führe uns nicht in Versuchung, sondern erlöse uns von dem Bösen. Amen.[/PRAYER]\n\n[INSTRUCTION]3. An jeder der 10 kleinen Perlen bete das Gegrüßet seist du, Maria:[/INSTRUCTION]\n\n[PRAYER]Gegrüßet seist du, Maria, voll der Gnade, der Herr ist mit dir. Du bist gebenedeit unter den Frauen, und gebenedeit ist die Frucht deines Leibes, Jesus. Heilige Maria, Mutter Gottes, bitte für uns Sünder jetzt und in der Stunde unseres Todes. Amen.[/PRAYER]\n\n[INSTRUCTION]4. Nach den 10 Gegrüßet seist du, Maria bete das Ehre sei dem Vater:[/INSTRUCTION]\n\n[PRAYER]Ehre sei dem Vater und dem Sohn und dem Heiligen Geist, wie im Anfang, so auch jetzt und alle Zeit und in Ewigkeit. Amen.[/PRAYER]\n\n[INSTRUCTION]5. Nach Belieben bete das Fatima-Gebet:[/INSTRUCTION]\n\n[PRAYER]O mein Jesus, verzeih uns unsere Sünden, bewahre uns vor dem Feuer der Hölle, führe alle Seelen in den Himmel, besonders jene, die deiner Barmherzigkeit am meisten bedürfen. Amen.[/PRAYER]"
+                        },
+                        {
+                            "title": "Die freudenreichen Geheimnisse",
+                            "subtitle": "Montags und samstags",
+                            "content": "1. Die Verkündigung — Der Engel Gabriel verkündet Maria, dass sie den Sohn Gottes empfangen wird.\n\n2. Der Besuch bei Elisabet — Maria besucht ihre Verwandte Elisabet, die Johannes den Täufer erwartet.\n\n3. Die Geburt Jesu — Jesus wird in Betlehem geboren.\n\n4. Die Darstellung des Herrn — Maria und Josef bringen Jesus in den Tempel.\n\n5. Die Wiederfindung Jesu im Tempel — Nach drei Tagen finden Maria und Josef Jesus lehrend im Tempel."
+                        },
+                        {
+                            "title": "Die lichtreichen Geheimnisse",
+                            "subtitle": "Donnerstags",
+                            "content": "1. Die Taufe im Jordan — Jesus wird von Johannes getauft, und der Heilige Geist kommt auf ihn herab.\n\n2. Die Hochzeit zu Kana — Jesus wirkt sein erstes Wunder und verwandelt Wasser in Wein.\n\n3. Die Verkündigung des Reiches Gottes — Jesus ruft uns zur Umkehr und verkündet das Reich Gottes.\n\n4. Die Verklärung — Jesus wird auf dem Berg Tabor verklärt und offenbart seine göttliche Herrlichkeit.\n\n5. Die Einsetzung der Eucharistie — Jesus schenkt uns beim Letzten Abendmahl seinen Leib und sein Blut."
+                        },
+                        {
+                            "title": "Die schmerzhaften Geheimnisse",
+                            "subtitle": "Dienstags und freitags",
+                            "content": "1. Die Todesangst im Garten — Jesus betet in Getsemani und nimmt den Willen des Vaters an.\n\n2. Die Geißelung — Jesus wird von römischen Soldaten grausam gegeißelt.\n\n3. Die Dornenkrönung — Jesus wird verspottet und mit Dornen gekrönt.\n\n4. Das Kreuztragen — Jesus trägt sein Kreuz zum Kalvarienberg.\n\n5. Die Kreuzigung — Jesus stirbt am Kreuz für unser Heil."
+                        },
+                        {
+                            "title": "Die glorreichen Geheimnisse",
+                            "subtitle": "Mittwochs und sonntags",
+                            "content": "1. Die Auferstehung — Jesus ersteht am dritten Tag von den Toten.\n\n2. Die Himmelfahrt — Jesus fährt vierzig Tage nach der Auferstehung in den Himmel auf.\n\n3. Die Sendung des Heiligen Geistes — Der Heilige Geist kommt an Pfingsten auf Maria und die Apostel herab.\n\n4. Die Aufnahme Mariens in den Himmel — Maria wird mit Leib und Seele in den Himmel aufgenommen.\n\n5. Die Krönung Mariens — Maria wird zur Königin des Himmels und der Erde gekrönt."
+                        },
+                        {
+                            "title": "Schlussgebete",
+                            "subtitle": "Nach den fünf Gesätzen",
+                            "content": "[INSTRUCTION]Bete das Sei gegrüßt, o Königin:[/INSTRUCTION]\n\n[PRAYER]Sei gegrüßt, o Königin, Mutter der Barmherzigkeit, unser Leben, unsre Wonne und unsre Hoffnung, sei gegrüßt! Zu dir rufen wir verbannte Kinder Evas; zu dir seufzen wir trauernd und weinend in diesem Tal der Tränen. Wohlan denn, unsre Fürsprecherin, wende deine barmherzigen Augen uns zu und nach diesem Elend zeige uns Jesus, die gebenedeite Frucht deines Leibes. O gütige, o milde, o süße Jungfrau Maria.[/PRAYER]\n\n[VERSICLE]V. Bitte für uns, o heilige Gottesmutter.[/VERSICLE]\n[RESPONSE]R. Auf dass wir würdig werden der Verheißungen Christi.[/RESPONSE]\n\n[INSTRUCTION]Schlussgebet:[/INSTRUCTION]\n\n[PRAYER]O Gott, dein eingeborener Sohn hat uns durch sein Leben, seinen Tod und seine Auferstehung die Schätze des ewigen Heiles erworben. Wir bitten dich: Lass uns die Geheimnisse des heiligen Rosenkranzes der seligen Jungfrau Maria betrachten, damit wir nachahmen, was sie enthalten, und erlangen, was sie verheißen. Durch Christus, unseren Herrn. Amen.[/PRAYER]\n\n[INSTRUCTION]Mache das Kreuzzeichen[/INSTRUCTION]"
+                        }
+                    ]
+                },
+                {
+                    "id": "divine_mercy_chaplet",
+                    "title": "Barmherzigkeitsrosenkranz",
+                    "icon": "water_drop_outlined",
+                    "isExpandable": true,
+                    "sections": [
+                        {
+                            "title": "Eröffnungsgebete",
+                            "content": "1. Mache das Kreuzzeichen\n2. Eröffnungsgebet (nach Belieben):\n\n[PRAYER]Du bist gestorben, Jesus, aber die Quelle des Lebens ist für die Seelen entsprungen, und das Meer der Barmherzigkeit hat sich für die ganze Welt geöffnet. O Quelle des Lebens, unergründliche göttliche Barmherzigkeit, umfange die ganze Welt und ergieße Dich über uns.[/PRAYER]\n\n3. Dreimal wiederholen:\n\n[PRAYER]O Blut und Wasser, aus dem Herzen Jesu als Quelle der Barmherzigkeit für uns entströmt – ich vertraue auf Dich![/PRAYER]"
+                        },
+                        {
+                            "title": "Der Rosenkranz",
+                            "content": "1. Bete das Vaterunser\n2. Bete das Gegrüßet seist du, Maria\n3. Bete das Apostolische Glaubensbekenntnis\n\n[RUBRIC]An den großen Perlen (Vaterunser-Perlen) sprich:[/RUBRIC]\n\n[PRAYER]Ewiger Vater, ich opfere Dir auf den Leib und das Blut, die Seele und die Gottheit Deines über alles geliebten Sohnes, unseres Herrn Jesus Christus, zur Sühne für unsere Sünden und die Sünden der ganzen Welt.[/PRAYER]\n\n[RUBRIC]An den kleinen Perlen (Gegrüßet-seist-du-Maria-Perlen) sprich:[/RUBRIC]\n\n[PRAYER]Durch Sein schmerzhaftes Leiden habe Erbarmen mit uns und mit der ganzen Welt.[/PRAYER]\n\nWiederhole dies für fünf Gesätze."
+                        },
+                        {
+                            "title": "Abschluss",
+                            "content": "Dreimal wiederholen:\n\n[PRAYER]Heiliger Gott, heiliger starker Gott, heiliger unsterblicher Gott, habe Erbarmen mit uns und mit der ganzen Welt.[/PRAYER]\n\nSchlussgebet (nach Belieben):\n\n[PRAYER]Ewiger Gott, Deine Barmherzigkeit ist unergründlich und Dein Erbarmen unerschöpflich. Blicke gnädig auf uns und mehre Deine Barmherzigkeit in uns, damit wir in schweren Augenblicken nicht verzweifeln und nicht mutlos werden, sondern uns mit großem Vertrauen Deinem heiligen Willen fügen, der die Liebe und die Barmherzigkeit selbst ist.[/PRAYER]"
+                        }
+                    ]
+                },
+                {
+                    "id": "guardian_angel",
+                    "title": "Gebet zum Schutzengel",
+                    "icon": "shield_outlined",
+                    "content": "Engel Gottes, mein Beschützer,\ndem mich Gottes Liebe anvertraut hat:\nerleuchte, behüte,\nlenke und leite mich.\n\n[AMEN]Amen."
+                }
+            ]
+        },
+        {
+            "id": "communion",
+            "title": "Gebete zur heiligen Kommunion",
+            "icon": "wb_sunny_outlined",
+            "prayers": [
+                {
+                    "id": "before_communion",
+                    "title": "Gebet vor der Kommunion",
+                    "icon": "wb_twilight_outlined",
+                    "content": "Herr Jesus Christus, Sohn des lebendigen Gottes, dem Willen des Vaters gehorsam, hast du im Heiligen Geist durch deinen Tod der Welt das Leben geschenkt.\n\nErlöse mich durch deinen Leib und dein Blut von allen Sünden und von allem Bösen.\n\nHilf mir, dass ich deine Gebote treu erfülle, und lass nicht zu, dass ich jemals von dir getrennt werde.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "after_communion",
+                    "title": "Gebet nach der Kommunion",
+                    "subtitle": "Anima Christi",
+                    "icon": "light_mode_outlined",
+                    "content": "Seele Christi, heilige mich.\nLeib Christi, rette mich.\nBlut Christi, tränke mich.\nWasser der Seite Christi, wasche mich.\n\nLeiden Christi, stärke mich.\nO guter Jesus, erhöre mich.\nBirg in deinen Wunden mich.\nVon dir lass nimmer scheiden mich.\n\nVor dem bösen Feind beschütze mich.\nIn meiner Todesstunde rufe mich.\nZu dir kommen heiße mich,\nmit deinen Heiligen zu loben dich\nin deinem Reiche ewiglich.\n\n[AMEN]Amen."
+                }
+            ]
+        }
+    ]
+}

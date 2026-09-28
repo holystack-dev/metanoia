@@ -1,14 +1,15 @@
 import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
+import 'package:confessionapp/src/core/theme/app_radius.dart';
 import 'package:confessionapp/src/core/utils/haptic_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:confessionapp/src/features/onboarding/presentation/onboarding_controller.dart';
+import 'package:confessionapp/src/features/onboarding/presentation/pages/app_overview_page.dart';
 import 'package:confessionapp/src/features/onboarding/presentation/pages/content_language_page.dart';
-import 'package:confessionapp/src/features/onboarding/presentation/pages/feature_page.dart';
 import 'package:confessionapp/src/features/onboarding/presentation/pages/metanoia_intro_page.dart';
+import 'package:confessionapp/src/features/onboarding/presentation/pages/privacy_page.dart';
 import 'package:confessionapp/src/features/onboarding/presentation/pages/ready_to_begin_page.dart';
-import 'package:confessionapp/src/features/onboarding/presentation/pages/spiritual_journey_page.dart';
 
 class OnboardingScreen extends ConsumerStatefulWidget {
   const OnboardingScreen({super.key});
@@ -21,12 +22,13 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   final PageController _pageController = PageController();
   int _currentPage = 0;
 
-  // Total pages: Intro, Welcome, 4 Features, Language, Ready = 8
-  final int _totalPages = 8;
+  // Metanoia, What this app does, Private by design, Language, Ready = 5
+  static const int _totalPages = 5;
+  static const int _lastPage = _totalPages - 1;
 
   void _nextPage() {
     HapticUtils.selectionClick();
-    if (_currentPage < _totalPages - 1) {
+    if (_currentPage < _lastPage) {
       _pageController.nextPage(
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeInOut,
@@ -53,7 +55,9 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
     }
   }
 
-  Future<void> _skipOnboarding() async {
+  /// Jumps to the final page rather than completing onboarding, so the
+  /// disclaimer is always shown.
+  Future<void> _skipToLastPage() async {
     final theme = Theme.of(context);
     final confirmed = await showDialog<bool>(
       context: context,
@@ -63,7 +67,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
           backgroundColor: theme.colorScheme.surface,
           surfaceTintColor: Colors.transparent,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(AppRadius.sheet),
           ),
           title: Text(
             l10n.skipOnboardingTitle,
@@ -89,8 +93,13 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
       },
     );
 
-    if (confirmed == true) {
-      await _completeOnboarding();
+    if (confirmed == true && mounted) {
+      HapticUtils.selectionClick();
+      await _pageController.animateToPage(
+        _lastPage,
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeInOut,
+      );
     }
   }
 
@@ -102,12 +111,10 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     final l10n = AppLocalizations.of(context)!;
 
-    // Show skip on all pages except the last page (language selection)
-    final showSkip = _currentPage < _totalPages - 1;
-    // Show back button except on first page
+    // Skip jumps to the last page (Ready to Begin), so it is pointless there.
+    final showSkip = _currentPage < _lastPage;
     final showBack = _currentPage > 0;
 
     return Scaffold(
@@ -124,53 +131,15 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                 });
               },
               children: [
-                // Page 0: Metanoia Intro
+                // Page 0: What "Metanoia" means
                 MetanoiaIntroPage(onNext: _nextPage),
-                // Page 1: Spiritual Journey (replaces Welcome)
-                SpiritualJourneyPage(
-                  onNext: _nextPage,
-                  headline: l10n.metanoia,
-                  subtitle: l10n.welcomeSubtitle,
-                  buttonText: l10n.getStarted,
-                ),
-                // Pages 2-5: Features (flattened)
-                FeaturePage(
-                  icon: Icons.assignment_outlined,
-                  title: l10n.examineTitle,
-                  description: l10n.examineDescription,
-                  color: theme.colorScheme.primary,
-                  onNext: _nextPage,
-                  buttonText: l10n.nextButton,
-                ),
-                FeaturePage(
-                  icon: Icons.church_outlined,
-                  title: l10n.confessTitle,
-                  description: l10n.confessDescription,
-                  color: theme.colorScheme.secondary,
-                  onNext: _nextPage,
-                  buttonText: l10n.nextButton,
-                ),
-                FeaturePage(
-                  icon: Icons.menu_book_outlined,
-                  title: l10n.prayersTitle,
-                  description: l10n.prayersDescription,
-                  color: theme.colorScheme.tertiary,
-                  onNext: _nextPage,
-                  buttonText: l10n.nextButton,
-                ),
-                FeaturePage(
-                  icon: Icons.notifications_outlined,
-                  title: l10n.reminders,
-                  description: l10n.remindersDescription,
-                  color: const Color(
-                    0xFFE07B39,
-                  ), // Warm orange - positive reminder association
-                  onNext: _nextPage,
-                  buttonText: l10n.nextButton,
-                ),
-                // Page 6: Language Selection
+                // Page 1: What this app does — Examine, Confess, Journal
+                AppOverviewPage(onNext: _nextPage),
+                // Page 2: Private by design (and a PIN is coming)
+                PrivacyPage(onNext: _nextPage),
+                // Page 3: Content language
                 ContentLanguagePage(onNext: _nextPage),
-                // Page 7: Ready to Begin (Final)
+                // Page 4: Ready to begin, with the disclaimer (final)
                 ReadyToBeginPage(onComplete: _completeOnboarding),
               ],
             ),
@@ -190,7 +159,6 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                 ),
                 child: Row(
                   children: [
-                    // Back button
                     if (showBack)
                       IconButton(
                         onPressed: _previousPage,
@@ -200,7 +168,6 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                     else
                       const SizedBox(width: 48),
 
-                    // Progress dots (centered)
                     Expanded(
                       child: _ProgressDots(
                         currentPage: _currentPage,
@@ -208,10 +175,9 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                       ),
                     ),
 
-                    // Skip button
                     if (showSkip)
                       TextButton(
-                        onPressed: _skipOnboarding,
+                        onPressed: _skipToLastPage,
                         child: Text(l10n.skip),
                       )
                     else
@@ -252,7 +218,7 @@ class _ProgressDots extends StatelessWidget {
                 index <= currentPage
                     ? theme.colorScheme.primary
                     : theme.colorScheme.outlineVariant,
-            borderRadius: BorderRadius.circular(4),
+            borderRadius: BorderRadius.circular(AppRadius.xs),
           ),
         ),
       ),

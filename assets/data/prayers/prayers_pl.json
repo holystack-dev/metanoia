@@ -1,0 +1,190 @@
+{
+    "subtitle": "Modlitwy na twoją duchową drogę",
+    "categories": [
+        {
+            "id": "confession",
+            "title": "Modlitwy przy spowiedzi",
+            "icon": "church_outlined",
+            "prayers": [
+                {
+                    "id": "before_confession",
+                    "title": "Modlitwa przed spowiedzią",
+                    "icon": "wb_twilight_outlined",
+                    "content": "Przyjdź, Duchu Święty, do mojej duszy. Oświeć mój umysł, abym poznał grzechy, które powinienem wyznać, i udziel mi swojej łaski, abym szczerze żałował za moje grzechy.\n\nPomóż mi dobrze odprawić spowiedź, prawdziwie żałować za to, czym Cię obraziłem, i poprawić moje życie. Przez Chrystusa, Pana naszego. Amen."
+                },
+                {
+                    "id": "act_of_contrition",
+                    "title": "Akt żalu",
+                    "icon": "favorite_outline",
+                    "content": "Boże mój, z całego serca żałuję za wszystkie moje grzechy, którymi obraziłem Ciebie, Dobro najwyższe i godne miłości nade wszystko.\n\nPostanawiam mocno, przy pomocy Twojej łaski, pokutować, więcej nie grzeszyć i unikać okazji do grzechu.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "after_confession",
+                    "title": "Modlitwa po spowiedzi",
+                    "icon": "light_mode_outlined",
+                    "content": "Najdroższy Jezu, wyznałem wszystkie moje grzechy najlepiej, jak umiałem. Starałem się dobrze odprawić spowiedź. Jestem pewien, że mi przebaczyłeś.\n\nDziękuję Ci z całego serca. Obiecuję, że z pomocą Twojej łaski będę się starał więcej nie grzeszyć. Boże, który mnie miłujesz, daj mi siłę, abym pozostał blisko Ciebie i unikał grzechu. Amen."
+                },
+                {
+                    "id": "confiteor",
+                    "title": "Spowiedź powszechna (Confiteor)",
+                    "icon": "person_outline",
+                    "content": "Spowiadam się Bogu wszechmogącemu i wam, bracia i siostry, że bardzo zgrzeszyłem myślą, mową, uczynkiem i zaniedbaniem:\n\n[RUBRIC]Uderz się trzy razy w piersi, mówiąc:[/RUBRIC]\n\nmoja wina, moja wina, moja bardzo wielka wina.\n\nPrzeto błagam Najświętszą Maryję, zawsze Dziewicę, wszystkich Aniołów i Świętych i was, bracia i siostry, o modlitwę za mnie do Pana Boga naszego. Amen."
+                }
+            ]
+        },
+        {
+            "id": "essential",
+            "title": "Modlitwy podstawowe",
+            "icon": "auto_awesome_outlined",
+            "prayers": [
+                {
+                    "id": "lords_prayer",
+                    "title": "Ojcze nasz",
+                    "icon": "cloud_outlined",
+                    "content": "Ojcze nasz, któryś jest w niebie,\nświęć się imię Twoje,\nprzyjdź królestwo Twoje,\nbądź wola Twoja,\njako w niebie, tak i na ziemi.\n\nChleba naszego powszedniego daj nam dzisiaj\ni odpuść nam nasze winy,\njako i my odpuszczamy naszym winowajcom,\ni nie wódź nas na pokuszenie,\nale nas zbaw ode złego.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "hail_mary",
+                    "title": "Zdrowaś Maryjo",
+                    "icon": "star_outline",
+                    "content": "Zdrowaś Maryjo, łaski pełna,\nPan z Tobą.\nBłogosławionaś Ty między niewiastami\ni błogosławiony owoc żywota Twojego, Jezus.\n\nŚwięta Maryjo, Matko Boża,\nmódl się za nami grzesznymi,\nteraz i w godzinę śmierci naszej.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "glory_be",
+                    "title": "Chwała Ojcu",
+                    "icon": "brightness_high_outlined",
+                    "content": "Chwała Ojcu\ni Synowi,\ni Duchowi Świętemu.\n\nJak była na początku,\nteraz i zawsze,\ni na wieki wieków.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "apostles_creed",
+                    "title": "Skład Apostolski",
+                    "icon": "menu_book_outlined",
+                    "isExpandable": true,
+                    "content": "Wierzę w Boga, Ojca wszechmogącego, Stworzyciela nieba i ziemi,\n\ni w Jezusa Chrystusa, Syna Jego jedynego, Pana naszego, który się począł z Ducha Świętego, narodził się z Maryi Panny, umęczon pod Ponckim Piłatem, ukrzyżowan, umarł i pogrzebion.\n\nZstąpił do piekieł, trzeciego dnia zmartwychwstał, wstąpił na niebiosa, siedzi po prawicy Boga Ojca wszechmogącego, stamtąd przyjdzie sądzić żywych i umarłych.\n\nWierzę w Ducha Świętego, święty Kościół powszechny, świętych obcowanie, grzechów odpuszczenie, ciała zmartwychwstanie, żywot wieczny.\n\n[AMEN]Amen."
+                }
+            ]
+        },
+        {
+            "id": "marian",
+            "title": "Modlitwy maryjne",
+            "icon": "favorite_border",
+            "prayers": [
+                {
+                    "id": "hail_holy_queen",
+                    "title": "Witaj, Królowo",
+                    "icon": "star_outline",
+                    "content": "Witaj, Królowo, Matko miłosierdzia,\nżycie, słodyczy i nadziejo nasza, witaj!\n\nDo Ciebie wołamy wygnańcy, synowie Ewy.\nDo Ciebie wzdychamy, jęcząc i płacząc\nna tym łez padole.\n\nPrzeto, Orędowniczko nasza,\none miłosierne oczy Twoje na nas zwróć,\na Jezusa, błogosławiony owoc żywota Twojego,\npo tym wygnaniu nam okaż.\n\nO łaskawa, o litościwa, o słodka Panno Maryjo!\n\n[VERSICLE]K. Módl się za nami, święta Boża Rodzicielko.[/VERSICLE]\n[RESPONSE]W. Abyśmy się stali godnymi obietnic Chrystusowych.[/RESPONSE]\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "memorare",
+                    "title": "Pomnij, o Najświętsza Panno (Memorare)",
+                    "icon": "volunteer_activism_outlined",
+                    "content": "Pomnij, o Najświętsza Panno Maryjo, że nigdy nie słyszano, abyś opuściła tego, kto się do Ciebie ucieka, Twej pomocy wzywa, Ciebie o przyczynę prosi.\n\nTą ufnością ożywiony, do Ciebie, o Panno nad pannami i Matko, biegnę, do Ciebie przychodzę, przed Tobą jako grzesznik płaczący staję.\n\nO Matko Słowa, racz nie gardzić słowami moimi, ale usłysz je łaskawie i wysłuchaj.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "fatima_prayer",
+                    "title": "Modlitwa fatimska",
+                    "icon": "flare_outlined",
+                    "content": "O mój Jezu, przebacz nam nasze grzechy, zachowaj nas od ognia piekielnego, zaprowadź wszystkie dusze do nieba i dopomóż szczególnie tym, którzy najbardziej potrzebują Twojego miłosierdzia.\n\n[AMEN]Amen."
+                }
+            ]
+        },
+        {
+            "id": "devotions",
+            "title": "Nabożeństwa",
+            "icon": "auto_stories_outlined",
+            "prayers": [
+                {
+                    "id": "holy_rosary",
+                    "title": "Różaniec święty",
+                    "subtitle": "Pełny przewodnik dla początkujących",
+                    "icon": "radio_button_unchecked",
+                    "isExpandable": true,
+                    "sections": [
+                        {
+                            "title": "Modlitwy początkowe",
+                            "subtitle": "Na krzyżyku i pierwszych paciorkach",
+                            "content": "[INSTRUCTION]Uczyń znak krzyża:[/INSTRUCTION]\n\nW imię Ojca i Syna, i Ducha Świętego. Amen.\n\n[INSTRUCTION]Trzymając krzyżyk, odmów Skład Apostolski:[/INSTRUCTION]\n\n[PRAYER]Wierzę w Boga, Ojca wszechmogącego, Stworzyciela nieba i ziemi, i w Jezusa Chrystusa, Syna Jego jedynego, Pana naszego, który się począł z Ducha Świętego, narodził się z Maryi Panny, umęczon pod Ponckim Piłatem, ukrzyżowan, umarł i pogrzebion. Zstąpił do piekieł, trzeciego dnia zmartwychwstał, wstąpił na niebiosa, siedzi po prawicy Boga Ojca wszechmogącego, stamtąd przyjdzie sądzić żywych i umarłych. Wierzę w Ducha Świętego, święty Kościół powszechny, świętych obcowanie, grzechów odpuszczenie, ciała zmartwychwstanie, żywot wieczny. Amen.[/PRAYER]\n\n[INSTRUCTION]Na pierwszym dużym paciorku odmów Ojcze nasz:[/INSTRUCTION]\n\n[PRAYER]Ojcze nasz, któryś jest w niebie, święć się imię Twoje, przyjdź królestwo Twoje, bądź wola Twoja, jako w niebie, tak i na ziemi. Chleba naszego powszedniego daj nam dzisiaj i odpuść nam nasze winy, jako i my odpuszczamy naszym winowajcom, i nie wódź nas na pokuszenie, ale nas zbaw ode złego. Amen.[/PRAYER]\n\n[INSTRUCTION]Na każdym z trzech małych paciorków odmów Zdrowaś Maryjo (o wiarę, nadzieję i miłość):[/INSTRUCTION]\n\n[PRAYER]Zdrowaś Maryjo, łaski pełna, Pan z Tobą. Błogosławionaś Ty między niewiastami i błogosławiony owoc żywota Twojego, Jezus. Święta Maryjo, Matko Boża, módl się za nami grzesznymi, teraz i w godzinę śmierci naszej. Amen.[/PRAYER]\n\n[INSTRUCTION]Odmów Chwała Ojcu:[/INSTRUCTION]\n\n[PRAYER]Chwała Ojcu i Synowi, i Duchowi Świętemu. Jak była na początku, teraz i zawsze, i na wieki wieków. Amen.[/PRAYER]"
+                        },
+                        {
+                            "title": "Jak odmawiać każdy dziesiątek",
+                            "subtitle": "Powtarzaj przy każdej z 5 tajemnic",
+                            "content": "[INSTRUCTION]1. Zapowiedz tajemnicę i rozważ ją[/INSTRUCTION]\n\n[INSTRUCTION]2. Na dużym paciorku odmów Ojcze nasz:[/INSTRUCTION]\n\n[PRAYER]Ojcze nasz, któryś jest w niebie, święć się imię Twoje, przyjdź królestwo Twoje, bądź wola Twoja, jako w niebie, tak i na ziemi. Chleba naszego powszedniego daj nam dzisiaj i odpuść nam nasze winy, jako i my odpuszczamy naszym winowajcom, i nie wódź nas na pokuszenie, ale nas zbaw ode złego. Amen.[/PRAYER]\n\n[INSTRUCTION]3. Na każdym z 10 małych paciorków odmów Zdrowaś Maryjo:[/INSTRUCTION]\n\n[PRAYER]Zdrowaś Maryjo, łaski pełna, Pan z Tobą. Błogosławionaś Ty między niewiastami i błogosławiony owoc żywota Twojego, Jezus. Święta Maryjo, Matko Boża, módl się za nami grzesznymi, teraz i w godzinę śmierci naszej. Amen.[/PRAYER]\n\n[INSTRUCTION]4. Po 10 Zdrowaś Maryjo odmów Chwała Ojcu:[/INSTRUCTION]\n\n[PRAYER]Chwała Ojcu i Synowi, i Duchowi Świętemu. Jak była na początku, teraz i zawsze, i na wieki wieków. Amen.[/PRAYER]\n\n[INSTRUCTION]5. Możesz też odmówić modlitwę fatimską:[/INSTRUCTION]\n\n[PRAYER]O mój Jezu, przebacz nam nasze grzechy, zachowaj nas od ognia piekielnego, zaprowadź wszystkie dusze do nieba i dopomóż szczególnie tym, którzy najbardziej potrzebują Twojego miłosierdzia. Amen.[/PRAYER]"
+                        },
+                        {
+                            "title": "Tajemnice radosne",
+                            "subtitle": "Poniedziałki i soboty",
+                            "content": "1. Zwiastowanie Najświętszej Maryi Pannie — Anioł Gabriel zwiastuje Maryi, że pocznie Syna Bożego.\n\n2. Nawiedzenie świętej Elżbiety — Maryja odwiedza swoją krewną Elżbietę, która oczekuje narodzin Jana Chrzciciela.\n\n3. Narodzenie Pana Jezusa — Jezus rodzi się w Betlejem.\n\n4. Ofiarowanie Pana Jezusa w świątyni — Maryja i Józef ofiarowują Jezusa w świątyni.\n\n5. Odnalezienie Pana Jezusa w świątyni — Po trzech dniach Maryja i Józef odnajdują Jezusa nauczającego w świątyni."
+                        },
+                        {
+                            "title": "Tajemnice światła",
+                            "subtitle": "Czwartki",
+                            "content": "1. Chrzest Pana Jezusa w Jordanie — Jezus przyjmuje chrzest od Jana, a Duch Święty zstępuje na Niego.\n\n2. Objawienie się Pana Jezusa na weselu w Kanie — Jezus czyni swój pierwszy cud, przemieniając wodę w wino.\n\n3. Głoszenie królestwa Bożego i wzywanie do nawrócenia — Jezus wzywa nas do nawrócenia i głosi królestwo Boże.\n\n4. Przemienienie na górze Tabor — Jezus przemienia się na górze Tabor, objawiając swoją Boską chwałę.\n\n5. Ustanowienie Eucharystii — Jezus daje nam swoje Ciało i Krew podczas Ostatniej Wieczerzy."
+                        },
+                        {
+                            "title": "Tajemnice bolesne",
+                            "subtitle": "Wtorki i piątki",
+                            "content": "1. Modlitwa Pana Jezusa w Ogrójcu — Jezus modli się w Getsemani i przyjmuje wolę Ojca.\n\n2. Biczowanie Pana Jezusa — Jezus zostaje okrutnie ubiczowany przez rzymskich żołnierzy.\n\n3. Cierniem ukoronowanie Pana Jezusa — Jezus zostaje wyszydzony i ukoronowany cierniem.\n\n4. Dźwiganie krzyża na Kalwarię — Jezus niesie swój krzyż na Kalwarię.\n\n5. Ukrzyżowanie i śmierć Pana Jezusa — Jezus umiera na krzyżu dla naszego zbawienia."
+                        },
+                        {
+                            "title": "Tajemnice chwalebne",
+                            "subtitle": "Środy i niedziele",
+                            "content": "1. Zmartwychwstanie Pana Jezusa — Jezus trzeciego dnia powstaje z martwych.\n\n2. Wniebowstąpienie Pana Jezusa — Jezus czterdzieści dni po zmartwychwstaniu wstępuje do nieba.\n\n3. Zesłanie Ducha Świętego — Duch Święty zstępuje na Maryję i Apostołów w dniu Pięćdziesiątnicy.\n\n4. Wniebowzięcie Najświętszej Maryi Panny — Maryja z ciałem i duszą zostaje wzięta do nieba.\n\n5. Ukoronowanie Maryi na Królową nieba i ziemi — Maryja zostaje ukoronowana na Królową nieba i ziemi."
+                        },
+                        {
+                            "title": "Modlitwy końcowe",
+                            "subtitle": "Po pięciu dziesiątkach",
+                            "content": "[INSTRUCTION]Odmów Witaj, Królowo:[/INSTRUCTION]\n\n[PRAYER]Witaj, Królowo, Matko miłosierdzia, życie, słodyczy i nadziejo nasza, witaj! Do Ciebie wołamy wygnańcy, synowie Ewy. Do Ciebie wzdychamy, jęcząc i płacząc na tym łez padole. Przeto, Orędowniczko nasza, one miłosierne oczy Twoje na nas zwróć, a Jezusa, błogosławiony owoc żywota Twojego, po tym wygnaniu nam okaż. O łaskawa, o litościwa, o słodka Panno Maryjo![/PRAYER]\n\n[VERSICLE]K. Módl się za nami, święta Boża Rodzicielko.[/VERSICLE]\n[RESPONSE]W. Abyśmy się stali godnymi obietnic Chrystusowych.[/RESPONSE]\n\n[INSTRUCTION]Modlitwa końcowa:[/INSTRUCTION]\n\n[PRAYER]Boże, Twój Syn Jednorodzony przez swoje życie, śmierć i zmartwychwstanie wysłużył nam nagrodę życia wiecznego; spraw, prosimy, abyśmy rozważając te tajemnice świętego różańca Najświętszej Maryi Panny, naśladowali to, co zawierają, i otrzymali to, co obiecują. Przez Chrystusa, Pana naszego. Amen.[/PRAYER]\n\n[INSTRUCTION]Uczyń znak krzyża[/INSTRUCTION]"
+                        }
+                    ]
+                },
+                {
+                    "id": "divine_mercy_chaplet",
+                    "title": "Koronka do Miłosierdzia Bożego",
+                    "icon": "water_drop_outlined",
+                    "isExpandable": true,
+                    "sections": [
+                        {
+                            "title": "Modlitwy wstępne",
+                            "content": "1. Uczyń znak krzyża\n2. Modlitwa wstępna (do wyboru):\n\n[PRAYER]Skonałeś, Jezu, ale zdrój życia wytrysnął dla dusz i otworzyło się morze miłosierdzia dla świata całego. O Zdroju Żywota, niezgłębione Miłosierdzie Boże, ogarnij świat cały i wylej się na nas.[/PRAYER]\n\n3. Powtórz trzy razy:\n\n[PRAYER]O Krwi i Wodo, któraś wypłynęła z Najświętszego Serca Jezusowego jako zdrój miłosierdzia dla nas, ufam Tobie![/PRAYER]"
+                        },
+                        {
+                            "title": "Koronka",
+                            "content": "1. Odmów Ojcze nasz\n2. Odmów Zdrowaś Maryjo\n3. Odmów Skład Apostolski\n\n[RUBRIC]Na dużych paciorkach (paciorkach Ojcze nasz) mów:[/RUBRIC]\n\n[PRAYER]Ojcze Przedwieczny, ofiaruję Ci Ciało i Krew, Duszę i Bóstwo najmilszego Syna Twojego, a Pana naszego Jezusa Chrystusa, na przebłaganie za grzechy nasze i całego świata.[/PRAYER]\n\n[RUBRIC]Na małych paciorkach (paciorkach Zdrowaś Maryjo) mów:[/RUBRIC]\n\n[PRAYER]Dla Jego bolesnej męki miej miłosierdzie dla nas i całego świata.[/PRAYER]\n\nPowtarzaj przez pięć dziesiątków."
+                        },
+                        {
+                            "title": "Zakończenie",
+                            "content": "Powtórz trzy razy:\n\n[PRAYER]Święty Boże, Święty Mocny, Święty Nieśmiertelny, zmiłuj się nad nami i nad całym światem.[/PRAYER]\n\nModlitwa końcowa (do wyboru):\n\n[PRAYER]O Boże Wiekuisty, w którym miłosierdzie jest niezgłębione, a skarby litości nieprzebrane, wejrzyj na nas łaskawie i pomnóż w nas miłosierdzie swoje, byśmy nigdy, w największych nawet trudnościach, nie poddawali się rozpaczy, lecz zawsze ufnie zgadzali się z wolą Twoją, która jest samym miłosierdziem.[/PRAYER]"
+                        }
+                    ]
+                },
+                {
+                    "id": "guardian_angel",
+                    "title": "Modlitwa do Anioła Stróża",
+                    "icon": "shield_outlined",
+                    "content": "Aniele Boży, stróżu mój,\nTy zawsze przy mnie stój.\nRano, wieczór, we dnie, w nocy\nbądź mi zawsze ku pomocy.\n\nStrzeż duszy, ciała mego\ni zaprowadź mnie do żywota wiecznego.\n\n[AMEN]Amen."
+                }
+            ]
+        },
+        {
+            "id": "communion",
+            "title": "Modlitwy przy Komunii Świętej",
+            "icon": "wb_sunny_outlined",
+            "prayers": [
+                {
+                    "id": "before_communion",
+                    "title": "Modlitwa przed Komunią Świętą",
+                    "icon": "wb_twilight_outlined",
+                    "content": "Panie Jezu Chryste, Synu Boga żywego, Ty z woli Ojca, za współdziałaniem Ducha Świętego, przez swoją śmierć dałeś życie światu:\n\nwybaw mnie przez najświętsze Ciało i Krew Twoją od wszystkich nieprawości moich i od wszelkiego zła;\n\nspraw także, abym zawsze zachowywał Twoje przykazania, i nie dozwól mi nigdy odłączyć się od Ciebie.\n\nKtóry żyjesz i królujesz z Bogiem Ojcem i Duchem Świętym, Bóg przez wszystkie wieki wieków.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "after_communion",
+                    "title": "Modlitwa po Komunii Świętej",
+                    "subtitle": "Duszo Chrystusowa (Anima Christi)",
+                    "icon": "light_mode_outlined",
+                    "content": "Duszo Chrystusowa, uświęć mnie.\nCiało Chrystusowe, zbaw mnie.\nKrwi Chrystusowa, napój mnie.\nWodo z boku Chrystusowego, obmyj mnie.\n\nMęko Chrystusowa, pokrzep mnie.\nO dobry Jezu, wysłuchaj mnie.\nW ranach swoich ukryj mnie.\nNie dopuść mi oddalić się od Ciebie.\n\nOd złego ducha broń mnie.\nW godzinę śmierci wezwij mnie.\nI każ mi przyjść do siebie,\nabym ze świętymi Twymi chwalił Cię\nna wieki wieków.\n\n[AMEN]Amen."
+                }
+            ]
+        }
+    ]
+}

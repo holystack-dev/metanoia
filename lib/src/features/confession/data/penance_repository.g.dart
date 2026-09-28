@@ -25,14 +25,17 @@ final penanceRepositoryProvider =
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
 typedef PenanceRepositoryRef = AutoDisposeProviderRef<PenanceRepository>;
-String _$pendingPenancesHash() => r'bce24910dce9e2e4fc2f6ac70e5b1edc29ad0675';
+String _$pendingPenancesHash() => r'3fc9c2b37058a0f8d90999307856e394e7ac3973';
 
-/// Provider for pending (incomplete) penances
+/// Provider for pending (incomplete) penances.
+///
+/// A Drift stream: completing, editing or deleting a penance — or deleting the
+/// confession it belongs to — re-emits here on its own.
 ///
 /// Copied from [pendingPenances].
 @ProviderFor(pendingPenances)
 final pendingPenancesProvider =
-    AutoDisposeFutureProvider<List<PenanceWithConfession>>.internal(
+    AutoDisposeStreamProvider<List<PenanceWithConfession>>.internal(
       pendingPenances,
       name: r'pendingPenancesProvider',
       debugGetCreateSourceHash:
@@ -46,9 +49,9 @@ final pendingPenancesProvider =
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
 typedef PendingPenancesRef =
-    AutoDisposeFutureProviderRef<List<PenanceWithConfession>>;
+    AutoDisposeStreamProviderRef<List<PenanceWithConfession>>;
 String _$penanceForConfessionHash() =>
-    r'56209a6bd827ddf6b76c61c1739ec9d5367cf05a';
+    r'd2b93f1a545fa969e38a02a4b7b8f72957620d53';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -118,7 +121,7 @@ class PenanceForConfessionFamily extends Family<AsyncValue<Penance?>> {
 /// Provider for penance by confession ID
 ///
 /// Copied from [penanceForConfession].
-class PenanceForConfessionProvider extends AutoDisposeFutureProvider<Penance?> {
+class PenanceForConfessionProvider extends AutoDisposeStreamProvider<Penance?> {
   /// Provider for penance by confession ID
   ///
   /// Copied from [penanceForConfession].
@@ -152,7 +155,7 @@ class PenanceForConfessionProvider extends AutoDisposeFutureProvider<Penance?> {
 
   @override
   Override overrideWith(
-    FutureOr<Penance?> Function(PenanceForConfessionRef provider) create,
+    Stream<Penance?> Function(PenanceForConfessionRef provider) create,
   ) {
     return ProviderOverride(
       origin: this,
@@ -169,7 +172,7 @@ class PenanceForConfessionProvider extends AutoDisposeFutureProvider<Penance?> {
   }
 
   @override
-  AutoDisposeFutureProviderElement<Penance?> createElement() {
+  AutoDisposeStreamProviderElement<Penance?> createElement() {
     return _PenanceForConfessionProviderElement(this);
   }
 
@@ -190,13 +193,13 @@ class PenanceForConfessionProvider extends AutoDisposeFutureProvider<Penance?> {
 
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
-mixin PenanceForConfessionRef on AutoDisposeFutureProviderRef<Penance?> {
+mixin PenanceForConfessionRef on AutoDisposeStreamProviderRef<Penance?> {
   /// The parameter `confessionId` of this provider.
   int get confessionId;
 }
 
 class _PenanceForConfessionProviderElement
-    extends AutoDisposeFutureProviderElement<Penance?>
+    extends AutoDisposeStreamProviderElement<Penance?>
     with PenanceForConfessionRef {
   _PenanceForConfessionProviderElement(super.provider);
 

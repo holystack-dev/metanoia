@@ -1,3 +1,4 @@
+import 'package:confessionapp/src/core/theme/app_radius.dart';
 import 'package:confessionapp/src/core/utils/haptic_utils.dart';
 import 'package:flutter/material.dart';
 
@@ -136,7 +137,7 @@ class _KeypadButton extends StatelessWidget {
                   onPressed!();
                 }
               : null,
-          borderRadius: BorderRadius.circular(40),
+          borderRadius: BorderRadius.circular(AppRadius.pill),
           splashColor: theme.colorScheme.primary.withValues(alpha: 0.1),
           highlightColor: theme.colorScheme.primary.withValues(alpha: 0.05),
           child: Container(

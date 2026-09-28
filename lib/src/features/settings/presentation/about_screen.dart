@@ -1,9 +1,13 @@
 import 'package:confessionapp/src/core/constants/app_constants.dart';
 import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
+import 'package:confessionapp/src/core/services/package_info_service.dart';
+import 'package:confessionapp/src/core/theme/app_radius.dart';
+import 'package:confessionapp/src/core/widgets/app_back_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class AboutScreen extends StatelessWidget {
+class AboutScreen extends ConsumerWidget {
   const AboutScreen({super.key});
 
   Widget _referenceItem(ThemeData theme, String url) {
@@ -35,21 +39,43 @@ class AboutScreen extends StatelessWidget {
     );
   }
 
-  Future<void> _launchUrl(String url) async {
-    final uri = Uri.parse(url);
-    if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
-      throw Exception('Could not launch $url');
+  /// Opens [url] externally, telling the user if it could not be opened.
+  Future<void> _launchUrl(BuildContext context, String url) async {
+    var launched = false;
+    try {
+      launched = await launchUrl(
+        Uri.parse(url),
+        mode: LaunchMode.externalApplication,
+      );
+    } catch (_) {
+      launched = false;
     }
+
+    if (launched || !context.mounted) return;
+
+    final l10n = AppLocalizations.of(context)!;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(l10n.couldNotOpenLink),
+        backgroundColor: Theme.of(context).colorScheme.error,
+      ),
+    );
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context)!;
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
+    final version = ref
+        .watch(packageInfoProvider)
+        .maybeWhen(data: (info) => info.version, orElse: () => '');
 
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.about)),
+      appBar: AppBar(
+        leading: const AppBackButton(fallbackLocation: '/settings'),
+        title: Text(l10n.about),
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -83,7 +109,7 @@ class AboutScreen extends StatelessWidget {
             const SizedBox(height: 8),
             // Version
             Text(
-              '${l10n.version} 1.0.0',
+              '${l10n.version} $version',
               style: theme.textTheme.bodyLarge?.copyWith(
                 color: theme.colorScheme.onSurfaceVariant,
               ),
@@ -113,7 +139,7 @@ class AboutScreen extends StatelessWidget {
               title: Text(l10n.website),
               subtitle: const Text('holystack.dev/metanoia'),
               trailing: const Icon(Icons.open_in_new, size: 20),
-              onTap: () => _launchUrl(AppUrls.website),
+              onTap: () => _launchUrl(context, AppUrls.website),
             ),
             const Divider(),
             // Privacy Policy
@@ -121,7 +147,7 @@ class AboutScreen extends StatelessWidget {
               leading: const Icon(Icons.privacy_tip_outlined),
               title: Text(l10n.privacyPolicy),
               trailing: const Icon(Icons.open_in_new, size: 20),
-              onTap: () => _launchUrl(AppUrls.privacyPolicy),
+              onTap: () => _launchUrl(context, AppUrls.privacyPolicy),
             ),
             const Divider(),
             // Source Code (GitHub)
@@ -130,19 +156,19 @@ class AboutScreen extends StatelessWidget {
               title: Text(l10n.sourceCode),
               subtitle: const Text('github.com/holystack-dev/metanoia'),
               trailing: const Icon(Icons.open_in_new, size: 20),
-              onTap: () => _launchUrl(AppUrls.githubRepo),
+              onTap: () => _launchUrl(context, AppUrls.githubRepo),
             ),
             const Divider(),
             // Licenses
             ListTile(
               leading: const Icon(Icons.description_outlined),
-              title: const Text('Open Source Licenses'),
+              title: Text(l10n.openSourceLicenses),
               trailing: const Icon(Icons.chevron_right),
               onTap:
                   () => showLicensePage(
                     context: context,
                     applicationName: l10n.appTitle,
-                    applicationVersion: '1.0.0',
+                    applicationVersion: version,
                     applicationIcon: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Image.asset(
@@ -160,9 +186,11 @@ class AboutScreen extends StatelessWidget {
               child: Card(
                 elevation: 0,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(AppRadius.card),
                   side: BorderSide(
-                    color: theme.colorScheme.outlineVariant.withValues(alpha: 0.5),
+                    color: theme.colorScheme.outlineVariant.withValues(
+                      alpha: 0.5,
+                    ),
                   ),
                 ),
                 child: Padding(

@@ -76,6 +76,8 @@
   "confessionCompletedMessage": "Confession completed! God bless you.",
   "finishConfession": "Finish Confession",
   "error": "Error",
+  "retry": "Retry",
+  "dailyQuoteError": "Today's quote couldn't be loaded.",
   "keepHistory": "Keep Confession History",
   "keepHistorySubtitle": "Save your sins along with the date. If disabled, only the date will be saved.",
   "deleteConfession": "Delete Confession",
@@ -101,7 +103,24 @@
   "shareApp": "Share App",
   "shareAppSubtitle": "Share with friends and family",
   "rateApp": "Rate App",
-  "rateAppSubtitle": "Rate us on the Play Store",
+  "spreadShareTitle": "Share Metanoia",
+  "spreadShareSubtitle": "Know someone who's been away from confession? Help them find their way back.",
+  "spreadShareAction": "Share",
+  "spreadRateSubtitle": "If Metanoia has helped you prepare for confession, a rating helps others find it.",
+  "spreadRateAction": "Rate",
+  "rateGateHint": "How would you rate your experience?",
+  "rateGateLowest": "Lowest",
+  "rateGateHighest": "Highest",
+  "rateGateThanks": "Thank you — your feedback means a lot to us.",
+  "rateAppSubtitle": "Rate us on the {store}",
+  "@rateAppSubtitle": {
+    "description": "Subtitle under Rate App. {store} is the platform's app store name (a brand name, not translated): App Store on iOS, Google Play on Android.",
+    "placeholders": {
+      "store": {
+        "type": "String"
+      }
+    }
+  },
   "website": "Website",
   "privacyPolicy": "Privacy Policy",
   "madeWithLove": "Made with ❤️ by holystack.dev",
@@ -211,7 +230,7 @@
   "skip": "Skip",
   "back": "Back",
   "skipOnboardingTitle": "Skip Introduction?",
-  "skipOnboardingMessage": "You can always access help and settings later from the app menu.",
+  "skipOnboardingMessage": "You'll go straight to the last page. Nothing is set up here — you can change everything later in Settings.",
   "confessionHistoryTitle": "Confession History",
   "deleteAll": "Delete All",
   "editDate": "Edit Date",
@@ -296,6 +315,14 @@
   },
   "resetPinBiometricPrompt": "Verify your identity to reset PIN",
   "confessionGuideTitle": "How to Make a Good Confession",
+  "shortFilmTitle": "Confession: A Short Film",
+  "@shortFilmTitle": {
+    "description": "Title of the Guide card that links to a confession short film on YouTube"
+  },
+  "shortFilmSubtitle": "Created by Blazing Youth Wembley, St Joseph's RC Church, Wembley, United Kingdom",
+  "@shortFilmSubtitle": {
+    "description": "Courtesy/attribution line on the short film card; keep the proper nouns 'Blazing Youth Wembley', 'St Joseph's RC Church' and 'Wembley' untranslated; the country name 'United Kingdom' may be localized"
+  },
   "confessionGuideSubtitle": "Step-by-step guide to the Sacrament",
   "invitationTitle": "Returning to Confession?",
   "invitationSubtitle": "A word of encouragement for you",
@@ -310,6 +337,42 @@
   "onboardingDisclaimer": "A spiritual companion for confession—not a replacement for it.",
   "readyToBegin": "You're All Set",
   "readyToBeginSubtitle": "May your journey toward reconciliation be filled with grace and peace.",
+  "onboardingOverviewTitle": "What this app does",
+  "@onboardingOverviewTitle": {
+    "description": "Heading of the onboarding page that summarises the app"
+  },
+  "onboardingOverviewExamine": "Prepare your conscience, at your pace.",
+  "@onboardingOverviewExamine": {
+    "description": "Onboarding overview: what the Examine tab is for"
+  },
+  "onboardingOverviewConfess": "A discreet checklist, so nothing is forgotten.",
+  "@onboardingOverviewConfess": {
+    "description": "Onboarding overview: what the Confess tab is for"
+  },
+  "onboardingOverviewJournal": "A short evening reflection, to keep growing between confessions.",
+  "@onboardingOverviewJournal": {
+    "description": "Onboarding overview: what the Journal tab is for"
+  },
+  "onboardingOverviewFootnote": "Prayers, guides and optional reminders are inside.",
+  "@onboardingOverviewFootnote": {
+    "description": "Muted footnote listing the features that are not tabs"
+  },
+  "onboardingPrivacyTitle": "Private by design",
+  "@onboardingPrivacyTitle": {
+    "description": "Heading of the onboarding privacy page"
+  },
+  "onboardingPrivacyLocal": "Everything stays on this phone. No account, no cloud.",
+  "@onboardingPrivacyLocal": {
+    "description": "Onboarding privacy: data never leaves the device"
+  },
+  "onboardingPrivacyEncrypted": "Encrypted on your device.",
+  "@onboardingPrivacyEncrypted": {
+    "description": "Onboarding privacy: the database is encrypted at rest"
+  },
+  "onboardingPrivacyPin": "You'll create a PIN the first time you open an examination or your journal.",
+  "@onboardingPrivacyPin": {
+    "description": "Onboarding privacy: sets the expectation that a PIN is created later"
+  },
   "sourceCode": "Source Code",
   "contentReferences": "Content References",
   "examinationModeTitle": "How would you like to examine?",
@@ -327,13 +390,817 @@
   "questionProgress": "{current} of {total}",
   "@questionProgress": {
     "placeholders": {
-      "current": {"type": "int"},
-      "total": {"type": "int"}
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
     }
   },
   "examinationComplete": "Examination Complete",
   "reviewYourSelections": "Review your selections",
   "examinationModeSettingTitle": "Examination Mode",
   "examinationModeSettingSubtitle": "Choose how you'd like to examine your conscience",
-  "askEveryTime": "Ask Every Time"
+  "askEveryTime": "Ask Every Time",
+  "reminderNotificationTitle": "Time for Confession",
+  "@reminderNotificationTitle": {
+    "description": "Title of the scheduled confession reminder notification"
+  },
+  "reminderNotificationBody": "Remember to examine your conscience and prepare for confession",
+  "@reminderNotificationBody": {
+    "description": "Body of the scheduled confession reminder notification"
+  },
+  "notificationPermissionDenied": "Notifications are turned off. Allow notifications for Metanoia in your device settings to receive confession reminders.",
+  "@notificationPermissionDenied": {
+    "description": "Shown when the user denies the notification permission while enabling reminders"
+  },
+  "openSourceLicenses": "Open Source Licenses",
+  "@openSourceLicenses": {
+    "description": "Title of the open source licenses list tile on the About screen"
+  },
+  "couldNotOpenLink": "Could not open the link",
+  "@couldNotOpenLink": {
+    "description": "Shown when an external link fails to open"
+  },
+  "itemsConfessed": "{count, plural, =1{1 item confessed} other{{count} items confessed}}",
+  "@itemsConfessed": {
+    "description": "Number of items confessed in a past confession",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "penancesCount": "{count, plural, =1{1 penance} other{{count} penances}}",
+  "@penancesCount": {
+    "description": "Number of penances",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "pendingCount": "{count, plural, =1{1 pending} other{{count} pending}}",
+  "@pendingCount": {
+    "description": "Number of pending items",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "totalCount": "{count, plural, =1{1 total} other{{count} total}}",
+  "@totalCount": {
+    "description": "Total number of confessions in history",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "itemsCount": "{count, plural, =1{1 item} other{{count} items}}",
+  "@itemsCount": {
+    "description": "Number of items",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "daysCount": "{count, plural, =1{1 day} other{{count} days}}",
+  "@daysCount": {
+    "description": "Number of days, used as a statistic value",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "weeksShort": "{count, plural, =1{1 wk} other{{count} wks}}",
+  "@weeksShort": {
+    "description": "Abbreviated number of weeks, used as a statistic value",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "deleteAllConfessionsTitle": "Delete All Confessions?",
+  "@deleteAllConfessionsTitle": {
+    "description": "Title of the delete all confessions confirmation dialog"
+  },
+  "deleteAllConfessionsContent": "This will permanently delete all your confession history. This action cannot be undone.",
+  "@deleteAllConfessionsContent": {
+    "description": "Body of the delete all confessions confirmation dialog"
+  },
+  "allConfessionsDeleted": "All confessions deleted",
+  "@allConfessionsDeleted": {
+    "description": "Confirmation shown after deleting all confessions"
+  },
+  "deletePenanceConfirm": "Are you sure you want to delete this penance?",
+  "@deletePenanceConfirm": {
+    "description": "Body of the delete penance confirmation dialog"
+  },
+  "completed": "Completed",
+  "@completed": {
+    "description": "Badge shown on a completed penance"
+  },
+  "tapToCollapse": "Tap to collapse",
+  "@tapToCollapse": {
+    "description": "Hint on an expanded prayer card"
+  },
+  "dismiss": "Dismiss",
+  "@dismiss": {
+    "description": "Tooltip of a button that dismisses a note"
+  },
+  "showcaseStep": "Step {current} of {total}",
+  "@showcaseStep": {
+    "description": "Step indicator in the tutorial showcase tooltip",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "done": "Done",
+  "@done": {
+    "description": "Label of the button that finishes the tutorial"
+  },
+  "navigate": "Navigate",
+  "@navigate": {
+    "description": "Accessibility label of a chevron that opens a screen"
+  },
+  "encouragement": "Encouragement",
+  "@encouragement": {
+    "description": "Accessibility label of the encouragement card icon"
+  },
+  "biometricPromptReason": "Authenticate to access Metanoia",
+  "@biometricPromptReason": {
+    "description": "Reason shown in the system biometric prompt when unlocking the app"
+  },
+  "tryAgainInLabel": "Try again in",
+  "@tryAgainInLabel": {
+    "description": "Label above the lockout countdown"
+  },
+  "errorLoadingLanguage": "Error loading language",
+  "@errorLoadingLanguage": {
+    "description": "Shown when the language list fails to load"
+  },
+  "detailsNotSaved": "Details not saved",
+  "@detailsNotSaved": {
+    "description": "Shown for a confession recorded while \"Keep confession history\" was off, so only its date exists"
+  },
+  "discardStoredSinsTitle": "Discard saved sins?",
+  "@discardStoredSinsTitle": {
+    "description": "Title of the dialog offering to purge already-stored sins when confession history is switched off"
+  },
+  "discardStoredSinsContent": "Confession history is now off. The sins already saved from past confessions are still stored. Discard them? The dates will be kept, so your insights and streaks stay intact.",
+  "@discardStoredSinsContent": {
+    "description": "Body of that dialog"
+  },
+  "keepThem": "Keep them",
+  "@keepThem": {
+    "description": "Button: keep the already-stored sins"
+  },
+  "discard": "Discard",
+  "@discard": {
+    "description": "Button: discard the already-stored sins"
+  },
+  "storedSinsDiscarded": "Saved sins discarded. Confession dates were kept.",
+  "@storedSinsDiscarded": {
+    "description": "Confirmation that the stored sins were discarded"
+  },
+  "journalTitle": "Journal",
+  "@journalTitle": {
+    "description": "Title of the daily journal screen"
+  },
+  "journalHomeCardTitle": "Evening reflection",
+  "@journalHomeCardTitle": {
+    "description": "Title of the journal card on the home screen"
+  },
+  "journalHomeCardSubtitle": "How was today?",
+  "@journalHomeCardSubtitle": {
+    "description": "Subtitle of the journal card on the home screen"
+  },
+  "journalStreakDays": "{count, plural, one{{count} day} other{{count} days}}",
+  "@journalStreakDays": {
+    "description": "Number of consecutive days with a journal entry",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "journalStreakLabel": "Days of reflection in a row",
+  "@journalStreakLabel": {
+    "description": "Accessibility label of the reflection streak badge"
+  },
+  "journalContinueToday": "Continue today's entry",
+  "@journalContinueToday": {
+    "description": "Call to action when today's journal entry has already been started"
+  },
+  "journalPreviousMonth": "Previous month",
+  "@journalPreviousMonth": {
+    "description": "Tooltip of the previous month button in the journal calendar"
+  },
+  "journalNextMonth": "Next month",
+  "@journalNextMonth": {
+    "description": "Tooltip of the next month button in the journal calendar"
+  },
+  "journalGratitudeTitle": "Gratitude",
+  "@journalGratitudeTitle": {
+    "description": "Title of the gratitude step of the journal entry flow"
+  },
+  "journalGratitudePrompt": "Where did I see God today?",
+  "@journalGratitudePrompt": {
+    "description": "Prompt of the gratitude step"
+  },
+  "journalGratitudeHint": "A grace I want to thank Him for…",
+  "@journalGratitudeHint": {
+    "description": "Hint text of the optional gratitude field"
+  },
+  "journalPresenceLead": "God is here with you. Be still before Him, and give thanks.",
+  "@journalPresenceLead": {
+    "description": "Short, plain instruction opening the gratitude movement (Lato). Keep it simple and unadorned."
+  },
+  "journalPresenceVerse": "Be still, and know that I am God.",
+  "@journalPresenceVerse": {
+    "description": "Scripture shown for the gratitude movement (Psalm 46:10). Use the exact wording of this verse from the language's approved Catholic Bible translation — do NOT paraphrase or re-translate."
+  },
+  "journalPresenceRef": "Psalm 46:10",
+  "@journalPresenceRef": {
+    "description": "Citation of the gratitude Scripture. Localise the book name and numbering to the language's convention (e.g. 'Salmo 46,10')."
+  },
+  "journalLightTitle": "Ask for Light",
+  "@journalLightTitle": {
+    "description": "Title of the second Examen movement: a prayer to the Holy Spirit for light"
+  },
+  "journalLightLead": "Ask the Holy Spirit for light to see your day as God sees it.",
+  "@journalLightLead": {
+    "description": "Short, plain instruction for the Ask-for-Light movement (Lato)."
+  },
+  "journalLightVerse": "Come, Holy Spirit, fill the hearts of your faithful, and kindle in them the fire of your love.",
+  "@journalLightVerse": {
+    "description": "The traditional 'Come, Holy Spirit' prayer (the Veni Sancte Spiritus versicle). Use the language's received, familiar Catholic wording of this well-known prayer — do NOT translate it afresh."
+  },
+  "journalReviewTitle": "Review with God",
+  "@journalReviewTitle": {
+    "description": "Title of the review movement: walking back through the day with God"
+  },
+  "journalReviewLead": "Walk back through your day with the Lord — where love came to you, where you gave it, and where you turned away.",
+  "@journalReviewLead": {
+    "description": "Short, plain instruction for the review movement (Lato)."
+  },
+  "journalReviewVerse": "Search me, O God, and know my heart; test me and know my thoughts. See if there is any wicked way in me, and lead me in the way everlasting.",
+  "@journalReviewVerse": {
+    "description": "Scripture for the review movement (Psalm 139:23-24). Use the exact wording from the language's approved Catholic Bible translation — do NOT paraphrase."
+  },
+  "journalReviewRef": "Psalm 139:23–24",
+  "@journalReviewRef": {
+    "description": "Citation of the review Scripture. Localise the book name and numbering."
+  },
+  "journalReviewHint": "Speak to Him about your day…",
+  "@journalReviewHint": {
+    "description": "Hint text of the optional reflection field in the review movement"
+  },
+  "journalReviewBringSin": "Is there anything you want to bring to Him?",
+  "@journalReviewBringSin": {
+    "description": "Gentle label above the optional sin-marking action in the review movement"
+  },
+  "journalContritionTitle": "Contrition",
+  "@journalContritionTitle": {
+    "description": "Title of the contrition movement: sorrow for sin, turned toward God"
+  },
+  "journalContritionLead": "Bring what you have found to the Father, who runs to meet you.",
+  "@journalContritionLead": {
+    "description": "Short, plain instruction for the contrition movement, echoing Luke 15:20 (Lato)."
+  },
+  "journalContritionVerse": "Have mercy on me, O God, in your goodness; in your abundant compassion, blot out my offenses.",
+  "@journalContritionVerse": {
+    "description": "Scripture for the contrition movement (Psalm 51:1, the Miserere). Use the exact wording from the language's approved Catholic Bible translation — do NOT paraphrase."
+  },
+  "journalContritionRef": "Psalm 51:1",
+  "@journalContritionRef": {
+    "description": "Citation of the contrition Scripture. Localise the book name and numbering."
+  },
+  "journalContritionPray": "Pray the Act of Contrition",
+  "@journalContritionPray": {
+    "description": "Label inviting the user to pray the Act of Contrition, which is shown below it"
+  },
+  "journalContritionMercy": "Sorrow born of love for God, with the resolve to confess, opens your heart to His mercy tonight — and its fullness awaits you in Confession, in the words of absolution.",
+  "@journalContritionMercy": {
+    "description": "A gentle line on God's mercy that always points toward sacramental Confession. THEOLOGICALLY LOAD-BEARING (perfect contrition, Catechism 1452): it must NOT tell the user they are now in a state of grace — only that contrition opens the heart to God's mercy and always leads on to Confession. Translate with a native Catholic's care."
+  },
+  "journalResolutionLead": "Rest in His mercy. Tomorrow begins again in Him.",
+  "@journalResolutionLead": {
+    "description": "Short, plain instruction for the final movement (Lato)."
+  },
+  "journalResolutionVerse": "The steadfast love of the Lord never ceases; his mercies are new every morning; great is your faithfulness.",
+  "@journalResolutionVerse": {
+    "description": "Scripture for the final movement (Lamentations 3:22-23). Use the exact wording from the language's approved Catholic Bible translation — do NOT paraphrase."
+  },
+  "journalResolutionRef": "Lamentations 3:22–23",
+  "@journalResolutionRef": {
+    "description": "Citation of the resolution Scripture. Localise the book name and numbering."
+  },
+  "journalReflectionTitle": "Reflection",
+  "@journalReflectionTitle": {
+    "description": "Title of the reflection step of the journal entry flow"
+  },
+  "journalReflectionPrompt": "How was your day?",
+  "@journalReflectionPrompt": {
+    "description": "Prompt of the reflection step"
+  },
+  "journalReflectionHint": "Write freely...",
+  "@journalReflectionHint": {
+    "description": "Hint text of the free reflection field"
+  },
+  "journalSinsTitle": "Mark sins",
+  "@journalSinsTitle": {
+    "description": "Title of the sin marking step of the journal entry flow"
+  },
+  "journalSinsPrompt": "Where did I fall short today?",
+  "@journalSinsPrompt": {
+    "description": "Prompt of the sin marking step"
+  },
+  "journalNoSinsMarked": "Nothing marked yet",
+  "@journalNoSinsMarked": {
+    "description": "Shown when no sins have been marked on a journal day"
+  },
+  "journalAddSin": "Mark a sin",
+  "@journalAddSin": {
+    "description": "Label of the button that opens the sin picker"
+  },
+  "journalRemoveSin": "Remove",
+  "@journalRemoveSin": {
+    "description": "Tooltip of the button that removes a marked sin"
+  },
+  "journalResolutionTitle": "Hope & Resolution",
+  "@journalResolutionTitle": {
+    "description": "Title of the final Examen movement: resting in mercy and resolving for tomorrow"
+  },
+  "journalResolutionPrompt": "One gift for tomorrow",
+  "@journalResolutionPrompt": {
+    "description": "Prompt of the resolution movement"
+  },
+  "journalResolutionHint": "With Your grace, tomorrow I will…",
+  "@journalResolutionHint": {
+    "description": "Hint text of the optional resolution field"
+  },
+  "journalMoodTitle": "Mood",
+  "@journalMoodTitle": {
+    "description": "Title of the mood step of the journal entry flow"
+  },
+  "journalMoodPrompt": "How is your soul tonight?",
+  "@journalMoodPrompt": {
+    "description": "Prompt of the mood step"
+  },
+  "journalMoodDesolate": "Desolate",
+  "@journalMoodDesolate": {
+    "description": "Mood option 1 of 5"
+  },
+  "journalMoodStruggling": "Struggling",
+  "@journalMoodStruggling": {
+    "description": "Mood option 2 of 5"
+  },
+  "journalMoodSteady": "Steady",
+  "@journalMoodSteady": {
+    "description": "Mood option 3 of 5"
+  },
+  "journalMoodGrateful": "Grateful",
+  "@journalMoodGrateful": {
+    "description": "Mood option 4 of 5"
+  },
+  "journalMoodConsoled": "Consoled",
+  "@journalMoodConsoled": {
+    "description": "Mood option 5 of 5"
+  },
+  "journalSaved": "Saved",
+  "@journalSaved": {
+    "description": "Autosave indicator shown once the entry has been written"
+  },
+  "journalSaving": "Saving...",
+  "@journalSaving": {
+    "description": "Autosave indicator shown while a write is pending"
+  },
+  "journalDeleteEntry": "Delete entry",
+  "@journalDeleteEntry": {
+    "description": "Tooltip and title of the delete journal entry action"
+  },
+  "journalDeleteEntryConfirm": "Delete this day's entry? This cannot be undone.",
+  "@journalDeleteEntryConfirm": {
+    "description": "Body of the delete journal entry confirmation dialog"
+  },
+  "journalEntryDeleted": "Entry deleted",
+  "@journalEntryDeleted": {
+    "description": "Confirmation shown after deleting a journal entry"
+  },
+  "journalPickerQuestions": "Questions",
+  "@journalPickerQuestions": {
+    "description": "Tab of the sin picker listing the standard question bank"
+  },
+  "journalPickerMySins": "My sins",
+  "@journalPickerMySins": {
+    "description": "Tab of the sin picker listing the user's custom sins"
+  },
+  "journalPickerOwnWords": "In my own words",
+  "@journalPickerOwnWords": {
+    "description": "Tab of the sin picker for typing a free-text sin"
+  },
+  "journalPickerFreeTextHint": "Describe it in your own words",
+  "@journalPickerFreeTextHint": {
+    "description": "Hint text of the free-text sin field"
+  },
+  "journalSearchSins": "Search sins...",
+  "@journalSearchSins": {
+    "description": "Hint text of the sin picker search field"
+  },
+  "journalAbsolved": "Confessed",
+  "@journalAbsolved": {
+    "description": "Badge on a journal sin that has been carried into a confession"
+  },
+  "journalSinCleared": "A sin you brought to confession",
+  "@journalSinCleared": {
+    "description": "Shown in place of a confessed journal sin whose text was cleared because confession history is off"
+  },
+  "journalPreloadTitle": "{count, plural, one{Include the sin you marked in your journal} other{Include the {count} sins you marked in your journal}}",
+  "@journalPreloadTitle": {
+    "description": "Banner offering to carry journal sin marks into the examination",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "journalPreloadAction": "Include",
+  "@journalPreloadAction": {
+    "description": "Button that carries the journal sin marks into the examination"
+  },
+  "journalPreloadAdded": "{count, plural, one{1 sin added from your journal} other{{count} sins added from your journal}}",
+  "@journalPreloadAdded": {
+    "description": "Confirmation shown after journal sins are added to the examination",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "journalStruggleAreas": "Struggle areas",
+  "@journalStruggleAreas": {
+    "description": "Title of the insights section grouping journal sin marks by commandment"
+  },
+  "journalStruggleAreasSubtitle": "Most often marked in your journal",
+  "@journalStruggleAreasSubtitle": {
+    "description": "Subtitle of the struggle areas insights section"
+  },
+  "journalMarksCount": "{count, plural, one{1 mark} other{{count} marks}}",
+  "@journalMarksCount": {
+    "description": "Number of journal sin marks under one commandment",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "journalReminder": "Journal reminder",
+  "@journalReminder": {
+    "description": "Title of the daily journal reminder settings card"
+  },
+  "journalReminderSubtitle": "A nightly nudge to reflect on your day",
+  "@journalReminderSubtitle": {
+    "description": "Subtitle of the daily journal reminder settings card"
+  },
+  "enableJournalReminder": "Enable journal reminder",
+  "@enableJournalReminder": {
+    "description": "Label of the switch that turns the daily journal reminder on"
+  },
+  "journalReminderNotificationTitle": "Evening reflection",
+  "@journalReminderNotificationTitle": {
+    "description": "Title of the daily journal reminder notification"
+  },
+  "journalReminderNotificationBody": "Take a moment to look back on your day with God",
+  "@journalReminderNotificationBody": {
+    "description": "Body of the daily journal reminder notification"
+  },
+  "confessionDayMode": "Confession Mode",
+  "@confessionDayMode": {
+    "description": "Title of the distraction-free mode used in the confessional"
+  },
+  "confessionDayModeDescription": "Large, distraction-free text for the confessional",
+  "exitConfessionMode": "Exit confession mode",
+  "confessionDayStepOf": "Step {current} of {total}",
+  "@confessionDayStepOf": {
+    "description": "Step counter in confession mode",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "next": "Next",
+  "actOfContrition": "Act of Contrition",
+  "actOfContritionUnavailable": "The Act of Contrition is unavailable",
+  "confessionDaySinsTitle": "Sins to confess",
+  "confessionDayOpeningTitle": "Opening",
+  "confessionDayOpeningIntro": "Make the Sign of the Cross, then begin:",
+  "confessionDayOpeningFormula": "Bless me, Father, for I have sinned.",
+  "confessionDaySinceLast": "It has been {duration} since my last confession.",
+  "@confessionDaySinceLast": {
+    "description": "The second line of the opening formula. {duration} is a human phrase like '2 months' or '3 weeks', computed from the previous confession. Sacramental wording — source from an approved translation, do not paraphrase.",
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "confessionDaySinceLastUnknown": "It has been [days/weeks/months/years] since my last confession.",
+  "@confessionDaySinceLastUnknown": {
+    "description": "Opening formula's second line when there is no earlier confession on record. A fill-in-the-blank template for the penitent to complete, not an assertion — keep the bracketed unit list, which follows the rite guide's 'give the number of weeks, months or years'. Take the unit names from this language's bundled confession guide. Sacramental wording — source from an approved translation."
+  },
+  "confessionDaySinsClosing": "For these and all my sins, I am truly sorry.",
+  "@confessionDaySinsClosing": {
+    "description": "The line a penitent says after confessing their sins. Sacramental wording — source from an approved translation, do not paraphrase."
+  },
+  "confessionDayThanksgivingTitle": "Go in peace",
+  "confessionDayThanksgivingVersicle": "Give thanks to the Lord, for He is good.",
+  "@confessionDayThanksgivingVersicle": {
+    "description": "The priest's dismissal versicle. Liturgical text — source from the approved translation of the Rite of Penance, do not paraphrase."
+  },
+  "confessionDayThanksgivingResponse": "His mercy endures forever.",
+  "@confessionDayThanksgivingResponse": {
+    "description": "The penitent's response to the dismissal versicle. Liturgical text — source from the approved translation of the Rite of Penance."
+  },
+  "confessionDayThanksgivingBody": "You have been washed clean. Complete your penance, and go forward in the peace of Christ.",
+  "@confessionDayThanksgivingBody": {
+    "description": "A gentle pastoral closing shown after absolution, encouraging thanksgiving and completing the penance."
+  },
+  "weeksCount": "{count, plural, =1{1 week} other{{count} weeks}}",
+  "@weeksCount": {
+    "description": "A duration in weeks, e.g. for time since last confession",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "monthsCount": "{count, plural, =1{1 month} other{{count} months}}",
+  "@monthsCount": {
+    "description": "A duration in months, e.g. for time since last confession",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "yearsCount": "{count, plural, =1{1 year} other{{count} years}}",
+  "@yearsCount": {
+    "description": "A duration in years, e.g. for time since last confession",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "seasonLent": "Lent",
+  "@seasonLent": {
+    "description": "Name of the liturgical season of Lent"
+  },
+  "seasonHolyWeek": "Holy Week",
+  "@seasonHolyWeek": {
+    "description": "Name of the liturgical season of Holy Week"
+  },
+  "seasonAdvent": "Advent",
+  "@seasonAdvent": {
+    "description": "Name of the liturgical season of Advent"
+  },
+  "seasonChristmas": "Christmas",
+  "@seasonChristmas": {
+    "description": "Name of the liturgical season of Christmas"
+  },
+  "seasonEaster": "Easter",
+  "@seasonEaster": {
+    "description": "Name of the liturgical season of Easter"
+  },
+  "seasonOrdinaryTime": "Ordinary Time",
+  "@seasonOrdinaryTime": {
+    "description": "Name of the liturgical season of Ordinary Time"
+  },
+  "feastAshWednesday": "Ash Wednesday",
+  "@feastAshWednesday": {
+    "description": "Name of the feast of Ash Wednesday"
+  },
+  "feastPalmSunday": "Palm Sunday",
+  "@feastPalmSunday": {
+    "description": "Name of the feast of Palm Sunday"
+  },
+  "feastEaster": "Easter",
+  "@feastEaster": {
+    "description": "Name of the feast of Easter"
+  },
+  "feastPentecost": "Pentecost",
+  "@feastPentecost": {
+    "description": "Name of the feast of Pentecost"
+  },
+  "feastAssumption": "The Assumption",
+  "@feastAssumption": {
+    "description": "Name of the feast of the Assumption of Mary (15 August)"
+  },
+  "feastAllSaints": "All Saints",
+  "@feastAllSaints": {
+    "description": "Name of the feast of All Saints (1 November)"
+  },
+  "feastImmaculateConception": "The Immaculate Conception",
+  "@feastImmaculateConception": {
+    "description": "Name of the feast of the Immaculate Conception (8 December)"
+  },
+  "feastFirstSundayOfAdvent": "The First Sunday of Advent",
+  "@feastFirstSundayOfAdvent": {
+    "description": "Name of the First Sunday of Advent"
+  },
+  "feastChristmas": "Christmas",
+  "@feastChristmas": {
+    "description": "Name of the feast of Christmas"
+  },
+  "liturgicalLentTitle": "Lent has begun",
+  "@liturgicalLentTitle": {
+    "description": "Title of the home card shown in the first days of Lent"
+  },
+  "liturgicalLentBody": "A season of returning. Many begin it with confession.",
+  "@liturgicalLentBody": {
+    "description": "Body of the home card shown in the first days of Lent"
+  },
+  "liturgicalHolyWeekTitle": "Holy Week has begun",
+  "@liturgicalHolyWeekTitle": {
+    "description": "Title of the home card shown during Holy Week"
+  },
+  "liturgicalHolyWeekBody": "The Church walks toward Easter. There is still time to prepare your heart.",
+  "@liturgicalHolyWeekBody": {
+    "description": "Body of the home card shown during Holy Week"
+  },
+  "liturgicalAdventTitle": "Advent has begun",
+  "@liturgicalAdventTitle": {
+    "description": "Title of the home card shown in the first days of Advent"
+  },
+  "liturgicalAdventBody": "A season of waiting. Many prepare their hearts with confession.",
+  "@liturgicalAdventBody": {
+    "description": "Body of the home card shown in the first days of Advent"
+  },
+  "liturgicalFeastNearTitle": "{feast} is near",
+  "@liturgicalFeastNearTitle": {
+    "description": "Title of the home card shown in the days before a major feast",
+    "placeholders": {
+      "feast": {
+        "type": "String"
+      }
+    }
+  },
+  "liturgicalFeastNearBody": "{count, plural, one{One day away — prepare your heart.} other{{count} days away — prepare your heart.}}",
+  "@liturgicalFeastNearBody": {
+    "description": "Body of the home card shown in the days before a major feast",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "anniversaryTitle": "{count, plural, one{It has been a week since your last confession} other{It has been {count} weeks since your last confession}}",
+  "@anniversaryTitle": {
+    "description": "Title of the home card inviting the user to confession after an unusually long gap",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "anniversaryBody": "Whenever you are ready, mercy is waiting. Would you like to prepare?",
+  "@anniversaryBody": {
+    "description": "Body of the home card inviting the user to confession after an unusually long gap"
+  },
+  "promptPrepare": "Prepare",
+  "@promptPrepare": {
+    "description": "Call to action on the liturgical and anniversary home cards"
+  },
+  "dataUnrecoverableTitle": "Your data cannot be unlocked",
+  "@dataUnrecoverableTitle": {
+    "description": "Title shown when the database encryption key is unrecoverable"
+  },
+  "dataUnrecoverableBody": "The key that protects your confessions is no longer available on this device. This can happen after restoring from a backup, or if the device security settings were reset.\n\nBecause your data is encrypted, it cannot be recovered without that key — not even by us. You can erase it and begin again.",
+  "@dataUnrecoverableBody": {
+    "description": "Explains that encrypted data cannot be recovered without its key"
+  },
+  "eraseAndStartOver": "Erase and start over",
+  "@eraseAndStartOver": {
+    "description": "Button that erases all local data and restarts the app fresh"
+  },
+  "eraseAndStartOverConfirm": "This permanently erases everything stored on this device and starts the app fresh. It cannot be undone.",
+  "@eraseAndStartOverConfirm": {
+    "description": "Confirmation body for erasing all local data"
+  },
+  "penanceSaveFailed": "Could not save the penance. Please try again.",
+  "@penanceSaveFailed": {
+    "description": "Shown when the penance could not be written to the database"
+  },
+  "confessionReminderChannelName": "Confession Reminders",
+  "@confessionReminderChannelName": {
+    "description": "Android notification channel name for confession reminders, shown in system settings"
+  },
+  "confessionReminderChannelDescription": "Reminders for confession",
+  "@confessionReminderChannelDescription": {
+    "description": "Android notification channel description for confession reminders, shown in system settings"
+  },
+  "journalReminderChannelName": "Journal Reminders",
+  "@journalReminderChannelName": {
+    "description": "Android notification channel name for the daily journal reminder, shown in system settings"
+  },
+  "journalReminderChannelDescription": "Daily reminder to write the evening reflection",
+  "@journalReminderChannelDescription": {
+    "description": "Android notification channel description for the daily journal reminder, shown in system settings"
+  },
+  "namedSoFar": "{count, plural, one{One named so far} other{{count} named so far}}",
+  "@namedSoFar": {
+    "description": "The single, quiet progress line during the guided examination: how many sins the user has named so far",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "invitationCardTitle": "Before you begin",
+  "@invitationCardTitle": {
+    "description": "Title of the dismissible inline card offering encouragement at the top of the examination"
+  },
+  "invitationCardAction": "Encourage me",
+  "@invitationCardAction": {
+    "description": "Action on the inline encouragement card; opens the invitation guide"
+  },
+  "homeCtaBeginTitle": "Begin your examination",
+  "@homeCtaBeginTitle": {
+    "description": "Primary home call to action for a user with nothing in progress"
+  },
+  "homeCtaBeginSubtitle": "Prepare your heart before confession",
+  "@homeCtaBeginSubtitle": {
+    "description": "Subtitle of the home call to action inviting an examination"
+  },
+  "homeCtaContinueTitle": "{count, plural, =1{Continue your examination (1 selected)} other{Continue your examination ({count} selected)}}",
+  "@homeCtaContinueTitle": {
+    "description": "Primary home call to action when an examination draft is in progress",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeCtaContinueSubtitle": "Pick up where you left off",
+  "@homeCtaContinueSubtitle": {
+    "description": "Subtitle of the home call to action resuming an examination"
+  },
+  "homeCtaReadyTitle": "You're ready",
+  "@homeCtaReadyTitle": {
+    "description": "Title of the home call to action when the examination is done but the confession has not been made"
+  },
+  "homeCtaReadySubtitle": "{count, plural, =1{1 sin is waiting in your confession list} other{{count} sins are waiting in your confession list}}",
+  "@homeCtaReadySubtitle": {
+    "description": "Subtitle of the home call to action pointing at the confession list",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeCtaPenanceTitle": "Complete your penance",
+  "@homeCtaPenanceTitle": {
+    "description": "Title of the home call to action for an outstanding penance"
+  },
+  "homeCtaPenanceSubtitle": "{count, plural, =1{1 penance is still waiting} other{{count} penances are still waiting}}",
+  "@homeCtaPenanceSubtitle": {
+    "description": "Subtitle of the home call to action when penances are still pending",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeGuideCardSubtitle": "Encouragement, a step-by-step guide, prayers and FAQs",
+  "@homeGuideCardSubtitle": {
+    "description": "Subtitle of the guide entry point on the home screen"
+  },
+  "homeQuoteReadMore": "Read more",
+  "@homeQuoteReadMore": {
+    "description": "Expands the clamped daily quote on the home screen"
+  },
+  "homeQuoteShowLess": "Show less",
+  "@homeQuoteShowLess": {
+    "description": "Collapses the expanded daily quote on the home screen"
+  },
+  "tutorialJournalDesc": "Look back on your day each evening: a short reflection, and your streak.",
+  "@tutorialJournalDesc": {
+    "description": "Tutorial step describing the journal card on the home screen"
+  }
 }

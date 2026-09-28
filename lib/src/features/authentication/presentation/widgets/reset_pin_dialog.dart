@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
+import 'package:confessionapp/src/core/theme/app_radius.dart';
 import 'package:confessionapp/src/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -82,7 +83,7 @@ class _ResetPinDialogState extends State<ResetPinDialog> {
     return AlertDialog(
       backgroundColor: theme.colorScheme.surface,
       surfaceTintColor: Colors.transparent,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppRadius.dialog)),
       title: Row(
         children: [
           Container(
@@ -120,7 +121,7 @@ class _ResetPinDialogState extends State<ResetPinDialog> {
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
                 color: theme.colorScheme.errorContainer.withValues(alpha: 0.2),
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(AppRadius.card),
                 border: Border.all(
                   color: theme.colorScheme.error.withValues(alpha: 0.1),
                 ),
@@ -186,17 +187,17 @@ class _ResetPinDialogState extends State<ResetPinDialog> {
                         ? theme.colorScheme.surfaceContainerHighest
                         : theme.colorScheme.surfaceContainerLow,
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(AppRadius.card),
                   borderSide: BorderSide.none,
                 ),
                 enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(AppRadius.card),
                   borderSide: BorderSide(
                     color: theme.colorScheme.outline.withValues(alpha: 0.2),
                   ),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(AppRadius.card),
                   borderSide: BorderSide(
                     color: theme.colorScheme.error,
                     width: 1.5,
@@ -222,7 +223,7 @@ class _ResetPinDialogState extends State<ResetPinDialog> {
                   color: theme.colorScheme.surfaceContainerHighest.withValues(
                     alpha: 0.5,
                   ),
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(AppRadius.tile),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -272,7 +273,7 @@ class _ResetPinDialogState extends State<ResetPinDialog> {
             elevation: 0,
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(AppRadius.tile),
             ),
             disabledBackgroundColor: theme.colorScheme.onSurface.withValues(
               alpha: 0.12,

@@ -5,6 +5,7 @@ import 'package:drift/drift.dart' hide isNotNull, isNull;
 import 'package:drift/native.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import '../../../../helpers/test_app.dart';
 
 void main() {
   late AppDatabase db;
@@ -167,16 +168,75 @@ void main() {
       expect(penance!.description, 'Specific penance');
     });
   });
-}
 
-class TestAppDatabase extends AppDatabase {
-  TestAppDatabase(super.e);
+  /// The penance providers are Drift streams. Nothing below invalidates them:
+  /// they must re-emit on their own.
+  group('penance providers re-emit without invalidation', () {
+    test('pendingPenances emits a newly added penance', () async {
+      final repository = container.read(penanceRepositoryProvider);
+      final confessionId = await createConfession();
 
-  @override
-  MigrationStrategy get migration => MigrationStrategy(
-    onCreate: (Migrator m) async {
-      await m.createAll();
-      // Skip syncContent()
-    },
-  );
+      final sub = container.listen(pendingPenancesProvider, (_, __) {});
+      addTearDown(sub.close);
+
+      expect(await container.read(pendingPenancesProvider.future), isEmpty);
+
+      await repository.addPenance(confessionId, 'Three Hail Marys');
+
+      await waitUntil(
+        () => container.read(pendingPenancesProvider).valueOrNull?.length == 1,
+        reason: 'the new penance never reached the stream',
+      );
+      expect(
+        container
+            .read(pendingPenancesProvider)
+            .requireValue
+            .single
+            .penance
+            .description,
+        'Three Hail Marys',
+      );
+    });
+
+    test('pendingPenances drops a completed penance', () async {
+      final repository = container.read(penanceRepositoryProvider);
+      final confessionId = await createConfession();
+      final penanceId = await repository.addPenance(confessionId, 'An Our Father');
+
+      final sub = container.listen(pendingPenancesProvider, (_, __) {});
+      addTearDown(sub.close);
+
+      expect(
+        await container.read(pendingPenancesProvider.future),
+        hasLength(1),
+      );
+
+      await repository.completePenance(penanceId);
+
+      await waitUntil(
+        () =>
+            container.read(pendingPenancesProvider).valueOrNull?.isEmpty ?? false,
+        reason: 'the completed penance never left the stream',
+      );
+    });
+
+    test('penanceForConfession emits an updated description', () async {
+      final repository = container.read(penanceRepositoryProvider);
+      final confessionId = await createConfession();
+      final penanceId = await repository.addPenance(confessionId, 'Original');
+
+      final provider = penanceForConfessionProvider(confessionId);
+      final sub = container.listen(provider, (_, __) {});
+      addTearDown(sub.close);
+
+      expect((await container.read(provider.future))!.description, 'Original');
+
+      await repository.updatePenance(penanceId, 'Updated');
+
+      await waitUntil(
+        () => container.read(provider).valueOrNull?.description == 'Updated',
+        reason: 'the updated penance never reached the stream',
+      );
+    });
+  });
 }

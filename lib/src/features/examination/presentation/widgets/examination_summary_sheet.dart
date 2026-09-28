@@ -1,7 +1,10 @@
 import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
+import 'package:confessionapp/src/core/theme/app_radius.dart';
 import 'package:confessionapp/src/core/theme/app_theme.dart';
 import 'package:confessionapp/src/features/examination/data/examination_note_provider.dart';
 import 'package:confessionapp/src/features/examination/data/examination_repository.dart';
+import 'package:confessionapp/src/features/examination/presentation/examination_controller.dart'
+    show kCustomSinKeyPrefix, kJournalSinKeyPrefix, neutralSelectionKey;
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -39,7 +42,7 @@ class ExaminationSummarySheet extends ConsumerWidget {
       ),
       decoration: BoxDecoration(
         color: theme.colorScheme.surface,
-        borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
+        borderRadius: const BorderRadius.vertical(top: Radius.circular(AppRadius.sheet)),
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -51,7 +54,7 @@ class ExaminationSummarySheet extends ConsumerWidget {
             height: 4,
             decoration: BoxDecoration(
               color: theme.colorScheme.onSurfaceVariant.withValues(alpha: 0.4),
-              borderRadius: BorderRadius.circular(2),
+              borderRadius: BorderRadius.circular(AppRadius.bar),
             ),
           ),
 
@@ -141,7 +144,7 @@ class ExaminationSummarySheet extends ConsumerWidget {
               color: theme.colorScheme.surface,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withValues(alpha: 0.05),
+                  color: theme.colorScheme.shadow.withValues(alpha: 0.05),
                   blurRadius: 10,
                   offset: const Offset(0, -5),
                 ),
@@ -190,7 +193,7 @@ class ExaminationSummarySheet extends ConsumerWidget {
 
       // Check standard questions
       for (final q in item.questions) {
-        if (selectedQuestions.containsKey(q.id)) {
+        if (selectedQuestions.containsKey(neutralSelectionKey(q.id))) {
           grouped.putIfAbsent(commandmentTitle, () => []);
           grouped[commandmentTitle]!.add(q.question);
         }
@@ -198,11 +201,19 @@ class ExaminationSummarySheet extends ConsumerWidget {
 
       // Check custom sins (custom-{id} format)
       for (final s in item.customSins) {
-        if (selectedQuestions.containsKey('custom-${s.id}')) {
+        if (selectedQuestions.containsKey('$kCustomSinKeyPrefix${s.id}')) {
           grouped.putIfAbsent(commandmentTitle, () => []);
           grouped[commandmentTitle]!.add('✦ ${s.sinText}');
         }
       }
+    }
+
+    // Free-text journal sins match no question or custom sin, so they get
+    // their own group.
+    for (final entry in selectedQuestions.entries) {
+      if (!entry.key.startsWith(kJournalSinKeyPrefix)) continue;
+      grouped.putIfAbsent(l10n.journalTitle, () => []);
+      grouped[l10n.journalTitle]!.add('✦ ${entry.value}');
     }
 
     return grouped;
@@ -225,7 +236,7 @@ class _ExaminationNote extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(12, 10, 4, 10),
       decoration: BoxDecoration(
         color: theme.colorScheme.primaryContainer.withValues(alpha: 0.3),
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(AppRadius.tile),
         border: Border.all(
           color: theme.colorScheme.primary.withValues(alpha: 0.2),
           width: 1,
@@ -264,7 +275,7 @@ class _ExaminationNote extends StatelessWidget {
               minWidth: 32,
               minHeight: 32,
             ),
-            tooltip: 'Dismiss',
+            tooltip: l10n.dismiss,
           ),
         ],
       ),
@@ -297,7 +308,7 @@ class _CommandmentGroup extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
             decoration: BoxDecoration(
               color: theme.colorScheme.primaryContainer.withValues(alpha: 0.3),
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(AppRadius.chip),
             ),
             child: Row(
               children: [
@@ -320,7 +331,7 @@ class _CommandmentGroup extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                   decoration: BoxDecoration(
                     color: theme.colorScheme.primary,
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(AppRadius.tile),
                   ),
                   child: Text(
                     '${sins.length}',
@@ -336,7 +347,6 @@ class _CommandmentGroup extends StatelessWidget {
 
           // Sins list
           ...sins.asMap().entries.map((entry) {
-            final sinIndex = entry.key;
             final sin = entry.value;
             return Padding(
               padding: const EdgeInsets.only(left: 16, top: 8),
@@ -361,10 +371,10 @@ class _CommandmentGroup extends StatelessWidget {
                   ),
                 ],
               ),
-            ).animate().fadeIn(delay: (50 * sinIndex).ms).slideX(begin: 0.05, end: 0);
+            ).animate().fadeIn(duration: 150.ms);
           }),
         ],
       ),
-    ).animate().fadeIn(delay: (100 * index).ms);
+    ).animate().fadeIn(duration: 150.ms);
   }
 }

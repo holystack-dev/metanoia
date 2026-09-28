@@ -12,7 +12,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get appTitle => 'Metanoia';
 
   @override
-  String get homeTitle => 'Bienvenido';
+  String get homeTitle => 'Inicio';
 
   @override
   String get examineTitle => 'Examinar';
@@ -188,7 +188,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get contentLanguageSubtitle =>
-      'Idioma para el examen, FAQs y oraciones';
+      'Idioma para el examen, preguntas frecuentes y oraciones';
 
   @override
   String get version => 'Versión';
@@ -256,6 +256,12 @@ class AppLocalizationsEs extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get retry => 'Reintentar';
+
+  @override
+  String get dailyQuoteError => 'No se pudo cargar la cita de hoy.';
+
+  @override
   String get keepHistory => 'Guardar Historial de Confesiones';
 
   @override
@@ -283,7 +289,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get tutorialGuideDesc =>
-      'Encuentra aliento, una guía paso a paso y FAQs aquí.';
+      'Encuentra aliento, una guía paso a paso y preguntas frecuentes aquí.';
 
   @override
   String get tutorialSettingsDesc =>
@@ -315,7 +321,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get tutorialInsightsDesc =>
-      'Mira las estadísticas y rachas de tu jornada de confesión.';
+      'Mira las estadísticas y rachas de tu camino de confesión.';
 
   @override
   String get tutorialHistoryDesc =>
@@ -346,7 +352,39 @@ class AppLocalizationsEs extends AppLocalizations {
   String get rateApp => 'Calificar App';
 
   @override
-  String get rateAppSubtitle => 'Califícanos en Play Store';
+  String get spreadShareTitle => 'Comparte Metanoia';
+
+  @override
+  String get spreadShareSubtitle =>
+      '¿Conoces a alguien alejado de la confesión? Ayúdale a volver.';
+
+  @override
+  String get spreadShareAction => 'Compartir';
+
+  @override
+  String get spreadRateSubtitle =>
+      'Si Metanoia te ha ayudado a prepararte para la confesión, una valoración ayuda a que otros la encuentren.';
+
+  @override
+  String get spreadRateAction => 'Valorar';
+
+  @override
+  String get rateGateHint => '¿Cómo valorarías tu experiencia?';
+
+  @override
+  String get rateGateLowest => 'Más baja';
+
+  @override
+  String get rateGateHighest => 'Más alta';
+
+  @override
+  String get rateGateThanks =>
+      'Gracias: tu opinión significa mucho para nosotros.';
+
+  @override
+  String rateAppSubtitle(String store) {
+    return 'Califícanos en $store';
+  }
 
   @override
   String get website => 'Sitio Web';
@@ -483,7 +521,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get deleteCustomSinConfirm =>
-      '¿Estás seguro de que deseas eliminar este pecado personalizado?';
+      '¿Seguro que quieres eliminar este pecado personalizado?';
 
   @override
   String get noCustomSins => 'Aún no hay pecados personalizados';
@@ -514,7 +552,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get penance => 'Penitencia';
 
   @override
-  String get penanceTracker => 'Rastreador de Penitencia';
+  String get penanceTracker => 'Registro de penitencias';
 
   @override
   String get addPenance => 'Añadir Penitencia';
@@ -526,7 +564,8 @@ class AppLocalizationsEs extends AppLocalizations {
   String get penanceDescription => '¿Qué penitencia se te dio?';
 
   @override
-  String get penanceHint => 'ej., Rezar 3 Avemarías, Leer un pasaje...';
+  String get penanceHint =>
+      'ej., Rezar 3 avemarías, leer un pasaje de la Escritura...';
 
   @override
   String get penanceAdded => 'Penitencia añadida';
@@ -614,7 +653,7 @@ class AppLocalizationsEs extends AppLocalizations {
       'Completa tu primera confesión para ver las estadísticas de tu viaje espiritual';
 
   @override
-  String get totalItemsConfessed => 'Total de Ítems Confesados';
+  String get totalItemsConfessed => 'Total de Elementos Confesados';
 
   @override
   String get firstConfession => 'Primera Confesión';
@@ -660,7 +699,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String selectedCount(Object count) {
-    return '$count ítems seleccionados';
+    return '$count elementos seleccionados';
   }
 
   @override
@@ -677,7 +716,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get clearDraftMessage =>
-      'Esto eliminará todas las preguntas seleccionadas. ¿Estás seguro?';
+      'Esto eliminará todas las preguntas seleccionadas. ¿Seguro que quieres continuar?';
 
   @override
   String get clearDraft => 'Borrar Borrador';
@@ -726,7 +765,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get skipOnboardingMessage =>
-      'Siempre puedes acceder a la ayuda y ajustes más tarde desde el menú.';
+      'Irás directamente a la última página. Aquí no se configura nada: puedes cambiarlo todo más tarde en Ajustes.';
 
   @override
   String get confessionHistoryTitle => 'Historial de Confesiones';
@@ -758,7 +797,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get noGuideContentDesc => 'El contenido de la guía aparecerá aquí';
 
   @override
-  String get noFaqContent => 'FAQs no disponibles';
+  String get noFaqContent => 'No hay preguntas frecuentes disponibles';
 
   @override
   String get noFaqContentDesc => 'Las preguntas frecuentes aparecerán aquí';
@@ -777,7 +816,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String examinationProgress(Object count) {
-    return '$count ítems seleccionados';
+    return '$count elementos seleccionados';
   }
 
   @override
@@ -1004,6 +1043,13 @@ class AppLocalizationsEs extends AppLocalizations {
   String get confessionGuideTitle => 'Cómo hacer una buena confesión';
 
   @override
+  String get shortFilmTitle => 'Confesión: un cortometraje';
+
+  @override
+  String get shortFilmSubtitle =>
+      'Creado por Blazing Youth Wembley, St Joseph\'s RC Church, Wembley, Reino Unido';
+
+  @override
   String get confessionGuideSubtitle => 'Guía paso a paso para el Sacramento';
 
   @override
@@ -1013,17 +1059,17 @@ class AppLocalizationsEs extends AppLocalizations {
   String get invitationSubtitle => 'Una palabra de aliento para ti';
 
   @override
-  String get invitationDialogTitle => 'Bienvenido';
+  String get invitationDialogTitle => 'Te damos la bienvenida';
 
   @override
   String get invitationDialogContent =>
-      '¿Es tu primera confesión en mucho tiempo, o te sientes ansioso por ir?';
+      '¿Es tu primera confesión en mucho tiempo, o sientes ansiedad por ir?';
 
   @override
   String get invitationDialogYes => 'Sí, me gustaría algo de aliento';
 
   @override
-  String get invitationDialogNo => 'No, estoy listo para comenzar';
+  String get invitationDialogNo => 'No, puedo comenzar';
 
   @override
   String get invitationDialogDontShowAgain => 'No mostrar esto de nuevo';
@@ -1048,6 +1094,38 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get readyToBeginSubtitle =>
       'Que tu camino hacia la reconciliación esté lleno de gracia y paz.';
+
+  @override
+  String get onboardingOverviewTitle => 'Lo que hace esta app';
+
+  @override
+  String get onboardingOverviewExamine => 'Prepara tu conciencia, a tu ritmo.';
+
+  @override
+  String get onboardingOverviewConfess =>
+      'Una lista discreta, para que nada se olvide.';
+
+  @override
+  String get onboardingOverviewJournal =>
+      'Una breve reflexión nocturna, para seguir creciendo entre confesiones.';
+
+  @override
+  String get onboardingOverviewFootnote =>
+      'Las oraciones, las guías y los recordatorios opcionales están dentro.';
+
+  @override
+  String get onboardingPrivacyTitle => 'Privado por diseño';
+
+  @override
+  String get onboardingPrivacyLocal =>
+      'Todo permanece en este teléfono. Sin cuenta, sin nube.';
+
+  @override
+  String get onboardingPrivacyEncrypted => 'Cifrado en tu dispositivo.';
+
+  @override
+  String get onboardingPrivacyPin =>
+      'Crearás un PIN la primera vez que abras un examen o tu diario.';
 
   @override
   String get sourceCode => 'Código Fuente';
@@ -1080,7 +1158,7 @@ class AppLocalizationsEs extends AppLocalizations {
       'Llena mi corazón y enciende en mí el fuego de Tu amor. Ilumina mi mente para que pueda ver mis pecados claramente.';
 
   @override
-  String get imReady => 'Estoy Listo';
+  String get imReady => 'Comencemos';
 
   @override
   String get skipPrayer => 'Omitir';
@@ -1114,4 +1192,739 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get askEveryTime => 'Preguntar Cada Vez';
+
+  @override
+  String get reminderNotificationTitle => 'Hora de Confesarse';
+
+  @override
+  String get reminderNotificationBody =>
+      'Recuerda examinar tu conciencia y prepararte para la confesión';
+
+  @override
+  String get notificationPermissionDenied =>
+      'Las notificaciones están desactivadas. Permite las notificaciones de Metanoia en los ajustes de tu dispositivo para recibir recordatorios de confesión.';
+
+  @override
+  String get openSourceLicenses => 'Licencias de código abierto';
+
+  @override
+  String get couldNotOpenLink => 'No se pudo abrir el enlace';
+
+  @override
+  String itemsConfessed(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count elementos confesados',
+      one: '1 elemento confesado',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String penancesCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count penitencias',
+      one: '1 penitencia',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String pendingCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count pendientes',
+      one: '1 pendiente',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String totalCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count en total',
+      one: '1 en total',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String itemsCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count elementos',
+      one: '1 elemento',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String daysCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count días',
+      one: '1 día',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String weeksShort(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count sem',
+      one: '1 sem',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get deleteAllConfessionsTitle => '¿Eliminar todas las confesiones?';
+
+  @override
+  String get deleteAllConfessionsContent =>
+      'Esto eliminará permanentemente todo tu historial de confesiones. Esta acción no se puede deshacer.';
+
+  @override
+  String get allConfessionsDeleted => 'Todas las confesiones eliminadas';
+
+  @override
+  String get deletePenanceConfirm =>
+      '¿Seguro que quieres eliminar esta penitencia?';
+
+  @override
+  String get completed => 'Completada';
+
+  @override
+  String get tapToCollapse => 'Toca para contraer';
+
+  @override
+  String get dismiss => 'Descartar';
+
+  @override
+  String showcaseStep(int current, int total) {
+    return 'Paso $current de $total';
+  }
+
+  @override
+  String get done => 'Listo';
+
+  @override
+  String get navigate => 'Navegar';
+
+  @override
+  String get encouragement => 'Ánimo';
+
+  @override
+  String get biometricPromptReason => 'Autentícate para acceder a Metanoia';
+
+  @override
+  String get tryAgainInLabel => 'Inténtalo de nuevo en';
+
+  @override
+  String get errorLoadingLanguage => 'Error al cargar el idioma';
+
+  @override
+  String get detailsNotSaved => 'Detalles no guardados';
+
+  @override
+  String get discardStoredSinsTitle => '¿Descartar los pecados guardados?';
+
+  @override
+  String get discardStoredSinsContent =>
+      'El historial de confesiones ya está desactivado. Los pecados guardados de confesiones anteriores siguen almacenados. ¿Descartarlos? Se conservarán las fechas, para que tus estadísticas y rachas permanezcan intactas.';
+
+  @override
+  String get keepThem => 'Conservarlos';
+
+  @override
+  String get discard => 'Descartar';
+
+  @override
+  String get storedSinsDiscarded =>
+      'Pecados guardados descartados. Se conservaron las fechas de confesión.';
+
+  @override
+  String get journalTitle => 'Diario';
+
+  @override
+  String get journalHomeCardTitle => 'Reflexión de la noche';
+
+  @override
+  String get journalHomeCardSubtitle => '¿Cómo fue hoy?';
+
+  @override
+  String journalStreakDays(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count días',
+      one: '$count día',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get journalStreakLabel => 'Días seguidos de reflexión';
+
+  @override
+  String get journalContinueToday => 'Continúa la entrada de hoy';
+
+  @override
+  String get journalPreviousMonth => 'Mes anterior';
+
+  @override
+  String get journalNextMonth => 'Mes siguiente';
+
+  @override
+  String get journalGratitudeTitle => 'Gratitud';
+
+  @override
+  String get journalGratitudePrompt => '¿Dónde vi a Dios hoy?';
+
+  @override
+  String get journalGratitudeHint => 'Una gracia que quiero agradecerle…';
+
+  @override
+  String get journalPresenceLead =>
+      'Dios está aquí contigo. Aquiétate ante Él y da gracias.';
+
+  @override
+  String get journalPresenceVerse => 'Rendíos, reconoced que yo soy Dios.';
+
+  @override
+  String get journalPresenceRef => 'Salmo 46,11';
+
+  @override
+  String get journalLightTitle => 'Pide luz';
+
+  @override
+  String get journalLightLead =>
+      'Pide al Espíritu Santo la luz para ver tu día como Dios lo ve.';
+
+  @override
+  String get journalLightVerse =>
+      'Ven, Espíritu Santo, llena los corazones de tus fieles y enciende en ellos el fuego de tu amor.';
+
+  @override
+  String get journalReviewTitle => 'Revisa con Dios';
+
+  @override
+  String get journalReviewLead =>
+      'Recorre de nuevo tu día con el Señor: dónde el amor vino a ti, dónde lo diste y dónde te apartaste.';
+
+  @override
+  String get journalReviewVerse =>
+      'Sondéame, oh Dios, y conoce mi corazón, ponme a prueba y conoce mis sentimientos, mira si mi camino se desvía, guíame por el camino eterno.';
+
+  @override
+  String get journalReviewRef => 'Salmo 139,23-24';
+
+  @override
+  String get journalReviewHint => 'Háblale de tu día…';
+
+  @override
+  String get journalReviewBringSin => '¿Hay algo que quieras traer ante Él?';
+
+  @override
+  String get journalContritionTitle => 'Contrición';
+
+  @override
+  String get journalContritionLead =>
+      'Lleva lo que has encontrado al Padre, que corre a tu encuentro.';
+
+  @override
+  String get journalContritionVerse =>
+      'Misericordia, Dios mío, por tu bondad, por tu inmensa compasión borra mi culpa.';
+
+  @override
+  String get journalContritionRef => 'Salmo 51,3';
+
+  @override
+  String get journalContritionPray => 'Reza el Acto de Contrición';
+
+  @override
+  String get journalContritionMercy =>
+      'El dolor que nace del amor a Dios, con el propósito de confesarte, abre tu corazón a su misericordia esta noche; y su plenitud te espera en la Confesión, en las palabras de la absolución.';
+
+  @override
+  String get journalResolutionLead =>
+      'Descansa en su misericordia. Mañana comienza de nuevo en Él.';
+
+  @override
+  String get journalResolutionVerse =>
+      'No se agota la bondad del Señor, no se acaba su misericordia; se renuevan cada mañana, ¡qué grande es tu fidelidad!';
+
+  @override
+  String get journalResolutionRef => 'Lamentaciones 3,22-23';
+
+  @override
+  String get journalReflectionTitle => 'Reflexión';
+
+  @override
+  String get journalReflectionPrompt => '¿Cómo fue tu día?';
+
+  @override
+  String get journalReflectionHint => 'Escribe libremente...';
+
+  @override
+  String get journalSinsTitle => 'Marcar pecados';
+
+  @override
+  String get journalSinsPrompt => '¿En qué fallé hoy?';
+
+  @override
+  String get journalNoSinsMarked => 'Nada marcado todavía';
+
+  @override
+  String get journalAddSin => 'Marcar un pecado';
+
+  @override
+  String get journalRemoveSin => 'Quitar';
+
+  @override
+  String get journalResolutionTitle => 'Esperanza y propósito';
+
+  @override
+  String get journalResolutionPrompt => 'Un don para mañana';
+
+  @override
+  String get journalResolutionHint => 'Con tu gracia, mañana voy a…';
+
+  @override
+  String get journalMoodTitle => 'Estado de ánimo';
+
+  @override
+  String get journalMoodPrompt => '¿Cómo está tu alma esta noche?';
+
+  @override
+  String get journalMoodDesolate => 'Desolación';
+
+  @override
+  String get journalMoodStruggling => 'Lucha';
+
+  @override
+  String get journalMoodSteady => 'Serenidad';
+
+  @override
+  String get journalMoodGrateful => 'Gratitud';
+
+  @override
+  String get journalMoodConsoled => 'Consuelo';
+
+  @override
+  String get journalSaved => 'Guardado';
+
+  @override
+  String get journalSaving => 'Guardando...';
+
+  @override
+  String get journalDeleteEntry => 'Eliminar entrada';
+
+  @override
+  String get journalDeleteEntryConfirm =>
+      '¿Eliminar la entrada de este día? Esta acción no se puede deshacer.';
+
+  @override
+  String get journalEntryDeleted => 'Entrada eliminada';
+
+  @override
+  String get journalPickerQuestions => 'Preguntas';
+
+  @override
+  String get journalPickerMySins => 'Mis pecados';
+
+  @override
+  String get journalPickerOwnWords => 'En mis palabras';
+
+  @override
+  String get journalPickerFreeTextHint => 'Descríbelo con tus propias palabras';
+
+  @override
+  String get journalSearchSins => 'Buscar pecados...';
+
+  @override
+  String get journalAbsolved => 'Confesado';
+
+  @override
+  String get journalSinCleared => 'Un pecado que llevaste a la confesión';
+
+  @override
+  String journalPreloadTitle(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Incluye los $count pecados que marcaste en tu diario',
+      one: 'Incluye el pecado que marcaste en tu diario',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get journalPreloadAction => 'Incluir';
+
+  @override
+  String journalPreloadAdded(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count pecados añadidos desde tu diario',
+      one: '1 pecado añadido desde tu diario',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get journalStruggleAreas => 'Áreas de lucha';
+
+  @override
+  String get journalStruggleAreasSubtitle => 'Lo que más marcas en tu diario';
+
+  @override
+  String journalMarksCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count marcas',
+      one: '1 marca',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get journalReminder => 'Recordatorio del diario';
+
+  @override
+  String get journalReminderSubtitle =>
+      'Un aviso cada noche para reflexionar sobre tu día';
+
+  @override
+  String get enableJournalReminder => 'Activar recordatorio del diario';
+
+  @override
+  String get journalReminderNotificationTitle => 'Reflexión de la noche';
+
+  @override
+  String get journalReminderNotificationBody =>
+      'Tómate un momento para repasar tu día con Dios';
+
+  @override
+  String get confessionDayMode => 'Modo Confesión';
+
+  @override
+  String get confessionDayModeDescription =>
+      'Texto grande y sin distracciones para el confesionario';
+
+  @override
+  String get exitConfessionMode => 'Salir del modo confesión';
+
+  @override
+  String confessionDayStepOf(int current, int total) {
+    return 'Paso $current de $total';
+  }
+
+  @override
+  String get next => 'Siguiente';
+
+  @override
+  String get actOfContrition => 'Acto de Contrición';
+
+  @override
+  String get actOfContritionUnavailable =>
+      'El Acto de Contrición no está disponible';
+
+  @override
+  String get confessionDaySinsTitle => 'Pecados por confesar';
+
+  @override
+  String get confessionDayOpeningTitle => 'Inicio';
+
+  @override
+  String get confessionDayOpeningIntro =>
+      'Haz la Señal de la Cruz y luego comienza:';
+
+  @override
+  String get confessionDayOpeningFormula =>
+      'Bendígame, Padre, porque he pecado.';
+
+  @override
+  String confessionDaySinceLast(String duration) {
+    return 'Mi última confesión fue hace $duration.';
+  }
+
+  @override
+  String get confessionDaySinceLastUnknown =>
+      'Han pasado [días/semanas/meses/años] desde mi última confesión.';
+
+  @override
+  String get confessionDaySinsClosing =>
+      'De estos y de todos mis pecados, me arrepiento de todo corazón.';
+
+  @override
+  String get confessionDayThanksgivingTitle => 'Ve en paz';
+
+  @override
+  String get confessionDayThanksgivingVersicle =>
+      'Da gracias al Señor, porque es bueno.';
+
+  @override
+  String get confessionDayThanksgivingResponse =>
+      'Porque es eterna su misericordia.';
+
+  @override
+  String get confessionDayThanksgivingBody =>
+      'Tu alma ha quedado limpia. Cumple tu penitencia y avanza en la paz de Cristo.';
+
+  @override
+  String weeksCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count semanas',
+      one: '1 semana',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String monthsCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count meses',
+      one: '1 mes',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String yearsCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count años',
+      one: '1 año',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get seasonLent => 'Cuaresma';
+
+  @override
+  String get seasonHolyWeek => 'Semana Santa';
+
+  @override
+  String get seasonAdvent => 'Adviento';
+
+  @override
+  String get seasonChristmas => 'Navidad';
+
+  @override
+  String get seasonEaster => 'Pascua';
+
+  @override
+  String get seasonOrdinaryTime => 'Tiempo Ordinario';
+
+  @override
+  String get feastAshWednesday => 'El Miércoles de Ceniza';
+
+  @override
+  String get feastPalmSunday => 'El Domingo de Ramos';
+
+  @override
+  String get feastEaster => 'La Pascua';
+
+  @override
+  String get feastPentecost => 'Pentecostés';
+
+  @override
+  String get feastAssumption => 'La Asunción';
+
+  @override
+  String get feastAllSaints => 'Todos los Santos';
+
+  @override
+  String get feastImmaculateConception => 'La Inmaculada Concepción';
+
+  @override
+  String get feastFirstSundayOfAdvent => 'El primer domingo de Adviento';
+
+  @override
+  String get feastChristmas => 'La Navidad';
+
+  @override
+  String get liturgicalLentTitle => 'Ha comenzado la Cuaresma';
+
+  @override
+  String get liturgicalLentBody =>
+      'Un tiempo para volver a Dios. Muchos lo empiezan con la confesión.';
+
+  @override
+  String get liturgicalHolyWeekTitle => 'Ha comenzado la Semana Santa';
+
+  @override
+  String get liturgicalHolyWeekBody =>
+      'La Iglesia camina hacia la Pascua. Todavía hay tiempo para preparar tu corazón.';
+
+  @override
+  String get liturgicalAdventTitle => 'Ha comenzado el Adviento';
+
+  @override
+  String get liturgicalAdventBody =>
+      'Un tiempo de espera. Muchos preparan su corazón con la confesión.';
+
+  @override
+  String liturgicalFeastNearTitle(String feast) {
+    return '$feast se acerca';
+  }
+
+  @override
+  String liturgicalFeastNearBody(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Faltan $count días: prepara tu corazón.',
+      one: 'Falta un día: prepara tu corazón.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String anniversaryTitle(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Han pasado $count semanas desde tu última confesión',
+      one: 'Ha pasado una semana desde tu última confesión',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get anniversaryBody =>
+      'Cuando quieras, la misericordia te espera. ¿Quieres prepararte?';
+
+  @override
+  String get promptPrepare => 'Prepararme';
+
+  @override
+  String get dataUnrecoverableTitle => 'No se pueden desbloquear tus datos';
+
+  @override
+  String get dataUnrecoverableBody =>
+      'La clave que protege tus confesiones ya no está disponible en este dispositivo. Esto puede ocurrir tras restaurar una copia de seguridad o si se restablecieron los ajustes de seguridad del dispositivo.\n\nComo tus datos están cifrados, no pueden recuperarse sin esa clave; ni siquiera nosotros podemos hacerlo. Puedes borrarlos y empezar de nuevo.';
+
+  @override
+  String get eraseAndStartOver => 'Borrar y empezar de nuevo';
+
+  @override
+  String get eraseAndStartOverConfirm =>
+      'Esto borra permanentemente todo lo guardado en este dispositivo y reinicia la aplicación. No se puede deshacer.';
+
+  @override
+  String get penanceSaveFailed =>
+      'No se pudo guardar la penitencia. Inténtalo de nuevo.';
+
+  @override
+  String get confessionReminderChannelName => 'Recordatorios de confesión';
+
+  @override
+  String get confessionReminderChannelDescription =>
+      'Recordatorios para confesarte';
+
+  @override
+  String get journalReminderChannelName => 'Recordatorios del diario';
+
+  @override
+  String get journalReminderChannelDescription =>
+      'Recordatorio diario para escribir la reflexión de la noche';
+
+  @override
+  String namedSoFar(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count señalados hasta ahora',
+      one: 'Uno señalado hasta ahora',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get invitationCardTitle => 'Antes de comenzar';
+
+  @override
+  String get invitationCardAction => 'Anímame';
+
+  @override
+  String get homeCtaBeginTitle => 'Comienza tu examen de conciencia';
+
+  @override
+  String get homeCtaBeginSubtitle => 'Prepara tu corazón antes de la confesión';
+
+  @override
+  String homeCtaContinueTitle(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Continúa tu examen ($count seleccionados)',
+      one: 'Continúa tu examen (1 seleccionado)',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get homeCtaContinueSubtitle => 'Retoma donde lo dejaste';
+
+  @override
+  String get homeCtaReadyTitle => 'Ya puedes comenzar';
+
+  @override
+  String homeCtaReadySubtitle(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count pecados te esperan en tu lista de confesión',
+      one: '1 pecado te espera en tu lista de confesión',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get homeCtaPenanceTitle => 'Cumple tu penitencia';
+
+  @override
+  String homeCtaPenanceSubtitle(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count penitencias siguen pendientes',
+      one: '1 penitencia sigue pendiente',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get homeGuideCardSubtitle =>
+      'Aliento, una guía paso a paso, oraciones y preguntas frecuentes';
+
+  @override
+  String get homeQuoteReadMore => 'Leer más';
+
+  @override
+  String get homeQuoteShowLess => 'Mostrar menos';
+
+  @override
+  String get tutorialJournalDesc =>
+      'Repasa tu día cada noche: una breve reflexión y tu racha.';
 }

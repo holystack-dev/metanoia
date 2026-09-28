@@ -16,7 +16,7 @@
                     "id": "act_of_contrition",
                     "title": "Act of Contrition",
                     "icon": "favorite_outline",
-                    "content": "O My God, I am sorry for my sins with all my heart. In choosing to do wrong and failing to do good, I have sinned against you, whom I should love above all things.\n\nI firmly intend, with the help of your grace, to do penance, to sin no more and to avoid whatever leads me to sin.\n\nOur Savior, Jesus Christ, suffered and died for us. In His Name, O Lord, have mercy. Amen."
+                    "content": "My God, I am sorry for my sins with all my heart. In choosing to do wrong and failing to do good, I have sinned against you, whom I should love above all things.\n\nI firmly intend, with your help, to do penance, to sin no more and to avoid whatever leads me to sin.\n\nOur Savior, Jesus Christ, suffered and died for us. In His Name, my God, have mercy. Amen."
                 },
                 {
                     "id": "after_confession",
@@ -41,26 +41,26 @@
                     "id": "lords_prayer",
                     "title": "The Lord's Prayer",
                     "icon": "cloud_outlined",
-                    "content": "Our Father, Who art in heaven,\nHallowed be Thy Name.\nThy Kingdom come.\nThy Will be done, on earth as it is in Heaven.\n\nGive us this day our daily bread.\nAnd forgive us our trespasses,\nas we forgive those who trespass against us.\nAnd lead us not into temptation,\nbut deliver us from evil.\n\nAmen."
+                    "content": "Our Father, Who art in heaven,\nHallowed be Thy Name.\nThy Kingdom come.\nThy Will be done, on earth as it is in Heaven.\n\nGive us this day our daily bread.\nAnd forgive us our trespasses,\nas we forgive those who trespass against us.\nAnd lead us not into temptation,\nbut deliver us from evil.\n\n[AMEN]Amen."
                 },
                 {
                     "id": "hail_mary",
                     "title": "Hail Mary",
                     "icon": "star_outline",
-                    "content": "Hail Mary, full of grace,\nthe Lord is with thee.\nBlessed art thou amongst women,\nand blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God,\npray for us sinners,\nnow and at the hour of our death.\n\nAmen."
+                    "content": "Hail Mary, full of grace,\nthe Lord is with thee.\nBlessed art thou amongst women,\nand blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God,\npray for us sinners,\nnow and at the hour of our death.\n\n[AMEN]Amen."
                 },
                 {
                     "id": "glory_be",
                     "title": "Glory Be",
                     "icon": "brightness_high_outlined",
-                    "content": "Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\n\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end.\n\nAmen."
+                    "content": "Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\n\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end.\n\n[AMEN]Amen."
                 },
                 {
                     "id": "apostles_creed",
                     "title": "Apostles' Creed",
                     "icon": "menu_book_outlined",
                     "isExpandable": true,
-                    "content": "I believe in God, the Father Almighty, Creator of Heaven and earth;\n\nand in Jesus Christ, His only Son, Our Lord, Who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died, and was buried.\n\nHe descended into Hell; the third day He rose again from the dead; He ascended into Heaven, and sitteth at the right hand of God, the Father almighty; from thence He shall come to judge the living and the dead.\n\nI believe in the Holy Spirit, the holy Catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body, and life everlasting.\n\nAmen."
+                    "content": "I believe in God, the Father Almighty, Creator of Heaven and earth;\n\nand in Jesus Christ, His only Son, Our Lord, Who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died, and was buried.\n\nHe descended into Hell; the third day He rose again from the dead; He ascended into Heaven, and sitteth at the right hand of God, the Father almighty; from thence He shall come to judge the living and the dead.\n\nI believe in the Holy Spirit, the holy Catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body, and life everlasting.\n\n[AMEN]Amen."
                 }
             ]
         },
@@ -73,19 +73,19 @@
                     "id": "hail_holy_queen",
                     "title": "Hail Holy Queen",
                     "icon": "star_outline",
-                    "content": "Hail, Holy Queen, Mother of Mercy,\nour life, our sweetness and our hope.\n\nTo thee do we cry, poor banished children of Eve.\nTo thee do we send up our sighs,\nmourning and weeping in this valley of tears.\n\nTurn then, most gracious advocate,\nthine eyes of mercy toward us;\nand after this our exile,\nshow unto us the blessed fruit of thy womb, Jesus.\n\nO clement, O loving, O sweet Virgin Mary.\n\n[VERSICLE]V. Pray for us, O holy Mother of God.[/VERSICLE]\n[RESPONSE]R. That we may be made worthy of the promises of Christ.[/RESPONSE]\n\nAmen."
+                    "content": "Hail, Holy Queen, Mother of Mercy,\nour life, our sweetness and our hope.\n\nTo thee do we cry, poor banished children of Eve.\nTo thee do we send up our sighs,\nmourning and weeping in this valley of tears.\n\nTurn then, most gracious advocate,\nthine eyes of mercy toward us;\nand after this our exile,\nshow unto us the blessed fruit of thy womb, Jesus.\n\nO clement, O loving, O sweet Virgin Mary.\n\n[VERSICLE]V. Pray for us, O holy Mother of God.[/VERSICLE]\n[RESPONSE]R. That we may be made worthy of the promises of Christ.[/RESPONSE]\n\n[AMEN]Amen."
                 },
                 {
                     "id": "memorare",
                     "title": "The Memorare",
                     "icon": "volunteer_activism_outlined",
-                    "content": "Remember, O most gracious Virgin Mary, that never was it known that anyone who fled to thy protection, implored thy help, or sought thy intercession was left unaided.\n\nInspired by this confidence, I fly unto thee, O Virgin of virgins, my Mother; to thee do I come, before thee I stand, sinful and sorrowful.\n\nO Mother of the Word Incarnate, despise not my petitions, but in thy mercy hear and answer me.\n\nAmen."
+                    "content": "Remember, O most gracious Virgin Mary, that never was it known that anyone who fled to thy protection, implored thy help, or sought thy intercession was left unaided.\n\nInspired by this confidence, I fly unto thee, O Virgin of virgins, my Mother; to thee do I come, before thee I stand, sinful and sorrowful.\n\nO Mother of the Word Incarnate, despise not my petitions, but in thy mercy hear and answer me.\n\n[AMEN]Amen."
                 },
                 {
                     "id": "fatima_prayer",
                     "title": "Fatima Prayer",
                     "icon": "flare_outlined",
-                    "content": "O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to Heaven, especially those in most need of Thy mercy.\n\nAmen."
+                    "content": "O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to Heaven, especially those in most need of Thy mercy.\n\n[AMEN]Amen."
                 }
             ]
         },
@@ -162,7 +162,7 @@
                     "id": "guardian_angel",
                     "title": "Prayer to Guardian Angel",
                     "icon": "shield_outlined",
-                    "content": "Angel of God, my guardian dear,\nto whom God's love commits me here,\never this day be at my side,\nto light and guard, to rule and guide.\n\nAmen."
+                    "content": "Angel of God, my guardian dear,\nto whom God's love commits me here,\never this day be at my side,\nto light and guard, to rule and guide.\n\n[AMEN]Amen."
                 }
             ]
         },
@@ -175,14 +175,14 @@
                     "id": "before_communion",
                     "title": "Prayer Before Communion",
                     "icon": "wb_twilight_outlined",
-                    "content": "O Lord Jesus Christ, Son of the living God, who, by the will of the Father and the cooperation of the Holy Spirit, have by Your death given life to the world:\n\ndeliver me by this, Your most sacred Body and Blood, from all my iniquities and from every evil:\n\nand make me always cleave to Your commandments, and never suffer me to be separated from You.\n\nWho with the same God the Father and the Holy Spirit, live and reign, God, world without end.\n\nAmen."
+                    "content": "O Lord Jesus Christ, Son of the living God, who, by the will of the Father and the cooperation of the Holy Spirit, have by Your death given life to the world:\n\ndeliver me by this, Your most sacred Body and Blood, from all my iniquities and from every evil:\n\nand make me always cleave to Your commandments, and never suffer me to be separated from You.\n\nWho with the same God the Father and the Holy Spirit, live and reign, God, world without end.\n\n[AMEN]Amen."
                 },
                 {
                     "id": "after_communion",
                     "title": "Prayer After Communion",
                     "subtitle": "Anima Christi",
                     "icon": "light_mode_outlined",
-                    "content": "Soul of Christ, sanctify me.\nBody of Christ, save me.\nBlood of Christ, inebriate me.\nWater from the side of Christ, wash me.\n\nPassion of Christ, strengthen me.\nO good Jesus, hear me.\nWithin Thy wounds hide me.\nSuffer me not to be separated from Thee.\n\nFrom the malicious enemy defend me.\nIn the hour of my death call me.\nAnd bid me come to Thee,\nThat with Thy saints I may praise Thee\nForever and ever.\n\nAmen."
+                    "content": "Soul of Christ, sanctify me.\nBody of Christ, save me.\nBlood of Christ, inebriate me.\nWater from the side of Christ, wash me.\n\nPassion of Christ, strengthen me.\nO good Jesus, hear me.\nWithin Thy wounds hide me.\nSuffer me not to be separated from Thee.\n\nFrom the malicious enemy defend me.\nIn the hour of my death call me.\nAnd bid me come to Thee,\nThat with Thy saints I may praise Thee\nForever and ever.\n\n[AMEN]Amen."
                 }
             ]
         }

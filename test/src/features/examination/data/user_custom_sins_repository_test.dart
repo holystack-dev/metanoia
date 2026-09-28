@@ -5,6 +5,7 @@ import 'package:drift/drift.dart' hide isNotNull, isNull;
 import 'package:drift/native.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import '../../../../helpers/test_app.dart';
 
 void main() {
   late AppDatabase db;
@@ -185,16 +186,44 @@ void main() {
       expect(sins.last.sinText, 'First sin');
     });
   });
-}
 
-class TestAppDatabase extends AppDatabase {
-  TestAppDatabase(super.e);
+  /// The custom sins are a Drift stream, which the custom-sins screen and (via
+  /// examinationData) the examination screen both read. Nothing below
+  /// invalidates a provider.
+  group('customSinsGroupedProvider re-emits without invalidation', () {
+    test('emits a newly added sin and drops a deleted one', () async {
+      final repository = container.read(userCustomSinsRepositoryProvider);
 
-  @override
-  MigrationStrategy get migration => MigrationStrategy(
-    onCreate: (Migrator m) async {
-      await m.createAll();
-      // Skip syncContent()
-    },
-  );
+      final sub = container.listen(customSinsGroupedProvider, (_, __) {});
+      addTearDown(sub.close);
+
+      expect(await container.read(customSinsGroupedProvider.future), isEmpty);
+
+      final id = await repository.insertCustomSin(
+        UserCustomSinsCompanion.insert(
+          sinText: 'Impatience with my family',
+          commandmentCode: const Value('4'),
+        ),
+      );
+
+      await waitUntil(
+        () =>
+            container
+                .read(customSinsGroupedProvider)
+                .valueOrNull?['4']
+                ?.length ==
+            1,
+        reason: 'the new custom sin never reached the stream',
+      );
+
+      await repository.deleteCustomSin(id);
+
+      await waitUntil(
+        () =>
+            container.read(customSinsGroupedProvider).valueOrNull?.isEmpty ??
+            false,
+        reason: 'the deleted custom sin never left the stream',
+      );
+    });
+  });
 }

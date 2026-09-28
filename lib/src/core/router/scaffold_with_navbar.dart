@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
-import 'package:confessionapp/src/core/router/navigation_provider.dart';
 
-class ScaffoldWithNavBar extends ConsumerWidget {
+class ScaffoldWithNavBar extends StatelessWidget {
   const ScaffoldWithNavBar({required this.navigationShell, super.key});
 
   final StatefulNavigationShell navigationShell;
 
-  void _goBranch(int index, WidgetRef ref) {
-    // Update the provider with the new tab index
-    ref.read(currentTabIndexProvider.notifier).setIndex(index);
+  /// The selected tab lives only in [StatefulNavigationShell.currentIndex];
+  /// a mirrored copy would drift on programmatic navigation.
+  void _goBranch(int index) {
     navigationShell.goBranch(
       index,
       initialLocation: index == navigationShell.currentIndex,
@@ -19,7 +17,7 @@ class ScaffoldWithNavBar extends ConsumerWidget {
   }
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     final theme = Theme.of(context);
 
@@ -27,12 +25,19 @@ class ScaffoldWithNavBar extends ConsumerWidget {
       body: navigationShell,
       bottomNavigationBar: NavigationBar(
         selectedIndex: navigationShell.currentIndex,
-        onDestinationSelected: (index) => _goBranch(index, ref),
+        onDestinationSelected: _goBranch,
+        // Ordered by frequency of use. The guide is reached from the home
+        // screen and at `/guide`.
         destinations: [
           NavigationDestination(
             icon: const Icon(Icons.home_outlined),
             selectedIcon: const Icon(Icons.home),
             label: l10n.homeTitle,
+          ),
+          NavigationDestination(
+            icon: const Icon(Icons.nights_stay_outlined),
+            selectedIcon: const Icon(Icons.nights_stay),
+            label: l10n.journalTitle,
           ),
           NavigationDestination(
             icon: const Icon(Icons.assignment_outlined),
@@ -44,15 +49,10 @@ class ScaffoldWithNavBar extends ConsumerWidget {
             selectedIcon: const Icon(Icons.church),
             label: l10n.confessTitle,
           ),
-          NavigationDestination(
-            icon: const Icon(Icons.help_outline),
-            selectedIcon: const Icon(Icons.help),
-            label: l10n.guideTitle,
-          ),
         ],
         backgroundColor: theme.colorScheme.surface,
         elevation: 3,
-        shadowColor: Colors.black26,
+        shadowColor: theme.colorScheme.shadow.withValues(alpha: 0.26),
         indicatorColor: theme.colorScheme.secondaryContainer,
       ),
     );

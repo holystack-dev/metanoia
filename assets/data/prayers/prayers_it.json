@@ -1,0 +1,190 @@
+{
+    "subtitle": "Preghiere per il tuo cammino spirituale",
+    "categories": [
+        {
+            "id": "confession",
+            "title": "Preghiere per la confessione",
+            "icon": "church_outlined",
+            "prayers": [
+                {
+                    "id": "before_confession",
+                    "title": "Preghiera prima della confessione",
+                    "icon": "wb_twilight_outlined",
+                    "content": "Vieni, Spirito Santo, nella mia anima. Illumina la mia mente perché io conosca i peccati che devo confessare, e donami la tua grazia perché io sia sinceramente pentito dei miei peccati.\n\nAiutami a fare una buona confessione, a pentirmi veramente delle offese che ti ho fatto e a cambiare vita. Per Cristo nostro Signore. Amen."
+                },
+                {
+                    "id": "act_of_contrition",
+                    "title": "Atto di dolore",
+                    "icon": "favorite_outline",
+                    "content": "Mio Dio, mi pento e mi dolgo con tutto il cuore dei miei peccati, perché peccando ho meritato i tuoi castighi, e molto più perché ho offeso te, infinitamente buono e degno di essere amato sopra ogni cosa.\n\nPropongo con il tuo santo aiuto di non offenderti mai più e di fuggire le occasioni prossime di peccato.\n\nSignore, misericordia, perdonami. Amen."
+                },
+                {
+                    "id": "after_confession",
+                    "title": "Preghiera dopo la confessione",
+                    "icon": "light_mode_outlined",
+                    "content": "Mio amatissimo Gesù, ti ho confessato tutti i miei peccati come meglio ho potuto. Mi sono impegnato a fare una buona confessione. Sono certo che tu mi hai perdonato.\n\nTi ringrazio di tutto cuore. Prometto di sforzarmi, con la tua grazia, di non peccare più. Mio Dio, che mi ami, dammi la forza di rimanere vicino a te e di evitare il peccato. Amen."
+                },
+                {
+                    "id": "confiteor",
+                    "title": "Il Confiteor",
+                    "icon": "person_outline",
+                    "content": "Confesso a Dio onnipotente e a voi, fratelli e sorelle, che ho molto peccato in pensieri, parole, opere e omissioni,\n\n[RUBRIC]Battiti il petto tre volte mentre dici:[/RUBRIC]\n\nper mia colpa, mia colpa, mia grandissima colpa.\n\nE supplico la beata sempre Vergine Maria, gli angeli, i santi e voi, fratelli e sorelle, di pregare per me il Signore Dio nostro. Amen."
+                }
+            ]
+        },
+        {
+            "id": "essential",
+            "title": "Preghiere fondamentali",
+            "icon": "auto_awesome_outlined",
+            "prayers": [
+                {
+                    "id": "lords_prayer",
+                    "title": "Padre nostro",
+                    "icon": "cloud_outlined",
+                    "content": "Padre nostro che sei nei cieli,\nsia santificato il tuo nome,\nvenga il tuo regno,\nsia fatta la tua volontà,\ncome in cielo così in terra.\n\nDacci oggi il nostro pane quotidiano,\ne rimetti a noi i nostri debiti\ncome anche noi li rimettiamo ai nostri debitori,\ne non abbandonarci alla tentazione,\nma liberaci dal male.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "hail_mary",
+                    "title": "Ave, o Maria",
+                    "icon": "star_outline",
+                    "content": "Ave, o Maria, piena di grazia,\nil Signore è con te.\nTu sei benedetta fra le donne\ne benedetto è il frutto del tuo seno, Gesù.\n\nSanta Maria, Madre di Dio,\nprega per noi peccatori,\nadesso e nell'ora della nostra morte.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "glory_be",
+                    "title": "Gloria al Padre",
+                    "icon": "brightness_high_outlined",
+                    "content": "Gloria al Padre\ne al Figlio\ne allo Spirito Santo.\n\nCome era nel principio,\ne ora e sempre,\nnei secoli dei secoli.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "apostles_creed",
+                    "title": "Simbolo degli Apostoli",
+                    "icon": "menu_book_outlined",
+                    "isExpandable": true,
+                    "content": "Io credo in Dio, Padre onnipotente, Creatore del cielo e della terra;\n\ne in Gesù Cristo, suo unico Figlio, nostro Signore, il quale fu concepito di Spirito Santo, nacque da Maria Vergine, patì sotto Ponzio Pilato, fu crocifisso, morì e fu sepolto; discese agli inferi;\n\nil terzo giorno risuscitò da morte; salì al cielo, siede alla destra di Dio Padre onnipotente; di là verrà a giudicare i vivi e i morti.\n\nCredo nello Spirito Santo, la santa Chiesa cattolica, la comunione dei santi, la remissione dei peccati, la risurrezione della carne, la vita eterna.\n\n[AMEN]Amen."
+                }
+            ]
+        },
+        {
+            "id": "marian",
+            "title": "Preghiere mariane",
+            "icon": "favorite_border",
+            "prayers": [
+                {
+                    "id": "hail_holy_queen",
+                    "title": "Salve, o Regina",
+                    "icon": "star_outline",
+                    "content": "Salve, o Regina, madre di misericordia,\nvita, dolcezza e speranza nostra, salve.\n\nA te ricorriamo, esuli figli di Eva;\na te sospiriamo, gementi e piangenti\nin questa valle di lacrime.\n\nOrsù dunque, avvocata nostra,\nrivolgi a noi gli occhi tuoi misericordiosi,\ne mostraci, dopo questo esilio,\nGesù, il frutto benedetto del tuo seno.\n\nO clemente, o pia, o dolce Vergine Maria.\n\n[VERSICLE]V. Prega per noi, santa Madre di Dio.[/VERSICLE]\n[RESPONSE]R. E saremo degni delle promesse di Cristo.[/RESPONSE]\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "memorare",
+                    "title": "Memorare",
+                    "icon": "volunteer_activism_outlined",
+                    "content": "Ricordati, o piissima Vergine Maria, che non si è mai udito al mondo che alcuno, ricorrendo alla tua protezione, implorando il tuo aiuto e chiedendo il tuo patrocinio, sia stato abbandonato.\n\nAnimato da tale confidenza, a te ricorro, o Madre, Vergine delle vergini; a te vengo e, peccatore contrito, innanzi a te mi prostro.\n\nNon volere, o Madre del Verbo, disprezzare le mie preghiere, ma ascoltami propizia ed esaudiscimi.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "fatima_prayer",
+                    "title": "Preghiera di Fatima",
+                    "icon": "flare_outlined",
+                    "content": "Gesù mio, perdona le nostre colpe, preservaci dal fuoco dell'inferno, porta in cielo tutte le anime, specialmente le più bisognose della tua misericordia.\n\n[AMEN]Amen."
+                }
+            ]
+        },
+        {
+            "id": "devotions",
+            "title": "Preghiere di devozione",
+            "icon": "auto_stories_outlined",
+            "prayers": [
+                {
+                    "id": "holy_rosary",
+                    "title": "Il santo rosario",
+                    "subtitle": "Guida completa per chi inizia",
+                    "icon": "radio_button_unchecked",
+                    "isExpandable": true,
+                    "sections": [
+                        {
+                            "title": "Preghiere iniziali",
+                            "subtitle": "Sul crocifisso e sui primi grani",
+                            "content": "[INSTRUCTION]Fai il segno della croce:[/INSTRUCTION]\n\nNel nome del Padre e del Figlio e dello Spirito Santo. Amen.\n\n[INSTRUCTION]Tenendo il crocifisso, recita il Simbolo degli Apostoli (Credo):[/INSTRUCTION]\n\n[PRAYER]Io credo in Dio, Padre onnipotente, Creatore del cielo e della terra; e in Gesù Cristo, suo unico Figlio, nostro Signore, il quale fu concepito di Spirito Santo, nacque da Maria Vergine, patì sotto Ponzio Pilato, fu crocifisso, morì e fu sepolto; discese agli inferi; il terzo giorno risuscitò da morte; salì al cielo, siede alla destra di Dio Padre onnipotente; di là verrà a giudicare i vivi e i morti. Credo nello Spirito Santo, la santa Chiesa cattolica, la comunione dei santi, la remissione dei peccati, la risurrezione della carne, la vita eterna. Amen.[/PRAYER]\n\n[INSTRUCTION]Sul primo grano grande, recita il Padre nostro:[/INSTRUCTION]\n\n[PRAYER]Padre nostro che sei nei cieli, sia santificato il tuo nome, venga il tuo regno, sia fatta la tua volontà, come in cielo così in terra. Dacci oggi il nostro pane quotidiano, e rimetti a noi i nostri debiti come anche noi li rimettiamo ai nostri debitori, e non abbandonarci alla tentazione, ma liberaci dal male. Amen.[/PRAYER]\n\n[INSTRUCTION]Su ciascuno dei tre grani piccoli, recita l'Ave Maria (per la fede, la speranza e la carità):[/INSTRUCTION]\n\n[PRAYER]Ave, o Maria, piena di grazia, il Signore è con te. Tu sei benedetta fra le donne e benedetto è il frutto del tuo seno, Gesù. Santa Maria, Madre di Dio, prega per noi peccatori, adesso e nell'ora della nostra morte. Amen.[/PRAYER]\n\n[INSTRUCTION]Recita il Gloria al Padre:[/INSTRUCTION]\n\n[PRAYER]Gloria al Padre e al Figlio e allo Spirito Santo. Come era nel principio, e ora e sempre, nei secoli dei secoli. Amen.[/PRAYER]"
+                        },
+                        {
+                            "title": "Come pregare ogni decina",
+                            "subtitle": "Ripeti per ciascuno dei 5 misteri",
+                            "content": "[INSTRUCTION]1. Enuncia il mistero e meditalo[/INSTRUCTION]\n\n[INSTRUCTION]2. Sul grano grande, recita il Padre nostro:[/INSTRUCTION]\n\n[PRAYER]Padre nostro che sei nei cieli, sia santificato il tuo nome, venga il tuo regno, sia fatta la tua volontà, come in cielo così in terra. Dacci oggi il nostro pane quotidiano, e rimetti a noi i nostri debiti come anche noi li rimettiamo ai nostri debitori, e non abbandonarci alla tentazione, ma liberaci dal male. Amen.[/PRAYER]\n\n[INSTRUCTION]3. Su ciascuno dei 10 grani piccoli, recita l'Ave Maria:[/INSTRUCTION]\n\n[PRAYER]Ave, o Maria, piena di grazia, il Signore è con te. Tu sei benedetta fra le donne e benedetto è il frutto del tuo seno, Gesù. Santa Maria, Madre di Dio, prega per noi peccatori, adesso e nell'ora della nostra morte. Amen.[/PRAYER]\n\n[INSTRUCTION]4. Dopo le 10 Ave Maria, recita il Gloria al Padre:[/INSTRUCTION]\n\n[PRAYER]Gloria al Padre e al Figlio e allo Spirito Santo. Come era nel principio, e ora e sempre, nei secoli dei secoli. Amen.[/PRAYER]\n\n[INSTRUCTION]5. Se vuoi, recita la preghiera di Fatima:[/INSTRUCTION]\n\n[PRAYER]Gesù mio, perdona le nostre colpe, preservaci dal fuoco dell'inferno, porta in cielo tutte le anime, specialmente le più bisognose della tua misericordia. Amen.[/PRAYER]"
+                        },
+                        {
+                            "title": "I misteri gaudiosi",
+                            "subtitle": "Lunedì e sabato",
+                            "content": "1. L'annunciazione — L'angelo Gabriele annuncia a Maria che concepirà il Figlio di Dio.\n\n2. La visitazione — Maria visita la cugina Elisabetta, che attende Giovanni Battista.\n\n3. La nascita di Gesù — Gesù nasce a Betlemme.\n\n4. La presentazione al Tempio — Maria e Giuseppe presentano Gesù al Tempio.\n\n5. Il ritrovamento di Gesù nel Tempio — Dopo tre giorni, Maria e Giuseppe ritrovano Gesù che insegna nel Tempio."
+                        },
+                        {
+                            "title": "I misteri luminosi",
+                            "subtitle": "Giovedì",
+                            "content": "1. Il battesimo nel Giordano — Gesù è battezzato da Giovanni e lo Spirito Santo scende su di lui.\n\n2. Le nozze di Cana — Gesù compie il suo primo miracolo, trasformando l'acqua in vino.\n\n3. L'annuncio del Regno di Dio — Gesù ci chiama alla conversione e annuncia il Regno di Dio.\n\n4. La trasfigurazione — Gesù si trasfigura sul monte Tabor, rivelando la sua gloria divina.\n\n5. L'istituzione dell'Eucaristia — Gesù ci dona il suo Corpo e il suo Sangue nell'Ultima Cena."
+                        },
+                        {
+                            "title": "I misteri dolorosi",
+                            "subtitle": "Martedì e venerdì",
+                            "content": "1. L'agonia nell'orto degli ulivi — Gesù prega nel Getsemani e accetta la volontà del Padre.\n\n2. La flagellazione — Gesù è crudelmente flagellato dai soldati romani.\n\n3. La coronazione di spine — Gesù è deriso e coronato di spine.\n\n4. La salita al Calvario — Gesù porta la sua croce fino al Calvario.\n\n5. La crocifissione — Gesù muore sulla croce per la nostra salvezza."
+                        },
+                        {
+                            "title": "I misteri gloriosi",
+                            "subtitle": "Mercoledì e domenica",
+                            "content": "1. La risurrezione — Gesù risorge dai morti il terzo giorno.\n\n2. L'ascensione — Gesù sale al cielo quaranta giorni dopo la risurrezione.\n\n3. La discesa dello Spirito Santo — Lo Spirito Santo scende su Maria e sugli apostoli a Pentecoste.\n\n4. L'assunzione di Maria — Maria è assunta in cielo in anima e corpo.\n\n5. L'incoronazione di Maria — Maria è incoronata Regina del cielo e della terra."
+                        },
+                        {
+                            "title": "Preghiere conclusive",
+                            "subtitle": "Dopo le cinque decine",
+                            "content": "[INSTRUCTION]Recita la Salve Regina:[/INSTRUCTION]\n\n[PRAYER]Salve, o Regina, madre di misericordia, vita, dolcezza e speranza nostra, salve. A te ricorriamo, esuli figli di Eva; a te sospiriamo, gementi e piangenti in questa valle di lacrime. Orsù dunque, avvocata nostra, rivolgi a noi gli occhi tuoi misericordiosi, e mostraci, dopo questo esilio, Gesù, il frutto benedetto del tuo seno. O clemente, o pia, o dolce Vergine Maria.[/PRAYER]\n\n[VERSICLE]V. Prega per noi, santa Madre di Dio.[/VERSICLE]\n[RESPONSE]R. E saremo degni delle promesse di Cristo.[/RESPONSE]\n\n[INSTRUCTION]Orazione conclusiva:[/INSTRUCTION]\n\n[PRAYER]O Dio, il tuo unico Figlio ci ha acquistato con la sua vita, morte e risurrezione i beni della salvezza eterna: concedi a noi, che con il santo rosario della beata Vergine Maria abbiamo meditato questi misteri, di imitare ciò che essi contengono e di ottenere ciò che essi promettono. Per Cristo nostro Signore. Amen.[/PRAYER]\n\n[INSTRUCTION]Fai il segno della croce[/INSTRUCTION]"
+                        }
+                    ]
+                },
+                {
+                    "id": "divine_mercy_chaplet",
+                    "title": "Coroncina della Divina Misericordia",
+                    "icon": "water_drop_outlined",
+                    "isExpandable": true,
+                    "sections": [
+                        {
+                            "title": "Preghiere iniziali",
+                            "content": "1. Fai il segno della croce\n2. Preghiera iniziale facoltativa:\n\n[PRAYER]Appena spirasti, Gesù, scaturì per le anime una sorgente di vita e si aprì un mare di Misericordia per il mondo intero. O Sorgente di Vita, insondabile Misericordia Divina, abbraccia il mondo intero e riversati sopra di noi![/PRAYER]\n\n3. Ripeti tre volte:\n\n[PRAYER]O Sangue e Acqua, che scaturisti dal Cuore di Gesù come sorgente di misericordia per noi, confido in Te![/PRAYER]"
+                        },
+                        {
+                            "title": "La coroncina",
+                            "content": "1. Recita il Padre nostro\n2. Recita l'Ave Maria\n3. Recita il Simbolo degli Apostoli (Credo)\n\n[RUBRIC]Sui grani grandi (i grani del Padre nostro), di':[/RUBRIC]\n\n[PRAYER]Eterno Padre, Ti offro il Corpo e il Sangue, l'Anima e la Divinità del Tuo dilettissimo Figlio e Signore nostro Gesù Cristo, in espiazione dei nostri peccati e di quelli del mondo intero.[/PRAYER]\n\n[RUBRIC]Sui grani piccoli (i grani dell'Ave Maria), di':[/RUBRIC]\n\n[PRAYER]Per la Sua dolorosa Passione, abbi misericordia di noi e del mondo intero.[/PRAYER]\n\nRipeti per cinque decine."
+                        },
+                        {
+                            "title": "Conclusione",
+                            "content": "Ripeti tre volte:\n\n[PRAYER]Santo Dio, Santo Forte, Santo Immortale, abbi pietà di noi e del mondo intero.[/PRAYER]\n\nPreghiera conclusiva facoltativa:\n\n[PRAYER]Dio eterno, la cui misericordia è infinita e in cui il tesoro della compassione è inesauribile, rivolgi a noi uno sguardo di bontà e moltiplica in noi la Tua misericordia, affinché, nei momenti difficili, non ci perdiamo d'animo e non smarriamo la speranza, ma, con la massima fiducia, ci sottomettiamo alla Tua santa volontà, la quale è Amore e Misericordia. Amen.[/PRAYER]"
+                        }
+                    ]
+                },
+                {
+                    "id": "guardian_angel",
+                    "title": "Preghiera all'angelo custode",
+                    "icon": "shield_outlined",
+                    "content": "Angelo di Dio,\nche sei il mio custode,\nillumina, custodisci,\nreggi e governa me,\nche ti fui affidato\ndalla pietà celeste.\n\n[AMEN]Amen."
+                }
+            ]
+        },
+        {
+            "id": "communion",
+            "title": "Preghiere per la santa Comunione",
+            "icon": "wb_sunny_outlined",
+            "prayers": [
+                {
+                    "id": "before_communion",
+                    "title": "Preghiera prima della Comunione",
+                    "icon": "wb_twilight_outlined",
+                    "content": "Signore Gesù Cristo, Figlio del Dio vivo, che per volontà del Padre e con l'opera dello Spirito Santo morendo hai dato la vita al mondo:\n\nper il santo mistero del tuo Corpo e del tuo Sangue liberami da ogni colpa e da ogni male;\n\nfa' che sia sempre fedele alla tua legge e non sia mai separato da te.\n\nTu che con lo stesso Dio Padre e lo Spirito Santo vivi e regni, Dio, nei secoli dei secoli.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "after_communion",
+                    "title": "Preghiera dopo la Comunione",
+                    "subtitle": "Anima Christi",
+                    "icon": "light_mode_outlined",
+                    "content": "Anima di Cristo, santificami.\nCorpo di Cristo, salvami.\nSangue di Cristo, inebriami.\nAcqua del costato di Cristo, lavami.\n\nPassione di Cristo, fortificami.\nO buon Gesù, esaudiscimi.\nNelle tue piaghe nascondimi.\nNon permettere che io sia separato da te.\n\nDal nemico maligno difendimi.\nNell'ora della mia morte chiamami.\nE comandami di venire a te,\nperché con i tuoi santi io ti lodi\nnei secoli dei secoli.\n\n[AMEN]Amen."
+                }
+            ]
+        }
+    ]
+}

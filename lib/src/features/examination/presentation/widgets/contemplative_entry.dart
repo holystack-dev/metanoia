@@ -1,4 +1,5 @@
 import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
+import 'package:confessionapp/src/core/theme/app_radius.dart';
 import 'package:confessionapp/src/core/theme/app_theme.dart';
 import 'package:confessionapp/src/core/utils/haptic_utils.dart';
 import 'package:flutter/material.dart';
@@ -168,7 +169,7 @@ class _ContemplativeEntryState extends State<ContemplativeEntry>
                     foregroundColor: colorScheme.onPrimary,
                     padding: const EdgeInsets.symmetric(vertical: 16),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
+                      borderRadius: BorderRadius.circular(AppRadius.card),
                     ),
                   ),
                   child: Text(

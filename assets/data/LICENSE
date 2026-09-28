@@ -2,15 +2,18 @@ Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
 
 CC BY-NC-ND 4.0
 
-Copyright (c) 2024 holystack.dev
+Copyright (c) 2026 holystack.dev
 
-This license applies to all content files in this directory, including but not
-limited to:
+This license is granted over the original work in this directory — the material
+holystack.dev authored:
 - Examination of conscience questions
-- Prayers and prayer collections
-- Confession guides
+- Confession guides and their explanatory text
 - FAQs and educational content
 - Invitation/encouragement content
+- The selection, arrangement and translation notes of the collections as a whole
+
+It does NOT extend to the third-party texts quoted within those files. See
+THIRD-PARTY TEXTS below.
 
 You are free to:
 - Share — copy and redistribute the material in any medium or format
@@ -25,6 +28,30 @@ Under the following terms:
 
 No additional restrictions — You may not apply legal terms or technological
 measures that legally restrict others from doing anything the license permits.
+
+---
+
+THIRD-PARTY TEXTS:
+
+These files quote prayers, liturgical formulas, Scripture and Catechism passages
+that holystack.dev does not own and cannot sub-license. They are included as
+quotations for devotional use, and all rights remain with their respective
+holders. Nothing in this license grants any right over them.
+
+This includes, but is not limited to:
+- Vernacular translations of the Our Father, Hail Mary, Glory Be, the Apostles'
+  Creed, the Act of Contrition, the Salve Regina and the Rosary mysteries, whose
+  approved translations belong to the relevant episcopal conferences and
+  liturgical commissions (ICEL, CEI, AELF, CBCK, KWI, CCBI, CNBB and others).
+- The formula of absolution and other texts of the Order of Penance (ICEL and
+  the corresponding vernacular commissions).
+- Scripture quotations, which belong to the copyright holders of the translation
+  quoted in each language.
+- Excerpts from and citations of the Catechism of the Catholic Church
+  (© Libreria Editrice Vaticana).
+
+If you hold rights in any text quoted here and want it attributed differently or
+removed, please open an issue.
 
 ---
 

@@ -11,18 +11,21 @@ PenanceRepository penanceRepository(Ref ref) {
   return PenanceRepository(ref.watch(appDatabaseProvider));
 }
 
-/// Provider for pending (incomplete) penances
+/// Provider for pending (incomplete) penances.
+///
+/// A Drift stream: completing, editing or deleting a penance — or deleting the
+/// confession it belongs to — re-emits here on its own.
 @riverpod
-Future<List<PenanceWithConfession>> pendingPenances(Ref ref) async {
-  final repo = ref.watch(penanceRepositoryProvider);
-  return repo.getPendingPenances();
+Stream<List<PenanceWithConfession>> pendingPenances(Ref ref) {
+  return ref.watch(penanceRepositoryProvider).watchPendingPenances();
 }
 
 /// Provider for penance by confession ID
 @riverpod
-Future<Penance?> penanceForConfession(Ref ref, int confessionId) async {
-  final repo = ref.watch(penanceRepositoryProvider);
-  return repo.getPenanceForConfession(confessionId);
+Stream<Penance?> penanceForConfession(Ref ref, int confessionId) {
+  return ref.watch(penanceRepositoryProvider).watchPenanceForConfession(
+        confessionId,
+      );
 }
 
 class PenanceRepository {
@@ -30,26 +33,54 @@ class PenanceRepository {
 
   PenanceRepository(this._db);
 
-  /// Add a penance for a confession
+  /// Record the penance a confession was given.
+  ///
+  /// An upsert: a confession has exactly one penance, and both the
+  /// finish-confession sheet and confession-day mode may record it.
   Future<int> addPenance(int confessionId, String description) async {
-    return _db.into(_db.penances).insert(
-          PenancesCompanion.insert(
-            confessionId: confessionId,
-            description: description,
-          ),
-        );
+    return _db.transaction(() async {
+      final existing = await getPenanceForConfession(confessionId);
+      if (existing != null) {
+        await updatePenance(existing.id, description);
+        return existing.id;
+      }
+
+      return _db
+          .into(_db.penances)
+          .insert(
+            PenancesCompanion.insert(
+              confessionId: confessionId,
+              description: description,
+            ),
+          );
+    });
+  }
+
+  /// The confession's penance, tolerating more than one row.
+  ///
+  /// Takes the first row: `getSingleOrNull` would throw on a duplicate and leave
+  /// the screen unable to load.
+  SimpleSelectStatement<$PenancesTable, Penance> _penanceForConfessionQuery(
+    int confessionId,
+  ) {
+    return _db.select(_db.penances)
+      ..where((t) => t.confessionId.equals(confessionId))
+      ..orderBy([(t) => OrderingTerm.asc(t.id)])
+      ..limit(1);
   }
 
   /// Get penance for a specific confession
-  Future<Penance?> getPenanceForConfession(int confessionId) async {
-    return (_db.select(_db.penances)
-          ..where((t) => t.confessionId.equals(confessionId)))
-        .getSingleOrNull();
+  Future<Penance?> getPenanceForConfession(int confessionId) {
+    return _penanceForConfessionQuery(confessionId).getSingleOrNull();
   }
 
-  /// Get all pending (incomplete) penances
-  Future<List<PenanceWithConfession>> getPendingPenances() async {
-    final query = _db.select(_db.penances).join([
+  /// Watch the penance of a specific confession
+  Stream<Penance?> watchPenanceForConfession(int confessionId) {
+    return _penanceForConfessionQuery(confessionId).watchSingleOrNull();
+  }
+
+  JoinedSelectStatement _pendingPenancesQuery() {
+    return _db.select(_db.penances).join([
       innerJoin(
         _db.confessions,
         _db.confessions.id.equalsExp(_db.penances.confessionId),
@@ -57,14 +88,27 @@ class PenanceRepository {
     ])
       ..where(_db.penances.isCompleted.equals(false))
       ..orderBy([OrderingTerm.desc(_db.penances.createdAt)]);
+  }
 
-    final results = await query.get();
-    return results.map((row) {
-      return PenanceWithConfession(
-        penance: row.readTable(_db.penances),
-        confession: row.readTable(_db.confessions),
-      );
-    }).toList();
+  List<PenanceWithConfession> _mapPending(List<TypedResult> rows) {
+    return rows
+        .map(
+          (row) => PenanceWithConfession(
+            penance: row.readTable(_db.penances),
+            confession: row.readTable(_db.confessions),
+          ),
+        )
+        .toList();
+  }
+
+  /// Get all pending (incomplete) penances
+  Future<List<PenanceWithConfession>> getPendingPenances() async {
+    return _mapPending(await _pendingPenancesQuery().get());
+  }
+
+  /// Watch all pending (incomplete) penances
+  Stream<List<PenanceWithConfession>> watchPendingPenances() {
+    return _pendingPenancesQuery().watch().map(_mapPending);
   }
 
   /// Mark a penance as completed

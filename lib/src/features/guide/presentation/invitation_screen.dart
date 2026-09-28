@@ -1,11 +1,11 @@
-import 'dart:convert';
-
 import 'package:confessionapp/src/core/constants/app_constants.dart';
 import 'package:confessionapp/src/core/localization/content_language_provider.dart';
 import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
+import 'package:confessionapp/src/core/theme/app_radius.dart';
 import 'package:confessionapp/src/core/theme/app_theme.dart';
-import 'package:flutter/services.dart';
 import 'package:confessionapp/src/core/utils/haptic_utils.dart';
+import 'package:confessionapp/src/core/utils/localized_asset_loader.dart';
+import 'package:confessionapp/src/core/widgets/app_back_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -26,9 +26,10 @@ class InvitationContent {
   factory InvitationContent.fromJson(Map<String, dynamic> json) {
     return InvitationContent(
       subtitle: json['subtitle'] as String,
-      sections: (json['sections'] as List)
-          .map((s) => InvitationSection.fromJson(s as Map<String, dynamic>))
-          .toList(),
+      sections:
+          (json['sections'] as List)
+              .map((s) => InvitationSection.fromJson(s as Map<String, dynamic>))
+              .toList(),
       callToAction: InvitationCallToAction.fromJson(
         json['callToAction'] as Map<String, dynamic>,
       ),
@@ -80,18 +81,20 @@ class InvitationCallToAction {
 }
 
 /// Provider for invitation content based on content language
-final invitationContentProvider =
-    FutureProvider.autoDispose<InvitationContent>((ref) async {
-  final contentLanguage =
-      await ref.watch(contentLanguageControllerProvider.future);
-  final langKey = LanguageConfig.contentKeyFromLocale(contentLanguage);
+final invitationContentProvider = FutureProvider.autoDispose<InvitationContent>(
+  (ref) async {
+    final contentLanguage = await ref.watch(
+      contentLanguageControllerProvider.future,
+    );
+    final langKey = LanguageConfig.contentKeyFromLocale(contentLanguage);
 
-  final jsonString = await rootBundle.loadString(
-    'assets/data/invitation/invitation_$langKey.json',
-  );
-  final json = jsonDecode(jsonString) as Map<String, dynamic>;
-  return InvitationContent.fromJson(json);
-});
+    final json = await loadLocalizedJsonObject(
+      langKey,
+      (key) => 'assets/data/invitation/invitation_$key.json',
+    );
+    return InvitationContent.fromJson(json);
+  },
+);
 
 /// A spiritually rich invitation screen for those returning to confession
 /// after many years or feeling anxious about the sacrament.
@@ -130,9 +133,7 @@ class InvitationScreen extends ConsumerWidget {
       body: contentAsync.when(
         data: (content) => _buildContent(context, content, theme, isDark, l10n),
         loading: () => const Center(child: CircularProgressIndicator()),
-        error: (error, stack) => Center(
-          child: Text('${l10n.error}: $error'),
-        ),
+        error: (error, stack) => Center(child: Text('${l10n.error}: $error')),
       ),
     );
   }
@@ -145,91 +146,74 @@ class InvitationScreen extends ConsumerWidget {
     AppLocalizations l10n,
   ) {
     return CustomScrollView(
-        slivers: [
-          // App Bar
-          SliverAppBar(
-            floating: false,
-            pinned: true,
-            elevation: 0,
-            scrolledUnderElevation: 1,
-            backgroundColor: theme.scaffoldBackgroundColor,
-            surfaceTintColor: theme.colorScheme.primary,
-            leading: IconButton(
-              icon: Icon(
-                Icons.arrow_back,
-                color: theme.colorScheme.onSurface,
-              ),
-              onPressed: () {
-                HapticUtils.lightImpact();
-                context.pop();
-              },
-            ),
-          ),
+      slivers: [
+        // App Bar
+        SliverAppBar(
+          floating: false,
+          pinned: true,
+          scrolledUnderElevation: 1,
+          backgroundColor: theme.scaffoldBackgroundColor,
+          surfaceTintColor: theme.colorScheme.primary,
+          leading: const AppBackButton(fallbackLocation: '/guide'),
+        ),
 
-          // Header section with icon, subtitle, and title
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Column(
-                children: [
-                  const SizedBox(height: 20),
-                  Container(
-                    padding: const EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      color: theme.colorScheme.primary.withValues(alpha: 0.1),
-                      shape: BoxShape.circle,
-                    ),
-                    child: Icon(
-                      Icons.favorite,
-                      size: 48,
-                      color: theme.colorScheme.primary,
-                    ),
+        // Header section with icon, subtitle, and title
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              children: [
+                const SizedBox(height: 20),
+                Container(
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: theme.colorScheme.primary.withValues(alpha: 0.1),
+                    shape: BoxShape.circle,
                   ),
-                  const SizedBox(height: 16),
-                  Text(
-                    content.subtitle,
-                    style: TextStyle(
-                      fontFamily: AppTheme.fontFamilyEBGaramond,
-                      fontSize: 18,
-                      fontStyle: FontStyle.italic,
-                      color: theme.colorScheme.onSurfaceVariant,
-                    ),
+                  child: Icon(
+                    Icons.favorite,
+                    size: 48,
+                    color: theme.colorScheme.primary,
                   ),
-                  const SizedBox(height: 24),
-                ],
-              ),
+                ),
+                const SizedBox(height: 16),
+                Text(
+                  content.subtitle,
+                  style: TextStyle(
+                    fontFamily: AppTheme.fontFamilyEBGaramond,
+                    fontSize: 18,
+                    fontStyle: FontStyle.italic,
+                    color: theme.colorScheme.onSurfaceVariant,
+                  ),
+                ),
+                const SizedBox(height: 24),
+              ],
             ),
           ),
+        ),
 
-          // Content sections
-          SliverPadding(
-            padding: const EdgeInsets.all(20),
-            sliver: SliverList(
-              delegate: SliverChildBuilderDelegate(
-                (context, index) {
-                  if (index < content.sections.length) {
-                    final section = content.sections[index];
-                    return Padding(
-                      padding: const EdgeInsets.only(bottom: 20),
-                      child: _buildSectionCard(context, section, theme, index),
-                    );
-                  } else {
-                    // Call to action buttons
-                    return _buildCallToAction(
-                      context,
-                      content.callToAction,
-                      theme,
-                    );
-                  }
-                },
-                childCount: content.sections.length + 1,
-              ),
-            ),
+        // Content sections
+        SliverPadding(
+          padding: const EdgeInsets.all(20),
+          sliver: SliverList(
+            delegate: SliverChildBuilderDelegate((context, index) {
+              if (index < content.sections.length) {
+                final section = content.sections[index];
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 20),
+                  child: _buildSectionCard(context, section, theme, index),
+                );
+              } else {
+                // Call to action buttons
+                return _buildCallToAction(context, content.callToAction, theme);
+              }
+            }, childCount: content.sections.length + 1),
           ),
+        ),
 
-          // Bottom padding
-          const SliverPadding(padding: EdgeInsets.only(bottom: 40)),
-        ],
+        // Bottom padding
+        const SliverPadding(padding: EdgeInsets.only(bottom: 40)),
+      ],
     );
   }
 
@@ -243,7 +227,7 @@ class InvitationScreen extends ConsumerWidget {
       elevation: 0,
       color: theme.colorScheme.surface,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(AppRadius.card),
         side: BorderSide(
           color: theme.colorScheme.outlineVariant.withValues(alpha: 0.5),
           width: 1,
@@ -261,7 +245,7 @@ class InvitationScreen extends ConsumerWidget {
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
                     color: theme.colorScheme.primaryContainer,
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(AppRadius.tile),
                   ),
                   child: Icon(
                     _getIconData(section.icon),
@@ -289,7 +273,7 @@ class InvitationScreen extends ConsumerWidget {
           ],
         ),
       ),
-    ).animate().fadeIn(delay: (100 * index).ms).slideY(begin: 0.05, end: 0);
+    ).animate().fadeIn(duration: 150.ms);
   }
 
   Widget _buildFormattedContent(String content, ThemeData theme) {
@@ -297,121 +281,126 @@ class InvitationScreen extends ConsumerWidget {
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: paragraphs.asMap().entries.map((entry) {
-        final paragraph = entry.value;
-        final isLast = entry.key == paragraphs.length - 1;
+      children:
+          paragraphs.asMap().entries.map((entry) {
+            final paragraph = entry.value;
+            final isLast = entry.key == paragraphs.length - 1;
 
-        // Check if this is a Scripture quote (contains "—" followed by book reference)
-        final isScripture =
-            paragraph.contains('—') && _looksLikeScripture(paragraph);
+            // Check if this is a Scripture quote (contains "—" followed by book reference)
+            final isScripture =
+                paragraph.contains('—') && _looksLikeScripture(paragraph);
 
-        // Check if this is a saint quote (contains quotes and attribution)
-        final isSaintQuote =
-            paragraph.startsWith('"') && paragraph.contains('"');
+            // Check if this is a saint quote (contains quotes and attribution)
+            final isSaintQuote =
+                paragraph.startsWith('"') && paragraph.contains('"');
 
-        if (isScripture) {
-          return Padding(
-            padding: EdgeInsets.only(bottom: isLast ? 0 : 20),
-            child: Container(
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: theme.colorScheme.primaryContainer.withValues(alpha: 0.3),
-                borderRadius: BorderRadius.circular(12),
-                border: Border(
-                  left: BorderSide(
-                    color: theme.colorScheme.primary,
-                    width: 3,
+            if (isScripture) {
+              return Padding(
+                padding: EdgeInsets.only(bottom: isLast ? 0 : 20),
+                child: Container(
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: theme.colorScheme.primaryContainer.withValues(
+                      alpha: 0.3,
+                    ),
+                    borderRadius: BorderRadius.circular(AppRadius.tile),
+                    border: Border(
+                      left: BorderSide(
+                        color: theme.colorScheme.primary,
+                        width: 3,
+                      ),
+                    ),
+                  ),
+                  child: Text(
+                    paragraph,
+                    style: TextStyle(
+                      fontFamily: AppTheme.fontFamilyEBGaramond,
+                      fontSize: 16,
+                      fontStyle: FontStyle.italic,
+                      height: 1.7,
+                      color: theme.colorScheme.onSurface,
+                    ),
                   ),
                 ),
-              ),
-              child: Text(
-                paragraph,
-                style: TextStyle(
-                  fontFamily: AppTheme.fontFamilyEBGaramond,
-                  fontSize: 16,
-                  fontStyle: FontStyle.italic,
-                  height: 1.7,
-                  color: theme.colorScheme.onSurface,
+              );
+            } else if (isSaintQuote) {
+              return Padding(
+                padding: EdgeInsets.only(bottom: isLast ? 0 : 20),
+                child: Container(
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: theme.colorScheme.secondaryContainer.withValues(
+                      alpha: 0.3,
+                    ),
+                    borderRadius: BorderRadius.circular(AppRadius.tile),
+                  ),
+                  child: Text(
+                    paragraph,
+                    style: TextStyle(
+                      fontFamily: AppTheme.fontFamilyEBGaramond,
+                      fontSize: 16,
+                      fontStyle: FontStyle.italic,
+                      height: 1.7,
+                      color: theme.colorScheme.onSurface,
+                    ),
+                  ),
                 ),
-              ),
-            ),
-          );
-        } else if (isSaintQuote) {
-          return Padding(
-            padding: EdgeInsets.only(bottom: isLast ? 0 : 20),
-            child: Container(
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color:
-                    theme.colorScheme.secondaryContainer.withValues(alpha: 0.3),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Text(
-                paragraph,
-                style: TextStyle(
-                  fontFamily: AppTheme.fontFamilyEBGaramond,
-                  fontSize: 16,
-                  fontStyle: FontStyle.italic,
-                  height: 1.7,
-                  color: theme.colorScheme.onSurface,
-                ),
-              ),
-            ),
-          );
-        } else if (paragraph.startsWith('•')) {
-          // Bullet points
-          final items = paragraph.split('\n');
-          return Padding(
-            padding: EdgeInsets.only(bottom: isLast ? 0 : 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: items.map((item) {
-                return Padding(
-                  padding: const EdgeInsets.only(bottom: 8),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        '• ',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: theme.colorScheme.primary,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Expanded(
-                        child: Text(
-                          item.replaceFirst('• ', ''),
-                          style: TextStyle(
-                            fontFamily: AppTheme.fontFamilyLato,
-                            fontSize: 16,
-                            height: 1.6,
-                            color: theme.colorScheme.onSurface,
+              );
+            } else if (paragraph.startsWith('•')) {
+              // Bullet points
+              final items = paragraph.split('\n');
+              return Padding(
+                padding: EdgeInsets.only(bottom: isLast ? 0 : 20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children:
+                      items.map((item) {
+                        return Padding(
+                          padding: const EdgeInsets.only(bottom: 8),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                '• ',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: theme.colorScheme.primary,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Expanded(
+                                child: Text(
+                                  item.replaceFirst('• ', ''),
+                                  style: TextStyle(
+                                    fontFamily: AppTheme.fontFamilyLato,
+                                    fontSize: 16,
+                                    height: 1.6,
+                                    color: theme.colorScheme.onSurface,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                        ),
-                      ),
-                    ],
+                        );
+                      }).toList(),
+                ),
+              );
+            } else {
+              // Regular paragraph
+              return Padding(
+                padding: EdgeInsets.only(bottom: isLast ? 0 : 20),
+                child: Text(
+                  paragraph,
+                  style: TextStyle(
+                    fontFamily: AppTheme.fontFamilyLato,
+                    fontSize: 16,
+                    height: 1.7,
+                    color: theme.colorScheme.onSurface,
                   ),
-                );
-              }).toList(),
-            ),
-          );
-        } else {
-          // Regular paragraph
-          return Padding(
-            padding: EdgeInsets.only(bottom: isLast ? 0 : 20),
-            child: Text(
-              paragraph,
-              style: TextStyle(
-                fontFamily: AppTheme.fontFamilyLato,
-                fontSize: 16,
-                height: 1.7,
-                color: theme.colorScheme.onSurface,
-              ),
-            ),
-          );
-        }
-      }).toList(),
+                ),
+              );
+            }
+          }).toList(),
     );
   }
 
@@ -449,21 +438,24 @@ class InvitationScreen extends ConsumerWidget {
         const SizedBox(height: 20),
         // Primary button - Begin Examination
         FilledButton.icon(
-          onPressed: () {
-            HapticUtils.mediumImpact();
-            context.go('/examine');
-          },
-          icon: const Icon(Icons.play_arrow_rounded),
-          label: Text(cta.primary),
-          style: FilledButton.styleFrom(
-            padding: const EdgeInsets.symmetric(vertical: 16),
-            textStyle: const TextStyle(
-              fontFamily: AppTheme.fontFamilyLato,
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-        ).animate().fadeIn(delay: 300.ms).scale(begin: const Offset(0.95, 0.95)),
+              onPressed: () {
+                HapticUtils.mediumImpact();
+                context.go('/examine');
+              },
+              icon: const Icon(Icons.play_arrow_rounded),
+              label: Text(cta.primary),
+              style: FilledButton.styleFrom(
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                textStyle: const TextStyle(
+                  fontFamily: AppTheme.fontFamilyLato,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            )
+            .animate()
+            .fadeIn(delay: 300.ms)
+            .scale(begin: const Offset(0.95, 0.95)),
 
         const SizedBox(height: 12),
 
@@ -498,9 +490,7 @@ class InvitationScreen extends ConsumerWidget {
           ),
           label: Text(
             cta.tertiary,
-            style: TextStyle(
-              color: theme.colorScheme.onSurfaceVariant,
-            ),
+            style: TextStyle(color: theme.colorScheme.onSurfaceVariant),
           ),
         ).animate().fadeIn(delay: 500.ms),
       ],

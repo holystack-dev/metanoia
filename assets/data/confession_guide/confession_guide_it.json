@@ -1,0 +1,58 @@
+{
+  "title": "Come fare una buona confessione",
+  "subtitle": "Guida passo passo al sacramento della Riconciliazione",
+  "sections": [
+    {
+      "id": "before_confession",
+      "title": "Prima della confessione",
+      "icon": "assignment_outlined",
+      "content": "Una buona confessione richiede una preparazione accurata. La Chiesa insegna cinque elementi essenziali:\n\n• Fai un esame di coscienza approfondito, ricordando tutti i peccati commessi dall'ultima confessione\n• Prova un dolore sincero (contrizione) per aver offeso Dio\n• Formula il proposito fermo di evitare il peccato in futuro\n• Confessa al sacerdote tutti i peccati mortali, nella loro specie e nel loro numero\n• Compi la penitenza assegnata dal sacerdote\n\nPrima della confessione prenditi il tempo per pregare e riflettere in silenzio. Chiedi allo Spirito Santo di aiutarti a vedere con chiarezza i tuoi peccati e di donarti un pentimento sincero.\n\nQuesta app contiene oltre 200 domande per l'esame di coscienza, per aiutarti a prepararti a fondo. Non avere fretta: un esame accurato è il fondamento di una buona confessione. Dedica all'esame tutte le sessioni di cui hai bisogno; i tuoi progressi vengono salvati automaticamente.\n\n«Crea in me, o Dio, un cuore puro, rinnova in me uno spirito saldo». —Salmo 51,12\n\n(CCC 1454)"
+    },
+    {
+      "id": "entering_confessional",
+      "title": "Entrare nel confessionale",
+      "icon": "door_front_outlined",
+      "content": "Quando entri nel confessionale, puoi inginocchiarti dietro la grata oppure sederti faccia a faccia con il sacerdote, come preferisci. Prenditi un momento per raccoglierti.\n\nTu e il sacerdote fate insieme il segno della croce:\n\n«Nel nome del Padre e del Figlio e dello Spirito Santo. Amen».\n\nIl sacerdote può rivolgerti parole di accoglienza e di incoraggiamento, come:\n«Il Signore sia nel tuo cuore, perché tu possa pentirti e confessare umilmente i tuoi peccati».\n\nPuò anche leggere un breve passo della Sacra Scrittura per aiutarti a fissare lo sguardo sulla misericordia di Dio."
+    },
+    {
+      "id": "confessing_sins",
+      "title": "Confessare i propri peccati",
+      "icon": "record_voice_over_outlined",
+      "content": "Inizia dicendo quanto tempo è passato dalla tua ultima confessione:\n\n«Mi benedica, padre, perché ho peccato. Sono passati [giorni/settimane/mesi/anni] dalla mia ultima confessione».\n\nPoi confessa i tuoi peccati con semplicità e sincerità. Per i peccati mortali devi confessare:\n• La specie del peccato (che cosa hai fatto)\n• Il numero delle volte (per quanto riesci a ricordare)\n\nPer esempio: «Ho mancato alla Messa domenicale tre volte» oppure «Ho mentito due volte a mio marito/mia moglie riguardo ai soldi».\n\nNon preoccuparti di trovare le parole perfette: parla con il cuore. Il sacerdote è lì per aiutarti, non per giudicarti. Se non sei sicuro che qualcosa sia peccato, puoi chiederglielo.\n\nQuando hai finito, puoi dire: «Di questi e di tutti i miei peccati mi pento sinceramente».\n\n(CCC 1456)"
+    },
+    {
+      "id": "counsel_penance",
+      "title": "Consiglio e penitenza",
+      "icon": "psychology_outlined",
+      "content": "Dopo aver ascoltato la tua confessione, il sacerdote può offrirti un consiglio spirituale per aiutarti a crescere nella virtù e a evitare il peccato in futuro. Ascolta con attenzione le sue parole.\n\nIl sacerdote ti assegnerà poi una penitenza: di solito preghiere, un'opera di carità o un sacrificio. Questa penitenza:\n• Aiuta a riparare il danno causato dal peccato\n• Ti fortifica contro le tentazioni future\n• Esprime il tuo desiderio di cambiare\n\nSe la penitenza non ti è chiara o ti sembra troppo difficile, puoi chiedere con rispetto un chiarimento o un'alternativa.\n\n(CCC 1460)"
+    },
+    {
+      "id": "act_of_contrition",
+      "title": "Atto di dolore",
+      "icon": "favorite_outline",
+      "content": "Il sacerdote ti inviterà a recitare l'atto di dolore. Questa preghiera esprime il tuo dolore per il peccato e la tua intenzione di cambiare vita. Puoi usare parole tue oppure pregare:\n\n[PRAYER]\nMio Dio, mi pento e mi dolgo con tutto il cuore dei miei peccati, perché peccando ho meritato i tuoi castighi, e molto più perché ho offeso te, infinitamente buono e degno di essere amato sopra ogni cosa. Propongo con il tuo santo aiuto di non offenderti mai più e di fuggire le occasioni prossime di peccato. Signore, misericordia, perdonami. Amen.\n[/PRAYER]"
+    },
+    {
+      "id": "absolution",
+      "title": "Ricevere l'assoluzione",
+      "icon": "auto_awesome_outlined",
+      "content": "È il momento più sacro del sacramento. Il sacerdote stende le mani su di te e pronuncia le parole dell'assoluzione:\n\n[LITURGICAL]\n«Dio, Padre di misericordia, che ha riconciliato a sé il mondo nella morte e risurrezione del suo Figlio, e ha effuso lo Spirito Santo per la remissione dei peccati, ti conceda, mediante il ministero della Chiesa, il perdono e la pace. E io ti assolvo dai tuoi peccati nel nome del Padre e del Figlio + e dello Spirito Santo».\n[/LITURGICAL]\n\nTu rispondi: «Amen».\n\nA seconda del Paese in cui ti trovi, potresti sentire una formulazione leggermente diversa: le parole essenziali, «io ti assolvo dai tuoi peccati nel nome del Padre e del Figlio e dello Spirito Santo», sono sempre le stesse.\n\nFai il segno della croce mentre il sacerdote pronuncia l'assoluzione. In questo momento tutti i peccati che hai confessato sono veramente perdonati. Sei riconciliato con Dio e con la Chiesa.\n\n«Quanto dista l'oriente dall'occidente, così egli allontana da noi le nostre colpe». —Salmo 103,12\n\n(CCC 1449)"
+    },
+    {
+      "id": "after_confession",
+      "title": "Dopo la confessione",
+      "icon": "celebration_outlined",
+      "content": "Il sacerdote ti congederà con parole di pace, come:\n«Lodiamo il Signore perché è buono».\nTu rispondi: «Eterna è la sua misericordia».\n\nOppure può dirti: «Il Signore ha perdonato i tuoi peccati. Va' in pace».\n\nDopo essere uscito dal confessionale:\n\n• Compi la penitenza al più presto, se è possibile farlo subito\n• Trattieniti qualche momento in ringraziamento: hai ricevuto un dono straordinario!\n• Chiedi al Signore la grazia di rimanere fedele\n\nRicorda: sei stato lavato e purificato. Non tornare con ansia sui peccati già confessati. Confida nella misericordia di Dio e va' avanti con gioia.\n\n«Io vi dico: così vi sarà gioia nel cielo per un solo peccatore che si converte, più che per novantanove giusti i quali non hanno bisogno di conversione». —Luca 15,7\n\n(CCC 1468)"
+    },
+    {
+      "id": "tips",
+      "title": "Consigli utili",
+      "icon": "lightbulb_outlined",
+      "content": "• Se durante la confessione dimentichi un peccato, non preoccuparti: è perdonato insieme a quelli che hai confessato. Ti basterà accusarlo nella confessione successiva.\n\n• Se sei nervoso, dillo al sacerdote. È lì per aiutarti.\n\n• Se è passato molto tempo dalla tua ultima confessione, dillo al sacerdote. Potrà guidarti passo passo.\n\n• Puoi portare con te una lista scritta dei peccati per aiutarti a ricordare, oppure usare la funzione Esame di questa app per prepararti e rivedere i tuoi peccati durante la confessione.\n\n• Il sigillo sacramentale è assoluto. Il sacerdote non può rivelare nulla di ciò che ascolta in confessione, in nessuna circostanza.\n\n• Confessati regolarmente, anche i peccati veniali. I santi raccomandavano la confessione settimanale o mensile come via di santità.\n\n«Confessate i vostri peccati gli uni agli altri e pregate gli uni per gli altri per essere guariti». —Giacomo 5,16\n\n(CCC 1467)"
+    }
+  ],
+  "callToAction": {
+    "primary": "Inizia l'esame",
+    "secondary": "Vedi le preghiere"
+  }
+}

@@ -1,11 +1,11 @@
-import 'dart:convert';
-
 import 'package:confessionapp/src/core/constants/app_constants.dart';
 import 'package:confessionapp/src/core/localization/content_language_provider.dart';
 import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
+import 'package:confessionapp/src/core/theme/app_radius.dart';
 import 'package:confessionapp/src/core/theme/app_theme.dart';
-import 'package:flutter/services.dart';
 import 'package:confessionapp/src/core/utils/haptic_utils.dart';
+import 'package:confessionapp/src/core/utils/localized_asset_loader.dart';
+import 'package:confessionapp/src/core/widgets/app_back_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -29,9 +29,13 @@ class ConfessionGuideContent {
     return ConfessionGuideContent(
       title: json['title'] as String,
       subtitle: json['subtitle'] as String,
-      sections: (json['sections'] as List)
-          .map((s) => ConfessionGuideSection.fromJson(s as Map<String, dynamic>))
-          .toList(),
+      sections:
+          (json['sections'] as List)
+              .map(
+                (s) =>
+                    ConfessionGuideSection.fromJson(s as Map<String, dynamic>),
+              )
+              .toList(),
       callToAction: ConfessionGuideCallToAction.fromJson(
         json['callToAction'] as Map<String, dynamic>,
       ),
@@ -66,10 +70,7 @@ class ConfessionGuideCallToAction {
   final String primary;
   final String secondary;
 
-  ConfessionGuideCallToAction({
-    required this.primary,
-    required this.secondary,
-  });
+  ConfessionGuideCallToAction({required this.primary, required this.secondary});
 
   factory ConfessionGuideCallToAction.fromJson(Map<String, dynamic> json) {
     return ConfessionGuideCallToAction(
@@ -82,16 +83,19 @@ class ConfessionGuideCallToAction {
 /// Provider for confession guide content based on content language
 final confessionGuideContentProvider =
     FutureProvider.autoDispose<ConfessionGuideContent>((ref) async {
-  final contentLanguage =
-      await ref.watch(contentLanguageControllerProvider.future);
-  final langKey = LanguageConfig.contentKeyFromLocale(contentLanguage);
+      final contentLanguage = await ref.watch(
+        contentLanguageControllerProvider.future,
+      );
+      final langKey = LanguageConfig.contentKeyFromLocale(contentLanguage);
 
-  final jsonString = await rootBundle.loadString(
-    'assets/data/confession_guide/confession_guide_$langKey.json',
-  );
-  final json = jsonDecode(jsonString) as Map<String, dynamic>;
-  return ConfessionGuideContent.fromJson(json);
-});
+      // Falls back to English rather than taking the screen down with a raw
+      // exception if this language's asset is missing.
+      final json = await loadLocalizedJsonObject(
+        langKey,
+        (key) => 'assets/data/confession_guide/confession_guide_$key.json',
+      );
+      return ConfessionGuideContent.fromJson(json);
+    });
 
 /// A step-by-step guide screen for making a good confession
 class ConfessionGuideScreen extends ConsumerWidget {
@@ -132,9 +136,7 @@ class ConfessionGuideScreen extends ConsumerWidget {
       body: contentAsync.when(
         data: (content) => _buildContent(context, content, theme, l10n),
         loading: () => const Center(child: CircularProgressIndicator()),
-        error: (error, stack) => Center(
-          child: Text('${l10n.error}: $error'),
-        ),
+        error: (error, stack) => Center(child: Text('${l10n.error}: $error')),
       ),
     );
   }
@@ -151,20 +153,10 @@ class ConfessionGuideScreen extends ConsumerWidget {
         SliverAppBar(
           floating: false,
           pinned: true,
-          elevation: 0,
           scrolledUnderElevation: 1,
           backgroundColor: theme.scaffoldBackgroundColor,
           surfaceTintColor: theme.colorScheme.primary,
-          leading: IconButton(
-            icon: Icon(
-              Icons.arrow_back,
-              color: theme.colorScheme.onSurface,
-            ),
-            onPressed: () {
-              HapticUtils.lightImpact();
-              context.pop();
-            },
-          ),
+          leading: const AppBackButton(fallbackLocation: '/guide'),
         ),
 
         // Header section with icon, subtitle, and title
@@ -207,25 +199,18 @@ class ConfessionGuideScreen extends ConsumerWidget {
         SliverPadding(
           padding: const EdgeInsets.all(20),
           sliver: SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (context, index) {
-                if (index < content.sections.length) {
-                  final section = content.sections[index];
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 20),
-                    child: _buildSectionCard(context, section, theme, index),
-                  );
-                } else {
-                  // Call to action buttons
-                  return _buildCallToAction(
-                    context,
-                    content.callToAction,
-                    theme,
-                  );
-                }
-              },
-              childCount: content.sections.length + 1,
-            ),
+            delegate: SliverChildBuilderDelegate((context, index) {
+              if (index < content.sections.length) {
+                final section = content.sections[index];
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 20),
+                  child: _buildSectionCard(context, section, theme, index),
+                );
+              } else {
+                // Call to action buttons
+                return _buildCallToAction(context, content.callToAction, theme);
+              }
+            }, childCount: content.sections.length + 1),
           ),
         ),
 
@@ -245,7 +230,7 @@ class ConfessionGuideScreen extends ConsumerWidget {
       elevation: 0,
       color: theme.colorScheme.surface,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(AppRadius.card),
         side: BorderSide(
           color: theme.colorScheme.outlineVariant.withValues(alpha: 0.5),
           width: 1,
@@ -263,7 +248,7 @@ class ConfessionGuideScreen extends ConsumerWidget {
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
                     color: theme.colorScheme.primaryContainer,
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(AppRadius.tile),
                   ),
                   child: Icon(
                     _getIconData(section.icon),
@@ -291,7 +276,7 @@ class ConfessionGuideScreen extends ConsumerWidget {
           ],
         ),
       ),
-    ).animate().fadeIn(delay: (100 * index).ms).slideY(begin: 0.05, end: 0);
+    ).animate().fadeIn(duration: 150.ms);
   }
 
   Widget _buildFormattedContent(String content, ThemeData theme) {
@@ -299,175 +284,185 @@ class ConfessionGuideScreen extends ConsumerWidget {
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: paragraphs.asMap().entries.map((entry) {
-        final paragraph = entry.value;
-        final isLast = entry.key == paragraphs.length - 1;
+      children:
+          paragraphs.asMap().entries.map((entry) {
+            final paragraph = entry.value;
+            final isLast = entry.key == paragraphs.length - 1;
 
-        // Check for prayer blocks
-        if (paragraph.contains('[PRAYER]')) {
-          final prayerText = paragraph
-              .replaceAll('[PRAYER]', '')
-              .replaceAll('[/PRAYER]', '')
-              .trim();
-          return Padding(
-            padding: EdgeInsets.only(bottom: isLast ? 0 : 20),
-            child: Container(
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: theme.colorScheme.secondaryContainer.withValues(alpha: 0.3),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Text(
-                prayerText,
-                style: TextStyle(
-                  fontFamily: AppTheme.fontFamilyEBGaramond,
-                  fontSize: 16,
-                  fontStyle: FontStyle.italic,
-                  height: 1.7,
-                  color: theme.colorScheme.onSurface,
-                ),
-              ),
-            ),
-          );
-        }
-
-        // Check for liturgical text blocks
-        if (paragraph.contains('[LITURGICAL]')) {
-          final liturgicalText = paragraph
-              .replaceAll('[LITURGICAL]', '')
-              .replaceAll('[/LITURGICAL]', '')
-              .trim();
-          return Padding(
-            padding: EdgeInsets.only(bottom: isLast ? 0 : 20),
-            child: Container(
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: theme.colorScheme.primaryContainer.withValues(alpha: 0.3),
-                borderRadius: BorderRadius.circular(12),
-                border: Border(
-                  left: BorderSide(
-                    color: theme.colorScheme.primary,
-                    width: 3,
-                  ),
-                ),
-              ),
-              child: Text(
-                liturgicalText,
-                style: TextStyle(
-                  fontFamily: AppTheme.fontFamilyEBGaramond,
-                  fontSize: 16,
-                  fontStyle: FontStyle.italic,
-                  height: 1.7,
-                  color: theme.colorScheme.onSurface,
-                ),
-              ),
-            ),
-          );
-        }
-
-        // Check if this is a Scripture quote (contains "—" followed by book reference)
-        final isScripture =
-            paragraph.contains('—') && _looksLikeScripture(paragraph);
-
-        if (isScripture) {
-          return Padding(
-            padding: EdgeInsets.only(bottom: isLast ? 0 : 20),
-            child: Container(
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: theme.colorScheme.primaryContainer.withValues(alpha: 0.3),
-                borderRadius: BorderRadius.circular(12),
-                border: Border(
-                  left: BorderSide(
-                    color: theme.colorScheme.primary,
-                    width: 3,
-                  ),
-                ),
-              ),
-              child: Text(
-                paragraph,
-                style: TextStyle(
-                  fontFamily: AppTheme.fontFamilyEBGaramond,
-                  fontSize: 16,
-                  fontStyle: FontStyle.italic,
-                  height: 1.7,
-                  color: theme.colorScheme.onSurface,
-                ),
-              ),
-            ),
-          );
-        } else if (paragraph.startsWith('•') || paragraph.contains('\n•')) {
-          // Bullet points
-          final items = paragraph.split('\n');
-          return Padding(
-            padding: EdgeInsets.only(bottom: isLast ? 0 : 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: items.map((item) {
-                if (item.trim().isEmpty) return const SizedBox.shrink();
-                final isBullet = item.trimLeft().startsWith('•');
-                if (isBullet) {
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 8),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          '• ',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: theme.colorScheme.primary,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Expanded(
-                          child: Text(
-                            item.replaceFirst('•', '').trim(),
-                            style: TextStyle(
-                              fontFamily: AppTheme.fontFamilyLato,
-                              fontSize: 16,
-                              height: 1.6,
-                              color: theme.colorScheme.onSurface,
-                            ),
-                          ),
-                        ),
-                      ],
+            // Check for prayer blocks
+            if (paragraph.contains('[PRAYER]')) {
+              final prayerText =
+                  paragraph
+                      .replaceAll('[PRAYER]', '')
+                      .replaceAll('[/PRAYER]', '')
+                      .trim();
+              return Padding(
+                padding: EdgeInsets.only(bottom: isLast ? 0 : 20),
+                child: Container(
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: theme.colorScheme.secondaryContainer.withValues(
+                      alpha: 0.3,
                     ),
-                  );
-                } else {
-                  // Non-bullet line in a bullet section
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 12),
-                    child: Text(
-                      item,
-                      style: TextStyle(
-                        fontFamily: AppTheme.fontFamilyLato,
-                        fontSize: 16,
-                        height: 1.6,
-                        color: theme.colorScheme.onSurface,
+                    borderRadius: BorderRadius.circular(AppRadius.tile),
+                  ),
+                  child: Text(
+                    prayerText,
+                    style: TextStyle(
+                      fontFamily: AppTheme.fontFamilyEBGaramond,
+                      fontSize: 16,
+                      fontStyle: FontStyle.italic,
+                      height: 1.7,
+                      color: theme.colorScheme.onSurface,
+                    ),
+                  ),
+                ),
+              );
+            }
+
+            // Check for liturgical text blocks
+            if (paragraph.contains('[LITURGICAL]')) {
+              final liturgicalText =
+                  paragraph
+                      .replaceAll('[LITURGICAL]', '')
+                      .replaceAll('[/LITURGICAL]', '')
+                      .trim();
+              return Padding(
+                padding: EdgeInsets.only(bottom: isLast ? 0 : 20),
+                child: Container(
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: theme.colorScheme.primaryContainer.withValues(
+                      alpha: 0.3,
+                    ),
+                    borderRadius: BorderRadius.circular(AppRadius.tile),
+                    border: Border(
+                      left: BorderSide(
+                        color: theme.colorScheme.primary,
+                        width: 3,
                       ),
                     ),
-                  );
-                }
-              }).toList(),
-            ),
-          );
-        } else {
-          // Regular paragraph
-          return Padding(
-            padding: EdgeInsets.only(bottom: isLast ? 0 : 20),
-            child: Text(
-              paragraph,
-              style: TextStyle(
-                fontFamily: AppTheme.fontFamilyLato,
-                fontSize: 16,
-                height: 1.7,
-                color: theme.colorScheme.onSurface,
-              ),
-            ),
-          );
-        }
-      }).toList(),
+                  ),
+                  child: Text(
+                    liturgicalText,
+                    style: TextStyle(
+                      fontFamily: AppTheme.fontFamilyEBGaramond,
+                      fontSize: 16,
+                      fontStyle: FontStyle.italic,
+                      height: 1.7,
+                      color: theme.colorScheme.onSurface,
+                    ),
+                  ),
+                ),
+              );
+            }
+
+            // Check if this is a Scripture quote (contains "—" followed by book reference)
+            final isScripture =
+                paragraph.contains('—') && _looksLikeScripture(paragraph);
+
+            if (isScripture) {
+              return Padding(
+                padding: EdgeInsets.only(bottom: isLast ? 0 : 20),
+                child: Container(
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: theme.colorScheme.primaryContainer.withValues(
+                      alpha: 0.3,
+                    ),
+                    borderRadius: BorderRadius.circular(AppRadius.tile),
+                    border: Border(
+                      left: BorderSide(
+                        color: theme.colorScheme.primary,
+                        width: 3,
+                      ),
+                    ),
+                  ),
+                  child: Text(
+                    paragraph,
+                    style: TextStyle(
+                      fontFamily: AppTheme.fontFamilyEBGaramond,
+                      fontSize: 16,
+                      fontStyle: FontStyle.italic,
+                      height: 1.7,
+                      color: theme.colorScheme.onSurface,
+                    ),
+                  ),
+                ),
+              );
+            } else if (paragraph.startsWith('•') || paragraph.contains('\n•')) {
+              // Bullet points
+              final items = paragraph.split('\n');
+              return Padding(
+                padding: EdgeInsets.only(bottom: isLast ? 0 : 20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children:
+                      items.map((item) {
+                        if (item.trim().isEmpty) return const SizedBox.shrink();
+                        final isBullet = item.trimLeft().startsWith('•');
+                        if (isBullet) {
+                          return Padding(
+                            padding: const EdgeInsets.only(bottom: 8),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  '• ',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: theme.colorScheme.primary,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Text(
+                                    item.replaceFirst('•', '').trim(),
+                                    style: TextStyle(
+                                      fontFamily: AppTheme.fontFamilyLato,
+                                      fontSize: 16,
+                                      height: 1.6,
+                                      color: theme.colorScheme.onSurface,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          );
+                        } else {
+                          // Non-bullet line in a bullet section
+                          return Padding(
+                            padding: const EdgeInsets.only(bottom: 12),
+                            child: Text(
+                              item,
+                              style: TextStyle(
+                                fontFamily: AppTheme.fontFamilyLato,
+                                fontSize: 16,
+                                height: 1.6,
+                                color: theme.colorScheme.onSurface,
+                              ),
+                            ),
+                          );
+                        }
+                      }).toList(),
+                ),
+              );
+            } else {
+              // Regular paragraph
+              return Padding(
+                padding: EdgeInsets.only(bottom: isLast ? 0 : 20),
+                child: Text(
+                  paragraph,
+                  style: TextStyle(
+                    fontFamily: AppTheme.fontFamilyLato,
+                    fontSize: 16,
+                    height: 1.7,
+                    color: theme.colorScheme.onSurface,
+                  ),
+                ),
+              );
+            }
+          }).toList(),
     );
   }
 
@@ -508,21 +503,24 @@ class ConfessionGuideScreen extends ConsumerWidget {
         const SizedBox(height: 20),
         // Primary button - Begin Examination
         FilledButton.icon(
-          onPressed: () {
-            HapticUtils.mediumImpact();
-            context.go('/examine');
-          },
-          icon: const Icon(Icons.play_arrow_rounded),
-          label: Text(cta.primary),
-          style: FilledButton.styleFrom(
-            padding: const EdgeInsets.symmetric(vertical: 16),
-            textStyle: const TextStyle(
-              fontFamily: AppTheme.fontFamilyLato,
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-        ).animate().fadeIn(delay: 300.ms).scale(begin: const Offset(0.95, 0.95)),
+              onPressed: () {
+                HapticUtils.mediumImpact();
+                context.go('/examine');
+              },
+              icon: const Icon(Icons.play_arrow_rounded),
+              label: Text(cta.primary),
+              style: FilledButton.styleFrom(
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                textStyle: const TextStyle(
+                  fontFamily: AppTheme.fontFamilyLato,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            )
+            .animate()
+            .fadeIn(delay: 300.ms)
+            .scale(begin: const Offset(0.95, 0.95)),
 
         const SizedBox(height: 12),
 

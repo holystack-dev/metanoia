@@ -4,8 +4,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'package_info_service.g.dart';
 
-/// Provider for package info (version, build number, etc.)
-/// Reads directly from pubspec.yaml at runtime
+/// Provider for package info (version, build number, etc.) from the platform.
 @riverpod
 Future<PackageInfo> packageInfo(Ref ref) async {
   return await PackageInfo.fromPlatform();

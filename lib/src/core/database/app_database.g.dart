@@ -1789,6 +1789,17 @@ class $ConfessionItemsTable extends ConfessionItems
     ),
     defaultValue: const Constant(false),
   );
+  static const VerificationMeta _customSinIdMeta = const VerificationMeta(
+    'customSinId',
+  );
+  @override
+  late final GeneratedColumn<int> customSinId = GeneratedColumn<int>(
+    'custom_sin_id',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
   static const VerificationMeta _questionIdMeta = const VerificationMeta(
     'questionId',
   );
@@ -1807,6 +1818,7 @@ class $ConfessionItemsTable extends ConfessionItems
     content,
     note,
     isCustom,
+    customSinId,
     questionId,
   ];
   @override
@@ -1855,6 +1867,15 @@ class $ConfessionItemsTable extends ConfessionItems
         isCustom.isAcceptableOrUnknown(data['is_custom']!, _isCustomMeta),
       );
     }
+    if (data.containsKey('custom_sin_id')) {
+      context.handle(
+        _customSinIdMeta,
+        customSinId.isAcceptableOrUnknown(
+          data['custom_sin_id']!,
+          _customSinIdMeta,
+        ),
+      );
+    }
     if (data.containsKey('question_id')) {
       context.handle(
         _questionIdMeta,
@@ -1894,6 +1915,10 @@ class $ConfessionItemsTable extends ConfessionItems
             DriftSqlType.bool,
             data['${effectivePrefix}is_custom'],
           )!,
+      customSinId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}custom_sin_id'],
+      ),
       questionId: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
         data['${effectivePrefix}question_id'],
@@ -1911,8 +1936,21 @@ class ConfessionItem extends DataClass implements Insertable<ConfessionItem> {
   final int id;
   final int confessionId;
   final String content;
+
+  /// Free-text note on this item.
+  ///
+  /// This column used to be repurposed to hold the id of the custom sin an
+  /// item came from, which collided with using it for what its name says.
+  /// [customSinId] holds that now.
   final String? note;
   final bool isCustom;
+
+  /// The [UserCustomSins] row this item came from, when [isCustom].
+  ///
+  /// Deliberately not a foreign key: existing installs already contain items
+  /// pointing at custom sins that have since been deleted, and declaring the
+  /// constraint would make those rows unwritable.
+  final int? customSinId;
   final String? questionId;
   const ConfessionItem({
     required this.id,
@@ -1920,6 +1958,7 @@ class ConfessionItem extends DataClass implements Insertable<ConfessionItem> {
     required this.content,
     this.note,
     required this.isCustom,
+    this.customSinId,
     this.questionId,
   });
   @override
@@ -1932,6 +1971,9 @@ class ConfessionItem extends DataClass implements Insertable<ConfessionItem> {
       map['note'] = Variable<String>(note);
     }
     map['is_custom'] = Variable<bool>(isCustom);
+    if (!nullToAbsent || customSinId != null) {
+      map['custom_sin_id'] = Variable<int>(customSinId);
+    }
     if (!nullToAbsent || questionId != null) {
       map['question_id'] = Variable<String>(questionId);
     }
@@ -1945,6 +1987,10 @@ class ConfessionItem extends DataClass implements Insertable<ConfessionItem> {
       content: Value(content),
       note: note == null && nullToAbsent ? const Value.absent() : Value(note),
       isCustom: Value(isCustom),
+      customSinId:
+          customSinId == null && nullToAbsent
+              ? const Value.absent()
+              : Value(customSinId),
       questionId:
           questionId == null && nullToAbsent
               ? const Value.absent()
@@ -1963,6 +2009,7 @@ class ConfessionItem extends DataClass implements Insertable<ConfessionItem> {
       content: serializer.fromJson<String>(json['content']),
       note: serializer.fromJson<String?>(json['note']),
       isCustom: serializer.fromJson<bool>(json['isCustom']),
+      customSinId: serializer.fromJson<int?>(json['customSinId']),
       questionId: serializer.fromJson<String?>(json['questionId']),
     );
   }
@@ -1975,6 +2022,7 @@ class ConfessionItem extends DataClass implements Insertable<ConfessionItem> {
       'content': serializer.toJson<String>(content),
       'note': serializer.toJson<String?>(note),
       'isCustom': serializer.toJson<bool>(isCustom),
+      'customSinId': serializer.toJson<int?>(customSinId),
       'questionId': serializer.toJson<String?>(questionId),
     };
   }
@@ -1985,6 +2033,7 @@ class ConfessionItem extends DataClass implements Insertable<ConfessionItem> {
     String? content,
     Value<String?> note = const Value.absent(),
     bool? isCustom,
+    Value<int?> customSinId = const Value.absent(),
     Value<String?> questionId = const Value.absent(),
   }) => ConfessionItem(
     id: id ?? this.id,
@@ -1992,6 +2041,7 @@ class ConfessionItem extends DataClass implements Insertable<ConfessionItem> {
     content: content ?? this.content,
     note: note.present ? note.value : this.note,
     isCustom: isCustom ?? this.isCustom,
+    customSinId: customSinId.present ? customSinId.value : this.customSinId,
     questionId: questionId.present ? questionId.value : this.questionId,
   );
   ConfessionItem copyWithCompanion(ConfessionItemsCompanion data) {
@@ -2004,6 +2054,8 @@ class ConfessionItem extends DataClass implements Insertable<ConfessionItem> {
       content: data.content.present ? data.content.value : this.content,
       note: data.note.present ? data.note.value : this.note,
       isCustom: data.isCustom.present ? data.isCustom.value : this.isCustom,
+      customSinId:
+          data.customSinId.present ? data.customSinId.value : this.customSinId,
       questionId:
           data.questionId.present ? data.questionId.value : this.questionId,
     );
@@ -2017,14 +2069,22 @@ class ConfessionItem extends DataClass implements Insertable<ConfessionItem> {
           ..write('content: $content, ')
           ..write('note: $note, ')
           ..write('isCustom: $isCustom, ')
+          ..write('customSinId: $customSinId, ')
           ..write('questionId: $questionId')
           ..write(')'))
         .toString();
   }
 
   @override
-  int get hashCode =>
-      Object.hash(id, confessionId, content, note, isCustom, questionId);
+  int get hashCode => Object.hash(
+    id,
+    confessionId,
+    content,
+    note,
+    isCustom,
+    customSinId,
+    questionId,
+  );
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -2034,6 +2094,7 @@ class ConfessionItem extends DataClass implements Insertable<ConfessionItem> {
           other.content == this.content &&
           other.note == this.note &&
           other.isCustom == this.isCustom &&
+          other.customSinId == this.customSinId &&
           other.questionId == this.questionId);
 }
 
@@ -2043,6 +2104,7 @@ class ConfessionItemsCompanion extends UpdateCompanion<ConfessionItem> {
   final Value<String> content;
   final Value<String?> note;
   final Value<bool> isCustom;
+  final Value<int?> customSinId;
   final Value<String?> questionId;
   const ConfessionItemsCompanion({
     this.id = const Value.absent(),
@@ -2050,6 +2112,7 @@ class ConfessionItemsCompanion extends UpdateCompanion<ConfessionItem> {
     this.content = const Value.absent(),
     this.note = const Value.absent(),
     this.isCustom = const Value.absent(),
+    this.customSinId = const Value.absent(),
     this.questionId = const Value.absent(),
   });
   ConfessionItemsCompanion.insert({
@@ -2058,6 +2121,7 @@ class ConfessionItemsCompanion extends UpdateCompanion<ConfessionItem> {
     required String content,
     this.note = const Value.absent(),
     this.isCustom = const Value.absent(),
+    this.customSinId = const Value.absent(),
     this.questionId = const Value.absent(),
   }) : confessionId = Value(confessionId),
        content = Value(content);
@@ -2067,6 +2131,7 @@ class ConfessionItemsCompanion extends UpdateCompanion<ConfessionItem> {
     Expression<String>? content,
     Expression<String>? note,
     Expression<bool>? isCustom,
+    Expression<int>? customSinId,
     Expression<String>? questionId,
   }) {
     return RawValuesInsertable({
@@ -2075,6 +2140,7 @@ class ConfessionItemsCompanion extends UpdateCompanion<ConfessionItem> {
       if (content != null) 'content': content,
       if (note != null) 'note': note,
       if (isCustom != null) 'is_custom': isCustom,
+      if (customSinId != null) 'custom_sin_id': customSinId,
       if (questionId != null) 'question_id': questionId,
     });
   }
@@ -2085,6 +2151,7 @@ class ConfessionItemsCompanion extends UpdateCompanion<ConfessionItem> {
     Value<String>? content,
     Value<String?>? note,
     Value<bool>? isCustom,
+    Value<int?>? customSinId,
     Value<String?>? questionId,
   }) {
     return ConfessionItemsCompanion(
@@ -2093,6 +2160,7 @@ class ConfessionItemsCompanion extends UpdateCompanion<ConfessionItem> {
       content: content ?? this.content,
       note: note ?? this.note,
       isCustom: isCustom ?? this.isCustom,
+      customSinId: customSinId ?? this.customSinId,
       questionId: questionId ?? this.questionId,
     );
   }
@@ -2115,6 +2183,9 @@ class ConfessionItemsCompanion extends UpdateCompanion<ConfessionItem> {
     if (isCustom.present) {
       map['is_custom'] = Variable<bool>(isCustom.value);
     }
+    if (customSinId.present) {
+      map['custom_sin_id'] = Variable<int>(customSinId.value);
+    }
     if (questionId.present) {
       map['question_id'] = Variable<String>(questionId.value);
     }
@@ -2129,6 +2200,7 @@ class ConfessionItemsCompanion extends UpdateCompanion<ConfessionItem> {
           ..write('content: $content, ')
           ..write('note: $note, ')
           ..write('isCustom: $isCustom, ')
+          ..write('customSinId: $customSinId, ')
           ..write('questionId: $questionId')
           ..write(')'))
         .toString();
@@ -3654,6 +3726,1162 @@ class PenancesCompanion extends UpdateCompanion<Penance> {
   }
 }
 
+class $JournalEntriesTable extends JournalEntries
+    with TableInfo<$JournalEntriesTable, JournalEntry> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $JournalEntriesTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    hasAutoIncrement: true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'PRIMARY KEY AUTOINCREMENT',
+    ),
+  );
+  static const VerificationMeta _entryDateMeta = const VerificationMeta(
+    'entryDate',
+  );
+  @override
+  late final GeneratedColumn<DateTime> entryDate = GeneratedColumn<DateTime>(
+    'entry_date',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _gratitudeMeta = const VerificationMeta(
+    'gratitude',
+  );
+  @override
+  late final GeneratedColumn<String> gratitude = GeneratedColumn<String>(
+    'gratitude',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _reflectionMeta = const VerificationMeta(
+    'reflection',
+  );
+  @override
+  late final GeneratedColumn<String> reflection = GeneratedColumn<String>(
+    'reflection',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _resolutionMeta = const VerificationMeta(
+    'resolution',
+  );
+  @override
+  late final GeneratedColumn<String> resolution = GeneratedColumn<String>(
+    'resolution',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _moodMeta = const VerificationMeta('mood');
+  @override
+  late final GeneratedColumn<int> mood = GeneratedColumn<int>(
+    'mood',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _createdAtMeta = const VerificationMeta(
+    'createdAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
+    'created_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+    defaultValue: currentDateAndTime,
+  );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
+    'updated_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+    defaultValue: currentDateAndTime,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    entryDate,
+    gratitude,
+    reflection,
+    resolution,
+    mood,
+    createdAt,
+    updatedAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'journal_entries';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<JournalEntry> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('entry_date')) {
+      context.handle(
+        _entryDateMeta,
+        entryDate.isAcceptableOrUnknown(data['entry_date']!, _entryDateMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_entryDateMeta);
+    }
+    if (data.containsKey('gratitude')) {
+      context.handle(
+        _gratitudeMeta,
+        gratitude.isAcceptableOrUnknown(data['gratitude']!, _gratitudeMeta),
+      );
+    }
+    if (data.containsKey('reflection')) {
+      context.handle(
+        _reflectionMeta,
+        reflection.isAcceptableOrUnknown(data['reflection']!, _reflectionMeta),
+      );
+    }
+    if (data.containsKey('resolution')) {
+      context.handle(
+        _resolutionMeta,
+        resolution.isAcceptableOrUnknown(data['resolution']!, _resolutionMeta),
+      );
+    }
+    if (data.containsKey('mood')) {
+      context.handle(
+        _moodMeta,
+        mood.isAcceptableOrUnknown(data['mood']!, _moodMeta),
+      );
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(
+        _createdAtMeta,
+        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
+      );
+    }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  List<Set<GeneratedColumn>> get uniqueKeys => [
+    {entryDate},
+  ];
+  @override
+  JournalEntry map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return JournalEntry(
+      id:
+          attachedDatabase.typeMapping.read(
+            DriftSqlType.int,
+            data['${effectivePrefix}id'],
+          )!,
+      entryDate:
+          attachedDatabase.typeMapping.read(
+            DriftSqlType.dateTime,
+            data['${effectivePrefix}entry_date'],
+          )!,
+      gratitude: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}gratitude'],
+      ),
+      reflection: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}reflection'],
+      ),
+      resolution: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}resolution'],
+      ),
+      mood: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}mood'],
+      ),
+      createdAt:
+          attachedDatabase.typeMapping.read(
+            DriftSqlType.dateTime,
+            data['${effectivePrefix}created_at'],
+          )!,
+      updatedAt:
+          attachedDatabase.typeMapping.read(
+            DriftSqlType.dateTime,
+            data['${effectivePrefix}updated_at'],
+          )!,
+    );
+  }
+
+  @override
+  $JournalEntriesTable createAlias(String alias) {
+    return $JournalEntriesTable(attachedDatabase, alias);
+  }
+}
+
+class JournalEntry extends DataClass implements Insertable<JournalEntry> {
+  final int id;
+
+  /// The calendar day this entry is for, at local midnight.
+  ///
+  /// Unique — one entry per day, so edits update the same row and the streak
+  /// and calendar queries stay trivial.
+  final DateTime entryDate;
+
+  /// "Where did I see God today?"
+  final String? gratitude;
+
+  /// Free reflection on the day.
+  final String? reflection;
+
+  /// An intention for tomorrow.
+  final String? resolution;
+
+  /// Spiritual state, 1-5. Null if the user skipped it.
+  final int? mood;
+  final DateTime createdAt;
+  final DateTime updatedAt;
+  const JournalEntry({
+    required this.id,
+    required this.entryDate,
+    this.gratitude,
+    this.reflection,
+    this.resolution,
+    this.mood,
+    required this.createdAt,
+    required this.updatedAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['entry_date'] = Variable<DateTime>(entryDate);
+    if (!nullToAbsent || gratitude != null) {
+      map['gratitude'] = Variable<String>(gratitude);
+    }
+    if (!nullToAbsent || reflection != null) {
+      map['reflection'] = Variable<String>(reflection);
+    }
+    if (!nullToAbsent || resolution != null) {
+      map['resolution'] = Variable<String>(resolution);
+    }
+    if (!nullToAbsent || mood != null) {
+      map['mood'] = Variable<int>(mood);
+    }
+    map['created_at'] = Variable<DateTime>(createdAt);
+    map['updated_at'] = Variable<DateTime>(updatedAt);
+    return map;
+  }
+
+  JournalEntriesCompanion toCompanion(bool nullToAbsent) {
+    return JournalEntriesCompanion(
+      id: Value(id),
+      entryDate: Value(entryDate),
+      gratitude:
+          gratitude == null && nullToAbsent
+              ? const Value.absent()
+              : Value(gratitude),
+      reflection:
+          reflection == null && nullToAbsent
+              ? const Value.absent()
+              : Value(reflection),
+      resolution:
+          resolution == null && nullToAbsent
+              ? const Value.absent()
+              : Value(resolution),
+      mood: mood == null && nullToAbsent ? const Value.absent() : Value(mood),
+      createdAt: Value(createdAt),
+      updatedAt: Value(updatedAt),
+    );
+  }
+
+  factory JournalEntry.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return JournalEntry(
+      id: serializer.fromJson<int>(json['id']),
+      entryDate: serializer.fromJson<DateTime>(json['entryDate']),
+      gratitude: serializer.fromJson<String?>(json['gratitude']),
+      reflection: serializer.fromJson<String?>(json['reflection']),
+      resolution: serializer.fromJson<String?>(json['resolution']),
+      mood: serializer.fromJson<int?>(json['mood']),
+      createdAt: serializer.fromJson<DateTime>(json['createdAt']),
+      updatedAt: serializer.fromJson<DateTime>(json['updatedAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'entryDate': serializer.toJson<DateTime>(entryDate),
+      'gratitude': serializer.toJson<String?>(gratitude),
+      'reflection': serializer.toJson<String?>(reflection),
+      'resolution': serializer.toJson<String?>(resolution),
+      'mood': serializer.toJson<int?>(mood),
+      'createdAt': serializer.toJson<DateTime>(createdAt),
+      'updatedAt': serializer.toJson<DateTime>(updatedAt),
+    };
+  }
+
+  JournalEntry copyWith({
+    int? id,
+    DateTime? entryDate,
+    Value<String?> gratitude = const Value.absent(),
+    Value<String?> reflection = const Value.absent(),
+    Value<String?> resolution = const Value.absent(),
+    Value<int?> mood = const Value.absent(),
+    DateTime? createdAt,
+    DateTime? updatedAt,
+  }) => JournalEntry(
+    id: id ?? this.id,
+    entryDate: entryDate ?? this.entryDate,
+    gratitude: gratitude.present ? gratitude.value : this.gratitude,
+    reflection: reflection.present ? reflection.value : this.reflection,
+    resolution: resolution.present ? resolution.value : this.resolution,
+    mood: mood.present ? mood.value : this.mood,
+    createdAt: createdAt ?? this.createdAt,
+    updatedAt: updatedAt ?? this.updatedAt,
+  );
+  JournalEntry copyWithCompanion(JournalEntriesCompanion data) {
+    return JournalEntry(
+      id: data.id.present ? data.id.value : this.id,
+      entryDate: data.entryDate.present ? data.entryDate.value : this.entryDate,
+      gratitude: data.gratitude.present ? data.gratitude.value : this.gratitude,
+      reflection:
+          data.reflection.present ? data.reflection.value : this.reflection,
+      resolution:
+          data.resolution.present ? data.resolution.value : this.resolution,
+      mood: data.mood.present ? data.mood.value : this.mood,
+      createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('JournalEntry(')
+          ..write('id: $id, ')
+          ..write('entryDate: $entryDate, ')
+          ..write('gratitude: $gratitude, ')
+          ..write('reflection: $reflection, ')
+          ..write('resolution: $resolution, ')
+          ..write('mood: $mood, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('updatedAt: $updatedAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    entryDate,
+    gratitude,
+    reflection,
+    resolution,
+    mood,
+    createdAt,
+    updatedAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is JournalEntry &&
+          other.id == this.id &&
+          other.entryDate == this.entryDate &&
+          other.gratitude == this.gratitude &&
+          other.reflection == this.reflection &&
+          other.resolution == this.resolution &&
+          other.mood == this.mood &&
+          other.createdAt == this.createdAt &&
+          other.updatedAt == this.updatedAt);
+}
+
+class JournalEntriesCompanion extends UpdateCompanion<JournalEntry> {
+  final Value<int> id;
+  final Value<DateTime> entryDate;
+  final Value<String?> gratitude;
+  final Value<String?> reflection;
+  final Value<String?> resolution;
+  final Value<int?> mood;
+  final Value<DateTime> createdAt;
+  final Value<DateTime> updatedAt;
+  const JournalEntriesCompanion({
+    this.id = const Value.absent(),
+    this.entryDate = const Value.absent(),
+    this.gratitude = const Value.absent(),
+    this.reflection = const Value.absent(),
+    this.resolution = const Value.absent(),
+    this.mood = const Value.absent(),
+    this.createdAt = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+  });
+  JournalEntriesCompanion.insert({
+    this.id = const Value.absent(),
+    required DateTime entryDate,
+    this.gratitude = const Value.absent(),
+    this.reflection = const Value.absent(),
+    this.resolution = const Value.absent(),
+    this.mood = const Value.absent(),
+    this.createdAt = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+  }) : entryDate = Value(entryDate);
+  static Insertable<JournalEntry> custom({
+    Expression<int>? id,
+    Expression<DateTime>? entryDate,
+    Expression<String>? gratitude,
+    Expression<String>? reflection,
+    Expression<String>? resolution,
+    Expression<int>? mood,
+    Expression<DateTime>? createdAt,
+    Expression<DateTime>? updatedAt,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (entryDate != null) 'entry_date': entryDate,
+      if (gratitude != null) 'gratitude': gratitude,
+      if (reflection != null) 'reflection': reflection,
+      if (resolution != null) 'resolution': resolution,
+      if (mood != null) 'mood': mood,
+      if (createdAt != null) 'created_at': createdAt,
+      if (updatedAt != null) 'updated_at': updatedAt,
+    });
+  }
+
+  JournalEntriesCompanion copyWith({
+    Value<int>? id,
+    Value<DateTime>? entryDate,
+    Value<String?>? gratitude,
+    Value<String?>? reflection,
+    Value<String?>? resolution,
+    Value<int?>? mood,
+    Value<DateTime>? createdAt,
+    Value<DateTime>? updatedAt,
+  }) {
+    return JournalEntriesCompanion(
+      id: id ?? this.id,
+      entryDate: entryDate ?? this.entryDate,
+      gratitude: gratitude ?? this.gratitude,
+      reflection: reflection ?? this.reflection,
+      resolution: resolution ?? this.resolution,
+      mood: mood ?? this.mood,
+      createdAt: createdAt ?? this.createdAt,
+      updatedAt: updatedAt ?? this.updatedAt,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (entryDate.present) {
+      map['entry_date'] = Variable<DateTime>(entryDate.value);
+    }
+    if (gratitude.present) {
+      map['gratitude'] = Variable<String>(gratitude.value);
+    }
+    if (reflection.present) {
+      map['reflection'] = Variable<String>(reflection.value);
+    }
+    if (resolution.present) {
+      map['resolution'] = Variable<String>(resolution.value);
+    }
+    if (mood.present) {
+      map['mood'] = Variable<int>(mood.value);
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<DateTime>(createdAt.value);
+    }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<DateTime>(updatedAt.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('JournalEntriesCompanion(')
+          ..write('id: $id, ')
+          ..write('entryDate: $entryDate, ')
+          ..write('gratitude: $gratitude, ')
+          ..write('reflection: $reflection, ')
+          ..write('resolution: $resolution, ')
+          ..write('mood: $mood, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('updatedAt: $updatedAt')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $JournalSinMarksTable extends JournalSinMarks
+    with TableInfo<$JournalSinMarksTable, JournalSinMark> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $JournalSinMarksTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    hasAutoIncrement: true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'PRIMARY KEY AUTOINCREMENT',
+    ),
+  );
+  static const VerificationMeta _entryIdMeta = const VerificationMeta(
+    'entryId',
+  );
+  @override
+  late final GeneratedColumn<int> entryId = GeneratedColumn<int>(
+    'entry_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'REFERENCES journal_entries (id) ON DELETE CASCADE',
+    ),
+  );
+  static const VerificationMeta _questionKeyMeta = const VerificationMeta(
+    'questionKey',
+  );
+  @override
+  late final GeneratedColumn<String> questionKey = GeneratedColumn<String>(
+    'question_key',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _customSinIdMeta = const VerificationMeta(
+    'customSinId',
+  );
+  @override
+  late final GeneratedColumn<int> customSinId = GeneratedColumn<int>(
+    'custom_sin_id',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _freeTextMeta = const VerificationMeta(
+    'freeText',
+  );
+  @override
+  late final GeneratedColumn<String> freeText = GeneratedColumn<String>(
+    'free_text',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _sinTextSnapshotMeta = const VerificationMeta(
+    'sinTextSnapshot',
+  );
+  @override
+  late final GeneratedColumn<String> sinTextSnapshot = GeneratedColumn<String>(
+    'sin_text_snapshot',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _commandmentNoMeta = const VerificationMeta(
+    'commandmentNo',
+  );
+  @override
+  late final GeneratedColumn<int> commandmentNo = GeneratedColumn<int>(
+    'commandment_no',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _confessedInConfessionIdMeta =
+      const VerificationMeta('confessedInConfessionId');
+  @override
+  late final GeneratedColumn<int> confessedInConfessionId =
+      GeneratedColumn<int>(
+        'confessed_in_confession_id',
+        aliasedName,
+        true,
+        type: DriftSqlType.int,
+        requiredDuringInsert: false,
+      );
+  static const VerificationMeta _createdAtMeta = const VerificationMeta(
+    'createdAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
+    'created_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+    defaultValue: currentDateAndTime,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    entryId,
+    questionKey,
+    customSinId,
+    freeText,
+    sinTextSnapshot,
+    commandmentNo,
+    confessedInConfessionId,
+    createdAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'journal_sin_marks';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<JournalSinMark> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('entry_id')) {
+      context.handle(
+        _entryIdMeta,
+        entryId.isAcceptableOrUnknown(data['entry_id']!, _entryIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_entryIdMeta);
+    }
+    if (data.containsKey('question_key')) {
+      context.handle(
+        _questionKeyMeta,
+        questionKey.isAcceptableOrUnknown(
+          data['question_key']!,
+          _questionKeyMeta,
+        ),
+      );
+    }
+    if (data.containsKey('custom_sin_id')) {
+      context.handle(
+        _customSinIdMeta,
+        customSinId.isAcceptableOrUnknown(
+          data['custom_sin_id']!,
+          _customSinIdMeta,
+        ),
+      );
+    }
+    if (data.containsKey('free_text')) {
+      context.handle(
+        _freeTextMeta,
+        freeText.isAcceptableOrUnknown(data['free_text']!, _freeTextMeta),
+      );
+    }
+    if (data.containsKey('sin_text_snapshot')) {
+      context.handle(
+        _sinTextSnapshotMeta,
+        sinTextSnapshot.isAcceptableOrUnknown(
+          data['sin_text_snapshot']!,
+          _sinTextSnapshotMeta,
+        ),
+      );
+    }
+    if (data.containsKey('commandment_no')) {
+      context.handle(
+        _commandmentNoMeta,
+        commandmentNo.isAcceptableOrUnknown(
+          data['commandment_no']!,
+          _commandmentNoMeta,
+        ),
+      );
+    }
+    if (data.containsKey('confessed_in_confession_id')) {
+      context.handle(
+        _confessedInConfessionIdMeta,
+        confessedInConfessionId.isAcceptableOrUnknown(
+          data['confessed_in_confession_id']!,
+          _confessedInConfessionIdMeta,
+        ),
+      );
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(
+        _createdAtMeta,
+        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  JournalSinMark map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return JournalSinMark(
+      id:
+          attachedDatabase.typeMapping.read(
+            DriftSqlType.int,
+            data['${effectivePrefix}id'],
+          )!,
+      entryId:
+          attachedDatabase.typeMapping.read(
+            DriftSqlType.int,
+            data['${effectivePrefix}entry_id'],
+          )!,
+      questionKey: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}question_key'],
+      ),
+      customSinId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}custom_sin_id'],
+      ),
+      freeText: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}free_text'],
+      ),
+      sinTextSnapshot: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}sin_text_snapshot'],
+      ),
+      commandmentNo: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}commandment_no'],
+      ),
+      confessedInConfessionId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}confessed_in_confession_id'],
+      ),
+      createdAt:
+          attachedDatabase.typeMapping.read(
+            DriftSqlType.dateTime,
+            data['${effectivePrefix}created_at'],
+          )!,
+    );
+  }
+
+  @override
+  $JournalSinMarksTable createAlias(String alias) {
+    return $JournalSinMarksTable(attachedDatabase, alias);
+  }
+}
+
+class JournalSinMark extends DataClass implements Insertable<JournalSinMark> {
+  final int id;
+  final int entryId;
+
+  /// Language-NEUTRAL question key ("01-001", never "en-01-001").
+  ///
+  /// Storing the language-scoped id is exactly what made custom sins and draft
+  /// selections vanish when the content language changed. This feature does not
+  /// inherit that: the display text is resolved at read time from whatever the
+  /// current content language is.
+  final String? questionKey;
+
+  /// A [UserCustomSins] row, when the mark came from one.
+  final int? customSinId;
+
+  /// An ad-hoc mark the user typed.
+  final String? freeText;
+
+  /// The display text as it read the moment the sin was marked.
+  ///
+  /// A snapshot, not the source of truth: standard questions still resolve to
+  /// the current content language at read time, so a language switch updates
+  /// them. But a custom sin can be edited or deleted after it was marked, which
+  /// would otherwise leave the mark blank and silently drop it from the next
+  /// confession. This snapshot is the fallback that keeps a marked sin from ever
+  /// disappearing — losing one is a pastoral failure, not a cosmetic one.
+  final String? sinTextSnapshot;
+
+  /// Commandment number, kept denormalised so insights can group by it.
+  final int? commandmentNo;
+
+  /// Set once this mark has been carried into a finished confession, which is
+  /// what lets the journal show it as absolved.
+  final int? confessedInConfessionId;
+  final DateTime createdAt;
+  const JournalSinMark({
+    required this.id,
+    required this.entryId,
+    this.questionKey,
+    this.customSinId,
+    this.freeText,
+    this.sinTextSnapshot,
+    this.commandmentNo,
+    this.confessedInConfessionId,
+    required this.createdAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['entry_id'] = Variable<int>(entryId);
+    if (!nullToAbsent || questionKey != null) {
+      map['question_key'] = Variable<String>(questionKey);
+    }
+    if (!nullToAbsent || customSinId != null) {
+      map['custom_sin_id'] = Variable<int>(customSinId);
+    }
+    if (!nullToAbsent || freeText != null) {
+      map['free_text'] = Variable<String>(freeText);
+    }
+    if (!nullToAbsent || sinTextSnapshot != null) {
+      map['sin_text_snapshot'] = Variable<String>(sinTextSnapshot);
+    }
+    if (!nullToAbsent || commandmentNo != null) {
+      map['commandment_no'] = Variable<int>(commandmentNo);
+    }
+    if (!nullToAbsent || confessedInConfessionId != null) {
+      map['confessed_in_confession_id'] = Variable<int>(
+        confessedInConfessionId,
+      );
+    }
+    map['created_at'] = Variable<DateTime>(createdAt);
+    return map;
+  }
+
+  JournalSinMarksCompanion toCompanion(bool nullToAbsent) {
+    return JournalSinMarksCompanion(
+      id: Value(id),
+      entryId: Value(entryId),
+      questionKey:
+          questionKey == null && nullToAbsent
+              ? const Value.absent()
+              : Value(questionKey),
+      customSinId:
+          customSinId == null && nullToAbsent
+              ? const Value.absent()
+              : Value(customSinId),
+      freeText:
+          freeText == null && nullToAbsent
+              ? const Value.absent()
+              : Value(freeText),
+      sinTextSnapshot:
+          sinTextSnapshot == null && nullToAbsent
+              ? const Value.absent()
+              : Value(sinTextSnapshot),
+      commandmentNo:
+          commandmentNo == null && nullToAbsent
+              ? const Value.absent()
+              : Value(commandmentNo),
+      confessedInConfessionId:
+          confessedInConfessionId == null && nullToAbsent
+              ? const Value.absent()
+              : Value(confessedInConfessionId),
+      createdAt: Value(createdAt),
+    );
+  }
+
+  factory JournalSinMark.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return JournalSinMark(
+      id: serializer.fromJson<int>(json['id']),
+      entryId: serializer.fromJson<int>(json['entryId']),
+      questionKey: serializer.fromJson<String?>(json['questionKey']),
+      customSinId: serializer.fromJson<int?>(json['customSinId']),
+      freeText: serializer.fromJson<String?>(json['freeText']),
+      sinTextSnapshot: serializer.fromJson<String?>(json['sinTextSnapshot']),
+      commandmentNo: serializer.fromJson<int?>(json['commandmentNo']),
+      confessedInConfessionId: serializer.fromJson<int?>(
+        json['confessedInConfessionId'],
+      ),
+      createdAt: serializer.fromJson<DateTime>(json['createdAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'entryId': serializer.toJson<int>(entryId),
+      'questionKey': serializer.toJson<String?>(questionKey),
+      'customSinId': serializer.toJson<int?>(customSinId),
+      'freeText': serializer.toJson<String?>(freeText),
+      'sinTextSnapshot': serializer.toJson<String?>(sinTextSnapshot),
+      'commandmentNo': serializer.toJson<int?>(commandmentNo),
+      'confessedInConfessionId': serializer.toJson<int?>(
+        confessedInConfessionId,
+      ),
+      'createdAt': serializer.toJson<DateTime>(createdAt),
+    };
+  }
+
+  JournalSinMark copyWith({
+    int? id,
+    int? entryId,
+    Value<String?> questionKey = const Value.absent(),
+    Value<int?> customSinId = const Value.absent(),
+    Value<String?> freeText = const Value.absent(),
+    Value<String?> sinTextSnapshot = const Value.absent(),
+    Value<int?> commandmentNo = const Value.absent(),
+    Value<int?> confessedInConfessionId = const Value.absent(),
+    DateTime? createdAt,
+  }) => JournalSinMark(
+    id: id ?? this.id,
+    entryId: entryId ?? this.entryId,
+    questionKey: questionKey.present ? questionKey.value : this.questionKey,
+    customSinId: customSinId.present ? customSinId.value : this.customSinId,
+    freeText: freeText.present ? freeText.value : this.freeText,
+    sinTextSnapshot:
+        sinTextSnapshot.present ? sinTextSnapshot.value : this.sinTextSnapshot,
+    commandmentNo:
+        commandmentNo.present ? commandmentNo.value : this.commandmentNo,
+    confessedInConfessionId:
+        confessedInConfessionId.present
+            ? confessedInConfessionId.value
+            : this.confessedInConfessionId,
+    createdAt: createdAt ?? this.createdAt,
+  );
+  JournalSinMark copyWithCompanion(JournalSinMarksCompanion data) {
+    return JournalSinMark(
+      id: data.id.present ? data.id.value : this.id,
+      entryId: data.entryId.present ? data.entryId.value : this.entryId,
+      questionKey:
+          data.questionKey.present ? data.questionKey.value : this.questionKey,
+      customSinId:
+          data.customSinId.present ? data.customSinId.value : this.customSinId,
+      freeText: data.freeText.present ? data.freeText.value : this.freeText,
+      sinTextSnapshot:
+          data.sinTextSnapshot.present
+              ? data.sinTextSnapshot.value
+              : this.sinTextSnapshot,
+      commandmentNo:
+          data.commandmentNo.present
+              ? data.commandmentNo.value
+              : this.commandmentNo,
+      confessedInConfessionId:
+          data.confessedInConfessionId.present
+              ? data.confessedInConfessionId.value
+              : this.confessedInConfessionId,
+      createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('JournalSinMark(')
+          ..write('id: $id, ')
+          ..write('entryId: $entryId, ')
+          ..write('questionKey: $questionKey, ')
+          ..write('customSinId: $customSinId, ')
+          ..write('freeText: $freeText, ')
+          ..write('sinTextSnapshot: $sinTextSnapshot, ')
+          ..write('commandmentNo: $commandmentNo, ')
+          ..write('confessedInConfessionId: $confessedInConfessionId, ')
+          ..write('createdAt: $createdAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    entryId,
+    questionKey,
+    customSinId,
+    freeText,
+    sinTextSnapshot,
+    commandmentNo,
+    confessedInConfessionId,
+    createdAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is JournalSinMark &&
+          other.id == this.id &&
+          other.entryId == this.entryId &&
+          other.questionKey == this.questionKey &&
+          other.customSinId == this.customSinId &&
+          other.freeText == this.freeText &&
+          other.sinTextSnapshot == this.sinTextSnapshot &&
+          other.commandmentNo == this.commandmentNo &&
+          other.confessedInConfessionId == this.confessedInConfessionId &&
+          other.createdAt == this.createdAt);
+}
+
+class JournalSinMarksCompanion extends UpdateCompanion<JournalSinMark> {
+  final Value<int> id;
+  final Value<int> entryId;
+  final Value<String?> questionKey;
+  final Value<int?> customSinId;
+  final Value<String?> freeText;
+  final Value<String?> sinTextSnapshot;
+  final Value<int?> commandmentNo;
+  final Value<int?> confessedInConfessionId;
+  final Value<DateTime> createdAt;
+  const JournalSinMarksCompanion({
+    this.id = const Value.absent(),
+    this.entryId = const Value.absent(),
+    this.questionKey = const Value.absent(),
+    this.customSinId = const Value.absent(),
+    this.freeText = const Value.absent(),
+    this.sinTextSnapshot = const Value.absent(),
+    this.commandmentNo = const Value.absent(),
+    this.confessedInConfessionId = const Value.absent(),
+    this.createdAt = const Value.absent(),
+  });
+  JournalSinMarksCompanion.insert({
+    this.id = const Value.absent(),
+    required int entryId,
+    this.questionKey = const Value.absent(),
+    this.customSinId = const Value.absent(),
+    this.freeText = const Value.absent(),
+    this.sinTextSnapshot = const Value.absent(),
+    this.commandmentNo = const Value.absent(),
+    this.confessedInConfessionId = const Value.absent(),
+    this.createdAt = const Value.absent(),
+  }) : entryId = Value(entryId);
+  static Insertable<JournalSinMark> custom({
+    Expression<int>? id,
+    Expression<int>? entryId,
+    Expression<String>? questionKey,
+    Expression<int>? customSinId,
+    Expression<String>? freeText,
+    Expression<String>? sinTextSnapshot,
+    Expression<int>? commandmentNo,
+    Expression<int>? confessedInConfessionId,
+    Expression<DateTime>? createdAt,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (entryId != null) 'entry_id': entryId,
+      if (questionKey != null) 'question_key': questionKey,
+      if (customSinId != null) 'custom_sin_id': customSinId,
+      if (freeText != null) 'free_text': freeText,
+      if (sinTextSnapshot != null) 'sin_text_snapshot': sinTextSnapshot,
+      if (commandmentNo != null) 'commandment_no': commandmentNo,
+      if (confessedInConfessionId != null)
+        'confessed_in_confession_id': confessedInConfessionId,
+      if (createdAt != null) 'created_at': createdAt,
+    });
+  }
+
+  JournalSinMarksCompanion copyWith({
+    Value<int>? id,
+    Value<int>? entryId,
+    Value<String?>? questionKey,
+    Value<int?>? customSinId,
+    Value<String?>? freeText,
+    Value<String?>? sinTextSnapshot,
+    Value<int?>? commandmentNo,
+    Value<int?>? confessedInConfessionId,
+    Value<DateTime>? createdAt,
+  }) {
+    return JournalSinMarksCompanion(
+      id: id ?? this.id,
+      entryId: entryId ?? this.entryId,
+      questionKey: questionKey ?? this.questionKey,
+      customSinId: customSinId ?? this.customSinId,
+      freeText: freeText ?? this.freeText,
+      sinTextSnapshot: sinTextSnapshot ?? this.sinTextSnapshot,
+      commandmentNo: commandmentNo ?? this.commandmentNo,
+      confessedInConfessionId:
+          confessedInConfessionId ?? this.confessedInConfessionId,
+      createdAt: createdAt ?? this.createdAt,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (entryId.present) {
+      map['entry_id'] = Variable<int>(entryId.value);
+    }
+    if (questionKey.present) {
+      map['question_key'] = Variable<String>(questionKey.value);
+    }
+    if (customSinId.present) {
+      map['custom_sin_id'] = Variable<int>(customSinId.value);
+    }
+    if (freeText.present) {
+      map['free_text'] = Variable<String>(freeText.value);
+    }
+    if (sinTextSnapshot.present) {
+      map['sin_text_snapshot'] = Variable<String>(sinTextSnapshot.value);
+    }
+    if (commandmentNo.present) {
+      map['commandment_no'] = Variable<int>(commandmentNo.value);
+    }
+    if (confessedInConfessionId.present) {
+      map['confessed_in_confession_id'] = Variable<int>(
+        confessedInConfessionId.value,
+      );
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<DateTime>(createdAt.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('JournalSinMarksCompanion(')
+          ..write('id: $id, ')
+          ..write('entryId: $entryId, ')
+          ..write('questionKey: $questionKey, ')
+          ..write('customSinId: $customSinId, ')
+          ..write('freeText: $freeText, ')
+          ..write('sinTextSnapshot: $sinTextSnapshot, ')
+          ..write('commandmentNo: $commandmentNo, ')
+          ..write('confessedInConfessionId: $confessedInConfessionId, ')
+          ..write('createdAt: $createdAt')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$AppDatabase extends GeneratedDatabase {
   _$AppDatabase(QueryExecutor e) : super(e);
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
@@ -3670,6 +4898,10 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   late final $PrayersTable prayers = $PrayersTable(this);
   late final $UserCustomSinsTable userCustomSins = $UserCustomSinsTable(this);
   late final $PenancesTable penances = $PenancesTable(this);
+  late final $JournalEntriesTable journalEntries = $JournalEntriesTable(this);
+  late final $JournalSinMarksTable journalSinMarks = $JournalSinMarksTable(
+    this,
+  );
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -3685,6 +4917,8 @@ abstract class _$AppDatabase extends GeneratedDatabase {
     prayers,
     userCustomSins,
     penances,
+    journalEntries,
+    journalSinMarks,
   ];
   @override
   StreamQueryUpdateRules get streamUpdateRules => const StreamQueryUpdateRules([
@@ -3701,6 +4935,13 @@ abstract class _$AppDatabase extends GeneratedDatabase {
         limitUpdateKind: UpdateKind.delete,
       ),
       result: [TableUpdate('penances', kind: UpdateKind.delete)],
+    ),
+    WritePropagation(
+      on: TableUpdateQuery.onTableName(
+        'journal_entries',
+        limitUpdateKind: UpdateKind.delete,
+      ),
+      result: [TableUpdate('journal_sin_marks', kind: UpdateKind.delete)],
     ),
   ]);
 }
@@ -5143,6 +6384,7 @@ typedef $$ConfessionItemsTableCreateCompanionBuilder =
       required String content,
       Value<String?> note,
       Value<bool> isCustom,
+      Value<int?> customSinId,
       Value<String?> questionId,
     });
 typedef $$ConfessionItemsTableUpdateCompanionBuilder =
@@ -5152,6 +6394,7 @@ typedef $$ConfessionItemsTableUpdateCompanionBuilder =
       Value<String> content,
       Value<String?> note,
       Value<bool> isCustom,
+      Value<int?> customSinId,
       Value<String?> questionId,
     });
 
@@ -5216,6 +6459,11 @@ class $$ConfessionItemsTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
+  ColumnFilters<int> get customSinId => $composableBuilder(
+    column: $table.customSinId,
+    builder: (column) => ColumnFilters(column),
+  );
+
   ColumnFilters<String> get questionId => $composableBuilder(
     column: $table.questionId,
     builder: (column) => ColumnFilters(column),
@@ -5274,6 +6522,11 @@ class $$ConfessionItemsTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<int> get customSinId => $composableBuilder(
+    column: $table.customSinId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<String> get questionId => $composableBuilder(
     column: $table.questionId,
     builder: (column) => ColumnOrderings(column),
@@ -5323,6 +6576,11 @@ class $$ConfessionItemsTableAnnotationComposer
 
   GeneratedColumn<bool> get isCustom =>
       $composableBuilder(column: $table.isCustom, builder: (column) => column);
+
+  GeneratedColumn<int> get customSinId => $composableBuilder(
+    column: $table.customSinId,
+    builder: (column) => column,
+  );
 
   GeneratedColumn<String> get questionId => $composableBuilder(
     column: $table.questionId,
@@ -5395,6 +6653,7 @@ class $$ConfessionItemsTableTableManager
                 Value<String> content = const Value.absent(),
                 Value<String?> note = const Value.absent(),
                 Value<bool> isCustom = const Value.absent(),
+                Value<int?> customSinId = const Value.absent(),
                 Value<String?> questionId = const Value.absent(),
               }) => ConfessionItemsCompanion(
                 id: id,
@@ -5402,6 +6661,7 @@ class $$ConfessionItemsTableTableManager
                 content: content,
                 note: note,
                 isCustom: isCustom,
+                customSinId: customSinId,
                 questionId: questionId,
               ),
           createCompanionCallback:
@@ -5411,6 +6671,7 @@ class $$ConfessionItemsTableTableManager
                 required String content,
                 Value<String?> note = const Value.absent(),
                 Value<bool> isCustom = const Value.absent(),
+                Value<int?> customSinId = const Value.absent(),
                 Value<String?> questionId = const Value.absent(),
               }) => ConfessionItemsCompanion.insert(
                 id: id,
@@ -5418,6 +6679,7 @@ class $$ConfessionItemsTableTableManager
                 content: content,
                 note: note,
                 isCustom: isCustom,
+                customSinId: customSinId,
                 questionId: questionId,
               ),
           withReferenceMapper:
@@ -6434,6 +7696,799 @@ typedef $$PenancesTableProcessedTableManager =
       Penance,
       PrefetchHooks Function({bool confessionId})
     >;
+typedef $$JournalEntriesTableCreateCompanionBuilder =
+    JournalEntriesCompanion Function({
+      Value<int> id,
+      required DateTime entryDate,
+      Value<String?> gratitude,
+      Value<String?> reflection,
+      Value<String?> resolution,
+      Value<int?> mood,
+      Value<DateTime> createdAt,
+      Value<DateTime> updatedAt,
+    });
+typedef $$JournalEntriesTableUpdateCompanionBuilder =
+    JournalEntriesCompanion Function({
+      Value<int> id,
+      Value<DateTime> entryDate,
+      Value<String?> gratitude,
+      Value<String?> reflection,
+      Value<String?> resolution,
+      Value<int?> mood,
+      Value<DateTime> createdAt,
+      Value<DateTime> updatedAt,
+    });
+
+final class $$JournalEntriesTableReferences
+    extends BaseReferences<_$AppDatabase, $JournalEntriesTable, JournalEntry> {
+  $$JournalEntriesTableReferences(
+    super.$_db,
+    super.$_table,
+    super.$_typedResult,
+  );
+
+  static MultiTypedResultKey<$JournalSinMarksTable, List<JournalSinMark>>
+  _journalSinMarksRefsTable(_$AppDatabase db) => MultiTypedResultKey.fromTable(
+    db.journalSinMarks,
+    aliasName: $_aliasNameGenerator(
+      db.journalEntries.id,
+      db.journalSinMarks.entryId,
+    ),
+  );
+
+  $$JournalSinMarksTableProcessedTableManager get journalSinMarksRefs {
+    final manager = $$JournalSinMarksTableTableManager(
+      $_db,
+      $_db.journalSinMarks,
+    ).filter((f) => f.entryId.id.sqlEquals($_itemColumn<int>('id')!));
+
+    final cache = $_typedResult.readTableOrNull(
+      _journalSinMarksRefsTable($_db),
+    );
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: cache),
+    );
+  }
+}
+
+class $$JournalEntriesTableFilterComposer
+    extends Composer<_$AppDatabase, $JournalEntriesTable> {
+  $$JournalEntriesTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get entryDate => $composableBuilder(
+    column: $table.entryDate,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get gratitude => $composableBuilder(
+    column: $table.gratitude,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get reflection => $composableBuilder(
+    column: $table.reflection,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get resolution => $composableBuilder(
+    column: $table.resolution,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get mood => $composableBuilder(
+    column: $table.mood,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  Expression<bool> journalSinMarksRefs(
+    Expression<bool> Function($$JournalSinMarksTableFilterComposer f) f,
+  ) {
+    final $$JournalSinMarksTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.id,
+      referencedTable: $db.journalSinMarks,
+      getReferencedColumn: (t) => t.entryId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$JournalSinMarksTableFilterComposer(
+            $db: $db,
+            $table: $db.journalSinMarks,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return f(composer);
+  }
+}
+
+class $$JournalEntriesTableOrderingComposer
+    extends Composer<_$AppDatabase, $JournalEntriesTable> {
+  $$JournalEntriesTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get entryDate => $composableBuilder(
+    column: $table.entryDate,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get gratitude => $composableBuilder(
+    column: $table.gratitude,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get reflection => $composableBuilder(
+    column: $table.reflection,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get resolution => $composableBuilder(
+    column: $table.resolution,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get mood => $composableBuilder(
+    column: $table.mood,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$JournalEntriesTableAnnotationComposer
+    extends Composer<_$AppDatabase, $JournalEntriesTable> {
+  $$JournalEntriesTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get entryDate =>
+      $composableBuilder(column: $table.entryDate, builder: (column) => column);
+
+  GeneratedColumn<String> get gratitude =>
+      $composableBuilder(column: $table.gratitude, builder: (column) => column);
+
+  GeneratedColumn<String> get reflection => $composableBuilder(
+    column: $table.reflection,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get resolution => $composableBuilder(
+    column: $table.resolution,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get mood =>
+      $composableBuilder(column: $table.mood, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+
+  Expression<T> journalSinMarksRefs<T extends Object>(
+    Expression<T> Function($$JournalSinMarksTableAnnotationComposer a) f,
+  ) {
+    final $$JournalSinMarksTableAnnotationComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.id,
+      referencedTable: $db.journalSinMarks,
+      getReferencedColumn: (t) => t.entryId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$JournalSinMarksTableAnnotationComposer(
+            $db: $db,
+            $table: $db.journalSinMarks,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return f(composer);
+  }
+}
+
+class $$JournalEntriesTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $JournalEntriesTable,
+          JournalEntry,
+          $$JournalEntriesTableFilterComposer,
+          $$JournalEntriesTableOrderingComposer,
+          $$JournalEntriesTableAnnotationComposer,
+          $$JournalEntriesTableCreateCompanionBuilder,
+          $$JournalEntriesTableUpdateCompanionBuilder,
+          (JournalEntry, $$JournalEntriesTableReferences),
+          JournalEntry,
+          PrefetchHooks Function({bool journalSinMarksRefs})
+        > {
+  $$JournalEntriesTableTableManager(
+    _$AppDatabase db,
+    $JournalEntriesTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer:
+              () => $$JournalEntriesTableFilterComposer($db: db, $table: table),
+          createOrderingComposer:
+              () =>
+                  $$JournalEntriesTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer:
+              () => $$JournalEntriesTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<DateTime> entryDate = const Value.absent(),
+                Value<String?> gratitude = const Value.absent(),
+                Value<String?> reflection = const Value.absent(),
+                Value<String?> resolution = const Value.absent(),
+                Value<int?> mood = const Value.absent(),
+                Value<DateTime> createdAt = const Value.absent(),
+                Value<DateTime> updatedAt = const Value.absent(),
+              }) => JournalEntriesCompanion(
+                id: id,
+                entryDate: entryDate,
+                gratitude: gratitude,
+                reflection: reflection,
+                resolution: resolution,
+                mood: mood,
+                createdAt: createdAt,
+                updatedAt: updatedAt,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                required DateTime entryDate,
+                Value<String?> gratitude = const Value.absent(),
+                Value<String?> reflection = const Value.absent(),
+                Value<String?> resolution = const Value.absent(),
+                Value<int?> mood = const Value.absent(),
+                Value<DateTime> createdAt = const Value.absent(),
+                Value<DateTime> updatedAt = const Value.absent(),
+              }) => JournalEntriesCompanion.insert(
+                id: id,
+                entryDate: entryDate,
+                gratitude: gratitude,
+                reflection: reflection,
+                resolution: resolution,
+                mood: mood,
+                createdAt: createdAt,
+                updatedAt: updatedAt,
+              ),
+          withReferenceMapper:
+              (p0) =>
+                  p0
+                      .map(
+                        (e) => (
+                          e.readTable(table),
+                          $$JournalEntriesTableReferences(db, table, e),
+                        ),
+                      )
+                      .toList(),
+          prefetchHooksCallback: ({journalSinMarksRefs = false}) {
+            return PrefetchHooks(
+              db: db,
+              explicitlyWatchedTables: [
+                if (journalSinMarksRefs) db.journalSinMarks,
+              ],
+              addJoins: null,
+              getPrefetchedDataCallback: (items) async {
+                return [
+                  if (journalSinMarksRefs)
+                    await $_getPrefetchedData<
+                      JournalEntry,
+                      $JournalEntriesTable,
+                      JournalSinMark
+                    >(
+                      currentTable: table,
+                      referencedTable: $$JournalEntriesTableReferences
+                          ._journalSinMarksRefsTable(db),
+                      managerFromTypedResult:
+                          (p0) =>
+                              $$JournalEntriesTableReferences(
+                                db,
+                                table,
+                                p0,
+                              ).journalSinMarksRefs,
+                      referencedItemsForCurrentItem:
+                          (item, referencedItems) => referencedItems.where(
+                            (e) => e.entryId == item.id,
+                          ),
+                      typedResults: items,
+                    ),
+                ];
+              },
+            );
+          },
+        ),
+      );
+}
+
+typedef $$JournalEntriesTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $JournalEntriesTable,
+      JournalEntry,
+      $$JournalEntriesTableFilterComposer,
+      $$JournalEntriesTableOrderingComposer,
+      $$JournalEntriesTableAnnotationComposer,
+      $$JournalEntriesTableCreateCompanionBuilder,
+      $$JournalEntriesTableUpdateCompanionBuilder,
+      (JournalEntry, $$JournalEntriesTableReferences),
+      JournalEntry,
+      PrefetchHooks Function({bool journalSinMarksRefs})
+    >;
+typedef $$JournalSinMarksTableCreateCompanionBuilder =
+    JournalSinMarksCompanion Function({
+      Value<int> id,
+      required int entryId,
+      Value<String?> questionKey,
+      Value<int?> customSinId,
+      Value<String?> freeText,
+      Value<String?> sinTextSnapshot,
+      Value<int?> commandmentNo,
+      Value<int?> confessedInConfessionId,
+      Value<DateTime> createdAt,
+    });
+typedef $$JournalSinMarksTableUpdateCompanionBuilder =
+    JournalSinMarksCompanion Function({
+      Value<int> id,
+      Value<int> entryId,
+      Value<String?> questionKey,
+      Value<int?> customSinId,
+      Value<String?> freeText,
+      Value<String?> sinTextSnapshot,
+      Value<int?> commandmentNo,
+      Value<int?> confessedInConfessionId,
+      Value<DateTime> createdAt,
+    });
+
+final class $$JournalSinMarksTableReferences
+    extends
+        BaseReferences<_$AppDatabase, $JournalSinMarksTable, JournalSinMark> {
+  $$JournalSinMarksTableReferences(
+    super.$_db,
+    super.$_table,
+    super.$_typedResult,
+  );
+
+  static $JournalEntriesTable _entryIdTable(_$AppDatabase db) =>
+      db.journalEntries.createAlias(
+        $_aliasNameGenerator(db.journalSinMarks.entryId, db.journalEntries.id),
+      );
+
+  $$JournalEntriesTableProcessedTableManager get entryId {
+    final $_column = $_itemColumn<int>('entry_id')!;
+
+    final manager = $$JournalEntriesTableTableManager(
+      $_db,
+      $_db.journalEntries,
+    ).filter((f) => f.id.sqlEquals($_column));
+    final item = $_typedResult.readTableOrNull(_entryIdTable($_db));
+    if (item == null) return manager;
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: [item]),
+    );
+  }
+}
+
+class $$JournalSinMarksTableFilterComposer
+    extends Composer<_$AppDatabase, $JournalSinMarksTable> {
+  $$JournalSinMarksTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get questionKey => $composableBuilder(
+    column: $table.questionKey,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get customSinId => $composableBuilder(
+    column: $table.customSinId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get freeText => $composableBuilder(
+    column: $table.freeText,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get sinTextSnapshot => $composableBuilder(
+    column: $table.sinTextSnapshot,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get commandmentNo => $composableBuilder(
+    column: $table.commandmentNo,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get confessedInConfessionId => $composableBuilder(
+    column: $table.confessedInConfessionId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  $$JournalEntriesTableFilterComposer get entryId {
+    final $$JournalEntriesTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.entryId,
+      referencedTable: $db.journalEntries,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$JournalEntriesTableFilterComposer(
+            $db: $db,
+            $table: $db.journalEntries,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$JournalSinMarksTableOrderingComposer
+    extends Composer<_$AppDatabase, $JournalSinMarksTable> {
+  $$JournalSinMarksTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get questionKey => $composableBuilder(
+    column: $table.questionKey,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get customSinId => $composableBuilder(
+    column: $table.customSinId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get freeText => $composableBuilder(
+    column: $table.freeText,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get sinTextSnapshot => $composableBuilder(
+    column: $table.sinTextSnapshot,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get commandmentNo => $composableBuilder(
+    column: $table.commandmentNo,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get confessedInConfessionId => $composableBuilder(
+    column: $table.confessedInConfessionId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  $$JournalEntriesTableOrderingComposer get entryId {
+    final $$JournalEntriesTableOrderingComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.entryId,
+      referencedTable: $db.journalEntries,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$JournalEntriesTableOrderingComposer(
+            $db: $db,
+            $table: $db.journalEntries,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$JournalSinMarksTableAnnotationComposer
+    extends Composer<_$AppDatabase, $JournalSinMarksTable> {
+  $$JournalSinMarksTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get questionKey => $composableBuilder(
+    column: $table.questionKey,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get customSinId => $composableBuilder(
+    column: $table.customSinId,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get freeText =>
+      $composableBuilder(column: $table.freeText, builder: (column) => column);
+
+  GeneratedColumn<String> get sinTextSnapshot => $composableBuilder(
+    column: $table.sinTextSnapshot,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get commandmentNo => $composableBuilder(
+    column: $table.commandmentNo,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get confessedInConfessionId => $composableBuilder(
+    column: $table.confessedInConfessionId,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<DateTime> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+
+  $$JournalEntriesTableAnnotationComposer get entryId {
+    final $$JournalEntriesTableAnnotationComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.entryId,
+      referencedTable: $db.journalEntries,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$JournalEntriesTableAnnotationComposer(
+            $db: $db,
+            $table: $db.journalEntries,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$JournalSinMarksTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $JournalSinMarksTable,
+          JournalSinMark,
+          $$JournalSinMarksTableFilterComposer,
+          $$JournalSinMarksTableOrderingComposer,
+          $$JournalSinMarksTableAnnotationComposer,
+          $$JournalSinMarksTableCreateCompanionBuilder,
+          $$JournalSinMarksTableUpdateCompanionBuilder,
+          (JournalSinMark, $$JournalSinMarksTableReferences),
+          JournalSinMark,
+          PrefetchHooks Function({bool entryId})
+        > {
+  $$JournalSinMarksTableTableManager(
+    _$AppDatabase db,
+    $JournalSinMarksTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer:
+              () =>
+                  $$JournalSinMarksTableFilterComposer($db: db, $table: table),
+          createOrderingComposer:
+              () => $$JournalSinMarksTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer:
+              () => $$JournalSinMarksTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<int> entryId = const Value.absent(),
+                Value<String?> questionKey = const Value.absent(),
+                Value<int?> customSinId = const Value.absent(),
+                Value<String?> freeText = const Value.absent(),
+                Value<String?> sinTextSnapshot = const Value.absent(),
+                Value<int?> commandmentNo = const Value.absent(),
+                Value<int?> confessedInConfessionId = const Value.absent(),
+                Value<DateTime> createdAt = const Value.absent(),
+              }) => JournalSinMarksCompanion(
+                id: id,
+                entryId: entryId,
+                questionKey: questionKey,
+                customSinId: customSinId,
+                freeText: freeText,
+                sinTextSnapshot: sinTextSnapshot,
+                commandmentNo: commandmentNo,
+                confessedInConfessionId: confessedInConfessionId,
+                createdAt: createdAt,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                required int entryId,
+                Value<String?> questionKey = const Value.absent(),
+                Value<int?> customSinId = const Value.absent(),
+                Value<String?> freeText = const Value.absent(),
+                Value<String?> sinTextSnapshot = const Value.absent(),
+                Value<int?> commandmentNo = const Value.absent(),
+                Value<int?> confessedInConfessionId = const Value.absent(),
+                Value<DateTime> createdAt = const Value.absent(),
+              }) => JournalSinMarksCompanion.insert(
+                id: id,
+                entryId: entryId,
+                questionKey: questionKey,
+                customSinId: customSinId,
+                freeText: freeText,
+                sinTextSnapshot: sinTextSnapshot,
+                commandmentNo: commandmentNo,
+                confessedInConfessionId: confessedInConfessionId,
+                createdAt: createdAt,
+              ),
+          withReferenceMapper:
+              (p0) =>
+                  p0
+                      .map(
+                        (e) => (
+                          e.readTable(table),
+                          $$JournalSinMarksTableReferences(db, table, e),
+                        ),
+                      )
+                      .toList(),
+          prefetchHooksCallback: ({entryId = false}) {
+            return PrefetchHooks(
+              db: db,
+              explicitlyWatchedTables: [],
+              addJoins: <
+                T extends TableManagerState<
+                  dynamic,
+                  dynamic,
+                  dynamic,
+                  dynamic,
+                  dynamic,
+                  dynamic,
+                  dynamic,
+                  dynamic,
+                  dynamic,
+                  dynamic,
+                  dynamic
+                >
+              >(state) {
+                if (entryId) {
+                  state =
+                      state.withJoin(
+                            currentTable: table,
+                            currentColumn: table.entryId,
+                            referencedTable: $$JournalSinMarksTableReferences
+                                ._entryIdTable(db),
+                            referencedColumn:
+                                $$JournalSinMarksTableReferences
+                                    ._entryIdTable(db)
+                                    .id,
+                          )
+                          as T;
+                }
+
+                return state;
+              },
+              getPrefetchedDataCallback: (items) async {
+                return [];
+              },
+            );
+          },
+        ),
+      );
+}
+
+typedef $$JournalSinMarksTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $JournalSinMarksTable,
+      JournalSinMark,
+      $$JournalSinMarksTableFilterComposer,
+      $$JournalSinMarksTableOrderingComposer,
+      $$JournalSinMarksTableAnnotationComposer,
+      $$JournalSinMarksTableCreateCompanionBuilder,
+      $$JournalSinMarksTableUpdateCompanionBuilder,
+      (JournalSinMark, $$JournalSinMarksTableReferences),
+      JournalSinMark,
+      PrefetchHooks Function({bool entryId})
+    >;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;
@@ -6457,4 +8512,8 @@ class $AppDatabaseManager {
       $$UserCustomSinsTableTableManager(_db, _db.userCustomSins);
   $$PenancesTableTableManager get penances =>
       $$PenancesTableTableManager(_db, _db.penances);
+  $$JournalEntriesTableTableManager get journalEntries =>
+      $$JournalEntriesTableTableManager(_db, _db.journalEntries);
+  $$JournalSinMarksTableTableManager get journalSinMarks =>
+      $$JournalSinMarksTableTableManager(_db, _db.journalSinMarks);
 }

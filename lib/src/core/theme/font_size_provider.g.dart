@@ -7,7 +7,7 @@ part of 'font_size_provider.dart';
 // **************************************************************************
 
 String _$fontSizeControllerHash() =>
-    r'5cb07afec0bc6fb9d4b13e8f1a906dfdff2db276';
+    r'b6ffdde4983d0f89c35d57567de0ca5046a5b383';
 
 /// See also [FontSizeController].
 @ProviderFor(FontSizeController)

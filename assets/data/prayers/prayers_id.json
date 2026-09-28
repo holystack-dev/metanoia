@@ -1,0 +1,190 @@
+{
+    "subtitle": "Doa-doa untuk perjalanan rohani Anda",
+    "categories": [
+        {
+            "id": "confession",
+            "title": "Doa-doa untuk pengakuan dosa",
+            "icon": "church_outlined",
+            "prayers": [
+                {
+                    "id": "before_confession",
+                    "title": "Doa sebelum pengakuan dosa",
+                    "icon": "wb_twilight_outlined",
+                    "content": "Datanglah, ya Roh Kudus, ke dalam jiwaku. Terangilah budiku agar aku mengenali dosa-dosa yang harus kuakui, dan anugerahkanlah rahmat-Mu supaya aku sungguh-sungguh menyesali dosa-dosaku.\n\nBantulah aku mengaku dosa dengan baik, sungguh menyesali segala pelanggaranku terhadap-Mu, dan memperbaiki hidupku. Demi Kristus, Tuhan kami. Amin."
+                },
+                {
+                    "id": "act_of_contrition",
+                    "title": "Doa Tobat",
+                    "icon": "favorite_outline",
+                    "content": "Allah yang maharahim, aku menyesal atas dosa-dosaku, sebab patut aku Engkau hukum, terutama sebab aku telah menghina Engkau yang mahamurah dan mahabaik bagiku.\n\nAku benci akan segala dosaku dan berjanji dengan pertolongan rahmat-Mu hendak memperbaiki hidupku dan tidak akan berbuat dosa lagi.\n\nAllah yang mahamurah, ampunilah aku, orang berdosa. Amin."
+                },
+                {
+                    "id": "after_confession",
+                    "title": "Doa sesudah pengakuan dosa",
+                    "icon": "light_mode_outlined",
+                    "content": "Yesusku yang terkasih, aku telah mengakukan semua dosaku sebaik mungkin. Aku telah berusaha sungguh-sungguh untuk mengaku dosa dengan baik. Aku yakin Engkau telah mengampuni aku.\n\nAku bersyukur kepada-Mu dari lubuk hatiku. Aku berjanji untuk berusaha, dengan rahmat-Mu, agar tidak berbuat dosa lagi. Ya Allahku yang penuh kasih, berilah aku kekuatan untuk tetap dekat pada-Mu dan menjauhi dosa. Amin."
+                },
+                {
+                    "id": "confiteor",
+                    "title": "Saya Mengaku (Confiteor)",
+                    "icon": "person_outline",
+                    "content": "Saya mengaku kepada Allah yang mahakuasa dan kepada Saudara sekalian, bahwa saya telah berdosa dengan pikiran dan perkataan, dengan perbuatan dan kelalaian.\n\n[RUBRIC]Sambil menebah dada tiga kali, ucapkanlah:[/RUBRIC]\n\nSaya berdosa, saya berdosa, saya sungguh berdosa.\n\nOleh sebab itu saya mohon kepada Santa Perawan Maria, kepada para malaikat dan orang kudus, dan kepada Saudara sekalian, supaya mendoakan saya pada Allah, Tuhan kita. Amin."
+                }
+            ]
+        },
+        {
+            "id": "essential",
+            "title": "Doa-doa dasar",
+            "icon": "auto_awesome_outlined",
+            "prayers": [
+                {
+                    "id": "lords_prayer",
+                    "title": "Bapa Kami",
+                    "icon": "cloud_outlined",
+                    "content": "Bapa kami yang ada di surga,\ndimuliakanlah nama-Mu.\nDatanglah kerajaan-Mu.\nJadilah kehendak-Mu\ndi atas bumi seperti di dalam surga.\n\nBerilah kami rezeki pada hari ini,\ndan ampunilah kesalahan kami,\nseperti kami pun mengampuni\nyang bersalah kepada kami.\nDan janganlah masukkan kami ke dalam pencobaan,\ntetapi bebaskanlah kami dari yang jahat.\n\n[AMEN]Amin."
+                },
+                {
+                    "id": "hail_mary",
+                    "title": "Salam Maria",
+                    "icon": "star_outline",
+                    "content": "Salam Maria, penuh rahmat,\nTuhan sertamu.\nTerpujilah engkau di antara wanita,\ndan terpujilah buah tubuhmu, Yesus.\n\nSanta Maria, Bunda Allah,\ndoakanlah kami yang berdosa ini,\nsekarang dan waktu kami mati.\n\n[AMEN]Amin."
+                },
+                {
+                    "id": "glory_be",
+                    "title": "Kemuliaan",
+                    "icon": "brightness_high_outlined",
+                    "content": "Kemuliaan kepada Bapa\ndan Putra\ndan Roh Kudus.\n\nSeperti pada permulaan,\nsekarang, selalu,\ndan sepanjang segala abad.\n\n[AMEN]Amin."
+                },
+                {
+                    "id": "apostles_creed",
+                    "title": "Syahadat Para Rasul (Aku Percaya)",
+                    "icon": "menu_book_outlined",
+                    "isExpandable": true,
+                    "content": "Aku percaya akan Allah, Bapa yang mahakuasa, pencipta langit dan bumi;\n\ndan akan Yesus Kristus, Putra-Nya yang tunggal, Tuhan kita, yang dikandung dari Roh Kudus, dilahirkan oleh Perawan Maria, yang menderita sengsara dalam pemerintahan Pontius Pilatus, disalibkan, wafat, dan dimakamkan;\n\nyang turun ke tempat penantian, pada hari ketiga bangkit dari antara orang mati; yang naik ke surga, duduk di sebelah kanan Allah Bapa yang mahakuasa; dari situ Ia akan datang mengadili orang yang hidup dan yang mati.\n\nAku percaya akan Roh Kudus, Gereja katolik yang kudus, persekutuan para kudus, pengampunan dosa, kebangkitan badan, kehidupan kekal.\n\n[AMEN]Amin."
+                }
+            ]
+        },
+        {
+            "id": "marian",
+            "title": "Doa-doa kepada Bunda Maria",
+            "icon": "favorite_border",
+            "prayers": [
+                {
+                    "id": "hail_holy_queen",
+                    "title": "Salam ya Ratu",
+                    "icon": "star_outline",
+                    "content": "Salam, ya Ratu, Bunda yang berbelas kasih,\nhidup, hiburan, dan harapan kami, salam.\n\nKami semua memanjatkan permohonan,\nkami amat susah, mengeluh, mengesah\ndalam lembah duka ini.\n\nYa Ibunda, ya pelindung kami,\nlimpahkanlah kasih sayangmu yang besar kepada kami.\nDan Yesus, Putramu yang terpuji itu,\nsemoga kautunjukkan kepada kami.\n\nO Ratu, o Ibu, o Maria, Bunda Kristus.\n\n[VERSICLE]V. Doakanlah kami, ya Santa Bunda Allah.[/VERSICLE]\n[RESPONSE]R. Supaya kami dapat menikmati janji Kristus.[/RESPONSE]\n\n[AMEN]Amin."
+                },
+                {
+                    "id": "memorare",
+                    "title": "Memorare",
+                    "icon": "volunteer_activism_outlined",
+                    "content": "Ingatlah, ya Perawan Maria yang amat baik, belum pernah terdengar bahwa seorang pun yang berlindung kepadamu, memohon pertolonganmu, dan meminta perantaraanmu, dibiarkan tanpa pertolongan.\n\nTerdorong oleh kepercayaan itu, aku datang menghadapmu, ya Perawan segala perawan dan Bundaku; kepadamu aku datang, di hadapanmu aku berdiri sebagai pendosa yang menyesal.\n\nYa Bunda Sabda yang menjelma, janganlah menolak permohonanku, tetapi sudilah mendengarkan dan mengabulkan doaku.\n\n[AMEN]Amin."
+                },
+                {
+                    "id": "fatima_prayer",
+                    "title": "Doa Fatima",
+                    "icon": "flare_outlined",
+                    "content": "Ya Yesus yang baik, ampunilah dosa-dosa kami. Selamatkanlah kami dari api neraka, dan hantarlah semua jiwa ke surga, terutama jiwa-jiwa yang paling membutuhkan kerahiman-Mu.\n\n[AMEN]Amin."
+                }
+            ]
+        },
+        {
+            "id": "devotions",
+            "title": "Doa-doa devosi",
+            "icon": "auto_stories_outlined",
+            "prayers": [
+                {
+                    "id": "holy_rosary",
+                    "title": "Doa Rosario",
+                    "subtitle": "Panduan lengkap bagi pemula",
+                    "icon": "radio_button_unchecked",
+                    "isExpandable": true,
+                    "sections": [
+                        {
+                            "title": "Doa-doa pembuka",
+                            "subtitle": "Pada salib dan manik-manik pertama",
+                            "content": "[INSTRUCTION]Buatlah tanda salib:[/INSTRUCTION]\n\nDalam nama Bapa dan Putra dan Roh Kudus. Amin.\n\n[INSTRUCTION]Sambil memegang salib, ucapkanlah Syahadat Para Rasul:[/INSTRUCTION]\n\n[PRAYER]Aku percaya akan Allah, Bapa yang mahakuasa, pencipta langit dan bumi; dan akan Yesus Kristus, Putra-Nya yang tunggal, Tuhan kita, yang dikandung dari Roh Kudus, dilahirkan oleh Perawan Maria, yang menderita sengsara dalam pemerintahan Pontius Pilatus, disalibkan, wafat, dan dimakamkan; yang turun ke tempat penantian, pada hari ketiga bangkit dari antara orang mati; yang naik ke surga, duduk di sebelah kanan Allah Bapa yang mahakuasa; dari situ Ia akan datang mengadili orang yang hidup dan yang mati. Aku percaya akan Roh Kudus, Gereja katolik yang kudus, persekutuan para kudus, pengampunan dosa, kebangkitan badan, kehidupan kekal. Amin.[/PRAYER]\n\n[INSTRUCTION]Pada manik besar yang pertama, ucapkanlah Bapa Kami:[/INSTRUCTION]\n\n[PRAYER]Bapa kami yang ada di surga, dimuliakanlah nama-Mu. Datanglah kerajaan-Mu. Jadilah kehendak-Mu di atas bumi seperti di dalam surga. Berilah kami rezeki pada hari ini, dan ampunilah kesalahan kami, seperti kami pun mengampuni yang bersalah kepada kami. Dan janganlah masukkan kami ke dalam pencobaan, tetapi bebaskanlah kami dari yang jahat. Amin.[/PRAYER]\n\n[INSTRUCTION]Pada masing-masing dari ketiga manik kecil, ucapkanlah Salam Maria (untuk iman, harapan, dan kasih):[/INSTRUCTION]\n\n[PRAYER]Salam Maria, penuh rahmat, Tuhan sertamu. Terpujilah engkau di antara wanita, dan terpujilah buah tubuhmu, Yesus. Santa Maria, Bunda Allah, doakanlah kami yang berdosa ini, sekarang dan waktu kami mati. Amin.[/PRAYER]\n\n[INSTRUCTION]Ucapkanlah Kemuliaan:[/INSTRUCTION]\n\n[PRAYER]Kemuliaan kepada Bapa dan Putra dan Roh Kudus. Seperti pada permulaan, sekarang, selalu, dan sepanjang segala abad. Amin.[/PRAYER]"
+                        },
+                        {
+                            "title": "Cara mendoakan setiap dasa",
+                            "subtitle": "Ulangi untuk masing-masing dari 5 peristiwa",
+                            "content": "[INSTRUCTION]1. Sebutkanlah peristiwanya dan renungkanlah[/INSTRUCTION]\n\n[INSTRUCTION]2. Pada manik besar, ucapkanlah Bapa Kami:[/INSTRUCTION]\n\n[PRAYER]Bapa kami yang ada di surga, dimuliakanlah nama-Mu. Datanglah kerajaan-Mu. Jadilah kehendak-Mu di atas bumi seperti di dalam surga. Berilah kami rezeki pada hari ini, dan ampunilah kesalahan kami, seperti kami pun mengampuni yang bersalah kepada kami. Dan janganlah masukkan kami ke dalam pencobaan, tetapi bebaskanlah kami dari yang jahat. Amin.[/PRAYER]\n\n[INSTRUCTION]3. Pada masing-masing dari 10 manik kecil, ucapkanlah Salam Maria:[/INSTRUCTION]\n\n[PRAYER]Salam Maria, penuh rahmat, Tuhan sertamu. Terpujilah engkau di antara wanita, dan terpujilah buah tubuhmu, Yesus. Santa Maria, Bunda Allah, doakanlah kami yang berdosa ini, sekarang dan waktu kami mati. Amin.[/PRAYER]\n\n[INSTRUCTION]4. Sesudah 10 Salam Maria, ucapkanlah Kemuliaan:[/INSTRUCTION]\n\n[PRAYER]Kemuliaan kepada Bapa dan Putra dan Roh Kudus. Seperti pada permulaan, sekarang, selalu, dan sepanjang segala abad. Amin.[/PRAYER]\n\n[INSTRUCTION]5. Jika mau, ucapkanlah Doa Fatima:[/INSTRUCTION]\n\n[PRAYER]Ya Yesus yang baik, ampunilah dosa-dosa kami. Selamatkanlah kami dari api neraka, dan hantarlah semua jiwa ke surga, terutama jiwa-jiwa yang paling membutuhkan kerahiman-Mu. Amin.[/PRAYER]"
+                        },
+                        {
+                            "title": "Peristiwa-peristiwa gembira",
+                            "subtitle": "Senin dan Sabtu",
+                            "content": "1. Maria menerima kabar gembira — Malaikat Gabriel memberitakan kepada Maria bahwa ia akan mengandung Putra Allah.\n\n2. Maria mengunjungi Elisabet — Maria mengunjungi saudarinya, Elisabet, yang sedang mengandung Yohanes Pembaptis.\n\n3. Yesus dilahirkan — Yesus lahir di Betlehem.\n\n4. Yesus dipersembahkan dalam Bait Allah — Maria dan Yusuf mempersembahkan Yesus di Bait Allah.\n\n5. Yesus diketemukan dalam Bait Allah — Sesudah tiga hari, Maria dan Yusuf menemukan Yesus sedang mengajar di Bait Allah."
+                        },
+                        {
+                            "title": "Peristiwa-peristiwa terang",
+                            "subtitle": "Kamis",
+                            "content": "1. Yesus dibaptis di Sungai Yordan — Yesus dibaptis oleh Yohanes dan Roh Kudus turun ke atas-Nya.\n\n2. Perkawinan di Kana — Yesus mengerjakan mukjizat-Nya yang pertama, mengubah air menjadi anggur.\n\n3. Pewartaan Kerajaan Allah — Yesus memanggil kita untuk bertobat dan memberitakan Kerajaan Allah.\n\n4. Yesus dimuliakan — Yesus berubah rupa di Gunung Tabor, menampakkan kemuliaan ilahi-Nya.\n\n5. Penetapan Ekaristi — Yesus memberikan Tubuh dan Darah-Nya kepada kita pada Perjamuan Malam Terakhir."
+                        },
+                        {
+                            "title": "Peristiwa-peristiwa sedih",
+                            "subtitle": "Selasa dan Jumat",
+                            "content": "1. Yesus berdoa dalam sakratulmaut — Yesus berdoa di Taman Getsemani dan menerima kehendak Bapa.\n\n2. Yesus didera — Yesus didera dengan kejam oleh para prajurit Romawi.\n\n3. Yesus dimahkotai duri — Yesus diolok-olok dan dimahkotai duri.\n\n4. Yesus memanggul salib — Yesus memanggul salib-Nya menuju Kalvari.\n\n5. Yesus wafat di salib — Yesus wafat di salib demi keselamatan kita."
+                        },
+                        {
+                            "title": "Peristiwa-peristiwa mulia",
+                            "subtitle": "Rabu dan Minggu",
+                            "content": "1. Yesus bangkit dari antara orang mati — Yesus bangkit pada hari ketiga.\n\n2. Yesus naik ke surga — Yesus naik ke surga empat puluh hari sesudah kebangkitan-Nya.\n\n3. Roh Kudus turun — Roh Kudus turun ke atas Maria dan para rasul pada hari Pentakosta.\n\n4. Maria diangkat ke surga — Maria diangkat ke surga dengan jiwa dan raganya.\n\n5. Maria dimahkotai di surga — Maria dimahkotai sebagai Ratu surga dan bumi."
+                        },
+                        {
+                            "title": "Doa-doa penutup",
+                            "subtitle": "Sesudah kelima dasa",
+                            "content": "[INSTRUCTION]Ucapkanlah Salam ya Ratu:[/INSTRUCTION]\n\n[PRAYER]Salam, ya Ratu, Bunda yang berbelas kasih, hidup, hiburan, dan harapan kami, salam. Kami semua memanjatkan permohonan, kami amat susah, mengeluh, mengesah dalam lembah duka ini. Ya Ibunda, ya pelindung kami, limpahkanlah kasih sayangmu yang besar kepada kami. Dan Yesus, Putramu yang terpuji itu, semoga kautunjukkan kepada kami. O Ratu, o Ibu, o Maria, Bunda Kristus.[/PRAYER]\n\n[VERSICLE]V. Doakanlah kami, ya Santa Bunda Allah.[/VERSICLE]\n[RESPONSE]R. Supaya kami dapat menikmati janji Kristus.[/RESPONSE]\n\n[INSTRUCTION]Doa penutup:[/INSTRUCTION]\n\n[PRAYER]Ya Allah, Putra-Mu yang tunggal telah memperoleh bagi kami ganjaran kehidupan kekal melalui hidup, wafat, dan kebangkitan-Nya. Kami mohon, semoga dengan merenungkan peristiwa-peristiwa Rosario Suci Santa Perawan Maria ini, kami dapat meneladan apa yang terkandung di dalamnya dan memperoleh apa yang dijanjikannya. Demi Kristus, Tuhan kami. Amin.[/PRAYER]\n\n[INSTRUCTION]Buatlah tanda salib[/INSTRUCTION]"
+                        }
+                    ]
+                },
+                {
+                    "id": "divine_mercy_chaplet",
+                    "title": "Koronka Kerahiman Ilahi",
+                    "icon": "water_drop_outlined",
+                    "isExpandable": true,
+                    "sections": [
+                        {
+                            "title": "Doa-doa pembuka",
+                            "content": "1. Buatlah tanda salib\n2. Doa pembuka (bila mau):\n\n[PRAYER]Ya Yesus, Engkau telah wafat, namun sumber kehidupan telah memancar bagi jiwa-jiwa, dan terbukalah lautan kerahiman bagi segenap dunia. O Sumber Kehidupan, Kerahiman Ilahi yang tak terselami, naungilah segenap dunia dan curahkanlah diri-Mu pada kami.[/PRAYER]\n\n3. Ulangi tiga kali:\n\n[PRAYER]O Darah dan Air, yang telah memancar dari Hati Yesus sebagai sumber kerahiman bagi kami, Engkaulah andalanku![/PRAYER]"
+                        },
+                        {
+                            "title": "Koronka",
+                            "content": "1. Ucapkanlah Bapa Kami\n2. Ucapkanlah Salam Maria\n3. Ucapkanlah Aku Percaya (Syahadat Para Rasul)\n\n[RUBRIC]Pada manik-manik besar (manik Bapa Kami), ucapkanlah:[/RUBRIC]\n\n[PRAYER]Bapa yang kekal, kupersembahkan kepada-Mu Tubuh dan Darah, Jiwa dan ke-Allahan Putra-Mu yang terkasih, Tuhan kami Yesus Kristus, sebagai pendamaian untuk dosa kami dan dosa seluruh dunia.[/PRAYER]\n\n[RUBRIC]Pada manik-manik kecil (manik Salam Maria), ucapkanlah:[/RUBRIC]\n\n[PRAYER]Demi sengsara Yesus yang pedih, tunjukkanlah belas kasih-Mu kepada kami dan seluruh dunia.[/PRAYER]\n\nUlangi untuk kelima dasa."
+                        },
+                        {
+                            "title": "Penutup",
+                            "content": "Ulangi tiga kali:\n\n[PRAYER]Allah yang kudus, kudus dan berkuasa, kudus dan kekal, kasihanilah kami dan seluruh dunia.[/PRAYER]\n\nDoa penutup (bila mau):\n\n[PRAYER]Allah yang kekal, dalam diri-Mu ada kerahiman yang tanpa batas dan harta belas kasihan yang tak kunjung habis. Pandanglah kami dengan rela hati dan tingkatkanlah kerahiman-Mu dalam diri kami, supaya pada saat-saat sulit kami tidak menjadi putus asa atau remuk hati, tetapi dengan kepercayaan yang teguh menyerahkan diri kami kepada kehendak-Mu yang kudus, Sang Kasih dan Sang Kerahiman sendiri. Amin.[/PRAYER]"
+                        }
+                    ]
+                },
+                {
+                    "id": "guardian_angel",
+                    "title": "Doa kepada Malaikat Pelindung",
+                    "icon": "shield_outlined",
+                    "content": "Malaikat Allah,\nengkau yang diserahi Allah untuk melindungi aku:\nterangilah, lindungilah, bimbinglah, dan hantarlah aku.\n\n[AMEN]Amin."
+                }
+            ]
+        },
+        {
+            "id": "communion",
+            "title": "Doa-doa untuk Komuni Kudus",
+            "icon": "wb_sunny_outlined",
+            "prayers": [
+                {
+                    "id": "before_communion",
+                    "title": "Doa sebelum Komuni",
+                    "icon": "wb_twilight_outlined",
+                    "content": "Ya Tuhan Yesus Kristus, Putra Allah yang hidup, atas kehendak Bapa dan dengan karya Roh Kudus, Engkau telah menghidupkan dunia melalui wafat-Mu:\n\nbebaskanlah aku, demi Tubuh dan Darah-Mu yang mahakudus ini, dari segala kesalahanku dan dari segala yang jahat:\n\njadikanlah aku selalu berpegang pada perintah-perintah-Mu, dan janganlah biarkan aku terpisah daripada-Mu.\n\nEngkau yang hidup dan berkuasa bersama Allah Bapa dan Roh Kudus, Allah, sepanjang segala masa.\n\n[AMEN]Amin."
+                },
+                {
+                    "id": "after_communion",
+                    "title": "Doa sesudah Komuni",
+                    "subtitle": "Anima Christi (Jiwa Kristus)",
+                    "icon": "light_mode_outlined",
+                    "content": "Jiwa Kristus, kuduskanlah aku.\nTubuh Kristus, selamatkanlah aku.\nDarah Kristus, sucikanlah aku.\nAir lambung Kristus, basuhlah aku.\n\nSengsara Kristus, kuatkanlah aku.\nYa Yesus yang baik, kabulkanlah doaku.\nDalam luka-luka-Mu, sembunyikanlah aku.\nJangan biarkan aku terpisah daripada-Mu.\n\nTerhadap musuh yang jahat, belalah aku.\nPada saat kematianku, panggillah aku,\ndan suruhlah aku datang kepada-Mu,\nagar bersama para kudus-Mu aku memuji Engkau\nuntuk selama-lamanya.\n\n[AMEN]Amin."
+                }
+            ]
+        }
+    ]
+}

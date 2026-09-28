@@ -1,4 +1,5 @@
 import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
+import 'package:confessionapp/src/core/theme/app_radius.dart';
 import 'package:confessionapp/src/core/theme/app_theme.dart';
 import 'package:confessionapp/src/core/utils/haptic_utils.dart';
 import 'package:confessionapp/src/features/examination/data/examination_repository.dart';
@@ -120,6 +121,27 @@ class _FocusedExaminationViewState
     }
   }
 
+  @override
+  void didUpdateWidget(covariant FocusedExaminationView oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // Pick up new examination data (e.g. after a content-language switch or a
+    // custom sin being added) instead of keeping the list built on first frame.
+    if (!identical(oldWidget.data, widget.data)) {
+      setState(() {
+        _buildQuestionList();
+        final maxIndex = _allQuestions.isEmpty ? 0 : _allQuestions.length - 1;
+        if (_currentIndex > maxIndex) {
+          _currentIndex = maxIndex;
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            if (_pageController.hasClients) {
+              _pageController.jumpToPage(maxIndex);
+            }
+          });
+        }
+      });
+    }
+  }
+
   void _handleAnswer(bool isYes) async {
     if (_currentIndex >= _allQuestions.length) return;
 
@@ -130,6 +152,10 @@ class _FocusedExaminationViewState
 
     if (isYes) {
       await controller.selectQuestion(question.id, question.text);
+    } else {
+      // Answering "No" must also undo a previous "Yes" on this question,
+      // otherwise a corrected answer still ends up in the confession.
+      await controller.unselectQuestion(question.id);
     }
 
     _advanceToNext();
@@ -202,7 +228,9 @@ class _FocusedExaminationViewState
 
   int _getSelectedCountForSection(int sectionIndex, Map<String, String> selections) {
     return _allQuestions
-        .where((q) => q.sectionIndex == sectionIndex && selections.containsKey(q.id))
+        .where((q) =>
+            q.sectionIndex == sectionIndex &&
+            selections.containsKey(neutralSelectionKey(q.id)))
         .length;
   }
 
@@ -312,7 +340,7 @@ class _FocusedExaminationViewState
           child: Column(
             children: [
               ClipRRect(
-                borderRadius: BorderRadius.circular(4),
+                borderRadius: BorderRadius.circular(AppRadius.xs),
                 child: LinearProgressIndicator(
                   value: progress,
                   backgroundColor: colorScheme.surfaceContainerHighest,
@@ -341,7 +369,7 @@ class _FocusedExaminationViewState
                       ),
                       decoration: BoxDecoration(
                         color: colorScheme.primaryContainer,
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(AppRadius.tile),
                       ),
                       child: Text(
                         l10n.selected(selectedCount),
@@ -406,7 +434,8 @@ class _FocusedExaminationViewState
             itemCount: _allQuestions.length,
             itemBuilder: (context, index) {
               final question = _allQuestions[index];
-              final questionSelected = selections.containsKey(question.id);
+              final questionSelected =
+                  selections.containsKey(neutralSelectionKey(question.id));
               return Center(
                 child: SingleChildScrollView(
                   child: QuestionCard(
@@ -495,7 +524,7 @@ class _ActionButton extends StatelessWidget {
             foregroundColor: colorScheme.onPrimary,
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(14),
+              borderRadius: BorderRadius.circular(AppRadius.tile),
             ),
           ),
         );
@@ -509,7 +538,7 @@ class _ActionButton extends StatelessWidget {
             side: BorderSide(color: colorScheme.outlineVariant),
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(14),
+              borderRadius: BorderRadius.circular(AppRadius.tile),
             ),
           ),
         );
@@ -605,7 +634,7 @@ class _MilestoneChip extends StatelessWidget {
         height: 36,
         decoration: BoxDecoration(
           color: backgroundColor,
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(AppRadius.tile),
           border: Border.all(
             color: borderColor,
             width: borderWidth,

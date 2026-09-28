@@ -1,0 +1,58 @@
+{
+  "title": "Jak dobrze się wyspowiadać",
+  "subtitle": "Przewodnik krok po kroku po sakramencie pokuty i pojednania",
+  "sections": [
+    {
+      "id": "before_confession",
+      "title": "Przed spowiedzią",
+      "icon": "assignment_outlined",
+      "content": "Dobra spowiedź wymaga starannego przygotowania. Kościół uczy o pięciu warunkach dobrej spowiedzi:\n\n• Zrób dokładny rachunek sumienia, przypominając sobie wszystkie grzechy od ostatniej spowiedzi\n• Wzbudź szczery żal za grzechy, którymi obraziłeś Boga\n• Podejmij mocne postanowienie poprawy, aby unikać grzechu w przyszłości\n• Wyznaj kapłanowi wszystkie grzechy śmiertelne, podając ich rodzaj i liczbę\n• Wypełnij pokutę zadaną przez kapłana\n\nPrzed spowiedzią znajdź czas na modlitwę i cichą refleksję. Proś Ducha Świętego, aby pomógł ci jasno zobaczyć twoje grzechy i obdarzył cię prawdziwą skruchą.\n\nTa aplikacja zawiera ponad 200 pytań do rachunku sumienia, które pomogą ci gruntownie się przygotować. Nie spiesz się — staranny rachunek sumienia jest fundamentem dobrej spowiedzi. Możesz rozłożyć go na tyle sesji, ile potrzebujesz; twoje postępy zapisują się automatycznie.\n\n„Stwórz, o Boże, we mnie serce czyste i odnów w mojej piersi ducha niezwyciężonego!” —Ps 51,12\n\n(KKK 1454)"
+    },
+    {
+      "id": "entering_confessional",
+      "title": "Wejście do konfesjonału",
+      "icon": "door_front_outlined",
+      "content": "Gdy podchodzisz do konfesjonału, możesz uklęknąć za kratkami albo — tam, gdzie jest taka możliwość — usiąść twarzą w twarz z kapłanem, jak wolisz. Daj sobie chwilę na skupienie.\n\nRazem z kapłanem czynisz znak krzyża:\n\n„W imię Ojca i Syna, i Ducha Świętego. Amen”.\n\nKapłan może skierować do ciebie słowa przyjęcia i zachęty, na przykład:\n„Bóg niech będzie w twoim sercu, abyś skruszony w duchu wyznał swoje grzechy”.\n\nMoże także odczytać krótki fragment Pisma Świętego, aby pomóc ci zwrócić serce ku Bożemu miłosierdziu."
+    },
+    {
+      "id": "confessing_sins",
+      "title": "Wyznanie grzechów",
+      "icon": "record_voice_over_outlined",
+      "content": "Rozpocznij zwyczajowym pozdrowieniem i powiedz, ile czasu minęło od twojej ostatniej spowiedzi:\n\n„Niech będzie pochwalony Jezus Chrystus. Ostatni raz u spowiedzi świętej byłem [dni/tygodni/miesięcy/lat] temu”.\n\nNastępnie wyznaj swoje grzechy prosto i szczerze. W przypadku grzechów śmiertelnych musisz wyznać:\n• Rodzaj grzechu (co zrobiłeś)\n• Liczbę (na ile pamiętasz)\n\nNa przykład: „Trzy razy opuściłem niedzielną Mszę świętą” albo „Dwa razy okłamałem żonę/męża w sprawach pieniędzy”.\n\nNie martw się o idealne słowa — mów prosto z serca. Kapłan jest po to, aby ci pomóc, a nie po to, by cię osądzać. Jeśli nie jesteś pewien, czy coś jest grzechem, możesz zapytać.\n\nNa koniec możesz powiedzieć: „Więcej grzechów nie pamiętam, za wszystkie serdecznie żałuję, obiecuję poprawę i proszę o pokutę i rozgrzeszenie”.\n\n(KKK 1456)"
+    },
+    {
+      "id": "counsel_penance",
+      "title": "Pouczenie i pokuta",
+      "icon": "psychology_outlined",
+      "content": "Po wysłuchaniu twojej spowiedzi kapłan może udzielić ci duchowej rady, aby pomóc ci wzrastać w cnocie i unikać grzechu w przyszłości. Słuchaj uważnie jego słów.\n\nNastępnie kapłan zada ci pokutę — zwykle modlitwę, uczynek miłosierdzia albo wyrzeczenie. Pokuta ta:\n• Pomaga naprawić szkody wyrządzone przez grzech\n• Umacnia cię wobec przyszłych pokus\n• Wyraża twoje pragnienie przemiany\n\nJeśli pokuta jest dla ciebie niejasna albo wydaje się zbyt trudna, możesz z szacunkiem poprosić o wyjaśnienie lub o inną pokutę.\n\n(KKK 1460)"
+    },
+    {
+      "id": "act_of_contrition",
+      "title": "Akt żalu",
+      "icon": "favorite_outline",
+      "content": "Kapłan poprosi cię o wzbudzenie aktu żalu. Ta modlitwa wyraża twój żal za grzechy i postanowienie poprawy życia. Możesz użyć własnych słów albo modlić się:\n\n[PRAYER]\nBoże mój, z całego serca żałuję za wszystkie moje grzechy, którymi obraziłem Ciebie, Dobro najwyższe i godne miłości nade wszystko. Postanawiam mocno, przy pomocy Twojej łaski, pokutować, więcej nie grzeszyć i unikać okazji do grzechu. Amen.\n[/PRAYER]"
+    },
+    {
+      "id": "absolution",
+      "title": "Przyjęcie rozgrzeszenia",
+      "icon": "auto_awesome_outlined",
+      "content": "To najświętszy moment sakramentu. Kapłan wyciąga ręce nad tobą i wypowiada słowa rozgrzeszenia:\n\n[LITURGICAL]\n„Bóg, Ojciec miłosierdzia, który pojednał świat ze sobą przez śmierć i zmartwychwstanie swojego Syna i zesłał Ducha Świętego na odpuszczenie grzechów, niech ci udzieli przebaczenia i pokoju przez posługę Kościoła. I JA ODPUSZCZAM TOBIE GRZECHY W IMIĘ OJCA I SYNA, + I DUCHA ŚWIĘTEGO”.\n[/LITURGICAL]\n\nOdpowiadasz: „Amen”.\n\nW zależności od kraju możesz usłyszeć nieco inne sformułowania — istotne słowa: „I ja odpuszczam tobie grzechy w imię Ojca i Syna, i Ducha Świętego” są zawsze te same.\n\nGdy kapłan wypowiada słowa rozgrzeszenia, uczyń znak krzyża. W tej chwili wszystkie wyznane grzechy zostają ci naprawdę odpuszczone. Jesteś pojednany z Bogiem i z Kościołem.\n\n„Jak jest odległy wschód od zachodu, tak daleko odsuwa od nas nasze występki”. —Ps 103,12\n\n(KKK 1449)"
+    },
+    {
+      "id": "after_confession",
+      "title": "Po spowiedzi",
+      "icon": "celebration_outlined",
+      "content": "Kapłan odeśle cię ze słowami pokoju, na przykład:\n„Wysławiajmy Pana, bo jest dobry”.\nOdpowiadasz: „Bo Jego miłosierdzie trwa na wieki”.\n\nMoże też powiedzieć: „Idź w pokoju”.\n\nPo odejściu od konfesjonału:\n\n• Wypełnij pokutę jak najszybciej, jeśli można to zrobić od razu\n• Poświęć kilka chwil na dziękczynienie — otrzymałeś niezwykły dar!\n• Proś Pana o łaskę wytrwania w wierności\n\nPamiętaj: zostałeś obmyty i oczyszczony. Nie wracaj z lękiem do wyznanych grzechów. Zaufaj Bożemu miłosierdziu i idź naprzód z radością.\n\n„Tak samo w niebie większa będzie radość z jednego grzesznika, który się nawraca, niż z dziewięćdziesięciu dziewięciu sprawiedliwych, którzy nie potrzebują nawrócenia”. —Łk 15,7\n\n(KKK 1468)"
+    },
+    {
+      "id": "tips",
+      "title": "Praktyczne wskazówki",
+      "icon": "lightbulb_outlined",
+      "content": "• Jeśli podczas spowiedzi zapomnisz o jakimś grzechu, nie martw się — jest on odpuszczony razem z wyznanymi. Wystarczy, że wspomnisz o nim przy następnej spowiedzi.\n\n• Jeśli się denerwujesz, powiedz o tym kapłanowi. On jest po to, aby ci pomóc.\n\n• Jeśli od twojej ostatniej spowiedzi minęło dużo czasu, powiedz o tym kapłanowi. Poprowadzi cię krok po kroku.\n\n• Możesz przynieść zapisaną listę grzechów, aby łatwiej było ci pamiętać — albo skorzystać z funkcji Rachunek sumienia w tej aplikacji, by się przygotować i przeglądać swoje grzechy podczas spowiedzi.\n\n• Tajemnica spowiedzi jest absolutna. Kapłan w żadnych okolicznościach nie może ujawnić niczego, co usłyszał na spowiedzi.\n\n• Spowiadaj się regularnie, także z grzechów powszednich. Święci zalecali spowiedź cotygodniową lub comiesięczną jako drogę do świętości.\n\n„Wyznawajcie zatem sobie nawzajem grzechy, módlcie się jeden za drugiego, byście odzyskali zdrowie”. —Jk 5,16\n\n(KKK 1467)"
+    }
+  ],
+  "callToAction": {
+    "primary": "Rozpocznij rachunek sumienia",
+    "secondary": "Zobacz modlitwy"
+  }
+}

@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:confessionapp/src/core/theme/app_radius.dart';
+
 
 class AppTheme {
   // Premium Spiritual Color Palette
@@ -157,6 +160,9 @@ class AppTheme {
         systemOverlayStyle: SystemUiOverlayStyle.dark,
         titleTextStyle: TextStyle(
           fontFamily: fontFamilyLato,
+          // Carries the Malayalam fallback, so screens must not restyle
+          // AppBar titles.
+          fontFamilyFallback: fontFamilyFallback,
           fontSize: 20,
           fontWeight: FontWeight.bold,
           color: _primaryLight,
@@ -166,7 +172,7 @@ class AppTheme {
       cardTheme: CardThemeData(
         elevation: 0,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(AppRadius.card),
           side: BorderSide(color: colorScheme.outlineVariant, width: 1),
         ),
         color: _cardLight,
@@ -180,7 +186,7 @@ class AppTheme {
           shadowColor: _primaryLight.withValues(alpha: 0.3),
           padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(AppRadius.tile),
           ),
           textStyle: const TextStyle(
             fontFamily: fontFamilyLato,
@@ -219,7 +225,7 @@ class AppTheme {
         elevation: 8,
         shadowColor: _primaryLight.withValues(alpha: 0.15),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(AppRadius.card),
           side: BorderSide(
             color: colorScheme.outlineVariant,
             width: 1,
@@ -241,7 +247,7 @@ class AppTheme {
           color: Colors.white,
         ),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(AppRadius.tile),
         ),
         behavior: SnackBarBehavior.floating,
         elevation: 4,
@@ -282,13 +288,13 @@ class AppTheme {
           return colorScheme.onSurfaceVariant;
         }),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(AppRadius.sheet),
         ),
         hourMinuteShape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(AppRadius.tile),
         ),
         dayPeriodShape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(AppRadius.chip),
         ),
       ),
     );
@@ -302,8 +308,8 @@ class AppTheme {
       onPrimaryContainer: Color(0xFFE8DFF5), // Very light lavender
       secondary: _secondaryDark,
       onSecondary: Color(0xFF1C1626), // Dark purple text on gold
-      secondaryContainer: Color(0xFF4A3D5F), // Purple-tinted (was gold-brown)
-      onSecondaryContainer: Color(0xFFE8DFF5), // Light lavender (was light gold)
+      secondaryContainer: Color(0xFF4A3D5F), // Purple-tinted
+      onSecondaryContainer: Color(0xFFE8DFF5), // Light lavender
       tertiary: _tertiaryDark,
       onTertiary: Color(0xFF1C1626),
       tertiaryContainer: Color(0xFF4A3C5F), // Muted purple
@@ -337,6 +343,9 @@ class AppTheme {
         systemOverlayStyle: SystemUiOverlayStyle.light,
         titleTextStyle: TextStyle(
           fontFamily: fontFamilyLato,
+          // Carries the Malayalam fallback, so screens must not restyle
+          // AppBar titles.
+          fontFamilyFallback: fontFamilyFallback,
           fontSize: 20,
           fontWeight: FontWeight.bold,
           color: _primaryDark,
@@ -346,7 +355,7 @@ class AppTheme {
       cardTheme: CardThemeData(
         elevation: 0,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(AppRadius.card),
           side: BorderSide(color: colorScheme.outlineVariant, width: 1),
         ),
         color: _cardDark,
@@ -360,7 +369,7 @@ class AppTheme {
           shadowColor: _primaryDark.withValues(alpha: 0.3),
           padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(AppRadius.tile),
           ),
           textStyle: const TextStyle(
             fontFamily: fontFamilyLato,
@@ -432,7 +441,7 @@ class AppTheme {
         elevation: 8,
         shadowColor: Colors.black.withValues(alpha: 0.4),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(AppRadius.card),
           side: BorderSide(
             color: colorScheme.outlineVariant,
             width: 1,
@@ -454,7 +463,7 @@ class AppTheme {
           color: Colors.white,
         ),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(AppRadius.tile),
         ),
         behavior: SnackBarBehavior.floating,
         elevation: 4,
@@ -495,13 +504,13 @@ class AppTheme {
           return colorScheme.onSurfaceVariant;
         }),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(AppRadius.sheet),
         ),
         hourMinuteShape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(AppRadius.tile),
         ),
         dayPeriodShape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(AppRadius.chip),
         ),
       ),
     );

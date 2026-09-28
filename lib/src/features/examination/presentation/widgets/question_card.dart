@@ -1,4 +1,6 @@
+import 'package:confessionapp/src/core/theme/app_radius.dart';
 import 'package:confessionapp/src/core/theme/app_theme.dart';
+import 'package:confessionapp/src/features/examination/presentation/widgets/examination_question_text.dart';
 import 'package:flutter/material.dart';
 
 /// A card widget that displays a single examination question
@@ -27,7 +29,7 @@ class QuestionCard extends StatelessWidget {
         color: isSelected
             ? colorScheme.primaryContainer.withValues(alpha: 0.3)
             : colorScheme.surface,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(AppRadius.sheet),
         border: Border.all(
           color: isSelected
               ? colorScheme.primary
@@ -65,7 +67,7 @@ class QuestionCard extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
               decoration: BoxDecoration(
                 color: colorScheme.primaryContainer.withValues(alpha: 0.5),
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(AppRadius.sheet),
               ),
               child: Text(
                 commandmentLabel!,
@@ -80,8 +82,8 @@ class QuestionCard extends StatelessWidget {
             ),
             const SizedBox(height: 20),
           ],
-          Text(
-            questionText,
+          ExaminationQuestionText(
+            text: questionText,
             textAlign: TextAlign.center,
             style: TextStyle(
               fontFamily: AppTheme.fontFamilyEBGaramond,

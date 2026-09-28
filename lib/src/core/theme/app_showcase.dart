@@ -1,3 +1,5 @@
+import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
+import 'package:confessionapp/src/core/theme/app_radius.dart';
 import 'package:confessionapp/src/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:showcaseview/showcaseview.dart';
@@ -40,6 +42,8 @@ class AppShowcase extends StatelessWidget {
   }
 
   Widget _buildTooltip(BuildContext context, ThemeData theme, bool isDark) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Container(
       constraints: BoxConstraints(
         maxWidth: MediaQuery.of(context).size.width * 0.85,
@@ -49,7 +53,7 @@ class AppShowcase extends StatelessWidget {
         color: isDark
             ? theme.colorScheme.surfaceContainerHigh
             : theme.colorScheme.surface,
-        borderRadius: BorderRadius.circular(24),
+        borderRadius: BorderRadius.circular(AppRadius.sheet),
         // Layered shadows for depth
         boxShadow: [
           // Primary glow
@@ -85,7 +89,7 @@ class AppShowcase extends StatelessWidget {
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   color: theme.colorScheme.primary,
-                  borderRadius: BorderRadius.circular(14),
+                  borderRadius: BorderRadius.circular(AppRadius.tile),
                   boxShadow: [
                     BoxShadow(
                       color: theme.colorScheme.primary.withValues(alpha: 0.3),
@@ -121,7 +125,7 @@ class AppShowcase extends StatelessWidget {
                       const SizedBox(height: 6),
                       // Step indicator
                       Text(
-                        'Step $currentStep of $totalSteps',
+                        l10n.showcaseStep(currentStep!, totalSteps!),
                         style: TextStyle(
                           fontFamily: AppTheme.fontFamilyLato,
                           fontSize: 12,
@@ -178,7 +182,7 @@ class AppShowcase extends StatelessWidget {
                         context: context,
                         theme: theme,
                         isDark: isDark,
-                        label: 'Back',
+                        label: l10n.back,
                         icon: Icons.arrow_back_rounded,
                         iconFirst: true,
                         onTap: () {
@@ -192,7 +196,7 @@ class AppShowcase extends StatelessWidget {
                   _buildPrimaryButton(
                     context: context,
                     theme: theme,
-                    label: currentStep == totalSteps ? 'Done' : 'Next',
+                    label: currentStep == totalSteps ? l10n.done : l10n.nextButton,
                     icon: currentStep == totalSteps
                         ? Icons.check_rounded
                         : Icons.arrow_forward_rounded,
@@ -224,7 +228,7 @@ class AppShowcase extends StatelessWidget {
             width: isCurrent ? 20 : 6,
             height: 6,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(3),
+              borderRadius: BorderRadius.circular(AppRadius.pill),
               color: isCompleted
                   ? theme.colorScheme.primary
                   : theme.colorScheme.primary.withValues(alpha: 0.2),
@@ -255,7 +259,7 @@ class AppShowcase extends StatelessWidget {
       color: Colors.transparent,
       child: InkWell(
         onTap: onTap,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(AppRadius.card),
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
           decoration: BoxDecoration(
@@ -267,7 +271,7 @@ class AppShowcase extends StatelessWidget {
                 theme.colorScheme.primary.withValues(alpha: 0.85),
               ],
             ),
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(AppRadius.card),
             boxShadow: [
               BoxShadow(
                 color: theme.colorScheme.primary.withValues(alpha: 0.4),
@@ -316,14 +320,14 @@ class AppShowcase extends StatelessWidget {
       color: Colors.transparent,
       child: InkWell(
         onTap: onTap,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(AppRadius.card),
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
           decoration: BoxDecoration(
             color: theme.colorScheme.surfaceContainerHighest.withValues(
               alpha: isDark ? 0.8 : 1.0,
             ),
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(AppRadius.card),
             border: Border.all(
               color: theme.colorScheme.outline.withValues(alpha: 0.3),
               width: 1,

@@ -18,7 +18,7 @@ Future<Quote> randomQuote(Ref ref, Locale locale) async {
   final quotes = await repository.getQuotes(locale);
 
   if (quotes.isEmpty) {
-    // Fallback quote if list is empty
+    // No quotes could be loaded.
     return Quote(
       author: '1 John 1:9',
       quote:

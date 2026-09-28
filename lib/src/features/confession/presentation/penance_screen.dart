@@ -1,6 +1,10 @@
 import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
 import 'package:confessionapp/src/core/services/in_app_review_service.dart';
+import 'package:confessionapp/src/core/services/spread_the_word_service.dart';
+import 'package:confessionapp/src/core/widgets/rating_gate.dart';
+import 'package:confessionapp/src/core/theme/app_radius.dart';
 import 'package:confessionapp/src/core/utils/haptic_utils.dart';
+import 'package:confessionapp/src/core/widgets/app_back_button.dart';
 import 'package:confessionapp/src/core/widgets/empty_state.dart';
 import 'package:confessionapp/src/features/confession/data/penance_repository.dart';
 import 'package:flutter/material.dart';
@@ -19,59 +23,75 @@ class PenanceScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          l10n.penanceTracker,
-          style: theme.textTheme.titleLarge?.copyWith(
-            color: theme.colorScheme.primary,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        leading: const AppBackButton(fallbackLocation: '/confess'),
+        title: Text(l10n.penanceTracker),
       ),
-      body: pendingPenancesAsync.when(
-        loading: () => const Center(child: CircularProgressIndicator()),
-        error: (error, _) => Center(child: Text('${l10n.error}: $error')),
-        data: (penances) {
-          if (penances.isEmpty) {
-            return _buildEmptyState(context, l10n);
-          }
+      body: RefreshIndicator(
+        onRefresh: _onRefresh,
+        color: theme.colorScheme.primary,
+        child: pendingPenancesAsync.when(
+          loading: () => const Center(child: CircularProgressIndicator()),
+          error: (error, _) => Center(child: Text('${l10n.error}: $error')),
+          data: (penances) {
+            if (penances.isEmpty) {
+              return _buildEmptyState(context, l10n);
+            }
 
-          return ListView.builder(
-            padding: const EdgeInsets.all(16),
-            itemCount: penances.length,
-            itemBuilder: (context, index) {
-              final item = penances[index];
-              return _PenanceCard(
-                penanceWithConfession: item,
-                onComplete: () async {
-                  HapticUtils.mediumImpact();
-                  await ref
-                      .read(penanceRepositoryProvider)
-                      .completePenance(item.penance.id);
-                  ref.invalidate(pendingPenancesProvider);
-                  if (context.mounted) {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text(l10n.penanceCompleted)),
-                    );
-                    // Check for review after penance completion (happy moment)
-                    _checkAndRequestReview(context);
-                  }
-                },
-                onEdit: () => _showEditDialog(context, ref, item),
-                onDelete: () => _showDeleteConfirmation(context, ref, item),
-              ).animate().fadeIn(delay: (100 * index).ms).slideX(begin: 0.1);
-            },
-          );
-        },
+            return ListView.builder(
+              physics: const AlwaysScrollableScrollPhysics(),
+              padding: const EdgeInsets.all(16),
+              itemCount: penances.length,
+              itemBuilder: (context, index) {
+                final item = penances[index];
+                return _PenanceCard(
+                  penanceWithConfession: item,
+                  onComplete: () async {
+                    HapticUtils.mediumImpact();
+                    await ref
+                        .read(penanceRepositoryProvider)
+                        .completePenance(item.penance.id);
+                    if (context.mounted) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text(l10n.penanceCompleted)),
+                      );
+                      // Check for review after penance completion (happy moment)
+                      _checkAndRequestReview(context);
+                    }
+                  },
+                  onEdit: () => _showEditDialog(context, ref, item),
+                  onDelete: () => _showDeleteConfirmation(context, ref, item),
+                ).animate().fadeIn(duration: 150.ms);
+              },
+            );
+          },
+        ),
       ),
     );
   }
 
+  /// The list is a Drift stream, so it is already current — there is nothing to
+  /// re-fetch. The gesture is kept because users reach for it; it just settles.
+  Future<void> _onRefresh() async {
+    HapticUtils.lightImpact();
+    await Future<void>.delayed(const Duration(milliseconds: 300));
+  }
+
   Widget _buildEmptyState(BuildContext context, AppLocalizations l10n) {
-    return EmptyState(
-      icon: Icons.task_alt,
-      title: l10n.noPendingPenances,
-      subtitle: l10n.noPendingPenancesDesc,
-    ).animate().fadeIn().scale();
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return SingleChildScrollView(
+          physics: const AlwaysScrollableScrollPhysics(),
+          child: ConstrainedBox(
+            constraints: BoxConstraints(minHeight: constraints.maxHeight),
+            child: EmptyState(
+              icon: Icons.task_alt,
+              title: l10n.noPendingPenances,
+              subtitle: l10n.noPendingPenancesDesc,
+            ).animate().fadeIn().scale(),
+          ),
+        );
+      },
+    );
   }
 
   Future<void> _checkAndRequestReview(BuildContext context) async {
@@ -79,79 +99,23 @@ class PenanceScreen extends ConsumerWidget {
     final shouldPrompt = await reviewService.trackPenanceCompletion();
 
     if (shouldPrompt && context.mounted) {
-      _showReviewDialog(context, reviewService);
+      // Ask inside the app first, with stars. A happy rating (4–5) is sent to
+      // the store; an unhappy one is thanked privately and goes no further.
+      final stars = await showRatingGate(context);
+      // Keep the home card's bookkeeping in step, or it asks a second time —
+      // see the matching note in confession_screen.dart.
+      final spreadService = SpreadTheWordService();
+      if (stars == null) {
+        // Dismissed without choosing — leave the door open to ask again later
+        // rather than opting them out for good.
+        await reviewService.resetCounters();
+        await spreadService.snooze();
+      } else {
+        // They have been through the gate; do not ask again automatically.
+        await reviewService.setOptOut(true);
+        await spreadService.markRatingHandled();
+      }
     }
-  }
-
-  void _showReviewDialog(BuildContext context, InAppReviewService reviewService) {
-    final l10n = AppLocalizations.of(context)!;
-    final theme = Theme.of(context);
-
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        icon: Container(
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            color: theme.colorScheme.primaryContainer,
-            shape: BoxShape.circle,
-          ),
-          child: Icon(
-            Icons.favorite,
-            color: theme.colorScheme.primary,
-            size: 32,
-          ),
-        ),
-        title: Text(
-          l10n.rateDialogTitle,
-          textAlign: TextAlign.center,
-        ),
-        content: Text(
-          l10n.rateDialogContent,
-          textAlign: TextAlign.center,
-          style: theme.textTheme.bodyMedium?.copyWith(
-            color: theme.colorScheme.onSurfaceVariant,
-          ),
-        ),
-        actionsAlignment: MainAxisAlignment.center,
-        actions: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              FilledButton.icon(
-                onPressed: () async {
-                  await reviewService.setOptOut(true);
-                  if (context.mounted) Navigator.pop(context);
-                  await reviewService.requestReview();
-                },
-                icon: const Icon(Icons.star),
-                label: Text(l10n.rateDialogYes),
-              ),
-              const SizedBox(height: 8),
-              OutlinedButton(
-                onPressed: () async {
-                  await reviewService.resetCounters();
-                  if (context.mounted) Navigator.pop(context);
-                },
-                child: Text(l10n.rateDialogLater),
-              ),
-              TextButton(
-                onPressed: () async {
-                  await reviewService.setOptOut(true);
-                  if (context.mounted) Navigator.pop(context);
-                },
-                child: Text(
-                  l10n.rateDialogNo,
-                  style: TextStyle(
-                    color: theme.colorScheme.onSurfaceVariant,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
   }
 
   void _showEditDialog(
@@ -170,7 +134,6 @@ class PenanceScreen extends ConsumerWidget {
           await ref
               .read(penanceRepositoryProvider)
               .updatePenance(item.penance.id, text);
-          ref.invalidate(pendingPenancesProvider);
           if (context.mounted) {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(content: Text(l10n.penanceUpdated)),
@@ -192,7 +155,7 @@ class PenanceScreen extends ConsumerWidget {
       context: context,
       builder: (context) => AlertDialog(
         title: Text(l10n.deleteButton),
-        content: const Text('Are you sure you want to delete this penance?'),
+        content: Text(l10n.deletePenanceConfirm),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
@@ -203,7 +166,6 @@ class PenanceScreen extends ConsumerWidget {
               await ref
                   .read(penanceRepositoryProvider)
                   .deletePenance(item.penance.id);
-              ref.invalidate(pendingPenancesProvider);
               if (context.mounted) {
                 Navigator.pop(context);
               }
@@ -236,7 +198,9 @@ class _PenanceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final l10n = AppLocalizations.of(context)!;
-    final dateFormat = DateFormat('MMM dd, yyyy');
+    final dateFormat = DateFormat.yMMMd(
+      Localizations.localeOf(context).toString(),
+    );
     final confessionDate =
         penanceWithConfession.confession.finishedAt ??
         penanceWithConfession.confession.date;
@@ -246,7 +210,7 @@ class _PenanceCard extends StatelessWidget {
       elevation: 0,
       color: theme.colorScheme.surface,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(AppRadius.card),
         side: BorderSide(
           color: theme.colorScheme.outlineVariant,
           width: 1,
@@ -263,7 +227,7 @@ class _PenanceCard extends StatelessWidget {
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
                     color: theme.colorScheme.primaryContainer,
-                    borderRadius: BorderRadius.circular(8),
+                    borderRadius: BorderRadius.circular(AppRadius.chip),
                   ),
                   child: Icon(
                     Icons.checklist,
@@ -330,7 +294,7 @@ class _PenanceCard extends StatelessWidget {
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
                 color: theme.colorScheme.surfaceContainerHighest.withValues(alpha: 0.5),
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(AppRadius.chip),
               ),
               child: Text(
                 penanceWithConfession.penance.description,

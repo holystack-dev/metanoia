@@ -1,33 +1,31 @@
-import 'dart:convert';
-
+import 'package:confessionapp/src/core/constants/content_markers.dart';
 import 'package:confessionapp/src/core/constants/app_constants.dart';
 import 'package:confessionapp/src/core/localization/content_language_provider.dart';
 import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
+import 'package:confessionapp/src/core/theme/app_radius.dart';
 import 'package:confessionapp/src/core/theme/app_theme.dart';
-import 'package:flutter/services.dart';
 import 'package:confessionapp/src/core/utils/haptic_utils.dart';
+import 'package:confessionapp/src/core/utils/localized_asset_loader.dart';
+import 'package:confessionapp/src/core/widgets/app_back_button.dart';
 import 'package:confessionapp/src/core/widgets/empty_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 
 /// Model for prayers content
 class PrayersContent {
   final String subtitle;
   final List<PrayerCategory> categories;
 
-  PrayersContent({
-    required this.subtitle,
-    required this.categories,
-  });
+  PrayersContent({required this.subtitle, required this.categories});
 
   factory PrayersContent.fromJson(Map<String, dynamic> json) {
     return PrayersContent(
       subtitle: json['subtitle'] as String,
-      categories: (json['categories'] as List)
-          .map((c) => PrayerCategory.fromJson(c as Map<String, dynamic>))
-          .toList(),
+      categories:
+          (json['categories'] as List)
+              .map((c) => PrayerCategory.fromJson(c as Map<String, dynamic>))
+              .toList(),
     );
   }
 }
@@ -50,9 +48,10 @@ class PrayerCategory {
       id: json['id'] as String,
       title: json['title'] as String,
       icon: json['icon'] as String,
-      prayers: (json['prayers'] as List)
-          .map((p) => PrayerItem.fromJson(p as Map<String, dynamic>))
-          .toList(),
+      prayers:
+          (json['prayers'] as List)
+              .map((p) => PrayerItem.fromJson(p as Map<String, dynamic>))
+              .toList(),
     );
   }
 }
@@ -84,11 +83,12 @@ class PrayerItem {
       icon: json['icon'] as String,
       content: json['content'] as String?,
       isExpandable: json['isExpandable'] as bool? ?? false,
-      sections: json['sections'] != null
-          ? (json['sections'] as List)
-              .map((s) => PrayerSection.fromJson(s as Map<String, dynamic>))
-              .toList()
-          : null,
+      sections:
+          json['sections'] != null
+              ? (json['sections'] as List)
+                  .map((s) => PrayerSection.fromJson(s as Map<String, dynamic>))
+                  .toList()
+              : null,
     );
   }
 }
@@ -98,11 +98,7 @@ class PrayerSection {
   final String? subtitle;
   final String content;
 
-  PrayerSection({
-    required this.title,
-    this.subtitle,
-    required this.content,
-  });
+  PrayerSection({required this.title, this.subtitle, required this.content});
 
   factory PrayerSection.fromJson(Map<String, dynamic> json) {
     return PrayerSection(
@@ -114,16 +110,18 @@ class PrayerSection {
 }
 
 /// Provider for prayers content based on content language
-final prayersContentProvider =
-    FutureProvider.autoDispose<PrayersContent>((ref) async {
-  final contentLanguage =
-      await ref.watch(contentLanguageControllerProvider.future);
+final prayersContentProvider = FutureProvider.autoDispose<PrayersContent>((
+  ref,
+) async {
+  final contentLanguage = await ref.watch(
+    contentLanguageControllerProvider.future,
+  );
   final langKey = LanguageConfig.contentKeyFromLocale(contentLanguage);
 
-  final jsonString = await rootBundle.loadString(
-    'assets/data/prayers/prayers_$langKey.json',
+  final json = await loadLocalizedJsonObject(
+    langKey,
+    (key) => 'assets/data/prayers/prayers_$key.json',
   );
-  final json = jsonDecode(jsonString) as Map<String, dynamic>;
   return PrayersContent.fromJson(json);
 });
 
@@ -259,9 +257,7 @@ class _PrayersScreenState extends ConsumerState<PrayersScreen> {
           return _buildContent(context, content, theme, l10n);
         },
         loading: () => const Center(child: CircularProgressIndicator()),
-        error: (error, stack) => Center(
-          child: Text('${l10n.error}: $error'),
-        ),
+        error: (error, stack) => Center(child: Text('${l10n.error}: $error')),
       ),
     );
   }
@@ -274,7 +270,8 @@ class _PrayersScreenState extends ConsumerState<PrayersScreen> {
   ) {
     // Filter categories and prayers based on search and selection
     final filteredCategories = _getFilteredCategories(content.categories);
-    final hasResults = filteredCategories.isNotEmpty &&
+    final hasResults =
+        filteredCategories.isNotEmpty &&
         filteredCategories.any((c) => c.prayers.isNotEmpty);
 
     return CustomScrollView(
@@ -284,21 +281,10 @@ class _PrayersScreenState extends ConsumerState<PrayersScreen> {
         SliverAppBar(
           floating: false,
           pinned: true,
-          elevation: 0,
           scrolledUnderElevation: 1,
           backgroundColor: theme.scaffoldBackgroundColor,
           surfaceTintColor: theme.colorScheme.primary,
-          leading: IconButton(
-            icon: Icon(
-              Icons.arrow_back,
-              color: theme.colorScheme.onSurface,
-              semanticLabel: 'Go back',
-            ),
-            onPressed: () {
-              HapticUtils.lightImpact();
-              context.pop();
-            },
-          ),
+          leading: const AppBackButton(fallbackLocation: '/guide'),
         ),
 
         // Header section with icon and subtitle
@@ -318,7 +304,7 @@ class _PrayersScreenState extends ConsumerState<PrayersScreen> {
                     Icons.auto_stories_rounded,
                     size: 48,
                     color: theme.colorScheme.primary,
-                    semanticLabel: 'Prayers',
+                    semanticLabel: l10n.prayersTitle,
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -354,9 +340,7 @@ class _PrayersScreenState extends ConsumerState<PrayersScreen> {
         ),
 
         // Collapsible search bar
-        SliverToBoxAdapter(
-          child: _buildSearchBar(theme, l10n),
-        ),
+        SliverToBoxAdapter(child: _buildSearchBar(theme, l10n)),
 
         // Show empty state if no results
         if (!hasResults)
@@ -372,19 +356,16 @@ class _PrayersScreenState extends ConsumerState<PrayersScreen> {
           SliverPadding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             sliver: SliverList(
-              delegate: SliverChildBuilderDelegate(
-                (context, categoryIndex) {
-                  final category = filteredCategories[categoryIndex];
-                  if (category.prayers.isEmpty) return const SizedBox.shrink();
-                  return _buildCategorySection(
-                    context,
-                    category,
-                    theme,
-                    categoryIndex,
-                  );
-                },
-                childCount: filteredCategories.length,
-              ),
+              delegate: SliverChildBuilderDelegate((context, categoryIndex) {
+                final category = filteredCategories[categoryIndex];
+                if (category.prayers.isEmpty) return const SizedBox.shrink();
+                return _buildCategorySection(
+                  context,
+                  category,
+                  theme,
+                  categoryIndex,
+                );
+              }, childCount: filteredCategories.length),
             ),
           ),
 
@@ -408,10 +389,12 @@ class _PrayersScreenState extends ConsumerState<PrayersScreen> {
 
       // Search filter
       if (_searchQuery.isNotEmpty) {
-        final filteredPrayers = category.prayers.where((prayer) {
-          return prayer.title.toLowerCase().contains(_searchQuery) ||
-              (prayer.subtitle?.toLowerCase().contains(_searchQuery) ?? false);
-        }).toList();
+        final filteredPrayers =
+            category.prayers.where((prayer) {
+              return prayer.title.toLowerCase().contains(_searchQuery) ||
+                  (prayer.subtitle?.toLowerCase().contains(_searchQuery) ??
+                      false);
+            }).toList();
 
         return PrayerCategory(
           id: category.id,
@@ -442,42 +425,44 @@ class _PrayersScreenState extends ConsumerState<PrayersScreen> {
                 Icons.search,
                 color: theme.colorScheme.onSurfaceVariant,
               ),
-              suffixIcon: _searchQuery.isNotEmpty
-                  ? IconButton(
-                      icon: Icon(
-                        Icons.clear,
-                        color: theme.colorScheme.onSurfaceVariant,
-                      ),
-                      onPressed: () {
-                        _searchController.clear();
-                        setState(() {
-                          _searchQuery = '';
-                        });
-                      },
-                    )
-                  : null,
+              suffixIcon:
+                  _searchQuery.isNotEmpty
+                      ? IconButton(
+                        icon: Icon(
+                          Icons.clear,
+                          color: theme.colorScheme.onSurfaceVariant,
+                        ),
+                        onPressed: () {
+                          _searchController.clear();
+                          setState(() {
+                            _searchQuery = '';
+                          });
+                        },
+                      )
+                      : null,
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
-                borderSide: BorderSide(
-                  color: theme.colorScheme.outlineVariant,
-                ),
+                borderRadius: BorderRadius.circular(AppRadius.tile),
+                borderSide: BorderSide(color: theme.colorScheme.outlineVariant),
               ),
               enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
-                borderSide: BorderSide(
-                  color: theme.colorScheme.outlineVariant,
-                ),
+                borderRadius: BorderRadius.circular(AppRadius.tile),
+                borderSide: BorderSide(color: theme.colorScheme.outlineVariant),
               ),
               focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(AppRadius.tile),
                 borderSide: BorderSide(
                   color: theme.colorScheme.primary,
                   width: 2,
                 ),
               ),
               filled: true,
-              fillColor: theme.colorScheme.surfaceContainerHighest.withValues(alpha: 0.5),
-              contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+              fillColor: theme.colorScheme.surfaceContainerHighest.withValues(
+                alpha: 0.5,
+              ),
+              contentPadding: const EdgeInsets.symmetric(
+                horizontal: 16,
+                vertical: 12,
+              ),
             ),
             style: TextStyle(
               fontFamily: AppTheme.fontFamilyLato,
@@ -515,7 +500,7 @@ class _PrayersScreenState extends ConsumerState<PrayersScreen> {
                 height: 24,
                 decoration: BoxDecoration(
                   color: theme.colorScheme.primary,
-                  borderRadius: BorderRadius.circular(2),
+                  borderRadius: BorderRadius.circular(AppRadius.bar),
                 ),
               ),
               const SizedBox(width: 12),
@@ -538,7 +523,7 @@ class _PrayersScreenState extends ConsumerState<PrayersScreen> {
               ),
             ],
           ),
-        ).animate().fadeIn(delay: (50 * categoryIndex).ms),
+        ).animate().fadeIn(duration: 150.ms),
 
         // Prayers in this category
         ...category.prayers.asMap().entries.map((entry) {
@@ -568,7 +553,7 @@ class _PrayersScreenState extends ConsumerState<PrayersScreen> {
         prayer: prayer,
         theme: theme,
         getIconData: _getIconData,
-      ).animate().fadeIn(delay: (80 * (index < 6 ? index : 6)).ms).slideY(begin: 0.05, end: 0);
+      ).animate().fadeIn(duration: 150.ms);
     }
 
     // For regular prayers
@@ -577,7 +562,7 @@ class _PrayersScreenState extends ConsumerState<PrayersScreen> {
       theme: theme,
       getIconData: _getIconData,
       isExpandable: prayer.isExpandable,
-    ).animate().fadeIn(delay: (80 * (index < 6 ? index : 6)).ms).slideY(begin: 0.05, end: 0);
+    ).animate().fadeIn(duration: 150.ms);
   }
 }
 
@@ -678,14 +663,16 @@ class _CategoryChipsHeaderDelegate extends SliverPersistentHeaderDelegate {
                     onPressed: onSearchTapped,
                     icon: Icon(
                       isSearchActive ? Icons.search_off : Icons.search,
-                      color: isSearchActive
-                          ? theme.colorScheme.primary
-                          : theme.colorScheme.onSurfaceVariant,
+                      color:
+                          isSearchActive
+                              ? theme.colorScheme.primary
+                              : theme.colorScheme.onSurfaceVariant,
                     ),
                     style: IconButton.styleFrom(
-                      backgroundColor: isSearchActive
-                          ? theme.colorScheme.primaryContainer
-                          : theme.colorScheme.surfaceContainerHighest,
+                      backgroundColor:
+                          isSearchActive
+                              ? theme.colorScheme.primaryContainer
+                              : theme.colorScheme.surfaceContainerHighest,
                     ),
                     tooltip: l10n.searchPrayers,
                   ),
@@ -723,8 +710,13 @@ class _CategoryChipsHeaderDelegate extends SliverPersistentHeaderDelegate {
 
   @override
   bool shouldRebuild(covariant _CategoryChipsHeaderDelegate oldDelegate) {
+    // Rebuild on theme, UI-language or content-language changes, or the
+    // pinned chips keep stale colors and labels.
     return selectedCategoryId != oldDelegate.selectedCategoryId ||
-        isSearchActive != oldDelegate.isSearchActive;
+        isSearchActive != oldDelegate.isSearchActive ||
+        theme != oldDelegate.theme ||
+        l10n != oldDelegate.l10n ||
+        !identical(categories, oldDelegate.categories);
   }
 }
 
@@ -757,14 +749,16 @@ class _CategoryChip extends StatelessWidget {
         duration: const Duration(milliseconds: 200),
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
         decoration: BoxDecoration(
-          color: isSelected
-              ? theme.colorScheme.primaryContainer
-              : theme.colorScheme.surface,
-          borderRadius: BorderRadius.circular(20),
+          color:
+              isSelected
+                  ? theme.colorScheme.primaryContainer
+                  : theme.colorScheme.surface,
+          borderRadius: BorderRadius.circular(AppRadius.sheet),
           border: Border.all(
-            color: isSelected
-                ? theme.colorScheme.primary
-                : theme.colorScheme.outlineVariant,
+            color:
+                isSelected
+                    ? theme.colorScheme.primary
+                    : theme.colorScheme.outlineVariant,
             width: isSelected ? 1.5 : 1,
           ),
         ),
@@ -774,9 +768,10 @@ class _CategoryChip extends StatelessWidget {
             Icon(
               icon,
               size: 16,
-              color: isSelected
-                  ? theme.colorScheme.primary
-                  : theme.colorScheme.onSurfaceVariant,
+              color:
+                  isSelected
+                      ? theme.colorScheme.primary
+                      : theme.colorScheme.onSurfaceVariant,
             ),
             const SizedBox(width: 6),
             Text(
@@ -785,28 +780,31 @@ class _CategoryChip extends StatelessWidget {
                 fontFamily: AppTheme.fontFamilyLato,
                 fontSize: 13,
                 fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
-                color: isSelected
-                    ? theme.colorScheme.onPrimaryContainer
-                    : theme.colorScheme.onSurfaceVariant,
+                color:
+                    isSelected
+                        ? theme.colorScheme.onPrimaryContainer
+                        : theme.colorScheme.onSurfaceVariant,
               ),
             ),
             const SizedBox(width: 4),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
               decoration: BoxDecoration(
-                color: isSelected
-                    ? theme.colorScheme.primary.withValues(alpha: 0.2)
-                    : theme.colorScheme.surfaceContainerHighest,
-                borderRadius: BorderRadius.circular(10),
+                color:
+                    isSelected
+                        ? theme.colorScheme.primary.withValues(alpha: 0.2)
+                        : theme.colorScheme.surfaceContainerHighest,
+                borderRadius: BorderRadius.circular(AppRadius.tile),
               ),
               child: Text(
                 '$prayerCount',
                 style: TextStyle(
                   fontSize: 11,
                   fontWeight: FontWeight.bold,
-                  color: isSelected
-                      ? theme.colorScheme.primary
-                      : theme.colorScheme.onSurfaceVariant,
+                  color:
+                      isSelected
+                          ? theme.colorScheme.primary
+                          : theme.colorScheme.onSurfaceVariant,
                 ),
               ),
             ),
@@ -851,22 +849,23 @@ class _RegularPrayerCardState extends State<_RegularPrayerCard> {
       elevation: 0,
       color: widget.theme.colorScheme.surface,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(AppRadius.card),
         side: BorderSide(
           color: widget.theme.colorScheme.outlineVariant.withValues(alpha: 0.5),
           width: 1,
         ),
       ),
       child: InkWell(
-        onTap: widget.isExpandable
-            ? () {
-                HapticUtils.lightImpact();
-                setState(() {
-                  _isExpanded = !_isExpanded;
-                });
-              }
-            : null,
-        borderRadius: BorderRadius.circular(16),
+        onTap:
+            widget.isExpandable
+                ? () {
+                  HapticUtils.lightImpact();
+                  setState(() {
+                    _isExpanded = !_isExpanded;
+                  });
+                }
+                : null,
+        borderRadius: BorderRadius.circular(AppRadius.card),
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(
@@ -879,7 +878,7 @@ class _RegularPrayerCardState extends State<_RegularPrayerCard> {
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
                       color: widget.theme.colorScheme.primaryContainer,
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(AppRadius.tile),
                     ),
                     child: Icon(
                       widget.getIconData(widget.prayer.icon),
@@ -938,9 +937,10 @@ class _RegularPrayerCardState extends State<_RegularPrayerCard> {
                     widget.theme,
                   ),
                 ),
-                crossFadeState: _isExpanded
-                    ? CrossFadeState.showSecond
-                    : CrossFadeState.showFirst,
+                crossFadeState:
+                    _isExpanded
+                        ? CrossFadeState.showSecond
+                        : CrossFadeState.showFirst,
                 duration: const Duration(milliseconds: 200),
               ),
             ],
@@ -964,10 +964,11 @@ class _RegularPrayerCardState extends State<_RegularPrayerCard> {
 
       // Check for special formatting
       if (line.contains('[INSTRUCTION]')) {
-        final instructionText = line
-            .replaceAll('[INSTRUCTION]', '')
-            .replaceAll('[/INSTRUCTION]', '')
-            .trim();
+        final instructionText =
+            line
+                .replaceAll('[INSTRUCTION]', '')
+                .replaceAll('[/INSTRUCTION]', '')
+                .trim();
         widgets.add(
           Padding(
             padding: const EdgeInsets.only(top: 12, bottom: 4),
@@ -983,10 +984,8 @@ class _RegularPrayerCardState extends State<_RegularPrayerCard> {
           ),
         );
       } else if (line.contains('[RUBRIC]')) {
-        final rubricText = line
-            .replaceAll('[RUBRIC]', '')
-            .replaceAll('[/RUBRIC]', '')
-            .trim();
+        final rubricText =
+            line.replaceAll('[RUBRIC]', '').replaceAll('[/RUBRIC]', '').trim();
         widgets.add(
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 8),
@@ -1002,22 +1001,17 @@ class _RegularPrayerCardState extends State<_RegularPrayerCard> {
           ),
         );
       } else if (line.contains('[PRAYER]')) {
-        final prayerText = line
-            .replaceAll('[PRAYER]', '')
-            .replaceAll('[/PRAYER]', '')
-            .trim();
+        final prayerText =
+            line.replaceAll('[PRAYER]', '').replaceAll('[/PRAYER]', '').trim();
         widgets.add(
           Container(
             margin: const EdgeInsets.symmetric(vertical: 8),
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
               color: theme.colorScheme.primaryContainer.withValues(alpha: 0.3),
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(AppRadius.tile),
               border: Border(
-                left: BorderSide(
-                  color: theme.colorScheme.primary,
-                  width: 3,
-                ),
+                left: BorderSide(color: theme.colorScheme.primary, width: 3),
               ),
             ),
             child: Text(
@@ -1033,10 +1027,11 @@ class _RegularPrayerCardState extends State<_RegularPrayerCard> {
           ),
         );
       } else if (line.contains('[VERSICLE]')) {
-        final versicleText = line
-            .replaceAll('[VERSICLE]', '')
-            .replaceAll('[/VERSICLE]', '')
-            .trim();
+        final versicleText =
+            line
+                .replaceAll('[VERSICLE]', '')
+                .replaceAll('[/VERSICLE]', '')
+                .trim();
         widgets.add(
           Padding(
             padding: const EdgeInsets.only(top: 8),
@@ -1052,10 +1047,11 @@ class _RegularPrayerCardState extends State<_RegularPrayerCard> {
           ),
         );
       } else if (line.contains('[RESPONSE]')) {
-        final responseText = line
-            .replaceAll('[RESPONSE]', '')
-            .replaceAll('[/RESPONSE]', '')
-            .trim();
+        final responseText =
+            line
+                .replaceAll('[RESPONSE]', '')
+                .replaceAll('[/RESPONSE]', '')
+                .trim();
         widgets.add(
           Padding(
             padding: const EdgeInsets.only(bottom: 8),
@@ -1070,13 +1066,16 @@ class _RegularPrayerCardState extends State<_RegularPrayerCard> {
             ),
           ),
         );
-      } else if (line.trim() == 'Amen.') {
-        // Style "Amen" specially
+      } else if (line.contains(kAmenMarker) || line.trim() == 'Amen.') {
+        // Amen is tagged in the content, since its spelling varies by
+        // language. The bare "Amen." comparison is a fallback for untagged
+        // content.
+        final amen = stripContentMarkers(line);
         widgets.add(
           Padding(
             padding: const EdgeInsets.only(top: 8),
             child: Text(
-              line,
+              amen,
               style: TextStyle(
                 fontFamily: AppTheme.fontFamilyEBGaramond,
                 fontSize: 16,
@@ -1131,11 +1130,13 @@ class _ExpandablePrayerCardState extends State<_ExpandablePrayerCard> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Card(
       elevation: 0,
       color: widget.theme.colorScheme.surface,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(AppRadius.card),
         side: BorderSide(
           color: widget.theme.colorScheme.primary.withValues(alpha: 0.3),
           width: 1,
@@ -1151,7 +1152,9 @@ class _ExpandablePrayerCardState extends State<_ExpandablePrayerCard> {
                 _isExpanded = !_isExpanded;
               });
             },
-            borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
+            borderRadius: const BorderRadius.vertical(
+              top: Radius.circular(AppRadius.card),
+            ),
             child: Padding(
               padding: const EdgeInsets.all(20),
               child: Row(
@@ -1159,8 +1162,10 @@ class _ExpandablePrayerCardState extends State<_ExpandablePrayerCard> {
                   Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: widget.theme.colorScheme.primary.withValues(alpha: 0.15),
-                      borderRadius: BorderRadius.circular(12),
+                      color: widget.theme.colorScheme.primary.withValues(
+                        alpha: 0.15,
+                      ),
+                      borderRadius: BorderRadius.circular(AppRadius.tile),
                     ),
                     child: Icon(
                       widget.getIconData(widget.prayer.icon),
@@ -1184,7 +1189,7 @@ class _ExpandablePrayerCardState extends State<_ExpandablePrayerCard> {
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          _isExpanded ? 'Tap to collapse' : 'Tap to expand',
+                          _isExpanded ? l10n.tapToCollapse : l10n.tapToExpand,
                           style: TextStyle(
                             fontFamily: AppTheme.fontFamilyLato,
                             fontSize: 13,
@@ -1213,16 +1218,18 @@ class _ExpandablePrayerCardState extends State<_ExpandablePrayerCard> {
             secondChild: Padding(
               padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
               child: Column(
-                children: widget.prayer.sections!.asMap().entries.map((entry) {
-                  final sectionIndex = entry.key;
-                  final section = entry.value;
-                  return _buildSection(section, sectionIndex);
-                }).toList(),
+                children:
+                    widget.prayer.sections!.asMap().entries.map((entry) {
+                      final sectionIndex = entry.key;
+                      final section = entry.value;
+                      return _buildSection(section, sectionIndex);
+                    }).toList(),
               ),
             ),
-            crossFadeState: _isExpanded
-                ? CrossFadeState.showSecond
-                : CrossFadeState.showFirst,
+            crossFadeState:
+                _isExpanded
+                    ? CrossFadeState.showSecond
+                    : CrossFadeState.showFirst,
             duration: const Duration(milliseconds: 300),
           ),
         ],
@@ -1235,8 +1242,10 @@ class _ExpandablePrayerCardState extends State<_ExpandablePrayerCard> {
       margin: EdgeInsets.only(top: index == 0 ? 0 : 16),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: widget.theme.colorScheme.surfaceContainerHighest.withValues(alpha: 0.5),
-        borderRadius: BorderRadius.circular(12),
+        color: widget.theme.colorScheme.surfaceContainerHighest.withValues(
+          alpha: 0.5,
+        ),
+        borderRadius: BorderRadius.circular(AppRadius.tile),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1283,10 +1292,11 @@ class _ExpandablePrayerCardState extends State<_ExpandablePrayerCard> {
 
       // Check for special formatting
       if (line.contains('[INSTRUCTION]')) {
-        final instructionText = line
-            .replaceAll('[INSTRUCTION]', '')
-            .replaceAll('[/INSTRUCTION]', '')
-            .trim();
+        final instructionText =
+            line
+                .replaceAll('[INSTRUCTION]', '')
+                .replaceAll('[/INSTRUCTION]', '')
+                .trim();
         widgets.add(
           Padding(
             padding: const EdgeInsets.only(top: 12, bottom: 4),
@@ -1302,10 +1312,8 @@ class _ExpandablePrayerCardState extends State<_ExpandablePrayerCard> {
           ),
         );
       } else if (line.contains('[RUBRIC]')) {
-        final rubricText = line
-            .replaceAll('[RUBRIC]', '')
-            .replaceAll('[/RUBRIC]', '')
-            .trim();
+        final rubricText =
+            line.replaceAll('[RUBRIC]', '').replaceAll('[/RUBRIC]', '').trim();
         widgets.add(
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 8),
@@ -1321,17 +1329,17 @@ class _ExpandablePrayerCardState extends State<_ExpandablePrayerCard> {
           ),
         );
       } else if (line.contains('[PRAYER]')) {
-        final prayerText = line
-            .replaceAll('[PRAYER]', '')
-            .replaceAll('[/PRAYER]', '')
-            .trim();
+        final prayerText =
+            line.replaceAll('[PRAYER]', '').replaceAll('[/PRAYER]', '').trim();
         widgets.add(
           Container(
             margin: const EdgeInsets.symmetric(vertical: 8),
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: widget.theme.colorScheme.primaryContainer.withValues(alpha: 0.3),
-              borderRadius: BorderRadius.circular(8),
+              color: widget.theme.colorScheme.primaryContainer.withValues(
+                alpha: 0.3,
+              ),
+              borderRadius: BorderRadius.circular(AppRadius.chip),
               border: Border(
                 left: BorderSide(
                   color: widget.theme.colorScheme.primary,
@@ -1352,10 +1360,11 @@ class _ExpandablePrayerCardState extends State<_ExpandablePrayerCard> {
           ),
         );
       } else if (line.contains('[VERSICLE]')) {
-        final versicleText = line
-            .replaceAll('[VERSICLE]', '')
-            .replaceAll('[/VERSICLE]', '')
-            .trim();
+        final versicleText =
+            line
+                .replaceAll('[VERSICLE]', '')
+                .replaceAll('[/VERSICLE]', '')
+                .trim();
         widgets.add(
           Padding(
             padding: const EdgeInsets.only(top: 8),
@@ -1371,10 +1380,11 @@ class _ExpandablePrayerCardState extends State<_ExpandablePrayerCard> {
           ),
         );
       } else if (line.contains('[RESPONSE]')) {
-        final responseText = line
-            .replaceAll('[RESPONSE]', '')
-            .replaceAll('[/RESPONSE]', '')
-            .trim();
+        final responseText =
+            line
+                .replaceAll('[RESPONSE]', '')
+                .replaceAll('[/RESPONSE]', '')
+                .trim();
         widgets.add(
           Padding(
             padding: const EdgeInsets.only(bottom: 8),
@@ -1385,6 +1395,23 @@ class _ExpandablePrayerCardState extends State<_ExpandablePrayerCard> {
                 fontSize: 15,
                 fontStyle: FontStyle.italic,
                 color: widget.theme.colorScheme.onSurface,
+              ),
+            ),
+          ),
+        );
+      } else if (line.contains(kAmenMarker) || line.trim() == 'Amen.') {
+        // Tagged Amen in a sectioned prayer, styled like the unsectioned path.
+        widgets.add(
+          Padding(
+            padding: const EdgeInsets.only(top: 8),
+            child: Text(
+              stripContentMarkers(line),
+              style: TextStyle(
+                fontFamily: AppTheme.fontFamilyEBGaramond,
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+                fontStyle: FontStyle.italic,
+                color: widget.theme.colorScheme.primary,
               ),
             ),
           ),
@@ -1406,10 +1433,10 @@ class _ExpandablePrayerCardState extends State<_ExpandablePrayerCard> {
           ),
         );
       } else {
-        // Regular text
+        // Regular text. Strip any unstyled marker so it never shows literally.
         widgets.add(
           Text(
-            line,
+            stripContentMarkers(line),
             style: TextStyle(
               fontFamily: AppTheme.fontFamilyLato,
               fontSize: 15,

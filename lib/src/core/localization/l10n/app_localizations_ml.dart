@@ -239,6 +239,12 @@ class AppLocalizationsMl extends AppLocalizations {
   String get error => 'പിശക്';
 
   @override
+  String get retry => 'വീണ്ടും ശ്രമിക്കുക';
+
+  @override
+  String get dailyQuoteError => 'ഇന്നത്തെ ഉദ്ധരണി ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല.';
+
+  @override
   String get keepHistory => 'കുമ്പസാര ചരിത്രം സൂക്ഷിക്കുക';
 
   @override
@@ -331,7 +337,39 @@ class AppLocalizationsMl extends AppLocalizations {
   String get rateApp => 'ആപ്പ് റേറ്റ് ചെയ്യുക';
 
   @override
-  String get rateAppSubtitle => 'പ്ലേ സ്റ്റോറിൽ ഞങ്ങളെ റേറ്റ് ചെയ്യുക';
+  String get spreadShareTitle => 'Metanoia പങ്കിടുക';
+
+  @override
+  String get spreadShareSubtitle =>
+      'കുമ്പസാരത്തിൽ നിന്ന് അകന്നുപോയ ആരെയെങ്കിലും അറിയാമോ? അവരെ തിരികെ വരാൻ സഹായിക്കൂ.';
+
+  @override
+  String get spreadShareAction => 'പങ്കിടുക';
+
+  @override
+  String get spreadRateSubtitle =>
+      'കുമ്പസാരത്തിന് ഒരുങ്ങാൻ Metanoia നിങ്ങളെ സഹായിച്ചെങ്കിൽ, ഒരു റേറ്റിംഗ് മറ്റുള്ളവർക്ക് ഇത് കണ്ടെത്താൻ സഹായിക്കും.';
+
+  @override
+  String get spreadRateAction => 'റേറ്റ് ചെയ്യുക';
+
+  @override
+  String get rateGateHint => 'നിങ്ങളുടെ അനുഭവം എങ്ങനെ വിലയിരുത്തും?';
+
+  @override
+  String get rateGateLowest => 'ഏറ്റവും കുറവ്';
+
+  @override
+  String get rateGateHighest => 'ഏറ്റവും കൂടുതൽ';
+
+  @override
+  String get rateGateThanks =>
+      'നന്ദി — നിങ്ങളുടെ അഭിപ്രായം ഞങ്ങൾക്ക് വളരെ വിലപ്പെട്ടതാണ്.';
+
+  @override
+  String rateAppSubtitle(String store) {
+    return '$store-ൽ ഞങ്ങളെ റേറ്റ് ചെയ്യുക';
+  }
 
   @override
   String get website => 'വെബ്സൈറ്റ്';
@@ -462,7 +500,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get customSinAdded => 'പാപം ചേർത്തു';
 
   @override
-  String get customSinUpdated => 'പാപം അപ്‌ഡേറ്റ് ചെയ്തു';
+  String get customSinUpdated => 'പാപം അപ്ഡേറ്റ് ചെയ്തു';
 
   @override
   String get customSinDeleted => 'പാപം നീക്കം ചെയ്തു';
@@ -487,7 +525,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get addButton => 'ചേർക്കുക';
 
   @override
-  String get updateButton => 'അപ്‌ഡേറ്റ് ചെയ്യുക';
+  String get updateButton => 'അപ്ഡേറ്റ് ചെയ്യുക';
 
   @override
   String get deleteButton => 'നീക്കം ചെയ്യുക';
@@ -713,7 +751,7 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get skipOnboardingMessage =>
-      'ആപ്പ് മെനുവിൽ നിന്ന് പിന്നീട് സഹായവും ക്രമീകരണങ്ങളും എപ്പോൾ വേണമെങ്കിലും ആക്സസ് ചെയ്യാം.';
+      'നിങ്ങൾ നേരിട്ട് അവസാന പേജിലേക്ക് പോകും. ഇവിടെ ഒന്നും ക്രമീകരിക്കുന്നില്ല — എല്ലാം പിന്നീട് ക്രമീകരണങ്ങളിൽ മാറ്റാം.';
 
   @override
   String get confessionHistoryTitle => 'മുമ്പത്തെ കുമ്പസാരങ്ങൾ';
@@ -728,7 +766,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get confessionDate => 'കുമ്പസാര തീയതി';
 
   @override
-  String get dateUpdated => 'തീയതി അപ്‌ഡേറ്റ് ചെയ്തു';
+  String get dateUpdated => 'തീയതി അപ്ഡേറ്റ് ചെയ്തു';
 
   @override
   String get changeDateConfirmTitle => 'തീയതി മാറ്റണോ?';
@@ -797,7 +835,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get pinMismatch => 'PIN കൾ പൊരുത്തപ്പെടുന്നില്ല';
 
   @override
-  String get biometricUnlock => 'ഫിംഗർപ്രിന്റ് / ഫെയ്‌സ് അൺലോക്ക്';
+  String get biometricUnlock => 'ഫിംഗർപ്രിന്റ് / ഫെയ്സ് അൺലോക്ക്';
 
   @override
   String get autoLockTimeout => 'ഓട്ടോ-ലോക്ക് ടൈംഔട്ട്';
@@ -832,8 +870,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get changePin => 'PIN മാറ്റുക';
 
   @override
-  String get updateYourSecurityPin =>
-      'നിങ്ങളുടെ സുരക്ഷാ PIN അപ്‌ഡേറ്റ് ചെയ്യുക';
+  String get updateYourSecurityPin => 'നിങ്ങളുടെ സുരക്ഷാ PIN അപ്ഡേറ്റ് ചെയ്യുക';
 
   @override
   String get enterCurrentPin => 'നിലവിലെ PIN നൽകുക';
@@ -995,6 +1032,13 @@ class AppLocalizationsMl extends AppLocalizations {
   String get confessionGuideTitle => 'നല്ല കുമ്പസാരം എങ്ങനെ നടത്താം';
 
   @override
+  String get shortFilmTitle => 'കുമ്പസാരം: ഒരു ഹ്രസ്വചിത്രം';
+
+  @override
+  String get shortFilmSubtitle =>
+      'Blazing Youth Wembley, St Joseph\'s RC Church, Wembley, യുണൈറ്റഡ് കിംഗ്ഡം ഒരുക്കിയത്';
+
+  @override
   String get confessionGuideSubtitle => 'കുമ്പസാര ക്രമം';
 
   @override
@@ -1041,13 +1085,48 @@ class AppLocalizationsMl extends AppLocalizations {
       'നിങ്ങളുടെ അനുരഞ്ജന യാത്ര കൃപയാലും സമാധാനത്താലും നിറയട്ടെ.';
 
   @override
+  String get onboardingOverviewTitle => 'ഈ ആപ്പ് എന്ത് ചെയ്യുന്നു';
+
+  @override
+  String get onboardingOverviewExamine =>
+      'നിങ്ങളുടെ വേഗതയിൽ മനസ്സാക്ഷി ഒരുക്കുക.';
+
+  @override
+  String get onboardingOverviewConfess =>
+      'ഒന്നും മറന്നുപോകാതിരിക്കാൻ ഒരു സ്വകാര്യ പട്ടിക.';
+
+  @override
+  String get onboardingOverviewJournal =>
+      'കുമ്പസാരങ്ങൾക്കിടയിൽ വളർച്ച തുടരാൻ ഒരു ചെറിയ സായാഹ്ന ധ്യാനം.';
+
+  @override
+  String get onboardingOverviewFootnote =>
+      'പ്രാർത്ഥനകളും വഴികാട്ടികളും ഐച്ഛിക ഓർമ്മപ്പെടുത്തലുകളും ആപ്പിനുള്ളിൽ ഉണ്ട്.';
+
+  @override
+  String get onboardingPrivacyTitle => 'രൂപകൽപ്പനയിൽത്തന്നെ സ്വകാര്യം';
+
+  @override
+  String get onboardingPrivacyLocal =>
+      'എല്ലാം ഈ ഫോണിൽ തന്നെ തുടരും. അക്കൗണ്ടില്ല, ക്ലൗഡില്ല.';
+
+  @override
+  String get onboardingPrivacyEncrypted =>
+      'നിങ്ങളുടെ ഉപകരണത്തിൽ എൻക്രിപ്റ്റ് ചെയ്തിരിക്കുന്നു.';
+
+  @override
+  String get onboardingPrivacyPin =>
+      'ഒരു ആത്മപരിശോധനയോ ഡയറിയോ ആദ്യമായി തുറക്കുമ്പോൾ നിങ്ങൾ ഒരു PIN സൃഷ്ടിക്കും.';
+
+  @override
   String get sourceCode => 'സോഴ്സ് കോഡ്';
 
   @override
   String get contentReferences => 'ഉള്ളടക്ക പരാമർശങ്ങൾ';
 
   @override
-  String get examinationModeTitle => 'എങ്ങനെ ആത്മശോധന നടത്താൻ ആഗ്രഹിക്കുന്നു?';
+  String get examinationModeTitle =>
+      'എങ്ങനെ ആത്മപരിശോധന നടത്താൻ ആഗ്രഹിക്കുന്നു?';
 
   @override
   String get quickReviewMode => 'ദ്രുത അവലോകനം';
@@ -1068,7 +1147,7 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get contemplativePrayerText =>
-      'എൻ്റെ ഹൃദയം നിറയ്ക്കുകയും നിൻ്റെ സ്നേഹത്തിൻ്റെ അഗ്നി എന്നിൽ ജ്വലിപ്പിക്കുകയും ചെയ്യേണമേ. എൻ്റെ പാപങ്ങൾ വ്യക്തമായി കാണാൻ എൻ്റെ മനസ്സിനെ പ്രകാശിപ്പിക്കേണമേ.';
+      'എന്റെ ഹൃദയം നിറയ്ക്കുകയും അങ്ങയുടെ സ്നേഹത്തിന്റെ അഗ്നി എന്നിൽ ജ്വലിപ്പിക്കുകയും ചെയ്യേണമേ. എന്റെ പാപങ്ങൾ വ്യക്തമായി കാണാൻ എന്റെ മനസ്സിനെ പ്രകാശിപ്പിക്കേണമേ.';
 
   @override
   String get imReady => 'ഞാൻ തയ്യാർ';
@@ -1091,19 +1170,760 @@ class AppLocalizationsMl extends AppLocalizations {
   }
 
   @override
-  String get examinationComplete => 'ആത്മശോധന പൂർത്തിയായി';
+  String get examinationComplete => 'ആത്മപരിശോധന പൂർത്തിയായി';
 
   @override
   String get reviewYourSelections =>
       'നിങ്ങളുടെ തിരഞ്ഞെടുപ്പുകൾ അവലോകനം ചെയ്യുക';
 
   @override
-  String get examinationModeSettingTitle => 'ആത്മശോധന രീതി';
+  String get examinationModeSettingTitle => 'ആത്മപരിശോധന രീതി';
 
   @override
   String get examinationModeSettingSubtitle =>
-      'ആത്മശോധന എങ്ങനെ നടത്തണമെന്ന് തിരഞ്ഞെടുക്കുക';
+      'ആത്മപരിശോധന എങ്ങനെ നടത്തണമെന്ന് തിരഞ്ഞെടുക്കുക';
 
   @override
   String get askEveryTime => 'എല്ലായ്പ്പോഴും ചോദിക്കുക';
+
+  @override
+  String get reminderNotificationTitle => 'കുമ്പസാരത്തിനുള്ള സമയമായി';
+
+  @override
+  String get reminderNotificationBody =>
+      'മനഃസാക്ഷി പരിശോധിച്ച് കുമ്പസാരത്തിനായി ഒരുങ്ങാൻ ഓർക്കുക';
+
+  @override
+  String get notificationPermissionDenied =>
+      'അറിയിപ്പുകൾ ഓഫാണ്. കുമ്പസാര ഓർമ്മപ്പെടുത്തലുകൾ ലഭിക്കാൻ ഉപകരണ ക്രമീകരണങ്ങളിൽ Metanoia-യ്ക്ക് അറിയിപ്പുകൾ അനുവദിക്കുക.';
+
+  @override
+  String get openSourceLicenses => 'ഓപ്പൺ സോഴ്സ് ലൈസൻസുകൾ';
+
+  @override
+  String get couldNotOpenLink => 'ലിങ്ക് തുറക്കാൻ കഴിഞ്ഞില്ല';
+
+  @override
+  String itemsConfessed(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count ഇനങ്ങൾ ഏറ്റുപറഞ്ഞു',
+      one: '1 ഇനം ഏറ്റുപറഞ്ഞു',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String penancesCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count പ്രായശ്ചിത്തങ്ങൾ',
+      one: '1 പ്രായശ്ചിത്തം',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String pendingCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count ബാക്കി',
+      one: '1 ബാക്കി',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String totalCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'ആകെ $count',
+      one: 'ആകെ 1',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String itemsCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count ഇനങ്ങൾ',
+      one: '1 ഇനം',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String daysCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count ദിവസം',
+      one: '1 ദിവസം',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String weeksShort(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count ആഴ്ച',
+      one: '1 ആഴ്ച',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get deleteAllConfessionsTitle => 'എല്ലാ കുമ്പസാരങ്ങളും ഇല്ലാതാക്കണോ?';
+
+  @override
+  String get deleteAllConfessionsContent =>
+      'ഇത് നിങ്ങളുടെ എല്ലാ കുമ്പസാര ചരിത്രവും ശാശ്വതമായി നീക്കം ചെയ്യും. ഈ പ്രവർത്തനം പഴയപടിയാക്കാൻ കഴിയില്ല.';
+
+  @override
+  String get allConfessionsDeleted => 'എല്ലാ കുമ്പസാരങ്ങളും നീക്കം ചെയ്തു';
+
+  @override
+  String get deletePenanceConfirm =>
+      'ഈ പ്രായശ്ചിത്തം നീക്കം ചെയ്യണമെന്ന് ഉറപ്പാണോ?';
+
+  @override
+  String get completed => 'പൂർത്തിയാക്കി';
+
+  @override
+  String get tapToCollapse => 'ചുരുക്കാൻ ടാപ്പ് ചെയ്യുക';
+
+  @override
+  String get dismiss => 'അടയ്ക്കുക';
+
+  @override
+  String showcaseStep(int current, int total) {
+    return 'ഘട്ടം $current / $total';
+  }
+
+  @override
+  String get done => 'പൂർത്തിയായി';
+
+  @override
+  String get navigate => 'നാവിഗേറ്റ് ചെയ്യുക';
+
+  @override
+  String get encouragement => 'പ്രോത്സാഹനം';
+
+  @override
+  String get biometricPromptReason =>
+      'മെറ്റാനോയ ഉപയോഗിക്കാൻ നിങ്ങളുടെ ഐഡന്റിറ്റി സ്ഥിരീകരിക്കുക';
+
+  @override
+  String get tryAgainInLabel => 'ഇതിനുശേഷം വീണ്ടും ശ്രമിക്കുക';
+
+  @override
+  String get errorLoadingLanguage => 'ഭാഷ ലോഡ് ചെയ്യുന്നതിൽ പിശക്';
+
+  @override
+  String get detailsNotSaved => 'വിശദാംശങ്ങൾ സൂക്ഷിച്ചിട്ടില്ല';
+
+  @override
+  String get discardStoredSinsTitle => 'സൂക്ഷിച്ച പാപങ്ങൾ ഒഴിവാക്കണോ?';
+
+  @override
+  String get discardStoredSinsContent =>
+      'കുമ്പസാര ചരിത്രം ഇപ്പോൾ ഓഫാണ്. മുൻ കുമ്പസാരങ്ങളിൽ നിന്ന് സൂക്ഷിച്ച പാപങ്ങൾ ഇപ്പോഴും സംഭരിച്ചിരിക്കുന്നു. അവ ഒഴിവാക്കണോ? തീയതികൾ സൂക്ഷിക്കും, അതിനാൽ നിങ്ങളുടെ ഉൾക്കാഴ്ചകളും സ്ട്രീക്കുകളും അതേപടി നിലനിൽക്കും.';
+
+  @override
+  String get keepThem => 'സൂക്ഷിക്കുക';
+
+  @override
+  String get discard => 'ഒഴിവാക്കുക';
+
+  @override
+  String get storedSinsDiscarded =>
+      'സൂക്ഷിച്ച പാപങ്ങൾ ഒഴിവാക്കി. കുമ്പസാര തീയതികൾ സൂക്ഷിച്ചു.';
+
+  @override
+  String get journalTitle => 'ഡയറി';
+
+  @override
+  String get journalHomeCardTitle => 'സായാഹ്ന ധ്യാനം';
+
+  @override
+  String get journalHomeCardSubtitle => 'ഇന്നത്തെ ദിവസം എങ്ങനെയായിരുന്നു?';
+
+  @override
+  String journalStreakDays(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count ദിവസങ്ങൾ',
+      one: '$count ദിവസം',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get journalStreakLabel => 'തുടർച്ചയായ ധ്യാന ദിവസങ്ങൾ';
+
+  @override
+  String get journalContinueToday => 'ഇന്നത്തെ കുറിപ്പ് തുടരുക';
+
+  @override
+  String get journalPreviousMonth => 'മുൻ മാസം';
+
+  @override
+  String get journalNextMonth => 'അടുത്ത മാസം';
+
+  @override
+  String get journalGratitudeTitle => 'നന്ദി';
+
+  @override
+  String get journalGratitudePrompt => 'ഇന്ന് ഞാൻ ദൈവത്തെ എവിടെ കണ്ടു?';
+
+  @override
+  String get journalGratitudeHint =>
+      'അവിടുത്തോടു നന്ദി പറയാൻ ആഗ്രഹിക്കുന്ന ഒരു കൃപ…';
+
+  @override
+  String get journalPresenceLead =>
+      'ദൈവം ഇവിടെ നിന്നോടുകൂടെയുണ്ട്. അവിടുത്തെ സന്നിധിയിൽ മൗനമായി നിന്ന് നന്ദി പറയുക.';
+
+  @override
+  String get journalPresenceVerse => 'ശാന്തമാകുക, ഞാൻ ദൈവമാണെന്നറിയുക.';
+
+  @override
+  String get journalPresenceRef => 'സങ്കീർത്തനം 46:10';
+
+  @override
+  String get journalLightTitle => 'വെളിച്ചത്തിനായി പ്രാർത്ഥിക്കുക';
+
+  @override
+  String get journalLightLead =>
+      'ദൈവം കാണുന്നതുപോലെ നിന്റെ ദിവസത്തെ കാണാൻ പരിശുദ്ധാത്മാവിനോട് വെളിച്ചം അപേക്ഷിക്കുക.';
+
+  @override
+  String get journalLightVerse =>
+      'പരിശുദ്ധാത്മാവേ വരണമേ; അങ്ങേ വിശ്വാസികളുടെ ഹൃദയങ്ങളെ നിറയ്ക്കണമേ; അങ്ങേ സ്നേഹാഗ്നി അവരിൽ ജ്വലിപ്പിക്കണമേ.';
+
+  @override
+  String get journalReviewTitle => 'ദൈവത്തോടൊപ്പം അവലോകനം';
+
+  @override
+  String get journalReviewLead =>
+      'കർത്താവിനോടൊപ്പം നിന്റെ ദിവസത്തിലൂടെ വീണ്ടും നടക്കുക: സ്നേഹം നിന്നിലേക്കു വന്നത് എവിടെ, നീ അതു നൽകിയത് എവിടെ, നീ പിന്തിരിഞ്ഞത് എവിടെ.';
+
+  @override
+  String get journalReviewVerse =>
+      'ദൈവമേ, എന്നെ പരിശോധിച്ച് എന്റെ ഹൃദയത്തെ അറിയണമേ! എന്നെ പരീക്ഷിച്ച് എന്റെ വിചാരങ്ങൾ മനസ്സിലാക്കണമേ! വിനാശത്തിന്റെ മാർഗത്തിലാണോ ഞാൻ ചരിക്കുന്നതെന്നു നോക്കണമേ! ശാശ്വതമാർഗത്തിലൂടെ എന്നെ നയിക്കണമേ!';
+
+  @override
+  String get journalReviewRef => 'സങ്കീർത്തനം 139:23-24';
+
+  @override
+  String get journalReviewHint =>
+      'നിന്റെ ദിവസത്തെക്കുറിച്ച് അവിടുത്തോട് സംസാരിക്കുക…';
+
+  @override
+  String get journalReviewBringSin =>
+      'അവിടുത്തെ സന്നിധിയിൽ കൊണ്ടുവരാൻ എന്തെങ്കിലുമുണ്ടോ?';
+
+  @override
+  String get journalContritionTitle => 'മനസ്താപം';
+
+  @override
+  String get journalContritionLead =>
+      'നീ കണ്ടെത്തിയത് പിതാവിന്റെ അടുക്കൽ കൊണ്ടുവരിക; അവിടുന്ന് നിന്നെ എതിരേൽക്കാൻ ഓടിവരുന്നു.';
+
+  @override
+  String get journalContritionVerse =>
+      'ദൈവമേ, അങ്ങയുടെ കാരുണ്യത്തിനൊത്ത് എന്നോടു ദയ തോന്നണമേ! അങ്ങയുടെ കാരുണ്യാതിരേകത്തിനൊത്ത് എന്റെ അതിക്രമങ്ങൾ മായിച്ചുകളയണമേ!';
+
+  @override
+  String get journalContritionRef => 'സങ്കീർത്തനം 51:1';
+
+  @override
+  String get journalContritionPray => 'മനസ്താപ പ്രകരണം ചൊല്ലുക';
+
+  @override
+  String get journalContritionMercy =>
+      'ദൈവസ്നേഹത്തിൽ നിന്നു ജനിക്കുന്ന മനസ്താപവും കുമ്പസാരിക്കാനുള്ള തീരുമാനവും ഇന്നു രാത്രി നിന്റെ ഹൃദയത്തെ അവിടുത്തെ കരുണയിലേക്കു തുറക്കുന്നു; അതിന്റെ പൂർണ്ണത കുമ്പസാരത്തിൽ, പാപമോചനത്തിന്റെ വാക്കുകളിൽ, നിന്നെ കാത്തിരിക്കുന്നു.';
+
+  @override
+  String get journalResolutionLead =>
+      'അവിടുത്തെ കരുണയിൽ വിശ്രമിക്കുക. നാളെ അവിടുത്തിൽ വീണ്ടും ആരംഭിക്കുന്നു.';
+
+  @override
+  String get journalResolutionVerse =>
+      'കർത്താവിന്റെ സ്നേഹം ഒരിക്കലും അസ്തമിക്കുന്നില്ല; അവിടുത്തെ കാരുണ്യം അവസാനിക്കുന്നില്ല. ഓരോ പ്രഭാതത്തിലും അതു പുതിയതാണ്. അവിടുത്തെ വിശ്വസ്തത ഉന്നതമാണ്.';
+
+  @override
+  String get journalResolutionRef => 'വിലാപങ്ങൾ 3:22-23';
+
+  @override
+  String get journalReflectionTitle => 'ധ്യാനം';
+
+  @override
+  String get journalReflectionPrompt => 'നിങ്ങളുടെ ദിവസം എങ്ങനെയായിരുന്നു?';
+
+  @override
+  String get journalReflectionHint => 'സ്വതന്ത്രമായി എഴുതുക...';
+
+  @override
+  String get journalSinsTitle => 'പാപങ്ങൾ അടയാളപ്പെടുത്തുക';
+
+  @override
+  String get journalSinsPrompt => 'ഇന്ന് ഞാൻ എവിടെ വീഴ്ച വരുത്തി?';
+
+  @override
+  String get journalNoSinsMarked => 'ഇതുവരെ ഒന്നും അടയാളപ്പെടുത്തിയിട്ടില്ല';
+
+  @override
+  String get journalAddSin => 'ഒരു പാപം അടയാളപ്പെടുത്തുക';
+
+  @override
+  String get journalRemoveSin => 'നീക്കം ചെയ്യുക';
+
+  @override
+  String get journalResolutionTitle => 'പ്രത്യാശയും തീരുമാനവും';
+
+  @override
+  String get journalResolutionPrompt => 'നാളേക്കുള്ള ഒരു തീരുമാനം';
+
+  @override
+  String get journalResolutionHint => 'അങ്ങയുടെ കൃപയാൽ, നാളെ ഞാൻ…';
+
+  @override
+  String get journalMoodTitle => 'മനോഭാവം';
+
+  @override
+  String get journalMoodPrompt =>
+      'ഇന്ന് രാത്രി നിങ്ങളുടെ ആത്മാവ് എങ്ങനെയുണ്ട്?';
+
+  @override
+  String get journalMoodDesolate => 'ശൂന്യത';
+
+  @override
+  String get journalMoodStruggling => 'പോരാട്ടം';
+
+  @override
+  String get journalMoodSteady => 'സ്ഥിരത';
+
+  @override
+  String get journalMoodGrateful => 'കൃതജ്ഞത';
+
+  @override
+  String get journalMoodConsoled => 'ആശ്വാസം';
+
+  @override
+  String get journalSaved => 'സംരക്ഷിച്ചു';
+
+  @override
+  String get journalSaving => 'സംരക്ഷിക്കുന്നു...';
+
+  @override
+  String get journalDeleteEntry => 'കുറിപ്പ് ഇല്ലാതാക്കുക';
+
+  @override
+  String get journalDeleteEntryConfirm =>
+      'ഈ ദിവസത്തെ കുറിപ്പ് ഇല്ലാതാക്കണോ? ഇത് പിന്നീട് പുനഃസ്ഥാപിക്കാനാവില്ല.';
+
+  @override
+  String get journalEntryDeleted => 'കുറിപ്പ് ഇല്ലാതാക്കി';
+
+  @override
+  String get journalPickerQuestions => 'ചോദ്യങ്ങൾ';
+
+  @override
+  String get journalPickerMySins => 'എന്റെ പാപങ്ങൾ';
+
+  @override
+  String get journalPickerOwnWords => 'എന്റെ വാക്കുകളിൽ';
+
+  @override
+  String get journalPickerFreeTextHint => 'സ്വന്തം വാക്കുകളിൽ വിവരിക്കുക';
+
+  @override
+  String get journalSearchSins => 'പാപങ്ങൾ തിരയുക...';
+
+  @override
+  String get journalAbsolved => 'ഏറ്റുപറഞ്ഞു';
+
+  @override
+  String get journalSinCleared => 'കുമ്പസാരത്തിൽ ഏറ്റുപറഞ്ഞ ഒരു പാപം';
+
+  @override
+  String journalPreloadTitle(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'ഡയറിയിൽ അടയാളപ്പെടുത്തിയ $count പാപങ്ങൾ ഉൾപ്പെടുത്തുക',
+      one: 'ഡയറിയിൽ അടയാളപ്പെടുത്തിയ പാപം ഉൾപ്പെടുത്തുക',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get journalPreloadAction => 'ഉൾപ്പെടുത്തുക';
+
+  @override
+  String journalPreloadAdded(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'ഡയറിയിൽ നിന്ന് $count പാപങ്ങൾ ചേർത്തു',
+      one: 'ഡയറിയിൽ നിന്ന് 1 പാപം ചേർത്തു',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get journalStruggleAreas => 'പോരാട്ട മേഖലകൾ';
+
+  @override
+  String get journalStruggleAreasSubtitle =>
+      'ഡയറിയിൽ ഏറ്റവും കൂടുതൽ അടയാളപ്പെടുത്തിയവ';
+
+  @override
+  String journalMarksCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count അടയാളങ്ങൾ',
+      one: '1 അടയാളം',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get journalReminder => 'ഡയറി ഓർമ്മപ്പെടുത്തൽ';
+
+  @override
+  String get journalReminderSubtitle =>
+      'ദിവസത്തെക്കുറിച്ച് ചിന്തിക്കാൻ രാത്രിയിലെ ഓർമ്മപ്പെടുത്തൽ';
+
+  @override
+  String get enableJournalReminder =>
+      'ഡയറി ഓർമ്മപ്പെടുത്തൽ പ്രവർത്തനക്ഷമമാക്കുക';
+
+  @override
+  String get journalReminderNotificationTitle => 'സായാഹ്ന ധ്യാനം';
+
+  @override
+  String get journalReminderNotificationBody =>
+      'ദൈവസന്നിധിയിൽ ഇന്നത്തെ ദിവസം ഒന്ന് തിരിഞ്ഞുനോക്കാൻ അല്പസമയം എടുക്കുക';
+
+  @override
+  String get confessionDayMode => 'കുമ്പസാര മോഡ്';
+
+  @override
+  String get confessionDayModeDescription =>
+      'കുമ്പസാരക്കൂട്ടിൽ വായിക്കാൻ വലിയ, ശ്രദ്ധ തിരിക്കാത്ത അക്ഷരങ്ങൾ';
+
+  @override
+  String get exitConfessionMode => 'കുമ്പസാര മോഡിൽ നിന്ന് പുറത്തുകടക്കുക';
+
+  @override
+  String confessionDayStepOf(int current, int total) {
+    return 'ഘട്ടം $current / $total';
+  }
+
+  @override
+  String get next => 'അടുത്തത്';
+
+  @override
+  String get actOfContrition => 'മനസ്താപ പ്രകരണം';
+
+  @override
+  String get actOfContritionUnavailable => 'മനസ്താപ പ്രകരണം ലഭ്യമല്ല';
+
+  @override
+  String get confessionDaySinsTitle => 'ഏറ്റുപറയേണ്ട പാപങ്ങൾ';
+
+  @override
+  String get confessionDayOpeningTitle => 'ആരംഭം';
+
+  @override
+  String get confessionDayOpeningIntro => 'കുരിശടയാളം വരച്ചശേഷം ആരംഭിക്കുക:';
+
+  @override
+  String get confessionDayOpeningFormula =>
+      'പിതാവേ, പാപിയായ എന്നെ അനുഗ്രഹിക്കണമേ.';
+
+  @override
+  String confessionDaySinceLast(String duration) {
+    return 'ഞാൻ കുമ്പസാരിച്ചിട്ട് $duration ആയി.';
+  }
+
+  @override
+  String get confessionDaySinceLastUnknown =>
+      'ഞാൻ കുമ്പസാരിച്ചിട്ട് [ദിവസം/ആഴ്ച/മാസം/വർഷം] ആയി.';
+
+  @override
+  String get confessionDaySinsClosing =>
+      'ഞാൻ ഈ പറഞ്ഞ പാപങ്ങളെക്കുറിച്ചും മറന്നുപോയ പാപങ്ങളെക്കുറിച്ചും മനസ്തപിക്കുന്നു. പാപമോചനവും പ്രായശ്ചിത്തവും തരണമെന്ന് അപേക്ഷിക്കുന്നു.';
+
+  @override
+  String get confessionDayThanksgivingTitle => 'സമാധാനത്തോടെ പോകുക';
+
+  @override
+  String get confessionDayThanksgivingVersicle =>
+      'കർത്താവിനു കൃതജ്ഞത അർപ്പിക്കുവിൻ; അവിടുന്നു നല്ലവനാണ്.';
+
+  @override
+  String get confessionDayThanksgivingResponse =>
+      'അവിടുത്തെ കാരുണ്യം എന്നേക്കും നിലനിൽക്കുന്നു.';
+
+  @override
+  String get confessionDayThanksgivingBody =>
+      'നിന്റെ ആത്മാവ് ശുദ്ധീകരിക്കപ്പെട്ടിരിക്കുന്നു. നിന്റെ പ്രായശ്ചിത്തം പൂർത്തിയാക്കി ക്രിസ്തുവിന്റെ സമാധാനത്തിൽ മുന്നോട്ട് പോകുക.';
+
+  @override
+  String weeksCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count ആഴ്ച',
+      one: '1 ആഴ്ച',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String monthsCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count മാസം',
+      one: '1 മാസം',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String yearsCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count വർഷം',
+      one: '1 വർഷം',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get seasonLent => 'നോമ്പുകാലം';
+
+  @override
+  String get seasonHolyWeek => 'വിശുദ്ധ വാരം';
+
+  @override
+  String get seasonAdvent => 'ആഗമനകാലം';
+
+  @override
+  String get seasonChristmas => 'ക്രിസ്മസ് കാലം';
+
+  @override
+  String get seasonEaster => 'ഈസ്റ്റർ കാലം';
+
+  @override
+  String get seasonOrdinaryTime => 'സാധാരണ കാലം';
+
+  @override
+  String get feastAshWednesday => 'വിഭൂതി ബുധൻ';
+
+  @override
+  String get feastPalmSunday => 'ഓശാന ഞായർ';
+
+  @override
+  String get feastEaster => 'ഈസ്റ്റർ';
+
+  @override
+  String get feastPentecost => 'പെന്തക്കുസ്ത';
+
+  @override
+  String get feastAssumption => 'മാതാവിന്റെ സ്വർഗ്ഗാരോപണം';
+
+  @override
+  String get feastAllSaints => 'സകല വിശുദ്ധരുടെ തിരുനാൾ';
+
+  @override
+  String get feastImmaculateConception => 'അമലോദ്ഭവ മാതാവിന്റെ തിരുനാൾ';
+
+  @override
+  String get feastFirstSundayOfAdvent => 'ആഗമനകാലത്തിലെ ഒന്നാം ഞായർ';
+
+  @override
+  String get feastChristmas => 'ക്രിസ്മസ്';
+
+  @override
+  String get liturgicalLentTitle => 'നോമ്പുകാലം ആരംഭിച്ചു';
+
+  @override
+  String get liturgicalLentBody =>
+      'ദൈവത്തിലേക്ക് മടങ്ങാനുള്ള കാലം. പലരും കുമ്പസാരത്തോടെയാണ് ഇത് ആരംഭിക്കുന്നത്.';
+
+  @override
+  String get liturgicalHolyWeekTitle => 'വിശുദ്ധ വാരം ആരംഭിച്ചു';
+
+  @override
+  String get liturgicalHolyWeekBody =>
+      'സഭ ഈസ്റ്ററിലേക്ക് നടന്നടുക്കുന്നു. ഹൃദയം ഒരുക്കാൻ ഇനിയും സമയമുണ്ട്.';
+
+  @override
+  String get liturgicalAdventTitle => 'ആഗമനകാലം ആരംഭിച്ചു';
+
+  @override
+  String get liturgicalAdventBody =>
+      'കാത്തിരിപ്പിന്റെ കാലം. പലരും കുമ്പസാരത്തിലൂടെ ഹൃദയം ഒരുക്കുന്നു.';
+
+  @override
+  String liturgicalFeastNearTitle(String feast) {
+    return '$feast അടുത്തിരിക്കുന്നു';
+  }
+
+  @override
+  String liturgicalFeastNearBody(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count ദിവസങ്ങൾ കൂടി — ഹൃദയം ഒരുക്കാം.',
+      one: 'ഒരു ദിവസം കൂടി — ഹൃദയം ഒരുക്കാം.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String anniversaryTitle(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'അവസാന കുമ്പസാരത്തിനു ശേഷം $count ആഴ്ചകൾ കഴിഞ്ഞു',
+      one: 'അവസാന കുമ്പസാരത്തിനു ശേഷം ഒരു ആഴ്ച കഴിഞ്ഞു',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get anniversaryBody =>
+      'നിങ്ങൾ ഒരുങ്ങുമ്പോൾ കരുണ കാത്തിരിക്കുന്നു. ഒരുങ്ങാൻ ആഗ്രഹിക്കുന്നുവോ?';
+
+  @override
+  String get promptPrepare => 'ഒരുങ്ങുക';
+
+  @override
+  String get dataUnrecoverableTitle =>
+      'നിങ്ങളുടെ ഡാറ്റ അൺലോക്ക് ചെയ്യാൻ കഴിയുന്നില്ല';
+
+  @override
+  String get dataUnrecoverableBody =>
+      'നിങ്ങളുടെ കുമ്പസാരങ്ങളെ സംരക്ഷിക്കുന്ന കീ ഈ ഉപകരണത്തിൽ ഇനി ലഭ്യമല്ല. ബാക്കപ്പിൽ നിന്ന് പുനഃസ്ഥാപിച്ചതിന് ശേഷമോ ഉപകരണത്തിന്റെ സുരക്ഷാ ക്രമീകരണങ്ങൾ പുനഃസജ്ജമാക്കിയാലോ ഇത് സംഭവിക്കാം.\n\nനിങ്ങളുടെ ഡാറ്റ എൻക്രിപ്റ്റ് ചെയ്തിരിക്കുന്നതിനാൽ, ആ കീ ഇല്ലാതെ അത് വീണ്ടെടുക്കാൻ കഴിയില്ല — ഞങ്ങൾക്ക് പോലും. നിങ്ങൾക്ക് അത് മായ്ച്ച് വീണ്ടും തുടങ്ങാം.';
+
+  @override
+  String get eraseAndStartOver => 'മായ്ച്ച് വീണ്ടും തുടങ്ങുക';
+
+  @override
+  String get eraseAndStartOverConfirm =>
+      'ഇത് ഈ ഉപകരണത്തിൽ സൂക്ഷിച്ചിരിക്കുന്നതെല്ലാം ശാശ്വതമായി മായ്ക്കുകയും ആപ്പ് പുതുതായി ആരംഭിക്കുകയും ചെയ്യും. ഇത് പഴയപടിയാക്കാൻ കഴിയില്ല.';
+
+  @override
+  String get penanceSaveFailed =>
+      'പ്രായശ്ചിത്തം സൂക്ഷിക്കാനായില്ല. വീണ്ടും ശ്രമിക്കുക.';
+
+  @override
+  String get confessionReminderChannelName => 'കുമ്പസാര ഓർമ്മപ്പെടുത്തലുകൾ';
+
+  @override
+  String get confessionReminderChannelDescription =>
+      'കുമ്പസാരത്തിനുള്ള ഓർമ്മപ്പെടുത്തലുകൾ';
+
+  @override
+  String get journalReminderChannelName => 'ഡയറി ഓർമ്മപ്പെടുത്തലുകൾ';
+
+  @override
+  String get journalReminderChannelDescription =>
+      'സായാഹ്ന ധ്യാനം എഴുതാനുള്ള ദിവസേനയുള്ള ഓർമ്മപ്പെടുത്തൽ';
+
+  @override
+  String namedSoFar(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'ഇതുവരെ $count എണ്ണം അടയാളപ്പെടുത്തി',
+      one: 'ഇതുവരെ ഒന്ന് അടയാളപ്പെടുത്തി',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get invitationCardTitle => 'തുടങ്ങുന്നതിനു മുൻപ്';
+
+  @override
+  String get invitationCardAction => 'എനിക്ക് ധൈര്യം പകരൂ';
+
+  @override
+  String get homeCtaBeginTitle => 'നിങ്ങളുടെ ആത്മപരിശോധന ആരംഭിക്കുക';
+
+  @override
+  String get homeCtaBeginSubtitle => 'കുമ്പസാരത്തിനു മുൻപ് ഹൃദയം ഒരുക്കുക';
+
+  @override
+  String homeCtaContinueTitle(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'ആത്മപരിശോധന തുടരുക ($count തിരഞ്ഞെടുത്തു)',
+      one: 'ആത്മപരിശോധന തുടരുക (1 തിരഞ്ഞെടുത്തു)',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get homeCtaContinueSubtitle => 'നിർത്തിയിടത്തുനിന്ന് തുടരുക';
+
+  @override
+  String get homeCtaReadyTitle => 'നിങ്ങൾ ഒരുങ്ങിക്കഴിഞ്ഞു';
+
+  @override
+  String homeCtaReadySubtitle(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'നിങ്ങളുടെ കുമ്പസാര പട്ടികയിൽ $count പാപങ്ങൾ കാത്തിരിക്കുന്നു',
+      one: 'നിങ്ങളുടെ കുമ്പസാര പട്ടികയിൽ 1 പാപം കാത്തിരിക്കുന്നു',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get homeCtaPenanceTitle => 'നിങ്ങളുടെ പ്രായശ്ചിത്തം പൂർത്തിയാക്കുക';
+
+  @override
+  String homeCtaPenanceSubtitle(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count പ്രായശ്ചിത്തങ്ങൾ ഇനിയും ബാക്കിയുണ്ട്',
+      one: '1 പ്രായശ്ചിത്തം ഇനിയും ബാക്കിയുണ്ട്',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get homeGuideCardSubtitle =>
+      'പ്രോത്സാഹനം, ഘട്ടം ഘട്ടമായുള്ള വഴികാട്ടി, പ്രാർത്ഥനകൾ, പതിവുചോദ്യങ്ങൾ';
+
+  @override
+  String get homeQuoteReadMore => 'കൂടുതൽ വായിക്കുക';
+
+  @override
+  String get homeQuoteShowLess => 'കുറച്ചു കാണിക്കുക';
+
+  @override
+  String get tutorialJournalDesc =>
+      'ഓരോ സായാഹ്നത്തിലും നിങ്ങളുടെ ദിവസം വിചിന്തനം ചെയ്യുക: ഒരു ചെറിയ ധ്യാനവും നിങ്ങളുടെ തുടർച്ചയും.';
 }

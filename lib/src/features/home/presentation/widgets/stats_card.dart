@@ -1,14 +1,17 @@
 import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
+import 'package:confessionapp/src/core/theme/app_radius.dart';
+import 'package:confessionapp/src/core/utils/date_utils.dart';
 import 'package:confessionapp/src/core/utils/haptic_utils.dart';
 import 'package:confessionapp/src/features/confession/data/confession_repository.dart';
-import 'package:confessionapp/src/features/settings/presentation/settings_screen.dart'
-    show ReminderFrequency, reminderSettingsProvider;
+import 'package:confessionapp/src/features/settings/data/reminder_settings_provider.dart'
+    show reminderSettingsProvider;
+import 'package:confessionapp/src/features/settings/domain/reminder_config.dart'
+    show ReminderFrequency;
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-/// A unified card showing key stats: Last Confession and Next Reminder
+/// Last confession and next reminder, side by side.
 class StatsCard extends ConsumerWidget {
   const StatsCard({super.key});
 
@@ -22,7 +25,7 @@ class StatsCard extends ConsumerWidget {
     return Container(
       decoration: BoxDecoration(
         color: theme.colorScheme.surface,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(AppRadius.sheet),
         border: Border.all(
           color: theme.colorScheme.outlineVariant,
         ),
@@ -45,7 +48,9 @@ class StatsCard extends ConsumerWidget {
               value: lastConfessionAsync.when(
                 data: (confession) {
                   if (confession == null) return l10n.noneYet;
-                  final daysAgo = DateTime.now().difference(confession.date).inDays;
+                  // Calendar days, not elapsed hours: last night at 8 PM is
+                  // "Yesterday" at 7 AM.
+                  final daysAgo = calendarDaysSince(confession.date);
                   if (daysAgo == 0) return l10n.today;
                   if (daysAgo == 1) return l10n.yesterday;
                   return l10n.daysAgo(daysAgo);
@@ -62,7 +67,6 @@ class StatsCard extends ConsumerWidget {
               },
             ),
           ),
-          // Vertical divider
           Container(
             width: 1,
             height: 60,
@@ -120,7 +124,7 @@ class StatsCard extends ConsumerWidget {
           ),
         ],
       ),
-    ).animate().fadeIn(delay: 250.ms).slideY(begin: 0.1, end: 0);
+    );
   }
 }
 
@@ -149,7 +153,7 @@ class _StatItem extends StatelessWidget {
       color: Colors.transparent,
       child: InkWell(
         onTap: onTap,
-        borderRadius: BorderRadius.circular(19),
+        borderRadius: BorderRadius.circular(AppRadius.sheet - 1),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
           child: Column(

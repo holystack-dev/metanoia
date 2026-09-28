@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:confessionapp/src/core/constants/app_constants.dart';
+import 'package:confessionapp/src/core/localization/content_language_provider.dart';
 import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
 import 'package:confessionapp/src/core/database/app_database.dart';
+import 'package:confessionapp/src/core/theme/app_radius.dart';
+import 'package:confessionapp/src/core/widgets/app_back_button.dart';
 import 'package:confessionapp/src/core/widgets/empty_state.dart';
 import 'package:confessionapp/src/features/examination/data/user_custom_sins_repository.dart';
 import 'package:confessionapp/src/features/examination/data/examination_repository.dart';
 import 'package:confessionapp/src/features/examination/presentation/widgets/custom_sin_dialog.dart';
+import 'package:drift/drift.dart' show Value;
 import 'package:flutter_animate/flutter_animate.dart';
 
 class CustomSinsScreen extends ConsumerStatefulWidget {
@@ -24,7 +29,10 @@ class _CustomSinsScreenState extends ConsumerState<CustomSinsScreen> {
     final theme = Theme.of(context);
 
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.customSins)),
+      appBar: AppBar(
+        leading: const AppBackButton(fallbackLocation: '/examine'),
+        title: Text(l10n.customSins),
+      ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () => _showCustomSinDialog(),
         icon: const Icon(Icons.add),
@@ -40,7 +48,7 @@ class _CustomSinsScreenState extends ConsumerState<CustomSinsScreen> {
                 hintText: l10n.searchCustomSins,
                 prefixIcon: const Icon(Icons.search),
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(AppRadius.tile),
                 ),
                 filled: true,
               ),
@@ -52,53 +60,49 @@ class _CustomSinsScreenState extends ConsumerState<CustomSinsScreen> {
             ),
           ),
 
-          // Custom sins list
+          // Custom sins list, backed by a Drift stream.
           Expanded(
-            child: FutureBuilder<Map<String?, List<UserCustomSin>>>(
-              future:
-                  ref
-                      .read(userCustomSinsRepositoryProvider)
-                      .getCustomSinsGroupedByCommandment(),
-              builder: (context, snapshot) {
-                if (snapshot.connectionState == ConnectionState.waiting) {
-                  return const Center(child: CircularProgressIndicator());
-                }
-
-                if (snapshot.hasError) {
-                  return Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.error_outline,
-                          size: 64,
-                          color: theme.colorScheme.error,
+            child: ref
+                .watch(customSinsGroupedProvider)
+                .when(
+                  loading:
+                      () => const Center(child: CircularProgressIndicator()),
+                  error:
+                      (error, _) => Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.error_outline,
+                              size: 64,
+                              color: theme.colorScheme.error,
+                            ),
+                            const SizedBox(height: 16),
+                            Text('${l10n.error}: $error'),
+                          ],
                         ),
-                        const SizedBox(height: 16),
-                        Text('${l10n.error}: ${snapshot.error}'),
-                      ],
-                    ),
-                  );
-                }
+                      ),
+                  data: (sinsByCode) {
+                    // Legacy rows store language-scoped commandment codes
+                    // ("en-1"); merge them with the neutral ones ("1").
+                    final groupedSins = groupCustomSinsByNeutralCode(sinsByCode);
 
-                final groupedSins = snapshot.data ?? {};
+                    if (groupedSins.isEmpty) {
+                      return EmptyState(
+                        icon: Icons.note_add_outlined,
+                        title: l10n.noCustomSins,
+                        subtitle: l10n.noCustomSinsDesc,
+                      ).animate().fadeIn(duration: 300.ms).scale(delay: 100.ms);
+                    }
 
-                if (groupedSins.isEmpty) {
-                  return EmptyState(
-                    icon: Icons.note_add_outlined,
-                    title: l10n.noCustomSins,
-                    subtitle: l10n.noCustomSinsDesc,
-                  ).animate().fadeIn(duration: 300.ms).scale(delay: 100.ms);
-                }
-
-                return FutureBuilder<List<CommandmentWithQuestions>>(
-                  future: ref.read(examinationDataProvider.future),
-                  builder: (context, cmdSnapshot) {
-                    final commandments = cmdSnapshot.data ?? [];
+                    final commandments =
+                        ref.watch(examinationDataProvider).valueOrNull ??
+                            const <CommandmentWithQuestions>[];
                     final commandmentMap = {
                       for (var c in commandments)
-                        if (c.commandment != null)
-                          c.commandment!.code: c.commandment,
+                        if (c.commandment?.code != null)
+                          neutralCommandmentCode(c.commandment!.code):
+                              c.commandment,
                     };
 
                     // Filter sins by search query
@@ -160,9 +164,7 @@ class _CustomSinsScreenState extends ConsumerState<CustomSinsScreen> {
                       },
                     );
                   },
-                );
-              },
-            ),
+                ),
           ),
         ],
       ),
@@ -277,24 +279,38 @@ class _CustomSinsScreenState extends ConsumerState<CustomSinsScreen> {
   Future<void> _showCustomSinDialog({UserCustomSin? existingSin}) async {
     final l10n = AppLocalizations.of(context)!;
 
+    // The dialog's commandment dropdown works with the current content
+    // language's scoped codes, while storage is language-neutral.
+    final contentLanguage = await ref.read(
+      contentLanguageControllerProvider.future,
+    );
+    if (!mounted) return;
+    final langKey = LanguageConfig.contentKeyFromLocale(contentLanguage);
+    final sinForDialog = existingSin?.copyWith(
+      commandmentCode: Value(
+        scopedCommandmentCode(existingSin.commandmentCode, langKey),
+      ),
+    );
+
     final result = await showDialog<UserCustomSinsCompanion>(
       context: context,
-      builder: (context) => CustomSinDialog(existingSin: existingSin),
+      builder: (context) => CustomSinDialog(existingSin: sinForDialog),
     );
 
     if (result != null && mounted) {
       try {
         final repository = ref.read(userCustomSinsRepositoryProvider);
+        final sin = withNeutralCommandmentCode(result);
 
         if (existingSin != null) {
-          await repository.updateCustomSin(existingSin.id, result);
+          await repository.updateCustomSin(existingSin.id, sin);
           if (mounted) {
             ScaffoldMessenger.of(
               context,
             ).showSnackBar(SnackBar(content: Text(l10n.customSinUpdated)));
           }
         } else {
-          await repository.insertCustomSin(result);
+          await repository.insertCustomSin(sin);
           if (mounted) {
             ScaffoldMessenger.of(
               context,
@@ -302,8 +318,8 @@ class _CustomSinsScreenState extends ConsumerState<CustomSinsScreen> {
           }
         }
 
-        // Refresh the screen
-        setState(() {});
+        // Both this screen and the examination watch a Drift stream; no
+        // invalidation needed.
       } catch (e) {
         if (mounted) {
           ScaffoldMessenger.of(
@@ -348,7 +364,6 @@ class _CustomSinsScreenState extends ConsumerState<CustomSinsScreen> {
           ScaffoldMessenger.of(
             context,
           ).showSnackBar(SnackBar(content: Text(l10n.customSinDeleted)));
-          setState(() {});
         }
       } catch (e) {
         if (mounted) {

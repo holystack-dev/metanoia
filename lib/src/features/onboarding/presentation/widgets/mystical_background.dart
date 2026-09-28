@@ -57,13 +57,7 @@ class _MysticalBackgroundState extends State<MysticalBackground>
     final isDark = theme.brightness == Brightness.dark;
     final size = MediaQuery.of(context).size;
 
-    // Use scaffoldBackgroundColor which is configured in app_theme.dart
-    // Light: _backgroundLight = Color(0xFFF8F6F3)
-    // Dark: _backgroundDark = Color(0xFF121019)
     final backgroundColor = theme.scaffoldBackgroundColor;
-    // Use primaryContainer for gradient top
-    // Light: primaryContainer = Color(0xFFE5DBEF)
-    // Dark: primaryContainer = _accentPurpleDark = Color(0xFF5B3A7C)
     final gradientTop =
         isDark
             ? theme.colorScheme.primaryContainer

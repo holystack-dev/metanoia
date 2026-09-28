@@ -50,7 +50,7 @@ class DataLoader {
       if (commandmentId != null) {
         List<dynamic> qList = item['questions'];
         for (var q in qList) {
-          // New format: { "id": "en-1-001", "text": "..." }
+          // Format: { "id": "en-1-001", "text": "..." }
           final String questionId = q['id'];
           final String questionText = q['text'];
           questions.add(
@@ -82,7 +82,7 @@ class DataLoader {
         );
       }).toList();
     } catch (e) {
-      // Return empty list if file not found (e.g. for Malayalam if not yet added)
+      // No FAQ asset for this language.
       return [];
     }
   }

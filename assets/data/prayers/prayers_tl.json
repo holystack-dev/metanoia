@@ -1,0 +1,190 @@
+{
+    "subtitle": "Mga panalangin para sa iyong espirituwal na paglalakbay",
+    "categories": [
+        {
+            "id": "confession",
+            "title": "Mga panalangin para sa kumpisal",
+            "icon": "church_outlined",
+            "prayers": [
+                {
+                    "id": "before_confession",
+                    "title": "Panalangin bago mangumpisal",
+                    "icon": "wb_twilight_outlined",
+                    "content": "Halina, Espiritu Santo, pumasok Ka sa aking kaluluwa. Liwanagan Mo ang aking isip upang makilala ko ang mga kasalanang dapat kong ipagtapat, at pagkalooban Mo ako ng Iyong grasya upang tunay akong magsisi sa aking mga kasalanan.\n\nTulungan Mo akong makapangumpisal nang mabuti, tunay na magsisi sa aking mga pagkakasala sa Iyo, at baguhin ang aking buhay. Sa pamamagitan ni Kristong aming Panginoon. Amen."
+                },
+                {
+                    "id": "act_of_contrition",
+                    "title": "Panalangin ng Pagsisisi",
+                    "icon": "favorite_outline",
+                    "content": "Panginoon kong Hesukristo, Diyos na totoo at tao namang totoo, gumawa at sumakop sa akin. Pinagsisisihan kong masakit sa tanang loob ko ang dilang pagkakasala ko sa Iyo.\n\nIkaw nga ang Diyos ko, Panginoon ko at Ama ko na iniibig ko nang lalo sa lahat.\n\nNagtitika akong matibay na di na muling magkakasala sa Iyo at lalayuan ko ang lahat ng makapagdudulot sa akin ng pagkakasala. Nagtitika naman po akong magkumpisal, at ang mga ipinagkasala ko'y pagbabayaran ko. Amen."
+                },
+                {
+                    "id": "after_confession",
+                    "title": "Panalangin pagkatapos mangumpisal",
+                    "icon": "light_mode_outlined",
+                    "content": "Mahal kong Hesus, ipinagtapat ko na ang lahat ng aking mga kasalanan sa abot ng aking makakaya. Nagsikap akong magkumpisal nang mabuti. Natitiyak kong pinatawad Mo na ako.\n\nNagpapasalamat ako sa Iyo nang buong puso. Nangangako akong sisikapin ko, sa tulong ng Iyong grasya, na hindi na muling magkasala. Mapagmahal kong Diyos, bigyan Mo ako ng lakas upang manatiling malapit sa Iyo at iwasan ang kasalanan. Amen."
+                },
+                {
+                    "id": "confiteor",
+                    "title": "Ang Confiteor (Inaamin Ko)",
+                    "icon": "person_outline",
+                    "content": "Inaamin ko sa makapangyarihang Diyos at sa inyo, mga kapatid, na lubha akong nagkasala sa isip, sa salita, sa gawa, at sa aking pagkukulang,\n\n[RUBRIC]Dagukan ang iyong dibdib nang tatlong beses habang sinasabi:[/RUBRIC]\n\ndahil sa aking sala, sa aking sala, sa aking pinakamalaking sala;\n\nkaya isinasamo ko kay Santa Mariang laging Birhen, sa lahat ng mga anghel at mga banal, at sa inyo, mga kapatid, na ako'y ipanalangin sa Panginoong ating Diyos."
+                }
+            ]
+        },
+        {
+            "id": "essential",
+            "title": "Mahahalagang panalangin",
+            "icon": "auto_awesome_outlined",
+            "prayers": [
+                {
+                    "id": "lords_prayer",
+                    "title": "Ama Namin",
+                    "icon": "cloud_outlined",
+                    "content": "Ama namin, sumasalangit Ka,\nsambahin ang ngalan Mo.\nMapasaamin ang kaharian Mo.\nSundin ang loob Mo,\ndito sa lupa, para nang sa langit.\n\nBigyan Mo kami ngayon ng aming kakanin sa araw-araw.\nAt patawarin Mo kami sa aming mga sala,\npara nang pagpapatawad namin sa nagkakasala sa amin.\nAt huwag Mo kaming ipahintulot sa tukso,\nat iadya Mo kami sa lahat ng masama.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "hail_mary",
+                    "title": "Aba Ginoong Maria",
+                    "icon": "star_outline",
+                    "content": "Aba Ginoong Maria, napupuno ka ng grasya,\nang Panginoong Diyos ay sumasaiyo.\nBukod kang pinagpala sa babaing lahat,\nat pinagpala naman ang iyong Anak na si Hesus.\n\nSanta Maria, Ina ng Diyos,\nipanalangin mo kaming makasalanan,\nngayon at kung kami'y mamamatay.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "glory_be",
+                    "title": "Luwalhati",
+                    "icon": "brightness_high_outlined",
+                    "content": "Luwalhati sa Ama,\nat sa Anak,\nat sa Espiritu Santo.\n\nKapara noong unang-una,\nngayon at magpakailanman,\nat magpasawalang hanggan.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "apostles_creed",
+                    "title": "Sumasampalataya (Kredo ng mga Apostol)",
+                    "icon": "menu_book_outlined",
+                    "isExpandable": true,
+                    "content": "Sumasampalataya ako sa Diyos Amang makapangyarihan sa lahat, na may gawa ng langit at lupa.\n\nSumasampalataya ako kay Hesukristo, iisang Anak ng Diyos, Panginoon nating lahat. Nagkatawang-tao siya lalang ng Espiritu Santo, ipinanganak ni Santa Mariang Birhen. Pinagpakasakit ni Poncio Pilato, ipinako sa krus, namatay, inilibing.\n\nNanaog sa kinaroroonan ng mga yumao. Nang may ikatlong araw nabuhay na mag-uli. Umakyat sa langit. Naluluklok sa kanan ng Diyos Amang makapangyarihan sa lahat. Doon magmumulang paririto at huhukom sa nangabubuhay at nangamatay na tao.\n\nSumasampalataya naman ako sa Diyos Espiritu Santo, sa banal na Simbahang Katolika, sa kasamahan ng mga banal, sa kapatawaran ng mga kasalanan, sa pagkabuhay na muli ng nangamatay na tao at sa buhay na walang hanggan.\n\n[AMEN]Amen."
+                }
+            ]
+        },
+        {
+            "id": "marian",
+            "title": "Mga panalangin sa Mahal na Birhen",
+            "icon": "favorite_border",
+            "prayers": [
+                {
+                    "id": "hail_holy_queen",
+                    "title": "Aba Po Santa Mariang Hari",
+                    "icon": "star_outline",
+                    "content": "Aba po Santa Mariang Hari, Ina ng Awa,\nikaw ang kabuhayan at katamisan;\naba, pinananaligan ka namin.\n\nIkaw nga ang tinatawag namin,\npinapanaw na taong anak ni Eva.\nIkaw rin ang pinagbubuntuhang-hininga namin\nng aming pagtangis dini sa lupang bayang kahapis-hapis.\n\nAy aba, pintakasi ka namin,\nilingon mo sa amin ang mga mata mong maawain,\nat saka kung matapos yaring pagpanaw sa amin,\nipakita mo sa amin ang iyong Anak na si Hesus.\n\nSanta Maria, Ina ng Diyos, maawain, maalam at matamis na Birhen.\n\n[VERSICLE]V. Ipanalangin mo kami, Santang Ina ng Diyos.[/VERSICLE]\n[RESPONSE]R. Nang kami'y maging dapat makinabang ng mga pangako ni Hesukristo.[/RESPONSE]\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "memorare",
+                    "title": "Ang Memorare",
+                    "icon": "volunteer_activism_outlined",
+                    "content": "Alalahanin mo, O kamahal-mahalang Birheng Maria, na kailanman ay hindi pa naririnig na ang sinumang nagpakupkop sa iyo, humingi ng iyong tulong, o lumuhog ng iyong pamamagitan ay pinabayaan mo.\n\nPalibhasa'y pinatatapang ng ganitong pananalig, lumuluhog ako sa iyo, O Birhen ng mga birhen, aking Ina; sa iyo ako lumalapit, sa harap mo ako tumatayong makasalanan at nagsisisi.\n\nO Ina ng Salitang nagkatawang-tao, huwag mong itakwil ang aking mga pagsamo, kundi sa iyong awa ay pakinggan at dinggin mo ako.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "fatima_prayer",
+                    "title": "Panalangin sa Fatima",
+                    "icon": "flare_outlined",
+                    "content": "O Hesus ko, patawarin Mo kami sa aming mga sala, iligtas Mo kami sa apoy ng impiyerno, hanguin Mo ang mga kaluluwa sa purgatoryo, lalung-lalo na yaong mga walang nakaaalaala at higit na nangangailangan ng Iyong awa.\n\n[AMEN]Amen."
+                }
+            ]
+        },
+        {
+            "id": "devotions",
+            "title": "Mga panalanging pandebosyon",
+            "icon": "auto_stories_outlined",
+            "prayers": [
+                {
+                    "id": "holy_rosary",
+                    "title": "Ang Santo Rosaryo",
+                    "subtitle": "Isang kumpletong gabay para sa mga nagsisimula",
+                    "icon": "radio_button_unchecked",
+                    "isExpandable": true,
+                    "sections": [
+                        {
+                            "title": "Mga panalanging pambungad",
+                            "subtitle": "Sa krusipiho at sa mga unang butil",
+                            "content": "[INSTRUCTION]Mag-antanda ng Tanda ng Krus:[/INSTRUCTION]\n\nSa ngalan ng Ama, at ng Anak, at ng Espiritu Santo. Amen.\n\n[INSTRUCTION]Hawak ang krusipiho, dasalin ang Sumasampalataya:[/INSTRUCTION]\n\n[PRAYER]Sumasampalataya ako sa Diyos Amang makapangyarihan sa lahat, na may gawa ng langit at lupa. Sumasampalataya ako kay Hesukristo, iisang Anak ng Diyos, Panginoon nating lahat. Nagkatawang-tao siya lalang ng Espiritu Santo, ipinanganak ni Santa Mariang Birhen. Pinagpakasakit ni Poncio Pilato, ipinako sa krus, namatay, inilibing. Nanaog sa kinaroroonan ng mga yumao. Nang may ikatlong araw nabuhay na mag-uli. Umakyat sa langit. Naluluklok sa kanan ng Diyos Amang makapangyarihan sa lahat. Doon magmumulang paririto at huhukom sa nangabubuhay at nangamatay na tao. Sumasampalataya naman ako sa Diyos Espiritu Santo, sa banal na Simbahang Katolika, sa kasamahan ng mga banal, sa kapatawaran ng mga kasalanan, sa pagkabuhay na muli ng nangamatay na tao at sa buhay na walang hanggan. Amen.[/PRAYER]\n\n[INSTRUCTION]Sa unang malaking butil, dasalin ang Ama Namin:[/INSTRUCTION]\n\n[PRAYER]Ama namin, sumasalangit Ka, sambahin ang ngalan Mo. Mapasaamin ang kaharian Mo. Sundin ang loob Mo, dito sa lupa, para nang sa langit. Bigyan Mo kami ngayon ng aming kakanin sa araw-araw. At patawarin Mo kami sa aming mga sala, para nang pagpapatawad namin sa nagkakasala sa amin. At huwag Mo kaming ipahintulot sa tukso, at iadya Mo kami sa lahat ng masama. Amen.[/PRAYER]\n\n[INSTRUCTION]Sa bawat isa sa tatlong maliliit na butil, dasalin ang Aba Ginoong Maria (para sa pananampalataya, pag-asa, at pag-ibig):[/INSTRUCTION]\n\n[PRAYER]Aba Ginoong Maria, napupuno ka ng grasya, ang Panginoong Diyos ay sumasaiyo. Bukod kang pinagpala sa babaing lahat, at pinagpala naman ang iyong Anak na si Hesus. Santa Maria, Ina ng Diyos, ipanalangin mo kaming makasalanan, ngayon at kung kami'y mamamatay. Amen.[/PRAYER]\n\n[INSTRUCTION]Dasalin ang Luwalhati:[/INSTRUCTION]\n\n[PRAYER]Luwalhati sa Ama, at sa Anak, at sa Espiritu Santo. Kapara noong unang-una, ngayon at magpakailanman, at magpasawalang hanggan. Amen.[/PRAYER]"
+                        },
+                        {
+                            "title": "Paano dasalin ang bawat dekada",
+                            "subtitle": "Ulitin sa bawat isa sa 5 misteryo",
+                            "content": "[INSTRUCTION]1. Ipahayag ang misteryo at pagnilayan ito[/INSTRUCTION]\n\n[INSTRUCTION]2. Sa malaking butil, dasalin ang Ama Namin:[/INSTRUCTION]\n\n[PRAYER]Ama namin, sumasalangit Ka, sambahin ang ngalan Mo. Mapasaamin ang kaharian Mo. Sundin ang loob Mo, dito sa lupa, para nang sa langit. Bigyan Mo kami ngayon ng aming kakanin sa araw-araw. At patawarin Mo kami sa aming mga sala, para nang pagpapatawad namin sa nagkakasala sa amin. At huwag Mo kaming ipahintulot sa tukso, at iadya Mo kami sa lahat ng masama. Amen.[/PRAYER]\n\n[INSTRUCTION]3. Sa bawat isa sa 10 maliliit na butil, dasalin ang Aba Ginoong Maria:[/INSTRUCTION]\n\n[PRAYER]Aba Ginoong Maria, napupuno ka ng grasya, ang Panginoong Diyos ay sumasaiyo. Bukod kang pinagpala sa babaing lahat, at pinagpala naman ang iyong Anak na si Hesus. Santa Maria, Ina ng Diyos, ipanalangin mo kaming makasalanan, ngayon at kung kami'y mamamatay. Amen.[/PRAYER]\n\n[INSTRUCTION]4. Pagkatapos ng 10 Aba Ginoong Maria, dasalin ang Luwalhati:[/INSTRUCTION]\n\n[PRAYER]Luwalhati sa Ama, at sa Anak, at sa Espiritu Santo. Kapara noong unang-una, ngayon at magpakailanman, at magpasawalang hanggan. Amen.[/PRAYER]\n\n[INSTRUCTION]5. Kung nais, dasalin ang Panalangin sa Fatima:[/INSTRUCTION]\n\n[PRAYER]O Hesus ko, patawarin Mo kami sa aming mga sala, iligtas Mo kami sa apoy ng impiyerno, hanguin Mo ang mga kaluluwa sa purgatoryo, lalung-lalo na yaong mga walang nakaaalaala at higit na nangangailangan ng Iyong awa. Amen.[/PRAYER]"
+                        },
+                        {
+                            "title": "Mga Misteryo ng Tuwa",
+                            "subtitle": "Lunes at Sabado",
+                            "content": "1. Ang pagbati ng Arkanghel Gabriel sa Mahal na Birhen — Ipinahayag ng Anghel Gabriel kay Maria na ipaglilihi niya ang Anak ng Diyos.\n\n2. Ang pagdalaw ng Mahal na Birhen kay Santa Isabel — Dinalaw ni Maria ang kanyang pinsang si Isabel, na nagdadalang-tao kay Juan Bautista.\n\n3. Ang pagsilang ni Hesus — Isinilang si Hesus sa Belen.\n\n4. Ang paghahain sa Batang si Hesus sa templo — Inihain nina Maria at Jose si Hesus sa templo.\n\n5. Ang pagkakita kay Hesus sa templo — Pagkaraan ng tatlong araw, natagpuan nina Maria at Jose si Hesus na nagtuturo sa templo."
+                        },
+                        {
+                            "title": "Mga Misteryo ng Liwanag",
+                            "subtitle": "Huwebes",
+                            "content": "1. Ang pagbibinyag kay Hesus sa Ilog Jordan — Bininyagan si Hesus ni Juan at bumaba sa Kanya ang Espiritu Santo.\n\n2. Ang kasalan sa Cana — Ginawa ni Hesus ang Kanyang unang himala, ang paggawa ng alak mula sa tubig.\n\n3. Ang pagpapahayag ng Kaharian ng Diyos — Tinatawag tayo ni Hesus sa pagbabalik-loob at ipinapahayag Niya ang Kaharian ng Diyos.\n\n4. Ang pagbabagong-anyo ni Hesus — Nagbagong-anyo si Hesus sa Bundok ng Tabor, at inihayag ang Kanyang maka-Diyos na kaluwalhatian.\n\n5. Ang pagtatatag ng Banal na Eukaristiya — Ibinigay sa atin ni Hesus ang Kanyang Katawan at Dugo sa Huling Hapunan."
+                        },
+                        {
+                            "title": "Mga Misteryo ng Hapis",
+                            "subtitle": "Martes at Biyernes",
+                            "content": "1. Ang panalangin ni Hesus sa halamanan ng Getsemani — Nanalangin si Hesus sa Getsemani at tinanggap Niya ang kalooban ng Ama.\n\n2. Ang paghampas kay Hesus sa haliging bato — Malupit na hinampas si Hesus ng mga kawal na Romano.\n\n3. Ang pagpuputong ng koronang tinik kay Hesus — Kinutya si Hesus at pinutungan ng koronang tinik.\n\n4. Ang pagpasan ni Hesus ng krus — Pinasan ni Hesus ang Kanyang krus patungo sa Kalbaryo.\n\n5. Ang pagpapako at pagkamatay ni Hesus sa krus — Namatay si Hesus sa krus para sa ating kaligtasan."
+                        },
+                        {
+                            "title": "Mga Misteryo ng Luwalhati",
+                            "subtitle": "Miyerkules at Linggo",
+                            "content": "1. Ang muling pagkabuhay ni Hesus — Muling nabuhay si Hesus mula sa mga patay sa ikatlong araw.\n\n2. Ang pag-akyat ni Hesus sa langit — Umakyat si Hesus sa langit apatnapung araw pagkatapos ng muling pagkabuhay.\n\n3. Ang pagpanaog ng Espiritu Santo — Bumaba ang Espiritu Santo kay Maria at sa mga Apostol noong Pentekostes.\n\n4. Ang pag-aakyat sa langit sa Mahal na Birhen — Iniakyat si Maria sa langit, kaluluwa't katawan.\n\n5. Ang pagpuputong ng korona sa Mahal na Birhen — Pinutungan si Maria bilang Reyna ng langit at lupa."
+                        },
+                        {
+                            "title": "Mga panalanging pangwakas",
+                            "subtitle": "Pagkatapos ng limang dekada",
+                            "content": "[INSTRUCTION]Dasalin ang Aba Po Santa Mariang Hari:[/INSTRUCTION]\n\n[PRAYER]Aba po Santa Mariang Hari, Ina ng Awa, ikaw ang kabuhayan at katamisan; aba, pinananaligan ka namin. Ikaw nga ang tinatawag namin, pinapanaw na taong anak ni Eva. Ikaw rin ang pinagbubuntuhang-hininga namin ng aming pagtangis dini sa lupang bayang kahapis-hapis. Ay aba, pintakasi ka namin, ilingon mo sa amin ang mga mata mong maawain, at saka kung matapos yaring pagpanaw sa amin, ipakita mo sa amin ang iyong Anak na si Hesus. Santa Maria, Ina ng Diyos, maawain, maalam at matamis na Birhen.[/PRAYER]\n\n[VERSICLE]V. Ipanalangin mo kami, Santang Ina ng Diyos.[/VERSICLE]\n[RESPONSE]R. Nang kami'y maging dapat makinabang ng mga pangako ni Hesukristo.[/RESPONSE]\n\n[INSTRUCTION]Panalanging pangwakas:[/INSTRUCTION]\n\n[PRAYER]O Diyos, na ang bugtong na Anak ay nagkamit para sa amin ng gantimpala ng buhay na walang hanggan sa pamamagitan ng Kanyang buhay, kamatayan, at muling pagkabuhay: ipagkaloob Mo, isinasamo namin, na sa pagninilay ng mga misteryong ito ng Kasantu-santuhang Rosaryo ng Mahal na Birheng Maria ay matularan namin ang mga itinuturo ng mga ito at makamtan ang mga ipinapangako ng mga ito, sa pamamagitan din ni Kristong aming Panginoon. Amen.[/PRAYER]\n\n[INSTRUCTION]Mag-antanda ng Tanda ng Krus[/INSTRUCTION]"
+                        }
+                    ]
+                },
+                {
+                    "id": "divine_mercy_chaplet",
+                    "title": "Chaplet ng Dakilang Awa",
+                    "icon": "water_drop_outlined",
+                    "isExpandable": true,
+                    "sections": [
+                        {
+                            "title": "Mga panalanging pambungad",
+                            "content": "1. Mag-antanda ng Tanda ng Krus\n2. Panalanging pambungad (kung nais):\n\n[PRAYER]Namatay Ka, Hesus, subalit ang bukal ng buhay ay lumagalas para sa mga kaluluwa at ang karagatan ng awa ay bumugso para sa sanlibutan. O bukal ng buhay, na walang hanggang Awa ng Diyos, balutin Mo ang sangkatauhan at ibuhos Mong ganap ang Iyong sarili para sa aming lahat.[/PRAYER]\n\n3. Ulitin nang tatlong beses:\n\n[PRAYER]O banal na Dugo at Tubig na lumagalas mula sa Puso ni Hesus bilang Bukal ng Awa para sa aming lahat, ako ay nananalig sa Iyo![/PRAYER]"
+                        },
+                        {
+                            "title": "Ang Chaplet",
+                            "content": "1. Dasalin ang Ama Namin\n2. Dasalin ang Aba Ginoong Maria\n3. Dasalin ang Sumasampalataya\n\n[RUBRIC]Sa malalaking butil (mga butil ng Ama Namin), sabihin:[/RUBRIC]\n\n[PRAYER]Ama na Walang Hanggan, iniaalay ko po sa Iyo ang Katawan at Dugo, Kaluluwa at Pagka-Diyos ng Kamahal-mahalan Mong Anak na si Hesukristo, na aming Panginoon at Manunubos, para sa ikapagpapatawad ng aming mga sala at sa sala ng buong sansinukob.[/PRAYER]\n\n[RUBRIC]Sa maliliit na butil (mga butil ng Aba Ginoong Maria), sabihin:[/RUBRIC]\n\n[PRAYER]Alang-alang sa mga tiniis na hirap at kamatayan ni Hesus, kaawaan Mo po kami at ang buong sansinukob.[/PRAYER]\n\nUlitin sa limang dekada."
+                        },
+                        {
+                            "title": "Pagtatapos",
+                            "content": "Ulitin nang tatlong beses:\n\n[PRAYER]Banal na Diyos, Banal na Puspos ng Kapangyarihan, Banal na Walang Hanggan, maawa po Kayo sa amin at sa buong sansinukob.[/PRAYER]\n\nPanalanging pangwakas (kung nais):\n\n[PRAYER]Walang Hanggang Diyos, na ang awa ay walang katapusan at ang kabang-yaman ng habag na di maubos-ubos, masuyong tingnan po kami at palaguin Ninyo po ang awa sa amin, nang sa mahihirap na sandali ay maaaring di kami panghinaan ng loob, o kaya'y malupaypay, kundi nang may malaking pananalig isuko ang aming sarili sa Iyong banal na kalooban, na siya ring pag-ibig at awa din. Siya nawa.[/PRAYER]"
+                        }
+                    ]
+                },
+                {
+                    "id": "guardian_angel",
+                    "title": "Panalangin sa Anghel de la Guwardiya",
+                    "icon": "shield_outlined",
+                    "content": "Anghel ng Diyos, aking tagatanod,\nsa pag-ibig ng Diyos, ako'y ipinagkatiwala sa iyo.\nSa araw na ito ay lagi kang sumaaking tabi,\nupang ako'y tanglawan at bantayan, akayin at patnubayan.\n\n[AMEN]Amen."
+                }
+            ]
+        },
+        {
+            "id": "communion",
+            "title": "Mga panalangin para sa Banal na Komunyon",
+            "icon": "wb_sunny_outlined",
+            "prayers": [
+                {
+                    "id": "before_communion",
+                    "title": "Panalangin bago makinabang",
+                    "icon": "wb_twilight_outlined",
+                    "content": "O Panginoong Hesukristo, Anak ng Diyos na buhay, na sa kalooban ng Ama at sa pakikipagtulungan ng Espiritu Santo ay nagbigay-buhay sa sanlibutan sa pamamagitan ng Iyong kamatayan:\n\niligtas Mo ako, sa pamamagitan ng Iyong kabanal-banalang Katawan at Dugo, sa lahat ng aking mga kasamaan at sa lahat ng masama:\n\nat gawin Mong lagi akong nananangan sa Iyong mga utos, at huwag Mong itulot kailanman na mapahiwalay ako sa Iyo.\n\nIkaw na kasama ng Diyos Ama at ng Espiritu Santo ay nabubuhay at naghahari, Diyos magpasawalang hanggan.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "after_communion",
+                    "title": "Panalangin pagkatapos makinabang",
+                    "subtitle": "Anima Christi",
+                    "icon": "light_mode_outlined",
+                    "content": "Kaluluwa ni Kristo, pakabanalin mo ako.\nKatawan ni Kristo, iligtas mo ako.\nDugo ni Kristo, lasingin mo ako.\nTubig mula sa tagiliran ni Kristo, hugasan mo ako.\n\nPasyon ni Kristo, palakasin mo ako.\nO mabuting Hesus, dinggin mo ako.\nSa loob ng Iyong mga sugat, ikubli mo ako.\nHuwag Mong itulot na mapahiwalay ako sa Iyo.\n\nSa masamang kaaway, ipagtanggol mo ako.\nSa oras ng aking kamatayan, tawagin mo ako.\nAt papuntahin mo ako sa Iyo,\nupang kasama ng Iyong mga banal ay purihin Kita\nmagpakailanman.\n\n[AMEN]Amen."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,1044 @@
+[
+    {
+        "commandmentCode": "it-1",
+        "questions": [
+            {
+                "id": "it-01-001",
+                "text": "Ho rifiutato di credere in Dio (ateismo)?"
+            },
+            {
+                "id": "it-01-002",
+                "text": "Ho dubitato dell'esistenza di Dio?"
+            },
+            {
+                "id": "it-01-003",
+                "text": "Ho odiato Dio o l'ho incolpato delle difficoltà della mia vita?"
+            },
+            {
+                "id": "it-01-004",
+                "text": "Ho negato qualche dogma della Chiesa cattolica?"
+            },
+            {
+                "id": "it-01-005",
+                "text": "Ho indotto deliberatamente altri a dubitare di Dio o delle verità della fede?"
+            },
+            {
+                "id": "it-01-006",
+                "text": "Ho trascurato di far crescere e di difendere la mia fede?"
+            },
+            {
+                "id": "it-01-007",
+                "text": "Ho trascurato di trasmettere con impegno la fede ai miei figli e alla mia famiglia?"
+            },
+            {
+                "id": "it-01-008",
+                "text": "Mi sono rifiutato di difendere Dio e la mia fede davanti agli altri quando sollevavano obiezioni?"
+            },
+            {
+                "id": "it-01-009",
+                "text": "Ho rinnegato la mia fede o le sue dottrine davanti agli altri?"
+            },
+            {
+                "id": "it-01-010",
+                "text": "Ho abbandonato la Chiesa cattolica o praticato un'altra religione?"
+            },
+            {
+                "id": "it-01-011",
+                "text": "Ho aderito a un'organizzazione dannosa o contraria alla mia fede (comunisti, massoni, gruppi dissidenti o scismatici, o qualsiasi gruppo che esiga dai suoi membri un giuramento superiore e anteposto ai doveri verso la Chiesa cattolica)?"
+            },
+            {
+                "id": "it-01-012",
+                "text": "Mi sono lasciato andare alla disperazione riguardo a Dio o al suo perdono?"
+            },
+            {
+                "id": "it-01-013",
+                "text": "Ho presunto della misericordia di Dio, commettendo intenzionalmente un peccato con l'aspettativa di essere perdonato, evitando così una vera conversione del cuore?"
+            },
+            {
+                "id": "it-01-014",
+                "text": "Ho presunto di poter salvare la mia anima con le sole mie forze, senza l'aiuto di Dio?"
+            },
+            {
+                "id": "it-01-015",
+                "text": "Ho confessato i miei peccati senza l'intenzione di cambiare vita?"
+            },
+            {
+                "id": "it-01-016",
+                "text": "Ho praticato l'idolatria? Ho anteposto cose mondane come denaro, potere, successo, amicizie, governo, nazione, razza o beni materiali al mio rapporto con Dio? Ho partecipato a pratiche spirituali non cristiane contrarie alla fede?"
+            },
+            {
+                "id": "it-01-017",
+                "text": "Ho praticato l'occultismo (wicca, satanismo, invocazione di demoni, tavole ouija, magia nera, vendita dell'anima, sedute spiritiche, evocazione di spiriti, sciamanesimo, consultazione di medium, reiki, divinazione, uso di amuleti, oroscopi, astrologia, chiromanzia, chiaroveggenza, interpretazione delle sorti o cartomanzia)?"
+            },
+            {
+                "id": "it-01-018",
+                "text": "Ho praticato la superstizione? Ho attribuito poteri soprannaturali a una fonte diversa da Dio?"
+            },
+            {
+                "id": "it-01-019",
+                "text": "Ho permesso che i social media, i videogiochi o internet diventassero un idolo, consumando il tempo che appartiene a Dio e alla mia famiglia?"
+            },
+            {
+                "id": "it-01-020",
+                "text": "Ho cercato il mio valore nell'approvazione online invece che nella mia identità di figlio di Dio?"
+            },
+            {
+                "id": "it-01-021",
+                "text": "Ho passato troppo tempo davanti agli schermi a scapito dei miei doveri quotidiani o della mia vita di preghiera?"
+            },
+            {
+                "id": "it-01-022",
+                "text": "Ho praticato il politeismo?"
+            },
+            {
+                "id": "it-01-023",
+                "text": "Sono stato indifferente verso la fede o verso Dio?"
+            },
+            {
+                "id": "it-01-024",
+                "text": "Sono stato ingrato per le tante benedizioni che Dio mi ha donato?"
+            },
+            {
+                "id": "it-01-025",
+                "text": "Sono stato tiepido nella fede?"
+            },
+            {
+                "id": "it-01-026",
+                "text": "Sono stato pigro nella mia fede e nella mia crescita spirituale?"
+            },
+            {
+                "id": "it-01-027",
+                "text": "Ho trascurato la preghiera?"
+            },
+            {
+                "id": "it-01-028",
+                "text": "Ho abbandonato promesse o voti fatti a Dio?"
+            },
+            {
+                "id": "it-01-029",
+                "text": "Ho limitato la fede di un'altra persona o contribuito a limitare la libertà religiosa altrui? Ho deriso qualcuno per la sua fede in Dio? Ho costretto altri a violare i principi della loro fede o della loro coscienza?"
+            },
+            {
+                "id": "it-01-030",
+                "text": "Ho tentato Dio, mettendo alla prova con parole o opere la sua bontà e la sua onnipotenza?"
+            },
+            {
+                "id": "it-01-031",
+                "text": "Ho commesso il peccato di sacrilegio? Ho ricevuto uno dei sacramenti senza la dovuta disposizione dell'anima (per esempio ricevendo la santa Comunione, la Cresima, il Matrimonio o l'Ordine sacro con peccati mortali sull'anima)? Ho trattato con il dovuto rispetto le persone consacrate come sacerdoti, religiose, vescovi o il Papa, i luoghi sacri come chiese, cappelle e santuari, e le cose benedette o sacre come rosari, reliquie e Bibbie? Ho mentito sui miei peccati o ne ho taciuto intenzionalmente alcuni gravi durante il sacramento della confessione?"
+            },
+            {
+                "id": "it-01-032",
+                "text": "Ho commesso simonia, comprando o vendendo cose spirituali?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "it-2",
+        "questions": [
+            {
+                "id": "it-02-001",
+                "text": "Ho usato il nome di Dio in modo irrispettoso, superficiale o blasfemo?"
+            },
+            {
+                "id": "it-02-002",
+                "text": "Ho parlato in modo irrispettoso, astioso, provocatorio o superficiale della fede o delle persone, dei luoghi e delle cose sacre?"
+            },
+            {
+                "id": "it-02-003",
+                "text": "Ho incoraggiato discorsi irrispettosi, astiosi, provocatori o superficiali sulla fede o sulle persone, sui luoghi e sulle cose sacre?"
+            },
+            {
+                "id": "it-02-004",
+                "text": "Ho guardato film o ascoltato musica blasfemi o irriverenti?"
+            },
+            {
+                "id": "it-02-005",
+                "text": "Ho usato un linguaggio volgare o osceno?"
+            },
+            {
+                "id": "it-02-006",
+                "text": "Ho parlato in modo irrispettoso di altre persone?"
+            },
+            {
+                "id": "it-02-007",
+                "text": "Ho mentito sotto giuramento (spergiuro)?"
+            },
+            {
+                "id": "it-02-008",
+                "text": "Ho giurato o fatto promesse nel nome di Dio su cose false, o di poca importanza anche se vere?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "it-3",
+        "questions": [
+            {
+                "id": "it-03-001",
+                "text": "Ho mancato alla santa Messa la domenica o nelle feste di precetto senza un motivo grave?"
+            },
+            {
+                "id": "it-03-002",
+                "text": "Ho trascurato di portare i miei figli alla santa Messa la domenica e nelle feste di precetto senza un motivo grave?"
+            },
+            {
+                "id": "it-03-003",
+                "text": "Sono arrivato in ritardo alla Messa o me ne sono andato prima della fine senza un motivo grave?"
+            },
+            {
+                "id": "it-03-004",
+                "text": "Ho svolto lavori la domenica o in altre feste di precetto senza un motivo grave?"
+            },
+            {
+                "id": "it-03-005",
+                "text": "Mi sono rifiutato di aiutare altri a partecipare alla Messa la domenica e nelle feste di precetto?"
+            },
+            {
+                "id": "it-03-006",
+                "text": "Ho fatto acquisti o usufruito di servizi non necessari la domenica e nelle feste di precetto?"
+            },
+            {
+                "id": "it-03-007",
+                "text": "Ho mangiato carne intenzionalmente o mi sono rifiutato di digiunare nei giorni stabiliti dalla Chiesa per il digiuno e l'astinenza dalle carni?"
+            },
+            {
+                "id": "it-03-008",
+                "text": "Ho violato il digiuno di un'ora prima della santa Comunione?"
+            },
+            {
+                "id": "it-03-009",
+                "text": "Ho preteso che i lavoratori alle mie dipendenze lavorassero di domenica o in una festa di precetto senza un motivo grave?"
+            },
+            {
+                "id": "it-03-010",
+                "text": "Sono stato motivo di distrazione per gli altri durante la Messa con il mio abbigliamento, il mio comportamento o l'uso del cellulare?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "it-4",
+        "questions": [
+            {
+                "id": "it-04-001",
+                "text": "Ho disobbedito alle ragionevoli richieste dei miei genitori?"
+            },
+            {
+                "id": "it-04-002",
+                "text": "Ho parlato in modo irrispettoso ai miei genitori o alle legittime autorità, compresi i pubblici ufficiali e i datori di lavoro?"
+            },
+            {
+                "id": "it-04-003",
+                "text": "Ho disobbedito alle ragionevoli richieste dei miei insegnanti (se studente)?"
+            },
+            {
+                "id": "it-04-004",
+                "text": "Ho trascurato di assistere e sostenere i miei genitori anziani o altri familiari?"
+            },
+            {
+                "id": "it-04-005",
+                "text": "Ho trascurato i bisogni, l'educazione, la disciplina o la formazione spirituale dei miei figli?"
+            },
+            {
+                "id": "it-04-006",
+                "text": "Ho trascurato di guidare i miei figli nella comprensione della natura della sessualità umana e degli insegnamenti della Chiesa in materia?"
+            },
+            {
+                "id": "it-04-007",
+                "text": "Ho trascurato di pregare ogni giorno con i miei figli?"
+            },
+            {
+                "id": "it-04-008",
+                "text": "Ho trascurato di incoraggiare i miei figli a ricevere regolarmente i sacramenti della santa Comunione e della confessione?"
+            },
+            {
+                "id": "it-04-009",
+                "text": "Ho trascurato di formare con cura la mia coscienza prima di votare, o ho promosso politiche contrarie al bene comune, alla libertà religiosa o alla legge morale?"
+            },
+            {
+                "id": "it-04-010",
+                "text": "Ho trascurato di condurre una vita virtuosa?"
+            },
+            {
+                "id": "it-04-011",
+                "text": "Ho trascurato di amare la mia famiglia e di sacrificarmi per essa?"
+            },
+            {
+                "id": "it-04-012",
+                "text": "Ho promosso politiche o leggi che minano la famiglia, come l'aggiramento del consenso dei genitori, oppure strutture familiari innaturali come l'adozione da parte di coppie omosessuali o di genitori single, e misure di controllo demografico? Ho promosso politiche o leggi che minano il bene comune e la legge morale?"
+            },
+            {
+                "id": "it-04-013",
+                "text": "Ho incoraggiato altri a mancare di rispetto alla legittima autorità?"
+            },
+            {
+                "id": "it-04-014",
+                "text": "Ho rifiutato i consigli o i richiami dei miei genitori?"
+            },
+            {
+                "id": "it-04-015",
+                "text": "Ho trascurato di coltivare nei miei figli l'apertura alle vocazioni (matrimonio, ordine sacro, vita consacrata nel celibato, ecc.)?"
+            },
+            {
+                "id": "it-04-016",
+                "text": "Ho trascurato di promuovere il giusto trattamento dei poveri, degli indigenti o dei migranti nella società?"
+            },
+            {
+                "id": "it-04-017",
+                "text": "Ho commesso violenza contro altri?"
+            },
+            {
+                "id": "it-04-018",
+                "text": "Ho sminuito l'autorità del mio coniuge davanti ai nostri figli?"
+            },
+            {
+                "id": "it-04-019",
+                "text": "Ho trascurato di vigilare sull'uso di internet e della tecnologia da parte dei miei figli per proteggere la loro purezza?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "it-5",
+        "questions": [
+            {
+                "id": "it-05-001",
+                "text": "Ho ucciso o ferito un essere umano, direttamente o per negligenza e ingiustamente, o ho cooperato a farlo?"
+            },
+            {
+                "id": "it-05-002",
+                "text": "Ho trascurato di promuovere la dignità e la sacralità della vita umana?"
+            },
+            {
+                "id": "it-05-003",
+                "text": "Ho promosso la guerra, la tortura, la presa di ostaggi, il rapimento o l'uccisione di esseri umani indifesi?"
+            },
+            {
+                "id": "it-05-004",
+                "text": "Ho procurato un aborto o farmaci abortivi, o ho aiutato qualcun altro a procurarseli?"
+            },
+            {
+                "id": "it-05-005",
+                "text": "Ho promosso l'aborto o l'ho sostenuto pubblicamente?"
+            },
+            {
+                "id": "it-05-006",
+                "text": "Ho fatto ricorso alla fecondazione in vitro, vi ho partecipato o l'ho promossa?"
+            },
+            {
+                "id": "it-05-007",
+                "text": "Ho promosso la clonazione umana o la manipolazione genetica?"
+            },
+            {
+                "id": "it-05-008",
+                "text": "Ho fatto ricorso alla ricerca o alle terapie con cellule staminali embrionali, o le ho promosse?"
+            },
+            {
+                "id": "it-05-009",
+                "text": "Ho promosso l'eugenetica o leggi di controllo demografico?"
+            },
+            {
+                "id": "it-05-010",
+                "text": "Ho mancato di \"porgere l'altra guancia\" o di amare i miei nemici?"
+            },
+            {
+                "id": "it-05-011",
+                "text": "Ho tentato di uccidermi o di farmi del male, o ci ho pensato?"
+            },
+            {
+                "id": "it-05-012",
+                "text": "Ho promosso l'eutanasia o il movimento per il diritto al suicidio?"
+            },
+            {
+                "id": "it-05-013",
+                "text": "Ho rifiutato o trascurato di garantire ragionevoli cure di fine vita, comprese le procedure mediche, il cibo e l'acqua e i farmaci contro il dolore?"
+            },
+            {
+                "id": "it-05-014",
+                "text": "Ho trascurato i bisogni spirituali di una persona morente (per esempio chiamare un sacerdote per l'unzione degli infermi, o pregare per lei)?"
+            },
+            {
+                "id": "it-05-015",
+                "text": "Ho desiderato uccidere qualcuno?"
+            },
+            {
+                "id": "it-05-016",
+                "text": "Ho usato più forza del necessario per difendermi?"
+            },
+            {
+                "id": "it-05-017",
+                "text": "Ho trascurato di proteggere gli altri secondo le mie possibilità e i miei doveri?"
+            },
+            {
+                "id": "it-05-018",
+                "text": "Ho ferito qualcuno fisicamente, emotivamente o psicologicamente, o ho desiderato farlo?"
+            },
+            {
+                "id": "it-05-019",
+                "text": "Ho dato scandalo o mostrato in altro modo noncuranza per l'anima di qualcuno?"
+            },
+            {
+                "id": "it-05-020",
+                "text": "Ho odiato qualcuno o gli ho augurato del male?"
+            },
+            {
+                "id": "it-05-021",
+                "text": "Ho mancato di rispetto verso i defunti o i loro corpi?"
+            },
+            {
+                "id": "it-05-022",
+                "text": "Ho trascurato di dare degna sepoltura ai defunti?"
+            },
+            {
+                "id": "it-05-023",
+                "text": "Ho sostenuto punizioni ingiuste o il ricorso alla pena di morte, che la Chiesa insegna essere inammissibile?"
+            },
+            {
+                "id": "it-05-024",
+                "text": "Ho discriminato qualcuno, negandogli qualcosa a cui aveva giustamente diritto nei limiti della legge morale e naturale?"
+            },
+            {
+                "id": "it-05-025",
+                "text": "Ho deriso, intimidito o umiliato qualcuno?"
+            },
+            {
+                "id": "it-05-026",
+                "text": "Sono stato sconsiderato con la vita umana, per le mie azioni o per mancanza di attenzione?"
+            },
+            {
+                "id": "it-05-027",
+                "text": "Ho abusato di alcol o fatto uso di droghe?"
+            },
+            {
+                "id": "it-05-028",
+                "text": "Ho mostrato scarsa cura per la mia salute o per quella degli altri?"
+            },
+            {
+                "id": "it-05-029",
+                "text": "Ho promosso l'uso di alcol, di droghe o di qualsiasi altra cosa dannosa?"
+            },
+            {
+                "id": "it-05-030",
+                "text": "Ho commesso il peccato di gola o incoraggiato altri a commetterlo?"
+            },
+            {
+                "id": "it-05-031",
+                "text": "Ho trascurato di promuovere la pace?"
+            },
+            {
+                "id": "it-05-032",
+                "text": "Ho dato scandalo con le mie azioni o con le mie omissioni?"
+            },
+            {
+                "id": "it-05-033",
+                "text": "Ho incoraggiato o aiutato altri a peccare?"
+            },
+            {
+                "id": "it-05-034",
+                "text": "Ho permesso all'ira di dominarmi o di persistere senza freno?"
+            },
+            {
+                "id": "it-05-035",
+                "text": "Sono stato privo di carità verso qualcuno, ho litigato con lui o ho serbato rancore?"
+            },
+            {
+                "id": "it-05-036",
+                "text": "Ho rifiutato il perdono a qualcuno che me lo aveva chiesto?"
+            },
+            {
+                "id": "it-05-037",
+                "text": "Ho cercato o meditato vendetta?"
+            },
+            {
+                "id": "it-05-038",
+                "text": "Ho gioito delle disgrazie altrui?"
+            },
+            {
+                "id": "it-05-039",
+                "text": "Ho maltrattato gli animali o li ho uccisi senza necessità?"
+            },
+            {
+                "id": "it-05-040",
+                "text": "Ho messo in pericolo la mia vita o quella degli altri guidando in modo spericolato o usando il telefono alla guida?"
+            },
+            {
+                "id": "it-05-041",
+                "text": "Ho deriso o schernito altri per le loro disabilità fisiche o mentali?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "it-6",
+        "questions": [
+            {
+                "id": "it-06-001",
+                "text": "Ho trascurato di praticare e promuovere la castità?"
+            },
+            {
+                "id": "it-06-002",
+                "text": "Ho cercato il piacere sessuale al di fuori dell'atto coniugale?"
+            },
+            {
+                "id": "it-06-003",
+                "text": "Ho usato metodi contraccettivi artificiali o ne ho incoraggiato l'uso?"
+            },
+            {
+                "id": "it-06-004",
+                "text": "Ho rifiutato i figli e il dono della vita senza giusta causa?"
+            },
+            {
+                "id": "it-06-005",
+                "text": "Ho convissuto con un partner prima del matrimonio (convivenza)?"
+            },
+            {
+                "id": "it-06-006",
+                "text": "Ho coltivato un'intimità sentimentale o affettiva inappropriata con una persona diversa dal mio coniuge?"
+            },
+            {
+                "id": "it-06-007",
+                "text": "Ho fatto ricorso alla fecondazione in vitro o a trattamenti immorali per la fertilità (trattamenti che non favoriscono la procreazione attraverso l'atto coniugale), o ho incoraggiato qualcun altro a farlo?"
+            },
+            {
+                "id": "it-06-008",
+                "text": "Ho fatto sterilizzare i miei organi riproduttivi o ho incoraggiato qualcun altro a farlo?"
+            },
+            {
+                "id": "it-06-009",
+                "text": "Ho imposto un rapporto sessuale a qualcuno (compreso il coniuge)?"
+            },
+            {
+                "id": "it-06-010",
+                "text": "Ho negato il rapporto coniugale al mio coniuge senza giusta causa?"
+            },
+            {
+                "id": "it-06-011",
+                "text": "Mi sono masturbato (piacere sessuale procurato a se stessi al di fuori dell'atto coniugale)?"
+            },
+            {
+                "id": "it-06-012",
+                "text": "Ho deliberatamente cercato o provocato il piacere sessuale completo al di fuori dell'atto coniugale?"
+            },
+            {
+                "id": "it-06-013",
+                "text": "Ho impartito o promosso un'educazione sessuale non conforme agli insegnamenti della Chiesa cattolica?"
+            },
+            {
+                "id": "it-06-014",
+                "text": "Ho fatto uso di pornografia o l'ho promossa, in foto, video, audio o testi scritti?"
+            },
+            {
+                "id": "it-06-015",
+                "text": "Ho donato sperma o ovuli?"
+            },
+            {
+                "id": "it-06-016",
+                "text": "Mi sono lasciato andare a film, programmi televisivi o musica impuri (con nudità o contenuti sessuali), o a conversazioni e battute impure?"
+            },
+            {
+                "id": "it-06-017",
+                "text": "Ho commesso adulterio (atti sessuali con il coniuge di un altro, o con una persona diversa dal mio coniuge mentre sono sposato)?"
+            },
+            {
+                "id": "it-06-018",
+                "text": "Ho divorziato dal mio coniuge senza grave motivo, o ho pensato di farlo, pur trovandomi in un matrimonio valido?"
+            },
+            {
+                "id": "it-06-019",
+                "text": "Ho contratto matrimonio senza la benedizione della Chiesa?"
+            },
+            {
+                "id": "it-06-020",
+                "text": "Ho commesso incesto?"
+            },
+            {
+                "id": "it-06-021",
+                "text": "Ho praticato la poligamia o la poliandria?"
+            },
+            {
+                "id": "it-06-022",
+                "text": "Sono stato coinvolto in un \"matrimonio aperto\"?"
+            },
+            {
+                "id": "it-06-023",
+                "text": "Ho avuto rapporti sessuali al di fuori del vincolo del matrimonio (fornicazione, atti omosessuali)?"
+            },
+            {
+                "id": "it-06-024",
+                "text": "Ho commesso uno stupro?"
+            },
+            {
+                "id": "it-06-025",
+                "text": "Mi sono lasciato andare a effusioni intime, sexting o altri preliminari al di fuori del matrimonio?"
+            },
+            {
+                "id": "it-06-026",
+                "text": "Ho abusato sessualmente di bambini?"
+            },
+            {
+                "id": "it-06-027",
+                "text": "Ho compiuto atti sessuali contro natura (bestialità, rapporti con oggetti, ecc.)?"
+            },
+            {
+                "id": "it-06-028",
+                "text": "Ho praticato o promosso la prostituzione?"
+            },
+            {
+                "id": "it-06-029",
+                "text": "Ho sedotto qualcuno o mi sono lasciato sedurre?"
+            },
+            {
+                "id": "it-06-030",
+                "text": "Ho rifiutato di accettare l'identità sessuale che Dio mi ha dato (operazioni di cambio di sesso, travestitismo, ecc.)?"
+            },
+            {
+                "id": "it-06-031",
+                "text": "Ho promosso, favorito o cooperato a peccati contro il sesto comandamento?"
+            },
+            {
+                "id": "it-06-032",
+                "text": "Ho intrattenuto relazioni online inappropriate o praticato cybersesso?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "it-7",
+        "questions": [
+            {
+                "id": "it-07-001",
+                "text": "Ho rubato qualcosa?"
+            },
+            {
+                "id": "it-07-002",
+                "text": "Ho giocato d'azzardo in modo eccessivo?"
+            },
+            {
+                "id": "it-07-003",
+                "text": "Ho commesso frode (presentare una falsa richiesta a un'assicurazione, falsificare informazioni per profitto)?"
+            },
+            {
+                "id": "it-07-004",
+                "text": "Mi sono rifiutato di essere generoso con i miei beni verso chi è nel bisogno?"
+            },
+            {
+                "id": "it-07-005",
+                "text": "Ho sprecato denaro in cose superflue trascurando i bisogni dei poveri?"
+            },
+            {
+                "id": "it-07-006",
+                "text": "Ho trascurato di praticare le opere di misericordia corporale?"
+            },
+            {
+                "id": "it-07-007",
+                "text": "Ho vandalizzato o danneggiato la proprietà altrui?"
+            },
+            {
+                "id": "it-07-008",
+                "text": "Ho imbrogliato?"
+            },
+            {
+                "id": "it-07-009",
+                "text": "Ho mancato di pagare un salario giusto ai miei lavoratori per un'onesta giornata di lavoro?"
+            },
+            {
+                "id": "it-07-010",
+                "text": "Ho impedito a qualcuno di ottenere un lavoro (discriminandolo ingiustamente o sabotando le sue possibilità di impiego)?"
+            },
+            {
+                "id": "it-07-011",
+                "text": "Ho favorito azioni che portano alla schiavitù di altri (sfruttamento del lavoro, tratta di esseri umani o schiavitù vera e propria)?"
+            },
+            {
+                "id": "it-07-012",
+                "text": "Ho violato un contratto non adempiendo alla mia parte dell'obbligo?"
+            },
+            {
+                "id": "it-07-013",
+                "text": "Ho partecipato o dato sostegno a uno sciopero o a una serrata ingiusti?"
+            },
+            {
+                "id": "it-07-014",
+                "text": "Ho accumulato debiti eccessivi e/o ho trascurato di ripagarli?"
+            },
+            {
+                "id": "it-07-015",
+                "text": "Ho praticato l'usura (applicare interessi eccessivi)?"
+            },
+            {
+                "id": "it-07-016",
+                "text": "Ho fatto pagare a qualcuno più del giusto o ho approfittato di qualcuno in una compravendita?"
+            },
+            {
+                "id": "it-07-017",
+                "text": "Ho intentato o promosso una causa ingiusta contro qualcuno?"
+            },
+            {
+                "id": "it-07-018",
+                "text": "Ho omesso la restituzione dovuta per un furto, una frode o qualsiasi altra azione contro il settimo comandamento?"
+            },
+            {
+                "id": "it-07-019",
+                "text": "Ho mostrato noncuranza per l'ambiente?"
+            },
+            {
+                "id": "it-07-020",
+                "text": "Ho mancato di rispettare la proprietà privata, o violato l'insegnamento della Chiesa sulla sussidiarietà sostenendo un socialismo eccessivo o un eccessivo controllo statale delle risorse?"
+            },
+            {
+                "id": "it-07-021",
+                "text": "Ho trascurato di lavorare con diligenza e di dare al mio datore di lavoro un'onesta giornata di lavoro?"
+            },
+            {
+                "id": "it-07-022",
+                "text": "Ho disprezzato il lavoro o ceduto alla pigrizia?"
+            },
+            {
+                "id": "it-07-023",
+                "text": "Ho trascurato di svolgere il lavoro necessario per la mia famiglia?"
+            },
+            {
+                "id": "it-07-024",
+                "text": "Ho trattenuto o ritardato il pagamento dei salari dovuti ai lavoratori?"
+            },
+            {
+                "id": "it-07-025",
+                "text": "Ho cercato di speculare facendo salire il prezzo di beni o servizi?"
+            },
+            {
+                "id": "it-07-026",
+                "text": "Ho violato i diritti d'autore piratando software, musica o film?"
+            },
+            {
+                "id": "it-07-027",
+                "text": "Ho sprecato il tempo del mio datore di lavoro con un uso eccessivo di internet o dei social media durante l'orario di lavoro?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "it-8",
+        "questions": [
+            {
+                "id": "it-08-001",
+                "text": "Ho mentito o ingannato deliberatamente qualcuno?"
+            },
+            {
+                "id": "it-08-002",
+                "text": "Ho fatto pettegolezzi?"
+            },
+            {
+                "id": "it-08-003",
+                "text": "Ho mentito sotto giuramento (spergiuro)?"
+            },
+            {
+                "id": "it-08-004",
+                "text": "Ho pensato il peggio di qualcuno o l'ho giudicato ingiustamente?"
+            },
+            {
+                "id": "it-08-005",
+                "text": "Ho danneggiato la reputazione di qualcuno con la maldicenza (rivelare agli altri i difetti di una persona senza grave motivo), con la calunnia (dire menzogne su una persona) o con la diffamazione scritta (scrivere menzogne su qualcuno)?"
+            },
+            {
+                "id": "it-08-006",
+                "text": "Ho cercato ossessivamente conferme online o coltivato un'immagine falsa di me stesso?"
+            },
+            {
+                "id": "it-08-007",
+                "text": "Ho trascurato di difendere la reputazione di qualcuno?"
+            },
+            {
+                "id": "it-08-008",
+                "text": "Non ho mantenuto un segreto o ho tradito la fiducia di qualcuno?"
+            },
+            {
+                "id": "it-08-009",
+                "text": "Sono rimasto in silenzio o sono stato complice quando veniva diffamata la Chiesa cattolica?"
+            },
+            {
+                "id": "it-08-010",
+                "text": "Ho mancato di sincerità o di franchezza quando era opportuno?"
+            },
+            {
+                "id": "it-08-011",
+                "text": "Ho condotto una doppia vita?"
+            },
+            {
+                "id": "it-08-012",
+                "text": "Sono stato ipocrita?"
+            },
+            {
+                "id": "it-08-013",
+                "text": "Ho costretto altri a mentire?"
+            },
+            {
+                "id": "it-08-014",
+                "text": "Ho impedito ad altri di dire la verità?"
+            },
+            {
+                "id": "it-08-015",
+                "text": "Ho fatto ricorso all'adulazione?"
+            },
+            {
+                "id": "it-08-016",
+                "text": "Sono stato vanaglorioso o arrogante?"
+            },
+            {
+                "id": "it-08-017",
+                "text": "Ho travisato i fatti, drammatizzato eccessivamente, costruito argomentazioni fittizie (\"uomo di paglia\") o attaccato la persona invece dell'argomento o del punto di vista (attacchi ad hominem)?"
+            },
+            {
+                "id": "it-08-018",
+                "text": "Ho omesso di riparare la reputazione di una persona sulla quale avevo mentito?"
+            },
+            {
+                "id": "it-08-019",
+                "text": "Ho rivelato la verità a chi non aveva il diritto di conoscerla (per esempio un ingiusto aggressore)?"
+            },
+            {
+                "id": "it-08-020",
+                "text": "Ho violato il sigillo della confessione, riferendo ad altri il contenuto della confessione di qualcuno?"
+            },
+            {
+                "id": "it-08-021",
+                "text": "Ho rivelato segreti professionali senza grave motivo?"
+            },
+            {
+                "id": "it-08-022",
+                "text": "Ho accettato come vere le affermazioni altrui senza il dovuto discernimento (specialmente in materia di fede e di morale, o quando era in gioco la reputazione di un altro)?"
+            },
+            {
+                "id": "it-08-023",
+                "text": "Ho diffuso informazioni pubbliche false (propaganda)?"
+            },
+            {
+                "id": "it-08-024",
+                "text": "Ho condiviso sui social media informazioni false o non verificate (fake news)?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "it-9",
+        "questions": [
+            {
+                "id": "it-09-001",
+                "text": "Ho ceduto alla concupiscenza (intensi desideri sessuali)?"
+            },
+            {
+                "id": "it-09-002",
+                "text": "Ho ceduto alla lussuria (desiderio disordinato di un godimento smodato del piacere sessuale)?"
+            },
+            {
+                "id": "it-09-003",
+                "text": "Ho rivolto a qualcuno commenti o avance sessualmente allusivi o molesti?"
+            },
+            {
+                "id": "it-09-004",
+                "text": "Ho mancato di vestirmi con modestia, o non ho distolto lo sguardo quando qualcuno era vestito in modo immodesto?"
+            },
+            {
+                "id": "it-09-005",
+                "text": "Ho violato la privacy di qualcuno spiandolo?"
+            },
+            {
+                "id": "it-09-006",
+                "text": "Ho alimentato o assecondato volontariamente pensieri impuri?"
+            },
+            {
+                "id": "it-09-007",
+                "text": "Ho promosso la promiscuità, atteggiamenti immorali verso il sesso, la modestia o la purezza, o il permissivismo morale?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "it-10",
+        "questions": [
+            {
+                "id": "it-10-001",
+                "text": "Ho invidiato gli altri per i loro beni?"
+            },
+            {
+                "id": "it-10-002",
+                "text": "Sono stato avido?"
+            },
+            {
+                "id": "it-10-003",
+                "text": "Ho bramato i beni altrui?"
+            },
+            {
+                "id": "it-10-004",
+                "text": "Ho trascurato di vivere con semplicità, cedendo invece al materialismo?"
+            },
+            {
+                "id": "it-10-005",
+                "text": "Ho mancato di rallegrarmi per il successo di un altro?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "it-11",
+        "questions": [
+            {
+                "id": "it-11-001",
+                "text": "Ho mancato di partecipare alla santa Messa la domenica o nelle feste di precetto?"
+            },
+            {
+                "id": "it-11-002",
+                "text": "Ho trascurato di riservare al riposo la domenica e le feste di precetto?"
+            },
+            {
+                "id": "it-11-003",
+                "text": "Ho mancato di confessare i miei peccati almeno una volta all'anno?"
+            },
+            {
+                "id": "it-11-004",
+                "text": "Ho fatto confessioni disoneste o deliberatamente incomplete?"
+            },
+            {
+                "id": "it-11-005",
+                "text": "Ho trascurato di preparare adeguatamente la mia anima a ricevere la santa Comunione?"
+            },
+            {
+                "id": "it-11-006",
+                "text": "Ho tralasciato di compiere la penitenza assegnatami nella confessione?"
+            },
+            {
+                "id": "it-11-007",
+                "text": "Ho mancato di riparare il male causato dai miei peccati?"
+            },
+            {
+                "id": "it-11-008",
+                "text": "Ho trascurato di fare un accurato esame di coscienza prima della confessione o di cercare onestamente di ricordare tutti i miei peccati?"
+            },
+            {
+                "id": "it-11-009",
+                "text": "Mi sono confessato senza il fermo proposito di cambiare vita o senza il dolore per i miei peccati?"
+            },
+            {
+                "id": "it-11-010",
+                "text": "Ho mancato di ricevere la santa Comunione almeno una volta nel tempo pasquale (tra la Veglia pasquale e la domenica di Pentecoste)?"
+            },
+            {
+                "id": "it-11-011",
+                "text": "Ho ricevuto la Comunione non essendo in stato di grazia (con peccati mortali sull'anima)?"
+            },
+            {
+                "id": "it-11-012",
+                "text": "Ho mancato di osservare il digiuno eucaristico prima di ricevere la santa Comunione?"
+            },
+            {
+                "id": "it-11-013",
+                "text": "Ho mangiato carne nei venerdì di Quaresima?"
+            },
+            {
+                "id": "it-11-014",
+                "text": "Ho mancato di osservare le norme sul digiuno il Mercoledì delle Ceneri e il Venerdì Santo?"
+            },
+            {
+                "id": "it-11-015",
+                "text": "Ho mancato di seguire lo spirito delle norme sul digiuno e sull'astinenza?"
+            },
+            {
+                "id": "it-11-016",
+                "text": "Ho mancato di astenermi dalla carne tutti i venerdì dell'anno o di seguire le indicazioni dei vescovi del mio territorio (per esempio compiendo un'opera di penitenza al posto dell'astinenza dalle carni, come avviene in molte zone degli Stati Uniti)?"
+            },
+            {
+                "id": "it-11-017",
+                "text": "Ho trascurato di compiere le opere di misericordia spirituale e corporale o di praticare la mortificazione?"
+            },
+            {
+                "id": "it-11-018",
+                "text": "Ho mancato di contribuire regolarmente alle necessità della Chiesa con le mie offerte?"
+            },
+            {
+                "id": "it-11-019",
+                "text": "Ho mancato di dare un contributo adeguato alla mia situazione?"
+            },
+            {
+                "id": "it-11-020",
+                "text": "Ho trascurato di dedicare del tempo come volontario alla Chiesa, in misura adeguata alla mia situazione?"
+            },
+            {
+                "id": "it-11-021",
+                "text": "Ho trascurato di pregare per la crescita della Chiesa?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "it-12",
+        "questions": [
+            {
+                "id": "it-12-001",
+                "text": "Ho commesso il peccato di superbia?"
+            },
+            {
+                "id": "it-12-002",
+                "text": "Ho commesso il peccato di avarizia?"
+            },
+            {
+                "id": "it-12-003",
+                "text": "Ho commesso il peccato di lussuria?"
+            },
+            {
+                "id": "it-12-004",
+                "text": "Ho commesso il peccato di invidia?"
+            },
+            {
+                "id": "it-12-005",
+                "text": "Ho commesso il peccato di gola?"
+            },
+            {
+                "id": "it-12-006",
+                "text": "Ho commesso il peccato di ira?"
+            },
+            {
+                "id": "it-12-007",
+                "text": "Ho commesso il peccato di accidia?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "it-13",
+        "questions": [
+            {
+                "id": "it-13-001",
+                "text": "Ho peccato aspettandomi che Dio mi perdonasse senza un vero pentimento (presunzione)?"
+            },
+            {
+                "id": "it-13-002",
+                "text": "Ho disperato della salvezza?"
+            },
+            {
+                "id": "it-13-003",
+                "text": "Ho impugnato o combattuto verità che sapevo essere insegnate dalla Chiesa cattolica?"
+            },
+            {
+                "id": "it-13-004",
+                "text": "Ho invidiato il bene spirituale altrui?"
+            },
+            {
+                "id": "it-13-005",
+                "text": "Sono rimasto ostinatamente nello stato di peccato?"
+            },
+            {
+                "id": "it-13-006",
+                "text": "Ho persistito nel rifiuto di pentirmi?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "it-14",
+        "questions": [
+            {
+                "id": "it-14-001",
+                "text": "Ho commesso un omicidio volontario?"
+            },
+            {
+                "id": "it-14-002",
+                "text": "Ho commesso il peccato di Sodoma (atti sessuali contro natura)?"
+            },
+            {
+                "id": "it-14-003",
+                "text": "Ho oppresso i poveri?"
+            },
+            {
+                "id": "it-14-004",
+                "text": "Ho defraudato gli operai della giusta mercede?"
+            }
+        ]
+    }
+]

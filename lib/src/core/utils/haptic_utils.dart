@@ -1,7 +1,6 @@
 import 'package:flutter/services.dart';
 
-/// Utility class for haptic feedback throughout the app.
-/// Provides consistent tactile feedback for a premium feel.
+/// Haptic feedback helpers used throughout the app.
 class HapticUtils {
   /// Light impact - for selections, toggles, small interactions
   static void lightImpact() {

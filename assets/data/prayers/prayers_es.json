@@ -16,7 +16,7 @@
                     "id": "act_of_contrition",
                     "title": "Acto de Contrición",
                     "icon": "favorite_outline",
-                    "content": "Señor Jesús, Hijo de Dios, ten piedad de mí, que soy pecador. Señor mío Jesucristo, Dios y Hombre verdadero, Creador, Padre y Redentor mío; por ser vos quien sois, bondad infinita, y porque os amo sobre todas las cosas, me pesa de todo corazón de haberos ofendido; también me pesa porque podéis castigarme con las penas del infierno. Ayudado de vuestra divina gracia, propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta. Amén."
+                    "content": "Señor mío Jesucristo, Dios y Hombre verdadero, Creador, Padre y Redentor mío; por ser Vos quien sois, bondad infinita, y porque os amo sobre todas las cosas, me pesa de todo corazón haberos ofendido; también me pesa porque podéis castigarme con las penas del infierno. Ayudado de vuestra divina gracia, propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta. Amén."
                 },
                 {
                     "id": "after_confession",
@@ -41,26 +41,26 @@
                     "id": "lords_prayer",
                     "title": "Padre Nuestro",
                     "icon": "cloud_outlined",
-                    "content": "Padre nuestro, que estás en el cielo,\nsantificado sea tu Nombre;\nvenga a nosotros tu reino;\nhágase tu voluntad, en la tierra como en el cielo.\n\nDanos hoy nuestro pan de cada día;\nperdona nuestras ofensas,\ncomo también nosotros perdonamos a los que nos ofenden;\nno nos dejes caer en la tentación,\ny líbranos del mal.\n\nAmén."
+                    "content": "Padre nuestro, que estás en el cielo,\nsantificado sea tu Nombre;\nvenga a nosotros tu reino;\nhágase tu voluntad, en la tierra como en el cielo.\n\nDanos hoy nuestro pan de cada día;\nperdona nuestras ofensas,\ncomo también nosotros perdonamos a los que nos ofenden;\nno nos dejes caer en la tentación,\ny líbranos del mal.\n\n[AMEN]Amén."
                 },
                 {
                     "id": "hail_mary",
                     "title": "Ave María",
                     "icon": "star_outline",
-                    "content": "Dios te salve, María, llena eres de gracia,\nel Señor es contigo.\nBendita tú eres entre todas las mujeres,\ny bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios,\nruega por nosotros, pecadores,\nahora y en la hora de nuestra muerte.\n\nAmén."
+                    "content": "Dios te salve, María, llena eres de gracia,\nel Señor es contigo.\nBendita tú eres entre todas las mujeres,\ny bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios,\nruega por nosotros, pecadores,\nahora y en la hora de nuestra muerte.\n\n[AMEN]Amén."
                 },
                 {
                     "id": "glory_be",
                     "title": "Gloria",
                     "icon": "brightness_high_outlined",
-                    "content": "Gloria al Padre, y al Hijo, y al Espíritu Santo.\n\nComo era en el principio, ahora y siempre,\npor los siglos de los siglos.\n\nAmén."
+                    "content": "Gloria al Padre, y al Hijo, y al Espíritu Santo.\n\nComo era en el principio, ahora y siempre,\npor los siglos de los siglos.\n\n[AMEN]Amén."
                 },
                 {
                     "id": "apostles_creed",
                     "title": "Credo de los Apóstoles",
                     "icon": "menu_book_outlined",
                     "isExpandable": true,
-                    "content": "Creo en Dios, Padre Todopoderoso, Creador del cielo y de la tierra.\n\nCreo en Jesucristo, su único Hijo, Nuestro Señor, que fue concebido por obra y gracia del Espíritu Santo, nació de Santa María Virgen, padeció bajo el poder de Poncio Pilato, fue crucificado, muerto y sepultado,\n\ndescendió a los infiernos, al tercer día resucitó de entre los muertos, subió a los cielos y está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos.\n\nCreo en el Espíritu Santo, la santa Iglesia católica, la comunión de los santos, el perdón de los pecados, la resurrección de la carne y la vida eterna.\n\nAmén."
+                    "content": "Creo en Dios, Padre Todopoderoso, Creador del cielo y de la tierra.\n\nCreo en Jesucristo, su único Hijo, Nuestro Señor, que fue concebido por obra y gracia del Espíritu Santo, nació de Santa María Virgen, padeció bajo el poder de Poncio Pilato, fue crucificado, muerto y sepultado,\n\ndescendió a los infiernos, al tercer día resucitó de entre los muertos, subió a los cielos y está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos.\n\nCreo en el Espíritu Santo, la santa Iglesia católica, la comunión de los santos, el perdón de los pecados, la resurrección de la carne y la vida eterna.\n\n[AMEN]Amén."
                 }
             ]
         },
@@ -73,19 +73,19 @@
                     "id": "hail_holy_queen",
                     "title": "La Salve",
                     "icon": "star_outline",
-                    "content": "Dios te salve, Reina y Madre de misericordia, vida, dulzura y esperanza nuestra; Dios te salve.\n\nA ti llamamos los desterrados hijos de Eva; a ti suspiramos, gimiendo y llorando, en este valle de lágrimas.\n\nEa, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos; y después de este destierro muéstranos a Jesús, fruto bendito de tu vientre.\n\n¡Oh clementísima, oh piadosa, oh dulce Virgen María!\n\n[VERSICLE]V. Ruega por nosotros, Santa Madre de Dios.[/VERSICLE]\n[RESPONSE]R. Para que seamos dignos de alcanzar las promesas de Nuestro Señor Jesucristo.[/RESPONSE]\n\nAmén."
+                    "content": "Dios te salve, Reina y Madre de misericordia, vida, dulzura y esperanza nuestra; Dios te salve.\n\nA ti llamamos los desterrados hijos de Eva; a ti suspiramos, gimiendo y llorando, en este valle de lágrimas.\n\nEa, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos; y después de este destierro muéstranos a Jesús, fruto bendito de tu vientre.\n\n¡Oh clementísima, oh piadosa, oh dulce Virgen María!\n\n[VERSICLE]V. Ruega por nosotros, Santa Madre de Dios.[/VERSICLE]\n[RESPONSE]R. Para que seamos dignos de alcanzar las promesas de Nuestro Señor Jesucristo.[/RESPONSE]\n\n[AMEN]Amén."
                 },
                 {
                     "id": "memorare",
                     "title": "Acordaos",
                     "icon": "volunteer_activism_outlined",
-                    "content": "Acordaos, oh piadosísima Virgen María, que jamás se ha oído decir que ninguno de los que han acudido a vuestra protección, implorando vuestra asistencia y reclamando vuestro socorro, haya sido desamparado de Vos.\n\nAnimado por esta confianza, a Vos acudo, oh Madre, Virgen de las vírgenes, y gimiendo bajo el peso de mis pecados a vuestros pies me postro.\n\nOh Madre del Verbo Encarnado, no despreciéis mis súplicas, antes bien escuchadlas y acogedlas benignamente.\n\nAmén."
+                    "content": "Acordaos, oh piadosísima Virgen María, que jamás se ha oído decir que ninguno de los que han acudido a vuestra protección, implorando vuestra asistencia y reclamando vuestro socorro, haya sido desamparado de Vos.\n\nAnimado por esta confianza, a Vos acudo, oh Madre, Virgen de las vírgenes, y gimiendo bajo el peso de mis pecados a vuestros pies me postro.\n\nOh Madre del Verbo Encarnado, no despreciéis mis súplicas, antes bien escuchadlas y acogedlas benignamente.\n\n[AMEN]Amén."
                 },
                 {
                     "id": "fatima_prayer",
                     "title": "Oración de Fátima",
                     "icon": "flare_outlined",
-                    "content": "Oh Jesús mío, perdona nuestros pecados, líbranos del fuego del infierno, lleva al cielo a todas las almas, especialmente a las más necesitadas de tu misericordia.\n\nAmén."
+                    "content": "Oh Jesús mío, perdona nuestros pecados, líbranos del fuego del infierno, lleva al cielo a todas las almas, especialmente a las más necesitadas de tu misericordia.\n\n[AMEN]Amén."
                 }
             ]
         },
@@ -146,15 +146,15 @@
                     "sections": [
                         {
                             "title": "Oraciones de Apertura",
-                            "content": "1. Haz la Señal de la Cruz\n2. Oración de Apertura Opcional:\n\n[PRAYER]Expiraste, Jesús, pero la fuente de vida brotó para las almas y el mar de misericordia se abrió para el mundo entero. Oh fuente de vida, insondable Misericordia Divina, abarca al mundo entero y derrámate sobre nosotros.[/PRAYER]\n\n3. Repite tres veces:\n\n[PRAYER]Oh Sangre y Agua, que brotaste del Corazón de Jesús como una fuente de misericordia para nosotros, ¡en Ti confío![/PRAYER]"
+                            "content": "1. Haz la Señal de la Cruz\n2. Oración de Apertura Opcional:\n\n[PRAYER]Expiraste, Jesús, pero la fuente de vida brotó para las almas y se abrió el mar de misericordia para el mundo entero. Oh fuente de vida, insondable misericordia de Dios, abarca el mundo entero y derrámate sobre nosotros.[/PRAYER]\n\n3. Repite tres veces:\n\n[PRAYER]Oh Sangre y Agua, que brotaste del Corazón de Jesús como una fuente de misericordia para nosotros, ¡en Ti confío![/PRAYER]"
                         },
                         {
                             "title": "La Coronilla",
-                            "content": "1. Reza el Padre Nuestro\n2. Reza el Ave María\n3. Reza el Credo de los Apóstoles\n\n[RUBRIC]En las cuentas grandes (cuentas del Padre Nuestro), di:[/RUBRIC]\n\n[PRAYER]Padre Eterno, te ofrezco el Cuerpo y la Sangre, el Alma y la Divinidad de Tu Amadísimo Hijo, nuestro Señor Jesucristo, como propiciación de nuestros pecados y los del mundo entero.[/PRAYER]\n\n[RUBRIC]En las cuentas pequeñas (cuentas del Ave María), di:[/RUBRIC]\n\n[PRAYER]Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.[/PRAYER]\n\nRepite por cinco décadas."
+                            "content": "1. Reza el Padre Nuestro\n2. Reza el Ave María\n3. Reza el Credo de los Apóstoles\n\n[RUBRIC]En las cuentas grandes (cuentas del Padre Nuestro), di:[/RUBRIC]\n\n[PRAYER]Padre Eterno, Te ofrezco el Cuerpo y la Sangre, el Alma y la Divinidad de Tu Amadísimo Hijo, nuestro Señor Jesucristo, como propiciación de nuestros pecados y los del mundo entero.[/PRAYER]\n\n[RUBRIC]En las cuentas pequeñas (cuentas del Ave María), di:[/RUBRIC]\n\n[PRAYER]Por Su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.[/PRAYER]\n\nRepite por cinco décadas."
                         },
                         {
                             "title": "Conclusión",
-                            "content": "Repite tres veces:\n\n[PRAYER]Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.[/PRAYER]\n\nOración Final Opcional:\n\n[PRAYER]Oh Dios, cuya misericordia es infinita y cuyos tesoros de compasión no tienen límites, míranos con bondad y aumenta Tu misericordia en nosotros, para que en los momentos difíciles no caigamos en la desesperación ni nos desalentemos, sino que, con gran confianza, nos sometamos a Tu santa voluntad, que es el Amor y la Misericordia mismos. Amén.[/PRAYER]"
+                            "content": "Repite tres veces:\n\n[PRAYER]Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.[/PRAYER]\n\nOración Final Opcional:\n\n[PRAYER]Oh Dios Eterno, en quien la misericordia es infinita y el tesoro de compasión inagotable, vuelve a nosotros Tu mirada bondadosa y aumenta Tu misericordia en nosotros, para que en momentos difíciles no nos desesperemos ni nos desalentemos, sino que, con gran confianza, nos sometamos a Tu santa voluntad, que es el Amor y la Misericordia mismos. Amén.[/PRAYER]"
                         }
                     ]
                 },
@@ -182,7 +182,7 @@
                     "title": "Oración Después de la Comunión",
                     "subtitle": "Alma de Cristo",
                     "icon": "light_mode_outlined",
-                    "content": "Alma de Cristo, santifícame.\nCuerpo de Cristo, sálvame.\nSangre de Cristo, embriágame.\nAgua del costado de Cristo, lávame.\n\nPasión de Cristo, confórtame.\n¡Oh, buen Jesús!, óyeme.\nDentro de tus llagas, escóndeme.\nNo permitas que me aparte de Ti.\n\nDel maligno enemigo, defiéndeme.\nEn la hora de mi muerte, llámame.\nY mándame ir a Ti.\nPara que con tus santos te alabe.\nPor los siglos de los siglos.\n\nAmén."
+                    "content": "Alma de Cristo, santifícame.\nCuerpo de Cristo, sálvame.\nSangre de Cristo, embriágame.\nAgua del costado de Cristo, lávame.\n\nPasión de Cristo, confórtame.\n¡Oh, buen Jesús!, óyeme.\nDentro de tus llagas, escóndeme.\nNo permitas que me aparte de Ti.\n\nDel maligno enemigo, defiéndeme.\nEn la hora de mi muerte, llámame.\nY mándame ir a Ti.\nPara que con tus santos te alabe.\nPor los siglos de los siglos.\n\n[AMEN]Amén."
                 }
             ]
         }

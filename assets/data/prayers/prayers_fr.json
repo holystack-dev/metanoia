@@ -28,7 +28,7 @@
                     "id": "confiteor",
                     "title": "Confiteor (Je Confesse)",
                     "icon": "person_outline",
-                    "content": "Je confesse à Dieu tout-puissant, je reconnais devant vous, frères et sœurs, que j'ai péché en pensée, en parole, par action et par omission,\n\n[RUBRIC]Frappez-vous la poitrine trois fois en disant :[/RUBRIC]\n\noui, j'ai vraiment péché.\n\nC'est pourquoi je supplie la bienheureuse Vierge Marie, les anges et tous les saints, et vous aussi, frères et sœurs, de prier pour moi le Seigneur notre Dieu. Amen."
+                    "content": "Je confesse à Dieu tout-puissant, je reconnais devant vous, frères et sœurs, que j'ai péché en pensée, en parole, par action et par omission,\n\n[RUBRIC]En vous frappant la poitrine, dites :[/RUBRIC]\n\noui, j'ai vraiment péché.\n\nC'est pourquoi je supplie la bienheureuse Vierge Marie, les anges et tous les saints, et vous aussi, frères et sœurs, de prier pour moi le Seigneur notre Dieu. Amen."
                 }
             ]
         },
@@ -41,26 +41,26 @@
                     "id": "lords_prayer",
                     "title": "Notre Père",
                     "icon": "cloud_outlined",
-                    "content": "Notre Père, qui es aux cieux,\nque ton nom soit sanctifié,\nque ton règne vienne,\nque ta volonté soit faite sur la terre comme au ciel.\n\nDonne-nous aujourd'hui notre pain de ce jour.\nPardonne-nous nos offenses,\ncomme nous pardonnons aussi à ceux qui nous ont offensés.\nEt ne nous laisse pas entrer en tentation\nmais délivre-nous du Mal.\n\nAmen."
+                    "content": "Notre Père, qui es aux cieux,\nque ton nom soit sanctifié,\nque ton règne vienne,\nque ta volonté soit faite sur la terre comme au ciel.\n\nDonne-nous aujourd'hui notre pain de ce jour.\nPardonne-nous nos offenses,\ncomme nous pardonnons aussi à ceux qui nous ont offensés.\nEt ne nous laisse pas entrer en tentation\nmais délivre-nous du Mal.\n\n[AMEN]Amen."
                 },
                 {
                     "id": "hail_mary",
                     "title": "Je Vous Salue Marie",
                     "icon": "star_outline",
-                    "content": "Je vous salue, Marie pleine de grâce ;\nle Seigneur est avec vous.\nVous êtes bénie entre toutes les femmes\net Jésus, le fruit de vos entrailles, est béni.\n\nSainte Marie, Mère de Dieu,\npriez pour nous pauvres pécheurs,\nmaintenant et à l'heure de notre mort.\n\nAmen."
+                    "content": "Je vous salue, Marie, pleine de grâce ;\nle Seigneur est avec vous.\nVous êtes bénie entre toutes les femmes\net Jésus, le fruit de vos entrailles, est béni.\n\nSainte Marie, Mère de Dieu,\npriez pour nous pauvres pécheurs,\nmaintenant et à l'heure de notre mort.\n\n[AMEN]Amen."
                 },
                 {
                     "id": "glory_be",
                     "title": "Gloire au Père",
                     "icon": "brightness_high_outlined",
-                    "content": "Gloire au Père, et au Fils, et au Saint-Esprit.\n\nComme il était au commencement, maintenant et toujours,\npour les siècles des siècles.\n\nAmen."
+                    "content": "Gloire au Père, et au Fils, et au Saint-Esprit.\n\nComme il était au commencement, maintenant et toujours,\npour les siècles des siècles.\n\n[AMEN]Amen."
                 },
                 {
                     "id": "apostles_creed",
                     "title": "Symbole des Apôtres",
                     "icon": "menu_book_outlined",
                     "isExpandable": true,
-                    "content": "Je crois en Dieu, le Père tout-puissant, Créateur du ciel et de la terre.\n\nEt en Jésus Christ, son Fils unique, notre Seigneur ; qui a été conçu du Saint Esprit, est né de la Vierge Marie, a souffert sous Ponce Pilate, a été crucifié, est mort et a été enseveli,\n\nest descendu aux enfers ; le troisième jour est ressuscité des morts ; est monté aux cieux ; est assis à la droite de Dieu le Père tout-puissant, d'où il viendra juger les vivants et les morts.\n\nJe crois en l'Esprit Saint, à la sainte Église catholique, à la communion des saints, à la rémission des péchés, à la résurrection de la chair, à la vie éternelle.\n\nAmen."
+                    "content": "Je crois en Dieu, le Père tout-puissant, Créateur du ciel et de la terre.\n\nEt en Jésus Christ, son Fils unique, notre Seigneur ; qui a été conçu du Saint Esprit, est né de la Vierge Marie, a souffert sous Ponce Pilate, a été crucifié, est mort et a été enseveli,\n\nest descendu aux enfers ; le troisième jour est ressuscité des morts ; est monté aux cieux ; est assis à la droite de Dieu le Père tout-puissant, d'où il viendra juger les vivants et les morts.\n\nJe crois en l'Esprit Saint, à la sainte Église catholique, à la communion des saints, à la rémission des péchés, à la résurrection de la chair, à la vie éternelle.\n\n[AMEN]Amen."
                 }
             ]
         },
@@ -73,19 +73,19 @@
                     "id": "hail_holy_queen",
                     "title": "Salut, Ô Reine (Salve Regina)",
                     "icon": "star_outline",
-                    "content": "Salut, Ô Reine, Mère de miséricorde ; notre vie, notre douceur et notre espérance, salut.\n\nEnfants d'Ève, malheureux exilés, nous élevons nos cris vers vous ; nous soupirons vers vous, gémissant et pleurant dans cette vallée de larmes.\n\nO notre avocate, tournez donc vers nous vos yeux miséricordieux ; et au sortir de cet exil, montrez-nous Jésus, le fruit béni de vos entrailles.\n\nO clémente, ô miséricordieuse, ô douce Vierge Marie.\n\n[VERSICLE]V. Priez pour nous, Sainte Mère de Dieu.[/VERSICLE]\n[RESPONSE]R. Afin que nous devenions dignes des promesses du Christ.[/RESPONSE]\n\nAmen."
+                    "content": "Salut, ô Reine, Mère de miséricorde ; notre vie, notre douceur et notre espérance, salut.\n\nEnfants d'Ève, malheureux exilés, nous élevons nos cris vers vous ; nous soupirons vers vous, gémissant et pleurant dans cette vallée de larmes.\n\nÔ notre avocate, tournez donc vers nous vos regards miséricordieux ; et au sortir de cet exil, montrez-nous Jésus, le fruit béni de vos entrailles.\n\nÔ clémente, ô miséricordieuse, ô douce Vierge Marie.\n\n[VERSICLE]V. Priez pour nous, Sainte Mère de Dieu.[/VERSICLE]\n[RESPONSE]R. Afin que nous devenions dignes des promesses du Christ.[/RESPONSE]\n\n[AMEN]Amen."
                 },
                 {
                     "id": "memorare",
                     "title": "Souvenez-vous",
                     "icon": "volunteer_activism_outlined",
-                    "content": "Souvenez-vous, ô très miséricordieuse Vierge Marie, qu'on n'a jamais entendu dire qu'aucun de ceux qui ont eu recours à votre protection, imploré votre assistance ou réclamé votre secours, ait été abandonné.\n\nAnimé d'une pareille confiance, ô Vierge des vierges, ô ma Mère, je cours vers vous, et gémissant sous le poids de mes péchés, je me prosterne à vos pieds.\n\nO Mère du Verbe incarné, ne méprisez pas mes prières, mais écoutez-les favorablement et daignez les exaucer.\n\nAmen."
+                    "content": "Souvenez-vous, ô très miséricordieuse Vierge Marie, qu'on n'a jamais entendu dire qu'aucun de ceux qui ont eu recours à votre protection, imploré votre assistance ou réclamé votre secours, ait été abandonné.\n\nAnimé d'une pareille confiance, ô Vierge des vierges, ô ma Mère, je cours vers vous, et gémissant sous le poids de mes péchés, je me prosterne à vos pieds.\n\nÔ Mère du Verbe incarné, ne méprisez pas mes prières, mais écoutez-les favorablement et daignez les exaucer.\n\n[AMEN]Amen."
                 },
                 {
                     "id": "fatima_prayer",
                     "title": "Prière de Fatima",
                     "icon": "flare_outlined",
-                    "content": "Ô mon Jésus, pardonnez-nous nos péchés, préservez-nous du feu de l’enfer et conduisez au Ciel toutes les âmes, surtout celles qui ont le plus besoin de votre miséricorde.\n\nAmen."
+                    "content": "Ô mon Jésus, pardonnez-nous nos péchés, préservez-nous du feu de l’enfer et conduisez au Ciel toutes les âmes, surtout celles qui ont le plus besoin de votre miséricorde.\n\n[AMEN]Amen."
                 }
             ]
         },
@@ -146,7 +146,7 @@
                     "sections": [
                         {
                             "title": "Prières d'Ouverture",
-                            "content": "1. Faites le Signe de la Croix\n2. Prière d'Ouverture Optionnelle :\n\n[PRAYER]Vous avez expiré, Jésus, mais la source de vie a jailli pour les âmes et l'océan de miséricorde s'est ouvert pour le monde entier. Ô Source de Vie, insondable Miséricorde Divine, enveloppez le monde entier et videz-Vous sur nous.[/PRAYER]\n\n3. Répétez trois fois :\n\n[PRAYER]Ô Sang et Eau, qui avez jailli du Cœur de Jésus comme source de miséricorde pour nous, j'ai confiance en Vous ![/PRAYER]"
+                            "content": "1. Faites le Signe de la Croix\n2. Prière d'Ouverture Optionnelle :\n\n[PRAYER]Vous avez expiré, Jésus, mais la source de vie a jailli pour les âmes et l'océan de miséricorde s'est ouvert pour le monde entier. Ô Source de Vie, insondable Miséricorde Divine, enveloppez le monde entier et répandez-Vous sur nous.[/PRAYER]\n\n3. Répétez trois fois :\n\n[PRAYER]Ô Sang et Eau, qui avez jailli du Cœur de Jésus comme source de miséricorde pour nous, j'ai confiance en Vous ![/PRAYER]"
                         },
                         {
                             "title": "Le Chapelet",
@@ -154,7 +154,7 @@
                         },
                         {
                             "title": "Conclusion",
-                            "content": "Répétez trois fois :\n\n[PRAYER]Saint Dieu, Saint Fort, Saint Immortel, aie pitié de nous et du monde entier.[/PRAYER]\n\nPrière de Clôture Optionnelle :\n\n[PRAYER]Dieu éternel, dont la miséricorde est infinie et le trésor de compassion inépuisable, posez sur nous un regard de bonté et multipliez en nous votre miséricorde, pour que, dans les moments difficiles, nous ne désespérions pas ni ne perdions courage, mais que nous nous soumettions avec une grande confiance à votre sainte volonté, qui est l'Amour et la Miséricorde même. Amen.[/PRAYER]"
+                            "content": "Répétez trois fois :\n\n[PRAYER]Dieu Saint, Dieu Fort, Dieu Éternel, prends pitié de nous et du monde entier.[/PRAYER]\n\nPrière de Clôture Optionnelle :\n\n[PRAYER]Dieu éternel, en qui la miséricorde est sans fin et le trésor de la compassion inépuisable, regardez avec bonté et augmentez votre miséricorde en nous, afin que, dans les moments difficiles, nous ne désespérions ni ne nous découragions, mais nous nous soumettions avec une grande confiance à votre sainte volonté, qui est amour et miséricorde. Amen.[/PRAYER]"
                         }
                     ]
                 },
@@ -162,7 +162,7 @@
                     "id": "guardian_angel",
                     "title": "Prière à l'Ange Gardien",
                     "icon": "shield_outlined",
-                    "content": "Ange de Dieu, qui es mon gardien,\net à qui j'ai été confié par la Bonté divine,\néclaire-moi, défends-moi,\nconduis-moi et dirige-moi.\n\nAmen."
+                    "content": "Ange de Dieu, qui es mon gardien,\net à qui j'ai été confié par la Bonté divine,\néclaire-moi, défends-moi,\nconduis-moi et dirige-moi.\n\n[AMEN]Amen."
                 }
             ]
         },
@@ -182,7 +182,7 @@
                     "title": "Prière Après la Communion",
                     "subtitle": "Âme du Christ",
                     "icon": "light_mode_outlined",
-                    "content": "Âme du Christ, sanctifie-moi.\nCorps du Christ, sauve-moi.\nSang du Christ, enivre-moi.\nEau du côté du Christ, lave-moi.\n\nPassion du Christ, fortifie-moi.\nO bon Jésus, exauce-moi.\nDans tes blessures, cache-moi.\nNe permets pas que je sois séparé de toi.\n\nDe l'ennemi maléfique, défends-moi.\nÀ l'heure de ma mort, appelle-moi.\nEt ordonne-moi de venir à toi,\nPour qu'avec tes saints je te loue\nPour les siècles des siècles.\n\nAmen."
+                    "content": "Âme du Christ, sanctifie-moi.\nCorps du Christ, sauve-moi.\nSang du Christ, enivre-moi.\nEau du côté du Christ, lave-moi.\n\nPassion du Christ, fortifie-moi.\nÔ bon Jésus, exauce-moi.\nDans tes blessures, cache-moi.\nNe permets pas que je sois séparé de toi.\n\nDe l'ennemi perfide, défends-moi.\nÀ l'heure de ma mort, appelle-moi.\nEt ordonne-moi de venir à toi,\nPour qu'avec tes saints je te loue\nDans les siècles des siècles.\n\n[AMEN]Amen."
                 }
             ]
         }

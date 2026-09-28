@@ -1,6 +1,7 @@
+import 'package:confessionapp/src/core/theme/app_radius.dart';
 import 'package:confessionapp/src/core/theme/app_theme.dart';
-import 'package:confessionapp/src/core/utils/haptic_utils.dart';
 import 'package:confessionapp/src/features/onboarding/presentation/widgets/mystical_background.dart';
+import 'package:confessionapp/src/features/onboarding/presentation/widgets/onboarding_cta_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
@@ -119,7 +120,7 @@ class ReadyToBeginPage extends StatelessWidget {
                             color: theme.colorScheme.primary.withValues(
                               alpha: isDark ? 0.15 : 0.1,
                             ),
-                            borderRadius: BorderRadius.circular(16),
+                            borderRadius: BorderRadius.circular(AppRadius.card),
                             border: Border.all(
                               color: theme.colorScheme.primary.withValues(
                                 alpha: isDark ? 0.4 : 0.35,
@@ -167,66 +168,11 @@ class ReadyToBeginPage extends StatelessWidget {
 
                     const Spacer(flex: 3),
 
-                    // Begin Button with glow
-                    Center(
-                          child: Container(
-                            constraints: const BoxConstraints(maxWidth: 280),
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(28),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: theme.colorScheme.primary.withValues(
-                                    alpha: 0.4,
-                                  ),
-                                  blurRadius: 24,
-                                  spreadRadius: 0,
-                                  offset: const Offset(0, 8),
-                                ),
-                              ],
-                            ),
-                            child: FilledButton(
-                              onPressed: () {
-                                HapticUtils.mediumImpact();
-                                onComplete();
-                              },
-                              style: FilledButton.styleFrom(
-                                backgroundColor: theme.colorScheme.primary,
-                                foregroundColor: theme.colorScheme.onPrimary,
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 40,
-                                  vertical: 18,
-                                ),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(28),
-                                ),
-                                elevation: 0,
-                              ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  Text(
-                                    l10n.getStarted,
-                                    style: const TextStyle(
-                                      fontFamily: AppTheme.fontFamilyLato,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w600,
-                                      letterSpacing: 0.4,
-                                    ),
-                                  ),
-                                  const SizedBox(width: 10),
-                                  const Icon(
-                                    Icons.arrow_forward_rounded,
-                                    size: 22,
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        )
-                        .animate(delay: 450.ms)
-                        .fadeIn(duration: 350.ms, curve: Curves.easeOut),
+                    // Begin Button
+                    OnboardingCtaButton(
+                      label: l10n.getStarted,
+                      onPressed: onComplete,
+                    ).animate().fadeIn(duration: 150.ms, curve: Curves.easeOut),
                     const SizedBox(height: 32),
                   ],
                 ),

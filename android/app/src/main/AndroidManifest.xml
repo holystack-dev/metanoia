@@ -1,7 +1,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+        Android auto-backup is ON by default, and it was silently copying the
+        confession database and the secure preferences to the user's Google
+        Drive. That contradicts the whole promise of this app, which is that the
+        data never leaves the device.
+
+        It is also useless: the Keystore master key protecting the database key
+        is NOT included in a backup, so a restored install could not decrypt the
+        database anyway — it would only fail to open, with the user's history
+        already sitting in someone else's cloud.
+    -->
     <application
         android:label="Metanoia"
         android:name="${applicationName}"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

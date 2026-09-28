@@ -1,0 +1,1044 @@
+[
+    {
+        "commandmentCode": "tl-1",
+        "questions": [
+            {
+                "id": "tl-01-001",
+                "text": "Tumanggi ba akong maniwala sa Diyos (ateismo)?"
+            },
+            {
+                "id": "tl-01-002",
+                "text": "Pinagdudahan ko ba ang pag-iral ng Diyos?"
+            },
+            {
+                "id": "tl-01-003",
+                "text": "Napoot ba ako sa Diyos o sinisi Siya sa mga suliranin ng aking buhay?"
+            },
+            {
+                "id": "tl-01-004",
+                "text": "Itinakwil ko ba ang alinman sa mga dogma ng Simbahang Katolika?"
+            },
+            {
+                "id": "tl-01-005",
+                "text": "Sinadya ko bang maging dahilan upang pagdudahan ng iba ang Diyos o ang mga aral ng pananampalataya?"
+            },
+            {
+                "id": "tl-01-006",
+                "text": "Nagkulang ba ako sa pagpapalago at pagtatanggol sa aking pananampalataya?"
+            },
+            {
+                "id": "tl-01-007",
+                "text": "Nagkulang ba ako sa buong-sikap na pagsasalin ng pananampalataya sa aking mga anak at pamilya?"
+            },
+            {
+                "id": "tl-01-008",
+                "text": "Tumanggi ba akong ipagtanggol ang Diyos at ang aking pananampalataya sa harap ng iba kapag may tumutuligsa rito?"
+            },
+            {
+                "id": "tl-01-009",
+                "text": "Itinatwa ko ba ang aking pananampalataya o ang mga aral nito sa harap ng iba?"
+            },
+            {
+                "id": "tl-01-010",
+                "text": "Iniwan ko ba ang Simbahang Katolika o isinagawa ang ibang relihiyon?"
+            },
+            {
+                "id": "tl-01-011",
+                "text": "Sumapi ba ako sa isang organisasyong nakasasama o salungat sa aking pananampalataya (mga Komunista, mga Mason, mga grupong tumiwalag o humiwalay sa Simbahan, o anumang samahang nag-aatas sa mga kasapi nito ng panunumpang mas mataas at nauuna kaysa sa kanilang mga tungkulin sa Simbahang Katolika)?"
+            },
+            {
+                "id": "tl-01-012",
+                "text": "Nagpadala ba ako sa kawalang-pag-asa tungkol sa Diyos o sa Kaniyang pagpapatawad?"
+            },
+            {
+                "id": "tl-01-013",
+                "text": "Nagmalabis ba ako sa awa ng Diyos sa pamamagitan ng sadyang paggawa ng kasalanan sa pag-asang patatawarin din naman ako, kaya't umiwas sa tunay na pagbabalik-loob ng puso?"
+            },
+            {
+                "id": "tl-01-014",
+                "text": "Ipinagpalagay ko bang kaya kong iligtas ang aking kaluluwa nang walang tulong ng Diyos?"
+            },
+            {
+                "id": "tl-01-015",
+                "text": "Nangumpisal ba ako ng aking mga kasalanan nang walang hangaring baguhin ang aking buhay?"
+            },
+            {
+                "id": "tl-01-016",
+                "text": "Sumamba ba ako sa mga diyus-diyosan (idolatriya)? Inuna ko ba ang mga makamundong bagay tulad ng pera, kapangyarihan, tagumpay, mga kaibigan, pamahalaan, ang aking bansa, lahi, o ari-arian bago ang aking ugnayan sa Diyos? Nakilahok ba ako sa mga di-Kristiyanong gawaing espirituwal na salungat sa pananampalataya?"
+            },
+            {
+                "id": "tl-01-017",
+                "text": "Nakisangkot ba ako sa okulto (Wicca, Satanismo, pagtawag sa mga demonyo, Ouija board, itim na mahika o kulam, pagbebenta ng kaluluwa, séance, pakikipag-ugnayan sa mga espiritu, shamanismo, pagkonsulta sa mga espiritista o medium, Reiki, panghuhula, paggamit ng mga anting-anting, horoscope, astrolohiya, pagbasa ng palad, clairvoyance, pagbibigay-kahulugan sa palabunutan, o pagbasa ng baraha)?"
+            },
+            {
+                "id": "tl-01-018",
+                "text": "Naniwala ba ako o nagsagawa ng pamahiin? Itinuring ko bang may kapangyarihang sobrenatural ang anumang bagay maliban sa Diyos?"
+            },
+            {
+                "id": "tl-01-019",
+                "text": "Hinayaan ko bang maging diyus-diyosan ang social media, video games, o internet, na umuubos ng panahong nauukol sa Diyos at sa aking pamilya?"
+            },
+            {
+                "id": "tl-01-020",
+                "text": "Hinanap ko ba ang aking halaga bilang tao sa papuri at pagkilala online sa halip na sa aking pagkakakilanlan bilang anak ng Diyos?"
+            },
+            {
+                "id": "tl-01-021",
+                "text": "Gumugol ba ako ng labis na oras sa mga screen na nakasama sa aking mga pang-araw-araw na tungkulin o sa aking buhay-panalangin?"
+            },
+            {
+                "id": "tl-01-022",
+                "text": "Sumamba ba ako sa maraming diyos (politeismo)?"
+            },
+            {
+                "id": "tl-01-023",
+                "text": "Nagwalang-bahala ba ako sa pananampalataya o sa Diyos?"
+            },
+            {
+                "id": "tl-01-024",
+                "text": "Naging walang utang na loob ba ako sa maraming biyayang ipinagkaloob sa akin ng Diyos?"
+            },
+            {
+                "id": "tl-01-025",
+                "text": "Naging malahininga ba ako sa pananampalataya?"
+            },
+            {
+                "id": "tl-01-026",
+                "text": "Naging tamad ba ako sa aking pananampalataya at paglagong espirituwal?"
+            },
+            {
+                "id": "tl-01-027",
+                "text": "Napabayaan ko ba ang pananalangin?"
+            },
+            {
+                "id": "tl-01-028",
+                "text": "Tinalikuran ko ba ang mga pangako o panatang ginawa ko sa Diyos?"
+            },
+            {
+                "id": "tl-01-029",
+                "text": "Hinadlangan ko ba ang pananampalataya ng ibang tao o nakiisa sa paghihigpit sa kalayaan ng iba sa relihiyon? Kinutya ko ba ang sinuman dahil sa kaniyang pananampalataya sa Diyos? Pinilit ko ba ang iba na labagin ang mga aral ng kanilang pananampalataya o budhi?"
+            },
+            {
+                "id": "tl-01-030",
+                "text": "Tinukso ko ba ang Diyos sa pamamagitan ng pagsubok sa Kaniyang kabutihan at dakilang kapangyarihan sa salita o sa gawa?"
+            },
+            {
+                "id": "tl-01-031",
+                "text": "Nagkasala ba ako ng sakrilehiyo? Tumanggap ba ako ng alinmang sakramento nang hindi nakahanda ang aking kaluluwa (halimbawa, pagtanggap ng Banal na Komunyon, kumpil, kasal, o banal na orden habang may kasalanang mortal sa aking kaluluwa)? Iginalang ko ba nang nararapat ang mga taong nakatalaga sa Diyos tulad ng mga pari, madre, obispo, o ng Santo Papa, ang mga banal na lugar tulad ng mga simbahan, kapilya, at mga banal na pook, at ang mga bagay na benditado o banal tulad ng mga rosaryo, relikya, at Bibliya? Nagsinungaling ba ako tungkol sa aking mga kasalanan o sadyang naglihim ng ilang mabibigat na kasalanan sa sakramento ng kumpisal?"
+            },
+            {
+                "id": "tl-01-032",
+                "text": "Nagkasala ba ako ng simonya sa pamamagitan ng pagbili o pagbebenta ng mga bagay na espirituwal?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "tl-2",
+        "questions": [
+            {
+                "id": "tl-02-001",
+                "text": "Ginamit ko ba ang pangalan ng Diyos sa paraang walang galang, pabaya, o lapastangan?"
+            },
+            {
+                "id": "tl-02-002",
+                "text": "Nagsalita ba ako nang walang galang, may poot, may paghamon, o may kapabayaan tungkol sa pananampalataya, o sa mga banal na tao, lugar, at bagay?"
+            },
+            {
+                "id": "tl-02-003",
+                "text": "Itinaguyod ko ba ang pananalitang walang galang, mapoot, mapanghamon, o pabaya tungkol sa pananampalataya o sa mga banal na tao, lugar, at bagay?"
+            },
+            {
+                "id": "tl-02-004",
+                "text": "Nanood ba ako ng mga pelikula o nakinig sa musikang lapastangan o walang paggalang sa Diyos?"
+            },
+            {
+                "id": "tl-02-005",
+                "text": "Nagmura ba ako o gumamit ng masasagwang salita?"
+            },
+            {
+                "id": "tl-02-006",
+                "text": "Nagsalita ba ako nang walang galang tungkol sa ibang tao?"
+            },
+            {
+                "id": "tl-02-007",
+                "text": "Nagsinungaling ba ako habang nakapanumpa (perhurya)?"
+            },
+            {
+                "id": "tl-02-008",
+                "text": "Nanumpa ba ako o nangako sa pangalan ng Diyos sa mga bagay na hindi totoo, o sa mga bagay na walang gaanong kabuluhan kahit na totoo ang mga ito?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "tl-3",
+        "questions": [
+            {
+                "id": "tl-03-001",
+                "text": "Lumiban ba ako sa Banal na Misa tuwing Linggo o sa mga pistang pangilin nang walang mabigat na dahilan?"
+            },
+            {
+                "id": "tl-03-002",
+                "text": "Hindi ko ba isinama ang aking mga anak sa Banal na Misa tuwing Linggo at sa mga pistang pangilin nang walang mabigat na dahilan?"
+            },
+            {
+                "id": "tl-03-003",
+                "text": "Dumating ba akong huli sa Misa o umalis nang maaga nang walang mabigat na dahilan?"
+            },
+            {
+                "id": "tl-03-004",
+                "text": "Nagtrabaho ba ako tuwing Linggo o sa ibang mga pistang pangilin nang walang mabigat na dahilan?"
+            },
+            {
+                "id": "tl-03-005",
+                "text": "Tumanggi ba akong tulungan ang iba upang makadalo sila sa Misa tuwing Linggo at sa mga pistang pangilin?"
+            },
+            {
+                "id": "tl-03-006",
+                "text": "Namili ba ako o gumamit ng mga serbisyong hindi naman kinakailangan tuwing Linggo at sa mga pistang pangilin?"
+            },
+            {
+                "id": "tl-03-007",
+                "text": "Sinadya ko bang kumain ng karne o tumangging mag-ayuno sa mga araw na itinakda ng Simbahan para sa pag-aayuno at pag-iwas sa karne?"
+            },
+            {
+                "id": "tl-03-008",
+                "text": "Nilabag ko ba ang isang oras na pag-aayuno bago tumanggap ng Banal na Komunyon?"
+            },
+            {
+                "id": "tl-03-009",
+                "text": "Inatasan ko ba ang mga manggagawang nasa ilalim ng aking pamamahala na magtrabaho sa araw ng Linggo o sa pistang pangilin nang walang mabigat na dahilan?"
+            },
+            {
+                "id": "tl-03-010",
+                "text": "Naging sanhi ba ako ng pagkagambala ng iba sa Misa dahil sa aking pananamit, pag-uugali, o paggamit ng cellphone?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "tl-4",
+        "questions": [
+            {
+                "id": "tl-04-001",
+                "text": "Sinuway ko ba ang makatwirang kagustuhan ng aking mga magulang?"
+            },
+            {
+                "id": "tl-04-002",
+                "text": "Nagsalita ba ako nang walang galang sa aking mga magulang o sa mga lehitimong may kapangyarihan, kabilang ang mga opisyal ng pamahalaan at mga amo sa trabaho?"
+            },
+            {
+                "id": "tl-04-003",
+                "text": "Sinuway ko ba ang makatwirang kagustuhan ng aking mga guro (kung nag-aaral pa)?"
+            },
+            {
+                "id": "tl-04-004",
+                "text": "Napabayaan ko ba ang pag-aalaga at pagtustos sa aking mga magulang na matanda na o sa iba pang kapamilya?"
+            },
+            {
+                "id": "tl-04-005",
+                "text": "Napabayaan ko ba ang mga pangangailangan, edukasyon, disiplina, o paghubog na espirituwal ng aking mga anak?"
+            },
+            {
+                "id": "tl-04-006",
+                "text": "Nagkulang ba ako sa paggabay sa aking mga anak upang maunawaan nila ang kalikasan ng sekswalidad ng tao at ang mga aral ng Simbahan tungkol dito?"
+            },
+            {
+                "id": "tl-04-007",
+                "text": "Nagkulang ba ako sa pananalangin araw-araw kasama ang aking mga anak?"
+            },
+            {
+                "id": "tl-04-008",
+                "text": "Napabayaan ko bang himukin ang aking mga anak na regular na tumanggap ng mga sakramento ng Banal na Komunyon at Kumpisal?"
+            },
+            {
+                "id": "tl-04-009",
+                "text": "Nagkulang ba ako sa maingat na paghubog ng aking budhi bago bumoto, o nagtaguyod ng mga patakarang salungat sa kabutihang panlahat, sa kalayaan sa relihiyon, o sa batas moral?"
+            },
+            {
+                "id": "tl-04-010",
+                "text": "Nagkulang ba ako sa pamumuhay nang marangal at puno ng kabutihang-asal?"
+            },
+            {
+                "id": "tl-04-011",
+                "text": "Nagkulang ba ako sa pagmamahal at pagsasakripisyo para sa aking pamilya?"
+            },
+            {
+                "id": "tl-04-012",
+                "text": "Itinaguyod ko ba ang mga patakaran o batas na sumisira sa pamilya, tulad ng paglusot sa kinakailangang pahintulot ng magulang, o isinulong ang mga di-likas na anyo ng pamilya tulad ng pag-aampon ng magkasintahang parehong kasarian o ng solong magulang, at ang mga hakbang ng pagkontrol sa populasyon? Itinaguyod ko ba ang mga patakaran o batas na sumisira sa kabutihang panlahat at sa batas moral?"
+            },
+            {
+                "id": "tl-04-013",
+                "text": "Hinimok ko ba ang iba na huwag igalang ang lehitimong awtoridad?"
+            },
+            {
+                "id": "tl-04-014",
+                "text": "Tumanggi ba akong tanggapin ang payo o pagsaway ng aking mga magulang?"
+            },
+            {
+                "id": "tl-04-015",
+                "text": "Nagkulang ba ako sa paghubog sa aking mga anak upang maging bukás sila sa mga bokasyon (pag-aasawa, banal na orden, konsagradong buhay na walang asawa, atbp.)?"
+            },
+            {
+                "id": "tl-04-016",
+                "text": "Nagkulang ba ako sa pagtataguyod ng makatarungang pagtrato sa mga dukha, nangangailangan, o migrante sa lipunan?"
+            },
+            {
+                "id": "tl-04-017",
+                "text": "Gumamit ba ako ng karahasan laban sa iba?"
+            },
+            {
+                "id": "tl-04-018",
+                "text": "Sinira ko ba ang awtoridad ng aking asawa sa harap ng aming mga anak?"
+            },
+            {
+                "id": "tl-04-019",
+                "text": "Napabayaan ko bang bantayan ang paggamit ng aking mga anak sa internet at teknolohiya upang pangalagaan ang kanilang kalinisang-puri?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "tl-5",
+        "questions": [
+            {
+                "id": "tl-05-001",
+                "text": "Pumatay ba ako o nanakit ng tao, nang tuwiran man o dahil sa kapabayaan at nang di-makatarungan, o nakiisa sa ganitong gawain?"
+            },
+            {
+                "id": "tl-05-002",
+                "text": "Nagkulang ba ako sa pagtataguyod ng dangal at kabanalan ng buhay ng tao?"
+            },
+            {
+                "id": "tl-05-003",
+                "text": "Itinaguyod ko ba ang digmaan, tortyur, pagbihag ng mga tao (hostage-taking), pagkidnap, o pagpatay sa mga taong walang kalaban-laban?"
+            },
+            {
+                "id": "tl-05-004",
+                "text": "Nagpalaglag ba ako o kumuha ng mga gamot na nagpapalaglag, o tumulong sa iba upang makapagpalaglag?"
+            },
+            {
+                "id": "tl-05-005",
+                "text": "Itinaguyod ko ba o hayagang isinulong ang aborsiyon?"
+            },
+            {
+                "id": "tl-05-006",
+                "text": "Sumailalim ba ako, nakilahok, o nagtaguyod ng in vitro fertilization?"
+            },
+            {
+                "id": "tl-05-007",
+                "text": "Itinaguyod ko ba ang pag-clone ng tao o ang pagbabago ng genes (genetic modification)?"
+            },
+            {
+                "id": "tl-05-008",
+                "text": "Itinaguyod ko ba o sinuportahan ang pananaliksik o paggamot na gumagamit ng embryonic stem cells?"
+            },
+            {
+                "id": "tl-05-009",
+                "text": "Itinaguyod ko ba ang eugenics o ang mga batas ng pagkontrol sa populasyon?"
+            },
+            {
+                "id": "tl-05-010",
+                "text": "Tumanggi ba akong \"iharap ang kabilang pisngi\" o mahalin ang aking mga kaaway?"
+            },
+            {
+                "id": "tl-05-011",
+                "text": "Tinangka ko ba o pinag-isipang patayin o saktan ang aking sarili?"
+            },
+            {
+                "id": "tl-05-012",
+                "text": "Itinaguyod ko ba ang euthanasia o ang kilusang nagsusulong ng karapatang magpakamatay?"
+            },
+            {
+                "id": "tl-05-013",
+                "text": "Tumanggi ba ako o nagkulang sa pagbibigay ng makatwirang pangangalaga sa taong malapit nang mamatay, kabilang ang mga medikal na pamamaraan, pagkain at tubig, at gamot sa pananakit?"
+            },
+            {
+                "id": "tl-05-014",
+                "text": "Napabayaan ko ba ang mga espirituwal na pangangailangan ng isang taong naghihingalo (kabilang ang pagtawag ng pari para sa pagpapahid ng langis sa maysakit, o ang pananalangin para sa kaniya)?"
+            },
+            {
+                "id": "tl-05-015",
+                "text": "Nagnasa ba akong pumatay ng tao?"
+            },
+            {
+                "id": "tl-05-016",
+                "text": "Gumamit ba ako ng puwersang higit sa kinakailangan sa pagtatanggol sa aking sarili?"
+            },
+            {
+                "id": "tl-05-017",
+                "text": "Nagkulang ba ako sa pagprotekta sa iba ayon sa abot ng aking makakaya at tungkulin?"
+            },
+            {
+                "id": "tl-05-018",
+                "text": "Nanakit ba ako ng kapwa sa pisikal, emosyonal, o sikolohikal na paraan, o nagnasang gawin ito?"
+            },
+            {
+                "id": "tl-05-019",
+                "text": "Naging sanhi ba ako ng eskandalo o nagpakita ng kawalang-malasakit sa kaluluwa ng iba?"
+            },
+            {
+                "id": "tl-05-020",
+                "text": "Napoot ba ako sa isang tao o hinangad ang masama para sa kaniya?"
+            },
+            {
+                "id": "tl-05-021",
+                "text": "Nagkulang ba ako sa paggalang sa mga yumao o sa kanilang mga labi?"
+            },
+            {
+                "id": "tl-05-022",
+                "text": "Nagkulang ba ako sa pagbibigay ng nararapat na libing sa mga yumao?"
+            },
+            {
+                "id": "tl-05-023",
+                "text": "Itinaguyod ko ba ang mga di-makatarungang parusa, o sinuportahan ang paggamit ng parusang kamatayan, na itinuturo ng Simbahang hindi na katanggap-tanggap?"
+            },
+            {
+                "id": "tl-05-024",
+                "text": "Nandiskrimina ba ako ng kapwa sa pamamagitan ng pagkakait sa kaniya ng anumang nararapat sa kaniya ayon sa katarungan, sa loob ng hangganan ng batas moral at ng likas na batas?"
+            },
+            {
+                "id": "tl-05-025",
+                "text": "Kinutya ko ba, tinakot, o minaliit ang isang tao?"
+            },
+            {
+                "id": "tl-05-026",
+                "text": "Naging pabaya ba ako sa buhay ng tao dahil sa aking mga kilos o kawalan ng pag-iingat?"
+            },
+            {
+                "id": "tl-05-027",
+                "text": "Nag-abuso ba ako sa alak o gumamit ng ipinagbabawal na droga?"
+            },
+            {
+                "id": "tl-05-028",
+                "text": "Nagpakita ba ako ng kawalang-malasakit sa aking kalusugan o sa kalusugan ng iba?"
+            },
+            {
+                "id": "tl-05-029",
+                "text": "Itinaguyod ko ba ang paggamit ng alak, droga, o anumang bagay na nakapipinsala?"
+            },
+            {
+                "id": "tl-05-030",
+                "text": "Nagkasala ba ako ng katakawan o hinikayat ang iba na magkasala nito?"
+            },
+            {
+                "id": "tl-05-031",
+                "text": "Nagkulang ba ako sa pagtataguyod ng kapayapaan?"
+            },
+            {
+                "id": "tl-05-032",
+                "text": "Naging sanhi ba ako ng eskandalo dahil sa aking mga ginawa o hindi ginawa?"
+            },
+            {
+                "id": "tl-05-033",
+                "text": "Hinikayat ko ba o tinulungan ang iba na magkasala?"
+            },
+            {
+                "id": "tl-05-034",
+                "text": "Hinayaan ko bang supilin ako ng aking galit o hinayaan itong magpatuloy nang walang pagpigil?"
+            },
+            {
+                "id": "tl-05-035",
+                "text": "Nagkulang ba ako ng pag-ibig sa isang tao, nakipag-away sa kaniya, o nagkimkim ng sama ng loob?"
+            },
+            {
+                "id": "tl-05-036",
+                "text": "Tumanggi ba akong magpatawad sa taong humingi sa akin ng tawad?"
+            },
+            {
+                "id": "tl-05-037",
+                "text": "Naghangad ba ako o nag-isip ng paghihiganti?"
+            },
+            {
+                "id": "tl-05-038",
+                "text": "Natuwa ba ako sa kasawian ng iba?"
+            },
+            {
+                "id": "tl-05-039",
+                "text": "Nagmalupit ba ako sa mga hayop o pumatay ng mga ito nang hindi kinakailangan?"
+            },
+            {
+                "id": "tl-05-040",
+                "text": "Isinapanganib ko ba ang aking buhay o ang buhay ng iba dahil sa pabayang pagmamaneho o paggamit ng cellphone habang nagmamaneho?"
+            },
+            {
+                "id": "tl-05-041",
+                "text": "Kinutya ko ba o nilait ang iba dahil sa kanilang kapansanang pisikal o pangkaisipan?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "tl-6",
+        "questions": [
+            {
+                "id": "tl-06-001",
+                "text": "Nagkulang ba ako sa pagsasabuhay at pagtataguyod ng kalinisang-puri?"
+            },
+            {
+                "id": "tl-06-002",
+                "text": "Naghanap ba ako ng kasiyahang sekswal sa labas ng pagtatalik ng mag-asawa?"
+            },
+            {
+                "id": "tl-06-003",
+                "text": "Gumamit ba ako ng artipisyal na pagpipigil sa pagbubuntis (kontrasepsiyon) o hinikayat ang paggamit nito?"
+            },
+            {
+                "id": "tl-06-004",
+                "text": "Tumanggi ba ako sa pagkakaroon ng mga anak at sa kaloob ng buhay nang walang makatarungang dahilan?"
+            },
+            {
+                "id": "tl-06-005",
+                "text": "Namuhay ba akong kasama ang aking karelasyon bago ikasal (live-in)?"
+            },
+            {
+                "id": "tl-06-006",
+                "text": "Nagtanim ba ako ng di-nararapat na romantiko o emosyonal na pagkalapit sa ibang tao na hindi ko asawa?"
+            },
+            {
+                "id": "tl-06-007",
+                "text": "Nakilahok ba ako sa in vitro fertilization o sa mga imoral na paggamot sa pagkabaog (mga paggamot na hindi nagtataguyod ng pagbubuntis sa pamamagitan ng pagtatalik ng mag-asawa), o hinikayat ang iba na gawin ito?"
+            },
+            {
+                "id": "tl-06-008",
+                "text": "Ipinasagawa ko ba ang isterilisasyon ng aking mga bahaging pang-reproduksiyon o hinikayat ang iba na gawin ito?"
+            },
+            {
+                "id": "tl-06-009",
+                "text": "Pinilit ko ba ang sinuman na makipagtalik (kabilang ang sariling asawa)?"
+            },
+            {
+                "id": "tl-06-010",
+                "text": "Ipinagkait ko ba ang pakikipagtalik sa aking asawa nang walang makatarungang dahilan?"
+            },
+            {
+                "id": "tl-06-011",
+                "text": "Nagsagawa ba ako ng masturbasyon (pagbibigay ng kasiyahang sekswal sa aking sarili, mag-isa man o kasama ang iba, sa labas ng pagtatalik ng mag-asawa)?"
+            },
+            {
+                "id": "tl-06-012",
+                "text": "Sinadya ko bang hangarin o idulot ang sukdulang kasiyahang sekswal sa labas ng pagtatalik ng mag-asawa?"
+            },
+            {
+                "id": "tl-06-013",
+                "text": "Nagbigay ba ako o nagtaguyod ng edukasyong sekswal na hindi sumusunod sa mga aral ng Simbahang Katolika?"
+            },
+            {
+                "id": "tl-06-014",
+                "text": "Gumamit ba ako o nagtaguyod ng pornograpiya, sa mga larawan man, video, audio, o sa nakasulat na anyo?"
+            },
+            {
+                "id": "tl-06-015",
+                "text": "Nagkaloob ba ako ng binhi (sperm) o itlog (egg cell)?"
+            },
+            {
+                "id": "tl-06-016",
+                "text": "Nalibang ba ako sa mahahalay (may kahubaran o pagtatalik) na pelikula, palabas sa telebisyon, musika, usapan, o biro?"
+            },
+            {
+                "id": "tl-06-017",
+                "text": "Nangalunya ba ako (mga gawaing sekswal sa asawa ng iba, o sa ibang tao maliban sa aking asawa habang ako ay may-asawa)?"
+            },
+            {
+                "id": "tl-06-018",
+                "text": "Hiniwalayan ko ba ang aking asawa (diborsiyo) o pinag-isipang gawin ito nang walang mabigat na dahilan, kahit na balido ang aming kasal?"
+            },
+            {
+                "id": "tl-06-019",
+                "text": "Pumasok ba ako sa isang pag-aasawa nang walang basbas ng Simbahan?"
+            },
+            {
+                "id": "tl-06-020",
+                "text": "Nagkasala ba ako ng pakikipagtalik sa sariling kadugo (incest)?"
+            },
+            {
+                "id": "tl-06-021",
+                "text": "Nakisangkot ba ako sa poligamya o poliandriya (pagkakaroon ng higit sa isang asawa)?"
+            },
+            {
+                "id": "tl-06-022",
+                "text": "Nasangkot ba ako sa tinatawag na \"open marriage\"?"
+            },
+            {
+                "id": "tl-06-023",
+                "text": "Nakipagtalik ba ako sa labas ng kasal (pakikiapid, mga gawaing homosekswal)?"
+            },
+            {
+                "id": "tl-06-024",
+                "text": "Nakagawa ba ako ng panggagahasa?"
+            },
+            {
+                "id": "tl-06-025",
+                "text": "Nakisangkot ba ako sa petting, sexting, o iba pang foreplay sa labas ng kasal?"
+            },
+            {
+                "id": "tl-06-026",
+                "text": "Nanakit ba ako ng mga bata sa sekswal na paraan?"
+            },
+            {
+                "id": "tl-06-027",
+                "text": "Gumawa ba ako ng mga di-likas na gawaing sekswal (pakikipagtalik sa hayop, sa mga bagay, atbp.)?"
+            },
+            {
+                "id": "tl-06-028",
+                "text": "Nakisangkot ba ako sa prostitusyon o nagtaguyod nito?"
+            },
+            {
+                "id": "tl-06-029",
+                "text": "Nang-akit ba ako ng iba sa kasalanan o hinayaan ang aking sariling maakit?"
+            },
+            {
+                "id": "tl-06-030",
+                "text": "Tumanggi ba akong tanggapin ang aking kasariang bigay ng Diyos (operasyon sa pagpapalit ng kasarian, pagsusuot ng damit ng kabilang kasarian, atbp.)?"
+            },
+            {
+                "id": "tl-06-031",
+                "text": "Itinaguyod ko ba, isinulong, o nakiisa sa mga kasalanan laban sa ikaanim na utos?"
+            },
+            {
+                "id": "tl-06-032",
+                "text": "Nakisangkot ba ako sa di-nararapat na relasyon online o sa cyber-sex?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "tl-7",
+        "questions": [
+            {
+                "id": "tl-07-001",
+                "text": "Nagnakaw ba ako?"
+            },
+            {
+                "id": "tl-07-002",
+                "text": "Nagsugal ba ako nang labis?"
+            },
+            {
+                "id": "tl-07-003",
+                "text": "Nakagawa ba ako ng pandaraya (paggawa ng maling paghahabol sa seguro, pamemeke ng impormasyon para sa pakinabang na pinansiyal)?"
+            },
+            {
+                "id": "tl-07-004",
+                "text": "Tumanggi ba akong maging bukas-palad sa mga nangangailangan mula sa aking mga kayamanan?"
+            },
+            {
+                "id": "tl-07-005",
+                "text": "Nag-aksaya ba ako ng pera sa mga bagay na hindi kinakailangan habang pinababayaan ang mga pangangailangan ng mahihirap?"
+            },
+            {
+                "id": "tl-07-006",
+                "text": "Nagkulang ba ako sa pagsasagawa ng mga gawa ng awa para sa katawan?"
+            },
+            {
+                "id": "tl-07-007",
+                "text": "Sinira ko ba o dinungisan ang ari-arian ng iba (bandalismo)?"
+            },
+            {
+                "id": "tl-07-008",
+                "text": "Nandaya ba ako?"
+            },
+            {
+                "id": "tl-07-009",
+                "text": "Nagkulang ba ako sa pagbabayad ng makatarungang sahod sa aking mga manggagawa para sa kanilang tapat na paggawa?"
+            },
+            {
+                "id": "tl-07-010",
+                "text": "Hinadlangan ko ba ang isang tao sa pagkakaroon ng trabaho (di-makatarungang pandidiskrimina, o pagsira sa pagkakataon ng iba na matanggap sa trabaho)?"
+            },
+            {
+                "id": "tl-07-011",
+                "text": "Itinaguyod ko ba ang mga gawaing humahantong sa pagkaalipin ng iba (mga sweatshop, human trafficking, o tahasang pang-aalipin)?"
+            },
+            {
+                "id": "tl-07-012",
+                "text": "Lumabag ba ako sa isang kontrata sa hindi pagtupad ng aking bahagi ng obligasyon?"
+            },
+            {
+                "id": "tl-07-013",
+                "text": "Nakilahok ba ako o nagtaguyod ng di-makatarungang welga o lockout?"
+            },
+            {
+                "id": "tl-07-014",
+                "text": "Nagkabaon ba ako sa labis na utang at/o hindi ito binayaran?"
+            },
+            {
+                "id": "tl-07-015",
+                "text": "Nagpatubo ba ako nang labis sa pautang (usura)?"
+            },
+            {
+                "id": "tl-07-016",
+                "text": "Siningil ko ba nang sobra ang isang tao o sinamantala siya sa isang kalakalan?"
+            },
+            {
+                "id": "tl-07-017",
+                "text": "Naghain ba ako o nagtaguyod ng di-makatarungang demanda laban sa isang tao?"
+            },
+            {
+                "id": "tl-07-018",
+                "text": "Nagkulang ba ako sa pagsasauli o pagbabayad-pinsala para sa pagnanakaw, pandaraya, o anumang ibang paglabag sa ikapitong utos?"
+            },
+            {
+                "id": "tl-07-019",
+                "text": "Nagpakita ba ako ng kawalang-malasakit sa kapaligiran?"
+            },
+            {
+                "id": "tl-07-020",
+                "text": "Nagkulang ba ako sa paggalang sa pribadong pag-aari, o lumabag sa aral ng Simbahan tungkol sa subsidiarity sa pamamagitan ng pagtataguyod ng labis na sosyalismo o labis na kontrol ng pamahalaan sa mga yaman?"
+            },
+            {
+                "id": "tl-07-021",
+                "text": "Nagkulang ba ako sa masikap na paggawa at sa pagbibigay ng tapat na paglilingkod sa aking pinagtatrabahuhan?"
+            },
+            {
+                "id": "tl-07-022",
+                "text": "Kinamuhian ko ba ang trabaho o nagpadala sa katamaran?"
+            },
+            {
+                "id": "tl-07-023",
+                "text": "Nagkulang ba ako sa nararapat na pagtatrabaho para sa aking pamilya?"
+            },
+            {
+                "id": "tl-07-024",
+                "text": "Ipinagkait ko ba o ipinagpaliban ang sahod na nararapat sa mga manggagawa?"
+            },
+            {
+                "id": "tl-07-025",
+                "text": "Nagtangka ba akong mag-espekula at itaas ang presyo ng mga bilihin o serbisyo?"
+            },
+            {
+                "id": "tl-07-026",
+                "text": "Lumabag ba ako sa mga batas ng copyright sa pamamagitan ng pamimirata ng software, musika, o pelikula?"
+            },
+            {
+                "id": "tl-07-027",
+                "text": "Sinayang ko ba ang oras ng aking pinagtatrabahuhan dahil sa labis na paggamit ng internet o social media sa oras ng trabaho?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "tl-8",
+        "questions": [
+            {
+                "id": "tl-08-001",
+                "text": "Nagsinungaling ba ako o sadyang nilinlang ang isang tao?"
+            },
+            {
+                "id": "tl-08-002",
+                "text": "Nagtsismis ba ako?"
+            },
+            {
+                "id": "tl-08-003",
+                "text": "Nagsinungaling ba ako habang nakapanumpa (perhurya)?"
+            },
+            {
+                "id": "tl-08-004",
+                "text": "Inisip ko ba agad ang pinakamasama tungkol sa isang tao o hinusgahan siya nang di-makatarungan?"
+            },
+            {
+                "id": "tl-08-005",
+                "text": "Sinira ko ba ang reputasyon ng iba sa pamamagitan ng detraksiyon (pagkukuwento sa iba ng mga pagkukulang ng isang tao nang walang mabigat na dahilan), o paninirang-puri (pagsisinungaling tungkol sa isang tao), o libelo (pagsusulat ng kasinungalingan tungkol sa isang tao)?"
+            },
+            {
+                "id": "tl-08-006",
+                "text": "Naghanap ba ako nang labis ng pagkilala online o lumikha ng huwad na larawan ng aking sarili?"
+            },
+            {
+                "id": "tl-08-007",
+                "text": "Nagkulang ba ako sa pagtatanggol sa reputasyon ng isang tao?"
+            },
+            {
+                "id": "tl-08-008",
+                "text": "Hindi ko ba iningatan ang isang lihim o ipinagkanulo ang tiwala ng isang tao?"
+            },
+            {
+                "id": "tl-08-009",
+                "text": "Nanatili ba akong tahimik o nakiisa sa paninira sa Simbahang Katolika?"
+            },
+            {
+                "id": "tl-08-010",
+                "text": "Nagkulang ba ako sa pagiging tapat o prangka kung kinakailangan?"
+            },
+            {
+                "id": "tl-08-011",
+                "text": "Namuhay ba ako ng dobleng buhay?"
+            },
+            {
+                "id": "tl-08-012",
+                "text": "Naging ipokrito ba ako?"
+            },
+            {
+                "id": "tl-08-013",
+                "text": "Pinilit ko ba ang iba na magsinungaling?"
+            },
+            {
+                "id": "tl-08-014",
+                "text": "Hinadlangan ko ba ang iba sa pagsasabi ng katotohanan?"
+            },
+            {
+                "id": "tl-08-015",
+                "text": "Nagkasala ba ako ng pambobola?"
+            },
+            {
+                "id": "tl-08-016",
+                "text": "Naging mayabang o mapagmataas ba ako?"
+            },
+            {
+                "id": "tl-08-017",
+                "text": "Binaluktot ko ba ang katotohanan, nagmalabis sa pagsasalaysay, gumawa ng maling (straw-man) na argumento, o umatake sa tao mismo (ad hominem) sa halip na sa argumento o pananaw?"
+            },
+            {
+                "id": "tl-08-018",
+                "text": "Nagkulang ba ako sa pagsasaayos ng reputasyon ng taong siniraan ko sa pamamagitan ng kasinungalingan?"
+            },
+            {
+                "id": "tl-08-019",
+                "text": "Isiniwalat ko ba ang katotohanan sa taong walang karapatan dito (tulad ng isang di-makatarungang mananalakay)?"
+            },
+            {
+                "id": "tl-08-020",
+                "text": "Nilabag ko ba ang Selyo ng Kumpisal sa pamamagitan ng pagsasabi sa iba ng nilalaman ng kumpisal ng ibang tao?"
+            },
+            {
+                "id": "tl-08-021",
+                "text": "Isiniwalat ko ba ang mga propesyonal na lihim nang walang mabigat na dahilan?"
+            },
+            {
+                "id": "tl-08-022",
+                "text": "Tinanggap ko ba bilang totoo ang sinasabi ng iba nang walang nararapat na pagsusuri (lalo na sa mga usapin ng pananampalataya at moral, o kung nakataya ang reputasyon ng iba)?"
+            },
+            {
+                "id": "tl-08-023",
+                "text": "Nagpalaganap ba ako ng maling impormasyong pampubliko (propaganda)?"
+            },
+            {
+                "id": "tl-08-024",
+                "text": "Nagbahagi ba ako ng di-napatunayan o maling impormasyon (fake news) sa social media?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "tl-9",
+        "questions": [
+            {
+                "id": "tl-09-001",
+                "text": "Nagpadala ba ako sa konkupisensiya (matitinding pagnanasang sekswal)?"
+            },
+            {
+                "id": "tl-09-002",
+                "text": "Nagpadala ba ako sa kahalayan (ang magulo at labis na pagnanasa ng kasiyahang sekswal)?"
+            },
+            {
+                "id": "tl-09-003",
+                "text": "Nagbitaw ba ako ng mga salitang may bahid-kahalayan o panliligalig, o gumawa ng ganitong pang-aakit sa isang tao?"
+            },
+            {
+                "id": "tl-09-004",
+                "text": "Nagkulang ba ako sa mahinhing pananamit, o hindi ko ba inilayo ang aking paningin kapag may nakikita akong nakadamit nang di-mahinhin?"
+            },
+            {
+                "id": "tl-09-005",
+                "text": "Nilabag ko ba ang pribadong buhay ng isang tao sa pamamagitan ng paniniktik sa kaniya?"
+            },
+            {
+                "id": "tl-09-006",
+                "text": "Hinikayat ko ba o kusang-loob na kinaluguran ang mahahalay na isipan?"
+            },
+            {
+                "id": "tl-09-007",
+                "text": "Itinaguyod ko ba ang pagpapalipat-lipat sa pakikipagrelasyong sekswal (promiscuity), ang mga imoral na saloobin sa pakikipagtalik, kahinhinan, o kalinisang-puri, o ang pagpapabaya sa moralidad?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "tl-10",
+        "questions": [
+            {
+                "id": "tl-10-001",
+                "text": "Nainggit ba ako sa iba dahil sa kanilang mga ari-arian?"
+            },
+            {
+                "id": "tl-10-002",
+                "text": "Naging sakim ba ako?"
+            },
+            {
+                "id": "tl-10-003",
+                "text": "Nag-imbot ba ako sa mga ari-arian ng iba?"
+            },
+            {
+                "id": "tl-10-004",
+                "text": "Nagkulang ba ako sa payak na pamumuhay at sa halip ay nagpadala sa materyalismo?"
+            },
+            {
+                "id": "tl-10-005",
+                "text": "Hindi ba ako nakigalak sa tagumpay ng iba?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "tl-11",
+        "questions": [
+            {
+                "id": "tl-11-001",
+                "text": "Hindi ba ako dumalo sa Banal na Misa tuwing Linggo o sa mga pistang pangilin?"
+            },
+            {
+                "id": "tl-11-002",
+                "text": "Hindi ko ba inilaan ang mga Linggo at pistang pangilin para sa pahinga?"
+            },
+            {
+                "id": "tl-11-003",
+                "text": "Nagkulang ba ako sa pangungumpisal ng aking mga kasalanan kahit minsan man lang bawat taon?"
+            },
+            {
+                "id": "tl-11-004",
+                "text": "Nangumpisal ba ako nang hindi tapat o sadyang hindi buo?"
+            },
+            {
+                "id": "tl-11-005",
+                "text": "Nagkulang ba ako sa nararapat na paghahanda ng aking kaluluwa sa pagtanggap ng Banal na Komunyon?"
+            },
+            {
+                "id": "tl-11-006",
+                "text": "Hindi ko ba ginampanan ang penitensiyang ibinigay sa akin sa kumpisal?"
+            },
+            {
+                "id": "tl-11-007",
+                "text": "Nagkulang ba ako sa pagbabayad-puri para sa pinsalang idinulot ng aking mga kasalanan?"
+            },
+            {
+                "id": "tl-11-008",
+                "text": "Nagkulang ba ako sa masusing pagsusuri ng budhi bago mangumpisal o sa tapat na pagsisikap na alalahanin ang lahat ng aking mga kasalanan?"
+            },
+            {
+                "id": "tl-11-009",
+                "text": "Nangumpisal ba ako nang walang matibay na hangaring magbago o walang pagsisisi sa aking mga kasalanan?"
+            },
+            {
+                "id": "tl-11-010",
+                "text": "Nagkulang ba ako sa pagtanggap ng Banal na Komunyon kahit minsan man lang sa Panahon ng Pasko ng Pagkabuhay (mula sa Bihilya ng Pasko ng Pagkabuhay hanggang sa Linggo ng Pentekostes)?"
+            },
+            {
+                "id": "tl-11-011",
+                "text": "Tumanggap ba ako ng Komunyon habang wala sa kalagayan ng grasya (may kasalanang mortal sa aking kaluluwa)?"
+            },
+            {
+                "id": "tl-11-012",
+                "text": "Hindi ko ba sinunod ang Eukaristikong Pag-aayuno bago tumanggap ng Banal na Komunyon?"
+            },
+            {
+                "id": "tl-11-013",
+                "text": "Kumain ba ako ng karne sa mga Biyernes ng Kuwaresma?"
+            },
+            {
+                "id": "tl-11-014",
+                "text": "Hindi ko ba sinunod ang mga alituntunin ng pag-aayuno sa Miyerkules ng Abo at Biyernes Santo?"
+            },
+            {
+                "id": "tl-11-015",
+                "text": "Hindi ko ba sinunod ang diwa ng mga alituntunin tungkol sa pag-aayuno at pag-iwas sa karne?"
+            },
+            {
+                "id": "tl-11-016",
+                "text": "Nagkulang ba ako sa pag-iwas sa karne tuwing Biyernes sa buong taon, o sa pagsunod sa mga patnubay ng mga obispo sa aking lugar (halimbawa, paggawa ng ibang gawaing penitensiya kapalit ng pag-iwas sa karne, gaya sa maraming lugar sa USA)?"
+            },
+            {
+                "id": "tl-11-017",
+                "text": "Nagkulang ba ako sa paggawa ng mga gawa ng awa para sa kaluluwa at katawan, o sa pagsasanay ng pagtanggi sa sarili?"
+            },
+            {
+                "id": "tl-11-018",
+                "text": "Nagkulang ba ako sa regular na pag-aabuloy para sa mga pangangailangan ng Simbahan?"
+            },
+            {
+                "id": "tl-11-019",
+                "text": "Nagkulang ba ako sa pagbibigay ng halagang angkop sa aking kalagayan?"
+            },
+            {
+                "id": "tl-11-020",
+                "text": "Nagkulang ba ako sa paglalaan ng aking panahon bilang boluntaryo para sa Simbahan nang angkop sa aking kalagayan?"
+            },
+            {
+                "id": "tl-11-021",
+                "text": "Nagkulang ba ako sa pananalangin para sa paglago ng Simbahan?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "tl-12",
+        "questions": [
+            {
+                "id": "tl-12-001",
+                "text": "Nagkasala ba ako ng kapalaluan (pagmamataas)?"
+            },
+            {
+                "id": "tl-12-002",
+                "text": "Nagkasala ba ako ng kasakiman?"
+            },
+            {
+                "id": "tl-12-003",
+                "text": "Nagkasala ba ako ng kahalayan?"
+            },
+            {
+                "id": "tl-12-004",
+                "text": "Nagkasala ba ako ng inggit?"
+            },
+            {
+                "id": "tl-12-005",
+                "text": "Nagkasala ba ako ng katakawan?"
+            },
+            {
+                "id": "tl-12-006",
+                "text": "Nagkasala ba ako ng poot (galit)?"
+            },
+            {
+                "id": "tl-12-007",
+                "text": "Nagkasala ba ako ng katamaran?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "tl-13",
+        "questions": [
+            {
+                "id": "tl-13-001",
+                "text": "Nagkasala ba ako sa pag-asang patatawarin ako ng Diyos kahit walang tunay na pagsisisi (presumpsiyon)?"
+            },
+            {
+                "id": "tl-13-002",
+                "text": "Nawalan ba ako ng pag-asa sa kaligtasan?"
+            },
+            {
+                "id": "tl-13-003",
+                "text": "Nilabanan ko ba o inatake ang mga katotohanang alam kong itinuturo ng Simbahang Katolika?"
+            },
+            {
+                "id": "tl-13-004",
+                "text": "Kinainggitan ko ba ang espirituwal na kabutihan ng iba?"
+            },
+            {
+                "id": "tl-13-005",
+                "text": "Nagmatigas ba akong manatili sa kalagayan ng kasalanan?"
+            },
+            {
+                "id": "tl-13-006",
+                "text": "Nagpumilit ba akong tumangging magsisi?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "tl-14",
+        "questions": [
+            {
+                "id": "tl-14-001",
+                "text": "Nakagawa ba ako ng sinadyang pagpatay?"
+            },
+            {
+                "id": "tl-14-002",
+                "text": "Nagkasala ba ako ng kasalanan ng Sodoma (mga di-likas na gawaing sekswal)?"
+            },
+            {
+                "id": "tl-14-003",
+                "text": "Inapi ko ba ang mga dukha?"
+            },
+            {
+                "id": "tl-14-004",
+                "text": "Dinaya ko ba ang mga manggagawa sa kanilang sahod?"
+            }
+        ]
+    }
+]

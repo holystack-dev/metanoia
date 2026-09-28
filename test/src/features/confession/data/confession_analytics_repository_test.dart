@@ -1,10 +1,13 @@
 import 'package:confessionapp/src/core/database/app_database.dart';
 import 'package:confessionapp/src/core/database/database_provider.dart';
 import 'package:confessionapp/src/features/confession/data/confession_analytics_repository.dart';
+import 'package:confessionapp/src/features/confession/data/confession_repository.dart';
 import 'package:drift/drift.dart' hide isNotNull, isNull;
 import 'package:drift/native.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:intl/date_symbol_data_local.dart';
+import '../../../../helpers/test_app.dart';
 
 void main() {
   late AppDatabase db;
@@ -182,13 +185,28 @@ void main() {
       expect(currentMonthData.count, 2);
     });
 
-    test('MonthlyConfessionData has correct month label', () {
+    test('MonthlyConfessionData labels the month in the given locale', () async {
+      // In the app the localization delegates load these; a bare test does not.
+      await initializeDateFormatting('en');
+      await initializeDateFormatting('es');
+
       final data = MonthlyConfessionData(
         month: DateTime(2024, 3, 1),
         count: 2,
       );
 
-      expect(data.monthLabel, 'Mar');
+      expect(data.monthLabel('en'), 'Mar');
+      // The month label is localized, not a hardcoded English abbreviation.
+      expect(data.monthLabel('es'), 'mar');
+    });
+
+    test('monthLabel falls back instead of throwing on an unknown locale', () {
+      final data = MonthlyConfessionData(
+        month: DateTime(2024, 3, 1),
+        count: 2,
+      );
+
+      expect(() => data.monthLabel('zz'), returnsNormally);
     });
   });
 
@@ -204,17 +222,55 @@ void main() {
       expect(analytics.totalConfessions, 1);
       expect(analytics.totalItemsConfessed, 2);
     });
+
+    /// Analytics is a Drift stream, read by the Insights screen and the home
+    /// stats. Nothing below invalidates it: it must re-emit on its own.
+    test('confessionAnalyticsProvider re-emits when a confession is added',
+        () async {
+      final sub = container.listen(confessionAnalyticsProvider, (_, __) {});
+      addTearDown(sub.close);
+
+      final initial = await container.read(confessionAnalyticsProvider.future);
+      expect(initial.hasData, false);
+
+      await createConfession(date: DateTime.now(), itemCount: 3);
+
+      // The items are inserted after the confession, so wait for the emission
+      // that carries all of them, not just the first one.
+      await waitUntil(
+        () =>
+            container
+                .read(confessionAnalyticsProvider)
+                .valueOrNull
+                ?.totalItemsConfessed ==
+            3,
+        reason: 'the new confession never reached the analytics stream',
+      );
+      expect(
+        container.read(confessionAnalyticsProvider).requireValue
+            .totalConfessions,
+        1,
+      );
+    });
+
+    test('confessionAnalyticsProvider re-emits when a confession is deleted',
+        () async {
+      final id = await createConfession(date: DateTime.now(), itemCount: 2);
+
+      final sub = container.listen(confessionAnalyticsProvider, (_, __) {});
+      addTearDown(sub.close);
+
+      final initial = await container.read(confessionAnalyticsProvider.future);
+      expect(initial.totalConfessions, 1);
+
+      await container.read(confessionRepositoryProvider).deleteConfession(id);
+
+      await waitUntil(
+        () =>
+            container.read(confessionAnalyticsProvider).valueOrNull?.hasData ==
+            false,
+        reason: 'the deleted confession never left the analytics stream',
+      );
+    });
   });
-}
-
-class TestAppDatabase extends AppDatabase {
-  TestAppDatabase(super.e);
-
-  @override
-  MigrationStrategy get migration => MigrationStrategy(
-    onCreate: (Migrator m) async {
-      await m.createAll();
-      // Skip syncContent()
-    },
-  );
 }

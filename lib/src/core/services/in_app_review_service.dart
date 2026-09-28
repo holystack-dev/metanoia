@@ -1,10 +1,11 @@
+import 'dart:io';
+
 import 'package:confessionapp/src/core/constants/app_constants.dart';
 import 'package:in_app_review/in_app_review.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-/// Service for managing in-app reviews
+/// Service for managing in-app reviews.
 ///
-/// Follows best practices from Flutter in Production guide:
 /// - Ask after "happy moments" (confession completion, penance completion)
 /// - Don't ask immediately on app launch
 /// - Let the OS handle frequency limits
@@ -75,8 +76,8 @@ class InAppReviewService {
     return false;
   }
 
-  /// Track penance completion and check if review should be requested
-  /// Returns true if a review prompt should be shown
+  /// Track penance completion and check if review should be requested.
+  /// Returns true if a review prompt should be shown.
   Future<bool> trackPenanceCompletion() async {
     if (await hasOptedOut()) return false;
     if (!await _hasEnoughTimePassed()) return false;
@@ -101,12 +102,28 @@ class InAppReviewService {
     await _inAppReview.requestReview();
   }
 
-  /// Open the store listing directly
-  /// Use this for the manual "Rate App" button in settings
-  Future<void> openStoreListing() async {
-    await _inAppReview.openStoreListing(
-      appStoreId: StoreConfig.appStoreId,
-    );
+  /// Whether the store listing can actually be opened on this platform.
+  ///
+  /// On iOS the App Store URL is built from [StoreConfig.appStoreId].
+  bool get canOpenStoreListing =>
+      !Platform.isIOS || StoreConfig.appStoreId.isNotEmpty;
+
+  /// Open the store listing directly.
+  /// Use this for the manual "Rate App" button in settings.
+  ///
+  /// Returns false if the listing could not be opened, so the caller can tell
+  /// the user instead of leaving the tap looking broken.
+  Future<bool> openStoreListing() async {
+    if (!canOpenStoreListing) return false;
+
+    try {
+      await _inAppReview.openStoreListing(
+        appStoreId: StoreConfig.appStoreId,
+      );
+      return true;
+    } catch (_) {
+      return false;
+    }
   }
 
   /// Check if in-app review is available on this device

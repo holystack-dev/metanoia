@@ -1,0 +1,1044 @@
+[
+    {
+        "commandmentCode": "vi-1",
+        "questions": [
+            {
+                "id": "vi-01-001",
+                "text": "Tôi có chối bỏ, không tin vào Thiên Chúa (vô thần) không?"
+            },
+            {
+                "id": "vi-01-002",
+                "text": "Tôi có nghi ngờ sự hiện hữu của Thiên Chúa không?"
+            },
+            {
+                "id": "vi-01-003",
+                "text": "Tôi có oán ghét Thiên Chúa hoặc đổ lỗi cho Ngài về những khó khăn trong đời sống mình không?"
+            },
+            {
+                "id": "vi-01-004",
+                "text": "Tôi có chối bỏ tín điều nào của Hội Thánh Công giáo không?"
+            },
+            {
+                "id": "vi-01-005",
+                "text": "Tôi có cố ý làm cho người khác nghi ngờ Thiên Chúa hoặc các chân lý đức tin không?"
+            },
+            {
+                "id": "vi-01-006",
+                "text": "Tôi có lơ là việc nuôi dưỡng và bảo vệ đức tin của mình không?"
+            },
+            {
+                "id": "vi-01-007",
+                "text": "Tôi có thiếu tận tâm trong việc truyền lại đức tin cho con cái và gia đình mình không?"
+            },
+            {
+                "id": "vi-01-008",
+                "text": "Tôi có từ chối bênh vực Thiên Chúa và đức tin của mình khi người khác nêu lên những lời phản bác không?"
+            },
+            {
+                "id": "vi-01-009",
+                "text": "Tôi có chối bỏ đức tin hay các giáo lý trước mặt người khác không?"
+            },
+            {
+                "id": "vi-01-010",
+                "text": "Tôi có rời bỏ Hội Thánh Công giáo hoặc theo một tôn giáo khác không?"
+            },
+            {
+                "id": "vi-01-011",
+                "text": "Tôi có gia nhập một tổ chức gây hại hoặc chống lại đức tin của mình không (các tổ chức cộng sản, hội Tam Điểm, các nhóm bất đồng hay ly giáo, hoặc bất cứ nhóm nào buộc thành viên phải tuyên thệ trung thành trên cả bổn phận đối với Hội Thánh Công giáo)?"
+            },
+            {
+                "id": "vi-01-012",
+                "text": "Tôi có buông mình thất vọng về Thiên Chúa hoặc về ơn tha thứ của Ngài không?"
+            },
+            {
+                "id": "vi-01-013",
+                "text": "Tôi có ỷ lại vào lòng thương xót của Thiên Chúa, cố tình phạm tội với ý nghĩ rằng thế nào cũng được tha, và như thế tránh né việc hoán cải thật lòng không?"
+            },
+            {
+                "id": "vi-01-014",
+                "text": "Tôi có tự phụ cho rằng mình có thể tự cứu rỗi linh hồn mà không cần ơn Chúa giúp không?"
+            },
+            {
+                "id": "vi-01-015",
+                "text": "Tôi có xưng tội mà không có ý định sửa đổi đời sống không?"
+            },
+            {
+                "id": "vi-01-016",
+                "text": "Tôi có thờ ngẫu tượng không? Tôi có đặt những thứ trần gian như tiền bạc, quyền lực, thành công, bạn bè, chính quyền, quốc gia, chủng tộc hay của cải lên trên mối tương quan với Thiên Chúa không? Tôi có tham gia những thực hành tâm linh ngoài Kitô giáo trái nghịch với đức tin không?"
+            },
+            {
+                "id": "vi-01-017",
+                "text": "Tôi có thực hành những việc huyền bí không (phù thủy Wicca, thờ Satan, cầu khẩn ma quỷ, cầu cơ, ma thuật hắc ám, bán linh hồn, gọi hồn, tiếp xúc vong linh, đồng bóng, hỏi thầy đồng thầy bói, Reiki, bói toán, dùng bùa chú, tử vi, chiêm tinh, xem chỉ tay, thấu thị, giải quẻ hay bói bài)?"
+            },
+            {
+                "id": "vi-01-018",
+                "text": "Tôi có mê tín dị đoan không? Tôi có gán quyền năng siêu nhiên cho một nguồn nào khác ngoài Thiên Chúa không?"
+            },
+            {
+                "id": "vi-01-019",
+                "text": "Tôi có để mạng xã hội, trò chơi điện tử hay Internet trở thành ngẫu tượng, chiếm mất thời giờ dành cho Thiên Chúa và gia đình không?"
+            },
+            {
+                "id": "vi-01-020",
+                "text": "Tôi có tìm giá trị bản thân nơi sự tán thưởng trên mạng thay vì nơi căn tính của mình là con cái Thiên Chúa không?"
+            },
+            {
+                "id": "vi-01-021",
+                "text": "Tôi có dành quá nhiều thời giờ cho màn hình đến mức xao lãng bổn phận hằng ngày hay đời sống cầu nguyện không?"
+            },
+            {
+                "id": "vi-01-022",
+                "text": "Tôi có thờ đa thần không?"
+            },
+            {
+                "id": "vi-01-023",
+                "text": "Tôi có thờ ơ, dửng dưng với đức tin hay với Thiên Chúa không?"
+            },
+            {
+                "id": "vi-01-024",
+                "text": "Tôi có vô ơn trước bao ơn lành Thiên Chúa đã ban cho tôi không?"
+            },
+            {
+                "id": "vi-01-025",
+                "text": "Tôi có sống đức tin cách nguội lạnh không?"
+            },
+            {
+                "id": "vi-01-026",
+                "text": "Tôi có lười biếng trong đời sống đức tin và việc thăng tiến thiêng liêng không?"
+            },
+            {
+                "id": "vi-01-027",
+                "text": "Tôi có bỏ bê việc cầu nguyện không?"
+            },
+            {
+                "id": "vi-01-028",
+                "text": "Tôi có bỏ những lời hứa hay lời khấn đã dâng lên Thiên Chúa không?"
+            },
+            {
+                "id": "vi-01-029",
+                "text": "Tôi có ngăn cản đức tin của người khác hoặc góp phần hạn chế tự do tôn giáo của họ không? Tôi có chế nhạo ai vì họ tin vào Thiên Chúa không? Tôi có ép buộc người khác làm trái với giáo huấn đức tin hay lương tâm của họ không?"
+            },
+            {
+                "id": "vi-01-030",
+                "text": "Tôi có thử thách Thiên Chúa, bằng lời nói hay việc làm, đem lòng nhân lành và quyền năng của Ngài ra thử không?"
+            },
+            {
+                "id": "vi-01-031",
+                "text": "Tôi có phạm tội phạm thánh không? Tôi có lãnh nhận một bí tích mà tâm hồn không được chuẩn bị xứng đáng không (chẳng hạn rước lễ, lãnh bí tích Thêm Sức, Hôn Phối hay Truyền Chức Thánh khi đang mắc tội trọng)? Tôi có tôn kính đúng mức những người dâng hiến như linh mục, nữ tu, giám mục hay Đức Giáo hoàng, những nơi thánh như nhà thờ, nhà nguyện và các địa điểm thánh, cùng những đồ vật đã được làm phép hay thánh thiêng như tràng hạt Mân Côi, thánh tích và Kinh Thánh không? Tôi có nói dối về tội mình hoặc cố tình giấu tội trọng khi lãnh bí tích Giải Tội không?"
+            },
+            {
+                "id": "vi-01-032",
+                "text": "Tôi có phạm tội mại thánh, mua bán những sự thiêng liêng không?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "vi-2",
+        "questions": [
+            {
+                "id": "vi-02-001",
+                "text": "Tôi có kêu tên Thiên Chúa cách bất kính, vô cớ hay phạm thượng không?"
+            },
+            {
+                "id": "vi-02-002",
+                "text": "Tôi có nói năng bất kính, hằn học, xấc xược hay cẩu thả về đức tin, hoặc về những người, nơi chốn và đồ vật thánh thiêng không?"
+            },
+            {
+                "id": "vi-02-003",
+                "text": "Tôi có cổ vũ những lời lẽ bất kính, hằn học, xấc xược hay cẩu thả về đức tin, hoặc về những người, nơi chốn và đồ vật thánh thiêng không?"
+            },
+            {
+                "id": "vi-02-004",
+                "text": "Tôi có xem phim hay nghe nhạc có nội dung phạm thượng, bất kính không?"
+            },
+            {
+                "id": "vi-02-005",
+                "text": "Tôi có nói tục chửi thề hay dùng những lời lẽ tục tĩu không?"
+            },
+            {
+                "id": "vi-02-006",
+                "text": "Tôi có nói năng thiếu tôn trọng về người khác không?"
+            },
+            {
+                "id": "vi-02-007",
+                "text": "Tôi có thề gian (bội thề) không?"
+            },
+            {
+                "id": "vi-02-008",
+                "text": "Tôi có lấy danh Thiên Chúa mà thề hay hứa về những điều sai sự thật, hoặc về những chuyện nhỏ nhặt dù là thật không?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "vi-3",
+        "questions": [
+            {
+                "id": "vi-03-001",
+                "text": "Tôi có bỏ Thánh lễ Chúa nhật hay các ngày lễ buộc mà không có lý do nghiêm trọng không?"
+            },
+            {
+                "id": "vi-03-002",
+                "text": "Tôi có bỏ bê việc đưa con cái đi tham dự Thánh lễ Chúa nhật và các ngày lễ buộc mà không có lý do nghiêm trọng không?"
+            },
+            {
+                "id": "vi-03-003",
+                "text": "Tôi có đi lễ trễ hay về sớm mà không có lý do nghiêm trọng không?"
+            },
+            {
+                "id": "vi-03-004",
+                "text": "Tôi có làm việc xác ngày Chúa nhật hay các ngày lễ buộc mà không có lý do nghiêm trọng không?"
+            },
+            {
+                "id": "vi-03-005",
+                "text": "Tôi có từ chối giúp người khác tham dự Thánh lễ Chúa nhật và các ngày lễ buộc không?"
+            },
+            {
+                "id": "vi-03-006",
+                "text": "Tôi có mua sắm hay sử dụng những dịch vụ không cần thiết vào ngày Chúa nhật và các ngày lễ buộc không?"
+            },
+            {
+                "id": "vi-03-007",
+                "text": "Tôi có cố tình ăn thịt hoặc không chịu giữ chay trong những ngày Hội Thánh buộc ăn chay, kiêng thịt không?"
+            },
+            {
+                "id": "vi-03-008",
+                "text": "Tôi có vi phạm luật giữ chay một giờ trước khi rước lễ không?"
+            },
+            {
+                "id": "vi-03-009",
+                "text": "Tôi có bắt những người làm việc dưới quyền mình phải làm việc ngày Chúa nhật hay lễ buộc mà không có lý do nghiêm trọng không?"
+            },
+            {
+                "id": "vi-03-010",
+                "text": "Tôi có làm chia trí người khác trong Thánh lễ qua cách ăn mặc, cử chỉ hay việc sử dụng điện thoại di động không?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "vi-4",
+        "questions": [
+            {
+                "id": "vi-04-001",
+                "text": "Tôi có không vâng lời cha mẹ trong những điều chính đáng không?"
+            },
+            {
+                "id": "vi-04-002",
+                "text": "Tôi có nói năng thiếu tôn kính với cha mẹ hoặc với những người có quyền hợp pháp, kể cả viên chức chính quyền và người chủ nơi làm việc không?"
+            },
+            {
+                "id": "vi-04-003",
+                "text": "Tôi có không vâng lời thầy cô trong những điều chính đáng không (nếu còn đi học)?"
+            },
+            {
+                "id": "vi-04-004",
+                "text": "Tôi có bỏ bê việc chăm sóc, phụng dưỡng cha mẹ già hay những người thân khác trong gia đình không?"
+            },
+            {
+                "id": "vi-04-005",
+                "text": "Tôi có lơ là những nhu cầu, việc học hành, việc dạy dỗ hay việc đào luyện thiêng liêng của con cái không?"
+            },
+            {
+                "id": "vi-04-006",
+                "text": "Tôi có thiếu sót trong việc hướng dẫn con cái hiểu biết bản chất của tính dục con người và giáo huấn của Hội Thánh về vấn đề này không?"
+            },
+            {
+                "id": "vi-04-007",
+                "text": "Tôi có lơ là việc cầu nguyện với con cái mỗi ngày không?"
+            },
+            {
+                "id": "vi-04-008",
+                "text": "Tôi có lơ là không khuyến khích con cái rước lễ và xưng tội thường xuyên không?"
+            },
+            {
+                "id": "vi-04-009",
+                "text": "Tôi có thiếu sót trong việc đào luyện lương tâm kỹ lưỡng trước khi bỏ phiếu, hoặc cổ vũ những chính sách trái với công ích, tự do tôn giáo hay luật luân lý không?"
+            },
+            {
+                "id": "vi-04-010",
+                "text": "Tôi có sống thiếu nhân đức không?"
+            },
+            {
+                "id": "vi-04-011",
+                "text": "Tôi có thiếu yêu thương và hy sinh cho gia đình mình không?"
+            },
+            {
+                "id": "vi-04-012",
+                "text": "Tôi có cổ vũ những chính sách hay luật lệ làm suy yếu gia đình, như né tránh quyền ưng thuận của cha mẹ, hoặc cổ vũ những mô hình gia đình nghịch tự nhiên như việc nhận con nuôi của các cặp đồng tính hay cha mẹ đơn thân, và các biện pháp kiểm soát dân số không? Tôi có cổ vũ những chính sách hay luật lệ phương hại công ích và luật luân lý không?"
+            },
+            {
+                "id": "vi-04-013",
+                "text": "Tôi có xúi giục người khác coi thường quyền bính hợp pháp không?"
+            },
+            {
+                "id": "vi-04-014",
+                "text": "Tôi có không đón nhận lời khuyên bảo hay sửa dạy của cha mẹ không?"
+            },
+            {
+                "id": "vi-04-015",
+                "text": "Tôi có thiếu sót trong việc giúp con cái mở lòng đón nhận ơn gọi không (hôn nhân, chức thánh, đời sống độc thân thánh hiến, v.v.)?"
+            },
+            {
+                "id": "vi-04-016",
+                "text": "Tôi có thiếu sót trong việc cổ vũ sự đối xử công bằng với người nghèo, người túng thiếu hay người di dân trong xã hội không?"
+            },
+            {
+                "id": "vi-04-017",
+                "text": "Tôi có dùng bạo lực với người khác không?"
+            },
+            {
+                "id": "vi-04-018",
+                "text": "Tôi có làm suy giảm uy quyền của vợ/chồng mình trước mặt con cái không?"
+            },
+            {
+                "id": "vi-04-019",
+                "text": "Tôi có lơ là việc giám sát con cái sử dụng Internet và các thiết bị công nghệ để gìn giữ sự trong sạch của chúng không?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "vi-5",
+        "questions": [
+            {
+                "id": "vi-05-001",
+                "text": "Tôi có trực tiếp hoặc do bất cẩn mà giết hại hay gây thương tích cách bất công cho người khác, hoặc cộng tác vào việc đó không?"
+            },
+            {
+                "id": "vi-05-002",
+                "text": "Tôi có thiếu sót trong việc bênh vực phẩm giá và tính thánh thiêng của sự sống con người không?"
+            },
+            {
+                "id": "vi-05-003",
+                "text": "Tôi có cổ vũ chiến tranh, tra tấn, bắt giữ con tin, bắt cóc, hay việc giết hại những người không có khả năng tự vệ không?"
+            },
+            {
+                "id": "vi-05-004",
+                "text": "Tôi có phá thai, dùng thuốc phá thai, hoặc giúp người khác phá thai không?"
+            },
+            {
+                "id": "vi-05-005",
+                "text": "Tôi có cổ vũ hay công khai ủng hộ việc phá thai không?"
+            },
+            {
+                "id": "vi-05-006",
+                "text": "Tôi có thực hiện, tham gia hay cổ vũ việc thụ tinh trong ống nghiệm không?"
+            },
+            {
+                "id": "vi-05-007",
+                "text": "Tôi có cổ vũ việc nhân bản vô tính con người hay biến đổi gen không?"
+            },
+            {
+                "id": "vi-05-008",
+                "text": "Tôi có cổ vũ hay tham gia việc nghiên cứu hoặc trị liệu bằng tế bào gốc phôi thai không?"
+            },
+            {
+                "id": "vi-05-009",
+                "text": "Tôi có cổ vũ thuyết ưu sinh hay các luật kiểm soát dân số không?"
+            },
+            {
+                "id": "vi-05-010",
+                "text": "Tôi có từ chối “giơ cả má bên kia” hoặc không yêu thương kẻ thù của mình không?"
+            },
+            {
+                "id": "vi-05-011",
+                "text": "Tôi có tìm cách tự tử, tự làm hại mình, hay có ý nghĩ đó không?"
+            },
+            {
+                "id": "vi-05-012",
+                "text": "Tôi có cổ vũ an tử (cái chết êm dịu) hay phong trào đòi quyền tự tử không?"
+            },
+            {
+                "id": "vi-05-013",
+                "text": "Tôi có từ chối hoặc thiếu sót trong việc chăm sóc cuối đời cách hợp lý cho người khác, bao gồm các can thiệp y tế, thức ăn nước uống và thuốc giảm đau không?"
+            },
+            {
+                "id": "vi-05-014",
+                "text": "Tôi có lơ là những nhu cầu thiêng liêng của người đang hấp hối không (như mời linh mục đến ban bí tích Xức Dầu Bệnh Nhân, hay cầu nguyện cho họ)?"
+            },
+            {
+                "id": "vi-05-015",
+                "text": "Tôi có mong muốn giết ai không?"
+            },
+            {
+                "id": "vi-05-016",
+                "text": "Tôi có dùng vũ lực quá mức cần thiết để tự vệ không?"
+            },
+            {
+                "id": "vi-05-017",
+                "text": "Tôi có thiếu sót trong việc bảo vệ người khác theo khả năng và bổn phận của mình không?"
+            },
+            {
+                "id": "vi-05-018",
+                "text": "Tôi có gây tổn thương thể lý, tình cảm hay tâm lý cho ai, hoặc mong muốn làm như thế không?"
+            },
+            {
+                "id": "vi-05-019",
+                "text": "Tôi có làm gương mù gương xấu hoặc tỏ ra thờ ơ với phần rỗi linh hồn của người khác không?"
+            },
+            {
+                "id": "vi-05-020",
+                "text": "Tôi có oán ghét ai hay mong điều dữ cho họ không?"
+            },
+            {
+                "id": "vi-05-021",
+                "text": "Tôi có thiếu tôn trọng người đã qua đời hay thi hài của họ không?"
+            },
+            {
+                "id": "vi-05-022",
+                "text": "Tôi có thiếu sót trong việc lo an táng xứng đáng cho người đã qua đời không?"
+            },
+            {
+                "id": "vi-05-023",
+                "text": "Tôi có cổ vũ những hình phạt bất công, hay ủng hộ việc dùng đến án tử hình — điều mà Hội Thánh dạy là không thể chấp nhận — không?"
+            },
+            {
+                "id": "vi-05-024",
+                "text": "Tôi có kỳ thị ai bằng cách từ chối cho họ điều họ đáng được hưởng cách chính đáng trong khuôn khổ luật luân lý và luật tự nhiên không?"
+            },
+            {
+                "id": "vi-05-025",
+                "text": "Tôi có chế nhạo, đe dọa hay hạ thấp ai không?"
+            },
+            {
+                "id": "vi-05-026",
+                "text": "Tôi có coi thường mạng sống con người qua hành động hay sự thiếu quan tâm của mình không?"
+            },
+            {
+                "id": "vi-05-027",
+                "text": "Tôi có lạm dụng rượu bia hay sử dụng ma túy không?"
+            },
+            {
+                "id": "vi-05-028",
+                "text": "Tôi có thiếu quan tâm đến sức khỏe của mình hay của người khác không?"
+            },
+            {
+                "id": "vi-05-029",
+                "text": "Tôi có cổ vũ việc sử dụng rượu bia, ma túy hay bất cứ thứ gì có hại khác không?"
+            },
+            {
+                "id": "vi-05-030",
+                "text": "Tôi có phạm tội mê ăn uống hay xúi giục người khác phạm tội ấy không?"
+            },
+            {
+                "id": "vi-05-031",
+                "text": "Tôi có thiếu sót trong việc xây dựng hòa bình không?"
+            },
+            {
+                "id": "vi-05-032",
+                "text": "Tôi có gây gương mù gương xấu qua hành động hay sự thiếu hành động của mình không?"
+            },
+            {
+                "id": "vi-05-033",
+                "text": "Tôi có xúi giục hay tiếp tay cho người khác phạm tội không?"
+            },
+            {
+                "id": "vi-05-034",
+                "text": "Tôi có để cơn giận điều khiển mình hay để nó kéo dài mà không kiềm chế không?"
+            },
+            {
+                "id": "vi-05-035",
+                "text": "Tôi có thiếu bác ái với ai, cãi vã với họ, hay nuôi lòng oán hận không?"
+            },
+            {
+                "id": "vi-05-036",
+                "text": "Tôi có từ chối tha thứ khi người khác xin tôi tha thứ không?"
+            },
+            {
+                "id": "vi-05-037",
+                "text": "Tôi có tìm cách hay nuôi ý định trả thù không?"
+            },
+            {
+                "id": "vi-05-038",
+                "text": "Tôi có vui mừng trước sự bất hạnh của người khác không?"
+            },
+            {
+                "id": "vi-05-039",
+                "text": "Tôi có hành hạ súc vật hay giết chúng cách không cần thiết không?"
+            },
+            {
+                "id": "vi-05-040",
+                "text": "Tôi có gây nguy hiểm cho mạng sống mình hay người khác vì lái xe ẩu hoặc dùng điện thoại khi lái xe không?"
+            },
+            {
+                "id": "vi-05-041",
+                "text": "Tôi có chế nhạo hay giễu cợt người khác vì khuyết tật thể lý hay tâm thần của họ không?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "vi-6",
+        "questions": [
+            {
+                "id": "vi-06-001",
+                "text": "Tôi có thiếu sót trong việc sống và cổ vũ đức khiết tịnh không?"
+            },
+            {
+                "id": "vi-06-002",
+                "text": "Tôi có tìm khoái lạc tình dục ngoài hành vi vợ chồng không?"
+            },
+            {
+                "id": "vi-06-003",
+                "text": "Tôi có dùng các phương pháp ngừa thai nhân tạo hay khuyến khích người khác dùng không?"
+            },
+            {
+                "id": "vi-06-004",
+                "text": "Tôi có khước từ con cái và quà tặng sự sống mà không có lý do chính đáng không?"
+            },
+            {
+                "id": "vi-06-005",
+                "text": "Tôi có sống chung với người yêu trước hôn nhân (sống thử) không?"
+            },
+            {
+                "id": "vi-06-006",
+                "text": "Tôi có nuôi dưỡng sự thân mật tình cảm hay lãng mạn không đúng đắn với người không phải là vợ/chồng mình không?"
+            },
+            {
+                "id": "vi-06-007",
+                "text": "Tôi có tham gia thụ tinh trong ống nghiệm hay các phương pháp hỗ trợ sinh sản vô luân (những phương pháp không đưa đến việc sinh sản qua hành vi vợ chồng), hoặc khuyến khích người khác làm như thế không?"
+            },
+            {
+                "id": "vi-06-008",
+                "text": "Tôi có triệt sản hay khuyến khích người khác triệt sản không?"
+            },
+            {
+                "id": "vi-06-009",
+                "text": "Tôi có cưỡng ép ai quan hệ tình dục (kể cả vợ/chồng mình) không?"
+            },
+            {
+                "id": "vi-06-010",
+                "text": "Tôi có từ chối việc chăn gối với vợ/chồng mình mà không có lý do chính đáng không?"
+            },
+            {
+                "id": "vi-06-011",
+                "text": "Tôi có thủ dâm (tự tìm khoái lạc tình dục cho riêng mình ngoài hành vi vợ chồng) không?"
+            },
+            {
+                "id": "vi-06-012",
+                "text": "Tôi có cố ý tìm kiếm hay gây ra khoái cảm tình dục tột đỉnh ngoài hành vi vợ chồng không?"
+            },
+            {
+                "id": "vi-06-013",
+                "text": "Tôi có giảng dạy hay cổ vũ một nền giáo dục giới tính không theo giáo huấn của Hội Thánh Công giáo không?"
+            },
+            {
+                "id": "vi-06-014",
+                "text": "Tôi có sử dụng hay phổ biến nội dung khiêu dâm, dù là hình ảnh, phim, âm thanh hay chữ viết không?"
+            },
+            {
+                "id": "vi-06-015",
+                "text": "Tôi có hiến tinh trùng hay trứng không?"
+            },
+            {
+                "id": "vi-06-016",
+                "text": "Tôi có buông mình theo những phim ảnh, chương trình truyền hình, âm nhạc, chuyện trò hay chuyện đùa dâm ô (liên quan đến khỏa thân hay tình dục) không?"
+            },
+            {
+                "id": "vi-06-017",
+                "text": "Tôi có phạm tội ngoại tình không (hành vi tình dục với người đã có vợ/chồng, hoặc với người không phải là vợ/chồng mình trong khi tôi đã kết hôn)?"
+            },
+            {
+                "id": "vi-06-018",
+                "text": "Tôi có ly dị vợ/chồng mình hay có ý định làm như thế mà không có lý do hệ trọng, dù đang sống trong một hôn nhân thành sự không?"
+            },
+            {
+                "id": "vi-06-019",
+                "text": "Tôi có kết hôn mà không theo phép của Hội Thánh không?"
+            },
+            {
+                "id": "vi-06-020",
+                "text": "Tôi có phạm tội loạn luân không?"
+            },
+            {
+                "id": "vi-06-021",
+                "text": "Tôi có sống đa thê hay đa phu không?"
+            },
+            {
+                "id": "vi-06-022",
+                "text": "Tôi có tham gia vào lối sống “hôn nhân mở” không?"
+            },
+            {
+                "id": "vi-06-023",
+                "text": "Tôi có quan hệ tình dục ngoài hôn nhân (gian dâm, hành vi đồng tính) không?"
+            },
+            {
+                "id": "vi-06-024",
+                "text": "Tôi có phạm tội hiếp dâm không?"
+            },
+            {
+                "id": "vi-06-025",
+                "text": "Tôi có làm những cử chỉ vuốt ve dâm ô, nhắn tin gợi dục, hay những hành vi kích dục khác ngoài hôn nhân không?"
+            },
+            {
+                "id": "vi-06-026",
+                "text": "Tôi có xâm hại tình dục trẻ em không?"
+            },
+            {
+                "id": "vi-06-027",
+                "text": "Tôi có làm những hành vi tình dục nghịch tự nhiên không (giao hợp với thú vật, với đồ vật, v.v.)?"
+            },
+            {
+                "id": "vi-06-028",
+                "text": "Tôi có tham gia hay cổ vũ mại dâm không?"
+            },
+            {
+                "id": "vi-06-029",
+                "text": "Tôi có quyến rũ ai hay để mình bị quyến rũ không?"
+            },
+            {
+                "id": "vi-06-030",
+                "text": "Tôi có khước từ căn tính giới tính Chúa đã ban cho mình không (phẫu thuật chuyển giới, ăn mặc như người khác giới, v.v.)?"
+            },
+            {
+                "id": "vi-06-031",
+                "text": "Tôi có cổ vũ, tiếp tay hay cộng tác vào những tội nghịch điều răn thứ sáu không?"
+            },
+            {
+                "id": "vi-06-032",
+                "text": "Tôi có dính vào những mối quan hệ không đúng đắn trên mạng hay quan hệ tình dục qua mạng không?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "vi-7",
+        "questions": [
+            {
+                "id": "vi-07-001",
+                "text": "Tôi có lấy trộm của ai vật gì không?"
+            },
+            {
+                "id": "vi-07-002",
+                "text": "Tôi có cờ bạc quá độ không?"
+            },
+            {
+                "id": "vi-07-003",
+                "text": "Tôi có gian lận, lừa đảo không (khai gian với công ty bảo hiểm, làm giả thông tin để trục lợi)?"
+            },
+            {
+                "id": "vi-07-004",
+                "text": "Tôi có từ chối quảng đại chia sẻ của cải mình cho những người túng thiếu không?"
+            },
+            {
+                "id": "vi-07-005",
+                "text": "Tôi có phung phí tiền bạc vào những thứ không cần thiết mà quên đi nhu cầu của người nghèo không?"
+            },
+            {
+                "id": "vi-07-006",
+                "text": "Tôi có lơ là thực hành thương xác bảy mối không?"
+            },
+            {
+                "id": "vi-07-007",
+                "text": "Tôi có phá hoại hay làm hư hại tài sản của người khác không?"
+            },
+            {
+                "id": "vi-07-008",
+                "text": "Tôi có gian lận không?"
+            },
+            {
+                "id": "vi-07-009",
+                "text": "Tôi có thiếu sót trong việc trả lương công bằng cho người làm công xứng với ngày công lương thiện của họ không?"
+            },
+            {
+                "id": "vi-07-010",
+                "text": "Tôi có ngăn cản ai có được việc làm không (kỳ thị bất công, hay phá hoại cơ hội việc làm của người khác)?"
+            },
+            {
+                "id": "vi-07-011",
+                "text": "Tôi có cổ vũ những việc dẫn đến cảnh nô lệ hóa người khác không (các xưởng bóc lột lao động, nạn buôn người, hay chế độ nô lệ đúng nghĩa)?"
+            },
+            {
+                "id": "vi-07-012",
+                "text": "Tôi có bội ước, không chu toàn phần nghĩa vụ của mình trong một hợp đồng không?"
+            },
+            {
+                "id": "vi-07-013",
+                "text": "Tôi có tham gia hay cổ vũ một cuộc đình công hoặc đóng cửa xưởng cách bất công không?"
+            },
+            {
+                "id": "vi-07-014",
+                "text": "Tôi có vay mượn nợ nần quá mức và/hoặc không chịu hoàn trả không?"
+            },
+            {
+                "id": "vi-07-015",
+                "text": "Tôi có cho vay nặng lãi không?"
+            },
+            {
+                "id": "vi-07-016",
+                "text": "Tôi có bán quá giá hay lợi dụng ai trong việc mua bán không?"
+            },
+            {
+                "id": "vi-07-017",
+                "text": "Tôi có khởi kiện hay cổ vũ một vụ kiện bất công chống lại ai không?"
+            },
+            {
+                "id": "vi-07-018",
+                "text": "Tôi có thiếu sót trong việc đền bù thiệt hại do trộm cắp, gian lận hay bất cứ hành vi nào khác nghịch điều răn thứ bảy không?"
+            },
+            {
+                "id": "vi-07-019",
+                "text": "Tôi có tỏ ra coi thường môi trường không?"
+            },
+            {
+                "id": "vi-07-020",
+                "text": "Tôi có thiếu tôn trọng quyền tư hữu, hoặc đi ngược giáo huấn của Hội Thánh về nguyên tắc bổ trợ khi ủng hộ một chủ nghĩa xã hội thái quá hay sự kiểm soát quá mức của nhà nước trên các tài nguyên không?"
+            },
+            {
+                "id": "vi-07-021",
+                "text": "Tôi có thiếu chuyên cần trong công việc, không làm trọn ngày công lương thiện cho chủ mình không?"
+            },
+            {
+                "id": "vi-07-022",
+                "text": "Tôi có khinh chê lao động hay buông mình theo thói lười biếng không?"
+            },
+            {
+                "id": "vi-07-023",
+                "text": "Tôi có làm việc không đủ mức cần thiết để lo cho gia đình mình không?"
+            },
+            {
+                "id": "vi-07-024",
+                "text": "Tôi có giữ lại hay trì hoãn tiền lương phải trả cho người làm công không?"
+            },
+            {
+                "id": "vi-07-025",
+                "text": "Tôi có đầu cơ tích trữ để đẩy giá hàng hóa hay dịch vụ lên cao không?"
+            },
+            {
+                "id": "vi-07-026",
+                "text": "Tôi có vi phạm luật bản quyền khi sao chép lậu phần mềm, âm nhạc hay phim ảnh không?"
+            },
+            {
+                "id": "vi-07-027",
+                "text": "Tôi có lãng phí thời giờ của chủ vì dùng Internet hay mạng xã hội quá nhiều trong giờ làm việc không?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "vi-8",
+        "questions": [
+            {
+                "id": "vi-08-001",
+                "text": "Tôi có nói dối hay cố tình lừa gạt ai không?"
+            },
+            {
+                "id": "vi-08-002",
+                "text": "Tôi có ngồi lê đôi mách, nói chuyện thị phi không?"
+            },
+            {
+                "id": "vi-08-003",
+                "text": "Tôi có thề gian (bội thề) không?"
+            },
+            {
+                "id": "vi-08-004",
+                "text": "Tôi có nghĩ xấu cho ai hay xét đoán họ cách bất công không?"
+            },
+            {
+                "id": "vi-08-005",
+                "text": "Tôi có làm tổn hại thanh danh người khác qua việc nói hành (kể lỗi của người khác cho người ta nghe mà không có lý do hệ trọng), vu khống (bịa đặt điều dối trá về một người) hay phỉ báng bằng chữ viết (viết điều dối trá về ai) không?"
+            },
+            {
+                "id": "vi-08-006",
+                "text": "Tôi có mải mê tìm kiếm sự công nhận trên mạng hay tô vẽ một hình ảnh giả tạo về bản thân không?"
+            },
+            {
+                "id": "vi-08-007",
+                "text": "Tôi có thiếu sót trong việc bênh vực thanh danh của người khác không?"
+            },
+            {
+                "id": "vi-08-008",
+                "text": "Tôi có tiết lộ bí mật hay phản bội lòng tin của ai không?"
+            },
+            {
+                "id": "vi-08-009",
+                "text": "Tôi có im lặng hay đồng lõa khi Hội Thánh Công giáo bị bôi nhọ không?"
+            },
+            {
+                "id": "vi-08-010",
+                "text": "Tôi có thiếu chân thành hay thẳng thắn khi cần phải như thế không?"
+            },
+            {
+                "id": "vi-08-011",
+                "text": "Tôi có sống hai mặt không?"
+            },
+            {
+                "id": "vi-08-012",
+                "text": "Tôi có giả hình, đạo đức giả không?"
+            },
+            {
+                "id": "vi-08-013",
+                "text": "Tôi có ép buộc người khác nói dối không?"
+            },
+            {
+                "id": "vi-08-014",
+                "text": "Tôi có ngăn cản người khác nói lên sự thật không?"
+            },
+            {
+                "id": "vi-08-015",
+                "text": "Tôi có nịnh hót, tâng bốc không?"
+            },
+            {
+                "id": "vi-08-016",
+                "text": "Tôi có khoe khoang hay kiêu căng không?"
+            },
+            {
+                "id": "vi-08-017",
+                "text": "Tôi có xuyên tạc sự việc, thổi phồng quá đáng, dựng lên những lập luận giả tạo (ngụy biện hình nộm) hay công kích cá nhân (tấn công con người thay vì lập luận hay quan điểm của họ) không?"
+            },
+            {
+                "id": "vi-08-018",
+                "text": "Tôi có thiếu sót trong việc phục hồi thanh danh cho người mà tôi đã nói dối về họ không?"
+            },
+            {
+                "id": "vi-08-019",
+                "text": "Tôi có tiết lộ sự thật cho người không có quyền được biết không (chẳng hạn một kẻ tấn công bất chính)?"
+            },
+            {
+                "id": "vi-08-020",
+                "text": "Tôi có vi phạm ấn tín tòa giải tội khi kể lại cho người khác nội dung lời xưng tội của một người không?"
+            },
+            {
+                "id": "vi-08-021",
+                "text": "Tôi có tiết lộ bí mật nghề nghiệp mà không có lý do hệ trọng không?"
+            },
+            {
+                "id": "vi-08-022",
+                "text": "Tôi có nhẹ dạ tin ngay lời người khác nói là sự thật mà không xem xét cẩn thận không (nhất là trong những vấn đề đức tin và luân lý, hay khi thanh danh của người khác bị đe dọa)?"
+            },
+            {
+                "id": "vi-08-023",
+                "text": "Tôi có phổ biến những thông tin sai lạc cho công chúng (tuyên truyền) không?"
+            },
+            {
+                "id": "vi-08-024",
+                "text": "Tôi có chia sẻ trên mạng xã hội những thông tin sai lệch hay chưa được kiểm chứng (tin giả) không?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "vi-9",
+        "questions": [
+            {
+                "id": "vi-09-001",
+                "text": "Tôi có chiều theo dục vọng (những ham muốn tình dục mãnh liệt) không?"
+            },
+            {
+                "id": "vi-09-002",
+                "text": "Tôi có chiều theo thói dâm ô (ham muốn lệch lạc, tìm hưởng khoái lạc tình dục cách vô độ) không?"
+            },
+            {
+                "id": "vi-09-003",
+                "text": "Tôi có buông lời hay có cử chỉ gợi dục, quấy rối, tán tỉnh sỗ sàng với ai không?"
+            },
+            {
+                "id": "vi-09-004",
+                "text": "Tôi có ăn mặc thiếu đoan trang, hoặc không tránh nhìn khi người khác ăn mặc thiếu đoan trang không?"
+            },
+            {
+                "id": "vi-09-005",
+                "text": "Tôi có xâm phạm đời tư của ai bằng cách rình xem, theo dõi họ không?"
+            },
+            {
+                "id": "vi-09-006",
+                "text": "Tôi có nuôi dưỡng hay cố tình chiều theo những tư tưởng ô uế không?"
+            },
+            {
+                "id": "vi-09-007",
+                "text": "Tôi có cổ vũ lối sống buông thả tình dục, những thái độ vô luân đối với tình dục, đối với sự đoan trang và đức trong sạch, hoặc chủ trương dễ dãi về luân lý không?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "vi-10",
+        "questions": [
+            {
+                "id": "vi-10-001",
+                "text": "Tôi có ganh tị với người khác vì của cải họ có không?"
+            },
+            {
+                "id": "vi-10-002",
+                "text": "Tôi có tham lam không?"
+            },
+            {
+                "id": "vi-10-003",
+                "text": "Tôi có ham muốn của cải của người khác không?"
+            },
+            {
+                "id": "vi-10-004",
+                "text": "Tôi có không sống giản dị mà lại buông mình theo lối sống hưởng thụ vật chất không?"
+            },
+            {
+                "id": "vi-10-005",
+                "text": "Tôi có ganh tị thay vì vui mừng trước thành công của người khác không?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "vi-11",
+        "questions": [
+            {
+                "id": "vi-11-001",
+                "text": "Tôi có bỏ tham dự Thánh lễ Chúa nhật hay các ngày lễ buộc không?"
+            },
+            {
+                "id": "vi-11-002",
+                "text": "Tôi có không dành ngày Chúa nhật và các ngày lễ buộc để nghỉ ngơi không?"
+            },
+            {
+                "id": "vi-11-003",
+                "text": "Tôi có bỏ không xưng tội ít nhất mỗi năm một lần không?"
+            },
+            {
+                "id": "vi-11-004",
+                "text": "Tôi có xưng tội cách thiếu thành thật hay cố tình xưng không đầy đủ không?"
+            },
+            {
+                "id": "vi-11-005",
+                "text": "Tôi có lơ là việc dọn mình xứng đáng trước khi rước lễ không?"
+            },
+            {
+                "id": "vi-11-006",
+                "text": "Tôi có bỏ không làm việc đền tội mà cha giải tội đã chỉ định không?"
+            },
+            {
+                "id": "vi-11-007",
+                "text": "Tôi có thiếu sót trong việc đền bù những thiệt hại do tội lỗi mình gây ra không?"
+            },
+            {
+                "id": "vi-11-008",
+                "text": "Tôi có lơ là việc xét mình kỹ lưỡng trước khi xưng tội, hoặc không thành thật cố gắng nhớ lại mọi tội của mình không?"
+            },
+            {
+                "id": "vi-11-009",
+                "text": "Tôi có đi xưng tội mà không thật lòng ăn năn tội hoặc không quyết tâm dốc lòng chừa không?"
+            },
+            {
+                "id": "vi-11-010",
+                "text": "Tôi có bỏ không rước lễ ít nhất một lần trong mùa Phục Sinh (từ lễ Vọng Phục Sinh đến Chúa nhật lễ Chúa Thánh Thần Hiện Xuống) không?"
+            },
+            {
+                "id": "vi-11-011",
+                "text": "Tôi có rước lễ khi không còn ở trong tình trạng ân sủng (đang mắc tội trọng) không?"
+            },
+            {
+                "id": "vi-11-012",
+                "text": "Tôi có vi phạm luật giữ chay Thánh Thể trước khi rước lễ không?"
+            },
+            {
+                "id": "vi-11-013",
+                "text": "Tôi có ăn thịt vào các ngày thứ Sáu trong Mùa Chay không?"
+            },
+            {
+                "id": "vi-11-014",
+                "text": "Tôi có không giữ luật ăn chay ngày thứ Tư Lễ Tro và thứ Sáu Tuần Thánh không?"
+            },
+            {
+                "id": "vi-11-015",
+                "text": "Tôi có thiếu sót trong việc sống đúng tinh thần của luật ăn chay, kiêng thịt không?"
+            },
+            {
+                "id": "vi-11-016",
+                "text": "Tôi có bỏ việc kiêng thịt các ngày thứ Sáu quanh năm, hoặc không giữ theo hướng dẫn của các giám mục địa phương không (chẳng hạn làm một việc hãm mình đền tội thay cho việc kiêng thịt như tại nhiều nơi ở Hoa Kỳ)?"
+            },
+            {
+                "id": "vi-11-017",
+                "text": "Tôi có lơ là việc thực hành thương linh hồn bảy mối, thương xác bảy mối và tập hãm mình không?"
+            },
+            {
+                "id": "vi-11-018",
+                "text": "Tôi có thiếu sót trong việc đóng góp cho Hội Thánh cách đều đặn không?"
+            },
+            {
+                "id": "vi-11-019",
+                "text": "Tôi có thiếu sót trong việc đóng góp một phần tương xứng với hoàn cảnh của mình không?"
+            },
+            {
+                "id": "vi-11-020",
+                "text": "Tôi có thiếu sót trong việc dành thời giờ phục vụ Hội Thánh cách phù hợp với hoàn cảnh của mình không?"
+            },
+            {
+                "id": "vi-11-021",
+                "text": "Tôi có lơ là việc cầu nguyện cho Hội Thánh được phát triển không?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "vi-12",
+        "questions": [
+            {
+                "id": "vi-12-001",
+                "text": "Tôi có phạm tội kiêu ngạo không?"
+            },
+            {
+                "id": "vi-12-002",
+                "text": "Tôi có phạm tội hà tiện (tham lam) không?"
+            },
+            {
+                "id": "vi-12-003",
+                "text": "Tôi có phạm tội mê dâm dục không?"
+            },
+            {
+                "id": "vi-12-004",
+                "text": "Tôi có phạm tội ghen ghét không?"
+            },
+            {
+                "id": "vi-12-005",
+                "text": "Tôi có phạm tội mê ăn uống không?"
+            },
+            {
+                "id": "vi-12-006",
+                "text": "Tôi có phạm tội hờn giận không?"
+            },
+            {
+                "id": "vi-12-007",
+                "text": "Tôi có phạm tội lười biếng không?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "vi-13",
+        "questions": [
+            {
+                "id": "vi-13-001",
+                "text": "Tôi có phạm tội mà ỷ lại rằng Thiên Chúa sẽ tha thứ dù mình không thật lòng ăn năn không (tội ỷ lại vào lòng Chúa thương xót)?"
+            },
+            {
+                "id": "vi-13-002",
+                "text": "Tôi có thất vọng về ơn cứu độ không?"
+            },
+            {
+                "id": "vi-13-003",
+                "text": "Tôi có chống đối hay công kích những chân lý mà tôi biết là Hội Thánh Công giáo giảng dạy không?"
+            },
+            {
+                "id": "vi-13-004",
+                "text": "Tôi có ganh tị vì ơn lành thiêng liêng của người khác không?"
+            },
+            {
+                "id": "vi-13-005",
+                "text": "Tôi có ngoan cố ở lì trong tình trạng tội lỗi không?"
+            },
+            {
+                "id": "vi-13-006",
+                "text": "Tôi có khăng khăng không chịu ăn năn hối cải không?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "vi-14",
+        "questions": [
+            {
+                "id": "vi-14-001",
+                "text": "Tôi có cố ý giết người không?"
+            },
+            {
+                "id": "vi-14-002",
+                "text": "Tôi có phạm tội của thành Xơ-đôm (những hành vi tình dục nghịch tự nhiên) không?"
+            },
+            {
+                "id": "vi-14-003",
+                "text": "Tôi có áp bức người nghèo không?"
+            },
+            {
+                "id": "vi-14-004",
+                "text": "Tôi có gian lận tiền công của người làm thuê không?"
+            }
+        ]
+    }
+]

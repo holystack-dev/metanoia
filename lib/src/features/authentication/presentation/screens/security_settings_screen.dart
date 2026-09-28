@@ -1,5 +1,7 @@
 import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
+import 'package:confessionapp/src/core/theme/app_radius.dart';
 import 'package:confessionapp/src/core/utils/haptic_utils.dart';
+import 'package:confessionapp/src/core/widgets/app_back_button.dart';
 import 'package:confessionapp/src/features/authentication/presentation/providers/auth_provider.dart';
 import 'package:confessionapp/src/features/authentication/presentation/widgets/pin_dots_display.dart';
 import 'package:confessionapp/src/features/authentication/presentation/widgets/pin_input_widget.dart';
@@ -25,9 +27,8 @@ class _SecuritySettingsScreenState extends ConsumerState<SecuritySettingsScreen>
     return Scaffold(
       backgroundColor: theme.colorScheme.surface,
       appBar: AppBar(
+        leading: const AppBackButton(fallbackLocation: '/settings'),
         title: Text(l10n.security),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
       ),
       body: authState.when(
         data: (state) => _buildContent(context, theme, state, l10n),
@@ -84,7 +85,7 @@ class _SecuritySettingsScreenState extends ConsumerState<SecuritySettingsScreen>
     return Container(
       decoration: BoxDecoration(
         color: theme.colorScheme.surface,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(AppRadius.card),
         border: Border.all(color: theme.colorScheme.outlineVariant),
       ),
       child: SwitchListTile(
@@ -120,7 +121,7 @@ class _SecuritySettingsScreenState extends ConsumerState<SecuritySettingsScreen>
     return Container(
       decoration: BoxDecoration(
         color: theme.colorScheme.surface,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(AppRadius.card),
         border: Border.all(color: theme.colorScheme.outlineVariant),
       ),
       child: Column(
@@ -141,25 +142,27 @@ class _SecuritySettingsScreenState extends ConsumerState<SecuritySettingsScreen>
             subtitle: Text(AppLocalizations.of(context)!.timeInBackgroundBeforeLocking),
           ),
           const Divider(height: 1),
-          ...timeoutOptions.map((option) {
-            final (duration, label) = option;
-
-            return RadioListTile<Duration>(
-              title: Text(label),
-              value: duration,
-              groupValue: currentTimeout,
-              onChanged: (value) async {
-                if (value != null) {
-                  HapticUtils.lightImpact();
-                  await ref
-                      .read(authControllerProvider.notifier)
-                      .setBackgroundTimeout(value);
-                }
-              },
-              activeColor: theme.colorScheme.primary,
-              dense: true,
-            );
-          }),
+          RadioGroup<Duration>(
+            groupValue: currentTimeout,
+            onChanged: (value) async {
+              if (value == null) return;
+              HapticUtils.lightImpact();
+              await ref
+                  .read(authControllerProvider.notifier)
+                  .setBackgroundTimeout(value);
+            },
+            child: Column(
+              children: [
+                for (final (duration, label) in timeoutOptions)
+                  RadioListTile<Duration>(
+                    title: Text(label),
+                    value: duration,
+                    activeColor: theme.colorScheme.primary,
+                    dense: true,
+                  ),
+              ],
+            ),
+          ),
         ],
       ),
     );
@@ -169,7 +172,7 @@ class _SecuritySettingsScreenState extends ConsumerState<SecuritySettingsScreen>
     return Container(
       decoration: BoxDecoration(
         color: theme.colorScheme.surface,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(AppRadius.card),
         border: Border.all(color: theme.colorScheme.outlineVariant),
       ),
       child: ListTile(
@@ -361,7 +364,7 @@ class _ChangePinSheetState extends ConsumerState<_ChangePinSheet> {
     return Container(
       decoration: BoxDecoration(
         color: theme.colorScheme.surface,
-        borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
+        borderRadius: const BorderRadius.vertical(top: Radius.circular(AppRadius.sheet)),
       ),
       padding: EdgeInsets.only(
         bottom: MediaQuery.of(context).viewInsets.bottom,
@@ -378,7 +381,7 @@ class _ChangePinSheetState extends ConsumerState<_ChangePinSheet> {
                 height: 4,
                 decoration: BoxDecoration(
                   color: theme.colorScheme.outlineVariant,
-                  borderRadius: BorderRadius.circular(2),
+                  borderRadius: BorderRadius.circular(AppRadius.bar),
                 ),
               ),
               const SizedBox(height: 24),

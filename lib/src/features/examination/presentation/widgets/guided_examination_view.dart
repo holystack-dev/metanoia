@@ -1,16 +1,25 @@
 import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
+import 'package:confessionapp/src/core/theme/app_radius.dart';
 import 'package:confessionapp/src/core/theme/app_showcase.dart';
+import 'package:confessionapp/src/core/theme/app_theme.dart';
 import 'package:confessionapp/src/core/utils/haptic_utils.dart';
 import 'package:confessionapp/src/features/examination/data/examination_repository.dart';
 import 'package:confessionapp/src/features/examination/presentation/examination_controller.dart'
-    show examinationControllerProvider, kLastExaminationPageKey;
+    show
+        examinationControllerProvider,
+        kLastExaminationPageKey,
+        neutralSelectionKey;
+import 'package:confessionapp/src/features/examination/presentation/widgets/examination_question_text.dart';
 import 'package:confessionapp/src/features/examination/presentation/widgets/examination_summary_sheet.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// Guided examination view - one commandment at a time with horizontal navigation
+///
+/// Questions are set in EB Garamond at `onSurface`, matching Deep Reflection.
+/// The only progress indicator is the count of sins named; the commandment
+/// strip is navigation.
 class GuidedExaminationView extends ConsumerStatefulWidget {
   final List<CommandmentWithQuestions> data;
   final VoidCallback onFinish;
@@ -52,6 +61,9 @@ class _GuidedExaminationViewState extends ConsumerState<GuidedExaminationView> {
   }
 
   Future<void> _loadLastPosition() async {
+    // Nothing to restore (and clamp(0, -1) would throw) without any data.
+    if (widget.data.isEmpty) return;
+
     final prefs = await SharedPreferences.getInstance();
     final lastPage = prefs.getInt(kLastExaminationPageKey) ?? 0;
 
@@ -103,6 +115,21 @@ class _GuidedExaminationViewState extends ConsumerState<GuidedExaminationView> {
     final theme = Theme.of(context);
     final selectedQuestions = ref.watch(examinationControllerProvider);
 
+    if (widget.data.isEmpty) {
+      return Center(
+        child: Padding(
+          padding: const EdgeInsets.all(32),
+          child: Text(
+            l10n.noQuestionsInSection,
+            style: theme.textTheme.bodyLarge?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+      );
+    }
+
     return Column(
       children: [
         // Progress indicator
@@ -125,109 +152,66 @@ class _GuidedExaminationViewState extends ConsumerState<GuidedExaminationView> {
     AppLocalizations l10n,
   ) {
     final currentItem = widget.data[_currentPage];
+    final namedCount = ref.watch(examinationControllerProvider).length;
 
-    // Get selected count for current commandment
-    final selectedQuestions = ref.watch(examinationControllerProvider);
-    final selectedInSection = _getSelectedCountForItem(currentItem, selectedQuestions);
-    final totalInSection = currentItem.questions.length + currentItem.customSins.length;
-
-    return Container(
-      padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 8, 20, 20),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Milestone progress bar with tappable dots
-          _MilestoneProgressBar(
+          // Navigation between commandments — not a progress bar.
+          _CommandmentNavBar(
             totalSteps: widget.data.length,
             currentStep: _currentPage,
-            selectedQuestions: selectedQuestions,
             data: widget.data,
             onStepTapped: _goToPage,
-            getSelectedCountForItem: _getSelectedCountForItem,
             getTooltipForItem: (item) => _getTooltipForItem(item, l10n),
           ),
-          const SizedBox(height: 12),
+          const SizedBox(height: 20),
 
-          // Commandment title and progress text
-          Row(
-            children: [
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      currentItem.isGeneral
-                          ? l10n.noCommandment
-                          : currentItem.commandment?.customTitle ??
-                              '${l10n.commandment} ${currentItem.commandment?.commandmentNo}',
-                      style: theme.textTheme.titleMedium?.copyWith(
-                        fontWeight: FontWeight.bold,
-                        color: theme.colorScheme.primary,
-                      ),
-                    ),
-                    if (!currentItem.isGeneral &&
-                        currentItem.commandment?.content != null &&
-                        currentItem.commandment?.customTitle != currentItem.commandment?.content)
-                      Padding(
-                        padding: const EdgeInsets.only(top: 4),
-                        child: Text(
-                          currentItem.commandment!.content,
-                          style: theme.textTheme.bodySmall?.copyWith(
-                            color: theme.colorScheme.onSurfaceVariant,
-                          ),
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                  ],
-                ),
-              ),
-              const SizedBox(width: 12),
-              // Progress badge
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                decoration: BoxDecoration(
-                  color: theme.colorScheme.secondaryContainer,
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: Text(
-                  l10n.commandmentProgress(
-                    _currentPage + 1,
-                    widget.data.length,
-                  ),
-                  style: theme.textTheme.labelMedium?.copyWith(
-                    color: theme.colorScheme.onSecondaryContainer,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ),
-            ],
+          Text(
+            currentItem.isGeneral
+                ? l10n.noCommandment
+                : currentItem.commandment?.customTitle ??
+                    '${l10n.commandment} ${currentItem.commandment?.commandmentNo}',
+            style: theme.textTheme.titleMedium?.copyWith(
+              fontWeight: FontWeight.w600,
+              color: theme.colorScheme.primary,
+            ),
           ),
-
-          // Selected count for this section
-          if (selectedInSection > 0)
+          if (!currentItem.isGeneral &&
+              currentItem.commandment?.content != null &&
+              currentItem.commandment?.customTitle !=
+                  currentItem.commandment?.content)
             Padding(
-              padding: const EdgeInsets.only(top: 8),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                  decoration: BoxDecoration(
-                    color: theme.colorScheme.primaryContainer,
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Text(
-                    '$selectedInSection / $totalInSection ${l10n.selectedLabel}',
-                    style: theme.textTheme.labelSmall?.copyWith(
-                      color: theme.colorScheme.onPrimaryContainer,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+              padding: const EdgeInsets.only(top: 6),
+              child: Text(
+                currentItem.commandment!.content,
+                style: theme.textTheme.bodyMedium?.copyWith(
+                  fontFamily: AppTheme.fontFamilyEBGaramond,
+                  fontStyle: FontStyle.italic,
+                  color: theme.colorScheme.onSurfaceVariant,
+                  height: 1.4,
+                ),
+                maxLines: 3,
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+
+          // The one progress indicator: what has been named, all told.
+          if (namedCount > 0)
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: Text(
+                l10n.namedSoFar(namedCount),
+                style: theme.textTheme.labelMedium?.copyWith(
+                  color: theme.colorScheme.onSurfaceVariant,
                 ),
               ),
             ),
         ],
       ),
-    ).animate().fadeIn();
+    );
   }
 
   Widget _buildPageViewWithShowcase(
@@ -263,9 +247,9 @@ class _GuidedExaminationViewState extends ConsumerState<GuidedExaminationView> {
         title: l10n.examineTitle,
         description: l10n.tutorialSwipeDesc,
         currentStep: 1,
-        totalSteps: 5,
+        totalSteps: 4,
         shapeBorder: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(AppRadius.tile),
         ),
         child: pageView,
       );
@@ -287,7 +271,8 @@ class _GuidedExaminationViewState extends ConsumerState<GuidedExaminationView> {
     // Standard questions
     for (int i = 0; i < item.questions.length; i++) {
       final q = item.questions[i];
-      final isSelected = selectedQuestions.containsKey(q.id);
+      final isSelected =
+          selectedQuestions.containsKey(neutralSelectionKey(q.id));
 
       Widget tile = _QuestionTile(
         question: q.question,
@@ -311,9 +296,9 @@ class _GuidedExaminationViewState extends ConsumerState<GuidedExaminationView> {
           title: l10n.examineTitle,
           description: l10n.tutorialSelectDesc,
           currentStep: 2,
-          totalSteps: 5,
+          totalSteps: 4,
           shapeBorder: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(AppRadius.tile),
           ),
           child: tile,
         );
@@ -382,15 +367,12 @@ class _GuidedExaminationViewState extends ConsumerState<GuidedExaminationView> {
       );
     }
 
+    // No entrance animation: tiles rebuild on every selection, so `.animate()`
+    // would replay, and a per-index delay blanks items during a fast scroll.
     return ListView.builder(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.fromLTRB(20, 0, 20, 24),
       itemCount: allItems.length,
-      itemBuilder: (context, index) {
-        return allItems[index]
-            .animate()
-            .fadeIn(delay: (30 * index).ms)
-            .slideX(begin: 0.05, end: 0);
-      },
+      itemBuilder: (context, index) => allItems[index],
     );
   }
 
@@ -417,7 +399,7 @@ class _GuidedExaminationViewState extends ConsumerState<GuidedExaminationView> {
         color: theme.colorScheme.surface,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
+            color: theme.colorScheme.shadow.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, -5),
           ),
@@ -486,32 +468,16 @@ class _GuidedExaminationViewState extends ConsumerState<GuidedExaminationView> {
         showcaseKey: widget.finishShowcaseKey!,
         title: l10n.finishExamination,
         description: l10n.tutorialFinishDesc,
-        currentStep: 5,
-        totalSteps: 5,
+        currentStep: 4,
+        totalSteps: 4,
         shapeBorder: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(24),
+          borderRadius: BorderRadius.circular(AppRadius.sheet),
         ),
         child: button,
       );
     }
 
     return button;
-  }
-
-  int _getSelectedCountForItem(
-    CommandmentWithQuestions item,
-    Map<String, String> selectedQuestions,
-  ) {
-    int count = 0;
-    // Count selected standard questions
-    for (final q in item.questions) {
-      if (selectedQuestions.containsKey(q.id)) count++;
-    }
-    // Count selected custom sins (custom-{id} format)
-    for (final s in item.customSins) {
-      if (selectedQuestions.containsKey('custom-${s.id}')) count++;
-    }
-    return count;
   }
 
   String _getTooltipForItem(CommandmentWithQuestions item, AppLocalizations l10n) {
@@ -540,6 +506,11 @@ class _GuidedExaminationViewState extends ConsumerState<GuidedExaminationView> {
   }
 }
 
+/// A question, set as spiritual content rather than as a line on a form.
+///
+/// EB Garamond at `bodyLarge` in `onSurface`, with a ring that fills when the
+/// question is acknowledged instead of a checkbox. Built from theme text
+/// styles so the font-size preference and `TextScaler` apply.
 class _QuestionTile extends StatelessWidget {
   final String question;
   final bool isSelected;
@@ -556,66 +527,121 @@ class _QuestionTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+    final accent = isCustom ? scheme.secondary : scheme.primary;
+    final onAccent = isCustom ? scheme.onSecondary : scheme.onPrimary;
 
-    return Card(
-      margin: const EdgeInsets.only(bottom: 8),
-      elevation: 0,
-      color: isSelected
-          ? (isCustom
-              ? theme.colorScheme.secondaryContainer.withValues(alpha: 0.5)
-              : theme.colorScheme.primaryContainer.withValues(alpha: 0.5))
-          : theme.colorScheme.surface,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
-        side: BorderSide(
+    return Semantics(
+      selected: isSelected,
+      button: true,
+      child: Container(
+        margin: const EdgeInsets.only(bottom: 10),
+        decoration: BoxDecoration(
           color: isSelected
-              ? (isCustom
-                  ? theme.colorScheme.secondary.withValues(alpha: 0.5)
-                  : theme.colorScheme.primary.withValues(alpha: 0.5))
-              : theme.colorScheme.outlineVariant,
-          width: isSelected ? 1.5 : 1,
-        ),
-      ),
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: BorderRadius.circular(12),
-        child: Padding(
-          padding: const EdgeInsets.all(14),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Icon(
-                isSelected ? Icons.check_box : Icons.check_box_outline_blank,
-                color: isSelected
-                    ? (isCustom
-                        ? theme.colorScheme.secondary
-                        : theme.colorScheme.primary)
-                    : theme.colorScheme.onSurfaceVariant,
-                size: 24,
-              ),
-              const SizedBox(width: 12),
-              if (isCustom) ...[
-                Icon(
-                  Icons.auto_awesome,
-                  size: 16,
-                  color: theme.colorScheme.secondary,
-                ),
-                const SizedBox(width: 8),
-              ],
-              Expanded(
-                child: Text(
-                  question,
-                  style: theme.textTheme.bodyMedium?.copyWith(
-                    color: isSelected
-                        ? theme.colorScheme.onSurface
-                        : theme.colorScheme.onSurfaceVariant,
-                    fontWeight: isSelected ? FontWeight.w500 : FontWeight.normal,
-                  ),
-                ),
-              ),
-            ],
+              ? accent.withValues(alpha: 0.06)
+              : scheme.surface,
+          borderRadius: BorderRadius.circular(AppRadius.card),
+          border: Border.all(
+            color: isSelected
+                ? accent.withValues(alpha: 0.45)
+                : scheme.outlineVariant.withValues(alpha: 0.6),
+            width: isSelected ? 1.5 : 1,
           ),
         ),
+        child: Material(
+          color: Colors.transparent,
+          child: InkWell(
+            onTap: onTap,
+            borderRadius: BorderRadius.circular(AppRadius.card),
+            child: Padding(
+              // Tighter than Deep Reflection's card; 14px keeps a single-line
+              // row at the 48px tap minimum.
+              padding: const EdgeInsets.symmetric(
+                horizontal: 18,
+                vertical: 14,
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  _SelectionRing(
+                    isSelected: isSelected,
+                    accent: accent,
+                    onAccent: onAccent,
+                  ),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        if (isCustom) ...[
+                          Icon(
+                            Icons.auto_awesome,
+                            size: 14,
+                            color: scheme.secondary,
+                          ),
+                          const SizedBox(height: 6),
+                        ],
+                        ExaminationQuestionText(
+                          text: question,
+                          style: theme.textTheme.bodyLarge?.copyWith(
+                            fontFamily: AppTheme.fontFamilyEBGaramond,
+                            color: scheme.onSurface,
+                            height: 1.45,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// The selection affordance: an open ring that fills, gently, when a question
+/// is acknowledged.
+class _SelectionRing extends StatelessWidget {
+  const _SelectionRing({
+    required this.isSelected,
+    required this.accent,
+    required this.onAccent,
+  });
+
+  final bool isSelected;
+  final Color accent;
+  final Color onAccent;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+
+    return Padding(
+      // Sits on the first line of EB Garamond text rather than on the box top.
+      padding: const EdgeInsets.only(top: 3),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 180),
+        curve: Curves.easeOut,
+        width: 22,
+        height: 22,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: isSelected ? accent : Colors.transparent,
+          border: Border.all(
+            color: isSelected ? accent : scheme.outline.withValues(alpha: 0.7),
+            width: 1.5,
+          ),
+        ),
+        child: isSelected
+            ? Icon(
+                Icons.check_rounded,
+                size: 14,
+                color: onAccent,
+              )
+            : null,
       ),
     );
   }
@@ -636,7 +662,7 @@ class _AddYourOwnTile extends StatelessWidget {
       elevation: 0,
       color: theme.colorScheme.secondaryContainer.withValues(alpha: 0.2),
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(AppRadius.tile),
         side: BorderSide(
           color: theme.colorScheme.secondary.withValues(alpha: 0.3),
           width: 1,
@@ -648,7 +674,7 @@ class _AddYourOwnTile extends StatelessWidget {
           HapticUtils.lightImpact();
           onTap();
         },
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(AppRadius.tile),
         child: Padding(
           padding: const EdgeInsets.all(14),
           child: Row(
@@ -682,33 +708,28 @@ class _AddYourOwnTile extends StatelessWidget {
   }
 }
 
-/// Milestone-style progress bar with scrollable numbered chips
-/// Displays commandment numbers in a horizontal scrollable row
-/// with clear visual states for current, completed, and pending items
-class _MilestoneProgressBar extends StatefulWidget {
+/// Horizontal commandment navigation: shows the current commandment and lets
+/// the user tap to jump to another. Not a progress indicator.
+class _CommandmentNavBar extends StatefulWidget {
   final int totalSteps;
   final int currentStep;
-  final Map<String, String> selectedQuestions;
   final List<CommandmentWithQuestions> data;
   final Function(int) onStepTapped;
-  final int Function(CommandmentWithQuestions, Map<String, String>) getSelectedCountForItem;
   final String Function(CommandmentWithQuestions) getTooltipForItem;
 
-  const _MilestoneProgressBar({
+  const _CommandmentNavBar({
     required this.totalSteps,
     required this.currentStep,
-    required this.selectedQuestions,
     required this.data,
     required this.onStepTapped,
-    required this.getSelectedCountForItem,
     required this.getTooltipForItem,
   });
 
   @override
-  State<_MilestoneProgressBar> createState() => _MilestoneProgressBarState();
+  State<_CommandmentNavBar> createState() => _CommandmentNavBarState();
 }
 
-class _MilestoneProgressBarState extends State<_MilestoneProgressBar> {
+class _CommandmentNavBarState extends State<_CommandmentNavBar> {
   late ScrollController _scrollController;
 
   @override
@@ -721,7 +742,7 @@ class _MilestoneProgressBarState extends State<_MilestoneProgressBar> {
   }
 
   @override
-  void didUpdateWidget(_MilestoneProgressBar oldWidget) {
+  void didUpdateWidget(_CommandmentNavBar oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (oldWidget.currentStep != widget.currentStep) {
       _scrollToCurrentStep();
@@ -735,7 +756,14 @@ class _MilestoneProgressBarState extends State<_MilestoneProgressBar> {
   }
 
   void _scrollToCurrentStep() {
-    if (!_scrollController.hasClients) return;
+    if (!_scrollController.hasClients) {
+      // On first entry (e.g. resuming at a saved commandment) the strip may
+      // not be laid out yet; retry next frame so the current chip is visible.
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) _scrollToCurrentStep();
+      });
+      return;
+    }
 
     // Each chip is approximately 36px wide with 8px spacing
     const chipWidth = 36.0;
@@ -775,22 +803,16 @@ class _MilestoneProgressBarState extends State<_MilestoneProgressBar> {
         child: ListView.separated(
           controller: _scrollController,
           scrollDirection: Axis.horizontal,
-          padding: const EdgeInsets.symmetric(horizontal: 16),
           itemCount: widget.totalSteps,
           separatorBuilder: (context, index) => const SizedBox(width: 8),
           itemBuilder: (context, index) {
-            final hasSelections =
-                widget.getSelectedCountForItem(widget.data[index], widget.selectedQuestions) > 0;
-            final isCurrent = index == widget.currentStep;
-            final isPast = index < widget.currentStep;
-            final isGeneral = widget.data[index].isGeneral;
-
-            return _MilestoneChip(
-              label: isGeneral ? 'G' : '${widget.data[index].commandment?.commandmentNo ?? index + 1}',
-              isCurrent: isCurrent,
-              isPast: isPast,
-              hasSelections: hasSelections,
-              tooltip: widget.getTooltipForItem(widget.data[index]),
+            final item = widget.data[index];
+            return _CommandmentChip(
+              label: item.isGeneral
+                  ? 'G'
+                  : '${item.commandment?.commandmentNo ?? index + 1}',
+              isCurrent: index == widget.currentStep,
+              tooltip: widget.getTooltipForItem(item),
               onTap: () => widget.onStepTapped(index),
             );
           },
@@ -800,20 +822,16 @@ class _MilestoneProgressBarState extends State<_MilestoneProgressBar> {
   }
 }
 
-/// Individual milestone chip showing commandment number with status
-class _MilestoneChip extends StatelessWidget {
+/// A single commandment in the navigation strip.
+class _CommandmentChip extends StatelessWidget {
   final String label;
   final bool isCurrent;
-  final bool isPast;
-  final bool hasSelections;
   final String tooltip;
   final VoidCallback onTap;
 
-  const _MilestoneChip({
+  const _CommandmentChip({
     required this.label,
     required this.isCurrent,
-    required this.isPast,
-    required this.hasSelections,
     required this.tooltip,
     required this.onTap,
   });
@@ -821,99 +839,41 @@ class _MilestoneChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-
-    Color backgroundColor;
-    Color textColor;
-    Color borderColor;
-    double borderWidth;
-
-    if (isCurrent) {
-      // Current - prominent primary color
-      backgroundColor = theme.colorScheme.primary;
-      textColor = theme.colorScheme.onPrimary;
-      borderColor = theme.colorScheme.primary;
-      borderWidth = 2.0;
-    } else if (hasSelections) {
-      // Has selections - highlighted with secondary color
-      backgroundColor = theme.colorScheme.secondaryContainer;
-      textColor = theme.colorScheme.onSecondaryContainer;
-      borderColor = theme.colorScheme.secondary;
-      borderWidth = 1.5;
-    } else if (isPast) {
-      // Past without selections - muted
-      backgroundColor = theme.colorScheme.surfaceContainerHighest;
-      textColor = theme.colorScheme.onSurfaceVariant;
-      borderColor = theme.colorScheme.outline;
-      borderWidth = 1.0;
-    } else {
-      // Future - outline only
-      backgroundColor = theme.colorScheme.surface;
-      textColor = theme.colorScheme.onSurfaceVariant;
-      borderColor = theme.colorScheme.outlineVariant;
-      borderWidth = 1.0;
-    }
+    final scheme = theme.colorScheme;
 
     return Tooltip(
       message: tooltip,
       preferBelow: true,
       triggerMode: TooltipTriggerMode.longPress,
-      child: GestureDetector(
-        onTap: () {
-          HapticUtils.lightImpact();
-          onTap();
-        },
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 200),
-          width: 36,
-          height: 36,
-          decoration: BoxDecoration(
-            color: backgroundColor,
-            borderRadius: BorderRadius.circular(10),
-            border: Border.all(
-              color: borderColor,
-              width: borderWidth,
-            ),
-            boxShadow: isCurrent
-                ? [
-                    BoxShadow(
-                      color: theme.colorScheme.primary.withValues(alpha: 0.3),
-                      blurRadius: 8,
-                      spreadRadius: 1,
-                    ),
-                  ]
-                : null,
-          ),
-          child: Stack(
-            children: [
-              // Commandment number
-              Center(
-                child: Text(
-                  label,
-                  style: theme.textTheme.labelMedium?.copyWith(
-                    color: textColor,
-                    fontWeight: isCurrent ? FontWeight.bold : FontWeight.w600,
-                  ),
-                ),
+      child: Semantics(
+        selected: isCurrent,
+        button: true,
+        child: GestureDetector(
+          onTap: () {
+            HapticUtils.lightImpact();
+            onTap();
+          },
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 200),
+            width: 36,
+            height: 36,
+            decoration: BoxDecoration(
+              color: isCurrent ? scheme.primary : Colors.transparent,
+              borderRadius: BorderRadius.circular(AppRadius.tile),
+              border: Border.all(
+                color: isCurrent
+                    ? scheme.primary
+                    : scheme.outlineVariant.withValues(alpha: 0.7),
               ),
-              // Selection indicator dot
-              if (hasSelections && !isCurrent)
-                Positioned(
-                  top: 2,
-                  right: 2,
-                  child: Container(
-                    width: 8,
-                    height: 8,
-                    decoration: BoxDecoration(
-                      color: theme.colorScheme.secondary,
-                      shape: BoxShape.circle,
-                      border: Border.all(
-                        color: backgroundColor,
-                        width: 1,
-                      ),
-                    ),
-                  ),
-                ),
-            ],
+            ),
+            alignment: Alignment.center,
+            child: Text(
+              label,
+              style: theme.textTheme.labelMedium?.copyWith(
+                color: isCurrent ? scheme.onPrimary : scheme.onSurfaceVariant,
+                fontWeight: isCurrent ? FontWeight.w700 : FontWeight.w500,
+              ),
+            ),
           ),
         ),
       ),

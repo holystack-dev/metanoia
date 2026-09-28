@@ -1,16 +1,23 @@
+import 'dart:io';
+
 import 'package:confessionapp/src/core/constants/app_constants.dart';
 import 'package:confessionapp/src/core/services/package_info_service.dart';
 import 'package:confessionapp/src/core/localization/language_provider.dart';
 import 'package:confessionapp/src/core/localization/content_language_provider.dart';
 import 'package:confessionapp/src/core/services/in_app_review_service.dart';
-import 'package:confessionapp/src/core/services/reminder_service.dart';
+import 'package:confessionapp/src/core/theme/app_radius.dart';
 import 'package:confessionapp/src/core/theme/theme_provider.dart';
 import 'package:confessionapp/src/core/theme/font_size_provider.dart';
 import 'package:confessionapp/src/core/tutorial/tutorial_controller.dart';
 import 'package:confessionapp/src/core/utils/haptic_utils.dart';
+import 'package:confessionapp/src/core/widgets/app_back_button.dart';
+import 'package:confessionapp/src/features/settings/data/reminder_settings_provider.dart';
+import 'package:confessionapp/src/features/settings/domain/reminder_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:intl/intl.dart';
 import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
+import 'package:confessionapp/src/features/confession/data/confession_repository.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:go_router/go_router.dart';
@@ -57,104 +64,6 @@ class ExaminationModeSettings extends _$ExaminationModeSettings {
   }
 }
 
-enum ReminderFrequency { none, weekly, biweekly, monthly, quarterly }
-
-@riverpod
-class ReminderSettings extends _$ReminderSettings {
-  @override
-  Future<ReminderConfig> build() async {
-    final prefs = await SharedPreferences.getInstance();
-    final config = ReminderConfig(
-      frequency: ReminderFrequency.values.firstWhere(
-        (e) => e.name == (prefs.getString('reminder_frequency') ?? 'none'),
-        orElse: () => ReminderFrequency.none,
-      ),
-      weekday: prefs.getInt('reminder_weekday') ?? DateTime.saturday,
-      hour: prefs.getInt('reminder_hour') ?? 9,
-      minute: prefs.getInt('reminder_minute') ?? 0,
-      advanceDays: prefs.getInt('reminder_advance_days') ?? 0,
-    );
-
-    // On app startup, refresh notifications if running low
-    if (config.frequency != ReminderFrequency.none) {
-      final reminderService = ReminderService();
-      await reminderService.initialize();
-      await reminderService.refreshIfNeeded(
-        weekday: config.weekday,
-        hour: config.hour,
-        minute: config.minute,
-        advanceDays: config.advanceDays,
-        isBiweekly: config.frequency == ReminderFrequency.biweekly,
-        isMonthly: config.frequency == ReminderFrequency.monthly,
-        isQuarterly: config.frequency == ReminderFrequency.quarterly,
-      );
-    }
-
-    return config;
-  }
-
-  Future<void> updateConfig(ReminderConfig config) async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setString('reminder_frequency', config.frequency.name);
-    await prefs.setInt('reminder_weekday', config.weekday);
-    await prefs.setInt('reminder_hour', config.hour);
-    await prefs.setInt('reminder_minute', config.minute);
-    await prefs.setInt('reminder_advance_days', config.advanceDays);
-
-    state = AsyncValue.data(config);
-
-    final reminderService = ReminderService();
-    await reminderService.initialize();
-
-    if (config.frequency == ReminderFrequency.none) {
-      await reminderService.cancelAllReminders();
-    } else {
-      await reminderService.requestPermissions();
-      await reminderService.scheduleReminder(
-        weekday: config.weekday,
-        hour: config.hour,
-        minute: config.minute,
-        advanceDays: config.advanceDays,
-        isBiweekly: config.frequency == ReminderFrequency.biweekly,
-        isMonthly: config.frequency == ReminderFrequency.monthly,
-        isQuarterly: config.frequency == ReminderFrequency.quarterly,
-      );
-    }
-  }
-}
-
-class ReminderConfig {
-  final ReminderFrequency frequency;
-  final int weekday;
-  final int hour;
-  final int minute;
-  final int advanceDays;
-
-  ReminderConfig({
-    required this.frequency,
-    required this.weekday,
-    required this.hour,
-    required this.minute,
-    required this.advanceDays,
-  });
-
-  ReminderConfig copyWith({
-    ReminderFrequency? frequency,
-    int? weekday,
-    int? hour,
-    int? minute,
-    int? advanceDays,
-  }) {
-    return ReminderConfig(
-      frequency: frequency ?? this.frequency,
-      weekday: weekday ?? this.weekday,
-      hour: hour ?? this.hour,
-      minute: minute ?? this.minute,
-      advanceDays: advanceDays ?? this.advanceDays,
-    );
-  }
-}
-
 class SettingsScreen extends ConsumerStatefulWidget {
   const SettingsScreen({super.key});
 
@@ -164,23 +73,158 @@ class SettingsScreen extends ConsumerStatefulWidget {
 
 class _SettingsScreenState extends ConsumerState<SettingsScreen> {
   final GlobalKey _remindersKey = GlobalKey();
+  final ScrollController _scrollController = ScrollController();
 
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+
+      // Reminders are scheduled explicitly (never as a provider build side
+      // effect); top up the schedule whenever settings is opened.
+      ref.read(reminderSettingsProvider.notifier).refreshScheduleIfNeeded();
+      ref
+          .read(journalReminderSettingsProvider.notifier)
+          .refreshScheduleIfNeeded();
+
       final state = GoRouterState.of(context);
       if (state.uri.queryParameters['scrollTo'] == 'reminders') {
-        final reminderContext = _remindersKey.currentContext;
-        if (reminderContext != null) {
-          Scrollable.ensureVisible(
-            reminderContext,
-            duration: const Duration(milliseconds: 500),
-            curve: Curves.easeInOut,
-          );
-        }
+        _scrollToReminders();
       }
     });
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  /// Scrolls the reminders card into view.
+  ///
+  /// The card's [GlobalKey] context can still be null on the very first frame
+  /// (the reminder card renders asynchronously while its provider loads), so
+  /// retry for a few frames before giving up.
+  void _scrollToReminders([int attempt = 0]) {
+    if (!mounted) return;
+
+    final reminderContext = _remindersKey.currentContext;
+    if (reminderContext != null) {
+      Scrollable.ensureVisible(
+        reminderContext,
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.easeInOut,
+        alignment: 0.1,
+      );
+      return;
+    }
+
+    if (attempt >= 10) return;
+    WidgetsBinding.instance.addPostFrameCallback(
+      (_) => _scrollToReminders(attempt + 1),
+    );
+  }
+
+  /// Applies the "keep confession history" toggle.
+  ///
+  /// Turning it off also offers to discard sins already recorded, keeping the
+  /// dates so streaks and insights survive.
+  Future<void> _onKeepHistoryChanged(
+    BuildContext context,
+    WidgetRef ref,
+    bool keepHistory,
+  ) async {
+    await ref.read(keepHistorySettingsProvider.notifier).toggle(keepHistory);
+
+    if (keepHistory || !context.mounted) return;
+
+    final l10n = AppLocalizations.of(context)!;
+
+    final discard = await showDialog<bool>(
+      context: context,
+      builder:
+          (dialogContext) => AlertDialog(
+            title: Text(l10n.discardStoredSinsTitle),
+            content: Text(l10n.discardStoredSinsContent),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(dialogContext, false),
+                child: Text(l10n.keepThem),
+              ),
+              FilledButton(
+                style: FilledButton.styleFrom(
+                  backgroundColor: Theme.of(dialogContext).colorScheme.error,
+                ),
+                onPressed: () => Navigator.pop(dialogContext, true),
+                child: Text(l10n.discard),
+              ),
+            ],
+          ),
+    );
+
+    if (discard != true) return;
+
+    HapticUtils.heavyImpact();
+    await ref.read(confessionRepositoryProvider).discardStoredSins();
+
+    if (!context.mounted) return;
+    ScaffoldMessenger.of(context)
+      ..hideCurrentSnackBar()
+      ..showSnackBar(
+        SnackBar(
+          content: Text(l10n.storedSinsDiscarded),
+          behavior: SnackBarBehavior.floating,
+        ),
+      );
+  }
+
+  /// Saves [config], reverting (i.e. not committing) and warning the user when
+  /// the notification permission is denied.
+  Future<void> _applyReminderConfig(ReminderConfig config) async {
+    final result = await ref
+        .read(reminderSettingsProvider.notifier)
+        .updateConfig(config);
+
+    _warnIfPermissionDenied(result);
+  }
+
+  /// The same, for the daily journal reminder.
+  Future<void> _applyJournalReminderConfig(JournalReminderConfig config) async {
+    final result = await ref
+        .read(journalReminderSettingsProvider.notifier)
+        .updateConfig(config);
+
+    _warnIfPermissionDenied(result);
+  }
+
+  void _warnIfPermissionDenied(ReminderUpdateResult result) {
+    if (!mounted || result != ReminderUpdateResult.permissionDenied) return;
+
+    final l10n = AppLocalizations.of(context)!;
+    ScaffoldMessenger.of(context)
+      ..hideCurrentSnackBar()
+      ..showSnackBar(
+        SnackBar(
+          content: Text(l10n.notificationPermissionDenied),
+          behavior: SnackBarBehavior.floating,
+        ),
+      );
+  }
+
+  Future<void> _showJournalTimePicker(
+    BuildContext context,
+    JournalReminderConfig config,
+  ) async {
+    final time = await showTimePicker(
+      context: context,
+      initialTime: TimeOfDay(hour: config.hour, minute: config.minute),
+    );
+    if (time == null) return;
+
+    await _applyJournalReminderConfig(
+      config.copyWith(hour: time.hour, minute: time.minute),
+    );
   }
 
   @override
@@ -189,144 +233,250 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
     final themeMode = ref.watch(themeModeControllerProvider);
     final fontSizeScale = ref.watch(fontSizeControllerProvider);
     final reminderConfig = ref.watch(reminderSettingsProvider);
+    final journalReminderConfig = ref.watch(journalReminderSettingsProvider);
     final languageState = ref.watch(languageControllerProvider);
     final keepHistory = ref.watch(keepHistorySettingsProvider);
     final examinationMode = ref.watch(examinationModeSettingsProvider);
 
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            if (context.canPop()) {
-              context.pop();
-            } else {
-              context.go('/');
-            }
-          },
-        ),
+        leading: const AppBackButton(),
         title: Text(l10n.settingsTitle),
       ),
-      body: ListView(
+      // Not a lazy ListView: every card must be built on the first frame so
+      // `scrollTo=reminders` deep links can find the reminders GlobalKey.
+      body: SingleChildScrollView(
+        controller: _scrollController,
         padding: const EdgeInsets.all(16),
-        children: [
-          // Language settings
-          _LanguagePickerCard(
-            title: l10n.appLanguage,
-            subtitle: l10n.appLanguageSubtitle,
-            icon: Icons.language,
-            selectedLabel: languageState.when(
-              data: (locale) {
-                if (locale == null) return l10n.system;
-                final key = LanguageConfig.contentKeyFromLocale(locale);
-                return LanguageConfig.supportedContentLanguages[key] ??
-                    key;
-              },
-              loading: () => '...',
-              error: (_, __) => l10n.error,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            // Language settings
+            _LanguagePickerCard(
+              title: l10n.appLanguage,
+              subtitle: l10n.appLanguageSubtitle,
+              icon: Icons.language,
+              selectedLabel: languageState.when(
+                data: (locale) {
+                  if (locale == null) return l10n.system;
+                  final key = LanguageConfig.contentKeyFromLocale(locale);
+                  return LanguageConfig.supportedContentLanguages[key] ?? key;
+                },
+                loading: () => '...',
+                error: (_, __) => l10n.error,
+              ),
+              onTap: () => _showAppLanguagePicker(context, ref, l10n),
             ),
-            onTap: () => _showAppLanguagePicker(context, ref, l10n),
-          ),
-          const SizedBox(height: 16),
-          _LanguagePickerCard(
-            title: l10n.contentLanguage,
-            subtitle: l10n.contentLanguageSubtitle,
-            icon: Icons.menu_book,
-            selectedLabel: ref.watch(contentLanguageControllerProvider).when(
-                  data: (contentLanguage) {
-                    final key = LanguageConfig.contentKeyFromLocale(contentLanguage);
-                    return LanguageConfig.supportedContentLanguages[key] ?? key;
-                  },
-                  loading: () => '...',
-                  error: (_, __) => l10n.error,
-                ),
-            onTap: () => _showContentLanguagePicker(context, ref),
-          ),
-          const SizedBox(height: 16),
-          // Appearance settings
-          _SettingsCard(
-            title: l10n.theme,
-            subtitle: l10n.chooseTheme,
-            icon:
-                themeMode == ThemeMode.light
-                    ? Icons.light_mode
-                    : themeMode == ThemeMode.dark
-                    ? Icons.dark_mode
-                    : Icons.brightness_auto,
-            child: SegmentedButton<ThemeMode>(
-              segments: [
-                ButtonSegment(
-                  value: ThemeMode.system,
-                  label: Text(l10n.system),
-                  icon: const Icon(Icons.brightness_auto),
-                ),
-                ButtonSegment(
-                  value: ThemeMode.light,
-                  label: Text(l10n.light),
-                  icon: const Icon(Icons.light_mode),
-                ),
-                ButtonSegment(
-                  value: ThemeMode.dark,
-                  label: Text(l10n.dark),
-                  icon: const Icon(Icons.dark_mode),
-                ),
-              ],
-              selected: {themeMode},
-              onSelectionChanged: (Set<ThemeMode> newSelection) {
-                HapticUtils.selectionClick();
-                ref
-                    .read(themeModeControllerProvider.notifier)
-                    .setTheme(newSelection.first);
-              },
+            const SizedBox(height: 16),
+            _LanguagePickerCard(
+              title: l10n.contentLanguage,
+              subtitle: l10n.contentLanguageSubtitle,
+              icon: Icons.menu_book,
+              selectedLabel: ref
+                  .watch(contentLanguageControllerProvider)
+                  .when(
+                    data: (contentLanguage) {
+                      final key = LanguageConfig.contentKeyFromLocale(
+                        contentLanguage,
+                      );
+                      return LanguageConfig.supportedContentLanguages[key] ??
+                          key;
+                    },
+                    loading: () => '...',
+                    error: (_, __) => l10n.error,
+                  ),
+              onTap: () => _showContentLanguagePicker(context, ref),
             ),
-          ),
-          const SizedBox(height: 16),
-          _SettingsCard(
-            title: l10n.fontSize,
-            subtitle: l10n.fontSizeSubtitle,
-            icon: Icons.text_fields,
-            child: _FontSizeSelector(
-              currentScale: fontSizeScale,
-              onChanged: (scale) {
-                HapticUtils.selectionClick();
-                ref
-                    .read(fontSizeControllerProvider.notifier)
-                    .setFontSize(scale);
-              },
-              l10n: l10n,
-            ),
-          ),
-          const SizedBox(height: 16),
-          _SettingsCard(
-            title: l10n.examinationModeSettingTitle,
-            subtitle: l10n.examinationModeSettingSubtitle,
-            icon: Icons.checklist_rounded,
-            child: examinationMode.when(
-              data: (mode) => _ExaminationModeSelector(
-                currentMode: mode,
-                onChanged: (newMode) {
+            const SizedBox(height: 16),
+            // Appearance settings
+            _SettingsCard(
+              title: l10n.theme,
+              subtitle: l10n.chooseTheme,
+              icon:
+                  themeMode == ThemeMode.light
+                      ? Icons.light_mode
+                      : themeMode == ThemeMode.dark
+                      ? Icons.dark_mode
+                      : Icons.brightness_auto,
+              child: SegmentedButton<ThemeMode>(
+                segments: [
+                  ButtonSegment(
+                    value: ThemeMode.system,
+                    label: Text(l10n.system),
+                    icon: const Icon(Icons.brightness_auto),
+                  ),
+                  ButtonSegment(
+                    value: ThemeMode.light,
+                    label: Text(l10n.light),
+                    icon: const Icon(Icons.light_mode),
+                  ),
+                  ButtonSegment(
+                    value: ThemeMode.dark,
+                    label: Text(l10n.dark),
+                    icon: const Icon(Icons.dark_mode),
+                  ),
+                ],
+                selected: {themeMode},
+                onSelectionChanged: (Set<ThemeMode> newSelection) {
                   HapticUtils.selectionClick();
                   ref
-                      .read(examinationModeSettingsProvider.notifier)
-                      .setMode(newMode);
+                      .read(themeModeControllerProvider.notifier)
+                      .setTheme(newSelection.first);
+                },
+              ),
+            ),
+            const SizedBox(height: 16),
+            _SettingsCard(
+              title: l10n.fontSize,
+              subtitle: l10n.fontSizeSubtitle,
+              icon: Icons.text_fields,
+              child: _FontSizeSelector(
+                currentScale: fontSizeScale,
+                onChanged: (scale) {
+                  HapticUtils.selectionClick();
+                  ref
+                      .read(fontSizeControllerProvider.notifier)
+                      .setFontSize(scale);
                 },
                 l10n: l10n,
               ),
-              loading: () => const Center(child: CircularProgressIndicator()),
-              error: (_, __) => Text(l10n.error),
             ),
-          ),
-          const SizedBox(height: 16),
-          // Reminders
-          _SettingsCard(
-            key: _remindersKey,
-            title: l10n.reminders,
-            subtitle: l10n.getReminded,
-            icon: Icons.notifications_outlined,
-            child: reminderConfig.when(
-              data: (config) {
-                final isEnabled = config.frequency != ReminderFrequency.none;
-                return Column(
+            const SizedBox(height: 16),
+            _SettingsCard(
+              title: l10n.examinationModeSettingTitle,
+              subtitle: l10n.examinationModeSettingSubtitle,
+              icon: Icons.checklist_rounded,
+              child: examinationMode.when(
+                data:
+                    (mode) => _ExaminationModeSelector(
+                      currentMode: mode,
+                      onChanged: (newMode) {
+                        HapticUtils.selectionClick();
+                        ref
+                            .read(examinationModeSettingsProvider.notifier)
+                            .setMode(newMode);
+                      },
+                      l10n: l10n,
+                    ),
+                loading: () => const Center(child: CircularProgressIndicator()),
+                error: (_, __) => Text(l10n.error),
+              ),
+            ),
+            const SizedBox(height: 16),
+            // Reminders
+            _SettingsCard(
+              key: _remindersKey,
+              title: l10n.reminders,
+              subtitle: l10n.getReminded,
+              icon: Icons.notifications_outlined,
+              child: reminderConfig.when(
+                data: (config) {
+                  final isEnabled = config.isEnabled;
+                  return Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Expanded(
+                            child: Text(
+                              l10n.enableReminders,
+                              style: Theme.of(context).textTheme.titleMedium,
+                            ),
+                          ),
+                          Switch(
+                            value: isEnabled,
+                            onChanged: (value) {
+                              HapticUtils.selectionClick();
+                              // Defaults to Weekly. Only committed once
+                              // notification permission is granted.
+                              _applyReminderConfig(
+                                config.copyWith(
+                                  frequency:
+                                      value
+                                          ? ReminderFrequency.weekly
+                                          : ReminderFrequency.none,
+                                ),
+                              );
+                            },
+                          ),
+                        ],
+                      ),
+                      if (isEnabled) ...[
+                        const SizedBox(height: 16),
+                        Wrap(
+                          spacing: 8,
+                          runSpacing: 8,
+                          children: [
+                            for (final frequency in [
+                              (ReminderFrequency.weekly, l10n.weekly),
+                              (ReminderFrequency.biweekly, l10n.biweekly),
+                              (ReminderFrequency.monthly, l10n.monthly),
+                              (ReminderFrequency.quarterly, l10n.quarterly),
+                            ])
+                              _FrequencyChip(
+                                label: frequency.$2,
+                                isSelected: config.frequency == frequency.$1,
+                                onSelected: (selected) {
+                                  if (selected) {
+                                    HapticUtils.selectionClick();
+                                    _applyReminderConfig(
+                                      config.copyWith(frequency: frequency.$1),
+                                    );
+                                  }
+                                },
+                              ),
+                          ],
+                        ),
+                        const SizedBox(height: 16),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: _ConfigTile(
+                                label: l10n.day,
+                                value: _getDayName(context, config.weekday),
+                                onTap: () => _showDayPicker(context, config),
+                              ),
+                            ),
+                            const SizedBox(width: 12),
+                            Expanded(
+                              child: _ConfigTile(
+                                label: l10n.time,
+                                value: _formatTime(
+                                  context,
+                                  config.hour,
+                                  config.minute,
+                                ),
+                                onTap: () => _showTimePicker(context, config),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 12),
+                        _ConfigTile(
+                          label: l10n.remindMe,
+                          value:
+                              config.advanceDays == 0
+                                  ? l10n.onTheDay
+                                  : l10n.daysBefore(config.advanceDays),
+                          onTap: () => _showAdvancePicker(context, config),
+                        ),
+                      ],
+                    ],
+                  );
+                },
+                loading: () => const Center(child: CircularProgressIndicator()),
+                error: (_, __) => Text(l10n.error),
+              ),
+            ),
+            const SizedBox(height: 16),
+            // Daily journal reminder, independent of the confession reminder.
+            _SettingsCard(
+              title: l10n.journalReminder,
+              subtitle: l10n.journalReminderSubtitle,
+              icon: Icons.nightlight_outlined,
+              child: journalReminderConfig.when(
+                data: (config) => Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Row(
@@ -334,238 +484,188 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                       children: [
                         Expanded(
                           child: Text(
-                            l10n.enableReminders,
+                            l10n.enableJournalReminder,
                             style: Theme.of(context).textTheme.titleMedium,
                           ),
                         ),
                         Switch(
-                          value: isEnabled,
+                          value: config.isEnabled,
                           onChanged: (value) {
                             HapticUtils.selectionClick();
-                            if (value) {
-                              // Default to Weekly if turning on
-                              ref
-                                  .read(reminderSettingsProvider.notifier)
-                                  .updateConfig(
-                                    config.copyWith(
-                                      frequency: ReminderFrequency.weekly,
-                                    ),
-                                  );
-                            } else {
-                              ref
-                                  .read(reminderSettingsProvider.notifier)
-                                  .updateConfig(
-                                    config.copyWith(
-                                      frequency: ReminderFrequency.none,
-                                    ),
-                                  );
-                            }
+                            // Only committed once the notification permission is
+                            // granted, so a denied prompt leaves the switch off.
+                            _applyJournalReminderConfig(
+                              config.copyWith(isEnabled: value),
+                            );
                           },
                         ),
                       ],
                     ),
-                    if (isEnabled) ...[
+                    if (config.isEnabled) ...[
                       const SizedBox(height: 16),
-                      Wrap(
-                        spacing: 8,
-                        runSpacing: 8,
-                        children: [
-                          for (final frequency in [
-                            (ReminderFrequency.weekly, l10n.weekly),
-                            (ReminderFrequency.biweekly, l10n.biweekly),
-                            (ReminderFrequency.monthly, l10n.monthly),
-                            (ReminderFrequency.quarterly, l10n.quarterly),
-                          ])
-                            _FrequencyChip(
-                              label: frequency.$2,
-                              isSelected: config.frequency == frequency.$1,
-                              onSelected: (selected) {
-                                if (selected) {
-                                  ref
-                                      .read(reminderSettingsProvider.notifier)
-                                      .updateConfig(
-                                        config.copyWith(
-                                          frequency: frequency.$1,
-                                        ),
-                                      );
-                                }
-                              },
-                            ),
-                        ],
-                      ),
-                      const SizedBox(height: 16),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: _ConfigTile(
-                              label: l10n.day,
-                              value: _getDayName(context, config.weekday),
-                              onTap: () => _showDayPicker(context, ref, config),
-                            ),
-                          ),
-                          const SizedBox(width: 12),
-                          Expanded(
-                            child: _ConfigTile(
-                              label: l10n.time,
-                              value: _formatTime(
-                                context,
-                                config.hour,
-                                config.minute,
-                              ),
-                              onTap:
-                                  () => _showTimePicker(context, ref, config),
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 12),
                       _ConfigTile(
-                        label: l10n.remindMe,
-                        value:
-                            config.advanceDays == 0
-                                ? l10n.onTheDay
-                                : l10n.daysBefore(config.advanceDays),
-                        onTap: () => _showAdvancePicker(context, ref, config),
+                        label: l10n.time,
+                        value: _formatTime(context, config.hour, config.minute),
+                        onTap: () => _showJournalTimePicker(context, config),
                       ),
                     ],
                   ],
-                );
-              },
-              loading: () => const Center(child: CircularProgressIndicator()),
-              error: (_, __) => Text(l10n.error),
-            ),
-          ),
-          const SizedBox(height: 16),
-          // Privacy & Security
-          _SettingsCard(
-            title: l10n.keepHistory,
-            subtitle: l10n.keepHistorySubtitle,
-            icon: Icons.history,
-            child: keepHistory.when(
-              data:
-                  (value) => Align(
-                    alignment: Alignment.centerLeft,
-                    child: Switch(
-                      value: value,
-                      onChanged: (newValue) {
-                        HapticUtils.selectionClick();
-                        ref
-                            .read(keepHistorySettingsProvider.notifier)
-                            .toggle(newValue);
-                      },
-                    ),
-                  ),
-              loading: () => const Center(child: CircularProgressIndicator()),
-              error: (_, __) => Text(l10n.error),
-            ),
-          ),
-          const SizedBox(height: 16),
-          _SettingsCard(
-            title: l10n.security,
-            subtitle: l10n.securitySubtitle,
-            icon: Icons.security_rounded,
-            child: ListTile(
-              contentPadding: EdgeInsets.zero,
-              title: Text(l10n.pinAndBiometric),
-              subtitle: Text(l10n.pinAndBiometricSubtitle),
-              leading: const Icon(Icons.lock_outline_rounded),
-              trailing: const Icon(Icons.chevron_right),
-              onTap: () {
-                HapticUtils.lightImpact();
-                context.push('/settings/security');
-              },
-            ),
-          ),
-          const SizedBox(height: 16),
-          // Help & About
-          _SettingsCard(
-            title: l10n.replayTutorial,
-            subtitle: l10n.replayTutorialDesc,
-            icon: Icons.school_outlined,
-            child: SizedBox(
-              width: double.infinity,
-              child: OutlinedButton.icon(
-                onPressed: () async {
-                  HapticUtils.lightImpact();
-                  await ref
-                      .read(tutorialControllerProvider.notifier)
-                      .resetTutorials();
-                  if (context.mounted) {
-                    // Navigate to home and force rebuild by using replace
-                    context.go('/?tutorial_reset=true');
-                  }
-                },
-                icon: const Icon(Icons.replay),
-                label: Text(l10n.replayTutorial),
+                ),
+                loading: () => const Center(child: CircularProgressIndicator()),
+                error: (_, __) => Text(l10n.error),
               ),
             ),
-          ),
-          const SizedBox(height: 16),
-          _SettingsCard(
-            title: l10n.about,
-            subtitle: l10n.aboutSubtitle,
-            icon: Icons.info_outline,
-            child: Column(
-              children: [
-                ListTile(
-                  contentPadding: EdgeInsets.zero,
-                  title: Text(l10n.rateApp),
-                  subtitle: Text(l10n.rateAppSubtitle),
-                  leading: const Icon(Icons.star_rate),
-                  trailing: const Icon(Icons.chevron_right),
-                  onTap: () async {
-                    HapticUtils.lightImpact();
-                    final reviewService = InAppReviewService();
-                    await reviewService.openStoreListing();
-                  },
-                ),
-                const Divider(),
-                ListTile(
-                  contentPadding: EdgeInsets.zero,
-                  title: Text(l10n.shareApp),
-                  subtitle: Text(l10n.shareAppSubtitle),
-                  leading: const Icon(Icons.share),
-                  trailing: const Icon(Icons.chevron_right),
-                  onTap: () {
-                    HapticUtils.lightImpact();
-                    Share.share(AppUrls.shareMessage);
-                  },
-                ),
-                const Divider(),
-                ListTile(
-                  contentPadding: EdgeInsets.zero,
-                  title: Text(l10n.about),
-                  subtitle: Text(l10n.aboutSubtitle),
-                  leading: const Icon(Icons.info),
-                  trailing: const Icon(Icons.chevron_right),
-                  onTap: () => context.go('/settings/about'),
-                ),
-              ],
+            const SizedBox(height: 16),
+            // Privacy & Security
+            _SettingsCard(
+              title: l10n.keepHistory,
+              subtitle: l10n.keepHistorySubtitle,
+              icon: Icons.history,
+              child: keepHistory.when(
+                data:
+                    (value) => Align(
+                      alignment: Alignment.centerLeft,
+                      child: Switch(
+                        value: value,
+                        onChanged: (newValue) {
+                          HapticUtils.selectionClick();
+                          _onKeepHistoryChanged(context, ref, newValue);
+                        },
+                      ),
+                    ),
+                loading: () => const Center(child: CircularProgressIndicator()),
+                error: (_, __) => Text(l10n.error),
+              ),
             ),
-          ),
-          const SizedBox(height: 32),
-          Center(
-            child: ref
-                .watch(packageInfoProvider)
-                .when(
-                  data:
-                      (info) => Text(
-                        '${l10n.version} ${info.version} (${info.buildNumber})',
-                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          color: Theme.of(context).colorScheme.onSurfaceVariant,
-                        ),
-                      ),
-                  loading:
-                      () => Text(
-                        l10n.version,
-                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          color: Theme.of(context).colorScheme.onSurfaceVariant,
-                        ),
-                      ),
-                  error: (_, __) => const SizedBox.shrink(),
+            const SizedBox(height: 16),
+            _SettingsCard(
+              title: l10n.security,
+              subtitle: l10n.securitySubtitle,
+              icon: Icons.security_rounded,
+              child: ListTile(
+                contentPadding: EdgeInsets.zero,
+                title: Text(l10n.pinAndBiometric),
+                subtitle: Text(l10n.pinAndBiometricSubtitle),
+                leading: const Icon(Icons.lock_outline_rounded),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () {
+                  HapticUtils.lightImpact();
+                  context.push('/settings/security');
+                },
+              ),
+            ),
+            const SizedBox(height: 16),
+            // Help & About
+            _SettingsCard(
+              title: l10n.replayTutorial,
+              subtitle: l10n.replayTutorialDesc,
+              icon: Icons.school_outlined,
+              child: SizedBox(
+                width: double.infinity,
+                child: OutlinedButton.icon(
+                  onPressed: () async {
+                    HapticUtils.lightImpact();
+                    await ref
+                        .read(tutorialControllerProvider.notifier)
+                        .resetTutorials();
+                    if (context.mounted) {
+                      // Navigate to home and force rebuild by using replace
+                      context.go('/?tutorial_reset=true');
+                    }
+                  },
+                  icon: const Icon(Icons.replay),
+                  label: Text(l10n.replayTutorial),
                 ),
-          ),
-        ],
+              ),
+            ),
+            const SizedBox(height: 16),
+            _SettingsCard(
+              title: l10n.about,
+              subtitle: l10n.aboutSubtitle,
+              icon: Icons.info_outline,
+              child: Column(
+                children: [
+                  ListTile(
+                    contentPadding: EdgeInsets.zero,
+                    title: Text(l10n.rateApp),
+                    subtitle: Text(
+                      l10n.rateAppSubtitle(
+                        // Brand names, not translated: name the store the tap
+                        // actually opens on this platform.
+                        Platform.isIOS ? 'App Store' : 'Google Play',
+                      ),
+                    ),
+                    leading: Icon(
+                      Icons.star_outline,
+                        color: Theme.of(context).colorScheme.primary,
+                    ),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: () async {
+                      HapticUtils.lightImpact();
+                      final reviewService = InAppReviewService();
+                      await reviewService.openStoreListing();
+                    },
+                  ),
+                  const Divider(),
+                  ListTile(
+                    contentPadding: EdgeInsets.zero,
+                    title: Text(l10n.shareApp),
+                    subtitle: Text(l10n.shareAppSubtitle),
+                    leading: Icon(
+                      Icons.share,
+                        color: Theme.of(context).colorScheme.primary,
+                    ),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: () {
+                      HapticUtils.lightImpact();
+                      Share.share(AppUrls.shareMessage);
+                    },
+                  ),
+                  const Divider(),
+                  ListTile(
+                    contentPadding: EdgeInsets.zero,
+                    title: Text(l10n.about),
+                    subtitle: Text(l10n.aboutSubtitle),
+                    leading: Icon(
+                      Icons.info_outline,
+                        color: Theme.of(context).colorScheme.primary,
+                    ),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: () => context.go('/settings/about'),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 32),
+            Center(
+              child: ref
+                  .watch(packageInfoProvider)
+                  .when(
+                    data:
+                        (info) => Text(
+                          '${l10n.version} ${info.version} (${info.buildNumber})',
+                          style: Theme.of(
+                            context,
+                          ).textTheme.bodySmall?.copyWith(
+                            color:
+                                Theme.of(context).colorScheme.onSurfaceVariant,
+                          ),
+                        ),
+                    loading:
+                        () => Text(
+                          l10n.version,
+                          style: Theme.of(
+                            context,
+                          ).textTheme.bodySmall?.copyWith(
+                            color:
+                                Theme.of(context).colorScheme.onSurfaceVariant,
+                          ),
+                        ),
+                    error: (_, __) => const SizedBox.shrink(),
+                  ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -586,21 +686,19 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
 
   String _formatTime(BuildContext context, int hour, int minute) {
     final use24Hour = MediaQuery.of(context).alwaysUse24HourFormat;
-    final m = minute.toString().padLeft(2, '0');
+    final localeName = Localizations.localeOf(context).toLanguageTag();
+    // Any date works; only the time-of-day part is formatted.
+    final time = DateTime(2000, 1, 1, hour, minute);
 
-    if (use24Hour) {
-      final h = hour.toString().padLeft(2, '0');
-      return '$h:$m';
-    } else {
-      final period = hour >= 12 ? 'PM' : 'AM';
-      final h = hour > 12 ? hour - 12 : (hour == 0 ? 12 : hour);
-      return '$h:$m $period';
-    }
+    // Let intl format the time (and its AM/PM marker) for the current locale
+    // instead of hardcoding English 'AM'/'PM'.
+    final format =
+        use24Hour ? DateFormat.Hm(localeName) : DateFormat.jm(localeName);
+    return format.format(time);
   }
 
   Future<void> _showDayPicker(
     BuildContext context,
-    WidgetRef ref,
     ReminderConfig config,
   ) async {
     final l10n = AppLocalizations.of(context)!;
@@ -613,7 +711,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             backgroundColor: theme.colorScheme.surface,
             surfaceTintColor: Colors.transparent,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(AppRadius.sheet),
             ),
             title: Text(
               l10n.selectDay,
@@ -629,7 +727,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                     final isSelected = config.weekday == day;
                     return ListTile(
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(AppRadius.tile),
                       ),
                       tileColor:
                           isSelected
@@ -653,9 +751,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                               )
                               : null,
                       onTap: () {
-                        ref
-                            .read(reminderSettingsProvider.notifier)
-                            .updateConfig(config.copyWith(weekday: day));
+                        _applyReminderConfig(config.copyWith(weekday: day));
                         Navigator.pop(context);
                       },
                     );
@@ -667,7 +763,6 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
 
   Future<void> _showTimePicker(
     BuildContext context,
-    WidgetRef ref,
     ReminderConfig config,
   ) async {
     final time = await showTimePicker(
@@ -675,15 +770,14 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
       initialTime: TimeOfDay(hour: config.hour, minute: config.minute),
     );
     if (time != null) {
-      ref
-          .read(reminderSettingsProvider.notifier)
-          .updateConfig(config.copyWith(hour: time.hour, minute: time.minute));
+      await _applyReminderConfig(
+        config.copyWith(hour: time.hour, minute: time.minute),
+      );
     }
   }
 
   Future<void> _showAdvancePicker(
     BuildContext context,
-    WidgetRef ref,
     ReminderConfig config,
   ) async {
     final l10n = AppLocalizations.of(context)!;
@@ -697,7 +791,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             backgroundColor: theme.colorScheme.surface,
             surfaceTintColor: Colors.transparent,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(AppRadius.sheet),
             ),
             title: Text(
               l10n.remindMe,
@@ -713,7 +807,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                     final isSelected = config.advanceDays == days;
                     return ListTile(
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(AppRadius.tile),
                       ),
                       tileColor:
                           isSelected
@@ -737,9 +831,9 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                               )
                               : null,
                       onTap: () {
-                        ref
-                            .read(reminderSettingsProvider.notifier)
-                            .updateConfig(config.copyWith(advanceDays: days));
+                        _applyReminderConfig(
+                          config.copyWith(advanceDays: days),
+                        );
                         Navigator.pop(context);
                       },
                     );
@@ -765,14 +859,14 @@ class _ConfigTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(12),
+      borderRadius: BorderRadius.circular(AppRadius.tile),
       child: Container(
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
           border: Border.all(
             color: Theme.of(context).colorScheme.outlineVariant,
           ),
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(AppRadius.tile),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -827,7 +921,7 @@ class _SettingsCard extends StatelessWidget {
       elevation: 0,
       color: Theme.of(context).colorScheme.surface,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(AppRadius.card),
         side: BorderSide(
           color: Theme.of(context).colorScheme.outlineVariant,
           width: 1,
@@ -1007,12 +1101,12 @@ class _LanguagePickerCard extends StatelessWidget {
       elevation: 0,
       color: theme.colorScheme.surface,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(AppRadius.card),
         side: BorderSide(color: theme.colorScheme.outlineVariant, width: 0.5),
       ),
       child: InkWell(
         onTap: onTap,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(AppRadius.card),
         child: Padding(
           padding: const EdgeInsets.all(16),
           child: Row(
@@ -1022,7 +1116,7 @@ class _LanguagePickerCard extends StatelessWidget {
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   color: theme.colorScheme.primaryContainer,
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(AppRadius.tile),
                 ),
                 child: Icon(icon, color: theme.colorScheme.primary, size: 20),
               ),
@@ -1056,7 +1150,7 @@ class _LanguagePickerCard extends StatelessWidget {
                 ),
                 decoration: BoxDecoration(
                   color: theme.colorScheme.secondaryContainer,
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(AppRadius.sheet),
                 ),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
@@ -1097,12 +1191,10 @@ void _showAppLanguagePicker(
 
   showModalBottomSheet(
     context: context,
-    backgroundColor: theme.colorScheme.surface,
-    shape: const RoundedRectangleBorder(
-      borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-    ),
+    isScrollControlled: true,
+    backgroundColor: Colors.transparent,
     builder: (context) {
-      return SafeArea(
+      return _BottomSheetContainer(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -1111,8 +1203,10 @@ void _showAppLanguagePicker(
               width: 40,
               height: 4,
               decoration: BoxDecoration(
-                color: theme.colorScheme.onSurfaceVariant.withValues(alpha: 0.4),
-                borderRadius: BorderRadius.circular(2),
+                color: theme.colorScheme.onSurfaceVariant.withValues(
+                  alpha: 0.4,
+                ),
+                borderRadius: BorderRadius.circular(AppRadius.bar),
               ),
             ),
             const SizedBox(height: 20),
@@ -1143,13 +1237,17 @@ void _showAppLanguagePicker(
                   for (final lang in languages)
                     _LanguageOptionTile(
                       label: lang.value,
-                      isSelected: currentLocale != null &&
-                          LanguageConfig.contentKeyFromLocale(currentLocale) == lang.key,
+                      isSelected:
+                          currentLocale != null &&
+                          LanguageConfig.contentKeyFromLocale(currentLocale) ==
+                              lang.key,
                       onTap: () {
                         HapticUtils.selectionClick();
                         ref
                             .read(languageControllerProvider.notifier)
-                            .setLanguage(LanguageConfig.localeFromContentKey(lang.key));
+                            .setLanguage(
+                              LanguageConfig.localeFromContentKey(lang.key),
+                            );
                         Navigator.pop(context);
                       },
                     ),
@@ -1172,12 +1270,10 @@ void _showContentLanguagePicker(BuildContext context, WidgetRef ref) {
 
   showModalBottomSheet(
     context: context,
-    backgroundColor: theme.colorScheme.surface,
-    shape: const RoundedRectangleBorder(
-      borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-    ),
+    isScrollControlled: true,
+    backgroundColor: Colors.transparent,
     builder: (context) {
-      return SafeArea(
+      return _BottomSheetContainer(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -1186,8 +1282,10 @@ void _showContentLanguagePicker(BuildContext context, WidgetRef ref) {
               width: 40,
               height: 4,
               decoration: BoxDecoration(
-                color: theme.colorScheme.onSurfaceVariant.withValues(alpha: 0.4),
-                borderRadius: BorderRadius.circular(2),
+                color: theme.colorScheme.onSurfaceVariant.withValues(
+                  alpha: 0.4,
+                ),
+                borderRadius: BorderRadius.circular(AppRadius.bar),
               ),
             ),
             const SizedBox(height: 20),
@@ -1206,13 +1304,17 @@ void _showContentLanguagePicker(BuildContext context, WidgetRef ref) {
                   for (final lang in languages)
                     _LanguageOptionTile(
                       label: lang.value,
-                      isSelected: currentLocale != null &&
-                          LanguageConfig.contentKeyFromLocale(currentLocale) == lang.key,
+                      isSelected:
+                          currentLocale != null &&
+                          LanguageConfig.contentKeyFromLocale(currentLocale) ==
+                              lang.key,
                       onTap: () {
                         HapticUtils.selectionClick();
                         ref
                             .read(contentLanguageControllerProvider.notifier)
-                            .setLanguage(LanguageConfig.localeFromContentKey(lang.key));
+                            .setLanguage(
+                              LanguageConfig.localeFromContentKey(lang.key),
+                            );
                         Navigator.pop(context);
                       },
                     ),
@@ -1225,6 +1327,28 @@ void _showContentLanguagePicker(BuildContext context, WidgetRef ref) {
       );
     },
   );
+}
+
+/// Themed container for the scroll-controlled language bottom sheets.
+class _BottomSheetContainer extends StatelessWidget {
+  const _BottomSheetContainer({required this.child});
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return Container(
+      constraints: BoxConstraints(
+        maxHeight: MediaQuery.sizeOf(context).height * 0.85,
+      ),
+      decoration: BoxDecoration(
+        color: theme.colorScheme.surface,
+        borderRadius: const BorderRadius.vertical(top: Radius.circular(AppRadius.sheet)),
+      ),
+      child: SafeArea(child: child),
+    );
+  }
 }
 
 class _LanguageOptionTile extends StatelessWidget {
@@ -1246,13 +1370,14 @@ class _LanguageOptionTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 2),
       child: Material(
-        color: isSelected
-            ? theme.colorScheme.primaryContainer.withValues(alpha: 0.5)
-            : Colors.transparent,
-        borderRadius: BorderRadius.circular(12),
+        color:
+            isSelected
+                ? theme.colorScheme.primaryContainer.withValues(alpha: 0.5)
+                : Colors.transparent,
+        borderRadius: BorderRadius.circular(AppRadius.tile),
         child: InkWell(
           onTap: onTap,
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(AppRadius.tile),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
             child: Row(
@@ -1266,9 +1391,10 @@ class _LanguageOptionTile extends StatelessWidget {
                         style: theme.textTheme.bodyLarge?.copyWith(
                           fontWeight:
                               isSelected ? FontWeight.w600 : FontWeight.normal,
-                          color: isSelected
-                              ? theme.colorScheme.primary
-                              : theme.colorScheme.onSurface,
+                          color:
+                              isSelected
+                                  ? theme.colorScheme.primary
+                                  : theme.colorScheme.onSurface,
                         ),
                       ),
                       if (subtitle != null) ...[
@@ -1327,28 +1453,31 @@ class _ExaminationModeSelector extends StatelessWidget {
     return Wrap(
       spacing: 8,
       runSpacing: 8,
-      children: ExaminationModePreference.values.map((mode) {
-        final isSelected = currentMode == mode;
-        return ChoiceChip(
-          label: Text(_getLabel(mode)),
-          selected: isSelected,
-          onSelected: (_) => onChanged(mode),
-          showCheckmark: false,
-          labelStyle: TextStyle(
-            color: isSelected
-                ? theme.colorScheme.onSecondaryContainer
-                : theme.colorScheme.onSurfaceVariant,
-            fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-          ),
-          selectedColor: theme.colorScheme.secondaryContainer,
-          backgroundColor: theme.colorScheme.surfaceContainerLow,
-          side: BorderSide(
-            color: isSelected
-                ? Colors.transparent
-                : theme.colorScheme.outlineVariant,
-          ),
-        );
-      }).toList(),
+      children:
+          ExaminationModePreference.values.map((mode) {
+            final isSelected = currentMode == mode;
+            return ChoiceChip(
+              label: Text(_getLabel(mode)),
+              selected: isSelected,
+              onSelected: (_) => onChanged(mode),
+              showCheckmark: false,
+              labelStyle: TextStyle(
+                color:
+                    isSelected
+                        ? theme.colorScheme.onSecondaryContainer
+                        : theme.colorScheme.onSurfaceVariant,
+                fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+              ),
+              selectedColor: theme.colorScheme.secondaryContainer,
+              backgroundColor: theme.colorScheme.surfaceContainerLow,
+              side: BorderSide(
+                color:
+                    isSelected
+                        ? Colors.transparent
+                        : theme.colorScheme.outlineVariant,
+              ),
+            );
+          }).toList(),
     );
   }
 }

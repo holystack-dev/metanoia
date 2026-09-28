@@ -5,11 +5,20 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
+import 'app_localizations_de.dart';
 import 'app_localizations_en.dart';
 import 'app_localizations_es.dart';
+import 'app_localizations_fil.dart';
 import 'app_localizations_fr.dart';
+import 'app_localizations_hi.dart';
+import 'app_localizations_id.dart';
+import 'app_localizations_it.dart';
+import 'app_localizations_ko.dart';
 import 'app_localizations_ml.dart';
+import 'app_localizations_pl.dart';
 import 'app_localizations_pt.dart';
+import 'app_localizations_ta.dart';
+import 'app_localizations_vi.dart';
 
 // ignore_for_file: type=lint
 
@@ -97,11 +106,20 @@ abstract class AppLocalizations {
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
+    Locale('de'),
     Locale('en'),
     Locale('es'),
+    Locale('fil'),
     Locale('fr'),
+    Locale('hi'),
+    Locale('id'),
+    Locale('it'),
+    Locale('ko'),
     Locale('ml'),
+    Locale('pl'),
     Locale('pt'),
+    Locale('ta'),
+    Locale('vi'),
   ];
 
   /// The title of the application
@@ -542,6 +560,18 @@ abstract class AppLocalizations {
   /// **'Error'**
   String get error;
 
+  /// No description provided for @retry.
+  ///
+  /// In en, this message translates to:
+  /// **'Retry'**
+  String get retry;
+
+  /// No description provided for @dailyQuoteError.
+  ///
+  /// In en, this message translates to:
+  /// **'Today\'s quote couldn\'t be loaded.'**
+  String get dailyQuoteError;
+
   /// No description provided for @keepHistory.
   ///
   /// In en, this message translates to:
@@ -692,11 +722,65 @@ abstract class AppLocalizations {
   /// **'Rate App'**
   String get rateApp;
 
-  /// No description provided for @rateAppSubtitle.
+  /// No description provided for @spreadShareTitle.
   ///
   /// In en, this message translates to:
-  /// **'Rate us on the Play Store'**
-  String get rateAppSubtitle;
+  /// **'Share Metanoia'**
+  String get spreadShareTitle;
+
+  /// No description provided for @spreadShareSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Know someone who\'s been away from confession? Help them find their way back.'**
+  String get spreadShareSubtitle;
+
+  /// No description provided for @spreadShareAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Share'**
+  String get spreadShareAction;
+
+  /// No description provided for @spreadRateSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'If Metanoia has helped you prepare for confession, a rating helps others find it.'**
+  String get spreadRateSubtitle;
+
+  /// No description provided for @spreadRateAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Rate'**
+  String get spreadRateAction;
+
+  /// No description provided for @rateGateHint.
+  ///
+  /// In en, this message translates to:
+  /// **'How would you rate your experience?'**
+  String get rateGateHint;
+
+  /// No description provided for @rateGateLowest.
+  ///
+  /// In en, this message translates to:
+  /// **'Lowest'**
+  String get rateGateLowest;
+
+  /// No description provided for @rateGateHighest.
+  ///
+  /// In en, this message translates to:
+  /// **'Highest'**
+  String get rateGateHighest;
+
+  /// No description provided for @rateGateThanks.
+  ///
+  /// In en, this message translates to:
+  /// **'Thank you — your feedback means a lot to us.'**
+  String get rateGateThanks;
+
+  /// Subtitle under Rate App. {store} is the platform's app store name (a brand name, not translated): App Store on iOS, Google Play on Android.
+  ///
+  /// In en, this message translates to:
+  /// **'Rate us on the {store}'**
+  String rateAppSubtitle(String store);
 
   /// No description provided for @website.
   ///
@@ -1355,7 +1439,7 @@ abstract class AppLocalizations {
   /// No description provided for @skipOnboardingMessage.
   ///
   /// In en, this message translates to:
-  /// **'You can always access help and settings later from the app menu.'**
+  /// **'You\'ll go straight to the last page. Nothing is set up here — you can change everything later in Settings.'**
   String get skipOnboardingMessage;
 
   /// No description provided for @confessionHistoryTitle.
@@ -1820,6 +1904,18 @@ abstract class AppLocalizations {
   /// **'How to Make a Good Confession'**
   String get confessionGuideTitle;
 
+  /// Title of the Guide card that links to a confession short film on YouTube
+  ///
+  /// In en, this message translates to:
+  /// **'Confession: A Short Film'**
+  String get shortFilmTitle;
+
+  /// Courtesy/attribution line on the short film card; keep the proper nouns 'Blazing Youth Wembley', 'St Joseph's RC Church' and 'Wembley' untranslated; the country name 'United Kingdom' may be localized
+  ///
+  /// In en, this message translates to:
+  /// **'Created by Blazing Youth Wembley, St Joseph\'s RC Church, Wembley, United Kingdom'**
+  String get shortFilmSubtitle;
+
   /// No description provided for @confessionGuideSubtitle.
   ///
   /// In en, this message translates to:
@@ -1903,6 +1999,60 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'May your journey toward reconciliation be filled with grace and peace.'**
   String get readyToBeginSubtitle;
+
+  /// Heading of the onboarding page that summarises the app
+  ///
+  /// In en, this message translates to:
+  /// **'What this app does'**
+  String get onboardingOverviewTitle;
+
+  /// Onboarding overview: what the Examine tab is for
+  ///
+  /// In en, this message translates to:
+  /// **'Prepare your conscience, at your pace.'**
+  String get onboardingOverviewExamine;
+
+  /// Onboarding overview: what the Confess tab is for
+  ///
+  /// In en, this message translates to:
+  /// **'A discreet checklist, so nothing is forgotten.'**
+  String get onboardingOverviewConfess;
+
+  /// Onboarding overview: what the Journal tab is for
+  ///
+  /// In en, this message translates to:
+  /// **'A short evening reflection, to keep growing between confessions.'**
+  String get onboardingOverviewJournal;
+
+  /// Muted footnote listing the features that are not tabs
+  ///
+  /// In en, this message translates to:
+  /// **'Prayers, guides and optional reminders are inside.'**
+  String get onboardingOverviewFootnote;
+
+  /// Heading of the onboarding privacy page
+  ///
+  /// In en, this message translates to:
+  /// **'Private by design'**
+  String get onboardingPrivacyTitle;
+
+  /// Onboarding privacy: data never leaves the device
+  ///
+  /// In en, this message translates to:
+  /// **'Everything stays on this phone. No account, no cloud.'**
+  String get onboardingPrivacyLocal;
+
+  /// Onboarding privacy: the database is encrypted at rest
+  ///
+  /// In en, this message translates to:
+  /// **'Encrypted on your device.'**
+  String get onboardingPrivacyEncrypted;
+
+  /// Onboarding privacy: sets the expectation that a PIN is created later
+  ///
+  /// In en, this message translates to:
+  /// **'You\'ll create a PIN the first time you open an examination or your journal.'**
+  String get onboardingPrivacyPin;
 
   /// No description provided for @sourceCode.
   ///
@@ -2023,6 +2173,1062 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Ask Every Time'**
   String get askEveryTime;
+
+  /// Title of the scheduled confession reminder notification
+  ///
+  /// In en, this message translates to:
+  /// **'Time for Confession'**
+  String get reminderNotificationTitle;
+
+  /// Body of the scheduled confession reminder notification
+  ///
+  /// In en, this message translates to:
+  /// **'Remember to examine your conscience and prepare for confession'**
+  String get reminderNotificationBody;
+
+  /// Shown when the user denies the notification permission while enabling reminders
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications are turned off. Allow notifications for Metanoia in your device settings to receive confession reminders.'**
+  String get notificationPermissionDenied;
+
+  /// Title of the open source licenses list tile on the About screen
+  ///
+  /// In en, this message translates to:
+  /// **'Open Source Licenses'**
+  String get openSourceLicenses;
+
+  /// Shown when an external link fails to open
+  ///
+  /// In en, this message translates to:
+  /// **'Could not open the link'**
+  String get couldNotOpenLink;
+
+  /// Number of items confessed in a past confession
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 item confessed} other{{count} items confessed}}'**
+  String itemsConfessed(int count);
+
+  /// Number of penances
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 penance} other{{count} penances}}'**
+  String penancesCount(int count);
+
+  /// Number of pending items
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 pending} other{{count} pending}}'**
+  String pendingCount(int count);
+
+  /// Total number of confessions in history
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 total} other{{count} total}}'**
+  String totalCount(int count);
+
+  /// Number of items
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 item} other{{count} items}}'**
+  String itemsCount(int count);
+
+  /// Number of days, used as a statistic value
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 day} other{{count} days}}'**
+  String daysCount(int count);
+
+  /// Abbreviated number of weeks, used as a statistic value
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 wk} other{{count} wks}}'**
+  String weeksShort(int count);
+
+  /// Title of the delete all confessions confirmation dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Delete All Confessions?'**
+  String get deleteAllConfessionsTitle;
+
+  /// Body of the delete all confessions confirmation dialog
+  ///
+  /// In en, this message translates to:
+  /// **'This will permanently delete all your confession history. This action cannot be undone.'**
+  String get deleteAllConfessionsContent;
+
+  /// Confirmation shown after deleting all confessions
+  ///
+  /// In en, this message translates to:
+  /// **'All confessions deleted'**
+  String get allConfessionsDeleted;
+
+  /// Body of the delete penance confirmation dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to delete this penance?'**
+  String get deletePenanceConfirm;
+
+  /// Badge shown on a completed penance
+  ///
+  /// In en, this message translates to:
+  /// **'Completed'**
+  String get completed;
+
+  /// Hint on an expanded prayer card
+  ///
+  /// In en, this message translates to:
+  /// **'Tap to collapse'**
+  String get tapToCollapse;
+
+  /// Tooltip of a button that dismisses a note
+  ///
+  /// In en, this message translates to:
+  /// **'Dismiss'**
+  String get dismiss;
+
+  /// Step indicator in the tutorial showcase tooltip
+  ///
+  /// In en, this message translates to:
+  /// **'Step {current} of {total}'**
+  String showcaseStep(int current, int total);
+
+  /// Label of the button that finishes the tutorial
+  ///
+  /// In en, this message translates to:
+  /// **'Done'**
+  String get done;
+
+  /// Accessibility label of a chevron that opens a screen
+  ///
+  /// In en, this message translates to:
+  /// **'Navigate'**
+  String get navigate;
+
+  /// Accessibility label of the encouragement card icon
+  ///
+  /// In en, this message translates to:
+  /// **'Encouragement'**
+  String get encouragement;
+
+  /// Reason shown in the system biometric prompt when unlocking the app
+  ///
+  /// In en, this message translates to:
+  /// **'Authenticate to access Metanoia'**
+  String get biometricPromptReason;
+
+  /// Label above the lockout countdown
+  ///
+  /// In en, this message translates to:
+  /// **'Try again in'**
+  String get tryAgainInLabel;
+
+  /// Shown when the language list fails to load
+  ///
+  /// In en, this message translates to:
+  /// **'Error loading language'**
+  String get errorLoadingLanguage;
+
+  /// Shown for a confession recorded while "Keep confession history" was off, so only its date exists
+  ///
+  /// In en, this message translates to:
+  /// **'Details not saved'**
+  String get detailsNotSaved;
+
+  /// Title of the dialog offering to purge already-stored sins when confession history is switched off
+  ///
+  /// In en, this message translates to:
+  /// **'Discard saved sins?'**
+  String get discardStoredSinsTitle;
+
+  /// Body of that dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Confession history is now off. The sins already saved from past confessions are still stored. Discard them? The dates will be kept, so your insights and streaks stay intact.'**
+  String get discardStoredSinsContent;
+
+  /// Button: keep the already-stored sins
+  ///
+  /// In en, this message translates to:
+  /// **'Keep them'**
+  String get keepThem;
+
+  /// Button: discard the already-stored sins
+  ///
+  /// In en, this message translates to:
+  /// **'Discard'**
+  String get discard;
+
+  /// Confirmation that the stored sins were discarded
+  ///
+  /// In en, this message translates to:
+  /// **'Saved sins discarded. Confession dates were kept.'**
+  String get storedSinsDiscarded;
+
+  /// Title of the daily journal screen
+  ///
+  /// In en, this message translates to:
+  /// **'Journal'**
+  String get journalTitle;
+
+  /// Title of the journal card on the home screen
+  ///
+  /// In en, this message translates to:
+  /// **'Evening reflection'**
+  String get journalHomeCardTitle;
+
+  /// Subtitle of the journal card on the home screen
+  ///
+  /// In en, this message translates to:
+  /// **'How was today?'**
+  String get journalHomeCardSubtitle;
+
+  /// Number of consecutive days with a journal entry
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, one{{count} day} other{{count} days}}'**
+  String journalStreakDays(int count);
+
+  /// Accessibility label of the reflection streak badge
+  ///
+  /// In en, this message translates to:
+  /// **'Days of reflection in a row'**
+  String get journalStreakLabel;
+
+  /// Call to action when today's journal entry has already been started
+  ///
+  /// In en, this message translates to:
+  /// **'Continue today\'s entry'**
+  String get journalContinueToday;
+
+  /// Tooltip of the previous month button in the journal calendar
+  ///
+  /// In en, this message translates to:
+  /// **'Previous month'**
+  String get journalPreviousMonth;
+
+  /// Tooltip of the next month button in the journal calendar
+  ///
+  /// In en, this message translates to:
+  /// **'Next month'**
+  String get journalNextMonth;
+
+  /// Title of the gratitude step of the journal entry flow
+  ///
+  /// In en, this message translates to:
+  /// **'Gratitude'**
+  String get journalGratitudeTitle;
+
+  /// Prompt of the gratitude step
+  ///
+  /// In en, this message translates to:
+  /// **'Where did I see God today?'**
+  String get journalGratitudePrompt;
+
+  /// Hint text of the optional gratitude field
+  ///
+  /// In en, this message translates to:
+  /// **'A grace I want to thank Him for…'**
+  String get journalGratitudeHint;
+
+  /// Short, plain instruction opening the gratitude movement (Lato). Keep it simple and unadorned.
+  ///
+  /// In en, this message translates to:
+  /// **'God is here with you. Be still before Him, and give thanks.'**
+  String get journalPresenceLead;
+
+  /// Scripture shown for the gratitude movement (Psalm 46:10). Use the exact wording of this verse from the language's approved Catholic Bible translation — do NOT paraphrase or re-translate.
+  ///
+  /// In en, this message translates to:
+  /// **'Be still, and know that I am God.'**
+  String get journalPresenceVerse;
+
+  /// Citation of the gratitude Scripture. Localise the book name and numbering to the language's convention (e.g. 'Salmo 46,10').
+  ///
+  /// In en, this message translates to:
+  /// **'Psalm 46:10'**
+  String get journalPresenceRef;
+
+  /// Title of the second Examen movement: a prayer to the Holy Spirit for light
+  ///
+  /// In en, this message translates to:
+  /// **'Ask for Light'**
+  String get journalLightTitle;
+
+  /// Short, plain instruction for the Ask-for-Light movement (Lato).
+  ///
+  /// In en, this message translates to:
+  /// **'Ask the Holy Spirit for light to see your day as God sees it.'**
+  String get journalLightLead;
+
+  /// The traditional 'Come, Holy Spirit' prayer (the Veni Sancte Spiritus versicle). Use the language's received, familiar Catholic wording of this well-known prayer — do NOT translate it afresh.
+  ///
+  /// In en, this message translates to:
+  /// **'Come, Holy Spirit, fill the hearts of your faithful, and kindle in them the fire of your love.'**
+  String get journalLightVerse;
+
+  /// Title of the review movement: walking back through the day with God
+  ///
+  /// In en, this message translates to:
+  /// **'Review with God'**
+  String get journalReviewTitle;
+
+  /// Short, plain instruction for the review movement (Lato).
+  ///
+  /// In en, this message translates to:
+  /// **'Walk back through your day with the Lord — where love came to you, where you gave it, and where you turned away.'**
+  String get journalReviewLead;
+
+  /// Scripture for the review movement (Psalm 139:23-24). Use the exact wording from the language's approved Catholic Bible translation — do NOT paraphrase.
+  ///
+  /// In en, this message translates to:
+  /// **'Search me, O God, and know my heart; test me and know my thoughts. See if there is any wicked way in me, and lead me in the way everlasting.'**
+  String get journalReviewVerse;
+
+  /// Citation of the review Scripture. Localise the book name and numbering.
+  ///
+  /// In en, this message translates to:
+  /// **'Psalm 139:23–24'**
+  String get journalReviewRef;
+
+  /// Hint text of the optional reflection field in the review movement
+  ///
+  /// In en, this message translates to:
+  /// **'Speak to Him about your day…'**
+  String get journalReviewHint;
+
+  /// Gentle label above the optional sin-marking action in the review movement
+  ///
+  /// In en, this message translates to:
+  /// **'Is there anything you want to bring to Him?'**
+  String get journalReviewBringSin;
+
+  /// Title of the contrition movement: sorrow for sin, turned toward God
+  ///
+  /// In en, this message translates to:
+  /// **'Contrition'**
+  String get journalContritionTitle;
+
+  /// Short, plain instruction for the contrition movement, echoing Luke 15:20 (Lato).
+  ///
+  /// In en, this message translates to:
+  /// **'Bring what you have found to the Father, who runs to meet you.'**
+  String get journalContritionLead;
+
+  /// Scripture for the contrition movement (Psalm 51:1, the Miserere). Use the exact wording from the language's approved Catholic Bible translation — do NOT paraphrase.
+  ///
+  /// In en, this message translates to:
+  /// **'Have mercy on me, O God, in your goodness; in your abundant compassion, blot out my offenses.'**
+  String get journalContritionVerse;
+
+  /// Citation of the contrition Scripture. Localise the book name and numbering.
+  ///
+  /// In en, this message translates to:
+  /// **'Psalm 51:1'**
+  String get journalContritionRef;
+
+  /// Label inviting the user to pray the Act of Contrition, which is shown below it
+  ///
+  /// In en, this message translates to:
+  /// **'Pray the Act of Contrition'**
+  String get journalContritionPray;
+
+  /// A gentle line on God's mercy that always points toward sacramental Confession. THEOLOGICALLY LOAD-BEARING (perfect contrition, Catechism 1452): it must NOT tell the user they are now in a state of grace — only that contrition opens the heart to God's mercy and always leads on to Confession. Translate with a native Catholic's care.
+  ///
+  /// In en, this message translates to:
+  /// **'Sorrow born of love for God, with the resolve to confess, opens your heart to His mercy tonight — and its fullness awaits you in Confession, in the words of absolution.'**
+  String get journalContritionMercy;
+
+  /// Short, plain instruction for the final movement (Lato).
+  ///
+  /// In en, this message translates to:
+  /// **'Rest in His mercy. Tomorrow begins again in Him.'**
+  String get journalResolutionLead;
+
+  /// Scripture for the final movement (Lamentations 3:22-23). Use the exact wording from the language's approved Catholic Bible translation — do NOT paraphrase.
+  ///
+  /// In en, this message translates to:
+  /// **'The steadfast love of the Lord never ceases; his mercies are new every morning; great is your faithfulness.'**
+  String get journalResolutionVerse;
+
+  /// Citation of the resolution Scripture. Localise the book name and numbering.
+  ///
+  /// In en, this message translates to:
+  /// **'Lamentations 3:22–23'**
+  String get journalResolutionRef;
+
+  /// Title of the reflection step of the journal entry flow
+  ///
+  /// In en, this message translates to:
+  /// **'Reflection'**
+  String get journalReflectionTitle;
+
+  /// Prompt of the reflection step
+  ///
+  /// In en, this message translates to:
+  /// **'How was your day?'**
+  String get journalReflectionPrompt;
+
+  /// Hint text of the free reflection field
+  ///
+  /// In en, this message translates to:
+  /// **'Write freely...'**
+  String get journalReflectionHint;
+
+  /// Title of the sin marking step of the journal entry flow
+  ///
+  /// In en, this message translates to:
+  /// **'Mark sins'**
+  String get journalSinsTitle;
+
+  /// Prompt of the sin marking step
+  ///
+  /// In en, this message translates to:
+  /// **'Where did I fall short today?'**
+  String get journalSinsPrompt;
+
+  /// Shown when no sins have been marked on a journal day
+  ///
+  /// In en, this message translates to:
+  /// **'Nothing marked yet'**
+  String get journalNoSinsMarked;
+
+  /// Label of the button that opens the sin picker
+  ///
+  /// In en, this message translates to:
+  /// **'Mark a sin'**
+  String get journalAddSin;
+
+  /// Tooltip of the button that removes a marked sin
+  ///
+  /// In en, this message translates to:
+  /// **'Remove'**
+  String get journalRemoveSin;
+
+  /// Title of the final Examen movement: resting in mercy and resolving for tomorrow
+  ///
+  /// In en, this message translates to:
+  /// **'Hope & Resolution'**
+  String get journalResolutionTitle;
+
+  /// Prompt of the resolution movement
+  ///
+  /// In en, this message translates to:
+  /// **'One gift for tomorrow'**
+  String get journalResolutionPrompt;
+
+  /// Hint text of the optional resolution field
+  ///
+  /// In en, this message translates to:
+  /// **'With Your grace, tomorrow I will…'**
+  String get journalResolutionHint;
+
+  /// Title of the mood step of the journal entry flow
+  ///
+  /// In en, this message translates to:
+  /// **'Mood'**
+  String get journalMoodTitle;
+
+  /// Prompt of the mood step
+  ///
+  /// In en, this message translates to:
+  /// **'How is your soul tonight?'**
+  String get journalMoodPrompt;
+
+  /// Mood option 1 of 5
+  ///
+  /// In en, this message translates to:
+  /// **'Desolate'**
+  String get journalMoodDesolate;
+
+  /// Mood option 2 of 5
+  ///
+  /// In en, this message translates to:
+  /// **'Struggling'**
+  String get journalMoodStruggling;
+
+  /// Mood option 3 of 5
+  ///
+  /// In en, this message translates to:
+  /// **'Steady'**
+  String get journalMoodSteady;
+
+  /// Mood option 4 of 5
+  ///
+  /// In en, this message translates to:
+  /// **'Grateful'**
+  String get journalMoodGrateful;
+
+  /// Mood option 5 of 5
+  ///
+  /// In en, this message translates to:
+  /// **'Consoled'**
+  String get journalMoodConsoled;
+
+  /// Autosave indicator shown once the entry has been written
+  ///
+  /// In en, this message translates to:
+  /// **'Saved'**
+  String get journalSaved;
+
+  /// Autosave indicator shown while a write is pending
+  ///
+  /// In en, this message translates to:
+  /// **'Saving...'**
+  String get journalSaving;
+
+  /// Tooltip and title of the delete journal entry action
+  ///
+  /// In en, this message translates to:
+  /// **'Delete entry'**
+  String get journalDeleteEntry;
+
+  /// Body of the delete journal entry confirmation dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Delete this day\'s entry? This cannot be undone.'**
+  String get journalDeleteEntryConfirm;
+
+  /// Confirmation shown after deleting a journal entry
+  ///
+  /// In en, this message translates to:
+  /// **'Entry deleted'**
+  String get journalEntryDeleted;
+
+  /// Tab of the sin picker listing the standard question bank
+  ///
+  /// In en, this message translates to:
+  /// **'Questions'**
+  String get journalPickerQuestions;
+
+  /// Tab of the sin picker listing the user's custom sins
+  ///
+  /// In en, this message translates to:
+  /// **'My sins'**
+  String get journalPickerMySins;
+
+  /// Tab of the sin picker for typing a free-text sin
+  ///
+  /// In en, this message translates to:
+  /// **'In my own words'**
+  String get journalPickerOwnWords;
+
+  /// Hint text of the free-text sin field
+  ///
+  /// In en, this message translates to:
+  /// **'Describe it in your own words'**
+  String get journalPickerFreeTextHint;
+
+  /// Hint text of the sin picker search field
+  ///
+  /// In en, this message translates to:
+  /// **'Search sins...'**
+  String get journalSearchSins;
+
+  /// Badge on a journal sin that has been carried into a confession
+  ///
+  /// In en, this message translates to:
+  /// **'Confessed'**
+  String get journalAbsolved;
+
+  /// Shown in place of a confessed journal sin whose text was cleared because confession history is off
+  ///
+  /// In en, this message translates to:
+  /// **'A sin you brought to confession'**
+  String get journalSinCleared;
+
+  /// Banner offering to carry journal sin marks into the examination
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, one{Include the sin you marked in your journal} other{Include the {count} sins you marked in your journal}}'**
+  String journalPreloadTitle(int count);
+
+  /// Button that carries the journal sin marks into the examination
+  ///
+  /// In en, this message translates to:
+  /// **'Include'**
+  String get journalPreloadAction;
+
+  /// Confirmation shown after journal sins are added to the examination
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, one{1 sin added from your journal} other{{count} sins added from your journal}}'**
+  String journalPreloadAdded(int count);
+
+  /// Title of the insights section grouping journal sin marks by commandment
+  ///
+  /// In en, this message translates to:
+  /// **'Struggle areas'**
+  String get journalStruggleAreas;
+
+  /// Subtitle of the struggle areas insights section
+  ///
+  /// In en, this message translates to:
+  /// **'Most often marked in your journal'**
+  String get journalStruggleAreasSubtitle;
+
+  /// Number of journal sin marks under one commandment
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, one{1 mark} other{{count} marks}}'**
+  String journalMarksCount(int count);
+
+  /// Title of the daily journal reminder settings card
+  ///
+  /// In en, this message translates to:
+  /// **'Journal reminder'**
+  String get journalReminder;
+
+  /// Subtitle of the daily journal reminder settings card
+  ///
+  /// In en, this message translates to:
+  /// **'A nightly nudge to reflect on your day'**
+  String get journalReminderSubtitle;
+
+  /// Label of the switch that turns the daily journal reminder on
+  ///
+  /// In en, this message translates to:
+  /// **'Enable journal reminder'**
+  String get enableJournalReminder;
+
+  /// Title of the daily journal reminder notification
+  ///
+  /// In en, this message translates to:
+  /// **'Evening reflection'**
+  String get journalReminderNotificationTitle;
+
+  /// Body of the daily journal reminder notification
+  ///
+  /// In en, this message translates to:
+  /// **'Take a moment to look back on your day with God'**
+  String get journalReminderNotificationBody;
+
+  /// Title of the distraction-free mode used in the confessional
+  ///
+  /// In en, this message translates to:
+  /// **'Confession Mode'**
+  String get confessionDayMode;
+
+  /// No description provided for @confessionDayModeDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Large, distraction-free text for the confessional'**
+  String get confessionDayModeDescription;
+
+  /// No description provided for @exitConfessionMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Exit confession mode'**
+  String get exitConfessionMode;
+
+  /// Step counter in confession mode
+  ///
+  /// In en, this message translates to:
+  /// **'Step {current} of {total}'**
+  String confessionDayStepOf(int current, int total);
+
+  /// No description provided for @next.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get next;
+
+  /// No description provided for @actOfContrition.
+  ///
+  /// In en, this message translates to:
+  /// **'Act of Contrition'**
+  String get actOfContrition;
+
+  /// No description provided for @actOfContritionUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'The Act of Contrition is unavailable'**
+  String get actOfContritionUnavailable;
+
+  /// No description provided for @confessionDaySinsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Sins to confess'**
+  String get confessionDaySinsTitle;
+
+  /// No description provided for @confessionDayOpeningTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Opening'**
+  String get confessionDayOpeningTitle;
+
+  /// No description provided for @confessionDayOpeningIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Make the Sign of the Cross, then begin:'**
+  String get confessionDayOpeningIntro;
+
+  /// No description provided for @confessionDayOpeningFormula.
+  ///
+  /// In en, this message translates to:
+  /// **'Bless me, Father, for I have sinned.'**
+  String get confessionDayOpeningFormula;
+
+  /// The second line of the opening formula. {duration} is a human phrase like '2 months' or '3 weeks', computed from the previous confession. Sacramental wording — source from an approved translation, do not paraphrase.
+  ///
+  /// In en, this message translates to:
+  /// **'It has been {duration} since my last confession.'**
+  String confessionDaySinceLast(String duration);
+
+  /// Opening formula's second line when there is no earlier confession on record. A fill-in-the-blank template for the penitent to complete, not an assertion — keep the bracketed unit list, which follows the rite guide's 'give the number of weeks, months or years'. Take the unit names from this language's bundled confession guide. Sacramental wording — source from an approved translation.
+  ///
+  /// In en, this message translates to:
+  /// **'It has been [days/weeks/months/years] since my last confession.'**
+  String get confessionDaySinceLastUnknown;
+
+  /// The line a penitent says after confessing their sins. Sacramental wording — source from an approved translation, do not paraphrase.
+  ///
+  /// In en, this message translates to:
+  /// **'For these and all my sins, I am truly sorry.'**
+  String get confessionDaySinsClosing;
+
+  /// No description provided for @confessionDayThanksgivingTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Go in peace'**
+  String get confessionDayThanksgivingTitle;
+
+  /// The priest's dismissal versicle. Liturgical text — source from the approved translation of the Rite of Penance, do not paraphrase.
+  ///
+  /// In en, this message translates to:
+  /// **'Give thanks to the Lord, for He is good.'**
+  String get confessionDayThanksgivingVersicle;
+
+  /// The penitent's response to the dismissal versicle. Liturgical text — source from the approved translation of the Rite of Penance.
+  ///
+  /// In en, this message translates to:
+  /// **'His mercy endures forever.'**
+  String get confessionDayThanksgivingResponse;
+
+  /// A gentle pastoral closing shown after absolution, encouraging thanksgiving and completing the penance.
+  ///
+  /// In en, this message translates to:
+  /// **'You have been washed clean. Complete your penance, and go forward in the peace of Christ.'**
+  String get confessionDayThanksgivingBody;
+
+  /// A duration in weeks, e.g. for time since last confession
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 week} other{{count} weeks}}'**
+  String weeksCount(int count);
+
+  /// A duration in months, e.g. for time since last confession
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 month} other{{count} months}}'**
+  String monthsCount(int count);
+
+  /// A duration in years, e.g. for time since last confession
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 year} other{{count} years}}'**
+  String yearsCount(int count);
+
+  /// Name of the liturgical season of Lent
+  ///
+  /// In en, this message translates to:
+  /// **'Lent'**
+  String get seasonLent;
+
+  /// Name of the liturgical season of Holy Week
+  ///
+  /// In en, this message translates to:
+  /// **'Holy Week'**
+  String get seasonHolyWeek;
+
+  /// Name of the liturgical season of Advent
+  ///
+  /// In en, this message translates to:
+  /// **'Advent'**
+  String get seasonAdvent;
+
+  /// Name of the liturgical season of Christmas
+  ///
+  /// In en, this message translates to:
+  /// **'Christmas'**
+  String get seasonChristmas;
+
+  /// Name of the liturgical season of Easter
+  ///
+  /// In en, this message translates to:
+  /// **'Easter'**
+  String get seasonEaster;
+
+  /// Name of the liturgical season of Ordinary Time
+  ///
+  /// In en, this message translates to:
+  /// **'Ordinary Time'**
+  String get seasonOrdinaryTime;
+
+  /// Name of the feast of Ash Wednesday
+  ///
+  /// In en, this message translates to:
+  /// **'Ash Wednesday'**
+  String get feastAshWednesday;
+
+  /// Name of the feast of Palm Sunday
+  ///
+  /// In en, this message translates to:
+  /// **'Palm Sunday'**
+  String get feastPalmSunday;
+
+  /// Name of the feast of Easter
+  ///
+  /// In en, this message translates to:
+  /// **'Easter'**
+  String get feastEaster;
+
+  /// Name of the feast of Pentecost
+  ///
+  /// In en, this message translates to:
+  /// **'Pentecost'**
+  String get feastPentecost;
+
+  /// Name of the feast of the Assumption of Mary (15 August)
+  ///
+  /// In en, this message translates to:
+  /// **'The Assumption'**
+  String get feastAssumption;
+
+  /// Name of the feast of All Saints (1 November)
+  ///
+  /// In en, this message translates to:
+  /// **'All Saints'**
+  String get feastAllSaints;
+
+  /// Name of the feast of the Immaculate Conception (8 December)
+  ///
+  /// In en, this message translates to:
+  /// **'The Immaculate Conception'**
+  String get feastImmaculateConception;
+
+  /// Name of the First Sunday of Advent
+  ///
+  /// In en, this message translates to:
+  /// **'The First Sunday of Advent'**
+  String get feastFirstSundayOfAdvent;
+
+  /// Name of the feast of Christmas
+  ///
+  /// In en, this message translates to:
+  /// **'Christmas'**
+  String get feastChristmas;
+
+  /// Title of the home card shown in the first days of Lent
+  ///
+  /// In en, this message translates to:
+  /// **'Lent has begun'**
+  String get liturgicalLentTitle;
+
+  /// Body of the home card shown in the first days of Lent
+  ///
+  /// In en, this message translates to:
+  /// **'A season of returning. Many begin it with confession.'**
+  String get liturgicalLentBody;
+
+  /// Title of the home card shown during Holy Week
+  ///
+  /// In en, this message translates to:
+  /// **'Holy Week has begun'**
+  String get liturgicalHolyWeekTitle;
+
+  /// Body of the home card shown during Holy Week
+  ///
+  /// In en, this message translates to:
+  /// **'The Church walks toward Easter. There is still time to prepare your heart.'**
+  String get liturgicalHolyWeekBody;
+
+  /// Title of the home card shown in the first days of Advent
+  ///
+  /// In en, this message translates to:
+  /// **'Advent has begun'**
+  String get liturgicalAdventTitle;
+
+  /// Body of the home card shown in the first days of Advent
+  ///
+  /// In en, this message translates to:
+  /// **'A season of waiting. Many prepare their hearts with confession.'**
+  String get liturgicalAdventBody;
+
+  /// Title of the home card shown in the days before a major feast
+  ///
+  /// In en, this message translates to:
+  /// **'{feast} is near'**
+  String liturgicalFeastNearTitle(String feast);
+
+  /// Body of the home card shown in the days before a major feast
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, one{One day away — prepare your heart.} other{{count} days away — prepare your heart.}}'**
+  String liturgicalFeastNearBody(int count);
+
+  /// Title of the home card inviting the user to confession after an unusually long gap
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, one{It has been a week since your last confession} other{It has been {count} weeks since your last confession}}'**
+  String anniversaryTitle(int count);
+
+  /// Body of the home card inviting the user to confession after an unusually long gap
+  ///
+  /// In en, this message translates to:
+  /// **'Whenever you are ready, mercy is waiting. Would you like to prepare?'**
+  String get anniversaryBody;
+
+  /// Call to action on the liturgical and anniversary home cards
+  ///
+  /// In en, this message translates to:
+  /// **'Prepare'**
+  String get promptPrepare;
+
+  /// Title shown when the database encryption key is unrecoverable
+  ///
+  /// In en, this message translates to:
+  /// **'Your data cannot be unlocked'**
+  String get dataUnrecoverableTitle;
+
+  /// Explains that encrypted data cannot be recovered without its key
+  ///
+  /// In en, this message translates to:
+  /// **'The key that protects your confessions is no longer available on this device. This can happen after restoring from a backup, or if the device security settings were reset.\n\nBecause your data is encrypted, it cannot be recovered without that key — not even by us. You can erase it and begin again.'**
+  String get dataUnrecoverableBody;
+
+  /// Button that erases all local data and restarts the app fresh
+  ///
+  /// In en, this message translates to:
+  /// **'Erase and start over'**
+  String get eraseAndStartOver;
+
+  /// Confirmation body for erasing all local data
+  ///
+  /// In en, this message translates to:
+  /// **'This permanently erases everything stored on this device and starts the app fresh. It cannot be undone.'**
+  String get eraseAndStartOverConfirm;
+
+  /// Shown when the penance could not be written to the database
+  ///
+  /// In en, this message translates to:
+  /// **'Could not save the penance. Please try again.'**
+  String get penanceSaveFailed;
+
+  /// Android notification channel name for confession reminders, shown in system settings
+  ///
+  /// In en, this message translates to:
+  /// **'Confession Reminders'**
+  String get confessionReminderChannelName;
+
+  /// Android notification channel description for confession reminders, shown in system settings
+  ///
+  /// In en, this message translates to:
+  /// **'Reminders for confession'**
+  String get confessionReminderChannelDescription;
+
+  /// Android notification channel name for the daily journal reminder, shown in system settings
+  ///
+  /// In en, this message translates to:
+  /// **'Journal Reminders'**
+  String get journalReminderChannelName;
+
+  /// Android notification channel description for the daily journal reminder, shown in system settings
+  ///
+  /// In en, this message translates to:
+  /// **'Daily reminder to write the evening reflection'**
+  String get journalReminderChannelDescription;
+
+  /// The single, quiet progress line during the guided examination: how many sins the user has named so far
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, one{One named so far} other{{count} named so far}}'**
+  String namedSoFar(int count);
+
+  /// Title of the dismissible inline card offering encouragement at the top of the examination
+  ///
+  /// In en, this message translates to:
+  /// **'Before you begin'**
+  String get invitationCardTitle;
+
+  /// Action on the inline encouragement card; opens the invitation guide
+  ///
+  /// In en, this message translates to:
+  /// **'Encourage me'**
+  String get invitationCardAction;
+
+  /// Primary home call to action for a user with nothing in progress
+  ///
+  /// In en, this message translates to:
+  /// **'Begin your examination'**
+  String get homeCtaBeginTitle;
+
+  /// Subtitle of the home call to action inviting an examination
+  ///
+  /// In en, this message translates to:
+  /// **'Prepare your heart before confession'**
+  String get homeCtaBeginSubtitle;
+
+  /// Primary home call to action when an examination draft is in progress
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{Continue your examination (1 selected)} other{Continue your examination ({count} selected)}}'**
+  String homeCtaContinueTitle(int count);
+
+  /// Subtitle of the home call to action resuming an examination
+  ///
+  /// In en, this message translates to:
+  /// **'Pick up where you left off'**
+  String get homeCtaContinueSubtitle;
+
+  /// Title of the home call to action when the examination is done but the confession has not been made
+  ///
+  /// In en, this message translates to:
+  /// **'You\'re ready'**
+  String get homeCtaReadyTitle;
+
+  /// Subtitle of the home call to action pointing at the confession list
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 sin is waiting in your confession list} other{{count} sins are waiting in your confession list}}'**
+  String homeCtaReadySubtitle(int count);
+
+  /// Title of the home call to action for an outstanding penance
+  ///
+  /// In en, this message translates to:
+  /// **'Complete your penance'**
+  String get homeCtaPenanceTitle;
+
+  /// Subtitle of the home call to action when penances are still pending
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 penance is still waiting} other{{count} penances are still waiting}}'**
+  String homeCtaPenanceSubtitle(int count);
+
+  /// Subtitle of the guide entry point on the home screen
+  ///
+  /// In en, this message translates to:
+  /// **'Encouragement, a step-by-step guide, prayers and FAQs'**
+  String get homeGuideCardSubtitle;
+
+  /// Expands the clamped daily quote on the home screen
+  ///
+  /// In en, this message translates to:
+  /// **'Read more'**
+  String get homeQuoteReadMore;
+
+  /// Collapses the expanded daily quote on the home screen
+  ///
+  /// In en, this message translates to:
+  /// **'Show less'**
+  String get homeQuoteShowLess;
+
+  /// Tutorial step describing the journal card on the home screen
+  ///
+  /// In en, this message translates to:
+  /// **'Look back on your day each evening: a short reflection, and your streak.'**
+  String get tutorialJournalDesc;
 }
 
 class _AppLocalizationsDelegate
@@ -2035,8 +3241,22 @@ class _AppLocalizationsDelegate
   }
 
   @override
-  bool isSupported(Locale locale) =>
-      <String>['en', 'es', 'fr', 'ml', 'pt'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>[
+    'de',
+    'en',
+    'es',
+    'fil',
+    'fr',
+    'hi',
+    'id',
+    'it',
+    'ko',
+    'ml',
+    'pl',
+    'pt',
+    'ta',
+    'vi',
+  ].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -2045,16 +3265,34 @@ class _AppLocalizationsDelegate
 AppLocalizations lookupAppLocalizations(Locale locale) {
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
+    case 'de':
+      return AppLocalizationsDe();
     case 'en':
       return AppLocalizationsEn();
     case 'es':
       return AppLocalizationsEs();
+    case 'fil':
+      return AppLocalizationsFil();
     case 'fr':
       return AppLocalizationsFr();
+    case 'hi':
+      return AppLocalizationsHi();
+    case 'id':
+      return AppLocalizationsId();
+    case 'it':
+      return AppLocalizationsIt();
+    case 'ko':
+      return AppLocalizationsKo();
     case 'ml':
       return AppLocalizationsMl();
+    case 'pl':
+      return AppLocalizationsPl();
     case 'pt':
       return AppLocalizationsPt();
+    case 'ta':
+      return AppLocalizationsTa();
+    case 'vi':
+      return AppLocalizationsVi();
   }
 
   throw FlutterError(

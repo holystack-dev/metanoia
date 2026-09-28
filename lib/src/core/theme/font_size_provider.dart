@@ -1,5 +1,5 @@
+import 'package:confessionapp/src/core/preferences/preferences_provider.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 part 'font_size_provider.g.dart';
 
@@ -19,26 +19,21 @@ enum FontSizeScale {
 class FontSizeController extends _$FontSizeController {
   static const _key = 'font_size_scale';
 
+  /// Resolved synchronously from the preferences preloaded in `main`, so text
+  /// is not laid out at the default scale for a frame and then re-laid out.
   @override
   FontSizeScale build() {
-    _loadFontSize();
-    return FontSizeScale.medium;
-  }
+    final scaleName = ref.watch(sharedPreferencesProvider).getString(_key);
+    if (scaleName == null) return FontSizeScale.medium;
 
-  Future<void> _loadFontSize() async {
-    final prefs = await SharedPreferences.getInstance();
-    final scaleName = prefs.getString(_key);
-    if (scaleName != null) {
-      state = FontSizeScale.values.firstWhere(
-        (e) => e.name == scaleName,
-        orElse: () => FontSizeScale.medium,
-      );
-    }
+    return FontSizeScale.values.firstWhere(
+      (e) => e.name == scaleName,
+      orElse: () => FontSizeScale.medium,
+    );
   }
 
   Future<void> setFontSize(FontSizeScale scale) async {
     state = scale;
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setString(_key, scale.name);
+    await ref.read(sharedPreferencesProvider).setString(_key, scale.name);
   }
 }

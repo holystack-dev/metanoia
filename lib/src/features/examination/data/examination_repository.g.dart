@@ -6,9 +6,18 @@ part of 'examination_repository.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$examinationDataHash() => r'9e63056dd0e7b9f449b87c8e358d1d4c7ad29ad7';
+String _$examinationDataHash() => r'ff237ec1d709a6f84199c805fde135c9b023b496';
 
-/// See also [examinationData].
+/// The commandments and questions of the current content language, with the
+/// user's custom sins folded in.
+///
+/// Deliberately still a Future provider: commandments and questions are bundled
+/// content that only changes when the app syncs new assets at startup. The one
+/// part that changes while the screen is open — the custom sins — comes from
+/// [customSinsGroupedProvider], a Drift stream, so this rebuilds on its own
+/// whenever a custom sin is added, edited or deleted.
+///
+/// Copied from [examinationData].
 @ProviderFor(examinationData)
 final examinationDataProvider =
     AutoDisposeFutureProvider<List<CommandmentWithQuestions>>.internal(

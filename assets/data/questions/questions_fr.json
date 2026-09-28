@@ -24,11 +24,11 @@
             },
             {
                 "id": "fr-01-006",
-                "text": "Ai-je essayé de grandir dans ma foi et de la défendre ?"
+                "text": "Ai-je manqué de grandir dans ma foi et de la défendre ?"
             },
             {
                 "id": "fr-01-007",
-                "text": "Ai-je transmis la foi à mes enfants et à ma famille de manière dévouée ?"
+                "text": "Ai-je manqué de transmettre la foi à mes enfants et à ma famille de manière dévouée ?"
             },
             {
                 "id": "fr-01-008",
@@ -64,7 +64,7 @@
             },
             {
                 "id": "fr-01-016",
-                "text": "Ai-je pratiqué l'idolâtrie ? Ai-je placé des choses du monde telles que l'argent, le pouvoir, le succès, les amitiés, le gouvernement, ma nation, ma race ou mes biens avant ma relation avec Dieu ? Ai-je pratiqué les aspects spirituels du Yoga ?"
+                "text": "Ai-je pratiqué l'idolâtrie ? Ai-je placé des choses du monde telles que l'argent, le pouvoir, le succès, les amitiés, le gouvernement, ma nation, ma race ou mes biens avant ma relation avec Dieu ? Ai-je participé à des pratiques spirituelles non chrétiennes contraires à la foi ?"
             },
             {
                 "id": "fr-01-017",
@@ -153,7 +153,7 @@
             },
             {
                 "id": "fr-02-005",
-                "text": "Ai-je utilisé un langage grossier ou regardé des films ou écouté de la musique contenant un langage grossier ?"
+                "text": "Ai-je utilisé un langage grossier ou obscène ?"
             },
             {
                 "id": "fr-02-006",
@@ -243,7 +243,7 @@
             },
             {
                 "id": "fr-04-007",
-                "text": "Ai-je prié quotidiennement avec mes enfants ?"
+                "text": "Ai-je manqué de prier quotidiennement avec mes enfants ?"
             },
             {
                 "id": "fr-04-008",
@@ -251,7 +251,7 @@
             },
             {
                 "id": "fr-04-009",
-                "text": "Ai-je voté pour, promu ou fait avancer l'agenda de politiciens qui tiennent des positions contraires au bien commun, à la liberté religieuse ou à la loi morale ?"
+                "text": "Ai-je manqué de former ma conscience avec soin avant de voter, ou promu des politiques contraires au bien commun, à la liberté religieuse ou à la loi morale ?"
             },
             {
                 "id": "fr-04-010",
@@ -316,7 +316,7 @@
             },
             {
                 "id": "fr-05-005",
-                "text": "Ai-je promu l'avortement ou voté pour un politicien qui le fait ?"
+                "text": "Ai-je promu l'avortement ou plaidé publiquement en sa faveur ?"
             },
             {
                 "id": "fr-05-006",
@@ -388,7 +388,7 @@
             },
             {
                 "id": "fr-05-023",
-                "text": "Ai-je préconisé des punitions injustes ou la peine capitale là où elle n'est pas juste ?"
+                "text": "Ai-je préconisé des punitions injustes ou soutenu le recours à la peine de mort, que l'Église enseigne être inadmissible ?"
             },
             {
                 "id": "fr-05-024",
@@ -404,7 +404,7 @@
             },
             {
                 "id": "fr-05-027",
-                "text": "Ai-je consommé de l'alcool ou des drogues ?"
+                "text": "Ai-je abusé de l'alcool ou consommé des drogues illicites ?"
             },
             {
                 "id": "fr-05-028",
@@ -513,7 +513,7 @@
             },
             {
                 "id": "fr-06-012",
-                "text": "Ai-je délibérément provoqué l'orgasme masculin en dehors des rapports sexuels ?"
+                "text": "Ai-je délibérément recherché ou provoqué l'orgasme en dehors de l'acte conjugal ?"
             },
             {
                 "id": "fr-06-013",
@@ -533,11 +533,11 @@
             },
             {
                 "id": "fr-06-017",
-                "text": "Ai-je commis l'adultère (actes sexuels ou conversation avec une personne mariée ou avec une personne qui n'est pas mon conjoint) ?"
+                "text": "Ai-je commis l'adultère (actes sexuels avec le conjoint d'autrui, ou avec une autre personne que mon conjoint alors que je suis marié) ?"
             },
             {
                 "id": "fr-06-018",
-                "text": "Ai-je divorcé de mon conjoint ou envisagé de le faire bien qu'étant dans un mariage valide sans cause grave ?"
+                "text": "Ai-je, sans cause grave, divorcé de mon conjoint ou envisagé de le faire alors que je suis dans un mariage valide ?"
             },
             {
                 "id": "fr-06-019",
@@ -634,7 +634,7 @@
             },
             {
                 "id": "fr-07-009",
-                "text": "Ai-je payé un salaire juste à mes travailleurs pour une journée de travail honnête ?"
+                "text": "Ai-je manqué de payer un salaire juste à mes travailleurs pour une journée de travail honnête ?"
             },
             {
                 "id": "fr-07-010",
@@ -694,7 +694,7 @@
             },
             {
                 "id": "fr-07-024",
-                "text": "Ai-je donné un salaire raisonnable aux travailleurs ?"
+                "text": "Ai-je retenu ou retardé le salaire dû aux travailleurs ?"
             },
             {
                 "id": "fr-07-025",
@@ -771,7 +771,7 @@
             },
             {
                 "id": "fr-08-015",
-                "text": "Me suis-je livrés à la flatterie ?"
+                "text": "Me suis-je livré à la flatterie ?"
             },
             {
                 "id": "fr-08-016",
@@ -828,7 +828,7 @@
             },
             {
                 "id": "fr-09-004",
-                "text": "Ai-je manqué de m'habiller modestement ou détourné les yeux lorsque quelqu'un d'autre est habillé de manière immodeste ?"
+                "text": "Ai-je manqué de m'habiller modestement, ou manqué de détourner les yeux lorsque quelqu'un d'autre est habillé de manière immodeste ?"
             },
             {
                 "id": "fr-09-005",
@@ -882,35 +882,35 @@
             },
             {
                 "id": "fr-11-003",
-                "text": "Ai-je confessé mes péchés au moins une fois par an ?"
+                "text": "Ai-je manqué de confesser mes péchés au moins une fois par an ?"
             },
             {
                 "id": "fr-11-004",
-                "text": "Mes confessions ont-elles été valides et honnêtes ?"
+                "text": "Ai-je fait des confessions malhonnêtes ou délibérément incomplètes ?"
             },
             {
                 "id": "fr-11-005",
-                "text": "Ai-je préparé mon âme correctement pour recevoir la Sainte Communion ?"
+                "text": "Ai-je manqué de préparer mon âme correctement pour recevoir la Sainte Communion ?"
             },
             {
                 "id": "fr-11-006",
-                "text": "Ai-je accompli la pénitence assignée de ma confession ?"
+                "text": "Ai-je manqué d'accomplir la pénitence assignée lors de ma confession ?"
             },
             {
                 "id": "fr-11-007",
-                "text": "Ai-je fait réparation pour le mal causé par mes péchés ?"
+                "text": "Ai-je manqué de faire réparation pour le mal causé par mes péchés ?"
             },
             {
                 "id": "fr-11-008",
-                "text": "Ai-je fait un examen de conscience minutieux avant la confession et tenté honnêtement de me rappeler tous mes péchés ?"
+                "text": "Ai-je manqué de faire un examen de conscience minutieux avant la confession ou de tenter honnêtement de me rappeler tous mes péchés ?"
             },
             {
                 "id": "fr-11-009",
-                "text": "Ai-je eu la ferme résolution d'amender ma vie et de la douleur pour mes péchés avant d'aller à la confession ?"
+                "text": "Suis-je allé à la confession sans ferme résolution d'amender ma vie ou sans douleur pour mes péchés ?"
             },
             {
                 "id": "fr-11-010",
-                "text": "Ai-je reçu la Sainte Communion au moins une fois pendant le temps pascal (entre la Vigile Pascale et le Dimanche de la Pentecôte) ?"
+                "text": "Ai-je manqué de recevoir la Sainte Communion au moins une fois pendant le temps pascal (entre la Vigile pascale et le dimanche de la Pentecôte) ?"
             },
             {
                 "id": "fr-11-011",
@@ -918,7 +918,7 @@
             },
             {
                 "id": "fr-11-012",
-                "text": "Ai-je respecté le jeûne eucharistique avant de recevoir la Sainte Communion ?"
+                "text": "Ai-je manqué de respecter le jeûne eucharistique avant de recevoir la Sainte Communion ?"
             },
             {
                 "id": "fr-11-013",
@@ -930,31 +930,31 @@
             },
             {
                 "id": "fr-11-015",
-                "text": "Ai-je suivi l'esprit des règles concernant le jeûne et l'abstinence ?"
+                "text": "Ai-je manqué de suivre l'esprit des règles concernant le jeûne et l'abstinence ?"
             },
             {
                 "id": "fr-11-016",
-                "text": "Ai-je jeûné de viande tous les vendredis de l'année ou suivi les directives des évêques de ma localité ?"
+                "text": "Ai-je manqué de m'abstenir de viande tous les vendredis de l'année ou de suivre les directives des évêques de ma région (par exemple accomplir un autre acte de pénitence à la place de l'abstinence de viande, là où les évêques le permettent) ?"
             },
             {
                 "id": "fr-11-017",
-                "text": "Ai-je fait des œuvres de miséricorde spirituelles et corporelles et pratiqué le renoncement à soi-même ?"
+                "text": "Ai-je manqué de faire des œuvres de miséricorde spirituelles et corporelles ou de pratiquer le renoncement à moi-même ?"
             },
             {
                 "id": "fr-11-018",
-                "text": "Ai-je donné la dîme à l'église régulièrement ?"
+                "text": "Ai-je manqué de contribuer régulièrement au soutien matériel de l'Église ?"
             },
             {
                 "id": "fr-11-019",
-                "text": "Ai-je donné un montant approprié pour ma situation ?"
+                "text": "Ai-je manqué de donner un montant approprié à ma situation ?"
             },
             {
                 "id": "fr-11-020",
-                "text": "Ai-je offert mon temps pour l'Église de manière appropriée pour ma situation ?"
+                "text": "Ai-je manqué d'offrir de mon temps pour l'Église de manière appropriée à ma situation ?"
             },
             {
                 "id": "fr-11-021",
-                "text": "Ai-je prié pour la croissance de l'Église ?"
+                "text": "Ai-je manqué de prier pour la croissance de l'Église ?"
             }
         ]
     },

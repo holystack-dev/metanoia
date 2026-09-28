@@ -1,4 +1,6 @@
 import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
+import 'package:confessionapp/src/core/theme/app_radius.dart';
+import 'package:confessionapp/src/core/widgets/app_back_button.dart';
 import 'package:confessionapp/src/features/authentication/presentation/providers/auth_provider.dart';
 import 'package:confessionapp/src/features/authentication/presentation/widgets/pin_dots_display.dart';
 import 'package:confessionapp/src/features/authentication/presentation/widgets/pin_input_widget.dart';
@@ -114,7 +116,7 @@ class _PinSetupScreenState extends ConsumerState<PinSetupScreen> {
           barrierDismissible: false,
           builder: (context) => AlertDialog(
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(AppRadius.sheet),
             ),
             icon: Icon(
               Icons.fingerprint_rounded,
@@ -143,22 +145,14 @@ class _PinSetupScreenState extends ConsumerState<PinSetupScreen> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final l10n = AppLocalizations.of(context)!;
     final currentPin = _isConfirming ? _confirmPin : _firstPin;
 
     return Scaffold(
       backgroundColor: theme.colorScheme.surface,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: theme.colorScheme.onSurface),
-          onPressed: () => context.pop(),
-        ),
-        title: Text(
-          'Set Up PIN',
-          style: TextStyle(color: theme.colorScheme.onSurface),
-        ),
-        centerTitle: true,
+        leading: const AppBackButton(),
+        title: Text(l10n.setUpPin),
       ),
       body: SafeArea(
         child: Padding(
@@ -167,7 +161,7 @@ class _PinSetupScreenState extends ConsumerState<PinSetupScreen> {
             children: [
               const Spacer(),
               // Instructions
-              _buildInstructions(theme),
+              _buildInstructions(theme, l10n),
               const Spacer(),
               // PIN dots
               PinDotsDisplay(
@@ -178,7 +172,7 @@ class _PinSetupScreenState extends ConsumerState<PinSetupScreen> {
               // Error message
               if (_hasError)
                 Text(
-                  'PINs don\'t match. Try again.',
+                  l10n.pinMismatch,
                   style: theme.textTheme.bodyMedium?.copyWith(
                     color: theme.colorScheme.error,
                   ),
@@ -204,7 +198,7 @@ class _PinSetupScreenState extends ConsumerState<PinSetupScreen> {
     );
   }
 
-  Widget _buildInstructions(ThemeData theme) {
+  Widget _buildInstructions(ThemeData theme, AppLocalizations l10n) {
     return Column(
       children: [
         Container(
@@ -224,7 +218,7 @@ class _PinSetupScreenState extends ConsumerState<PinSetupScreen> {
         AnimatedSwitcher(
           duration: 200.ms,
           child: Text(
-            _isConfirming ? 'Confirm your PIN' : 'Create a 6-digit PIN',
+            _isConfirming ? l10n.confirmYourPin : l10n.createSixDigitPin,
             key: ValueKey(_isConfirming),
             style: theme.textTheme.titleLarge?.copyWith(
               fontWeight: FontWeight.bold,
@@ -234,9 +228,7 @@ class _PinSetupScreenState extends ConsumerState<PinSetupScreen> {
         ),
         const SizedBox(height: 8),
         Text(
-          _isConfirming
-              ? 'Enter the same PIN again to confirm'
-              : 'This PIN will be used to protect your data',
+          _isConfirming ? l10n.enterSamePinAgain : l10n.pinProtectData,
           style: theme.textTheme.bodyMedium?.copyWith(
             color: theme.colorScheme.onSurfaceVariant,
           ),

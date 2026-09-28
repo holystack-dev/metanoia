@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:confessionapp/src/features/authentication/domain/models/auth_settings.dart';
 import 'package:confessionapp/src/features/authentication/presentation/providers/auth_provider.dart';
 import 'package:confessionapp/src/features/authentication/presentation/screens/pin_setup_screen.dart';
 import 'package:confessionapp/src/features/authentication/presentation/screens/security_settings_screen.dart';
+import 'package:confessionapp/src/features/confession/presentation/confession_day_mode_screen.dart';
 import 'package:confessionapp/src/features/confession/presentation/confession_screen.dart';
 import 'package:confessionapp/src/features/confession/presentation/confession_history_screen.dart';
 import 'package:confessionapp/src/features/confession/presentation/insights_screen.dart';
@@ -15,11 +15,15 @@ import 'package:confessionapp/src/features/guide/presentation/faq_screen.dart';
 import 'package:confessionapp/src/features/guide/presentation/guide_screen.dart';
 import 'package:confessionapp/src/features/guide/presentation/invitation_screen.dart';
 import 'package:confessionapp/src/features/guide/presentation/prayers_screen.dart';
+import 'package:confessionapp/src/core/utils/date_utils.dart';
 import 'package:confessionapp/src/features/home/presentation/home_screen.dart';
+import 'package:confessionapp/src/features/journal/presentation/journal_entry_screen.dart';
+import 'package:confessionapp/src/features/journal/presentation/journal_screen.dart';
 import 'package:confessionapp/src/features/settings/presentation/settings_screen.dart';
 import 'package:confessionapp/src/features/settings/presentation/about_screen.dart';
 import 'package:confessionapp/src/features/onboarding/presentation/onboarding_screen.dart';
 import 'package:confessionapp/src/features/onboarding/presentation/onboarding_controller.dart';
+import 'package:confessionapp/src/core/router/route_guard.dart';
 import 'package:confessionapp/src/core/router/scaffold_with_navbar.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -30,61 +34,29 @@ part 'app_router.g.dart';
 GoRouter goRouter(Ref ref) {
   final rootNavigatorKey = GlobalKey<NavigatorState>();
   final homeNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'home');
+  final journalNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'journal');
   final examineNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'examine');
   final confessNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'confess');
-  final guideNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'guide');
 
   return GoRouter(
     navigatorKey: rootNavigatorKey,
     initialLocation: '/',
     redirect: (context, state) async {
-      final onboardingCompleted =
-          await ref
-              .read(onboardingControllerProvider.notifier)
-              .hasCompletedOnboarding();
-      final isOnOnboardingPage = state.matchedLocation == '/onboarding';
-      final isOnPinSetupPage = state.matchedLocation == '/pin-setup';
+      // Synchronous: preferences are preloaded in `main`.
+      final onboardingCompleted = ref.read(onboardingControllerProvider);
 
-      // If not completed and not on onboarding, redirect to onboarding
-      if (!onboardingCompleted && !isOnOnboardingPage) {
-        return '/onboarding';
-      }
+      // Awaited, not valueOrNull: auth is still loading on a cold start, and
+      // the PIN guard must still apply to a deep link.
+      final authState = await ref.read(authControllerProvider.future);
 
-      // If completed and on onboarding, redirect to home
-      if (onboardingCompleted && isOnOnboardingPage) {
-        return '/';
-      }
-
-      // Sensitive routes that require PIN setup
-      const sensitiveRoutes = [
-        '/examine',
-        '/confess',
-        '/settings',
-      ];
-
-      // Check if navigating to a sensitive route without PIN set
-      if (onboardingCompleted && !isOnPinSetupPage) {
-        final authState = ref.read(authControllerProvider).valueOrNull;
-        final isPinDeferred =
-            authState?.status == AuthStatus.pinSetupDeferred ||
-            authState?.status == AuthStatus.uninitialized;
-
-        if (isPinDeferred) {
-          // Check if trying to access sensitive routes
-          final isSensitiveRoute = sensitiveRoutes.any(
-            (route) => state.matchedLocation.startsWith(route),
-          );
-
-          if (isSensitiveRoute) {
-            // Pass the intended destination as a query parameter
-            return '/pin-setup?redirect=${Uri.encodeComponent(state.matchedLocation)}';
-          }
-        }
-      }
-
-      return null;
+      return resolveRedirect(
+        onboardingCompleted: onboardingCompleted,
+        authStatus: authState.status,
+        location: state.matchedLocation,
+      );
     },
     routes: [
+      // Tabs: Home, Journal, Examine, Confess. The guide is a root route below.
       StatefulShellRoute.indexedStack(
         builder: (context, state, navigationShell) {
           return ScaffoldWithNavBar(navigationShell: navigationShell);
@@ -98,6 +70,32 @@ GoRouter goRouter(Ref ref) {
                 pageBuilder:
                     (context, state) =>
                         const NoTransitionPage(child: HomeScreen()),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            navigatorKey: journalNavigatorKey,
+            routes: [
+              GoRoute(
+                // In `sensitiveRoutes`; the top-level `redirect` guards branch
+                // routes too.
+                path: '/journal',
+                pageBuilder:
+                    (context, state) =>
+                        const NoTransitionPage(child: JournalScreen()),
+                routes: [
+                  GoRoute(
+                    // ISO yyyy-MM-dd. Pushed on the root navigator, so the
+                    // day's entry covers the bottom navigation bar.
+                    path: ':date',
+                    parentNavigatorKey: rootNavigatorKey,
+                    builder: (context, state) {
+                      return JournalEntryScreen(
+                        day: journalDayFromPath(state.pathParameters['date']),
+                      );
+                    },
+                  ),
+                ],
               ),
             ],
           ),
@@ -129,6 +127,15 @@ GoRouter goRouter(Ref ref) {
                         const NoTransitionPage(child: ConfessionScreen()),
                 routes: [
                   GoRoute(
+                    // Confession-day mode: on the root navigator so it covers
+                    // the bottom bar. Guarded by the `/confess` prefix in
+                    // `sensitiveRoutes`.
+                    path: 'day-mode',
+                    parentNavigatorKey: rootNavigatorKey,
+                    builder:
+                        (context, state) => const ConfessionDayModeScreen(),
+                  ),
+                  GoRoute(
                     path: 'history',
                     parentNavigatorKey: rootNavigatorKey,
                     builder:
@@ -148,38 +155,34 @@ GoRouter goRouter(Ref ref) {
               ),
             ],
           ),
-          StatefulShellBranch(
-            navigatorKey: guideNavigatorKey,
-            routes: [
-              GoRoute(
-                path: '/guide',
-                pageBuilder:
-                    (context, state) =>
-                        const NoTransitionPage(child: GuideScreen()),
-                routes: [
-                  GoRoute(
-                    path: 'faq',
-                    parentNavigatorKey: rootNavigatorKey,
-                    builder: (context, state) => const FaqScreen(),
-                  ),
-                  GoRoute(
-                    path: 'prayers',
-                    parentNavigatorKey: rootNavigatorKey,
-                    builder: (context, state) => const PrayersScreen(),
-                  ),
-                  GoRoute(
-                    path: 'invitation',
-                    parentNavigatorKey: rootNavigatorKey,
-                    builder: (context, state) => const InvitationScreen(),
-                  ),
-                  GoRoute(
-                    path: 'confession',
-                    parentNavigatorKey: rootNavigatorKey,
-                    builder: (context, state) => const ConfessionGuideScreen(),
-                  ),
-                ],
-              ),
-            ],
+        ],
+      ),
+      // The guide, on the root navigator like /settings. `push('/guide/...')`
+      // builds the leaf page only.
+      GoRoute(
+        path: '/guide',
+        parentNavigatorKey: rootNavigatorKey,
+        builder: (context, state) => const GuideScreen(),
+        routes: [
+          GoRoute(
+            path: 'faq',
+            parentNavigatorKey: rootNavigatorKey,
+            builder: (context, state) => const FaqScreen(),
+          ),
+          GoRoute(
+            path: 'prayers',
+            parentNavigatorKey: rootNavigatorKey,
+            builder: (context, state) => const PrayersScreen(),
+          ),
+          GoRoute(
+            path: 'invitation',
+            parentNavigatorKey: rootNavigatorKey,
+            builder: (context, state) => const InvitationScreen(),
+          ),
+          GoRoute(
+            path: 'confession',
+            parentNavigatorKey: rootNavigatorKey,
+            builder: (context, state) => const ConfessionGuideScreen(),
           ),
         ],
       ),

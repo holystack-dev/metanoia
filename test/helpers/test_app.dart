@@ -9,17 +9,31 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-/// A reusable test database that skips content sync
+/// A reusable in-memory test database.
+///
+/// Only content sync is disabled (it would need the JSON assets). The
+/// production [MigrationStrategy] is kept, so tests run with the same foreign
+/// keys, cascades and indexes as the app.
 class TestAppDatabase extends AppDatabase {
-  TestAppDatabase() : super(NativeDatabase.memory());
+  TestAppDatabase([QueryExecutor? executor])
+      : super(executor ?? NativeDatabase.memory(), false);
+}
 
-  @override
-  MigrationStrategy get migration => MigrationStrategy(
-        onCreate: (Migrator m) async {
-          await m.createAll();
-          // Skip syncContent() for tests to avoid asset loading
-        },
-      );
+/// Waits until [condition] holds, or fails.
+///
+/// Drift delivers stream updates asynchronously after the write that triggered
+/// them has completed, so a stream-backed provider is not updated the instant
+/// an insert returns. This gives it a bounded number of event-loop turns to
+/// catch up.
+Future<void> waitUntil(
+  bool Function() condition, {
+  String reason = 'condition was never met',
+}) async {
+  for (var i = 0; i < 200; i++) {
+    if (condition()) return;
+    await Future<void>.delayed(const Duration(milliseconds: 5));
+  }
+  fail('Timed out waiting: $reason');
 }
 
 /// A wrapper widget for testing that provides:

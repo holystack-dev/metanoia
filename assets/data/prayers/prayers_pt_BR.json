@@ -10,7 +10,7 @@
                     "id": "before_confession",
                     "title": "Oração Antes da Confissão",
                     "icon": "wb_twilight_outlined",
-                    "content": "Vinde, Espírito Santo, em minha alma. Iluminai minha mente para que eu conheça os pecados que devo confessar, e concedei-me a vossa graça para me arrepender verdadeiramente dos meus pecados.\n\nAjuda-me a fazer uma boa confissão, a sentir verdadeira tristeza por minhas ofensas contra Vós, e a emendar minha vida. Por Cristo nosso Senhor. Amém."
+                    "content": "Vinde, Espírito Santo, à minha alma. Iluminai minha mente para que eu conheça os pecados que devo confessar, e concedei-me a vossa graça para me arrepender verdadeiramente dos meus pecados.\n\nAjudai-me a fazer uma boa confissão, a sentir verdadeira tristeza por minhas ofensas contra Vós e a emendar minha vida. Por Cristo, nosso Senhor. Amém."
                 },
                 {
                     "id": "act_of_contrition",
@@ -28,7 +28,7 @@
                     "id": "confiteor",
                     "title": "Eu Confesso (Confiteor)",
                     "icon": "person_outline",
-                    "content": "Confesso a Deus Todo-Poderoso e a vós, irmãos, que pequei muitas vezes por pensamentos e palavras, atos e omissões,\n\n[RUBRIC]Bata no peito três vezes enquanto diz:[/RUBRIC]\n\npor minha culpa, minha culpa, minha tão grande culpa.\n\nE peço à Virgem Maria, aos Santos e Anjos, e a vós, irmãos, que rogueis por mim a Deus, nosso Senhor. Amém."
+                    "content": "Confesso a Deus todo-poderoso e a vós, irmãos e irmãs, que pequei muitas vezes por pensamentos e palavras, atos e omissões,\n\n[RUBRIC]Bata no peito três vezes enquanto diz:[/RUBRIC]\n\npor minha culpa, minha culpa, minha tão grande culpa.\n\nE peço à Virgem Maria, aos anjos e santos, e a vós, irmãos e irmãs, que rogueis por mim a Deus, nosso Senhor. Amém."
                 }
             ]
         },
@@ -41,26 +41,26 @@
                     "id": "lords_prayer",
                     "title": "Pai Nosso",
                     "icon": "cloud_outlined",
-                    "content": "Pai Nosso que estais nos Céus,\nsantificado seja o vosso Nome,\nvenha a nós o vosso Reino,\nseja feita a vossa vontade assim na terra como no Céu.\n\nO pão nosso de cada dia nos dai hoje,\nperdoai-nos as nossas ofensas\nassim como nós perdoamos a quem nos tem ofendido,\ne não nos deixeis cair em tentação,\nmas livrai-nos do Mal.\n\nAmém."
+                    "content": "Pai Nosso que estais nos Céus,\nsantificado seja o vosso Nome,\nvenha a nós o vosso Reino,\nseja feita a vossa vontade assim na terra como no Céu.\n\nO pão nosso de cada dia nos dai hoje,\nperdoai-nos as nossas ofensas\nassim como nós perdoamos a quem nos tem ofendido,\ne não nos deixeis cair em tentação,\nmas livrai-nos do Mal.\n\n[AMEN]Amém."
                 },
                 {
                     "id": "hail_mary",
                     "title": "Ave Maria",
                     "icon": "star_outline",
-                    "content": "Ave Maria, cheia de graça,\no Senhor é convosco,\nbendita sois vós entre as mulheres\ne bendito é o fruto do vosso ventre, Jesus.\n\nSanta Maria, Mãe de Deus,\nrogai por nós pecadores,\nagora e na hora da nossa morte.\n\nAmém."
+                    "content": "Ave Maria, cheia de graça,\no Senhor é convosco,\nbendita sois vós entre as mulheres\ne bendito é o fruto do vosso ventre, Jesus.\n\nSanta Maria, Mãe de Deus,\nrogai por nós pecadores,\nagora e na hora da nossa morte.\n\n[AMEN]Amém."
                 },
                 {
                     "id": "glory_be",
                     "title": "Glória",
                     "icon": "brightness_high_outlined",
-                    "content": "Glória ao Pai e ao Filho e ao Espírito Santo.\n\nComo era no princípio, agora e sempre, pelos séculos dos séculos.\nAmém."
+                    "content": "Glória ao Pai e ao Filho e ao Espírito Santo.\n\nComo era no princípio, agora e sempre, pelos séculos dos séculos.\n[AMEN]Amém."
                 },
                 {
                     "id": "apostles_creed",
                     "title": "Credo dos Apóstolos",
                     "icon": "menu_book_outlined",
                     "isExpandable": true,
-                    "content": "Creio em Deus Pai Todo-Poderoso, Criador do céu e da terra.\n\nE em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.\n\nDesceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus; está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos.\n\nCreio no Espírito Santo; na Santa Igreja Católica; na comunhão dos santos; na remissão dos pecados; na ressurreição da carne; na vida eterna.\n\nAmém."
+                    "content": "Creio em Deus Pai Todo-Poderoso, Criador do céu e da terra.\n\nE em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.\n\nDesceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus; está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos.\n\nCreio no Espírito Santo; na Santa Igreja Católica; na comunhão dos santos; na remissão dos pecados; na ressurreição da carne; na vida eterna.\n\n[AMEN]Amém."
                 }
             ]
         },
@@ -73,19 +73,19 @@
                     "id": "hail_holy_queen",
                     "title": "Salve Rainha",
                     "icon": "star_outline",
-                    "content": "Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve!\n\nA vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas.\n\nEia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e depois deste desterro mostrai-nos Jesus, bendito fruto do vosso ventre,\n\nÓ clemente, ó piedosa, ó doce sempre Virgem Maria.\n\n[VERSICLE]V. Rogai por nós, Santa Mãe de Deus.[/VERSICLE]\n[RESPONSE]R. Para que sejamos dignos das promessas de Cristo.[/RESPONSE]\n\nAmém."
+                    "content": "Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve!\n\nA vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas.\n\nEia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e depois deste desterro mostrai-nos Jesus, bendito fruto do vosso ventre,\n\nÓ clemente, ó piedosa, ó doce sempre Virgem Maria.\n\n[VERSICLE]V. Rogai por nós, Santa Mãe de Deus.[/VERSICLE]\n[RESPONSE]R. Para que sejamos dignos das promessas de Cristo.[/RESPONSE]\n\n[AMEN]Amém."
                 },
                 {
                     "id": "memorare",
                     "title": "Lembrai-vos (Memorare)",
                     "icon": "volunteer_activism_outlined",
-                    "content": "Lembrai-Vos, ó piíssima Virgem Maria, que nunca se ouviu dizer que algum daqueles que têm recorrido à vossa proteção, implorado a vossa assistência, e reclamado o vosso socorro, fosse por Vós desamparado.\n\nAnimado eu, pois, com igual confiança, a Vós, Virgem entre todas singular, como a Mãe recorro, de Vós me valho e, gemendo sob o peso dos meus pecados, me prostro aos vossos pés.\n\nNão desprezeis as minhas súplicas, ó Mãe do Filho de Deus humanado, mas dignai-Vos de as ouvir propícia e de me alcançar o que Vos rogo.\n\nAmém."
+                    "content": "Lembrai-Vos, ó piíssima Virgem Maria, que nunca se ouviu dizer que algum daqueles que têm recorrido à vossa proteção, implorado a vossa assistência, e reclamado o vosso socorro, fosse por Vós desamparado.\n\nAnimado eu, pois, com igual confiança, a Vós, Virgem entre todas singular, como a Mãe recorro, de Vós me valho e, gemendo sob o peso dos meus pecados, me prostro aos vossos pés.\n\nNão desprezeis as minhas súplicas, ó Mãe do Filho de Deus humanado, mas dignai-Vos de as ouvir propícia e de me alcançar o que Vos rogo.\n\n[AMEN]Amém."
                 },
                 {
                     "id": "fatima_prayer",
                     "title": "Oração de Fátima",
                     "icon": "flare_outlined",
-                    "content": "Ó meu Jesus, perdoai-nos e livrai-nos do fogo do inferno; levai as almas todas para o Céu, principalmente as que mais precisarem da vossa misericórdia.\n\nAmém."
+                    "content": "Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o Céu, principalmente as que mais precisarem da vossa misericórdia.\n\n[AMEN]Amém."
                 }
             ]
         },
@@ -150,11 +150,11 @@
                         },
                         {
                             "title": "O Terço",
-                            "content": "1. Reze o Pai Nosso\n2. Reze a Ave Maria\n3. Reze o Credo dos Apóstoles\n\n[RUBRIC]Nas contas grandes (Pai Nosso), diga:[/RUBRIC]\n\n[PRAYER]Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade de Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.[/PRAYER]\n\n[RUBRIC]Nas contas pequenas (Ave Maria), diga:[/RUBRIC]\n\n[PRAYER]Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.[/PRAYER]\n\nRepita por cinco dezenas."
+                            "content": "1. Reze o Pai Nosso\n2. Reze a Ave Maria\n3. Reze o Credo dos Apóstolos\n\n[RUBRIC]Nas contas grandes (Pai Nosso), diga:[/RUBRIC]\n\n[PRAYER]Eterno Pai, eu Vos ofereço o Corpo e Sangue, a Alma e Divindade de Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e do mundo inteiro.[/PRAYER]\n\n[RUBRIC]Nas contas pequenas (Ave Maria), diga:[/RUBRIC]\n\n[PRAYER]Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.[/PRAYER]\n\nRepita por cinco dezenas."
                         },
                         {
                             "title": "Conclusão",
-                            "content": "Repita três vezes:\n\n[PRAYER]Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.[/PRAYER]\n\nOração Final Opcional:\n\n[PRAYER]Ó Deus Eterno, em quem a misericórdia é insondável e o tesouro da compaixão é inesgotável, olhai propício para nós e multiplicai em nós a Vossa misericórdia, para que não desesperemos nos momentos difíceis, nem desanimemos, mas nos submetamos com grande confiança à Vossa Santa Vontade, que é Amor e a própria Misericórdia. Amém.[/PRAYER]"
+                            "content": "Repita três vezes:\n\n[PRAYER]Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.[/PRAYER]\n\nOração Final Opcional:\n\n[PRAYER]Ó Deus Eterno, em quem a misericórdia é insondável e o tesouro da compaixão é inesgotável, olhai propício para nós e multiplicai em nós a Vossa misericórdia, para que não nos desesperemos nos momentos difíceis, nem esmoreçamos, mas nos submetamos com grande confiança à Vossa Santa Vontade, que é Amor e a própria Misericórdia. Amém.[/PRAYER]"
                         }
                     ]
                 },
@@ -162,7 +162,7 @@
                     "id": "guardian_angel",
                     "title": "Santo Anjo do Senhor",
                     "icon": "shield_outlined",
-                    "content": "Santo Anjo do Senhor,\nmeu zeloso guardador,\npois que a ti me confiou a piedade divina,\nhoje e sempre me governa, rege,\nguarda e ilumina.\n\nAmém."
+                    "content": "Santo Anjo do Senhor,\nmeu zeloso guardador,\nse a ti me confiou a piedade divina,\nsempre me rege, me guarda,\nme governa e me ilumina.\n\n[AMEN]Amém."
                 }
             ]
         },
@@ -182,7 +182,7 @@
                     "title": "Oração Depois da Comunhão",
                     "subtitle": "Alma de Cristo",
                     "icon": "light_mode_outlined",
-                    "content": "Alma de Cristo, santificai-me.\nCorpo de Cristo, salvai-me.\nSangue de Cristo, inebriai-me.\nÁgua do lado de Cristo, lavai-me.\n\nPaixão de Cristo, confortai-me.\nÓ bom Jesus, ouvi-me.\nDentro das vossas chagas, escondei-me.\nNão permitais que me separe de Vós.\n\nDo espírito maligno, defendei-me.\nNa hora da minha morte, chamai-me.\nE mandai-me ir para Vós,\nPara que com os vossos Santos Vos louve\nPor todos os séculos dos séculos.\n\nAmém."
+                    "content": "Alma de Cristo, santificai-me.\nCorpo de Cristo, salvai-me.\nSangue de Cristo, inebriai-me.\nÁgua do lado de Cristo, lavai-me.\n\nPaixão de Cristo, confortai-me.\nÓ bom Jesus, ouvi-me.\nDentro das vossas chagas, escondei-me.\nNão permitais que me separe de Vós.\n\nDo espírito maligno, defendei-me.\nNa hora da minha morte, chamai-me.\nE mandai-me ir para Vós,\nPara que com os vossos Santos Vos louve\nPor todos os séculos dos séculos.\n\n[AMEN]Amém."
                 }
             ]
         }

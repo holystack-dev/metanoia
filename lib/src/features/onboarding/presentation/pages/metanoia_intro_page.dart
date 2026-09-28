@@ -1,6 +1,7 @@
+import 'package:confessionapp/src/core/theme/app_radius.dart';
 import 'package:confessionapp/src/core/theme/app_theme.dart';
-import 'package:confessionapp/src/core/utils/haptic_utils.dart';
 import 'package:confessionapp/src/features/onboarding/presentation/widgets/mystical_background.dart';
+import 'package:confessionapp/src/features/onboarding/presentation/widgets/onboarding_cta_button.dart';
 import 'package:flutter/material.dart';
 import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
 
@@ -125,7 +126,7 @@ class _MetanoiaIntroPageState extends State<MetanoiaIntroPage>
                                   decoration: BoxDecoration(
                                     color: theme.colorScheme.primary
                                         .withValues(alpha: 0.1),
-                                    borderRadius: BorderRadius.circular(6),
+                                    borderRadius: BorderRadius.circular(AppRadius.chip),
                                     border: Border.all(
                                       color: theme.colorScheme.primary
                                           .withValues(alpha: 0.2),
@@ -198,7 +199,7 @@ class _MetanoiaIntroPageState extends State<MetanoiaIntroPage>
                               color: theme.colorScheme.secondary.withValues(
                                 alpha: 0.15,
                               ),
-                              borderRadius: BorderRadius.circular(8),
+                              borderRadius: BorderRadius.circular(AppRadius.chip),
                             ),
                             child: Text(
                               l10n.nounLabel,
@@ -247,32 +248,9 @@ class _MetanoiaIntroPageState extends State<MetanoiaIntroPage>
                               ),
                             ),
                             const SizedBox(height: 40),
-                            Container(
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: theme.colorScheme.primary
-                                        .withValues(alpha: 0.4),
-                                    blurRadius: 24,
-                                    spreadRadius: 2,
-                                  ),
-                                ],
-                              ),
-                              child: IconButton.filled(
-                                onPressed: () {
-                                  HapticUtils.mediumImpact();
-                                  widget.onNext();
-                                },
-                                icon: const Icon(Icons.arrow_forward_rounded),
-                                iconSize: 28,
-                                style: IconButton.styleFrom(
-                                  backgroundColor: theme.colorScheme.primary,
-                                  foregroundColor: theme.colorScheme.onPrimary,
-                                  padding: const EdgeInsets.all(20),
-                                ),
-                                tooltip: l10n.nextButton,
-                              ),
+                            OnboardingCtaButton(
+                              label: l10n.continueButton,
+                              onPressed: widget.onNext,
                             ),
                           ],
                         ),

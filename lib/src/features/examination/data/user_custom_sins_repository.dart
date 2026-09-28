@@ -12,10 +12,15 @@ class UserCustomSinsRepository {
 
   UserCustomSinsRepository(this._db);
 
+  SimpleSelectStatement<$UserCustomSinsTable, UserCustomSin>
+      _allCustomSinsQuery() {
+    return _db.select(_db.userCustomSins)
+      ..orderBy([(t) => OrderingTerm.desc(t.createdAt)]);
+  }
+
   /// Get all custom sins ordered by creation date
-  Future<List<UserCustomSin>> _getAllCustomSins() async {
-    return await (_db.select(_db.userCustomSins)
-      ..orderBy([(t) => OrderingTerm.desc(t.createdAt)])).get();
+  Future<List<UserCustomSin>> _getAllCustomSins() {
+    return _allCustomSinsQuery().get();
   }
 
   /// Insert a new custom sin
@@ -44,7 +49,18 @@ class UserCustomSinsRepository {
   /// Group custom sins by commandment code
   Future<Map<String?, List<UserCustomSin>>>
   getCustomSinsGroupedByCommandment() async {
-    final allSins = await _getAllCustomSins();
+    return _groupByCommandment(await _getAllCustomSins());
+  }
+
+  /// Watch custom sins grouped by commandment code
+  Stream<Map<String?, List<UserCustomSin>>>
+  watchCustomSinsGroupedByCommandment() {
+    return _allCustomSinsQuery().watch().map(_groupByCommandment);
+  }
+
+  Map<String?, List<UserCustomSin>> _groupByCommandment(
+    List<UserCustomSin> allSins,
+  ) {
     final Map<String?, List<UserCustomSin>> grouped = {};
 
     for (final sin in allSins) {
@@ -61,4 +77,14 @@ class UserCustomSinsRepository {
 @riverpod
 UserCustomSinsRepository userCustomSinsRepository(Ref ref) {
   return UserCustomSinsRepository(ref.watch(appDatabaseProvider));
+}
+
+/// User custom sins, grouped by their (raw) commandment code.
+///
+/// A Drift stream, so changes reach [examinationData] without invalidation.
+@riverpod
+Stream<Map<String?, List<UserCustomSin>>> customSinsGrouped(Ref ref) {
+  return ref
+      .watch(userCustomSinsRepositoryProvider)
+      .watchCustomSinsGroupedByCommandment();
 }

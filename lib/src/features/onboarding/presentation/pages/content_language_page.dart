@@ -1,7 +1,9 @@
 import 'package:confessionapp/src/core/constants/app_constants.dart';
+import 'package:confessionapp/src/core/theme/app_radius.dart';
 import 'package:confessionapp/src/core/theme/app_theme.dart';
 import 'package:confessionapp/src/core/utils/haptic_utils.dart';
 import 'package:confessionapp/src/features/onboarding/presentation/widgets/mystical_background.dart';
+import 'package:confessionapp/src/features/onboarding/presentation/widgets/onboarding_cta_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -48,7 +50,7 @@ class ContentLanguagePage extends ConsumerWidget {
                               color: theme.colorScheme.primary.withValues(
                                 alpha: isDark ? 0.2 : 0.12,
                               ),
-                              borderRadius: BorderRadius.circular(28),
+                              borderRadius: BorderRadius.circular(AppRadius.hero),
                               border: Border.all(
                                 color: theme.colorScheme.primary.withValues(
                                   alpha: 0.3,
@@ -158,35 +160,26 @@ class ContentLanguagePage extends ConsumerWidget {
                           children: [
                             for (int i = 0; i < languages.length; i++) ...[
                               if (i > 0) const SizedBox(height: 16),
+                              // Not animated: this subtree rebuilds on every
+                              // selection, which would replay the entrance.
                               _LanguageOption(
-                                    label: languages[i].value,
-                                    locale: LanguageConfig.localeFromContentKey(languages[i].key),
-                                    isSelected:
-                                        LanguageConfig.contentKeyFromLocale(selectedLanguage) ==
-                                        languages[i].key,
-                                    onTap: () {
-                                      HapticUtils.selectionClick();
-                                      ref
-                                          .read(
-                                            contentLanguageControllerProvider
-                                                .notifier,
-                                          )
-                                          .setLanguage(
-                                            LanguageConfig.localeFromContentKey(languages[i].key),
-                                          );
-                                    },
-                                  )
-                                  .animate(delay: (350 + i * 100).ms)
-                                  .fadeIn(
-                                    duration: 350.ms,
-                                    curve: Curves.easeOut,
-                                  )
-                                  .slideX(
-                                    begin: i.isEven ? -0.1 : 0.1,
-                                    end: 0,
-                                    duration: 350.ms,
-                                    curve: Curves.easeOut,
-                                  ),
+                                label: languages[i].value,
+                                locale: LanguageConfig.localeFromContentKey(languages[i].key),
+                                isSelected:
+                                    LanguageConfig.contentKeyFromLocale(selectedLanguage) ==
+                                    languages[i].key,
+                                onTap: () {
+                                  HapticUtils.selectionClick();
+                                  ref
+                                      .read(
+                                        contentLanguageControllerProvider
+                                            .notifier,
+                                      )
+                                      .setLanguage(
+                                        LanguageConfig.localeFromContentKey(languages[i].key),
+                                      );
+                                },
+                              ),
                             ],
                           ],
                         );
@@ -195,7 +188,7 @@ class ContentLanguagePage extends ConsumerWidget {
                           () => const Center(
                             child: CircularProgressIndicator(),
                           ),
-                      error: (_, __) => const Text('Error loading language'),
+                      error: (_, __) => Text(l10n.errorLoadingLanguage),
                     ),
 
                     const SizedBox(height: 24),
@@ -227,67 +220,12 @@ class ContentLanguagePage extends ConsumerWidget {
 
                   const SizedBox(height: 16),
 
-                  // Continue Button with purple glow
-                  Container(
-                        width: double.infinity,
-                        constraints: const BoxConstraints(maxWidth: 280),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(28),
-                          boxShadow: [
-                            BoxShadow(
-                              color: theme.colorScheme.primary.withValues(
-                                alpha: 0.35,
-                              ),
-                              blurRadius: 20,
-                              spreadRadius: 0,
-                              offset: const Offset(0, 8),
-                            ),
-                          ],
-                        ),
-                        child: FilledButton(
-                          onPressed: () {
-                            HapticUtils.mediumImpact();
-                            onNext();
-                          },
-                          style: FilledButton.styleFrom(
-                            backgroundColor: theme.colorScheme.primary,
-                            foregroundColor: theme.colorScheme.onPrimary,
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 40,
-                              vertical: 18,
-                            ),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(28),
-                            ),
-                            elevation: 0,
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Text(
-                                l10n.continueButton,
-                                style: const TextStyle(
-                                  fontFamily: AppTheme.fontFamilyLato,
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.w600,
-                                  letterSpacing: 0.4,
-                                ),
-                              ),
-                              const SizedBox(width: 10),
-                              const Icon(Icons.check_rounded, size: 20),
-                            ],
-                          ),
-                        ),
-                      )
-                      .animate(delay: 650.ms)
-                      .fadeIn(duration: 350.ms, curve: Curves.easeOut)
-                      .slideY(
-                        begin: 0.1,
-                        end: 0,
-                        duration: 350.ms,
-                        curve: Curves.easeOut,
-                      ),
+                  // Continue Button
+                  OnboardingCtaButton(
+                    label: l10n.continueButton,
+                    onPressed: onNext,
+                    icon: Icons.check_rounded,
+                  ).animate().fadeIn(duration: 150.ms, curve: Curves.easeOut),
                 ],
               ),
             ),
@@ -320,7 +258,7 @@ class _LanguageOption extends StatelessWidget {
       color: Colors.transparent,
       child: InkWell(
         onTap: onTap,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(AppRadius.sheet),
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 250),
           curve: Curves.easeInOut,
@@ -333,7 +271,7 @@ class _LanguageOption extends StatelessWidget {
                       : theme.colorScheme.outlineVariant.withValues(alpha: 0.5),
               width: isSelected ? 2.5 : 1.5,
             ),
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(AppRadius.sheet),
             color:
                 isSelected
                     ? theme.colorScheme.secondary.withValues(

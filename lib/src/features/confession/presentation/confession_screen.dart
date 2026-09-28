@@ -1,24 +1,24 @@
-import 'package:confessionapp/src/core/database/database_provider.dart';
 import 'package:confessionapp/src/core/services/in_app_review_service.dart';
+import 'package:confessionapp/src/core/services/spread_the_word_service.dart';
+import 'package:confessionapp/src/core/widgets/rating_gate.dart';
+import 'package:confessionapp/src/core/theme/app_radius.dart';
 import 'package:confessionapp/src/core/theme/app_showcase.dart';
 import 'package:confessionapp/src/core/tutorial/tutorial_controller.dart';
 import 'package:confessionapp/src/core/utils/haptic_utils.dart';
 import 'package:confessionapp/src/features/confession/data/confession_analytics_repository.dart';
 import 'package:confessionapp/src/features/confession/data/confession_repository.dart';
 import 'package:confessionapp/src/features/confession/data/penance_repository.dart';
+import 'package:confessionapp/src/features/journal/data/journal_repository.dart'
+    show journalRepositoryProvider;
 import 'package:confessionapp/src/features/settings/presentation/settings_screen.dart'
     show keepHistorySettingsProvider;
-import 'package:drift/drift.dart' hide Column;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
-import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:showcaseview/showcaseview.dart';
-
-part 'confession_screen.g.dart';
 
 class ConfessionScreen extends StatelessWidget {
   const ConfessionScreen({super.key});
@@ -87,7 +87,7 @@ class _ConfessionScreenContentState
             currentStep: 1,
             totalSteps: 3,
             shapeBorder: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(AppRadius.tile),
             ),
             child: LayoutBuilder(
               builder: (context, constraints) {
@@ -175,7 +175,7 @@ class _ConfessionScreenContentState
                           margin: const EdgeInsets.only(bottom: 12),
                           color: Theme.of(context).colorScheme.surface,
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16),
+                            borderRadius: BorderRadius.circular(AppRadius.card),
                             side: BorderSide(
                               color:
                                   Theme.of(context).colorScheme.outlineVariant,
@@ -227,8 +227,7 @@ class _ConfessionScreenContentState
                           ),
                         )
                         .animate()
-                        .fadeIn(delay: (100 * index).ms)
-                        .slideX(begin: 0.1, end: 0);
+                        .fadeIn(duration: 150.ms);
                   },
                 ),
               ),
@@ -238,34 +237,57 @@ class _ConfessionScreenContentState
                   color: Theme.of(context).colorScheme.surface,
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.05),
+                      color: Theme.of(
+                        context,
+                      ).colorScheme.shadow.withValues(alpha: 0.05),
                       blurRadius: 10,
                       offset: const Offset(0, -5),
                     ),
                   ],
                 ),
                 child: SafeArea(
-                  child: SizedBox(
-                    width: double.infinity,
-                    child: FilledButton.icon(
-                      onPressed: () => _showFinishConfessionSheet(
-                        context,
-                        ref,
-                        data,
-                        l10n,
-                      ),
-                      style: FilledButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(vertical: 16),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      // Entry point to Confession-day mode: the distraction-free,
+                      // extra-large view meant to be opened in the confessional
+                      // itself, right before the sins are read out.
+                      OutlinedButton.icon(
+                        onPressed: () {
+                          HapticUtils.mediumImpact();
+                          context.push('/confess/day-mode');
+                        },
+                        style: OutlinedButton.styleFrom(
+                          padding: const EdgeInsets.symmetric(vertical: 16),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(AppRadius.tile),
+                          ),
                         ),
+                        icon: const Icon(Icons.nightlight_round),
+                        label: Text(l10n.confessionDayMode),
                       ),
-                      icon: const Icon(Icons.check),
-                      label: Text(l10n.finishConfession),
-                    ),
+                      const SizedBox(height: 12),
+                      FilledButton.icon(
+                        onPressed: () => _showFinishConfessionSheet(
+                          context,
+                          ref,
+                          data,
+                          l10n,
+                        ),
+                        style: FilledButton.styleFrom(
+                          padding: const EdgeInsets.symmetric(vertical: 16),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(AppRadius.tile),
+                          ),
+                        ),
+                        icon: const Icon(Icons.check),
+                        label: Text(l10n.finishConfession),
+                      ),
+                    ],
                   ),
                 ),
-              ).animate().fadeIn(delay: 500.ms).moveY(begin: 20, end: 0),
+              ).animate().fadeIn(delay: 150.ms).moveY(begin: 20, end: 0),
             ],
           );
         },
@@ -287,12 +309,25 @@ class _ConfessionScreenContentState
       backgroundColor: Colors.transparent,
       builder: (sheetContext) => _FinishConfessionSheet(
         l10n: l10n,
-        onComplete: (penanceText) async {
+        confessionId: data.confession.id,
+        onComplete: (penanceText, {required bool penanceEdited}) async {
           Navigator.pop(sheetContext);
 
           final keepHistory = await ref.read(
             keepHistorySettingsProvider.future,
           );
+
+          // Stamp the journal marks this confession carried before finishing
+          // it: with history off, finishing discards the items they are matched
+          // against.
+          await ref
+              .read(journalRepositoryProvider)
+              .markConfessedFromItems(
+                data.confession.id,
+                data.items,
+                keepHistory: keepHistory,
+              );
+
           await ref
               .read(confessionRepositoryProvider)
               .markConfessionAsFinished(
@@ -300,18 +335,30 @@ class _ConfessionScreenContentState
                 keepHistory: keepHistory,
               );
 
-          // Save penance if provided
+          // The field is seeded from any stored penance, so it is the whole
+          // truth — but only once the user has touched it. An untouched empty
+          // field means the seed had not arrived yet (the Drift stream emits a
+          // frame or two after the sheet opens), not that the penance was
+          // cleared, and deleting on that would throw away what the priest
+          // assigned.
+          final penanceRepository = ref.read(penanceRepositoryProvider);
+          final stored = await penanceRepository.getPenanceForConfession(
+            data.confession.id,
+          );
+
           if (penanceText != null && penanceText.isNotEmpty) {
-            await ref
-                .read(penanceRepositoryProvider)
-                .addPenance(data.confession.id, penanceText);
-            ref.invalidate(pendingPenancesProvider);
+            if (penanceText != stored?.description) {
+              await penanceRepository.addPenance(
+                data.confession.id,
+                penanceText,
+              );
+            }
+          } else if (penanceEdited && stored != null) {
+            await penanceRepository.deletePenance(stored.id);
           }
 
-          // Refresh state
-          ref.invalidate(activeConfessionProvider);
-          ref.invalidate(activeExaminationDraftProvider);
-          ref.invalidate(lastFinishedConfessionProvider);
+          // No invalidation: the confession, draft, penance and history
+          // providers are Drift streams and have already re-emitted.
 
           if (context.mounted) {
             ScaffoldMessenger.of(context).showSnackBar(
@@ -348,7 +395,6 @@ class _ConfessionScreenContentState
             await ref
                 .read(confessionRepositoryProvider)
                 .deleteConfession(data.confession.id);
-            ref.invalidate(activeConfessionProvider);
             if (sheetContext.mounted) {
               Navigator.pop(sheetContext);
             }
@@ -368,163 +414,108 @@ class _ConfessionScreenContentState
     final shouldPrompt = await reviewService.trackConfessionCompletion();
 
     if (shouldPrompt && context.mounted) {
-      _showReviewDialog(context, reviewService);
+      // Ask inside the app first, with stars. A happy rating (4–5) is sent to
+      // the store; an unhappy one is thanked privately and goes no further.
+      final stars = await showRatingGate(context);
+      // Both rating surfaces must be told, or they ask twice: this flow uses
+      // `review_opt_out`, and the home card reads only `spread_rating_handled`.
+      final spreadService = SpreadTheWordService();
+      if (stars == null) {
+        // Dismissed without choosing — leave the door open to ask again after
+        // a couple more confessions rather than opting them out for good.
+        await reviewService.resetCounters();
+        await spreadService.snooze();
+      } else {
+        // They have been through the gate; do not ask again automatically.
+        await reviewService.setOptOut(true);
+        await spreadService.markRatingHandled();
+      }
     }
-  }
-
-  void _showReviewDialog(BuildContext context, InAppReviewService reviewService) {
-    final l10n = AppLocalizations.of(context)!;
-    final theme = Theme.of(context);
-
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        icon: Container(
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            color: theme.colorScheme.primaryContainer,
-            shape: BoxShape.circle,
-          ),
-          child: Icon(
-            Icons.favorite,
-            color: theme.colorScheme.primary,
-            size: 32,
-          ),
-        ),
-        title: Text(
-          l10n.rateDialogTitle,
-          textAlign: TextAlign.center,
-        ),
-        content: Text(
-          l10n.rateDialogContent,
-          textAlign: TextAlign.center,
-          style: theme.textTheme.bodyMedium?.copyWith(
-            color: theme.colorScheme.onSurfaceVariant,
-          ),
-        ),
-        actionsAlignment: MainAxisAlignment.center,
-        actions: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              FilledButton.icon(
-                onPressed: () async {
-                  await reviewService.setOptOut(true);
-                  if (context.mounted) Navigator.pop(context);
-                  await reviewService.requestReview();
-                },
-                icon: const Icon(Icons.star),
-                label: Text(l10n.rateDialogYes),
-              ),
-              const SizedBox(height: 8),
-              OutlinedButton(
-                onPressed: () async {
-                  await reviewService.resetCounters();
-                  if (context.mounted) Navigator.pop(context);
-                },
-                child: Text(l10n.rateDialogLater),
-              ),
-              TextButton(
-                onPressed: () async {
-                  await reviewService.setOptOut(true);
-                  if (context.mounted) Navigator.pop(context);
-                },
-                child: Text(
-                  l10n.rateDialogNo,
-                  style: TextStyle(
-                    color: theme.colorScheme.onSurfaceVariant,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
   }
 }
 
-/// Bottom sheet for completing a confession with optional penance input
-class _FinishConfessionSheet extends StatefulWidget {
+/// Bottom sheet for completing a confession, with the penance field seeded from
+/// whatever is already stored for it — normally typed in confession-day mode,
+/// in the confessional itself.
+class _FinishConfessionSheet extends ConsumerStatefulWidget {
   final AppLocalizations l10n;
-  final Future<void> Function(String? penanceText) onComplete;
+  final int confessionId;
+  final Future<void> Function(String? penanceText, {required bool penanceEdited})
+  onComplete;
   final Future<void> Function() onDelete;
 
   const _FinishConfessionSheet({
     required this.l10n,
+    required this.confessionId,
     required this.onComplete,
     required this.onDelete,
   });
 
   @override
-  State<_FinishConfessionSheet> createState() => _FinishConfessionSheetState();
+  ConsumerState<_FinishConfessionSheet> createState() =>
+      _FinishConfessionSheetState();
 }
 
-class _FinishConfessionSheetState extends State<_FinishConfessionSheet>
-    with WidgetsBindingObserver {
+class _FinishConfessionSheetState
+    extends ConsumerState<_FinishConfessionSheet> {
   final _penanceController = TextEditingController();
   final _scrollController = ScrollController();
   final _penanceFocusNode = FocusNode();
   bool _isLoading = false;
-  bool _isKeyboardVisible = false;
+  double _bottomInset = 0;
+
+  /// Whether the user has touched the field. Once they have, a later emission of
+  /// the Drift stream must not seed over what they are typing.
+  bool _dirty = false;
 
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addObserver(this);
     _penanceFocusNode.addListener(_onFocusChange);
   }
 
   @override
-  void didChangeMetrics() {
-    // Check keyboard visibility when metrics change
-    final bottomInset = WidgetsBinding
-        .instance.platformDispatcher.views.first.viewInsets.bottom;
-    final keyboardVisible = bottomInset > 0;
+  void didChangeDependencies() {
+    super.didChangeDependencies();
 
-    if (_isKeyboardVisible != keyboardVisible) {
-      setState(() {
-        _isKeyboardVisible = keyboardVisible;
+    // The real keyboard height, from the live view insets.
+    final bottomInset = MediaQuery.viewInsetsOf(context).bottom;
+    final wasVisible = _bottomInset > 0;
+    _bottomInset = bottomInset;
+
+    if (wasVisible && bottomInset == 0) {
+      // Scroll back to top when the keyboard hides. Deferred: this runs during
+      // build, and the scroll position is not attached yet on the first pass.
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) _scrollTo(0);
       });
-
-      if (!keyboardVisible) {
-        // Scroll back to top when keyboard hides
-        Future.delayed(const Duration(milliseconds: 100), () {
-          if (mounted && _scrollController.hasClients) {
-            _scrollController.animateTo(
-              0,
-              duration: const Duration(milliseconds: 200),
-              curve: Curves.easeOut,
-            );
-          }
-        });
-      }
     }
   }
 
   void _onFocusChange() {
-    if (_penanceFocusNode.hasFocus) {
-      setState(() {
-        _isKeyboardVisible = true;
+    if (!_penanceFocusNode.hasFocus) return;
+
+    // The keyboard animates in, so the scroll extent grows over a few frames;
+    // nudge the field back into view as it does.
+    for (final delay in [100, 300, 500]) {
+      Future.delayed(Duration(milliseconds: delay), () {
+        if (!mounted || !_scrollController.hasClients) return;
+        _scrollTo(_scrollController.position.maxScrollExtent);
       });
-      // Delay to allow keyboard to appear, then scroll multiple times
-      for (final delay in [100, 300, 500]) {
-        Future.delayed(Duration(milliseconds: delay), () {
-          if (mounted && _scrollController.hasClients) {
-            _scrollController.animateTo(
-              _scrollController.position.maxScrollExtent,
-              duration: const Duration(milliseconds: 200),
-              curve: Curves.easeOut,
-            );
-          }
-        });
-      }
     }
+  }
+
+  void _scrollTo(double offset) {
+    if (!_scrollController.hasClients) return;
+    _scrollController.animateTo(
+      offset,
+      duration: const Duration(milliseconds: 200),
+      curve: Curves.easeOut,
+    );
   }
 
   @override
   void dispose() {
-    WidgetsBinding.instance.removeObserver(this);
     _penanceFocusNode.removeListener(_onFocusChange);
     _penanceFocusNode.dispose();
     _scrollController.dispose();
@@ -537,8 +528,16 @@ class _FinishConfessionSheetState extends State<_FinishConfessionSheet>
     final theme = Theme.of(context);
     final l10n = widget.l10n;
 
-    // Use fixed keyboard height estimate when focused (300px covers most keyboards)
-    final keyboardPadding = _isKeyboardVisible ? 300.0 : 0.0;
+    final keyboardPadding = MediaQuery.viewInsetsOf(context).bottom;
+
+    // Seed once from the stored penance, never over the user's own typing, and
+    // never again once they have edited it — clearing it on purpose must stick.
+    final storedPenance =
+        ref.watch(penanceForConfessionProvider(widget.confessionId)).valueOrNull;
+    final hasStoredPenance = storedPenance != null;
+    if (!_dirty && hasStoredPenance && _penanceController.text.isEmpty) {
+      _penanceController.text = storedPenance.description;
+    }
 
     return Container(
       constraints: BoxConstraints(
@@ -546,7 +545,7 @@ class _FinishConfessionSheetState extends State<_FinishConfessionSheet>
       ),
       decoration: BoxDecoration(
         color: theme.colorScheme.surface,
-        borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
+        borderRadius: const BorderRadius.vertical(top: Radius.circular(AppRadius.sheet)),
       ),
       child: SingleChildScrollView(
         controller: _scrollController,
@@ -562,7 +561,7 @@ class _FinishConfessionSheetState extends State<_FinishConfessionSheet>
                   height: 4,
                   decoration: BoxDecoration(
                     color: theme.colorScheme.onSurfaceVariant.withValues(alpha: 0.4),
-                    borderRadius: BorderRadius.circular(2),
+                    borderRadius: BorderRadius.circular(AppRadius.bar),
                   ),
                 ),
               ),
@@ -624,24 +623,31 @@ class _FinishConfessionSheetState extends State<_FinishConfessionSheet>
                         ),
                         const SizedBox(width: 8),
                         Text(
-                          l10n.addPenance,
+                          // Already captured in the confessional: this is the
+                          // penance, not an invitation to add one.
+                          hasStoredPenance ? l10n.penance : l10n.addPenance,
                           style: theme.textTheme.titleSmall?.copyWith(
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        const SizedBox(width: 8),
-                        Text(
-                          '(${l10n.skipPenance.toLowerCase()})',
-                          style: theme.textTheme.bodySmall?.copyWith(
-                            color: theme.colorScheme.onSurfaceVariant,
+                        if (!hasStoredPenance) ...[
+                          const SizedBox(width: 8),
+                          Text(
+                            '(${l10n.skipPenance.toLowerCase()})',
+                            style: theme.textTheme.bodySmall?.copyWith(
+                              color: theme.colorScheme.onSurfaceVariant,
+                            ),
                           ),
-                        ),
+                        ],
                       ],
                     ),
                     const SizedBox(height: 12),
                     TextField(
                       controller: _penanceController,
                       focusNode: _penanceFocusNode,
+                      onChanged: (_) {
+                        if (!_dirty) setState(() => _dirty = true);
+                      },
                       decoration: InputDecoration(
                         hintText: l10n.penanceHint,
                         border: const OutlineInputBorder(),
@@ -667,6 +673,7 @@ class _FinishConfessionSheetState extends State<_FinishConfessionSheet>
                                 _penanceController.text.trim().isEmpty
                                     ? null
                                     : _penanceController.text.trim(),
+                                penanceEdited: _dirty,
                               );
                             },
                       icon: _isLoading
@@ -720,29 +727,6 @@ class _FinishConfessionSheetState extends State<_FinishConfessionSheet>
   }
 }
 
-@riverpod
-Future<ConfessionWithItems?> activeConfession(Ref ref) async {
-  final db = ref.watch(appDatabaseProvider);
-
-  // Find the latest unfinished confession
-  final confession =
-      await (db.select(db.confessions)
-            ..where((tbl) => tbl.isFinished.equals(false))
-            ..orderBy([
-              (t) => OrderingTerm(expression: t.date, mode: OrderingMode.desc),
-            ])
-            ..limit(1))
-          .getSingleOrNull();
-
-  if (confession == null) return null;
-
-  final items =
-      await (db.select(db.confessionItems)
-        ..where((tbl) => tbl.confessionId.equals(confession.id))).get();
-
-  return ConfessionWithItems(confession, items);
-}
-
 class _EmptyConfessionView extends ConsumerWidget {
   final AppLocalizations l10n;
 
@@ -773,11 +757,15 @@ class _EmptyConfessionView extends ConsumerWidget {
             style: FilledButton.styleFrom(
               padding: const EdgeInsets.symmetric(vertical: 16),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(AppRadius.tile),
               ),
             ),
           ).animate().fadeIn(delay: 100.ms).slideY(begin: 0.1),
           const SizedBox(height: 24),
+
+          // The three cards below are fed by Drift streams, so they are not
+          // animated: an entrance fade on a stream-fed subtree replays on every
+          // emission.
 
           // Analytics Summary (only if has data)
           analyticsAsync.when(
@@ -821,7 +809,9 @@ class _EmptyConfessionView extends ConsumerWidget {
             shape: BoxShape.circle,
           ),
           child: Icon(
-            Icons.check_circle_outline,
+            // An inviting "begin an examination" glyph (matching the home CTA),
+            // not a success check — nothing is done yet, there's nothing here.
+            Icons.assignment_outlined,
             size: 48,
             color: theme.colorScheme.primary,
           ),
@@ -858,12 +848,12 @@ class _EmptyConfessionView extends ConsumerWidget {
             HapticUtils.lightImpact();
             context.go('/confess/insights');
           },
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(AppRadius.card),
           child: Card(
             elevation: 0,
             color: theme.colorScheme.surface,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(AppRadius.card),
               side: BorderSide(
                 color: theme.colorScheme.outlineVariant,
                 width: 1,
@@ -918,10 +908,11 @@ class _EmptyConfessionView extends ConsumerWidget {
                       ),
                       Expanded(
                         child: _StatItem(
-                          icon: Icons.local_fire_department,
+                          // Calm "regular return" glyph, not a fire/streak flame.
+                          icon: Icons.event_repeat,
                           value: '${analytics.currentStreakWeeks}',
                           label: l10n.currentStreak,
-                          color: Colors.orange,
+                          color: theme.colorScheme.secondary,
                         ),
                       ),
                     ],
@@ -933,7 +924,7 @@ class _EmptyConfessionView extends ConsumerWidget {
         ),
         const SizedBox(height: 16),
       ],
-    ).animate().fadeIn(delay: 200.ms).slideY(begin: 0.1);
+    );
   }
 
   Widget _buildPendingPenances(
@@ -950,12 +941,12 @@ class _EmptyConfessionView extends ConsumerWidget {
             HapticUtils.lightImpact();
             context.go('/confess/penance');
           },
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(AppRadius.card),
           child: Card(
             elevation: 0,
             color: theme.colorScheme.errorContainer.withValues(alpha: 0.3),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(AppRadius.card),
               side: BorderSide(
                 color: theme.colorScheme.error.withValues(alpha: 0.3),
                 width: 1,
@@ -972,7 +963,7 @@ class _EmptyConfessionView extends ConsumerWidget {
                         padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           color: theme.colorScheme.error.withValues(alpha: 0.15),
-                          borderRadius: BorderRadius.circular(8),
+                          borderRadius: BorderRadius.circular(AppRadius.chip),
                         ),
                         child: Icon(
                           Icons.checklist,
@@ -992,7 +983,7 @@ class _EmptyConfessionView extends ConsumerWidget {
                               ),
                             ),
                             Text(
-                              '${penances.length} pending',
+                              l10n.pendingCount(penances.length),
                               style: theme.textTheme.bodySmall?.copyWith(
                                 color: theme.colorScheme.error,
                               ),
@@ -1012,7 +1003,7 @@ class _EmptyConfessionView extends ConsumerWidget {
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
                       color: theme.colorScheme.surface,
-                      borderRadius: BorderRadius.circular(8),
+                      borderRadius: BorderRadius.circular(AppRadius.chip),
                     ),
                     child: Row(
                       children: [
@@ -1031,7 +1022,6 @@ class _EmptyConfessionView extends ConsumerWidget {
                             await ref
                                 .read(penanceRepositoryProvider)
                                 .completePenance(penances.first.penance.id);
-                            ref.invalidate(pendingPenancesProvider);
                           },
                           style: FilledButton.styleFrom(
                             padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -1049,7 +1039,7 @@ class _EmptyConfessionView extends ConsumerWidget {
         ),
         const SizedBox(height: 16),
       ],
-    ).animate().fadeIn(delay: 300.ms).slideY(begin: 0.1);
+    );
   }
 
   Widget _buildRecentHistory(
@@ -1058,7 +1048,9 @@ class _EmptyConfessionView extends ConsumerWidget {
     List<ConfessionWithItems> history,
   ) {
     final recentHistory = history.take(3).toList();
-    final dateFormat = DateFormat('MMM dd, yyyy');
+    final dateFormat = DateFormat.yMMMd(
+      Localizations.localeOf(context).toString(),
+    );
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -1068,12 +1060,12 @@ class _EmptyConfessionView extends ConsumerWidget {
             HapticUtils.lightImpact();
             context.go('/confess/history');
           },
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(AppRadius.card),
           child: Card(
             elevation: 0,
             color: theme.colorScheme.surface,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(AppRadius.card),
               side: BorderSide(
                 color: theme.colorScheme.outlineVariant,
                 width: 1,
@@ -1101,7 +1093,7 @@ class _EmptyConfessionView extends ConsumerWidget {
                       ),
                       const Spacer(),
                       Text(
-                        '${history.length} total',
+                        l10n.totalCount(history.length),
                         style: theme.textTheme.bodySmall?.copyWith(
                           color: theme.colorScheme.onSurfaceVariant,
                         ),
@@ -1141,7 +1133,7 @@ class _EmptyConfessionView extends ConsumerWidget {
                             ),
                           ),
                           Text(
-                            '${confession.items.length} items',
+                            l10n.itemsCount(confession.items.length),
                             style: theme.textTheme.bodySmall?.copyWith(
                               color: theme.colorScheme.onSurfaceVariant,
                             ),
@@ -1156,7 +1148,7 @@ class _EmptyConfessionView extends ConsumerWidget {
           ),
         ),
       ],
-    ).animate().fadeIn(delay: 400.ms).slideY(begin: 0.1);
+    );
   }
 }
 
@@ -1183,7 +1175,7 @@ class _StatItem extends StatelessWidget {
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
             color: color.withValues(alpha: 0.15),
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(AppRadius.chip),
           ),
           child: Icon(icon, color: color, size: 18),
         ),

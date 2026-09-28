@@ -1,0 +1,1044 @@
+[
+    {
+        "commandmentCode": "de-1",
+        "questions": [
+            {
+                "id": "de-01-001",
+                "text": "Habe ich mich geweigert, an Gott zu glauben (Atheismus)?"
+            },
+            {
+                "id": "de-01-002",
+                "text": "Habe ich an der Existenz Gottes gezweifelt?"
+            },
+            {
+                "id": "de-01-003",
+                "text": "Habe ich Gott gehasst oder ihm die Schuld an den Schwierigkeiten meines Lebens gegeben?"
+            },
+            {
+                "id": "de-01-004",
+                "text": "Habe ich ein Dogma der katholischen Kirche geleugnet?"
+            },
+            {
+                "id": "de-01-005",
+                "text": "Habe ich andere absichtlich dazu gebracht, an Gott oder an Glaubenswahrheiten zu zweifeln?"
+            },
+            {
+                "id": "de-01-006",
+                "text": "Habe ich es versäumt, in meinem Glauben zu wachsen und ihn zu verteidigen?"
+            },
+            {
+                "id": "de-01-007",
+                "text": "Habe ich es versäumt, meinen Kindern und meiner Familie den Glauben gewissenhaft weiterzugeben?"
+            },
+            {
+                "id": "de-01-008",
+                "text": "Habe ich mich geweigert, Gott und meinen Glauben vor anderen zu verteidigen, wenn Einwände erhoben wurden?"
+            },
+            {
+                "id": "de-01-009",
+                "text": "Habe ich meinen Glauben oder Lehren der Kirche vor anderen verleugnet?"
+            },
+            {
+                "id": "de-01-010",
+                "text": "Habe ich die katholische Kirche verlassen oder eine andere Religion praktiziert?"
+            },
+            {
+                "id": "de-01-011",
+                "text": "Bin ich einer Organisation beigetreten, die meinem Glauben schadet oder ihm entgegensteht (Kommunisten, Freimaurer, dissidente oder schismatische Gruppen oder jede Gruppierung, die von ihren Mitgliedern einen Eid verlangt, der über ihren Pflichten gegenüber der katholischen Kirche steht)?"
+            },
+            {
+                "id": "de-01-012",
+                "text": "Habe ich an Gott oder an seiner Vergebung verzweifelt?"
+            },
+            {
+                "id": "de-01-013",
+                "text": "Habe ich vermessen auf Gottes Barmherzigkeit gebaut, indem ich absichtlich eine Sünde in der Erwartung begangen habe, dass sie mir vergeben wird, und so einer wahren Umkehr des Herzens ausgewichen bin?"
+            },
+            {
+                "id": "de-01-014",
+                "text": "Habe ich vermessen darauf vertraut, meine Seele aus eigener Kraft, ohne Gottes Hilfe, retten zu können?"
+            },
+            {
+                "id": "de-01-015",
+                "text": "Habe ich meine Sünden gebeichtet, ohne die Absicht zu haben, mein Leben zu bessern?"
+            },
+            {
+                "id": "de-01-016",
+                "text": "Habe ich Götzendienst betrieben? Habe ich weltliche Dinge wie Geld, Macht, Erfolg, Freundschaften, die Regierung, meine Nation, meine Herkunft oder meinen Besitz über meine Beziehung zu Gott gestellt? Habe ich an nichtchristlichen spirituellen Praktiken teilgenommen, die dem Glauben widersprechen?"
+            },
+            {
+                "id": "de-01-017",
+                "text": "Habe ich Okkultismus praktiziert (Wicca, Satanismus, Anrufung von Dämonen, Ouija-Bretter, schwarze Magie, den Verkauf der eigenen Seele, Séancen, das Channeln von Geistern, Schamanismus, das Befragen von Medien, Reiki, Wahrsagerei, Glücksbringer und Amulette, Horoskope, Astrologie, Handlesen, Hellsehen, Losdeutung oder Kartenlegen)?"
+            },
+            {
+                "id": "de-01-018",
+                "text": "Habe ich Aberglauben praktiziert? Habe ich einer anderen Quelle als Gott übernatürliche Kraft zugeschrieben?"
+            },
+            {
+                "id": "de-01-019",
+                "text": "Habe ich zugelassen, dass soziale Medien, Videospiele oder das Internet zu einem Götzen werden und Zeit verschlingen, die Gott und meiner Familie gehört?"
+            },
+            {
+                "id": "de-01-020",
+                "text": "Habe ich meinen Selbstwert in der Anerkennung im Internet gesucht statt in meiner Identität als Kind Gottes?"
+            },
+            {
+                "id": "de-01-021",
+                "text": "Habe ich übermäßig viel Zeit vor Bildschirmen verbracht, zum Schaden meiner täglichen Pflichten oder meines Gebetslebens?"
+            },
+            {
+                "id": "de-01-022",
+                "text": "Habe ich Vielgötterei (Polytheismus) praktiziert?"
+            },
+            {
+                "id": "de-01-023",
+                "text": "War ich gleichgültig gegenüber dem Glauben oder gegenüber Gott?"
+            },
+            {
+                "id": "de-01-024",
+                "text": "War ich undankbar für die vielen Wohltaten, die Gott mir geschenkt hat?"
+            },
+            {
+                "id": "de-01-025",
+                "text": "War ich lau im Glauben?"
+            },
+            {
+                "id": "de-01-026",
+                "text": "War ich träge in meinem Glauben und in meinem geistlichen Wachstum?"
+            },
+            {
+                "id": "de-01-027",
+                "text": "Habe ich das Gebet vernachlässigt?"
+            },
+            {
+                "id": "de-01-028",
+                "text": "Habe ich Versprechen oder Gelübde gebrochen, die ich Gott gegeben habe?"
+            },
+            {
+                "id": "de-01-029",
+                "text": "Habe ich die Glaubensausübung eines anderen Menschen eingeschränkt oder zur Einschränkung der Religionsfreiheit anderer beigetragen? Habe ich jemanden wegen seines Glaubens an Gott verspottet? Habe ich andere gezwungen, gegen die Grundsätze ihres Glaubens oder gegen ihr Gewissen zu handeln?"
+            },
+            {
+                "id": "de-01-030",
+                "text": "Habe ich Gott versucht, indem ich seine Güte und Allmacht durch Wort oder Tat auf die Probe gestellt habe?"
+            },
+            {
+                "id": "de-01-031",
+                "text": "Habe ich die Sünde des Sakrilegs begangen? Habe ich ein Sakrament ohne die rechte Disposition der Seele empfangen (z. B. die heilige Kommunion, die Firmung, die Ehe oder die Weihe im Stand der schweren Sünde)? Habe ich geistlichen Personen wie Priestern, Ordensfrauen, Bischöfen oder dem Papst, heiligen Orten wie Kirchen, Kapellen und Wallfahrtsstätten sowie gesegneten oder heiligen Gegenständen wie Rosenkränzen, Reliquien und Bibeln die gebührende Ehrfurcht erwiesen? Habe ich in der Beichte über meine Sünden gelogen oder absichtlich schwere Sünden verschwiegen?"
+            },
+            {
+                "id": "de-01-032",
+                "text": "Habe ich Simonie betrieben, indem ich geistliche Dinge gekauft oder verkauft habe?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "de-2",
+        "questions": [
+            {
+                "id": "de-02-001",
+                "text": "Habe ich den Namen Gottes respektlos, gedankenlos oder lästerlich gebraucht?"
+            },
+            {
+                "id": "de-02-002",
+                "text": "Habe ich respektlos, hasserfüllt, aufsässig oder gedankenlos über den Glauben oder über heilige Personen, Orte und Dinge gesprochen?"
+            },
+            {
+                "id": "de-02-003",
+                "text": "Habe ich respektlose, hasserfüllte, aufsässige oder gedankenlose Rede über den Glauben oder über heilige Personen, Orte und Dinge gefördert?"
+            },
+            {
+                "id": "de-02-004",
+                "text": "Habe ich Filme angesehen oder Musik gehört, die lästerlich oder ehrfurchtslos waren?"
+            },
+            {
+                "id": "de-02-005",
+                "text": "Habe ich vulgäre oder obszöne Sprache gebraucht?"
+            },
+            {
+                "id": "de-02-006",
+                "text": "Habe ich respektlos über andere Menschen gesprochen?"
+            },
+            {
+                "id": "de-02-007",
+                "text": "Habe ich unter Eid gelogen (Meineid)?"
+            },
+            {
+                "id": "de-02-008",
+                "text": "Habe ich bei Gottes Namen geschworen oder Versprechen abgelegt für Dinge, die unwahr waren oder die – selbst wenn sie wahr waren – ohne Bedeutung waren?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "de-3",
+        "questions": [
+            {
+                "id": "de-03-001",
+                "text": "Habe ich ohne schwerwiegenden Grund die heilige Messe an Sonntagen oder gebotenen Feiertagen versäumt?"
+            },
+            {
+                "id": "de-03-002",
+                "text": "Habe ich meine Kinder ohne schwerwiegenden Grund nicht zur heiligen Messe an Sonntagen und gebotenen Feiertagen mitgenommen?"
+            },
+            {
+                "id": "de-03-003",
+                "text": "Bin ich ohne schwerwiegenden Grund zu spät zur heiligen Messe gekommen oder vorzeitig gegangen?"
+            },
+            {
+                "id": "de-03-004",
+                "text": "Habe ich ohne schwerwiegenden Grund an Sonntagen oder anderen gebotenen Feiertagen gearbeitet?"
+            },
+            {
+                "id": "de-03-005",
+                "text": "Habe ich mich geweigert, anderen zu helfen, an Sonntagen und gebotenen Feiertagen die heilige Messe mitzufeiern?"
+            },
+            {
+                "id": "de-03-006",
+                "text": "Habe ich an Sonntagen und gebotenen Feiertagen eingekauft oder unnötige Dienstleistungen in Anspruch genommen?"
+            },
+            {
+                "id": "de-03-007",
+                "text": "Habe ich an den von der Kirche vorgeschriebenen Fast- und Abstinenztagen absichtlich Fleisch gegessen oder das Fasten verweigert?"
+            },
+            {
+                "id": "de-03-008",
+                "text": "Habe ich die einstündige Nüchternheit vor der heiligen Kommunion nicht eingehalten?"
+            },
+            {
+                "id": "de-03-009",
+                "text": "Habe ich von Mitarbeitern, die mir unterstellt sind, ohne schwerwiegenden Grund verlangt, an einem Sonntag oder gebotenen Feiertag zu arbeiten?"
+            },
+            {
+                "id": "de-03-010",
+                "text": "War ich während der heiligen Messe durch meine Kleidung, mein Verhalten oder die Benutzung des Handys eine Ablenkung für andere?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "de-4",
+        "questions": [
+            {
+                "id": "de-04-001",
+                "text": "Habe ich mich den berechtigten Wünschen meiner Eltern widersetzt?"
+            },
+            {
+                "id": "de-04-002",
+                "text": "Habe ich respektlos mit meinen Eltern oder mit rechtmäßigen Autoritäten gesprochen, einschließlich Amtsträgern und Arbeitgebern?"
+            },
+            {
+                "id": "de-04-003",
+                "text": "Habe ich mich den berechtigten Anweisungen meiner Lehrer widersetzt (falls ich zur Schule gehe)?"
+            },
+            {
+                "id": "de-04-004",
+                "text": "Habe ich meine betagten Eltern oder andere Angehörige nicht versorgt und unterstützt?"
+            },
+            {
+                "id": "de-04-005",
+                "text": "Habe ich die Bedürfnisse, die Erziehung, die Disziplin oder die religiöse Bildung meiner Kinder vernachlässigt?"
+            },
+            {
+                "id": "de-04-006",
+                "text": "Habe ich meine Kinder nicht dazu angeleitet, das Wesen der menschlichen Sexualität und die Lehre der Kirche darüber zu verstehen?"
+            },
+            {
+                "id": "de-04-007",
+                "text": "Habe ich es versäumt, täglich mit meinen Kindern zu beten?"
+            },
+            {
+                "id": "de-04-008",
+                "text": "Habe ich es unterlassen, meine Kinder zu ermutigen, regelmäßig die heilige Kommunion und das Sakrament der Buße zu empfangen?"
+            },
+            {
+                "id": "de-04-009",
+                "text": "Habe ich es versäumt, mein Gewissen vor Wahlen sorgfältig zu bilden, oder habe ich politische Positionen gefördert, die dem Gemeinwohl, der Religionsfreiheit oder dem Sittengesetz widersprechen?"
+            },
+            {
+                "id": "de-04-010",
+                "text": "Habe ich es versäumt, ein tugendhaftes Leben zu führen?"
+            },
+            {
+                "id": "de-04-011",
+                "text": "Habe ich es an Liebe und Opferbereitschaft gegenüber meiner Familie fehlen lassen?"
+            },
+            {
+                "id": "de-04-012",
+                "text": "Habe ich politische Maßnahmen oder Gesetze gefördert, die die Familie untergraben, etwa durch Umgehung der elterlichen Zustimmung, oder widernatürliche Familienstrukturen wie die Adoption durch gleichgeschlechtliche Paare oder Alleinstehende sowie Maßnahmen zur Bevölkerungskontrolle befürwortet? Habe ich politische Maßnahmen oder Gesetze gefördert, die das Gemeinwohl und das Sittengesetz untergraben?"
+            },
+            {
+                "id": "de-04-013",
+                "text": "Habe ich andere dazu ermutigt, rechtmäßige Autorität zu missachten?"
+            },
+            {
+                "id": "de-04-014",
+                "text": "Habe ich den Rat oder die Ermahnungen meiner Eltern nicht angenommen?"
+            },
+            {
+                "id": "de-04-015",
+                "text": "Habe ich in meinen Kindern die Offenheit für eine Berufung nicht gefördert (Ehe, Priestertum und Weiheamt, gottgeweihtes eheloses Leben usw.)?"
+            },
+            {
+                "id": "de-04-016",
+                "text": "Habe ich mich nicht für die gerechte Behandlung der Armen, Bedürftigen oder Migranten in der Gesellschaft eingesetzt?"
+            },
+            {
+                "id": "de-04-017",
+                "text": "Habe ich Gewalt gegen andere ausgeübt?"
+            },
+            {
+                "id": "de-04-018",
+                "text": "Habe ich die Autorität meines Ehepartners vor unseren Kindern untergraben?"
+            },
+            {
+                "id": "de-04-019",
+                "text": "Habe ich es vernachlässigt, die Internet- und Techniknutzung meiner Kinder zu überwachen, um ihre Reinheit zu schützen?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "de-5",
+        "questions": [
+            {
+                "id": "de-05-001",
+                "text": "Habe ich einen Menschen direkt oder fahrlässig und zu Unrecht getötet oder verletzt oder daran mitgewirkt?"
+            },
+            {
+                "id": "de-05-002",
+                "text": "Habe ich die Würde und Heiligkeit des menschlichen Lebens nicht geachtet und gefördert?"
+            },
+            {
+                "id": "de-05-003",
+                "text": "Habe ich Krieg, Folter, Geiselnahme, Entführung oder die Tötung wehrloser Menschen befürwortet?"
+            },
+            {
+                "id": "de-05-004",
+                "text": "Habe ich eine Abtreibung vornehmen lassen, abtreibende Mittel beschafft oder jemand anderem dazu verholfen?"
+            },
+            {
+                "id": "de-05-005",
+                "text": "Habe ich Abtreibung gefördert oder mich öffentlich dafür eingesetzt?"
+            },
+            {
+                "id": "de-05-006",
+                "text": "Habe ich eine In-vitro-Fertilisation in Anspruch genommen, daran mitgewirkt oder sie befürwortet?"
+            },
+            {
+                "id": "de-05-007",
+                "text": "Habe ich das Klonen von Menschen oder genetische Manipulation befürwortet?"
+            },
+            {
+                "id": "de-05-008",
+                "text": "Habe ich embryonale Stammzellforschung oder entsprechende Therapien gefördert oder in Anspruch genommen?"
+            },
+            {
+                "id": "de-05-009",
+                "text": "Habe ich Eugenik oder Gesetze zur Bevölkerungskontrolle befürwortet?"
+            },
+            {
+                "id": "de-05-010",
+                "text": "Habe ich es unterlassen, „die andere Wange hinzuhalten“ oder meine Feinde zu lieben?"
+            },
+            {
+                "id": "de-05-011",
+                "text": "Habe ich versucht, mich zu töten oder mir selbst Schaden zuzufügen, oder habe ich daran gedacht?"
+            },
+            {
+                "id": "de-05-012",
+                "text": "Habe ich Euthanasie oder die Bewegung für ein „Recht auf Suizid“ unterstützt?"
+            },
+            {
+                "id": "de-05-013",
+                "text": "Habe ich eine angemessene Versorgung am Lebensende verweigert oder unterlassen, einschließlich medizinischer Maßnahmen, Nahrung und Flüssigkeit sowie schmerzlindernder Mittel?"
+            },
+            {
+                "id": "de-05-014",
+                "text": "Habe ich mich nicht um die geistlichen Bedürfnisse eines Sterbenden gekümmert (etwa einen Priester zur Krankensalbung zu rufen oder für den Sterbenden zu beten)?"
+            },
+            {
+                "id": "de-05-015",
+                "text": "Habe ich den Wunsch gehabt, jemanden zu töten?"
+            },
+            {
+                "id": "de-05-016",
+                "text": "Habe ich zur Selbstverteidigung mehr Gewalt angewendet als nötig?"
+            },
+            {
+                "id": "de-05-017",
+                "text": "Habe ich andere nicht nach besten Kräften und gemäß meiner Pflicht geschützt?"
+            },
+            {
+                "id": "de-05-018",
+                "text": "Habe ich jemanden körperlich, emotional oder seelisch verletzt oder dies gewollt?"
+            },
+            {
+                "id": "de-05-019",
+                "text": "Habe ich Ärgernis erregt oder auf andere Weise mangelnde Sorge um das Seelenheil eines Menschen gezeigt?"
+            },
+            {
+                "id": "de-05-020",
+                "text": "Habe ich jemanden gehasst oder ihm Böses gewünscht?"
+            },
+            {
+                "id": "de-05-021",
+                "text": "Habe ich es an Ehrfurcht gegenüber Verstorbenen und ihren Leichnamen fehlen lassen?"
+            },
+            {
+                "id": "de-05-022",
+                "text": "Habe ich nicht für ein würdiges Begräbnis der Verstorbenen gesorgt?"
+            },
+            {
+                "id": "de-05-023",
+                "text": "Habe ich ungerechte Strafen befürwortet oder den Rückgriff auf die Todesstrafe unterstützt, die nach der Lehre der Kirche unzulässig ist?"
+            },
+            {
+                "id": "de-05-024",
+                "text": "Habe ich jemanden diskriminiert, indem ich ihm etwas verweigert habe, das ihm im Rahmen des Sittengesetzes und des natürlichen Rechts rechtmäßig zusteht?"
+            },
+            {
+                "id": "de-05-025",
+                "text": "Habe ich jemanden verspottet, eingeschüchtert oder herabgewürdigt?"
+            },
+            {
+                "id": "de-05-026",
+                "text": "Bin ich durch mein Handeln oder durch Sorglosigkeit leichtfertig mit menschlichem Leben umgegangen?"
+            },
+            {
+                "id": "de-05-027",
+                "text": "Habe ich Alkohol missbraucht oder illegale Drogen konsumiert?"
+            },
+            {
+                "id": "de-05-028",
+                "text": "Habe ich zu wenig Sorge um meine Gesundheit oder um die Gesundheit anderer gezeigt?"
+            },
+            {
+                "id": "de-05-029",
+                "text": "Habe ich den Konsum von Alkohol, Drogen oder anderen schädlichen Dingen gefördert?"
+            },
+            {
+                "id": "de-05-030",
+                "text": "Habe ich die Sünde der Völlerei begangen oder andere dazu verleitet?"
+            },
+            {
+                "id": "de-05-031",
+                "text": "Habe ich mich nicht um Frieden bemüht?"
+            },
+            {
+                "id": "de-05-032",
+                "text": "Habe ich durch mein Tun oder Unterlassen Ärgernis gegeben?"
+            },
+            {
+                "id": "de-05-033",
+                "text": "Habe ich andere zur Sünde ermutigt oder ihnen dabei geholfen?"
+            },
+            {
+                "id": "de-05-034",
+                "text": "Habe ich zugelassen, dass der Zorn mich beherrscht oder ungehindert fortdauert?"
+            },
+            {
+                "id": "de-05-035",
+                "text": "War ich lieblos zu jemandem, habe ich mit ihm gestritten oder einen Groll gegen ihn gehegt?"
+            },
+            {
+                "id": "de-05-036",
+                "text": "Habe ich jemandem nicht vergeben, der mich um Vergebung gebeten hat?"
+            },
+            {
+                "id": "de-05-037",
+                "text": "Habe ich Rache gesucht oder Rachegedanken nachgehangen?"
+            },
+            {
+                "id": "de-05-038",
+                "text": "Habe ich mich über das Unglück anderer gefreut?"
+            },
+            {
+                "id": "de-05-039",
+                "text": "Habe ich Tiere gequält oder unnötig getötet?"
+            },
+            {
+                "id": "de-05-040",
+                "text": "Habe ich mein eigenes Leben oder das Leben anderer durch rücksichtsloses Fahren oder durch die Benutzung des Handys am Steuer gefährdet?"
+            },
+            {
+                "id": "de-05-041",
+                "text": "Habe ich andere wegen ihrer körperlichen oder geistigen Behinderung verspottet oder lächerlich gemacht?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "de-6",
+        "questions": [
+            {
+                "id": "de-06-001",
+                "text": "Habe ich es versäumt, die Keuschheit zu leben und zu fördern?"
+            },
+            {
+                "id": "de-06-002",
+                "text": "Habe ich sexuelle Lust außerhalb des ehelichen Aktes gesucht?"
+            },
+            {
+                "id": "de-06-003",
+                "text": "Habe ich künstliche Empfängnisverhütung angewendet oder ihre Anwendung befürwortet?"
+            },
+            {
+                "id": "de-06-004",
+                "text": "Habe ich mich ohne gerechten Grund Kindern und dem Geschenk des Lebens verweigert?"
+            },
+            {
+                "id": "de-06-005",
+                "text": "Habe ich vor der Ehe mit einem Partner zusammengelebt (Zusammenleben ohne Trauschein)?"
+            },
+            {
+                "id": "de-06-006",
+                "text": "Habe ich eine unangemessene romantische oder emotionale Vertrautheit mit jemand anderem als meinem Ehepartner gepflegt?"
+            },
+            {
+                "id": "de-06-007",
+                "text": "Habe ich an einer In-vitro-Fertilisation oder an unmoralischen Fruchtbarkeitsbehandlungen teilgenommen (Behandlungen, bei denen die Zeugung nicht durch den ehelichen Akt geschieht) oder jemand anderen dazu ermutigt?"
+            },
+            {
+                "id": "de-06-008",
+                "text": "Habe ich mich sterilisieren lassen oder jemand anderen dazu ermutigt?"
+            },
+            {
+                "id": "de-06-009",
+                "text": "Habe ich jemanden zum Geschlechtsverkehr gezwungen (auch den eigenen Ehepartner)?"
+            },
+            {
+                "id": "de-06-010",
+                "text": "Habe ich meinem Ehepartner ohne gerechten Grund die eheliche Gemeinschaft verweigert?"
+            },
+            {
+                "id": "de-06-011",
+                "text": "Habe ich Selbstbefriedigung betrieben (sexuelle Befriedigung an sich selbst außerhalb des ehelichen Aktes)?"
+            },
+            {
+                "id": "de-06-012",
+                "text": "Habe ich absichtlich einen sexuellen Höhepunkt außerhalb des ehelichen Aktes gesucht oder herbeigeführt?"
+            },
+            {
+                "id": "de-06-013",
+                "text": "Habe ich Sexualerziehung erteilt oder gefördert, die nicht der Lehre der katholischen Kirche entspricht?"
+            },
+            {
+                "id": "de-06-014",
+                "text": "Habe ich Pornografie konsumiert oder verbreitet, sei es in Bildern, Videos, Tonaufnahmen oder Texten?"
+            },
+            {
+                "id": "de-06-015",
+                "text": "Habe ich Samen oder Eizellen gespendet?"
+            },
+            {
+                "id": "de-06-016",
+                "text": "Habe ich mich unreinen Filmen, Fernsehsendungen, Musikstücken, Gesprächen oder Witzen hingegeben (mit Nacktheit oder sexuellen Inhalten)?"
+            },
+            {
+                "id": "de-06-017",
+                "text": "Habe ich Ehebruch begangen (sexuelle Handlungen mit dem Ehepartner eines anderen oder – während ich selbst verheiratet bin – mit einer anderen Person als meinem Ehepartner)?"
+            },
+            {
+                "id": "de-06-018",
+                "text": "Habe ich mich ohne schwerwiegenden Grund von meinem Ehepartner scheiden lassen oder dies erwogen, obwohl ich in einer gültigen Ehe lebe?"
+            },
+            {
+                "id": "de-06-019",
+                "text": "Habe ich eine Ehe ohne den Segen der Kirche geschlossen?"
+            },
+            {
+                "id": "de-06-020",
+                "text": "Habe ich Inzest begangen?"
+            },
+            {
+                "id": "de-06-021",
+                "text": "Habe ich Polygamie oder Polyandrie praktiziert?"
+            },
+            {
+                "id": "de-06-022",
+                "text": "Habe ich mich auf eine „offene Ehe“ eingelassen?"
+            },
+            {
+                "id": "de-06-023",
+                "text": "Hatte ich Geschlechtsverkehr außerhalb der Ehe (Unzucht, homosexuelle Handlungen)?"
+            },
+            {
+                "id": "de-06-024",
+                "text": "Habe ich eine Vergewaltigung begangen?"
+            },
+            {
+                "id": "de-06-025",
+                "text": "Habe ich mich außerhalb der Ehe auf Petting, Sexting oder anderes sexuelles Vorspiel eingelassen?"
+            },
+            {
+                "id": "de-06-026",
+                "text": "Habe ich Kinder sexuell missbraucht?"
+            },
+            {
+                "id": "de-06-027",
+                "text": "Habe ich widernatürliche sexuelle Handlungen begangen (sexuelle Handlungen mit Tieren, mit Gegenständen usw.)?"
+            },
+            {
+                "id": "de-06-028",
+                "text": "Habe ich Prostitution betrieben oder gefördert?"
+            },
+            {
+                "id": "de-06-029",
+                "text": "Habe ich jemanden verführt oder mich verführen lassen?"
+            },
+            {
+                "id": "de-06-030",
+                "text": "Habe ich mich geweigert, meine von Gott gegebene geschlechtliche Identität anzunehmen (Geschlechtsumwandlung, Cross-Dressing usw.)?"
+            },
+            {
+                "id": "de-06-031",
+                "text": "Habe ich Sünden gegen das sechste Gebot gefördert, vorangetrieben oder daran mitgewirkt?"
+            },
+            {
+                "id": "de-06-032",
+                "text": "Habe ich mich auf unangemessene Online-Beziehungen oder Cybersex eingelassen?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "de-7",
+        "questions": [
+            {
+                "id": "de-07-001",
+                "text": "Habe ich etwas gestohlen?"
+            },
+            {
+                "id": "de-07-002",
+                "text": "Habe ich exzessiv Glücksspiel betrieben?"
+            },
+            {
+                "id": "de-07-003",
+                "text": "Habe ich Betrug begangen (falsche Angaben gegenüber einer Versicherung gemacht, Informationen zum finanziellen Vorteil gefälscht)?"
+            },
+            {
+                "id": "de-07-004",
+                "text": "Habe ich mich geweigert, mit meinen Mitteln großzügig gegenüber Bedürftigen zu sein?"
+            },
+            {
+                "id": "de-07-005",
+                "text": "Habe ich Geld für unnötige Dinge verschwendet und dabei die Nöte der Armen missachtet?"
+            },
+            {
+                "id": "de-07-006",
+                "text": "Habe ich die leiblichen Werke der Barmherzigkeit vernachlässigt?"
+            },
+            {
+                "id": "de-07-007",
+                "text": "Habe ich fremdes Eigentum mutwillig beschädigt oder verunstaltet?"
+            },
+            {
+                "id": "de-07-008",
+                "text": "Habe ich betrogen oder gemogelt?"
+            },
+            {
+                "id": "de-07-009",
+                "text": "Habe ich es versäumt, meinen Arbeitern für ihre ehrliche Arbeit einen gerechten Lohn zu zahlen?"
+            },
+            {
+                "id": "de-07-010",
+                "text": "Habe ich jemanden daran gehindert, eine Arbeitsstelle zu bekommen oder zu behalten (durch ungerechte Diskriminierung oder indem ich seine Chancen auf eine Anstellung hintertrieben habe)?"
+            },
+            {
+                "id": "de-07-011",
+                "text": "Habe ich Praktiken gefördert, die zur Versklavung anderer führen (Ausbeuterbetriebe, Menschenhandel oder Sklaverei im eigentlichen Sinn)?"
+            },
+            {
+                "id": "de-07-012",
+                "text": "Habe ich einen Vertrag gebrochen, indem ich meinen Teil der Verpflichtung nicht erfüllt habe?"
+            },
+            {
+                "id": "de-07-013",
+                "text": "Habe ich mich an einem ungerechten Streik oder einer ungerechten Aussperrung beteiligt oder diese unterstützt?"
+            },
+            {
+                "id": "de-07-014",
+                "text": "Habe ich übermäßige Schulden angehäuft und/oder sie nicht zurückgezahlt?"
+            },
+            {
+                "id": "de-07-015",
+                "text": "Habe ich Wucher betrieben (überhöhte Zinsen verlangt)?"
+            },
+            {
+                "id": "de-07-016",
+                "text": "Habe ich jemandem zu viel berechnet oder jemanden bei einem Geschäft übervorteilt?"
+            },
+            {
+                "id": "de-07-017",
+                "text": "Habe ich eine ungerechte Klage gegen jemanden angestrengt oder unterstützt?"
+            },
+            {
+                "id": "de-07-018",
+                "text": "Habe ich keine Wiedergutmachung geleistet für Diebstahl, Betrug oder andere Verstöße gegen das siebte Gebot?"
+            },
+            {
+                "id": "de-07-019",
+                "text": "Habe ich Gleichgültigkeit gegenüber der Umwelt an den Tag gelegt?"
+            },
+            {
+                "id": "de-07-020",
+                "text": "Habe ich das Privateigentum missachtet oder gegen die Lehre der Kirche von der Subsidiarität verstoßen, indem ich einen übertriebenen Sozialismus oder eine zu starke staatliche Kontrolle über Ressourcen befürwortet habe?"
+            },
+            {
+                "id": "de-07-021",
+                "text": "Habe ich nicht gewissenhaft gearbeitet und meinem Arbeitgeber keine ehrliche Arbeitsleistung erbracht?"
+            },
+            {
+                "id": "de-07-022",
+                "text": "Habe ich die Arbeit verachtet oder bin ich der Trägheit verfallen?"
+            },
+            {
+                "id": "de-07-023",
+                "text": "Habe ich für meine Familie nicht das angemessene Maß an Arbeit geleistet?"
+            },
+            {
+                "id": "de-07-024",
+                "text": "Habe ich Arbeitern geschuldeten Lohn vorenthalten oder verspätet ausgezahlt?"
+            },
+            {
+                "id": "de-07-025",
+                "text": "Habe ich versucht, durch Spekulation die Preise von Waren oder Dienstleistungen in die Höhe zu treiben?"
+            },
+            {
+                "id": "de-07-026",
+                "text": "Habe ich Urheberrechte verletzt, indem ich Software, Musik oder Filme raubkopiert habe?"
+            },
+            {
+                "id": "de-07-027",
+                "text": "Habe ich die Zeit meines Arbeitgebers verschwendet, indem ich während der Arbeitszeit übermäßig das Internet oder soziale Medien genutzt habe?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "de-8",
+        "questions": [
+            {
+                "id": "de-08-001",
+                "text": "Habe ich gelogen oder jemanden vorsätzlich getäuscht?"
+            },
+            {
+                "id": "de-08-002",
+                "text": "Habe ich getratscht oder geklatscht?"
+            },
+            {
+                "id": "de-08-003",
+                "text": "Habe ich unter Eid gelogen (Meineid)?"
+            },
+            {
+                "id": "de-08-004",
+                "text": "Habe ich das Schlechteste von jemandem angenommen oder ihn ungerecht beurteilt?"
+            },
+            {
+                "id": "de-08-005",
+                "text": "Habe ich den guten Ruf eines Menschen geschädigt durch üble Nachrede (die Fehler eines Menschen ohne schwerwiegenden Grund anderen erzählen), durch Verleumdung (Lügen über eine Person verbreiten) oder durch schriftliche Verleumdung (Lügen über jemanden schreiben)?"
+            },
+            {
+                "id": "de-08-006",
+                "text": "Habe ich zwanghaft nach Bestätigung im Internet gesucht oder ein falsches Bild von mir selbst gepflegt?"
+            },
+            {
+                "id": "de-08-007",
+                "text": "Habe ich den guten Ruf eines Menschen nicht verteidigt?"
+            },
+            {
+                "id": "de-08-008",
+                "text": "Habe ich ein Geheimnis nicht bewahrt oder das Vertrauen eines Menschen missbraucht?"
+            },
+            {
+                "id": "de-08-009",
+                "text": "Habe ich geschwiegen, wenn die katholische Kirche verunglimpft wurde, oder mich daran mitschuldig gemacht?"
+            },
+            {
+                "id": "de-08-010",
+                "text": "Habe ich es an Aufrichtigkeit oder Offenheit fehlen lassen, wo sie angebracht gewesen wären?"
+            },
+            {
+                "id": "de-08-011",
+                "text": "Habe ich ein Doppelleben geführt?"
+            },
+            {
+                "id": "de-08-012",
+                "text": "War ich heuchlerisch?"
+            },
+            {
+                "id": "de-08-013",
+                "text": "Habe ich andere zum Lügen gedrängt?"
+            },
+            {
+                "id": "de-08-014",
+                "text": "Habe ich andere daran gehindert, die Wahrheit zu sagen?"
+            },
+            {
+                "id": "de-08-015",
+                "text": "Habe ich anderen geschmeichelt?"
+            },
+            {
+                "id": "de-08-016",
+                "text": "War ich prahlerisch oder überheblich?"
+            },
+            {
+                "id": "de-08-017",
+                "text": "Habe ich etwas verzerrt dargestellt, übertrieben dramatisiert, Scheinargumente (Strohmann-Argumente) konstruiert oder persönliche Angriffe (Ad-hominem-Angriffe) geführt, statt auf das Argument oder den Standpunkt einzugehen?"
+            },
+            {
+                "id": "de-08-018",
+                "text": "Habe ich den guten Ruf eines Menschen, über den ich gelogen habe, nicht wiederhergestellt?"
+            },
+            {
+                "id": "de-08-019",
+                "text": "Habe ich jemandem die Wahrheit offenbart, der kein Recht darauf hat (etwa einem ungerechten Angreifer)?"
+            },
+            {
+                "id": "de-08-020",
+                "text": "Habe ich das Beichtgeheimnis verletzt, indem ich den Inhalt der Beichte eines anderen weitererzählt habe?"
+            },
+            {
+                "id": "de-08-021",
+                "text": "Habe ich Berufsgeheimnisse ohne schwerwiegenden Grund preisgegeben?"
+            },
+            {
+                "id": "de-08-022",
+                "text": "Habe ich das, was andere sagen, ohne gebührende Prüfung als Wahrheit übernommen (besonders in Fragen des Glaubens und der Sitten oder wenn der gute Ruf eines anderen auf dem Spiel steht)?"
+            },
+            {
+                "id": "de-08-023",
+                "text": "Habe ich falsche öffentliche Informationen (Propaganda) verbreitet?"
+            },
+            {
+                "id": "de-08-024",
+                "text": "Habe ich ungeprüfte oder falsche Informationen (Fake News) in den sozialen Medien geteilt?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "de-9",
+        "questions": [
+            {
+                "id": "de-09-001",
+                "text": "Habe ich der Begierlichkeit (heftigem sexuellem Verlangen) nachgegeben?"
+            },
+            {
+                "id": "de-09-002",
+                "text": "Habe ich der Wollust nachgegeben (dem ungeordneten Verlangen nach übermäßigem sexuellem Genuss)?"
+            },
+            {
+                "id": "de-09-003",
+                "text": "Habe ich jemandem gegenüber sexuell anzügliche oder belästigende Bemerkungen gemacht oder solche Annäherungsversuche unternommen?"
+            },
+            {
+                "id": "de-09-004",
+                "text": "Habe ich mich nicht sittsam gekleidet, oder habe ich den Blick nicht abgewandt, wenn jemand anderes freizügig gekleidet war?"
+            },
+            {
+                "id": "de-09-005",
+                "text": "Habe ich die Privatsphäre eines Menschen verletzt, indem ich ihm nachspioniert habe?"
+            },
+            {
+                "id": "de-09-006",
+                "text": "Habe ich unreine Gedanken gefördert oder mich ihnen freiwillig hingegeben?"
+            },
+            {
+                "id": "de-09-007",
+                "text": "Habe ich Promiskuität, unmoralische Haltungen gegenüber Sexualität, Schamhaftigkeit oder Reinheit oder sittliche Beliebigkeit gefördert?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "de-10",
+        "questions": [
+            {
+                "id": "de-10-001",
+                "text": "Habe ich andere um ihren Besitz beneidet?"
+            },
+            {
+                "id": "de-10-002",
+                "text": "War ich habgierig?"
+            },
+            {
+                "id": "de-10-003",
+                "text": "Habe ich den Besitz anderer begehrt?"
+            },
+            {
+                "id": "de-10-004",
+                "text": "Habe ich nicht einfach gelebt, sondern bin stattdessen dem Materialismus verfallen?"
+            },
+            {
+                "id": "de-10-005",
+                "text": "Habe ich mich nicht über den Erfolg eines anderen mitgefreut?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "de-11",
+        "questions": [
+            {
+                "id": "de-11-001",
+                "text": "Habe ich an Sonntagen oder gebotenen Feiertagen nicht an der heiligen Messe teilgenommen?"
+            },
+            {
+                "id": "de-11-002",
+                "text": "Habe ich die Sonntage und gebotenen Feiertage nicht als Tage der Ruhe gehalten?"
+            },
+            {
+                "id": "de-11-003",
+                "text": "Habe ich es versäumt, wenigstens einmal im Jahr meine Sünden zu beichten?"
+            },
+            {
+                "id": "de-11-004",
+                "text": "Habe ich Beichten abgelegt, die unehrlich oder absichtlich unvollständig waren?"
+            },
+            {
+                "id": "de-11-005",
+                "text": "Habe ich es versäumt, meine Seele recht auf den Empfang der heiligen Kommunion vorzubereiten?"
+            },
+            {
+                "id": "de-11-006",
+                "text": "Habe ich es versäumt, die Buße zu verrichten, die mir in der Beichte auferlegt wurde?"
+            },
+            {
+                "id": "de-11-007",
+                "text": "Habe ich es versäumt, den Schaden wiedergutzumachen, den meine Sünden verursacht haben?"
+            },
+            {
+                "id": "de-11-008",
+                "text": "Habe ich es versäumt, vor der Beichte eine gründliche Gewissenserforschung zu halten oder mich ehrlich zu bemühen, mich an alle meine Sünden zu erinnern?"
+            },
+            {
+                "id": "de-11-009",
+                "text": "Bin ich zur Beichte gegangen ohne den festen Vorsatz, mein Leben zu bessern, oder ohne Reue über meine Sünden?"
+            },
+            {
+                "id": "de-11-010",
+                "text": "Habe ich es versäumt, wenigstens einmal in der österlichen Zeit (zwischen der Osternacht und dem Pfingstsonntag) die heilige Kommunion zu empfangen?"
+            },
+            {
+                "id": "de-11-011",
+                "text": "Habe ich die Kommunion empfangen, obwohl ich nicht im Stand der Gnade war (mit schweren Sünden auf meiner Seele)?"
+            },
+            {
+                "id": "de-11-012",
+                "text": "Habe ich es versäumt, die eucharistische Nüchternheit vor dem Empfang der heiligen Kommunion einzuhalten?"
+            },
+            {
+                "id": "de-11-013",
+                "text": "Habe ich an den Freitagen der Fastenzeit Fleisch gegessen?"
+            },
+            {
+                "id": "de-11-014",
+                "text": "Habe ich die Fastenregeln am Aschermittwoch und am Karfreitag missachtet?"
+            },
+            {
+                "id": "de-11-015",
+                "text": "Habe ich es versäumt, die Regeln über Fasten und Abstinenz ihrem Geist nach zu befolgen?"
+            },
+            {
+                "id": "de-11-016",
+                "text": "Habe ich es versäumt, an allen Freitagen des Jahres auf Fleisch zu verzichten oder die Weisungen der Bischöfe meines Landes zu befolgen (z. B. stattdessen ein anderes Bußwerk zu verrichten, wie es die Bischöfe im deutschen Sprachgebiet vorsehen)?"
+            },
+            {
+                "id": "de-11-017",
+                "text": "Habe ich es versäumt, geistliche und leibliche Werke der Barmherzigkeit zu tun oder Selbstverleugnung zu üben?"
+            },
+            {
+                "id": "de-11-018",
+                "text": "Habe ich es versäumt, regelmäßig meinen Beitrag zum Unterhalt der Kirche zu leisten?"
+            },
+            {
+                "id": "de-11-019",
+                "text": "Habe ich es versäumt, einen Betrag zu geben, der meinen Verhältnissen angemessen ist?"
+            },
+            {
+                "id": "de-11-020",
+                "text": "Habe ich es versäumt, mich meiner Lebenssituation entsprechend mit meiner Zeit ehrenamtlich für die Kirche einzusetzen?"
+            },
+            {
+                "id": "de-11-021",
+                "text": "Habe ich es versäumt, für das Wachstum der Kirche zu beten?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "de-12",
+        "questions": [
+            {
+                "id": "de-12-001",
+                "text": "Habe ich die Sünde des Hochmuts begangen?"
+            },
+            {
+                "id": "de-12-002",
+                "text": "Habe ich die Sünde der Habsucht (des Geizes) begangen?"
+            },
+            {
+                "id": "de-12-003",
+                "text": "Habe ich die Sünde der Wollust begangen?"
+            },
+            {
+                "id": "de-12-004",
+                "text": "Habe ich die Sünde des Neides begangen?"
+            },
+            {
+                "id": "de-12-005",
+                "text": "Habe ich die Sünde der Völlerei (Unmäßigkeit) begangen?"
+            },
+            {
+                "id": "de-12-006",
+                "text": "Habe ich die Sünde des Zorns begangen?"
+            },
+            {
+                "id": "de-12-007",
+                "text": "Habe ich die Sünde der Trägheit begangen?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "de-13",
+        "questions": [
+            {
+                "id": "de-13-001",
+                "text": "Habe ich gesündigt in der Erwartung, dass Gott mir auch ohne wahre Reue vergibt (Vermessenheit)?"
+            },
+            {
+                "id": "de-13-002",
+                "text": "Habe ich am Heil verzweifelt?"
+            },
+            {
+                "id": "de-13-003",
+                "text": "Habe ich Wahrheiten bekämpft oder angegriffen, von denen ich wusste, dass die katholische Kirche sie lehrt?"
+            },
+            {
+                "id": "de-13-004",
+                "text": "Habe ich einem anderen sein geistliches Gut missgönnt?"
+            },
+            {
+                "id": "de-13-005",
+                "text": "Bin ich verstockt im Stand der Sünde verharrt?"
+            },
+            {
+                "id": "de-13-006",
+                "text": "Habe ich mich beharrlich geweigert umzukehren?"
+            }
+        ]
+    },
+    {
+        "commandmentCode": "de-14",
+        "questions": [
+            {
+                "id": "de-14-001",
+                "text": "Habe ich vorsätzlichen Mord begangen?"
+            },
+            {
+                "id": "de-14-002",
+                "text": "Habe ich die Sünde Sodoms begangen (widernatürliche sexuelle Handlungen)?"
+            },
+            {
+                "id": "de-14-003",
+                "text": "Habe ich die Armen unterdrückt?"
+            },
+            {
+                "id": "de-14-004",
+                "text": "Habe ich Arbeitern den gerechten Lohn vorenthalten?"
+            }
+        ]
+    }
+]

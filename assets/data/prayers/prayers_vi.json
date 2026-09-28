@@ -1,0 +1,190 @@
+{
+    "subtitle": "Kinh nguyện cho hành trình thiêng liêng của bạn",
+    "categories": [
+        {
+            "id": "confession",
+            "title": "Kinh nguyện cho việc xưng tội",
+            "icon": "church_outlined",
+            "prayers": [
+                {
+                    "id": "before_confession",
+                    "title": "Kinh trước khi xưng tội",
+                    "icon": "wb_twilight_outlined",
+                    "content": "Lạy Chúa Thánh Thần, xin ngự đến trong linh hồn con. Xin soi sáng trí khôn con, để con biết những tội con phải xưng, và xin ban ơn cho con được thật lòng đau đớn vì tội lỗi mình.\n\nXin giúp con xưng tội nên, thật lòng ăn năn vì đã xúc phạm đến Chúa, và quyết tâm sửa đổi đời sống. Nhờ Đức Kitô, Chúa chúng con. Amen."
+                },
+                {
+                    "id": "act_of_contrition",
+                    "title": "Kinh Ăn Năn Tội",
+                    "icon": "favorite_outline",
+                    "content": "Lạy Chúa con, Chúa là Đấng trọn tốt trọn lành vô cùng. Chúa đã dựng nên con, và cho Con Chúa ra đời chịu nạn chịu chết vì con, mà con đã cả lòng phản nghịch lỗi nghĩa cùng Chúa, thì con lo buồn đau đớn, cùng chê ghét mọi tội con trên hết mọi sự;\n\ncon dốc lòng chừa cải, và nhờ ơn Chúa thì con sẽ lánh xa dịp tội, cùng làm việc đền tội cho xứng.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "after_confession",
+                    "title": "Kinh sau khi xưng tội",
+                    "icon": "light_mode_outlined",
+                    "content": "Lạy Chúa Giêsu rất yêu dấu của con, con đã xưng hết mọi tội con theo sức con có thể. Con đã cố gắng hết lòng để xưng tội nên. Con tin chắc Chúa đã tha thứ cho con.\n\nCon hết lòng cảm tạ Chúa. Con hứa sẽ cố gắng, nhờ ơn Chúa, không phạm tội nữa. Lạy Thiên Chúa yêu thương của con, xin ban sức mạnh cho con luôn ở gần Chúa và xa lánh tội lỗi. Amen."
+                },
+                {
+                    "id": "confiteor",
+                    "title": "Kinh Cáo Mình",
+                    "icon": "person_outline",
+                    "content": "Tôi thú nhận cùng Thiên Chúa toàn năng và cùng anh chị em: tôi đã phạm tội nhiều trong tư tưởng, lời nói, việc làm, và những điều thiếu sót,\n\n[RUBRIC]Đấm ngực ba lần khi đọc:[/RUBRIC]\n\nlỗi tại tôi, lỗi tại tôi, lỗi tại tôi mọi đàng.\n\nVì vậy tôi xin Đức Bà Maria trọn đời đồng trinh, các thiên thần, các thánh, và anh chị em, khẩn cầu cho tôi trước tòa Thiên Chúa, Chúa chúng ta. Amen."
+                }
+            ]
+        },
+        {
+            "id": "essential",
+            "title": "Các kinh căn bản",
+            "icon": "auto_awesome_outlined",
+            "prayers": [
+                {
+                    "id": "lords_prayer",
+                    "title": "Kinh Lạy Cha",
+                    "icon": "cloud_outlined",
+                    "content": "Lạy Cha chúng con ở trên trời,\nchúng con nguyện danh Cha cả sáng,\nnước Cha trị đến,\ný Cha thể hiện dưới đất cũng như trên trời.\n\nXin Cha cho chúng con hôm nay lương thực hằng ngày,\nvà tha nợ chúng con,\nnhư chúng con cũng tha kẻ có nợ chúng con.\nXin chớ để chúng con sa chước cám dỗ,\nnhưng cứu chúng con cho khỏi sự dữ.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "hail_mary",
+                    "title": "Kinh Kính Mừng",
+                    "icon": "star_outline",
+                    "content": "Kính mừng Maria đầy ơn phúc,\nĐức Chúa Trời ở cùng Bà,\nBà có phúc lạ hơn mọi người nữ,\nvà Giêsu Con lòng Bà gồm phúc lạ.\n\nThánh Maria Đức Mẹ Chúa Trời,\ncầu cho chúng con là kẻ có tội,\nkhi nay và trong giờ lâm tử.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "glory_be",
+                    "title": "Kinh Sáng Danh",
+                    "icon": "brightness_high_outlined",
+                    "content": "Sáng danh Đức Chúa Cha,\nvà Đức Chúa Con,\nvà Đức Chúa Thánh Thần.\n\nNhư đã có trước vô cùng,\nvà bây giờ, và hằng có,\nvà đời đời chẳng cùng.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "apostles_creed",
+                    "title": "Kinh Tin Kính các Thánh Tông Đồ",
+                    "icon": "menu_book_outlined",
+                    "isExpandable": true,
+                    "content": "Tôi tin kính Đức Chúa Trời là Cha phép tắc vô cùng dựng nên trời đất.\n\nTôi tin kính Đức Chúa Giêsu Kitô là Con Một Đức Chúa Cha, cùng là Chúa chúng tôi; bởi phép Đức Chúa Thánh Thần mà Người xuống thai, sinh bởi Bà Maria đồng trinh; chịu nạn đời quan Phong-xi-ô Phi-la-tô, chịu đóng đinh trên cây thánh giá, chết và táng xác.\n\nXuống ngục tổ tông, ngày thứ ba bởi trong kẻ chết mà sống lại; lên trời, ngự bên hữu Đức Chúa Cha phép tắc vô cùng; ngày sau bởi trời lại xuống phán xét kẻ sống và kẻ chết.\n\nTôi tin kính Đức Chúa Thánh Thần. Tôi tin có Hội Thánh hằng có ở khắp thế này, các thánh thông công. Tôi tin phép tha tội. Tôi tin xác loài người ngày sau sống lại. Tôi tin hằng sống vậy.\n\n[AMEN]Amen."
+                }
+            ]
+        },
+        {
+            "id": "marian",
+            "title": "Kinh kính Đức Mẹ",
+            "icon": "favorite_border",
+            "prayers": [
+                {
+                    "id": "hail_holy_queen",
+                    "title": "Kinh Lạy Nữ Vương",
+                    "icon": "star_outline",
+                    "content": "Lạy Nữ Vương, Mẹ nhân lành,\nlàm cho chúng con được sống, được vui, được cậy.\n\nThân lạy Mẹ, chúng con, con cháu E-và,\nở chốn khách đầy, kêu đến cùng Bà;\nchúng con ở nơi khóc lóc than thở kêu khấn Bà thương.\n\nHỡi ôi! Bà là Chúa bầu chúng con,\nxin ghé mặt thương xem chúng con.\nĐến sau khỏi đày,\nxin cho chúng con được thấy Đức Chúa Giêsu, Con lòng Bà gồm phúc lạ.\n\nÔi khoan thay! Nhân thay! Dịu thay! Thánh Maria trọn đời đồng trinh.\n\n[VERSICLE]X. Lạy Rất Thánh Đức Mẹ Chúa Trời, xin cầu cho chúng con.[/VERSICLE]\n[RESPONSE]Đ. Đáng chịu lấy những sự Chúa Kitô đã hứa.[/RESPONSE]\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "memorare",
+                    "title": "Kinh Hãy Nhớ",
+                    "icon": "volunteer_activism_outlined",
+                    "content": "Lạy Thánh Nữ Đồng Trinh Maria, là Mẹ rất nhân từ, xin hãy nhớ xưa nay chưa từng nghe có người nào chạy đến cùng Đức Mẹ, xin bầu chữa cứu giúp mà Đức Mẹ từ bỏ chẳng nhậm lời.\n\nNhân vì sự ấy, con lấy lòng trông cậy than van chạy đến sấp mình xuống dưới chân Đức Mẹ, là Nữ Đồng Trinh trên hết các kẻ đồng trinh, xin Đức Mẹ đoái đến con là kẻ tội lỗi.\n\nLạy Mẹ là Mẹ Chúa Cứu Thế, xin chớ bỏ lời con kêu xin, một dủ lòng thương mà nhậm lời con cùng.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "fatima_prayer",
+                    "title": "Lời nguyện Fatima",
+                    "icon": "flare_outlined",
+                    "content": "Lạy Chúa Giêsu, xin tha tội cho chúng con, xin cứu chúng con khỏi sa hỏa ngục, xin đem các linh hồn lên thiên đàng, nhất là những linh hồn cần đến lòng Chúa thương xót hơn.\n\n[AMEN]Amen."
+                }
+            ]
+        },
+        {
+            "id": "devotions",
+            "title": "Kinh nguyện sùng kính",
+            "icon": "auto_stories_outlined",
+            "prayers": [
+                {
+                    "id": "holy_rosary",
+                    "title": "Chuỗi Mân Côi",
+                    "subtitle": "Hướng dẫn đầy đủ cho người mới bắt đầu",
+                    "icon": "radio_button_unchecked",
+                    "isExpandable": true,
+                    "sections": [
+                        {
+                            "title": "Kinh mở đầu",
+                            "subtitle": "Nơi thánh giá và các hạt đầu tiên",
+                            "content": "[INSTRUCTION]Làm dấu thánh giá:[/INSTRUCTION]\n\nNhân danh Cha, và Con, và Thánh Thần. Amen.\n\n[INSTRUCTION]Cầm thánh giá, đọc Kinh Tin Kính:[/INSTRUCTION]\n\n[PRAYER]Tôi tin kính Đức Chúa Trời là Cha phép tắc vô cùng dựng nên trời đất. Tôi tin kính Đức Chúa Giêsu Kitô là Con Một Đức Chúa Cha, cùng là Chúa chúng tôi; bởi phép Đức Chúa Thánh Thần mà Người xuống thai, sinh bởi Bà Maria đồng trinh; chịu nạn đời quan Phong-xi-ô Phi-la-tô, chịu đóng đinh trên cây thánh giá, chết và táng xác. Xuống ngục tổ tông, ngày thứ ba bởi trong kẻ chết mà sống lại; lên trời, ngự bên hữu Đức Chúa Cha phép tắc vô cùng; ngày sau bởi trời lại xuống phán xét kẻ sống và kẻ chết. Tôi tin kính Đức Chúa Thánh Thần. Tôi tin có Hội Thánh hằng có ở khắp thế này, các thánh thông công. Tôi tin phép tha tội. Tôi tin xác loài người ngày sau sống lại. Tôi tin hằng sống vậy. Amen.[/PRAYER]\n\n[INSTRUCTION]Nơi hạt lớn đầu tiên, đọc Kinh Lạy Cha:[/INSTRUCTION]\n\n[PRAYER]Lạy Cha chúng con ở trên trời, chúng con nguyện danh Cha cả sáng, nước Cha trị đến, ý Cha thể hiện dưới đất cũng như trên trời. Xin Cha cho chúng con hôm nay lương thực hằng ngày, và tha nợ chúng con, như chúng con cũng tha kẻ có nợ chúng con. Xin chớ để chúng con sa chước cám dỗ, nhưng cứu chúng con cho khỏi sự dữ. Amen.[/PRAYER]\n\n[INSTRUCTION]Nơi mỗi hạt trong ba hạt nhỏ, đọc Kinh Kính Mừng (cầu cho được đức tin, đức cậy và đức mến):[/INSTRUCTION]\n\n[PRAYER]Kính mừng Maria đầy ơn phúc, Đức Chúa Trời ở cùng Bà, Bà có phúc lạ hơn mọi người nữ, và Giêsu Con lòng Bà gồm phúc lạ. Thánh Maria Đức Mẹ Chúa Trời, cầu cho chúng con là kẻ có tội, khi nay và trong giờ lâm tử. Amen.[/PRAYER]\n\n[INSTRUCTION]Đọc Kinh Sáng Danh:[/INSTRUCTION]\n\n[PRAYER]Sáng danh Đức Chúa Cha, và Đức Chúa Con, và Đức Chúa Thánh Thần. Như đã có trước vô cùng, và bây giờ, và hằng có, và đời đời chẳng cùng. Amen.[/PRAYER]"
+                        },
+                        {
+                            "title": "Cách đọc mỗi chục kinh",
+                            "subtitle": "Lặp lại cho mỗi mầu nhiệm trong 5 mầu nhiệm",
+                            "content": "[INSTRUCTION]1. Xướng mầu nhiệm và suy niệm[/INSTRUCTION]\n\n[INSTRUCTION]2. Nơi hạt lớn, đọc Kinh Lạy Cha:[/INSTRUCTION]\n\n[PRAYER]Lạy Cha chúng con ở trên trời, chúng con nguyện danh Cha cả sáng, nước Cha trị đến, ý Cha thể hiện dưới đất cũng như trên trời. Xin Cha cho chúng con hôm nay lương thực hằng ngày, và tha nợ chúng con, như chúng con cũng tha kẻ có nợ chúng con. Xin chớ để chúng con sa chước cám dỗ, nhưng cứu chúng con cho khỏi sự dữ. Amen.[/PRAYER]\n\n[INSTRUCTION]3. Nơi mỗi hạt trong 10 hạt nhỏ, đọc Kinh Kính Mừng:[/INSTRUCTION]\n\n[PRAYER]Kính mừng Maria đầy ơn phúc, Đức Chúa Trời ở cùng Bà, Bà có phúc lạ hơn mọi người nữ, và Giêsu Con lòng Bà gồm phúc lạ. Thánh Maria Đức Mẹ Chúa Trời, cầu cho chúng con là kẻ có tội, khi nay và trong giờ lâm tử. Amen.[/PRAYER]\n\n[INSTRUCTION]4. Sau 10 Kinh Kính Mừng, đọc Kinh Sáng Danh:[/INSTRUCTION]\n\n[PRAYER]Sáng danh Đức Chúa Cha, và Đức Chúa Con, và Đức Chúa Thánh Thần. Như đã có trước vô cùng, và bây giờ, và hằng có, và đời đời chẳng cùng. Amen.[/PRAYER]\n\n[INSTRUCTION]5. Nếu muốn, đọc Lời nguyện Fatima:[/INSTRUCTION]\n\n[PRAYER]Lạy Chúa Giêsu, xin tha tội cho chúng con, xin cứu chúng con khỏi sa hỏa ngục, xin đem các linh hồn lên thiên đàng, nhất là những linh hồn cần đến lòng Chúa thương xót hơn. Amen.[/PRAYER]"
+                        },
+                        {
+                            "title": "Năm Sự Vui",
+                            "subtitle": "Thứ Hai và thứ Bảy",
+                            "content": "1. Truyền tin — Thiên thần Gabriel truyền tin cho Đức Bà chịu thai Con Thiên Chúa.\n\n2. Thăm viếng — Đức Bà đi viếng bà thánh Isave, đang cưu mang thánh Gioan Tẩy Giả.\n\n3. Giáng sinh — Đức Chúa Giêsu sinh ra tại Bêlem.\n\n4. Dâng Chúa trong đền thánh — Đức Bà và thánh Giuse dâng Đức Chúa Giêsu trong đền thánh.\n\n5. Tìm được Chúa trong đền thánh — Sau ba ngày, Đức Bà và thánh Giuse tìm được Đức Chúa Giêsu đang giảng dạy trong đền thánh."
+                        },
+                        {
+                            "title": "Năm Sự Sáng",
+                            "subtitle": "Thứ Năm",
+                            "content": "1. Chúa chịu phép rửa tại sông Giođan — Đức Chúa Giêsu chịu phép rửa bởi thánh Gioan và Chúa Thánh Thần ngự xuống trên Người.\n\n2. Tiệc cưới Cana — Đức Chúa Giêsu làm phép lạ đầu tiên, hóa nước thành rượu.\n\n3. Rao giảng Nước Trời — Đức Chúa Giêsu kêu gọi chúng ta sám hối và loan báo Nước Thiên Chúa.\n\n4. Chúa biến hình — Đức Chúa Giêsu biến hình trên núi Tabo, tỏ bày vinh quang Thiên Chúa của Người.\n\n5. Lập bí tích Thánh Thể — Đức Chúa Giêsu ban Mình và Máu Người trong bữa Tiệc Ly."
+                        },
+                        {
+                            "title": "Năm Sự Thương",
+                            "subtitle": "Thứ Ba và thứ Sáu",
+                            "content": "1. Chúa hấp hối trong vườn Cây Dầu — Đức Chúa Giêsu cầu nguyện tại Ghếtsêmani và vâng theo thánh ý Chúa Cha.\n\n2. Chúa chịu đánh đòn — Đức Chúa Giêsu bị lính Rôma đánh đòn tàn nhẫn.\n\n3. Chúa chịu đội mão gai — Đức Chúa Giêsu bị nhạo báng và đội mão gai.\n\n4. Chúa vác thánh giá — Đức Chúa Giêsu vác thánh giá lên đồi Canvê.\n\n5. Chúa chịu chết trên thánh giá — Đức Chúa Giêsu chịu chết trên thánh giá để cứu độ chúng ta."
+                        },
+                        {
+                            "title": "Năm Sự Mừng",
+                            "subtitle": "Thứ Tư và Chúa nhật",
+                            "content": "1. Chúa sống lại — Đức Chúa Giêsu sống lại từ cõi chết vào ngày thứ ba.\n\n2. Chúa lên trời — Đức Chúa Giêsu lên trời bốn mươi ngày sau khi sống lại.\n\n3. Chúa Thánh Thần hiện xuống — Chúa Thánh Thần ngự xuống trên Đức Mẹ và các Tông đồ trong ngày lễ Ngũ Tuần.\n\n4. Đức Mẹ lên trời — Đức Mẹ được đưa lên trời cả hồn lẫn xác.\n\n5. Đức Mẹ được thưởng triều thiên — Đức Mẹ được tôn phong làm Nữ Vương trời đất."
+                        },
+                        {
+                            "title": "Kinh kết thúc",
+                            "subtitle": "Sau năm chục kinh",
+                            "content": "[INSTRUCTION]Đọc Kinh Lạy Nữ Vương:[/INSTRUCTION]\n\n[PRAYER]Lạy Nữ Vương, Mẹ nhân lành, làm cho chúng con được sống, được vui, được cậy. Thân lạy Mẹ, chúng con, con cháu E-và, ở chốn khách đầy, kêu đến cùng Bà; chúng con ở nơi khóc lóc than thở kêu khấn Bà thương. Hỡi ôi! Bà là Chúa bầu chúng con, xin ghé mặt thương xem chúng con. Đến sau khỏi đày, xin cho chúng con được thấy Đức Chúa Giêsu, Con lòng Bà gồm phúc lạ. Ôi khoan thay! Nhân thay! Dịu thay! Thánh Maria trọn đời đồng trinh.[/PRAYER]\n\n[VERSICLE]X. Lạy Rất Thánh Đức Mẹ Chúa Trời, xin cầu cho chúng con.[/VERSICLE]\n[RESPONSE]Đ. Đáng chịu lấy những sự Chúa Kitô đã hứa.[/RESPONSE]\n\n[INSTRUCTION]Lời nguyện kết thúc:[/INSTRUCTION]\n\n[PRAYER]Lạy Chúa, Con Một Chúa đã dùng cuộc sống, sự chết và sự sống lại của Người mà sắm cho chúng con phần thưởng phúc trường sinh. Xin cho chúng con, khi suy ngắm những mầu nhiệm Rất Thánh Mân Côi Đức Trinh Nữ Maria, biết noi gương những điều các mầu nhiệm ấy chứa đựng, và được hưởng những điều các mầu nhiệm ấy hứa ban. Nhờ Đức Kitô, Chúa chúng con. Amen.[/PRAYER]\n\n[INSTRUCTION]Làm dấu thánh giá[/INSTRUCTION]"
+                        }
+                    ]
+                },
+                {
+                    "id": "divine_mercy_chaplet",
+                    "title": "Chuỗi Lòng Chúa Thương Xót",
+                    "icon": "water_drop_outlined",
+                    "isExpandable": true,
+                    "sections": [
+                        {
+                            "title": "Kinh mở đầu",
+                            "content": "1. Làm dấu thánh giá\n2. Lời nguyện mở đầu (tùy ý):\n\n[PRAYER]Lạy Chúa Giêsu, Chúa vừa trút hơi thở cuối cùng, nhưng nguồn sống đã tuôn trào đến các linh hồn, và cả một đại dương Lòng Chúa Thương Xót được mở ra cho toàn thế giới. Ôi, Nguồn Mạch Sự Sống là Lòng Thương Xót khôn dò, xin hãy bao trùm toàn thế giới và trút hết toàn thân Ngài trên chúng con.[/PRAYER]\n\n3. Đọc ba lần:\n\n[PRAYER]Ôi, Máu và Nước tuôn ra từ Trái Tim Chúa Giêsu để nên nguồn mạch Lòng Thương Xót cho chúng con, con tín thác vào Chúa.[/PRAYER]"
+                        },
+                        {
+                            "title": "Chuỗi kinh",
+                            "content": "1. Đọc Kinh Lạy Cha\n2. Đọc Kinh Kính Mừng\n3. Đọc Kinh Tin Kính\n\n[RUBRIC]Nơi các hạt lớn (hạt Kinh Lạy Cha), đọc:[/RUBRIC]\n\n[PRAYER]Lạy Cha Hằng Hữu, con xin dâng lên Cha Mình và Máu, Linh Hồn và Thần Tính của Con rất yêu dấu Cha là Đức Giêsu Kitô, Chúa chúng con, để đền vì tội lỗi chúng con và toàn thế giới.[/PRAYER]\n\n[RUBRIC]Nơi các hạt nhỏ (hạt Kinh Kính Mừng), đọc:[/RUBRIC]\n\n[PRAYER]Vì cuộc khổ nạn đau thương của Chúa Giêsu Kitô, xin Cha thương xót chúng con và toàn thế giới.[/PRAYER]\n\nLặp lại cho đủ năm chục kinh."
+                        },
+                        {
+                            "title": "Kết thúc",
+                            "content": "Đọc ba lần:\n\n[PRAYER]Lạy Đấng Chí Thánh, là Thiên Chúa Toàn Năng Hằng Hữu, xin thương xót chúng con và toàn thế giới.[/PRAYER]\n\nLời nguyện kết thúc (tùy ý):\n\n[PRAYER]Lạy Thiên Chúa Hằng Hữu, lòng thương xót của Chúa vô biên và kho tàng lòng trắc ẩn của Chúa vô tận. Xin đoái thương nhìn đến chúng con và gia tăng lòng thương xót của Chúa nơi chúng con, để trong những lúc gian nan, chúng con không thất vọng, không nản chí, nhưng với lòng tín thác lớn lao, phó mình theo thánh ý Chúa, là chính Tình Yêu và Lòng Thương Xót.[/PRAYER]"
+                        }
+                    ]
+                },
+                {
+                    "id": "guardian_angel",
+                    "title": "Kinh Thiên Thần Bản Mệnh",
+                    "icon": "shield_outlined",
+                    "content": "Lạy Thiên Thần Chúa,\nlà đấng gìn giữ con,\nvì lòng thương Chúa,\nđã trao phó con cho ngài,\nxin ngài soi sáng, gìn giữ,\ndẫn dắt và hướng dẫn con.\n\n[AMEN]Amen."
+                }
+            ]
+        },
+        {
+            "id": "communion",
+            "title": "Kinh nguyện rước lễ",
+            "icon": "wb_sunny_outlined",
+            "prayers": [
+                {
+                    "id": "before_communion",
+                    "title": "Kinh trước khi rước lễ",
+                    "icon": "wb_twilight_outlined",
+                    "content": "Lạy Chúa Giêsu Kitô, Con Thiên Chúa hằng sống, Chúa đã theo thánh ý Chúa Cha, và nhờ sự hợp tác của Chúa Thánh Thần, mà chịu chết để ban sự sống cho thế gian:\n\nxin dùng Mình và Máu rất thánh Chúa đây mà cứu con khỏi mọi tội lỗi và mọi sự dữ;\n\nxin cho con hằng tuân giữ giới răn Chúa, và đừng để con lìa xa Chúa bao giờ.\n\nChúa là Đấng hằng sống hằng trị cùng Thiên Chúa Cha, hợp nhất với Chúa Thánh Thần, là Thiên Chúa đến muôn thuở muôn đời.\n\n[AMEN]Amen."
+                },
+                {
+                    "id": "after_communion",
+                    "title": "Kinh sau khi rước lễ",
+                    "subtitle": "Kinh Linh Hồn Chúa Kitô (Anima Christi)",
+                    "icon": "light_mode_outlined",
+                    "content": "Lạy linh hồn Chúa Kitô, xin thánh hóa con.\nLạy xác thánh Chúa Kitô, xin cứu chuộc con.\nLạy Máu Thánh Chúa Kitô, xin làm cho con say mến.\nLạy nước bởi cạnh sườn Chúa Kitô, xin tẩy rửa con.\n\nLạy sự thương khó Chúa Kitô, xin thêm sức cho con.\nLạy Chúa Giêsu nhân lành, xin nhậm lời con.\nXin giấu ẩn con trong các vết thương Chúa.\nXin đừng để con lìa xa Chúa.\n\nXin gìn giữ con khỏi kẻ thù tinh quái.\nĐến giờ lâm tử, xin Chúa gọi con,\nvà cho con đến cùng Chúa,\nđể con được cùng các thánh\nca ngợi Chúa đến muôn đời.\n\n[AMEN]Amen."
+                }
+            ]
+        }
+    ]
+}

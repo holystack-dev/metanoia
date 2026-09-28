@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:confessionapp/src/core/theme/app_radius.dart';
 
 /// A widget that animates number changes with a smooth counting effect.
 class AnimatedCount extends StatelessWidget {
@@ -118,7 +119,7 @@ class _AnimatedCountBadgeState extends State<AnimatedCountBadge>
         ),
         decoration: BoxDecoration(
           color: widget.backgroundColor ?? theme.colorScheme.primaryContainer,
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(AppRadius.sheet),
         ),
         child: TweenAnimationBuilder<int>(
           tween: IntTween(begin: _previousCount, end: widget.count),

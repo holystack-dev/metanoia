@@ -1,8 +1,12 @@
+import 'package:confessionapp/src/core/database/app_database.dart';
+import 'package:confessionapp/src/core/database/database_encryption.dart';
+import 'package:confessionapp/src/core/database/database_provider.dart';
 import 'package:confessionapp/src/features/authentication/data/auth_repository.dart';
 import 'package:confessionapp/src/features/authentication/domain/models/auth_settings.dart';
 import 'package:flutter/services.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 part 'auth_provider.g.dart';
 
@@ -10,6 +14,10 @@ part 'auth_provider.g.dart';
 class AuthController extends _$AuthController {
   final LocalAuthentication _localAuth = LocalAuthentication();
   DateTime? _lastPausedTime;
+
+  /// True while the system biometric prompt is on screen. See
+  /// [onAppLifecycleChange].
+  bool _biometricPromptInFlight = false;
 
   @override
   Future<AuthState> build() async {
@@ -106,8 +114,11 @@ class AuthController extends _$AuthController {
     }
   }
 
-  /// Authenticate using biometrics
-  Future<bool> authenticateWithBiometric() async {
+  /// Authenticate using biometrics.
+  ///
+  /// [localizedReason] is the message shown in the system biometric prompt; it
+  /// is passed in from the UI, which is where the localizations live.
+  Future<bool> authenticateWithBiometric(String localizedReason) async {
     final currentState = state.valueOrNull;
     if (currentState == null ||
         !currentState.biometricAvailable ||
@@ -116,11 +127,13 @@ class AuthController extends _$AuthController {
     }
 
     try {
-      final authenticated = await _localAuth.authenticate(
-        localizedReason: 'Authenticate to access Metanoia',
-        options: const AuthenticationOptions(
-          stickyAuth: true,
-          biometricOnly: true,
+      final authenticated = await _duringBiometricPrompt(
+        () => _localAuth.authenticate(
+          localizedReason: localizedReason,
+          options: const AuthenticationOptions(
+            stickyAuth: true,
+            biometricOnly: true,
+          ),
         ),
       );
 
@@ -223,6 +236,11 @@ class AuthController extends _$AuthController {
 
   /// Handle app lifecycle changes
   void onAppLifecycleChange(AuthAppLifecycleState lifecycleState) {
+    // The system biometric prompt fires `inactive`. Without this guard it
+    // starts the background-lock timer, and a Face ID slower than the timeout
+    // re-locks the app as soon as it unlocks.
+    if (_biometricPromptInFlight) return;
+
     final currentState = state.valueOrNull;
     if (currentState == null ||
         currentState.status == AuthStatus.uninitialized ||
@@ -235,6 +253,19 @@ class AuthController extends _$AuthController {
       _lastPausedTime = DateTime.now();
     } else if (lifecycleState == AuthAppLifecycleState.resumed) {
       _checkAndLockIfNeeded();
+    }
+  }
+
+  /// Runs [action] with the lifecycle lock timer suspended.
+  Future<T> _duringBiometricPrompt<T>(Future<T> Function() action) async {
+    _biometricPromptInFlight = true;
+    try {
+      return await action();
+    } finally {
+      _biometricPromptInFlight = false;
+      // The prompt's own inactive/resumed cycle must not count as time spent
+      // in the background.
+      _lastPausedTime = null;
     }
   }
 
@@ -294,20 +325,35 @@ class AuthController extends _$AuthController {
     return currentState?.status == AuthStatus.pinSetupDeferred;
   }
 
-  /// Reset PIN and delete all user data
-  /// This is a destructive operation that cannot be undone
+  /// Reset the PIN and delete all user data (confessions, custom sins,
+  /// penances). Destructive and unrecoverable.
+  ///
+  /// The caller is expected to restart the app afterwards (see [AppRoot.restart])
+  /// so that no provider keeps serving rows cached from the deleted database.
   Future<bool> resetPinAndDeleteAllData() async {
-    final repo = ref.read(authRepositoryProvider);
-    final success = await repo.resetPinAndDeleteAllData();
+    try {
+      // Close the database before its files go away; a live connection would
+      // otherwise write its cache back out and recreate them.
+      await ref.read(appDatabaseProvider).close();
 
-    if (success) {
-      // Reset state to uninitialized (will trigger PIN setup flow)
+      // Destroy the data itself, not just the auth keys.
+      await deleteDatabaseFiles();
+      await deleteDatabaseKey();
+
+      await ref.read(authRepositoryProvider).deleteAllAuthData();
+
+      // A stale content version would stop the fresh database from being
+      // seeded on the next open.
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.remove(AppDatabase.contentVersionKey);
+
       state = const AsyncValue.data(
         AuthState(status: AuthStatus.uninitialized),
       );
+      return true;
+    } catch (e) {
+      return false;
     }
-
-    return success;
   }
 
   /// Authenticate using biometrics for PIN reset verification
@@ -325,11 +371,13 @@ class AuthController extends _$AuthController {
         return false;
       }
 
-      return await _localAuth.authenticate(
-        localizedReason: reason,
-        options: const AuthenticationOptions(
-          stickyAuth: true,
-          biometricOnly: false, // Allow device credentials as fallback
+      return await _duringBiometricPrompt(
+        () => _localAuth.authenticate(
+          localizedReason: reason,
+          options: const AuthenticationOptions(
+            stickyAuth: true,
+            biometricOnly: false, // Allow device credentials as fallback
+          ),
         ),
       );
     } on PlatformException {
@@ -340,7 +388,7 @@ class AuthController extends _$AuthController {
   }
 }
 
-/// Enum for app lifecycle state (renamed to avoid conflict with Flutter's)
+/// App lifecycle state (named to avoid clashing with Flutter's).
 enum AuthAppLifecycleState {
   resumed,
   inactive,

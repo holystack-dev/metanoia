@@ -6,5 +6,16 @@ part 'database_provider.g.dart';
 
 @Riverpod(keepAlive: true)
 AppDatabase appDatabase(Ref ref) {
-  return AppDatabase();
+  final db = AppDatabase();
+  // Close with the provider so a rebuilt scope (AppRoot.restarterOf) does not
+  // leak the connection. Tolerates a second close: delete-all closes the
+  // database itself before the scope is disposed.
+  ref.onDispose(() async {
+    try {
+      await db.close();
+    } catch (_) {
+      // Already closed.
+    }
+  });
+  return db;
 }

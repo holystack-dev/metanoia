@@ -1,6 +1,11 @@
 import 'package:confessionapp/src/core/localization/l10n/app_localizations.dart';
+import 'package:confessionapp/src/core/theme/app_radius.dart';
+import 'package:confessionapp/src/core/utils/haptic_utils.dart';
+import 'package:confessionapp/src/core/widgets/app_back_button.dart';
 import 'package:confessionapp/src/core/widgets/empty_state.dart';
 import 'package:confessionapp/src/features/confession/data/confession_analytics_repository.dart';
+import 'package:confessionapp/src/features/examination/data/examination_repository.dart';
+import 'package:confessionapp/src/features/journal/data/journal_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -17,51 +22,73 @@ class InsightsScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          l10n.confessionInsights,
-          style: theme.textTheme.titleLarge?.copyWith(
-            color: theme.colorScheme.primary,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        leading: const AppBackButton(fallbackLocation: '/confess'),
+        title: Text(l10n.confessionInsights),
       ),
-      body: analyticsAsync.when(
-        loading: () => const Center(child: CircularProgressIndicator()),
-        error: (error, _) => Center(child: Text('${l10n.error}: $error')),
-        data: (analytics) {
-          if (!analytics.hasData) {
-            return _buildEmptyState(context, l10n);
-          }
+      body: RefreshIndicator(
+        onRefresh: _onRefresh,
+        color: theme.colorScheme.primary,
+        child: analyticsAsync.when(
+          loading: () => const Center(child: CircularProgressIndicator()),
+          error: (error, _) => Center(child: Text('${l10n.error}: $error')),
+          data: (analytics) {
+            if (!analytics.hasData) {
+              return _buildEmptyState(context, l10n);
+            }
 
-          return SingleChildScrollView(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // Stats Grid
-                _buildStatsGrid(context, l10n, analytics),
-                const SizedBox(height: 24),
+            return SingleChildScrollView(
+              physics: const AlwaysScrollableScrollPhysics(),
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Stats Grid
+                  _buildStatsGrid(context, l10n, analytics),
+                  const SizedBox(height: 24),
 
-                // Monthly Activity Chart
-                _buildMonthlyChart(context, l10n, analytics),
-                const SizedBox(height: 24),
+                  // Monthly Activity Chart
+                  _buildMonthlyChart(context, l10n, analytics),
+                  const SizedBox(height: 24),
 
-                // Journey Info
-                _buildJourneyCard(context, l10n, analytics),
-              ],
-            ),
-          );
-        },
+                  // Struggle areas from the journal. Renders nothing at all
+                  // when the journal holds no marks, so a user who has never
+                  // used it is not shown an empty card.
+                  const _StruggleAreasCard(),
+
+                  // Journey Info
+                  _buildJourneyCard(context, l10n, analytics),
+                ],
+              ),
+            );
+          },
+        ),
       ),
     );
   }
 
+  /// Analytics is a Drift stream, so it is already current — there is nothing to
+  /// re-fetch. The gesture is kept because users reach for it; it just settles.
+  Future<void> _onRefresh() async {
+    HapticUtils.lightImpact();
+    await Future<void>.delayed(const Duration(milliseconds: 300));
+  }
+
   Widget _buildEmptyState(BuildContext context, AppLocalizations l10n) {
-    return EmptyState(
-      icon: Icons.insights,
-      title: l10n.noInsightsYet,
-      subtitle: l10n.noInsightsYetDesc,
-    ).animate().fadeIn().scale();
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return SingleChildScrollView(
+          physics: const AlwaysScrollableScrollPhysics(),
+          child: ConstrainedBox(
+            constraints: BoxConstraints(minHeight: constraints.maxHeight),
+            child: EmptyState(
+              icon: Icons.insights,
+              title: l10n.noInsightsYet,
+              subtitle: l10n.noInsightsYetDesc,
+            ).animate().fadeIn().scale(),
+          ),
+        );
+      },
+    );
   }
 
   Widget _buildStatsGrid(
@@ -93,15 +120,17 @@ class InsightsScreen extends ConsumerWidget {
           icon: Icons.repeat,
           label: l10n.averageFrequency,
           value: analytics.averageDaysBetween != null
-              ? '${analytics.averageDaysBetween!.round()} days'
+              ? l10n.daysCount(analytics.averageDaysBetween!.round())
               : '-',
           color: Theme.of(context).colorScheme.tertiary,
         ).animate().fadeIn(delay: 300.ms).slideY(begin: 0.1),
         _StatCard(
-          icon: Icons.local_fire_department,
+          // A calm "regular return" glyph, not a fire/streak flame: the
+          // sacrament is not gamified.
+          icon: Icons.event_repeat,
           label: l10n.currentStreak,
-          value: '${analytics.currentStreakWeeks} ${analytics.currentStreakWeeks == 1 ? 'wk' : 'wks'}',
-          color: Colors.orange,
+          value: l10n.weeksShort(analytics.currentStreakWeeks),
+          color: Theme.of(context).colorScheme.secondary,
         ).animate().fadeIn(delay: 400.ms).slideY(begin: 0.1),
       ],
     );
@@ -127,7 +156,7 @@ class InsightsScreen extends ConsumerWidget {
       elevation: 0,
       color: theme.colorScheme.surface,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(AppRadius.card),
         side: BorderSide(
           color: theme.colorScheme.outlineVariant,
           width: 1,
@@ -189,13 +218,15 @@ class InsightsScreen extends ConsumerWidget {
                                   ? theme.colorScheme.primary
                                   : theme.colorScheme.outlineVariant,
                               borderRadius: const BorderRadius.vertical(
-                                top: Radius.circular(4),
+                                top: Radius.circular(AppRadius.xs),
                               ),
                             ),
                           ),
                           const SizedBox(height: 8),
                           Text(
-                            data.monthLabel,
+                            data.monthLabel(
+                              Localizations.localeOf(context).toString(),
+                            ),
                             style: theme.textTheme.labelSmall?.copyWith(
                               color: theme.colorScheme.onSurfaceVariant,
                               fontSize: 10,
@@ -211,7 +242,7 @@ class InsightsScreen extends ConsumerWidget {
           ],
         ),
       ),
-    ).animate().fadeIn(delay: 500.ms).slideY(begin: 0.1);
+    ).animate().fadeIn(delay: 150.ms).slideY(begin: 0.1);
   }
 
   Widget _buildJourneyCard(
@@ -220,13 +251,15 @@ class InsightsScreen extends ConsumerWidget {
     ConfessionAnalytics analytics,
   ) {
     final theme = Theme.of(context);
-    final dateFormat = DateFormat('MMM dd, yyyy');
+    final dateFormat = DateFormat.yMMMd(
+      Localizations.localeOf(context).toString(),
+    );
 
     return Card(
       elevation: 0,
       color: theme.colorScheme.surface,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(AppRadius.card),
         side: BorderSide(
           color: theme.colorScheme.outlineVariant,
           width: 1,
@@ -277,7 +310,160 @@ class InsightsScreen extends ConsumerWidget {
           ],
         ),
       ),
-    ).animate().fadeIn(delay: 600.ms).slideY(begin: 0.1);
+    ).animate().fadeIn(delay: 150.ms).slideY(begin: 0.1);
+  }
+}
+
+/// Most-frequent struggle areas: the sins marked in the journal, grouped by
+/// commandment.
+///
+/// Not animated: it is fed by a Drift stream, and an entrance animation would
+/// replay on every emission.
+class _StruggleAreasCard extends ConsumerWidget {
+  const _StruggleAreasCard();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final areas =
+        ref.watch(journalStruggleAreasProvider).valueOrNull ?? const [];
+    // Nothing marked in the journal (or nothing marked against a commandment):
+    // show no card at all rather than an empty one.
+    if (areas.isEmpty) return const SizedBox.shrink();
+
+    final l10n = AppLocalizations.of(context)!;
+    final theme = Theme.of(context);
+    final data = ref.watch(examinationDataProvider).valueOrNull ?? const [];
+
+    // Commandment names come from the current content language, so this section
+    // follows the language the user reads their examination in.
+    final names = <int, String>{
+      for (final section in data)
+        if (section.commandment != null)
+          section.commandment!.commandmentNo:
+              section.commandment!.customTitle ?? section.commandment!.content,
+    };
+
+    final top = areas.take(5).toList();
+    final maxCount = top.first.count;
+
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 24),
+      child: Card(
+        elevation: 0,
+        color: theme.colorScheme.surface,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(AppRadius.card),
+          side: BorderSide(color: theme.colorScheme.outlineVariant, width: 1),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Icon(
+                    // Not the lotus/meditation-pose glyph (Eastern connotation);
+                    // a heart, for areas of the heart brought back to God.
+                    Icons.favorite_border,
+                    color: theme.colorScheme.tertiary,
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          l10n.journalStruggleAreas,
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          l10n.journalStruggleAreasSubtitle,
+                          style: theme.textTheme.bodySmall?.copyWith(
+                            color: theme.colorScheme.onSurfaceVariant,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 16),
+              for (final area in top)
+                _StruggleAreaRow(
+                  label:
+                      names[area.commandmentNo] ??
+                      '${l10n.commandment} ${area.commandmentNo}',
+                  count: area.count,
+                  fraction: maxCount == 0 ? 0 : area.count / maxCount,
+                ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _StruggleAreaRow extends StatelessWidget {
+  const _StruggleAreaRow({
+    required this.label,
+    required this.count,
+    required this.fraction,
+  });
+
+  final String label;
+  final int count;
+  final double fraction;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final theme = Theme.of(context);
+
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  label,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: theme.textTheme.bodyMedium?.copyWith(
+                    color: theme.colorScheme.onSurface,
+                  ),
+                ),
+              ),
+              const SizedBox(width: 12),
+              Text(
+                l10n.journalMarksCount(count),
+                style: theme.textTheme.labelSmall?.copyWith(
+                  color: theme.colorScheme.onSurfaceVariant,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 6),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(AppRadius.xs),
+            child: LinearProgressIndicator(
+              value: fraction.clamp(0.0, 1.0),
+              minHeight: 6,
+              backgroundColor: theme.colorScheme.surfaceContainerHighest,
+              valueColor: AlwaysStoppedAnimation<Color>(
+                theme.colorScheme.tertiary,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
 
@@ -302,7 +488,7 @@ class _StatCard extends StatelessWidget {
       elevation: 0,
       color: theme.colorScheme.surface,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(AppRadius.card),
         side: BorderSide(
           color: theme.colorScheme.outlineVariant,
           width: 1,
@@ -318,7 +504,7 @@ class _StatCard extends StatelessWidget {
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
                 color: color.withValues(alpha: 0.15),
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(AppRadius.chip),
               ),
               child: Icon(icon, color: color, size: 20),
             ),

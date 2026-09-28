@@ -120,9 +120,11 @@ Want to add support for your language? See the [Translation Guide](CONTRIBUTING.
 This project uses a dual license:
 
 - **Code** (everything except `assets/data/`): [MIT License](LICENSE)
-- **Content** (`assets/data/` - examination questions, prayers, guides): [CC BY-NC-ND 4.0](assets/data/LICENSE)
+- **Content** (`assets/data/` - examination questions, confession guides, FAQs): [CC BY-NC-ND 4.0](assets/data/LICENSE)
 
 The content license ensures that spiritual content remains accurate and unchanged in derivative works.
+
+The bundled content also quotes prayers, liturgical formulas, Scripture and Catechism passages that are **not** ours to license — those remain with their respective rights holders. See [THIRD-PARTY TEXTS](assets/data/LICENSE) for details.
 
 ## Privacy
 
